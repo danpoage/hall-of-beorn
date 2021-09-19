@@ -239,6 +239,15 @@ namespace HallOfBeorn.Models
             return this;
         }
 
+        public CreatorLink WithLabels(params string[] labels)
+        {
+            foreach (var label in labels)
+            {
+                this.Link.WithLabel(label);
+            }
+            return this;
+        }
+
         public CreatorLink WithLabels(IEnumerable<string> labels)
         {
             foreach (var label in labels)
@@ -253,10 +262,10 @@ namespace HallOfBeorn.Models
             return WithLabels(labeled.Labels());
         }
 
-        public CreatorLink WithDeckLabels(string deckId)
+        public CreatorLink WithDeckLabels(int deckId)
         {
             var labels = HallOfBeorn.Services.LotR.RingsDb.RingsDbService.Instance
-                .GetDeckLabels(deckId);
+                .GetDeckLabels(deckId.ToString());
 
             return WithLabels(labels);
         }

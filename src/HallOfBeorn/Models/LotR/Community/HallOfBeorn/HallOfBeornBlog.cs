@@ -15,17 +15,38 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             LinkType.Hall_of_Beorn)
         {
             AddYear(2021);
-            AddLink("Key Concepts: Surviving the Early Game Part 1 - Leadership", "https://hallofbeorn.wordpress.com/2021/07/20/key-concepts-surviving-the-early-game-part-1-leadership/", "20 July 2021");
-            AddLink("Bear Market: The Aldburg Plot", "https://hallofbeorn.wordpress.com/2021/07/11/bear-market-the-aldburg-plot/", "11 July 2021");
-            AddLink("Play Report: Epic Helm's Deep", "https://hallofbeorn.wordpress.com/2021/06/21/play-report-epic-helms-deep/", "21 June 2021");
+            AddLink("News: A Long-extended Party - Hidden Roosts", "https://hallofbeorn.wordpress.com/2021/09/05/news-a-long-extended-party-hidden-roosts/", "5 Sep 2021")
+                .WithLabels("Hidden Roosts");
+            AddLink("Key Concepts: Surviving the Early Game Part 4 - Lore", "https://hallofbeorn.wordpress.com/2021/09/02/key-concepts-surviving-the-early-game-part-4-lore/", "2 Sep 2021")
+                .WithLabels("Beravor", "Erestor", "Galdor of the Havens", "Thurindir", "Fatty Bolger", "Warden of Healing", "Master of the Forge", "Galadhrim Minstrel", "Deeping Defender",
+                    "Protector of Lórien", "Protector of Lorien", "Asfaloth", "Wingfoot", "Lembas", "Daeron's Runes", "Deep Knowledge", "Heed the Dream", "Drinking Song", "Scout Ahead");
+            AddLink("Key Concepts: Surviving the Early Game Part 3 - Spirit", "https://hallofbeorn.wordpress.com/2021/08/24/key-concepts-surviving-the-early-game-part-3-spirit/", "24 Aug 2021")
+                .WithLabels("Éowyn", "Eowyn", "Arwen Undómiel", "Arwen Undomiel", "Dáin Ironfoot", "Dain Ironfoot", "Lothíriel", "Lothiriel", "Widfast",
+                    "Escort from Edoras", "Imladris Stargazer", "Westfold Horse-breeder", "Unexpected Courage", "Miruvor", "Silver Circlet", "Spare Pipe", 
+                    "A Test of Will", "Elrond's Counsel", "Elven-light", "Defiant Challenge", "Double Back");
+            AddLink("Key Concepts: Surviving the Early Game Part 2 - Tactics", "https://hallofbeorn.wordpress.com/2021/08/01/key-concepts-surviving-the-early-game-part-2-tactics/", "1 Aug 2021")
+                .WithLabels("Boromir", "Beorn", "Beregond", "Prince Imrahil", "Eowyn", "Éowyn", "Vassal of the Windlord", "Defender of Rammas", "Honour Guard", "Riddermark Knight",
+                    "Gondorian Shield", "Dagger of Westernesse", "Outmatched", "Round Shield", "Feint", "The Eagles Are Coming!", "The Eagles Are Coming", "Behind Strong Walls", "Need Brooks No Delay");
+            AddLink("Key Concepts: Surviving the Early Game Part 1 - Leadership", "https://hallofbeorn.wordpress.com/2021/07/20/key-concepts-surviving-the-early-game-part-1-leadership/", "20 July 2021")
+                .WithLabels("Erkenbrand", "Sam Gamgee", "Denethor", "Gildor Inglorion", "Ingold", "Errand-rider", "Naith Guide", "Herald of Anorien", "Herald of Anórien", "Soldier of Gondor", 
+                    "Steward of Gondor", "Celebrian's Stone", "Celebrían's Stone", "Cram", "Armored Destrier", 
+                    "Sneak Attack", "Timely Aid", "Legacy of Numenor", "Legacy of Númenor", "Tighten Our Belts", "Send for Aid");
+            AddLink("Bear Market: The Aldburg Plot", "https://hallofbeorn.wordpress.com/2021/07/11/bear-market-the-aldburg-plot/", "11 July 2021")
+                .WithLabels("Halfast Gamgee" , "Tom Cotton", "Scouting Party", "The Door is Closed!", "The Door is Closed", "Leaf Brooch");
+            AddLink("Play Report: Epic Helm's Deep", "https://hallofbeorn.wordpress.com/2021/06/21/play-report-epic-helms-deep/", "21 June 2021")
+                .WithDeckLabels(21175);
             AddLink("News: Epic Helm's Deep, Streaming this Saturday", "https://hallofbeorn.wordpress.com/2021/06/15/news-epic-helms-deep-streaming-this-saturday/", "15 June 2021");
             AddLink("Bear Market: Children of Eorl", "https://hallofbeorn.wordpress.com/2021/06/06/bear-market-children-of-eorl/", "6 June 2021");
-            AddLink("Alternate Art: Wilderland Wildlife Sanctuary", "https://hallofbeorn.wordpress.com/2021/05/30/alternate-art-wilderland-wildlife-sanctuary/", "30 May 2021");
+            AddLink("Alternate Art: Wilderland Wildlife Sanctuary", "https://hallofbeorn.wordpress.com/2021/05/30/alternate-art-wilderland-wildlife-sanctuary/", "30 May 2021")
+                .WithDeckLabels(20986);
             AddLink("Bear Draft v6", "https://hallofbeorn.wordpress.com/2021/05/10/bear-draft-v6/", "10 May 2021");
-            AddLink("Alternate Art: Nurn Hobits", "https://hallofbeorn.wordpress.com/2021/04/17/alternate-art-nurn-hobbits/", "17 Apr 2021");
+            AddLink("Alternate Art: Nurn Hobits", "https://hallofbeorn.wordpress.com/2021/04/17/alternate-art-nurn-hobbits/", "17 Apr 2021")
+                .WithDeckLabels(19164);
             AddLink("News: A Long-extended Party - Beorn", "https://hallofbeorn.wordpress.com/2021/04/01/news-a-long-extended-party-beorn/", "1 Apr 2021");
-            AddLink("Deck: Ride to Bruin", "https://hallofbeorn.wordpress.com/2021/03/26/deck-ride-to-bruin/", "26 Mar 2021");
-            AddLink("Deck: The Second Coming", "https://hallofbeorn.wordpress.com/2021/03/20/deck-the-second-coming/", "20 Mar 2021");
+            AddLink("Deck: Ride to Bruin", "https://hallofbeorn.wordpress.com/2021/03/26/deck-ride-to-bruin/", "26 Mar 2021")
+                .WithDeckLabels(20125);
+            AddLink("Deck: The Second Coming", "https://hallofbeorn.wordpress.com/2021/03/20/deck-the-second-coming/", "20 Mar 2021")
+                .WithDeckLabels(20012);
             AddLink("Key Concepts: Learning How to Lose", "https://hallofbeorn.wordpress.com/2021/03/06/key-concepts-learning-how-to-lose/", "6 Mar 2021");
             AddLink("Content Winners: Celebrating 8 Years", "https://hallofbeorn.wordpress.com/2021/02/15/contest-winners-celebrating-8-years/", "15 Feb 2021");
             AddLink("Custom Cards: A Little Help from our Friends", "https://hallofbeorn.wordpress.com/2021/02/12/custom-cards-a-little-help-from-our-friends/", "12 Feb 2021");
@@ -34,121 +55,191 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Contest: Celebrating 8 Years", "https://hallofbeorn.wordpress.com/2021/01/13/contest-celebrating-8-years/", "13 Jan 2021");
 
             AddYear(2020);
-            AddLink("Deck 2020 - It's a Trap!", "https://hallofbeorn.wordpress.com/2020/12/31/deck-2020-its-a-trap/", "31 Dec 2020");
+            AddLink("Deck 2020 - It's a Trap!", "https://hallofbeorn.wordpress.com/2020/12/31/deck-2020-its-a-trap/", "31 Dec 2020")
+                .WithDeckLabels(18934);
             AddLink("News: A Long-extended Party - Worthy of Remembrance", "https://hallofbeorn.wordpress.com/2020/12/14/news-a-long-extended-party-worthy-of-remembrance/", "14 Dec 2020");
             AddLink("Play Report: A Weary Pilgrim Hunts the Dreadnaught", "https://hallofbeorn.wordpress.com/2020/12/06/play-report-a-weary-pilgrim-hunts-the-dreadnaught/", "6 Dec 2020");
             AddLink("Alternate Art: The Old Elf and the Sea", "https://hallofbeorn.wordpress.com/2020/12/01/alternate-art-the-old-elf-and-the-sea/", "1 Dec 2020")
-                .WithDeckLabels("18525");
-            AddLink("Alternate Art: The Last Temptation of Boromir", "https://hallofbeorn.wordpress.com/2020/11/17/alternate-art-the-last-temptation-of-boromir/", "17 Nov 2020");
-            AddLink("Alternate Art: Gift of the First-Beorn", "https://hallofbeorn.wordpress.com/2020/11/01/alternate-art-gift-of-the-first-beorn/", "1 Nov 2020");
-            AddLink("Alternate Art: Nouveau Hunters", "https://hallofbeorn.wordpress.com/2020/10/20/alternate-art-nouveau-hunters/", "20 Oct 2020");
+                .WithDeckLabels(18525);
+            AddLink("Alternate Art: The Last Temptation of Boromir", "https://hallofbeorn.wordpress.com/2020/11/17/alternate-art-the-last-temptation-of-boromir/", "17 Nov 2020")
+                .WithDeckLabels(18305);
+            AddLink("Alternate Art: Gift of the First-Beorn", "https://hallofbeorn.wordpress.com/2020/11/01/alternate-art-gift-of-the-first-beorn/", "1 Nov 2020")
+                .WithDeckLabels(16470);
+            AddLink("Alternate Art: Nouveau Hunters", "https://hallofbeorn.wordpress.com/2020/10/20/alternate-art-nouveau-hunters/", "20 Oct 2020")
+                .WithDeckLabels(18019);
             AddLink("Custom Cards: Filling in the Gaps", "https://hallofbeorn.wordpress.com/2020/10/10/custom-cards-filling-in-the-gaps/", "10 Oct 2020");
             AddLink("Contest Winners: Carry on the Story", "https://hallofbeorn.wordpress.com/2020/09/21/contest-winners-carry-on-the-story/", "21 Sep 2020");
-            AddLink("Alternate Art: Nightmare in the Fog", "https://hallofbeorn.wordpress.com/2020/08/12/alternate-art-nightmare-in-the-fog/", "12 Aug 2020");
+            AddLink("Alternate Art: Nightmare in the Fog", "https://hallofbeorn.wordpress.com/2020/08/12/alternate-art-nightmare-in-the-fog/", "12 Aug 2020")
+                .WithDeckLabels(17174);
             AddLink("Contest: Carry on the Story", "https://hallofbeorn.wordpress.com/2020/08/06/contest-carry-on-the-story/", "6 Aug 2020");
             AddLink("Vision of the Palantir: Nightmare Conflict at the Carrock", "https://hallofbeorn.wordpress.com/2020/07/11/vision-of-the-palantir-nightmare-conflict-at-the-carrock/", "11 July 2020");
             AddLink("Discussion: Isolation and Tribalism", "https://hallofbeorn.wordpress.com/2020/06/04/isolation-and-tribalism/", "4 June 2020");
-            AddLink("Alternate Art: Grimbeorn's Path", "https://hallofbeorn.wordpress.com/2020/05/04/alternate-art-grimbeorns-path/", "4 May 2020");
+            AddLink("Alternate Art: Grimbeorn's Path", "https://hallofbeorn.wordpress.com/2020/05/04/alternate-art-grimbeorns-path/", "4 May 2020")
+                .WithDeckLabels(15768);
             AddLink("News: LotR Dutch Blogger", "https://hallofbeorn.wordpress.com/2020/04/12/community-news-lotr-dutch-blogger/", "12 Apr 2020");
             AddLink("Custom Cards: Nightmare Escape from Umbar", "https://hallofbeorn.wordpress.com/2020/04/04/nightmare-escape-from-umbar/", "4 Apr 2020");
-            AddLink("Alternate Art: All the Pretty Horses", "https://hallofbeorn.wordpress.com/2020/03/15/alternate-art-all-the-pretty-horses/", "15 Mar 2020");
+            AddLink("Alternate Art: All the Pretty Horses", "https://hallofbeorn.wordpress.com/2020/03/15/alternate-art-all-the-pretty-horses/", "15 Mar 2020")
+                .WithDeckLabels(14898);
             AddLink("Alternate Art: Core Set Completion", "https://hallofbeorn.wordpress.com/2020/02/28/alternate-art-core-set-completion/", "28 Feb 2020");
-            AddLink("Alternate Art: Wandering in Search of the Entwives", "https://hallofbeorn.wordpress.com/2020/02/14/alternate-art-wandering-in-search-of-the-entwives/", "14 Feb 2020");
+            AddLink("Alternate Art: Wandering in Search of the Entwives", "https://hallofbeorn.wordpress.com/2020/02/14/alternate-art-wandering-in-search-of-the-entwives/", "14 Feb 2020")
+                .WithDeckLabels(14502);
             AddLink("Long are the Waves on the Last Shore", "https://hallofbeorn.wordpress.com/2020/01/19/long-are-the-waves-on-the-last-shore/", "Mon, 20 Jan 2020 01:51:00 +0000");
 
             AddYear(2019);
             AddLink("Vengeance of Mordor: My Favorites So Far", "https://hallofbeorn.wordpress.com/2019/12/17/vengeance-of-mordor-my-favorites-so-far/", "Tue, 17 Dec 2019 07:08:37 +0000");
-            AddLink("Alternate Art: Starlight on the Western Seas", "https://hallofbeorn.wordpress.com/2019/11/10/alternate-art-starlight-on-the-western-seas/", "Sun, 10 Nov 2019 18:31:18 +0000");
-            AddLink("Alternate Art: Bear Jamboree", "https://hallofbeorn.wordpress.com/2019/10/02/alternate-art-bear-jamboree/", "Wed, 02 Oct 2019 05:41:09 +0000");
-            AddLink("Alternate Art: The Three Hunters Aggro v2", "https://hallofbeorn.wordpress.com/2019/09/15/alternate-art-the-three-hunters-aggro-v2/", "Mon, 16 Sep 2019 04:46:13 +0000");
+            AddLink("Alternate Art: Starlight on the Western Seas", "https://hallofbeorn.wordpress.com/2019/11/10/alternate-art-starlight-on-the-western-seas/", "Sun, 10 Nov 2019 18:31:18 +0000")
+                .WithDeckLabels(13573);
+            AddLink("Alternate Art: Bear Jamboree", "https://hallofbeorn.wordpress.com/2019/10/02/alternate-art-bear-jamboree/", "Wed, 02 Oct 2019 05:41:09 +0000")
+                .WithDeckLabels(13323);
+            AddLink("Alternate Art: The Three Hunters Aggro v2", "https://hallofbeorn.wordpress.com/2019/09/15/alternate-art-the-three-hunters-aggro-v2/", "Mon, 16 Sep 2019 04:46:13 +0000")
+                .WithDeckLabels(13191);
             AddLink("Alternate Art: Errata", "https://hallofbeorn.wordpress.com/2019/09/08/alternate-art-errata/", "Sun, 08 Sep 2019 05:48:26 +0000");
             AddLink("Poll Results: Which archetypes most deserve more support", "https://hallofbeorn.wordpress.com/2019/09/01/poll-results-which-archetypes-most-deserve-more-support/", "Mon, 02 Sep 2019 02:59:48 +0000");
-            AddLink("My favorites from The Wilds of Rhovanion and Ered Mithrin Cycle", "https://hallofbeorn.wordpress.com/2019/08/26/my-favorites-from-the-wilds-of-rhovanion-and-ered-mithrin-cycle/", "Tue, 27 Aug 2019 04:51:18 +0000");
-            AddLink("Alternate Art: Seven Stars and Seven Stones", "https://hallofbeorn.wordpress.com/2019/08/17/alternate-art-seven-stars-and-seven-stones/", "Sat, 17 Aug 2019 07:35:00 +0000");
-            AddLink("Alternate Art: The Greatest Adventure", "https://hallofbeorn.wordpress.com/2019/07/04/alternate-art-the-greatest-adventure/", "Fri, 05 Jul 2019 04:03:16 +0000");
-            AddLink("Alternate Art: A Weary Pilgrim", "https://hallofbeorn.wordpress.com/2019/06/20/alternate-art-a-weary-pilgrim/", "Thu, 20 Jun 2019 06:23:07 +0000");
-            AddLink("Alternate Art: Aggro Outlands", "https://hallofbeorn.wordpress.com/2019/05/14/alternate-art-aggro-outlands/", "Wed, 15 May 2019 03:22:59 +0000");
+            AddLink("My favorites from The Wilds of Rhovanion and Ered Mithrin Cycle", "https://hallofbeorn.wordpress.com/2019/08/26/my-favorites-from-the-wilds-of-rhovanion-and-ered-mithrin-cycle/", "Tue, 27 Aug 2019 04:51:18 +0000")
+                .WithLabels("Grimbeorn the Old", "Dáin Ironfoot", "Dain Ironfoot", "Gaffer Gamgee", "Meneldor", "Wild Stallion", "Giant Bear", "Ancestral Armor", "King of Dale", "Ring of Thrór", "Ring of Thror", "The Arkenstone", "Reforged", "Beorn's Rage");
+            AddLink("Alternate Art: Seven Stars and Seven Stones", "https://hallofbeorn.wordpress.com/2019/08/17/alternate-art-seven-stars-and-seven-stones/", "Sat, 17 Aug 2019 07:35:00 +0000")
+                .WithDeckLabels(12902);
+            AddLink("Alternate Art: The Greatest Adventure", "https://hallofbeorn.wordpress.com/2019/07/04/alternate-art-the-greatest-adventure/", "Fri, 05 Jul 2019 04:03:16 +0000")
+                .WithDeckLabels(12487);
+            AddLink("Alternate Art: A Weary Pilgrim", "https://hallofbeorn.wordpress.com/2019/06/20/alternate-art-a-weary-pilgrim/", "Thu, 20 Jun 2019 06:23:07 +0000")
+                .WithDeckLabels(17830);
+            AddLink("Alternate Art: Aggro Outlands", "https://hallofbeorn.wordpress.com/2019/05/14/alternate-art-aggro-outlands/", "Wed, 15 May 2019 03:22:59 +0000")
+                .WithDeckLabels(12148);
             AddLink("Beorn 2020", "https://hallofbeorn.wordpress.com/2019/04/01/beorn-2020/", "Mon, 01 Apr 2019 05:01:04 +0000");
             AddLink("Bear Draft v5 at Lure of Middle-earth 2019", "https://hallofbeorn.wordpress.com/2019/03/02/bear-draft-v5-at-lure-of-middle-earth-2019/", "Sat, 02 Mar 2019 19:03:13 +0000");
-            AddLink("Alternate Art: Whispers in the Trees", "https://hallofbeorn.wordpress.com/2019/02/13/alternate-art-whispers-in-the-trees/", "Wed, 13 Feb 2019 06:55:46 +0000");
-            AddLink("Alternate Art: The One Deck", "https://hallofbeorn.wordpress.com/2019/01/20/alternate-art-the-one-deck/", "Mon, 21 Jan 2019 02:25:44 +0000");
+            AddLink("Alternate Art: Whispers in the Trees", "https://hallofbeorn.wordpress.com/2019/02/13/alternate-art-whispers-in-the-trees/", "Wed, 13 Feb 2019 06:55:46 +0000")
+                .WithDeckLabels(11169);
+            AddLink("Alternate Art: The One Deck", "https://hallofbeorn.wordpress.com/2019/01/20/alternate-art-the-one-deck/", "Mon, 21 Jan 2019 02:25:44 +0000")
+                .WithDeckLabels(8682);
             AddLink("A Few, Key, Words", "https://hallofbeorn.wordpress.com/2019/01/06/a-few-key-words/", "Mon, 07 Jan 2019 00:21:56 +0000");
             
             AddYear(2018);
             AddLink("Making Every Card Count", "https://hallofbeorn.wordpress.com/2018/12/21/making-every-card-count/", "Sat, 22 Dec 2018 05:02:52 +0000");
-            AddLink("Alternate Art: Carrock and Eyrie", "https://hallofbeorn.wordpress.com/2018/12/08/alternate-art-carrock-and-eyrie/", "Sat, 08 Dec 2018 22:41:43 +0000");
-            AddLink("Adventures in Central Europe - Part One: Hungary", "https://hallofbeorn.wordpress.com/2018/11/10/adventures-in-central-europe-part-one-hungary/", "Sat, 10 Nov 2018 06:20:35 +0000");
+            AddLink("Alternate Art: Carrock and Eyrie", "https://hallofbeorn.wordpress.com/2018/12/08/alternate-art-carrock-and-eyrie/", "Sat, 08 Dec 2018 22:41:43 +0000")
+                .WithDeckLabels(10529);
+            AddLink("Adventures in Central Europe - Part One: Hungary", "https://hallofbeorn.wordpress.com/2018/11/10/adventures-in-central-europe-part-one-hungary/", "Sat, 10 Nov 2018 06:20:35 +0000")
+                .WithDeckLabels(10317);
             AddLink("Bear Draft v4 at Con of the Rings 2018", "https://hallofbeorn.wordpress.com/2018/10/17/bear-draft-v4-at-con-of-the-rings-2018/", "Thu, 18 Oct 2018 04:36:31 +0000");
             AddLink("Hall of Beorn now includes the Digital Card Game", "https://hallofbeorn.wordpress.com/2018/09/11/hall-of-beorn-now-includes-the-digital-card-game/", "Tue, 11 Sep 2018 05:12:34 +0000");
-            AddLink("Deck: Shire Yard Sale", "https://hallofbeorn.wordpress.com/2018/08/12/deck-shire-yard-sale/", "Sun, 12 Aug 2018 21:56:10 +0000");
-            AddLink("A Half Dozen Deliveries Destined for Dale", "https://hallofbeorn.wordpress.com/2018/07/09/6-deliveries-destined-for-dale/", "Mon, 09 Jul 2018 21:25:27 +0000");
-            AddLink("Journey up the Anduin and into Mirkwood", "https://hallofbeorn.wordpress.com/2018/06/26/journey-up-the-anduin-and-into-mirkwood/", "Tue, 26 Jun 2018 05:13:00 +0000");
+            AddLink("Deck: Shire Yard Sale", "https://hallofbeorn.wordpress.com/2018/08/12/deck-shire-yard-sale/", "Sun, 12 Aug 2018 21:56:10 +0000")
+                .WithDeckLabels(9547);
+            AddLink("Bear Market: A Half Dozen Deliveries Destined for Dale", "https://hallofbeorn.wordpress.com/2018/07/09/6-deliveries-destined-for-dale/", "Mon, 09 Jul 2018 21:25:27 +0000")
+                .WithLabels("Galadriel", "Raiment of War", "Spare Hood and Cloak", "Master of the Forge", "Narya", "Open the Armory");
+            AddLink("Play Report: Journey up the Anduin and into Mirkwood", "https://hallofbeorn.wordpress.com/2018/06/26/journey-up-the-anduin-and-into-mirkwood/", "Tue, 26 Jun 2018 05:13:00 +0000")
+                .WithDeckLabels(9082)
+                .WithDeckLabels(9094);
             AddLink("Con of the Rings", "https://hallofbeorn.wordpress.com/2018/06/06/con-of-the-rings/", "Thu, 07 Jun 2018 04:07:08 +0000");
-            AddLink("­Viva Las Chingonas!", "https://hallofbeorn.wordpress.com/2018/05/10/viva-las-chingonas/", "Fri, 11 May 2018 04:12:15 +0000");
+            AddLink("­News: Viva Las Chingonas!", "https://hallofbeorn.wordpress.com/2018/05/10/viva-las-chingonas/", "Fri, 11 May 2018 04:12:15 +0000")
+                .WithDeckLabels(8553);
             AddLink("Poll Results: Where Should the Game Go?", "https://hallofbeorn.wordpress.com/2018/05/06/poll-results-where-should-the-game-go/", "Mon, 07 May 2018 04:39:12 +0000");
-            AddLink("Deck: ­Las Chingonas!", "https://hallofbeorn.wordpress.com/2018/04/23/deck-las-chingonas/", "Tue, 24 Apr 2018 03:42:11 +0000");
-            AddLink("We're Having Cubs!", "https://hallofbeorn.wordpress.com/2018/04/01/were-having-cubs/", "Sun, 01 Apr 2018 05:04:47 +0000");
-            AddLink("My favorites from the Sands of Harad and Haradrim Cycle", "https://hallofbeorn.wordpress.com/2018/03/18/my-favorites-from-the-sands-of-harad-and-haradrim-cycle/", "Mon, 19 Mar 2018 04:55:46 +0000");
-            AddLink("Portugal. The Country, and the Deck.", "https://hallofbeorn.wordpress.com/2018/02/18/portugal-the-country-and-the-deck/", "Sun, 18 Feb 2018 21:52:21 +0000");
-            AddLink("Braving the Crossings of Poros", "https://hallofbeorn.wordpress.com/2018/02/11/braving-the-crossings-of-poros/", "Sun, 11 Feb 2018 22:33:01 +0000");
-            AddLink("Withstanding the Onslaught at Helm's Deep", "https://hallofbeorn.wordpress.com/2018/01/19/withstanding-the-onslaught-at-helms-deep/", "Fri, 19 Jan 2018 06:16:40 +0000");
+            AddLink("Deck: ­Las Chingonas!", "https://hallofbeorn.wordpress.com/2018/04/23/deck-las-chingonas/", "Tue, 24 Apr 2018 03:42:11 +0000")
+                .WithDeckLabels(8553);
+            AddLink("Discussion: We're Having Cubs!", "https://hallofbeorn.wordpress.com/2018/04/01/were-having-cubs/", "Sun, 01 Apr 2018 05:04:47 +0000");
+            AddLink("Bear Market: Sands of Harad and Haradrim Cycle", "https://hallofbeorn.wordpress.com/2018/03/18/my-favorites-from-the-sands-of-harad-and-haradrim-cycle/", "Mon, 19 Mar 2018 04:55:46 +0000")
+                .WithLabels("Hirgon", "Fastred", "Folco Boffin", "Jubayr", "Firyal", "Emyn Arnen Ranger", " Kahliel's Tribesman", "Rider of Rohan", "Steward of Orthanc", "Magic Ring", "Followed", "Fireside Song", 
+                    "Proud Hunters", "Heirs of Eärendil", "Heirs of Earendil", "Wait No Longer", "Oath of Eorl", "The Storm Comes", "Keep Watch", "Prepare for Battle");
+            AddLink("News: Portugal. The Country, and the Deck.", "https://hallofbeorn.wordpress.com/2018/02/18/portugal-the-country-and-the-deck/", "Sun, 18 Feb 2018 21:52:21 +0000")
+                .WithDeckLabels(7913);
+            AddLink("Play Report: Braving the Crossings of Poros", "https://hallofbeorn.wordpress.com/2018/02/11/braving-the-crossings-of-poros/", "Sun, 11 Feb 2018 22:33:01 +0000")
+                .WithDeckLabels(5237);
+            AddLink("Play Report: Withstanding the Onslaught at Helm's Deep", "https://hallofbeorn.wordpress.com/2018/01/19/withstanding-the-onslaught-at-helms-deep/", "Fri, 19 Jan 2018 06:16:40 +0000")
+                .WithDeckLabels(6122);
             
             AddYear(2017);
-            AddLink("Escape from the Dungeons of Cirith Gurat", "https://hallofbeorn.wordpress.com/2017/12/07/escape-from-the-dungeons-of-cirith-gurat/", "Fri, 08 Dec 2017 05:58:11 +0000");
+            AddLink("Play Report: Escape from the Dungeons of Cirith Gurat", "https://hallofbeorn.wordpress.com/2017/12/07/escape-from-the-dungeons-of-cirith-gurat/", "Fri, 08 Dec 2017 05:58:11 +0000");
             AddLink("Poll Results: Your preferred play style", "https://hallofbeorn.wordpress.com/2017/12/01/poll-results-your-preferred-play-style/", "Fri, 01 Dec 2017 23:06:00 +0000");
-            AddLink("Wandering the Wilderlands", "https://hallofbeorn.wordpress.com/2017/11/18/wandering-the-wilderlands/", "Sun, 19 Nov 2017 05:53:03 +0000");
+            AddLink("Metagame: Wandering the Wilderlands", "https://hallofbeorn.wordpress.com/2017/11/18/wandering-the-wilderlands/", "Sun, 19 Nov 2017 05:53:03 +0000");
             AddLink("Alternate Art by Potawo", "https://hallofbeorn.wordpress.com/2017/11/12/alternate-art-by-potawo/", "Sun, 12 Nov 2017 20:20:22 +0000");
             AddLink("Game: Heavy Metal Thunder Mouse", "https://hallofbeorn.wordpress.com/2017/10/05/game-heavy-metal-thunder-mouse/", "Thu, 05 Oct 2017 20:08:48 +0000");
-            AddLink("Deck: The Storm Comes", "https://hallofbeorn.wordpress.com/2017/09/07/deck-the-storm-comes/", "Thu, 07 Sep 2017 05:06:25 +0000");
-            AddLink("Deck: The Sixth Bear Army", "https://hallofbeorn.wordpress.com/2017/09/05/deck-the-sixth-bear-army/", "Tue, 05 Sep 2017 06:28:36 +0000");
+            AddLink("Deck: The Storm Comes", "https://hallofbeorn.wordpress.com/2017/09/07/deck-the-storm-comes/", "Thu, 07 Sep 2017 05:06:25 +0000")
+                .WithDeckLabels(6279);
+            AddLink("Deck: The Sixth Bear Army", "https://hallofbeorn.wordpress.com/2017/09/05/deck-the-sixth-bear-army/", "Tue, 05 Sep 2017 06:28:36 +0000")
+                .WithDeckLabels(6251);
             AddLink("Fastred Outwits the Black Serpent", "https://hallofbeorn.wordpress.com/2017/08/05/fastred-outwits-the-black-serpent/", "Sat, 05 Aug 2017 22:08:19 +0000");
             AddLink("Caldara bests the Black Serpent", "https://hallofbeorn.wordpress.com/2017/07/23/caldara-bests-the-black-serpent/", "Mon, 24 Jul 2017 00:00:37 +0000");
-            AddLink("Deck: Solo First Turn Win", "https://hallofbeorn.wordpress.com/2017/07/04/deck-solo-first-turn-win/", "Wed, 05 Jul 2017 03:38:57 +0000");
+            AddLink("Deck: Solo First Turn Win", "https://hallofbeorn.wordpress.com/2017/07/04/deck-solo-first-turn-win/", "Wed, 05 Jul 2017 03:38:57 +0000")
+                .WithLabels("Bifur", "Bilbo Baggins", "Denethor", "Dwarven Sellsword", "Erebor Hammersmith", "Erebor Record Keeper", "Ered Nimrais Prospector", "Glóin", "Gloin",
+                    "Good Meal", "Legacy of Durin", "Rod of the Steward", "Scroll of Isildur", "Tome of Atanatar",
+                    "Daeron's Runes", "Deep Knowledge", "Gaining Strength", "Heed the Dream", "Justice Shall Be Done", "Legacy of Númenor", "Legacy of Numenor", "Lórien's Wealth", 
+                    "Loriens' Wealth", "Lure of Moria", "Mithrandir's Advice", "Ravens of the Mountain", "Second Breakfast", "The Seeing-stone", "We Are Not Idle");
             AddLink("Poll Results: Where should the next cycle go?", "https://hallofbeorn.wordpress.com/2017/06/03/poll-results-where-should-the-next-cycle-go/", "Sat, 03 Jun 2017 21:07:09 +0000");
-            AddLink("A Vacation, with Spider Ceviche", "https://hallofbeorn.wordpress.com/2017/05/26/a-vacation-with-spider-ceviche/", "Sat, 27 May 2017 03:44:32 +0000");
-            AddLink("My Mûmak's Name is Homer", "https://hallofbeorn.wordpress.com/2017/04/14/my-mumaks-name-is-homer/", "Fri, 14 Apr 2017 06:24:18 +0000");
-            AddLink("Caldara and friends win the Race Across Harad", "https://hallofbeorn.wordpress.com/2017/04/02/caldara-and-friends-win-the-race-across-harad/", "Mon, 03 Apr 2017 03:02:00 +0000");
-            AddLink("Tolkien, Politics, and Hobbies vs. \"Real Life\"", "https://hallofbeorn.wordpress.com/2017/03/13/tolkien-politics-and-hobbies-vs-real-life/", "Mon, 13 Mar 2017 14:51:51 +0000");
-            AddLink("Alternate Art: Aggro Caldara v3", "https://hallofbeorn.wordpress.com/2017/03/10/alternate-art-aggro-caldara-v3/", "Fri, 10 Mar 2017 19:23:29 +0000");
+            AddLink("Play Report: A Vacation, with Spider Ceviche", "https://hallofbeorn.wordpress.com/2017/05/26/a-vacation-with-spider-ceviche/", "Sat, 27 May 2017 03:44:32 +0000")
+                .WithDeckLabels(5237);
+            AddLink("Play Report: My Mûmak's Name is Homer", "https://hallofbeorn.wordpress.com/2017/04/14/my-mumaks-name-is-homer/", "Fri, 14 Apr 2017 06:24:18 +0000")
+                .WithDeckLabels(4655);
+            AddLink("Play Report: Caldara and friends win the Race Across Harad", "https://hallofbeorn.wordpress.com/2017/04/02/caldara-and-friends-win-the-race-across-harad/", "Mon, 03 Apr 2017 03:02:00 +0000")
+                .WithDeckLabels(4655);
+            AddLink("Discussion: Tolkien, Politics, and Hobbies vs. \"Real Life\"", "https://hallofbeorn.wordpress.com/2017/03/13/tolkien-politics-and-hobbies-vs-real-life/", "Mon, 13 Mar 2017 14:51:51 +0000");
+            AddLink("Alternate Art: Aggro Caldara v3", "https://hallofbeorn.wordpress.com/2017/03/10/alternate-art-aggro-caldara-v3/", "Fri, 10 Mar 2017 19:23:29 +0000")
+                .WithDeckLabels(4655);
             AddLink("Alternate Art: Printer Studio", "https://hallofbeorn.wordpress.com/2017/02/15/alternate-art-printer-studio/", "Thu, 16 Feb 2017 05:15:20 +0000");
             AddLink("Reworking the Early Card Pool", "https://hallofbeorn.wordpress.com/2017/01/11/reworking-the-early-card-pool/", "Wed, 11 Jan 2017 23:54:50 +0000");
-            AddLink("Dúnedain hold back The Long Arm of Mordor", "https://hallofbeorn.wordpress.com/2017/01/11/dunedain-hold-back-the-long-arm-of-mordor/", "Wed, 11 Jan 2017 23:20:04 +0000");
+            AddLink("Play Report: Dúnedain hold back The Long Arm of Mordor", "https://hallofbeorn.wordpress.com/2017/01/11/dunedain-hold-back-the-long-arm-of-mordor/", "Wed, 11 Jan 2017 23:20:04 +0000")
+                .WithDeckLabels(4140);
 
             AddYear(2016);
-            AddLink("Poll Results: Favorite New Hero", "https://hallofbeorn.wordpress.com/2016/12/20/poll-results-favorite-new-hero/", "Tue, 20 Dec 2016 22:00:44 +0000");
-            AddLink("Big as a House", "https://hallofbeorn.wordpress.com/2016/12/12/big-as-a-house/", "Mon, 12 Dec 2016 21:04:17 +0000");
-            AddLink("Three Hunters Aggro Braves the Desert Crossing", "https://hallofbeorn.wordpress.com/2016/12/08/three-hunters-aggro-braves-the-desert-crossing/", "Fri, 09 Dec 2016 05:44:58 +0000");
-            AddLink("The Model UN Embargoes Captain Sah¡r", "https://hallofbeorn.wordpress.com/2016/11/21/the-model-un-embargoes-captain-sahir/", "Tue, 22 Nov 2016 04:53:23 +0000");
-            AddLink("Surviving the Siege of Ann£minas", "https://hallofbeorn.wordpress.com/2016/11/21/surviving-the-siege-of-annuminas/", "Mon, 21 Nov 2016 15:59:31 +0000");
+            AddLink("Poll Results: Favorite New Hero", "https://hallofbeorn.wordpress.com/2016/12/20/poll-results-favorite-new-hero/", "Tue, 20 Dec 2016 22:00:44 +0000")
+                .WithLabels("Éowyn", "Eowyn", "Arwen Undómiel", "Arwen Undomiel", "Treebeard", "Aragorn", "Denethor", "Círdan the Shipwright", "Cirdan the Shipwright", "Erestor");
+            AddLink("History: Big as a House", "https://hallofbeorn.wordpress.com/2016/12/12/big-as-a-house/", "Mon, 12 Dec 2016 21:04:17 +0000");
+            AddLink("Play Report: Three Hunters Aggro Braves the Desert Crossing", "https://hallofbeorn.wordpress.com/2016/12/08/three-hunters-aggro-braves-the-desert-crossing/", "Fri, 09 Dec 2016 05:44:58 +0000")
+                .WithDeckLabels(3784);
+            AddLink("Play Report: The Model UN Embargoes Captain Sahír", "https://hallofbeorn.wordpress.com/2016/11/21/the-model-un-embargoes-captain-sahir/", "Tue, 22 Nov 2016 04:53:23 +0000")
+                .WithDeckLabels(3057);
+            AddLink("Play Report: Surviving the Siege of Annúminas", "https://hallofbeorn.wordpress.com/2016/11/21/surviving-the-siege-of-annuminas/", "Mon, 21 Nov 2016 15:59:31 +0000")
+                .WithDeckLabels(3678);
             AddLink("The Story So Far - Part 1: Shadows of Mirkwood", "https://hallofbeorn.wordpress.com/2016/11/11/the-story-so-far-part-1-shadows-of-mirkwood/", "Fri, 11 Nov 2016 16:46:34 +0000");
             AddLink("A new Power is rising", "https://hallofbeorn.wordpress.com/2016/11/10/a-new-power-is-rising/", "Thu, 10 Nov 2016 19:40:15 +0000");
             AddLink("Arkham LCG Card Search and A Call For Support", "https://hallofbeorn.wordpress.com/2016/11/04/arkham-lcg-card-search-and-a-call-for-support/", "Fri, 04 Nov 2016 16:45:29 +0000");
-            AddLink("Redemption at the Battle of the Pelennor Fields!", "https://hallofbeorn.wordpress.com/2016/10/18/redemption-at-the-battle-of-the-pelennor-fields/", "Wed, 19 Oct 2016 03:00:45 +0000");
-            AddLink("The Battle of the Pelennor Fields was a Massacre", "https://hallofbeorn.wordpress.com/2016/10/11/battle-of-the-pelennor-fields-was-a-massacre/", "Wed, 12 Oct 2016 03:35:08 +0000");
-            AddLink("Alternate Art: Zero is not Nothing", "https://hallofbeorn.wordpress.com/2016/09/19/alternate-art-zero-is-not-nothing/", "Tue, 20 Sep 2016 04:48:37 +0000");
+            AddLink("Play Report: Redemption at the Battle of the Pelennor Fields!", "https://hallofbeorn.wordpress.com/2016/10/18/redemption-at-the-battle-of-the-pelennor-fields/", "Wed, 19 Oct 2016 03:00:45 +0000")
+                .WithDeckLabels(3327);
+            AddLink("Play Report: The Battle of the Pelennor Fields was a Massacre", "https://hallofbeorn.wordpress.com/2016/10/11/battle-of-the-pelennor-fields-was-a-massacre/", "Wed, 12 Oct 2016 03:35:08 +0000")
+                .WithDeckLabels(3235);
+            AddLink("Alternate Art: Zero is not Nothing", "https://hallofbeorn.wordpress.com/2016/09/19/alternate-art-zero-is-not-nothing/", "Tue, 20 Sep 2016 04:48:37 +0000")
+                .WithLabels("Dúnedain Remedy", "Dunedain Remedy", "A Very Good Tale", "Gondorian Fire", "Foe-hammer", "Blood of Númenor", "Blood of Numenor", "Elrond's Counsel", "Expert Treasure-hunter", "Deep Knowledge", "Good Meal", "Hidden Cache",
+                    "Elfhelm", "Legolas", "Beregond", "Bifur");
             AddLink("Bear Draft v3: Card Pool", "https://hallofbeorn.wordpress.com/2016/09/07/bear-draft-v3-card-pool/", "Wed, 07 Sep 2016 19:35:21 +0000");
             AddLink("Bear Draft v3: Havens", "https://hallofbeorn.wordpress.com/2016/08/25/bear-draft-v3-havens/", "Thu, 25 Aug 2016 05:08:48 +0000");
-            AddLink("The Might of Caldara", "https://hallofbeorn.wordpress.com/2016/08/05/the-might-of-caldara/", "Fri, 05 Aug 2016 19:15:56 +0000");
-            AddLink("Hero Showdown", "https://hallofbeorn.wordpress.com/2016/07/25/hero-showdown/", "Mon, 25 Jul 2016 22:52:02 +0000");
-            AddLink("Community Deck Spotlight: Defenders of Annuminas", "https://hallofbeorn.wordpress.com/2016/07/22/community-deck-spotlight-defenders-of-annuminas/", "Fri, 22 Jul 2016 21:12:34 +0000");
+            AddLink("Play Report: The Might of Caldara", "https://hallofbeorn.wordpress.com/2016/08/05/the-might-of-caldara/", "Fri, 05 Aug 2016 19:15:56 +0000")
+                .WithDeckLabels(2270);
+            AddLink("Bear Market: Hero Showdown", "https://hallofbeorn.wordpress.com/2016/07/25/hero-showdown/", "Mon, 25 Jul 2016 22:52:02 +0000")
+                .WithLabels("Sam Gamgee", "Aragorn", "Denethor", "Erkenbrand", "Halbarad", "Beorn", "Mablung", "Boromir", "Bard the Bowman", "Dori",
+                    "Arwen Undómiel", "Arwen Undomiel", "Galadriel", "Glorfindel", "Idraen", "Fatty Bolger", "Elrond", "Pippin", "Erestor", "Treebeard", "Faramir");
+            AddLink("Community Deck Spotlight: Defenders of Annuminas", "https://hallofbeorn.wordpress.com/2016/07/22/community-deck-spotlight-defenders-of-annuminas/", "Fri, 22 Jul 2016 21:12:34 +0000")
+                .WithDeckLabels(2125);
             AddLink("Bear Draft v3: Signature Squads", "https://hallofbeorn.wordpress.com/2016/07/17/bear-draft-v3-signature-squads/", "Mon, 18 Jul 2016 01:35:39 +0000");
-            AddLink("An Unexpected Party", "https://hallofbeorn.wordpress.com/2016/07/11/an-unexpected-party/", "Tue, 12 Jul 2016 04:02:26 +0000");
+            AddLink("News: An Unexpected Party", "https://hallofbeorn.wordpress.com/2016/07/11/an-unexpected-party/", "Tue, 12 Jul 2016 04:02:26 +0000");
             AddLink("Bear on Board", "https://hallofbeorn.wordpress.com/2016/06/22/bear-on-board/", "Wed, 22 Jun 2016 06:57:02 +0000");
             AddLink("Alternate Art: Magali Villeneuve", "https://hallofbeorn.wordpress.com/2016/05/30/alternate-art-magali-villeneuve/", "Mon, 30 May 2016 23:21:17 +0000");
             AddLink("Poll Results: Favorite Archetype as of 2015", "https://hallofbeorn.wordpress.com/2016/05/28/poll-results-favorite-archetype-as-of-2015/", "Sat, 28 May 2016 21:46:16 +0000");
-            AddLink("The Grudge", "https://hallofbeorn.wordpress.com/2016/05/16/the-grudge/", "Mon, 16 May 2016 06:34:20 +0000");
-            AddLink("Deck: Counsels of the Wise", "https://hallofbeorn.wordpress.com/2016/04/19/deck-counsels-of-the-wise/", "Tue, 19 Apr 2016 19:49:11 +0000");
-            AddLink("The Game is Dying", "https://hallofbeorn.wordpress.com/2016/04/01/the-game-is-dying/", "Fri, 01 Apr 2016 05:00:41 +0000");
+            AddLink("Deck: The Grudge", "https://hallofbeorn.wordpress.com/2016/05/16/the-grudge/", "Mon, 16 May 2016 06:34:20 +0000")
+                .WithDeckLabels(1203);
+            AddLink("Deck: Counsels of the Wise", "https://hallofbeorn.wordpress.com/2016/04/19/deck-counsels-of-the-wise/", "Tue, 19 Apr 2016 19:49:11 +0000")
+                .WithDeckLabels(938);
+            AddLink("Discussion: The Game is Dying", "https://hallofbeorn.wordpress.com/2016/04/01/the-game-is-dying/", "Fri, 01 Apr 2016 05:00:41 +0000");
             AddLink("Make Middle-earth Great Again", "https://hallofbeorn.wordpress.com/2016/03/20/make-middle-earth-great-again/", "Mon, 21 Mar 2016 01:18:02 +0000");
-            AddLink("Círdan, A Power Long Hidden", "https://hallofbeorn.wordpress.com/2016/02/14/cirdan-a-power-long-hidden/", "Mon, 15 Feb 2016 03:30:15 +0000");
-            AddLink("Deck: Reaches of the Realm", "https://hallofbeorn.wordpress.com/2016/02/05/deck-reaches-of-the-realm/", "Sat, 06 Feb 2016 00:14:08 +0000");
+            AddLink("Deck: Círdan, A Power Long Hidden", "https://hallofbeorn.wordpress.com/2016/02/14/cirdan-a-power-long-hidden/", "Mon, 15 Feb 2016 03:30:15 +0000")
+                .WithDeckLabels(137);
+            AddLink("Deck: Reaches of the Realm", "https://hallofbeorn.wordpress.com/2016/02/05/deck-reaches-of-the-realm/", "Sat, 06 Feb 2016 00:14:08 +0000")
+                .WithLabels("Boromir", "Beregond", "Damrod", "Errand-rider", "Pelargir Ship Captain", "Defender of Rammas", "Honour Guard", "Ithilien Tracker",
+                    "Mablung", "Warden of Healing", "Envoy of Pelargir", "Ingold", "Veteran of Osgiliath", "Knight of Minas Tirith", "Faramir", "Anborn", "Gandalf",
+                    "Heir of Mardil", "Gondorian Shield", "Wingfoot", "Steward of Gondor", "Visionary Leadership", "Ranger Spikes", "Forest Snare",
+                    "Wealth of Gondor", "Daeron's Runes", "Deep Knowledge", "Sneak Attack", "Sword of Númenor", "Sword of Numenor", "Ambush", "Sword-thain",
+                    "Mutual Accord", "Behind Strong Walls", "For Gondor!", "For Gondor", "Send for Aid", "Gather Information");
             AddLink("Metagame: Part 6 - A Unique Challenge", "https://hallofbeorn.wordpress.com/2016/01/25/metagame-part-6-a-unique-challenge/", "Mon, 25 Jan 2016 06:00:00 +0000");
-            AddLink("Poll Results: Favorite Support Hero", "https://hallofbeorn.wordpress.com/2016/01/12/poll-results-favorite-support-hero/", "Tue, 12 Jan 2016 23:03:24 +0000");
-            AddLink("Early Spring Cleaning", "https://hallofbeorn.wordpress.com/2016/01/10/early-spring-cleaning/", "Sun, 10 Jan 2016 22:53:59 +0000");
+            AddLink("Poll Results: Favorite Support Hero", "https://hallofbeorn.wordpress.com/2016/01/12/poll-results-favorite-support-hero/", "Tue, 12 Jan 2016 23:03:24 +0000")
+                .WithLabels("Elrond", "Galadriel", "Sam Gamgee", "Bill the Pony", "Arwen Undomiel", "Imladris Stargazer", "Galadriel's Handmaiden", "Zigil Miner", "Galadhrim Healer", 
+                "Master of the Forge", "Lindir", "Harbor Master", "Erestor", "Galdor from the Havens", "Haldir of Lórien", "Haldir of Lorien", "Gildor Inglorion", "Gandalf", 
+                "Light of Valinor", "Mirror of Galadriel", "Nenya", "Unexpected Courage", "Silver Harp", "A Burning Brand", "Vilya",
+                "Elrond's Counsel", "Daeron's Runes", "Sneak Attack", "Elven-light", "A Test of Will", "Gather Information", "Double Back");
+            AddLink("Metagame: Early Spring Cleaning", "https://hallofbeorn.wordpress.com/2016/01/10/early-spring-cleaning/", "Sun, 10 Jan 2016 22:53:59 +0000");
 
             AddYear(2015);
             AddLink("Alternate Art Staples", "https://hallofbeorn.wordpress.com/2015/12/23/alternate-art-staples/", "Thu, 24 Dec 2015 02:30:16 +0000");
-            AddLink("Deck: The D£nedain Trappers", "https://hallofbeorn.wordpress.com/2015/12/10/deck-the-dunedain-trappers/", "Thu, 10 Dec 2015 07:57:03 +0000");
+            AddLink("Deck: The Dúnedain Trappers", "https://hallofbeorn.wordpress.com/2015/12/10/deck-the-dunedain-trappers/", "Thu, 10 Dec 2015 07:57:03 +0000")
+                .WithLabels("Aragorn", "Amarthiúl", "Amarthiul", "Damrod", "Dúnedain Watcher", "Dunedain Watcher", "Galadriel", "Guardian of Arnor", 
+                "Dúnedain Hunter", "Dunedain Hunter", "Northern Tracker", "Warden of Annúminas", "Warden of Annuminas", "Master of the Forge", "Sarn Ford Sentry", 
+                "Celebrían’s Stone", "Celebrian's Stone", "Heir of Valandil", "Steward of Gondor", "Sword that was Broken", "Gondorian Fire", "Gondorian Shield",
+                "Forst Snare", "Ranger Spikes", "Descendants of Kings", "Tighten Our Belts", "Feint", "Daeron's Runes", "Deep Knowledge");
             AddLink("Contest Winners: Bree-land Investigators", "https://hallofbeorn.wordpress.com/2015/12/04/contest-winners-bree-land-investigators/", "Sat, 05 Dec 2015 00:38:55 +0000");
             AddLink("Deck: The Bear's Revenge", "https://hallofbeorn.wordpress.com/2015/11/23/deck-the-bears-revenge/", "Mon, 23 Nov 2015 23:17:03 +0000");
             AddLink("Contest: Bree-land Investigators", "https://hallofbeorn.wordpress.com/2015/11/15/contest-bree-land-investigators/", "Sun, 15 Nov 2015 23:25:39 +0000");
