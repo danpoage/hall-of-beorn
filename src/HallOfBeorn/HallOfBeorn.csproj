@@ -397,6 +397,7 @@
     <Compile Include="Models\LotR\Community\DorCuarthol\DorCuartholBlog.cs" />
     <Compile Include="Models\LotR\Community\LotRDeckTestingGround\LotRDeckTestingGroundBlog.cs" />
     <Compile Include="Models\LotR\Community\ReflectionInHennethAnnun\ReflectionInHennethAnnunBlog.cs" />
+    <Compile Include="Models\LotR\Community\SongOfHope\SongOfHopeBlog.cs" />
     <Compile Include="Models\LotR\Community\SusurrosDelBosqueViejo\SusurrosDelBosqueViejoBlog.cs" />
     <Compile Include="Models\LotR\Community\TheBookOfElessar\TheBookOfElessarChannel.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsPodcast.cs" />
@@ -414,6 +415,7 @@
     <Compile Include="Models\LotR\Community\TheSecondhandTook\TheSecondhandTookBlog.cs" />
     <Compile Include="Models\LotR\Community\TheWhiteTower\TheWhiteTowerBlog.cs" />
     <Compile Include="Models\LotR\Community\ThreeIsCompany\ThreeIsCompanyPodcast.cs" />
+    <Compile Include="Models\LotR\Community\TrucksThoughts\TrucksThoughtsBlog.cs" />
     <Compile Include="Models\LotR\Community\UnfinishedTrails\UnfinishedTrailsBlog.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\PlayerCardAnalysisLink.cs" />
     <Compile Include="Models\LotR\Community\VisionOfThePalantir\VisionOfThePalantirBlog.cs" />

@@ -66,7 +66,10 @@ namespace HallOfBeorn.Models
         Hall_of_Beorn_Digital_Detail,
         Hall_of_Beorn_Digital_Image,
         Hall_of_Beorn_Character,
-        
+
+        Song_of_Hope,
+        Trucks_Thoughts,
+
         YouTube,
         RingsDB,
     }

@@ -14,6 +14,7 @@ using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
 using HallOfBeorn.Models.LotR.Community.LotRDeckTestingGround;
 using HallOfBeorn.Models.LotR.Community.MasterOfLore;
 using HallOfBeorn.Models.LotR.Community.ReflectionInHennethAnnun;
+using HallOfBeorn.Models.LotR.Community.SongOfHope;
 using HallOfBeorn.Models.LotR.Community.SusurrosDelBosqueViejo;
 using HallOfBeorn.Models.LotR.Community.TalesFromTheCards;
 using HallOfBeorn.Models.LotR.Community.TheCardGameCooperative;
@@ -24,6 +25,7 @@ using HallOfBeorn.Models.LotR.Community.TheRoad;
 using HallOfBeorn.Models.LotR.Community.TheSecondhandTook;
 using HallOfBeorn.Models.LotR.Community.TheWhiteTower;
 using HallOfBeorn.Models.LotR.Community.ThreeIsCompany;
+using HallOfBeorn.Models.LotR.Community.TrucksThoughts;
 using HallOfBeorn.Models.LotR.Community.UnfinishedTrails;
 using HallOfBeorn.Models.LotR.Community.VisionOfThePalantir;
 using HallOfBeorn.Models.LotR.Community.WanderingTook;
@@ -58,6 +60,8 @@ namespace HallOfBeorn.Services.LotR.Community
             AddBlog(new TheWhiteTowerBlog());
             AddBlog(new TheRoadBlog());
             AddBlog(new TheCardGameCooperativeBlog());
+            AddBlog(new TrucksThoughtsBlog());
+            AddBlog(new SongOfHopeBlog());
             AddBlog(new DieMannerVonGondorBlog());
             AddBlog(new SusurrosDelBosqueViejoBlog());
 

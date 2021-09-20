@@ -62,7 +62,9 @@ namespace HallOfBeorn.Models
             { LinkType.Vision_of_the_Palantir, "" },
             { LinkType.The_Book_of_Elessar, "" },
             { LinkType.Die_Manner_von_Gondor, "Die-Männer-von-Gondor" },
-            { LinkType.Susurros_del_Bosque_Viejo, "" }
+            { LinkType.Susurros_del_Bosque_Viejo, "" },
+            { LinkType.Trucks_Thoughts, "" },
+            { LinkType.Song_of_Hope, "" },
         };
 
         public Link(LinkType type, string url, string title, string thumbnailUrl, int? thumbnailHeight, int? thumbnailWidth)
@@ -132,6 +134,10 @@ namespace HallOfBeorn.Models
                     return string.Format("https://ellibrorojodebolsoncerrado.wordpress.com/?s={0}", title);
                 case LinkType.Die_Manner_von_Gondor:
                     return string.Format("https://menofgondor.wordpress.com/?s={0}", title);
+                case LinkType.Trucks_Thoughts:
+                    return string.Format("https://trucksthoughts.wordpress.com/?s={0}", title);
+                case LinkType.Song_of_Hope:
+                    return string.Format("https://songofhope693941332.wordpress.com/?s={0}", title);
                 case LinkType.Hall_of_Beorn_LotR_Detail:
                 case LinkType.Hall_of_Beorn_LotR_Image:
                     //var slug = string.IsNullOrEmpty(card.SlugSuffix) ? card.Slug : card.Slug + card.SlugSuffix;
