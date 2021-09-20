@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using HallOfBeorn.Services.LotR;
 
 namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
 {
@@ -209,7 +209,9 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Bear Draft v3: Signature Squads", "https://hallofbeorn.wordpress.com/2016/07/17/bear-draft-v3-signature-squads/", "Mon, 18 Jul 2016 01:35:39 +0000");
             AddLink("News: An Unexpected Party", "https://hallofbeorn.wordpress.com/2016/07/11/an-unexpected-party/", "Tue, 12 Jul 2016 04:02:26 +0000");
             AddLink("Bear on Board", "https://hallofbeorn.wordpress.com/2016/06/22/bear-on-board/", "Wed, 22 Jun 2016 06:57:02 +0000");
-            AddLink("Alternate Art: Magali Villeneuve", "https://hallofbeorn.wordpress.com/2016/05/30/alternate-art-magali-villeneuve/", "Mon, 30 May 2016 23:21:17 +0000");
+            AddLink("Alternate Art: Magali Villeneuve", "https://hallofbeorn.wordpress.com/2016/05/30/alternate-art-magali-villeneuve/", "Mon, 30 May 2016 23:21:17 +0000")
+                .WithLabels("Gandalf", "Sam Gamgee", "Denethor", "Mablung", "Aragorn", "Éowyn", "Eowyn", "Théoden", "Theoden", "Haldir of Lórien", "Erestor",
+                    "Galadriel", "Gimli", "Boromir", "Legolas", "Bilbo Baggins", "Glorfindel", "Anborn", "Elrond");
             AddLink("Poll Results: Favorite Archetype as of 2015", "https://hallofbeorn.wordpress.com/2016/05/28/poll-results-favorite-archetype-as-of-2015/", "Sat, 28 May 2016 21:46:16 +0000");
             AddLink("Deck: The Grudge", "https://hallofbeorn.wordpress.com/2016/05/16/the-grudge/", "Mon, 16 May 2016 06:34:20 +0000")
                 .WithDeckLabels(1203);
@@ -241,7 +243,8 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
                 "Celebrían’s Stone", "Celebrian's Stone", "Heir of Valandil", "Steward of Gondor", "Sword that was Broken", "Gondorian Fire", "Gondorian Shield",
                 "Forst Snare", "Ranger Spikes", "Descendants of Kings", "Tighten Our Belts", "Feint", "Daeron's Runes", "Deep Knowledge");
             AddLink("Contest Winners: Bree-land Investigators", "https://hallofbeorn.wordpress.com/2015/12/04/contest-winners-bree-land-investigators/", "Sat, 05 Dec 2015 00:38:55 +0000");
-            AddLink("Deck: The Bear's Revenge", "https://hallofbeorn.wordpress.com/2015/11/23/deck-the-bears-revenge/", "Mon, 23 Nov 2015 23:17:03 +0000");
+            AddLink("Deck: The Bear's Revenge", "https://hallofbeorn.wordpress.com/2015/11/23/deck-the-bears-revenge/", "Mon, 23 Nov 2015 23:17:03 +0000")
+                .WithDeckLabels(131);
             AddLink("Contest: Bree-land Investigators", "https://hallofbeorn.wordpress.com/2015/11/15/contest-bree-land-investigators/", "Sun, 15 Nov 2015 23:25:39 +0000");
             AddLink("Gen Con 2015 Bear Draft - Deck Lists", "https://hallofbeorn.wordpress.com/2015/10/28/gen-con-2015-bear-draft-deck-lists/", "Wed, 28 Oct 2015 21:30:02 +0000");
             AddLink("Bear Draft version 2", "https://hallofbeorn.wordpress.com/2015/10/26/bear-draft-version-2/", "Mon, 26 Oct 2015 23:41:50 +0000");
@@ -335,10 +338,12 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Deck: Boromir's Sacrifice", "https://hallofbeorn.wordpress.com/2014/04/30/deck-boromirs-sacrifice/", "Thu, 01 May 2014 04:33:42 +0000");
             AddLink("Poll Results: Favorite Epic Moments in The Lord of the Rings", "https://hallofbeorn.wordpress.com/2014/04/26/poll-results-favorite-epic-moments-in-the-lord-of-the-rings/", "Sat, 26 Apr 2014 23:52:42 +0000");
             AddLink("Key Concepts: Splashing", "https://hallofbeorn.wordpress.com/2014/04/16/key-concepts-splashing/", "Thu, 17 Apr 2014 04:06:38 +0000");
-            AddLink("Key Concepts: Traits - Rohan", "https://hallofbeorn.wordpress.com/2014/04/04/key-concepts-traits-rohan/", "Fri, 04 Apr 2014 06:27:46 +0000");
+            AddLink("Key Concepts: Traits - Rohan", "https://hallofbeorn.wordpress.com/2014/04/04/key-concepts-traits-rohan/", "Fri, 04 Apr 2014 06:27:46 +0000")
+                .WithLabels(ProductRepository.Instance.TraitLabels("Rohan.", c => c.IsPlayerCard()));
             AddLink("Friendship Is Magic", "https://hallofbeorn.wordpress.com/2014/04/01/friendship-is-magic/", "Wed, 02 Apr 2014 03:07:40 +0000");
             AddLink("Deck: Ride Them Down!", "https://hallofbeorn.wordpress.com/2014/03/25/deck-ride-them-down/", "Tue, 25 Mar 2014 06:27:34 +0000");
-            AddLink("Beorn's Favorites: 5 Great Glue Cards", "https://hallofbeorn.wordpress.com/2014/03/21/beorns-favorites-5-great-glue-cards/", "Fri, 21 Mar 2014 07:33:24 +0000");
+            AddLink("Bear Market: 5 Great Glue Cards", "https://hallofbeorn.wordpress.com/2014/03/21/beorns-favorites-5-great-glue-cards/", "Fri, 21 Mar 2014 07:33:24 +0000")
+                .WithLabels("Envoy of Pelargir", "Errand-rider", "Halfling Determination", "Westfold Horse-breeder", "Daeron's Runes");
             AddLink("Contest Winner: Raiding the Kitchen of Orthanc", "https://hallofbeorn.wordpress.com/2014/03/18/contest-winner-raiding-the-kitchen-of-orthanc/", "Tue, 18 Mar 2014 05:37:23 +0000");
             AddLink("A Good Cause", "https://hallofbeorn.wordpress.com/2014/03/13/a-good-cause/", "Fri, 14 Mar 2014 01:58:40 +0000");
             AddLink("The Lure of Power", "https://hallofbeorn.wordpress.com/2014/03/13/the-lure-of-power/", "Thu, 13 Mar 2014 18:02:54 +0000");
@@ -385,13 +390,15 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Community News - November 2013", "https://hallofbeorn.wordpress.com/2013/11/16/community-news-november-2013/", "Sat, 16 Nov 2013 08:50:37 +0000");
             AddLink("The Grey Company Podcast - Episode 1", "https://hallofbeorn.wordpress.com/2013/11/13/the-grey-company-podcast-episode-1/", "Wed, 13 Nov 2013 17:27:18 +0000");
             AddLink("Key Concepts: Timing", "https://hallofbeorn.wordpress.com/2013/11/01/key-concepts-timing/", "Fri, 01 Nov 2013 18:40:10 +0000");
-            AddLink("Deck: Caldara's Sacrifice", "https://hallofbeorn.wordpress.com/2013/10/31/deck-caldaras-sacrifice/", "Thu, 31 Oct 2013 18:43:56 +0000");
+            AddLink("Deck: Caldara's Sacrifice", "https://hallofbeorn.wordpress.com/2013/10/31/deck-caldaras-sacrifice/", "Thu, 31 Oct 2013 18:43:56 +0000")
+                .WithDeckLabels(825);
             AddLink("The Grey Company", "https://hallofbeorn.wordpress.com/2013/10/30/the-grey-company/", "Wed, 30 Oct 2013 15:04:58 +0000");
             AddLink("Custom Cards: The Fifth Sphere", "https://hallofbeorn.wordpress.com/2013/10/26/custom-cards-the-fifth-sphere/", "Sat, 26 Oct 2013 20:39:04 +0000");
             AddLink("Key Concepts: Shielding", "https://hallofbeorn.wordpress.com/2013/10/11/key-concepts-shielding/", "Fri, 11 Oct 2013 06:21:47 +0000");
             AddLink("Trouble at the Lonely Mountain", "https://hallofbeorn.wordpress.com/2013/10/07/trouble-at-the-lonely-mountain/", "Tue, 08 Oct 2013 01:56:35 +0000");
             AddLink("Poll Results: Favorite Core Set or Shadows of Mirkwood Scenario", "https://hallofbeorn.wordpress.com/2013/09/30/poll-results-favorite-coreshadows-of-mirkwood-scenario/", "Tue, 01 Oct 2013 04:59:42 +0000");
-            AddLink("Deck: Keep It Secret, Keep It Safe", "https://hallofbeorn.wordpress.com/2013/09/28/deck-keep-it-secret-keep-it-safe/", "Sat, 28 Sep 2013 13:04:56 +0000");
+            AddLink("Deck: Keep It Secret, Keep It Safe", "https://hallofbeorn.wordpress.com/2013/09/28/deck-keep-it-secret-keep-it-safe/", "Sat, 28 Sep 2013 13:04:56 +0000")
+                .WithDeckLabels(184);
             AddLink("Community News - September 2013", "https://hallofbeorn.wordpress.com/2013/09/23/community-news-september-2013/", "Mon, 23 Sep 2013 16:23:17 +0000");
             AddLink("Beorn's Path: Part 13 - Return to Mirkwood", "https://hallofbeorn.wordpress.com/2013/09/22/beorns-path-part-13-return-to-mirkwood/", "Mon, 23 Sep 2013 01:30:22 +0000");
             AddLink("Deck: Rangers and Traps", "https://hallofbeorn.wordpress.com/2013/09/18/deck-rangers-and-traps/", "Thu, 19 Sep 2013 00:46:28 +0000");
@@ -468,17 +475,22 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Deck: Gluttony", "https://hallofbeorn.wordpress.com/2013/01/23/deck-gluttony/", "Wed, 23 Jan 2013 19:20:02 +0000");
             AddLink("Deck: Boromir and the Seven Dwarves", "https://hallofbeorn.wordpress.com/2013/01/22/deck-boromir-and-the-seven-dwarves/", "Tue, 22 Jan 2013 20:02:05 +0000");
             AddLink("Who would I most want to have my back in a bar fight?", "https://hallofbeorn.wordpress.com/2013/01/21/who-would-i-most-want-to-have-my-back-in-a-bar-fight/", "Mon, 21 Jan 2013 19:44:52 +0000");
-            AddLink("Deck: Vilya, The Ring of Air", "https://hallofbeorn.wordpress.com/2013/01/19/deck-vilya-the-ring-of-air/", "Sat, 19 Jan 2013 05:08:04 +0000");
+            AddLink("Deck: Vilya, The Ring of Air", "https://hallofbeorn.wordpress.com/2013/01/19/deck-vilya-the-ring-of-air/", "Sat, 19 Jan 2013 05:08:04 +0000")
+                .WithDeckLabels(645);
             AddLink("Key Concepts: Versatility", "https://hallofbeorn.wordpress.com/2013/01/18/key-concepts-versatility/", "Fri, 18 Jan 2013 23:02:42 +0000");
             AddLink("Poll Results: Most Wanted Hero Card", "https://hallofbeorn.wordpress.com/2013/01/17/poll-results-most-wanted-hero-card/", "Thu, 17 Jan 2013 18:02:31 +0000");
             AddLink("Decks: Direct Damage", "https://hallofbeorn.wordpress.com/2013/01/16/decks-direct-damage/", "Wed, 16 Jan 2013 00:19:20 +0000");
-            AddLink("Beorn's Favorites: 5 Overlooked Events for Heirs of N£menor", "https://hallofbeorn.wordpress.com/2013/01/15/5-overlooked-events-for-heirs-of-numenor/", "Tue, 15 Jan 2013 21:28:02 +0000");
+            AddLink("Bear Market: 5 Overlooked Events for Heirs of Númenor", "https://hallofbeorn.wordpress.com/2013/01/15/5-overlooked-events-for-heirs-of-numenor/", "Tue, 15 Jan 2013 21:28:02 +0000")
+                .WithLabels("Shadow of the Past", "Durin's Song", "Swift Strike", "A Watchfule Peace", "Out of the Wild");
             AddLink("Decks: Renewed Friendships", "https://hallofbeorn.wordpress.com/2013/01/14/decks-renewed-friendships/", "Mon, 14 Jan 2013 19:15:48 +0000");
-            AddLink("Deck: Secrets of Erebor 2", "https://hallofbeorn.wordpress.com/2013/01/12/deck-secrets-of-erebor-2/", "Sat, 12 Jan 2013 07:26:15 +0000");
-            AddLink("Key Concepts: Traits - Dwarf", "https://hallofbeorn.wordpress.com/2013/01/11/key-concepts-traits-dwarf/", "Sat, 12 Jan 2013 05:49:48 +0000");
+            AddLink("Deck: Secrets of Erebor 2", "https://hallofbeorn.wordpress.com/2013/01/12/deck-secrets-of-erebor-2/", "Sat, 12 Jan 2013 07:26:15 +0000")
+                .WithDeckLabels(631);
+            AddLink("Key Concepts: Traits - Dwarf", "https://hallofbeorn.wordpress.com/2013/01/11/key-concepts-traits-dwarf/", "Sat, 12 Jan 2013 05:49:48 +0000")
+                .WithLabels(ProductRepository.Instance.TraitLabels("Dwarf.", c => c.IsPlayerCard()));
             AddLink("Key Concepts: Support", "https://hallofbeorn.wordpress.com/2013/01/09/key-concepts-support/", "Wed, 09 Jan 2013 21:33:05 +0000");
             AddLink("Decks: Battle of the Pelennor Fields", "https://hallofbeorn.wordpress.com/2013/01/09/decks-battle-of-the-pelennor-fields/", "Wed, 09 Jan 2013 00:07:40 +0000");
-            AddLink("Deck: Secrets of Erebor", "https://hallofbeorn.wordpress.com/2013/01/07/deck-secrets-of-erebor/", "Mon, 07 Jan 2013 22:22:43 +0000");
+            AddLink("Deck: Secrets of Erebor", "https://hallofbeorn.wordpress.com/2013/01/07/deck-secrets-of-erebor/", "Mon, 07 Jan 2013 22:22:43 +0000")
+                .WithDeckLabels(632);
             AddLink("Key Concepts: Roles", "https://hallofbeorn.wordpress.com/2013/01/07/key-concepts-roles/", "Mon, 07 Jan 2013 19:22:54 +0000");
             AddLink("Key Concepts: Synergy", "https://hallofbeorn.wordpress.com/2013/01/05/key-concepts-synergy/", "Sun, 06 Jan 2013 01:26:42 +0000");
             AddLink("Key Concepts: Pace", "https://hallofbeorn.wordpress.com/2013/01/04/key-concepts-pace/", "Fri, 04 Jan 2013 21:59:01 +0000");
