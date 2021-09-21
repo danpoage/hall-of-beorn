@@ -15,6 +15,9 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             LinkType.Card_Talk)
         {
             AddYear(2021);
+            AddLink("Spirit Con Cards", "https://cardtalk2018.libsyn.com/spirit-con-cards", "Sep 21 2021")
+                .WithLabels("The Galadhrim's Greeting", "Light the Beacons", "Spare Pipe", "Smoke and Think", "Lothíriel", "Lothiriel", " Éomer", "Eomer", "Elladan", "Elrohir", "Shadows Give Way",
+                    "Double Back", "The Storm Comes", "Explore Secret Ways", "Asfaloth", "Glorfindel", "A Test of Will", "Hasty Stroke");
             AddLink("Guest Host Eric Shell: ALeP Spoiler and Con of the Rings Convo", "https://cardtalk2018.libsyn.com/guest-host-eric-shell-alep-spoiler-and-con-of-the-rings-convo", "Sep 14 2021")
                 .WithLabels("Guided by Fate");
             AddLink("Lore Con Cards", "https://cardtalk2018.libsyn.com/lore-con-cards", "Sep 7 2021")
@@ -46,6 +49,43 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("Éomer", "Eomer");
             AddLink("Grimbeorn the Old", "https://cardtalk2018.libsyn.com/grimbeorn-the-old", "May 11 2021")
                 .WithLabels("Grimbeorn the Old");
+            AddLink("Tactics Beregond", "https://cardtalk2018.libsyn.com/tactics-beregond", "May 5 2021")
+                .WithLabels("Beregond");
+            AddLink("Bywater Shirriff", "https://cardtalk2018.libsyn.com/bywater-shirriff", "Apr 27 2021")
+                .WithLabels("Bywater Shirriff");
+            AddLink("Envoy of Pelargir", "https://cardtalk2018.libsyn.com/envoy-of-pelargir", "Apr 20 2021")
+                .WithLabels("Envoy of Pelargir");
+            AddLink("Warden of Healing and Iroreth", "https://cardtalk2018.libsyn.com/warden-of-healing-and-ioreth", "Apr 7 2021")
+                .WithLabels("Warden of Healing", "Ioreth");
+            AddLink("Ally Elrond", "https://cardtalk2018.libsyn.com/ally-elrond", "Mar 30 2021")
+                .WithLabels("Elrond");
+            AddLink("Magic Ring", "https://cardtalk2018.libsyn.com/magic-ring", "Mar 23 2021")
+                .WithLabels("Magic Ring");
+            AddLink("Healing Herbs", "https://cardtalk2018.libsyn.com/healing-herbs", "Mar 9 2021")
+                .WithLabels("Healing Herbs");
+            AddLink("Superlative Caleb", "https://cardtalk2018.libsyn.com/superlative-caleb", "Mar 1 2021");
+            AddLink("Superlative February - Show 12", "https://cardtalk2018.libsyn.com/superlative-february-show-12", "Feb 26 2021")
+                .WithLabels("Gildor's Counsel", "Heed the Dream", "Far-sighted", "Deep Knowledge", "Drinkling Song", "Striders Path",
+                    "A Burning Brand", "Asfaloth", "Elf-stone", "Fast Hitch", "Ranger Spikes");
+            AddLink("Superlative February - Show 11", "https://cardtalk2018.libsyn.com/superlative-february-show-11", "Feb 24 2021");
+            AddLink("Superlative February - Show 10", "https://cardtalk2018.libsyn.com/superlative-february-show-10", "Feb 22 2021");
+            AddLink("Superlative February - Show 9", "https://cardtalk2018.libsyn.com/superlative-february-show-9", "Feb 19 2021");
+            AddLink("Superlative February - Show 8", "https://cardtalk2018.libsyn.com/superlative-february-show-8", "Feb 17 2021");
+            AddLink("Superlative February - Show 7", "https://cardtalk2018.libsyn.com/superlative-february-show-7", "Feb 15 2021");
+            AddLink("Superlative February - Show 6", "https://cardtalk2018.libsyn.com/superlative-february-show-6", "Feb 12 2021");
+            AddLink("Superlative February - Show 5", "https://cardtalk2018.libsyn.com/superlative-february-show-5", "Feb 10 2021");
+            AddLink("Superlative February - Show 4", "https://cardtalk2018.libsyn.com/superlative-february-show-4", "Feb 8 2021");
+            AddLink("Superlative February - Show 3", "https://cardtalk2018.libsyn.com/superlative-february-show-3", "Feb 5 2021");
+            AddLink("Superlative February - Show 2", "https://cardtalk2018.libsyn.com/superlative-february-show-2", "Feb 3 2021");
+            AddLink("Superlative February - Show 1", "https://cardtalk2018.libsyn.com/superlative-february-show-1", "Feb 1 2021"); 
+            AddLink("Beorn's Hospitality", "https://cardtalk2018.libsyn.com/beorns-hospitality", "Jan 27 2021")
+                .WithLabels("Beorn's Hospitality");
+            AddLink("Lore of Imladris", "https://cardtalk2018.libsyn.com/lore-of-imladris", "Jan 19 2021")
+                .WithLabels("Lore of Imladris");
+            AddLink("Dunedain Remedy", "https://cardtalk2018.libsyn.com/dunedain-remedy", "Jan 11 2021")
+                .WithLabels("Dúnedain Remedy", "Dunedain Remedy");
+            AddLink("Self Preservation", "https://cardtalk2018.libsyn.com/self-preservation", "Jan 4 2021")
+                .WithLabels("Self Preservation");
 
             AddLink("Andrath-Guardsman-TMk", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/andrath-guardsman", "Andrath Guardsman");
             AddLink("Aragorn-Core", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/leadership-aragorn", "Leadership Aragorn");
