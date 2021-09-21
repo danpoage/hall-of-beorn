@@ -391,6 +391,7 @@
     <Compile Include="Models\LotR\Age.cs" />
     <Compile Include="Models\LotR\Archetype.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsChannel.cs" />
+    <Compile Include="Models\LotR\Community\CardTalk\CardTalkBlog.cs" />
     <Compile Include="Models\LotR\Community\CardTalk\CardTalkChannel.cs" />
     <Compile Include="Models\LotR\Community\DarklingDoor\DarklingDoorBlog.cs" />
     <Compile Include="Models\LotR\Community\DieMannerVonGondor\DieMannerVonGondorBlog.cs" />

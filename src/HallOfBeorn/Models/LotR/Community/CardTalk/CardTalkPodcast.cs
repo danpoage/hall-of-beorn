@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+using HallOfBeorn.Services.LotR;
 
 namespace HallOfBeorn.Models.LotR.Community.CardTalk
 {
@@ -14,6 +14,39 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             "http://cardtalk2018.libsyn.com/rss",
             LinkType.Card_Talk)
         {
+            AddYear(2021);
+            AddLink("Guest Host Eric Shell: ALeP Spoiler and Con of the Rings Convo", "https://cardtalk2018.libsyn.com/guest-host-eric-shell-alep-spoiler-and-con-of-the-rings-convo", "Sep 14 2021")
+                .WithLabels("Guided by Fate");
+            AddLink("Lore Con Cards", "https://cardtalk2018.libsyn.com/lore-con-cards", "Sep 7 2021")
+                .WithLabels("Gildor's Counsel", "Deep Knowledge", "The Long Defeat", "Ioreth", "Waters of the Nimrodel", "Out of the Wild", "Keen as Lances", "Gandalf",
+                "Leather Boots", "Heed the Dream");
+            AddLink("Leadership Con Cards", "https://cardtalk2018.libsyn.com/leadership-con-cards", "Aug 31 2021")
+                .WithLabels("Campfire Tales", "Man the Walls", "Grom Resolve", "Strength of Arms", "Errand-rider", "Steward of Gondor", "Resourceful", "Necklace of Girion", 
+                    "Unlikely Friendship", "Bifur", "Horn of Gondor", "Glóin", "Gloin", "Parting Gifts", "Rod of the Steward");
+            AddLink("Meneldor", "https://cardtalk2018.libsyn.com/meneldor", "Aug 24 2021")
+                .WithLabels("Meneldor");
+            AddLink("Leadership Merry", "https://cardtalk2018.libsyn.com/repost-leadership-merry-0", "Aug 11 2021")
+                .WithLabels("Merry");
+            AddLink("Eagles of the Misty Mountains", "https://cardtalk2018.libsyn.com/eagles-of-the-misty-mountains", "Aug 4 2021")
+                .WithLabels("Eagles of the Misty Mountains");
+            AddLink("Hero Radagast", "https://cardtalk2018.libsyn.com/hero-radagast", "Jul 27 2021")
+                .WithLabels("Radagast");
+            AddLink("Guest Host Matt Kell AKA Kattattack22", "https://cardtalk2018.libsyn.com/guest-host-matt-kell-aka-kattattack22", "July 20 2021")
+                .WithLabels("Followed");
+            AddLink("Dawn Take You All", "https://cardtalk2018.libsyn.com/dawn-take-you-all", "July 6 2021")
+                .WithLabels("Dawn Take You All");
+            AddLink("Spoiler: Con of the Rings 2021", "https://cardtalk2018.libsyn.com/spoiler-con-of-the-rings-2021", "Jun 15 2021");
+            AddLink("Daeron's Runes", "https://cardtalk2018.libsyn.com/daerons-runes", "Jun 8 2021")
+                .WithLabels("Daeron's Runes");
+            AddLink("A Test of Will", "https://cardtalk2018.libsyn.com/a-test-of-will", "Jun 1 2021")
+                .WithLabels("A Test of Will");
+            AddLink("Last Stand", "https://cardtalk2018.libsyn.com/last-stand", "May 25 2021")
+                .WithLabels("Last Stand");
+            AddLink("Leadership Eomer", "https://cardtalk2018.libsyn.com/leadership-eomer", "May 18 2021")
+                .WithLabels("Éomer", "Eomer");
+            AddLink("Grimbeorn the Old", "https://cardtalk2018.libsyn.com/grimbeorn-the-old", "May 11 2021")
+                .WithLabels("Grimbeorn the Old");
+
             AddLink("Andrath-Guardsman-TMk", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/andrath-guardsman", "Andrath Guardsman");
             AddLink("Aragorn-Core", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/leadership-aragorn", "Leadership Aragorn");
             AddLink("Aragorn-Core", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/which-aragorn", "Which Aragorn?");
@@ -108,10 +141,31 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Thranduil-FitN", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/thranduil", "Thranduil");
         }
 
-        private void AddLink(string cardSlug, LinkType type, string url, string title)
+        private CreatorLink AddLink(string cardSlug, LinkType type, string url, string title)
         {
             AssociateCardToUrl(cardSlug, url);
-            AddLink(new Link(LinkType.Card_Talk, url, title));
+            var link = AddLink(new Link(LinkType.Card_Talk, url, title));
+
+            LotRCard card = null;
+            foreach (var cardSet in ProductRepository.Instance.CardSets())
+            {
+                card = cardSet.Cards.FirstOrDefault(c => c.Slug == cardSlug);
+                if (card != null)
+                {
+                    break;
+                }
+            }
+
+            if (card != null)
+            {
+                link.WithLabels(card.NormalizedTitle);
+                if (card.Title != card.NormalizedTitle)
+                {
+                    link.WithLabels(card.Title);
+                }
+            }
+
+            return link;
         }
     }
 }

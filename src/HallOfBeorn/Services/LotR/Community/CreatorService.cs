@@ -50,6 +50,7 @@ namespace HallOfBeorn.Services.LotR.Community
             AddBlog(new MasterOfLoreBlog());
             AddBlog(new DorCuartholBlog());
             AddBlog(new VisionOfThePalantirBlog());
+            AddBlog(new CardTalkBlog());
             AddBlog(new LotRDeckTestingGroundBlog());
             AddBlog(new DarklingDoorBlog());
             AddBlog(new WardenOfArnorBlog());
