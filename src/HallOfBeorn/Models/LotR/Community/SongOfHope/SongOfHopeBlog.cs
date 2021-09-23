@@ -11,6 +11,12 @@ namespace HallOfBeorn.Models.LotR.Community.SongOfHope
             : base("Song of Hope", "https://songofhope693941332.wordpress.com/", "https://songofhope693941332.wordpress.com/feed", LinkType.Song_of_Hope)
         {
             AddYear(2021);
+            AddLink("Con of the Rings 2021 Prep", "https://songofhope693941332.wordpress.com/2021/09/22/con-of-the-rings-2021-prep/", "Sep 22 2020")
+                .WithDeckLabels(22527)
+                .WithDeckLabels(22528)
+                .WithDeckLabels(22529)
+                .WithDeckLabels(22530);
+            AddLink("I. The Dagor Bragollach – Part 2", "https://songofhope693941332.wordpress.com/2021/09/22/i-the-dagor-bragollach-part-2/", "Sep 22 2020");
             AddLink("I. The Dagor Bragollach – Part 1", "https://songofhope693941332.wordpress.com/2021/09/08/i-the-dagor-bragollach-part-1/", "Sep 8 2021");
             AddLink("Glossary", "https://songofhope693941332.wordpress.com/2021/09/08/glossary/", "Sep 8 2021");
             AddLink("The Geography and Politics of Beren and Lúthien", "https://songofhope693941332.wordpress.com/2021/09/05/the-geography-and-politics-of-beren-and-luthien/", "Sep 5 2021");

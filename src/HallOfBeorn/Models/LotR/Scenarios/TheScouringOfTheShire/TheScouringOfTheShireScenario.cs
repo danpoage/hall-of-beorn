@@ -14,9 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheScouringOfTheShire
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP08.pdf";
 
-            //QuestCompanionSlug = "the-scouring-of-the-shire";
-            //DifficultyRating = 5f;
-            //Votes = 1;
+            QuestCompanionSlug = "standalone-quests-quest-the-scouring-of-the-shire";
+            DifficultyRating = 6f;
+            Votes = 1;
 
             AddEncounterSet(EncounterSet.TheScouringOfTheShire);
             

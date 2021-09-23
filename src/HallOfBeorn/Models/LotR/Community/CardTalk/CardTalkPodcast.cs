@@ -87,6 +87,162 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Self Preservation", "https://cardtalk2018.libsyn.com/self-preservation", "Jan 4 2021")
                 .WithLabels("Self Preservation");
 
+            AddYear(2020);
+            AddLink("The End Comes", "https://cardtalk2018.libsyn.com/the-end-comes", "Dec 28 2020")
+                .WithLabels("The End Comes");
+            AddLink("Stone of Elostirion", "https://cardtalk2018.libsyn.com/stone-of-elostirion", "Dec 21 2020")
+                .WithLabels("Stone of Elostirion");
+            AddLink("Durin's Axe", "https://cardtalk2018.libsyn.com/durins-axe", "Dec 15 2020")
+                .WithLabels("Durin's Axe");
+            AddLink("Guest Host Eric Shell - A Long-extended Party", "https://cardtalk2018.libsyn.com/guest-host-eric-shell-a-long-expected-party", "Dec 11 2020")
+                .WithLabels("Open the Gates");
+            AddLink("Thengel - A Long-extended Party", "https://cardtalk2018.libsyn.com/thengel-a-long-extended-party", "Dec 9 2020")
+                .WithLabels("Thengel");
+            AddLink("Cram", "https://cardtalk2018.libsyn.com/cram", "Dec 7 2020")
+                .WithLabels("Cram");
+            AddLink("Peace, and Thought", "https://cardtalk2018.libsyn.com/peace-and-thought", "Nov 24 2020")
+                .WithLabels("Peace, and Thought");
+            AddLink("Announcing Superlative February", "https://cardtalk2018.libsyn.com/announcing-superlative-february", "Nov 18 2020");
+            AddLink("Guest Host Joe Hoffman", "https://cardtalk2018.libsyn.com/guest-host-joe-hoffman", "Nov 17 2020")
+                .WithLabels("Hobbit");
+            AddLink("Ring Mail", "https://cardtalk2018.libsyn.com/ring-mail", "Nov 9 2020")
+                .WithLabels("Ring Mail");
+            AddLink("Guest Host Justin Gieb", "https://cardtalk2018.libsyn.com/guest-host-justin-gieb", "Oct 26 2020")
+                .WithLabels("The Free Peoples");
+            AddLink("Guest Host Russ Lundgren", "https://cardtalk2018.libsyn.com/guest-host-russ-lundgren", "Oct 20 2020")
+                .WithLabels("Elrond", "Vilya", "Radagast", "Radagast's Staff", "Gandalf", "Eagle", "Loyal Hound", "Wild Stallion");
+            AddLink("Card Talk's New Player Buying Guide", "https://cardtalk2018.libsyn.com/card-talks-new-player-buying-guide", "Oct 15 2020")
+                .WithLabels("Glorfindel", "Elrond", "Vilya", "Outlands", "Hirluin the Fair", "Éowyn", "Eowyn");
+            AddLink("Bofur", "https://cardtalk2018.libsyn.com/spirit-bofur", "Oct 13 2020")
+                .WithLabels("Bofur");
+            AddLink("Guest Host Vardaen (again!)", "https://cardtalk2018.libsyn.com/guest-host-vardaen-again-0", "Oct 5 2020")
+                .WithLabels("Ghân-buri-Ghân", "Ghan-buri-Ghan");
+            AddLink("Classic Card Talk Gloin", "https://cardtalk2018.libsyn.com/classic-card-talk-gloin", "Sep 28 2020")
+                .WithLabels("Glóin", "Gloin");
+            AddLink("Waters of Nimrodel", "https://cardtalk2018.libsyn.com/waters-of-nimrodel", "Sep 14 2020")
+                .WithLabels("Waters of Nimrodel");
+            AddLink("Ring of Barahir", "https://cardtalk2018.libsyn.com/ring-of-barahir", "Sep 8 2020")
+                .WithLabels("Ring of Barahir");
+            AddLink("Citadel Custodian", "https://cardtalk2018.libsyn.com/citadel-custodian", "Aug 31 2020")
+                .WithLabels("Citadel Custodian");
+            AddLink("Free to Choose", "https://cardtalk2018.libsyn.com/free-to-choose", "Aug 25 2020")
+                .WithLabels("Free to Choose");
+            AddLink("Farmer Maggot", "https://cardtalk2018.libsyn.com/farmer-maggot", "Aug 18 2020")
+                .WithLabels("Farmer Maggot");
+            AddLink("Card Talk Live: Ered Mithrin Cycle", "https://cardtalk2018.libsyn.com/card-talk-live-ered-mithrin-cycle", "Aug 10 2020")
+                .WithLabels("Grimbeorn the Old", "Thranduil", "Bilbo Baggins");
+            AddLink("Card Talk Live: Shadows of Mirkwood Cycle", "https://cardtalk2018.libsyn.com/card-talk-live-shadows-of-mirkwood-cycle", "Aug 6 2020")
+                .WithLabels("Frodo Baggins", "Hobbit", "Bond of Friendship", "Fast Hitch", "Shadow of the Past", "Aragorn", "Unexpected Courage", "Erebor Hammersmith");
+            AddLink("Leadership Hero Faramir", "https://cardtalk2018.libsyn.com/leadership-hero-faramir", "July 28 2020")
+                .WithLabels("Faramir");
+            AddLink("Miruvor", "https://cardtalk2018.libsyn.com/miruvor", "July 20 2020")
+                .WithLabels("Miruvor");
+            AddLink("Beravor", "https://cardtalk2018.libsyn.com/beravor", "July 13 2020")
+                .WithLabels("Beravor");
+            AddLink("SPOILER!!! Thorongil", "https://cardtalk2018.libsyn.com/spoiler-thorongil", "July 10 2020")
+                .WithLabels("Thorongil");
+            AddLink("SPOILER!!! Spirit Aragorn", "https://cardtalk2018.libsyn.com/spoiler-spirit-aragorn", "July 6 2020")
+                .WithLabels("Aragorn");
+            AddLink("SPOILER!!! Bond of Friendship Contract", "https://cardtalk2018.libsyn.com/spoiler-bond-of-friendship-contract", "Jun 30 2020")
+                .WithLabels("Bond of Friendship");
+            AddLink("Guest Hosts Bob and Chrissy", "https://cardtalk2018.libsyn.com/guest-hosts-bob-and-chrissy", "Jun 29 2020")
+                .WithLabels("Prince Imrahil");
+            AddLink("Tatics Hero Legolas", "https://cardtalk2018.libsyn.com/tactics-hero-legolas", "Jun 15 2020")
+                .WithLabels("Legolas");
+            AddLink("Ally Treebeard", "https://cardtalk2018.libsyn.com/ally-treebeard", "Jun 8 2020")
+                .WithLabels("Treebeard");
+            AddLink("Snowbourn Scout", "https://cardtalk2018.libsyn.com/snowbourn-scout", "Jun 1 2020")
+                .WithLabels("Snowbourn Scout");
+            AddLink("SPOILER!!! Red Book of Westmarch", "https://cardtalk2018.libsyn.com/spoiler-red-book-of-westmarch", "May 18 2020")
+                .WithLabels("Red Book of Westmarch");
+            AddLink("Guest Hosts Shane and Bob", "https://cardtalk2018.libsyn.com/guest-hosts-shane-and-bob", "May 13 2020")
+                .WithLabels("We Are Not Idle");
+            AddLink("Round Table Discussion: Attack on Dol Guldur", "https://cardtalk2018.libsyn.com/round-table-discussion-attack-on-dol-guldur", "May 6 2020")
+                .WithLabels(Scenario.AttackOnDolGuldur);
+            AddLink("Valiant Sacrifice", "https://cardtalk2018.libsyn.com/valiant-sacrifice", "May 4 2020")
+                .WithLabels("Valiant Sacrifice");
+            AddLink("Power in the Earth", "https://cardtalk2018.libsyn.com/power-in-the-earth", "Apr 27 2020")
+                .WithLabels("Power in the Earth");
+            AddLink("Timely Aid", "https://cardtalk2018.libsyn.com/timely-aid", "Apr 20 2020")
+                .WithLabels("Timely Aid");
+            AddLink("Sarah McLeod Intros Rosie Cotton", "https://cardtalk2018.libsyn.com/sarah-mcleod-intros-rosie-cotton", "Apr 13 2020")
+                .WithLabels("Rosie Cotton");
+            AddLink("Chad G and Christian S Talk about Rosie Cotton", "https://cardtalk2018.libsyn.com/chad-g-and-christian-s-talk-about-rosie-cotton", "Apr 13 2020")
+                .WithLabels("Rosie Cotton");
+            AddLink("Guest Host Steve Majka,AKA Vardaen", "https://cardtalk2018.libsyn.com/guest-host-steve-majka-aka-vardaen", "Apr 6 2020")
+                .WithLabels("Elwing's Flight");
+            AddLink("Unexpected Courage", "https://cardtalk2018.libsyn.com/unexpected-courage", "Mar 23 2020")
+                .WithLabels("Unexpected Courage");
+            AddLink("Guest Host John Rogers 2", "https://cardtalk2018.libsyn.com/guest-host-john-rogers-2", "Mar 16 2020")
+                .WithLabels("The Long Defeat");
+            AddLink("Guest Host Mark Chan", "https://cardtalk2018.libsyn.com/guest-host-mark-chan", "Mar 9 2020")
+                .WithLabels("RiddermarkLord");
+            AddLink("Risk Some Light", "https://cardtalk2018.libsyn.com/risk-some-light", "Mar 2 2020")
+                .WithLabels("Risk Some Light", "Secrecy");
+            AddLink("Guest Hosts Caleb Grace and MJ Newman", "https://cardtalk2018.libsyn.com/guest-hosts-caleb-grace-and-matt-newman", "Feb 28 2020")
+                .WithLabels("Éomer", "Eomer", "Lothíriel", "Lothiriel");
+            AddLink("Guest Host Brandon", "https://cardtalk2018.libsyn.com/guest-host-brandon", "Feb 26 2020")
+                .WithLabels("Boromir");
+            AddLink("Spirit Theoden and Theodred", "https://cardtalk2018.libsyn.com/spirit-theoden-and-theodred", "Feb 24")
+                .WithLabels("Théoden", "Theoden", "Théodred", "Theodred");
+            AddLink("Guest Host Ava Walsh", "https://cardtalk2018.libsyn.com/guest-host-ava-walsh", "Feb 21 2020")
+                .WithLabels("Gandalf");
+            AddLink("Spirit Legolas and Leadership Hero Gimli", "https://cardtalk2018.libsyn.com/spirit-legolas-and-leadership-hero-gimli", "Feb 19")
+                .WithLabels("Legolas", "Gimli");
+            AddLink("Guest Host Katie Muir", "https://cardtalk2018.libsyn.com/guest-host-katie-muir", "Feb 14")
+                .WithLabels("Gimli");
+            AddLink("Guest Host Sarah and Jason", "https://cardtalk2018.libsyn.com/guest-host-sarah-and-jason", "Feb 12")
+                .WithLabels("Kahliel");
+            AddLink("Smeagol and the One Ring", "https://cardtalk2018.libsyn.com/smeagol-and-the-one-ring", "Feb 10")
+                .WithLabels("Sméagol", "Smeagol", "The One Ring");
+            AddLink("Guest Host Chloe Walsh", "https://cardtalk2018.libsyn.com/guest-host-chloe-walsh", "Feb 7 2020")
+                .WithLabels("Sméagol", "Smeagol");
+            AddLink("Guest Host Tolkien Road Podcast", "https://cardtalk2018.libsyn.com/guest-host-tolkien-road-podcast", "Feb 5 2020");
+            AddLink("Arwen Undomiel and any Hero Aragorn", "https://cardtalk2018.libsyn.com/hero-arwen-umdomiel-and-any-hero-aragorn", "Feb 3 2020")
+                .WithLabels("Arwen Undómiel", "Arwen Undomiel", "Aragorn");
+            AddLink("Feint", "https://cardtalk2018.libsyn.com/feint", "Jan 27 2020")
+                .WithLabels("Feint");
+            AddLink("Theodred", "https://cardtalk2018.libsyn.com/theodred", "Jan 20 2020")
+                .WithLabels("Théodred", "Theodred");
+            AddLink("COUPLES FEBRUARY!", "https://cardtalk2018.libsyn.com/couples-february", "Jan 16 2020");
+            AddLink("SPOILER! Odo Proudfoot", "https://cardtalk2018.libsyn.com/spoiler-odo-proudfoot", "Jan 13 2020")
+                .WithLabels("Odo Proudfoot");
+            AddLink("Eleanor", "https://cardtalk2018.libsyn.com/eleanor", "Jan 6 2020")
+                .WithLabels("Eleanor");
+            AddLink("Hero Treebeard", "https://cardtalk2018.libsyn.com/hero-treebeard", "Dec 23 2019")
+                .WithLabels("Treebeard");
+            AddLink("Behind Strong Walls", "https://cardtalk2018.libsyn.com/behind-strong-walls", "Dec 16 2019")
+                .WithLabels("Behind Strong Walls");
+            AddLink("Gildor's Counsel", "https://cardtalk2018.libsyn.com/gildors-counsel", "Dec 9 2019")
+                .WithLabels("Gildor's Counsel");
+            AddLink("Strider's Path", "https://cardtalk2018.libsyn.com/striders-path", "Dec 2 2019")
+                .WithLabels("Strider's Path");
+            AddLink("Guest Host Caleb Grace 2", "https://cardtalk2018.libsyn.com/guest-host-caleb-grace-2", "Nov 25 2019");
+            AddLink("Explore Secret Ways", "https://cardtalk2018.libsyn.com/explore-secret-ways", "Nov 18 2019")
+                .WithLabels("Explore Secret Ways");
+            AddLink("SPOILER! Lore Saruman and Saruman's Staff", "https://cardtalk2018.libsyn.com/spoiler-lore-saruman-and-sarumans-staff", "Nov 14 2019")
+                .WithLabels("Saruman", "Saruman's Staff");
+            AddLink("Fortune or Fate", "https://cardtalk2018.libsyn.com/fortune-or-fate", "Nov 13 2019")
+                .WithLabels("Fortune or Fate");
+            AddLink("Guest Host Aaron Fishbaugh", "https://cardtalk2018.libsyn.com/guest-host-aaron-fishbaugh", "Nov 4 2019")
+                .WithLabels("Dori");
+            AddLink("Leadership Orcrist", "https://cardtalk2018.libsyn.com/leadership-orcrist", "Oct 28 2019")
+                .WithLabels("Orcrist");
+            AddLink("Con of the Rings Recap", "https://cardtalk2018.libsyn.com/con-of-the-rings-recap", "Oct 23 2019");
+            AddLink("The King's Return", "https://cardtalk2018.libsyn.com/the-kings-return", "Oct 21 2019")
+                .WithLabels("The King's Return");
+            AddLink("Lore Glamdring", "https://cardtalk2018.libsyn.com/lore-glamdring", "Oct 14 2019")
+                .WithLabels("Glamdring");
+            AddLink("Con of the Rings Designer Interview", "https://cardtalk2018.libsyn.com/con-of-the-rings-designer-interview", "Oct 11 2019");
+            AddLink("Con of the Rings Participant Reflections", "https://cardtalk2018.libsyn.com/con-of-the-rings-participant-reflections", "Oct 8 2019");
+            //AddLink("Necklace of Girion", "https://cardtalk2018.libsyn.com/necklace-of-girion", "Sep 30 2019")
+            //    .WithLabels("Necklace of Girion");
+            AddLink("Guest Host Kristian Priisholm", "https://cardtalk2018.libsyn.com/guest-host-kristian-priisholm", "Sep 23 2019")
+                .WithLabels("Ring of Thrór", "Ring of Thror");
+            //AddLink("Mithril Shirt", "https://cardtalk2018.libsyn.com/mithril-shirt", "Sep 16 2019")
+                //.WithLabels("Mithril Shirt");
+            AddLink("Community Tales", "https://cardtalk2018.libsyn.com/community-tales", "Sep 12 2019");
+
             AddLink("Andrath-Guardsman-TMk", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/andrath-guardsman", "Andrath Guardsman");
             AddLink("Aragorn-Core", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/leadership-aragorn", "Leadership Aragorn");
             AddLink("Aragorn-Core", LinkType.Card_Talk, "https://cardtalk2018.libsyn.com/which-aragorn", "Which Aragorn?");

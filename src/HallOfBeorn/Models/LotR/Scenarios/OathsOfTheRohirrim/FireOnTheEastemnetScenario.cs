@@ -12,11 +12,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.OathsOfTheRohirrim
             GroupName = "Oaths of the Rohirrim";
             Number = 2;
 
-            //RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP03.pdf";
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP03.pdf";
 
-            //QuestCompanionSlug = "oaths-of-the-rohirrim-quest-fire-on-the-eastemnet";
-            //DifficultyRating = 5f;
-            //Votes = 1;
+            QuestCompanionSlug = "oaths-of-the-rohirrim-quest-fire-on-the-eastemnet";
+            DifficultyRating = 6f;
+            Votes = 1;
 
             AddEncounterSet(EncounterSet.FireOnTheEastemnet);
             AddEncounterSet(EncounterSet.OrcHost);
