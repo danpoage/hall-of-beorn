@@ -68,7 +68,8 @@ namespace RingsDbBuilder
             "22091", //Council of the Wise
             "22134", //Messenger of the King
             "22147", //Bond of Friendship
-            "300085", //The Last Alliance
+            "300085", //The Last Alliance,
+            "500042", //Into the West
         };
 
         public void TallyPlayerCard(string cardId, int quantity, byte weight)

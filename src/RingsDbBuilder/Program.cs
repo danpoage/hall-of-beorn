@@ -4,7 +4,7 @@ namespace RingsDbBuilder
 {
     public class Program
     {
-        private const string title = "RingsDB Helper v1.2.0 (2021-04-08)";
+        private const string title = "RingsDB Helper v1.2.1 (2021-09-27)";
 
         public static void Main(string[] args)
         {
@@ -27,7 +27,7 @@ namespace RingsDbBuilder
                 strategy.Execute(info);
             }
 
-            cardLinkBuilder.PrintLinks();
+            //cardLinkBuilder.PrintLinks();
             popularityBuilder.PrintHeroPopularity();
             popularityBuilder.PrintContractPopularity();
             popularityBuilder.PrintCardPopularity();
