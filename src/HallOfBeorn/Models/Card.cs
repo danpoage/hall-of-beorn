@@ -51,7 +51,6 @@ namespace HallOfBeorn.Models
         protected void addTraits(IEnumerable<string> traits, Language lang = Language.EN)
         {
             foreach (var trait in traits) {
-                
                 var norm = trait.NormalizeCaseSensitiveString();
                 if (norm != trait) {
                     normalizedTraits.SafeAddForKey(lang, norm);

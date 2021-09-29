@@ -45,7 +45,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(41, 3, Artist.Gus_Hunter);
             addAlly("Chieftain of the Skies", 3, Sphere.Leadership, false, 0, 1, 3, 2)
                 .WithTraits("Creature.", "Eagle.")
-                .WithKeywords("Devoted")
+                .WithKeywords("Devoted.")
                 .WithTextLine("Devoted.")
                 .WithTextLine("Cannot have restricted attachments.")
                 .WithTextLine("Response: After Chieftain of the Skies enters your play area, ready an ally you control.")
@@ -146,7 +146,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(57, 2, Artist.Bethesda_Softworks);
             addEnemy("Orcish Wrangler", EncounterSet.FireOnTheEastemnet, 28, 1, 2, 3, 2)
                 .WithTraits("Orc.")
-                .WithKeywords("Surge")
+                .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
                 .WithTextLine("Forced: When Orcish Wrangler attacks, move a steed from the active location to Orcish Wrangler.")
                 .WithShadow("Shadow: If there are more steeds on Wild Steeds than on Captured Steeds, attacking enemy captures its steeds.")
@@ -154,14 +154,14 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(58, 3, Artist.Leo_Li);
             addLocation("Open Meadows", EncounterSet.FireOnTheEastemnet, 1, 3)
                 .WithTraits("Plains.")
-                .WithKeywords("Steeds 2")
+                .WithKeywords("Steeds 2.")
                 .WithTextLine("Steeds 2.")
                 .WithTextLine("While Open Meadows is in the staging area, it gains: “Forced: At the end of the combat phase, add the topmost enemy in the encounter discard pile to the staging area.”")
                 .WithVictoryPoints(1)
                 .WithInfo(59, 3, Artist.Johannes_Voss);
             addLocation("Entwash Crossings", EncounterSet.FireOnTheEastemnet, 3, 3)
                 .WithTraits("Plains.", "River.")
-                .WithKeywords("Steeds 3")
+                .WithKeywords("Steeds 3.")
                 .WithTextLine("Steeds 3.")
                 .WithTextLine("Travel: Search the encounter discard pile for an enemy and put it into play engaged with the first player.")
                 .WithFlavorLine("There the herdsmen had wandered much, living in camp and tent, even in winter-time. But now all the land was empty.")
@@ -170,7 +170,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(60, 2, Artist.Ferdinand_Ladera);
             addLocation("Eastemnet Pasture", EncounterSet.FireOnTheEastemnet, 2, 2)
                 .WithTraits("Plains.", "Hills.")
-                .WithKeywords("Steeds 1 Per Player")
+                .WithKeywords("Steeds 1 Per Player.")
                 .WithTextLine("Steeds 1Per Player.")
                 .WithTextLine("Progress cannot be placed on locations in the staging area.")
                 .WithFlavorLine("The swelling grass-lands rose and fell like a wide grey sea.")
@@ -179,7 +179,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(61, 3, Artist.Michael_Komarck);
             addLocation("Pillaged Stables", EncounterSet.FireOnTheEastemnet, 2, 3)
                 .WithTraits("Plains.", "Village.")
-                .WithKeywords("Steeds 4")
+                .WithKeywords("Steeds 4.")
                 .WithTextLine("Steeds 4.")
                 .WithTextLine("Forced: At the end of the round, if there are any steeds remaining on Pillaged Stables, move 1 steed from Pillaged Stables to Captured Steeds. The first player may raise their threat by 2 to cancel this effect.")
                 .WithShadow("Shadow: If this attack destroys a character, the attacking enemy captures its steeds.")
@@ -187,7 +187,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(62, 3, Artist.Marta_Grajper);
             addLocation("Hidden Orc Camp", EncounterSet.FireOnTheEastemnet, 2, 5)
                 .WithTraits("Camp.")
-                .WithKeywords("Steeds 1")
+                .WithKeywords("Steeds 1.")
                 .WithTextLine("Steeds 1.")
                 .WithTextLine("Hidden Orc Camp gets +1 Threat for each steed on it.")
                 .WithTextLine("Forced: At the end of the combat phase, move a steed from a non-Camp location to Hidden Orc Camp.")
