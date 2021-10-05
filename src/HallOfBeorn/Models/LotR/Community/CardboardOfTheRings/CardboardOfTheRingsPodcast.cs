@@ -14,7 +14,38 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             "http://cotr.libsyn.com/rss",
             LinkType.Cardboard_of_the_Rings)
         {
+            AddYear(2021);
+            AddLink("185", "Number 2", "https://cotr.libsyn.com/episode-185-number-2", "14 Sep 2021");
+            AddLink("184", "Middle Earthborne Rangers", "https://cotr.libsyn.com/episode-184-middle-earthborne-rangers", "13 Aug 2021");
+            AddLink("183", "Octa-gone", "https://cotr.libsyn.com/episode-183-octa-gone", "23 July 2021");
+            AddLink("182", "Err of Mardil", "https://cotr.libsyn.com/episode-182-won-deck-rulez", "24 June 2021");
+            AddLink("181", "One Stop Colin Shop", "https://cotr.libsyn.com/episode-181-one-stop-colin-shop", "04 Jun 2021");
+            AddLink("180", "Faramir's Value", "https://cotr.libsyn.com/episode-180-faramirs-value", "18 May 2021");
+            AddLink("179", "10 Year Anniversary", "https://cotr.libsyn.com/episode-179-10-year-anniversary", "30 Apr 2021");
+            AddLink("178", "A Living(!) Card Game", "https://cotr.libsyn.com/episode-178-a-living-card-game", "05 Apr 2021");
+            AddLink("177", "Fattystack", "https://cotr.libsyn.com/episode-177-fattystack-0", "17 Mar 2021");
+            AddLink("176", "A Very Good Episode", "https://cotr.libsyn.com/episode-176-a-very-good-episode", "22 Feb 2021");
+            AddLink("175", "LOTR: A Master Class", "https://cotr.libsyn.com/lotr-a-master-class", "02 Feb 2021");
+            AddLink("174", "New Year, New Crew(?)", "https://cotr.libsyn.com/episode-174-new-year-new-crew", "11 Jan 2021");
+            AddLink("174.5", "Look a lot like Mordor", "https://cotr.libsyn.com/episode-1745-look-a-lot-like-mordor", "09 Jan 2021");
+
             AddYear(2020);
+            AddLink("173", "A Long Extended POD", "https://cotr.libsyn.com/episode-173-a-long-extended-pod", "23 Dec 2020");
+            AddLink("172", "Harad Choices", "https://cotr.libsyn.com/episode-172-harad-choices", "30 Nov 2020");
+            AddLink("171", "Campfire Tales", "https://cotr.libsyn.com/episode-171-campfire-tales", "13 Nov 2020");
+            AddLink("170", "Hey, that's my Caleb!", "https://cotr.libsyn.com/episode-170-hey-thats-my-caleb", "11 Oct 2020");
+            AddLink("169", "Ancient Mailbag", "https://cotr.libsyn.com/episode-169-ancient-mailbag", "25 Sep 2020");
+            AddLink("168.5", "LCG Con", "https://cotr.libsyn.com/episode-1685-lcg-con", "04 Sep 2020");
+            AddLink("168", "One Proxy to rule them all!", "https://cotr.libsyn.com/episode-168-one-proxy-to-rule-them-all", "30 Aug 2020");
+            AddLink("167", "Noldorsaurus", "https://cotr.libsyn.com/episode-167-noldor-saurus", "11 Aug 2020");
+            AddLink("166", "Max Difficulty", "https://cotr.libsyn.com/episode-166-max-difficulty", "18 July 2020");
+            AddLink("165", "Acts of Kindness", "https://cotr.libsyn.com/episode-165-acts-of-kindness", "20 Jun 2020");
+            AddLink("164", "Distracted Elf-friend", "https://cotr.libsyn.com/episode-164-distracted-elf-friend", "28 May 2020");
+            AddLink("163", "Mordor Macula", "https://cotr.libsyn.com/episode-163-mordor-macula", "11 May 2020");
+            AddLink("162", "Flight of the Fishbaugh", "https://cotr.libsyn.com/episode-162-flight-of-the-fishbaugh", "17 Apr 2020");
+            AddLink("161", "Don't Ignori Dori", "https://cotr.libsyn.com/episode-161-dont-ignori-dori", "23 Mar 2020");
+            AddLink("160", "Second Brok-fest", "https://cotr.libsyn.com/episode-160-second-brok-fest", "02 Mar 2020");
+            AddLink("159", "Saruman's Scoop", "https://cotr.libsyn.com/episode-159-saurmans-scoop", "13 Feb 2020");
             AddLink("158", "Ugly Shaggy Hair", "http://traffic.libsyn.com/cotr/Episode_158_-_Ugly_Shaggy_Hair.mp3?dest-id=66353", "Sat, 25 Jan 2020 01:50:28 +0000");
 
             AddYear(2019);
