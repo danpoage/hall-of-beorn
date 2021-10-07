@@ -6,7 +6,7 @@ namespace HallOfBeorn.Models.LotR.Products.Core
         : Product
     {
         public RevisedCoreSetProduct()
-            : base("Revised Core Set", "MC01", ImageType.Png, new DateTime(2022, 1, 15))
+            : base("Revised Core Set", "MEC101", ImageType.Png, new DateTime(2022, 1, 14))
         {
             AddCardSet(CardSet.RevisedCore);
         }
