@@ -9,6 +9,9 @@ namespace HallOfBeorn.Models.LotR.Products.Core
             : base("Revised Core Set", "MEC101", ImageType.Png, new DateTime(2022, 1, 14))
         {
             AddCardSet(CardSet.RevisedCore);
+            AddScenario(Scenario.PassageThroughMirkwoodRevised);
+            AddScenario(Scenario.JourneyAlongTheAnduinRevised);
+            AddScenario(Scenario.EscapeFromDolGuldurRevised);
         }
     }
 }

@@ -422,6 +422,10 @@ namespace HallOfBeorn.Models.LotR
         public static Scenario TheDeadMarshes = new Scenarios.ShadowsOfMirkwood.TheDeadMarshesScenario();
         public static Scenario ReturnToMirkwood = new Scenarios.ShadowsOfMirkwood.ReturnToMirkwoodScenario();
 
+        public static Scenario PassageThroughMirkwoodRevised = new Scenarios.Core.PassageThroughMirkwoodScenarioRevised();
+        public static Scenario JourneyAlongTheAnduinRevised = new Scenarios.Core.JourneyAlongTheAnduinScenarioRevised();
+        public static Scenario EscapeFromDolGuldurRevised = new Scenarios.Core.EscapeFromDolGuldurScenarioRevised();
+
         public static Scenario TheOath = new Scenarios.Starter.TheOathScenario();
         public static Scenario TheCavesOfNibinDum = new Scenarios.Starter.TheCavesOfNibinDumScenario();
 

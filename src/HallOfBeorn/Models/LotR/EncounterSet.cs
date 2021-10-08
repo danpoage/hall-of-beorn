@@ -619,6 +619,15 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheDeadMarshes = new EncounterSet { Name = "The Dead Marshes", Set = "The Dead Marshes" };
         public static EncounterSet ReturnToMirkwood = new EncounterSet { Name = "Return to Mirkwood", Set = "Return to Mirkwood" };
         
+        //Revised Core Set
+        public static EncounterSet PassageThroughMirkwoodRev = new EncounterSet { Name = "Passage Through Mirkwood", Set = "Revised Core Set" };
+        public static EncounterSet DolGuldurOrcsRev = new EncounterSet { Name = "Dol Guldur Orcs", Set = "Revised Core Set" };
+        public static EncounterSet SpidersOfMirkwoodRev = new EncounterSet { Name = "Spiders of Mirkwood", Set = "Revised Core Set" };
+        public static EncounterSet JourneyAlongTheAnduinRev = new EncounterSet { Name = "Journey Along the Anduin", Set = "Revised Core Set"};
+        public static EncounterSet SauronsReachRev = new EncounterSet { Name = "Sauron's Reach", Set = "Revised Core Set" };
+        public static EncounterSet WilderlandsRev = new EncounterSet { Name = "Wilderlands", Set = "Revised Core Set" };
+        public static EncounterSet EscapeFromDolGuldurRev = new EncounterSet { Name = "Escape from Dol Guldur", Set = "Revised Core Set" };
+
         //Khazad-dum and Dwarrowdelf
         public static EncounterSet IntoThePit = new EncounterSet { Name = "Into the Pit", Set = "Khazad-dûm", NormalizedSet = "Khazad-dum" };
         public static EncounterSet TwistsAndTurns = new EncounterSet { Name = "Twists and Turns", Set = "Khazad-dûm", NormalizedSet = "Khazad-dum" };

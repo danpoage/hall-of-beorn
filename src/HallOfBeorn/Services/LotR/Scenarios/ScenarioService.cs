@@ -32,12 +32,13 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             this.cards = cardRepository.Cards().ToList();
             foreach (var card in this.cards.Where(x => !string.IsNullOrEmpty(x.EncounterSet)))
             {
-                if (!cardsByEncounterSet.ContainsKey(card.EncounterSet))
+                var esKey = card.CardSetName + ":" + card.EncounterSet;
+                if (!cardsByEncounterSet.ContainsKey(esKey))
                 {
-                    cardsByEncounterSet[card.EncounterSet] = new List<LotRCard>();
+                    cardsByEncounterSet[esKey] = new List<LotRCard>();
                 }
 
-                cardsByEncounterSet[card.EncounterSet].Add(card);
+                cardsByEncounterSet[esKey].Add(card);
             }
 
             foreach (var group in productRepository.ProductGroups())
@@ -102,12 +103,13 @@ namespace HallOfBeorn.Services.LotR.Scenarios
 
             foreach (var set in scenario.EncounterSets())
             {
-                if (!cardsByEncounterSet.ContainsKey(set.Name))
+                var esKey = set.Set + ":" + set.Name;
+                if (!cardsByEncounterSet.ContainsKey(esKey))
                 {
                     continue;
                 }
 
-                foreach (var card in cardsByEncounterSet[set.Name].Where(x => x.CardType != CardType.Quest))
+                foreach (var card in cardsByEncounterSet[esKey].Where(card => card.CardType != CardType.Quest))
                 {
                     byte easyCount = 0; byte normalCount = 0; byte nightmareCount = 0;
 
