@@ -49,68 +49,24 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-2")
                 .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-3")
                 .WithCommunityVersion("Hrodebert/Sam-Gamgee-Leadership-Hero-4")
+                .WithCommunityVersion("Ipswatch/Sam-Gamgee")
                 .WithInfo(2, 1, Artist.Alexandre_Dainche);
-
-            /*
-            Cards.Add(new LotRCard() {
-                
-                Title = "Sam Gamgee",
-                AlternateSlug = "Sam-Jamjee-TBR",
-                Id = "4124136c-8c86-4f86-830c-94c8c76df161",
-                IsUnique = true,
-                CardType = CardType.Hero,
-                Sphere = Sphere.Leadership,
-                ThreatCost = 8,
-                Willpower = 3,
-                Attack = 1,
-                Defense = 1,
-                HitPoints = 3,
-                Traits = new List<string>() { "Hobbit." },
-                Text = "Response: After you engage an enemy with a higher engagement cost than your threat, ready Sam Gamgee. He gets +1 Willpower, +1 Attack and +1 Defense until the end of the round.",
-                FlavorText = "\"I'm going with him...and if any of those Black Riders try to stop him, they'll have Sam Gamgee to reckon with\" -The Fellowship of the Ring",
-                Quantity = 1,
-                CardNumber = 2,
-                Artist = Artist.Alexandre_Dainche
-            });
-             */
-            Cards.Add(new LotRCard() {
-                
-                Title = "Merry",
-                Id = "052b1f85-8b9c-4bb0-a735-bdbd5ac1b2c4",
-                IsUnique = true,
-                CardType = CardType.Hero,
-                Sphere = Sphere.Tactics,
-                ThreatCost = 6,
-                Willpower = 2,
-                Attack = 0,
-                Defense = 1,
-                HitPoints = 2,
-                Traits = new List<string>() { "Hobbit." },
-                Text = "Merry gets +1 Attack for each Hobbit hero you control.\r\nResponse: After Merry participates in an attack that destroys an enemy, ready another character that participated in that attack.",
-                FlavorText = "\"You can trust us to stick to you through thick and thin to the bitter end\" -The Fellowship of the Ring",
-                Quantity = 1,
-                CardNumber = 3,
-                Artist = Artist.Alexandre_Dainche
-            });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Pippin",
-                Id = "ce96b767-c569-48b8-a998-d8009b0143c7",
-                IsUnique = true,
-                CardType = CardType.Hero,
-                Sphere = Sphere.Lore,
-                ThreatCost = 6,
-                Willpower = 2,
-                Attack = 1,
-                Defense = 1,
-                HitPoints = 2,
-                Traits = new List<string>() { "Hobbit." },
-                Text = "Each enemy in play gets +1 engagement cost for each Hobbit hero you control.\r\nResponse: After you engage an enemy with an engagement cost higher than your threat, draw a card.",
-                FlavorText = "\"We Hobbits ought to stick together, and we will\"\r\n-The Fellowship of the Ring",
-                Quantity = 1,
-                CardNumber = 4,
-                Artist = Artist.Alexandre_Dainche
-            });
+            addHero("Merry", 6, Sphere.Tactics, 2, 0, 1, 2)
+                .WithTraits("Hobbit.")
+                .WithTextLine("Merry gets +1 Attack for each Hobbit hero you control.")
+                .WithTextLine("Response: After Merry participates in an attack that destroys an enemy, ready another character that participated in that attack.")
+                .WithFlavorLine("\"You can trust us to stick to you through thick and thin to the bitter end\"")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("Ipswatch/Merry")
+                .WithInfo(3, 1, Artist.Alexandre_Dainche);
+            addHero("Pippin", 6, Sphere.Lore, 2, 1, 1, 2)
+                .WithTraits("Hobbit.")
+                .WithTextLine("Each enemy in play gets +1 engagement cost for each Hobbit hero you control.")
+                .WithTextLine("Response: After you engage an enemy with an engagement cost higher than your threat, draw a card.")
+                .WithFlavorLine("\"We Hobbits ought to stick together, and we will\"")
+                .WithFlavorLine("-The Fellowship of the Ring")
+                .WithCommunityVersion("Ipswatch/Pippin")
+                .WithInfo(4, 1, Artist.Alexandre_Dainche);
             Cards.Add(new LotRCard() {
                 
                 Title = "Fatty Bolger",

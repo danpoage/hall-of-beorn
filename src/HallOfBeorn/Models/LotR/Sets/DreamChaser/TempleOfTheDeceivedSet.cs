@@ -48,6 +48,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Action: Choose a non-unique enemy. Until the end of the phase, treat the chosen enemy's printed text box as if it were blank (except for Traits).")
                 .WithFlavorLine("\"...seeing an Elf-lord revealed in his wrath, they were dismayed, and their horses were stricken with madness.\"")
                 .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
+                .WithCommunityVersion("Autumn/Revealed-in-Wrath")
                 .WithInfo(61, 3, Artist.Sebastian_Giacobino);
             addAlly("Rhovanion Outrider", 3, Sphere.Spirit, false, 1, 2, 1, 2)
                 .WithTraits("Dale.", "Scout.")

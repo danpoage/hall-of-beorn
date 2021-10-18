@@ -348,6 +348,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithFlavor("\"If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.\" -Legolas, The Return of the King")
                 .WithTemplate("<p><b>Action:</b> Choose a player. Shuffle that player's discard pile back into his deck. Remove Will of the West from the game.</p><p class='flavor-text'>&quot;If Gondor has such men still in these days of fading, great must have been its glory in the days of its rising.&quot;<br>&ndash;Legolas, The Return of the King</p>")
                 .WithErrata(1)
+                .WithCommunityVersion("Autumn/Will-of-the-West")
                 .WithInfo(49, 2, Artist.Erfian_Asafat);
             addEvent("A Test of Will", 1, Sphere.Spirit)
                 .WithTextLine("Response: Cancel the 'when revealed' effects of a card that was just revealed from the encounter deck.")
@@ -355,6 +356,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
                 .WithTemplate("<p><b>Response:</b> Cancel the &ldquo;when revealed&rdquo; effects of a card that was just revealed from the encounter deck.</p><p class='flavor-text'>&quot;There is naught that you can do, other than to resist, with hope or without it&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>")
                 .WithCommunityVersion("A-Test-of-Will-Core-Set-Completion")
                 .WithCommunityVersion("A-Test-of-Will-Nouveau-Hunters")
+                .WithCommunityVersion("Autumn/Test-of-Will")
                 .WithInfo(50, 2, Artist.Ryan_Barger);
             addEvent("Stand and Fight", 254, Sphere.Spirit)
                 .WithTextLine("Action: Choose an ally with a printed cost of X in any player's discard pile. Put that ally into play under your control. (The chosen ally can belong to any sphere of influence.)")

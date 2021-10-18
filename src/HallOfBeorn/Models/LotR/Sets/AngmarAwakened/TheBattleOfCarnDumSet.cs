@@ -63,6 +63,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Action: Place Lords of the Eldar on the bottom of your deck from your discard pile. Then, until the end of the round all Noldor characters get +1 Willpower, +1 Attack, and +1 Defense.")
                 .WithFlavorLine("\"And here in Rivendell there live still some of his chief foes: the Elven-wise, lords of the Eldar...\" -Gandalf, The Fellowship of the Ring")
                 .WithTemplate("<p>{self} can only be played from your discard pile.</p><p><b>Action:</b> Place {self} on the bottom of your deck from your discard pile. Then, until the end of the round all {trait:Noldor.@Noldor} characters get +1 {Willpower}, +1 {Attack}, and +1 {Defense}.")
+                .WithCommunityVersion("Autumn/Lords-of-the-Eldar")
                 .WithInfo(121, 3, Artist.Rovina_Cai);
             addAttachment("The Long Defeat", 1, Sphere.Lore, false)
                 .WithTraits("Condition.")

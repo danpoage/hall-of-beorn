@@ -31,6 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Setup: Search your collection for a Creature ally and add it to your hand. For the first round, reduce its cost by 2.")
                 .WithTextLine("Travel Action: If there is 1 active location, spend 1 resource from Widfast's pool to travel to another location, resolving its Travel effect. (There are now 2 active locations.)")
                 .WithTemplate("<p class='main-text'><b>Setup:</b> Search your collection for a {trait:Creature.@Creature} ally and add it to your hand. For the first round, reduce its cost by 2.</p><p class='main-text'><b>Travel Action:</b> If there is 1 active location, spend 1 resource from {self}'s pool to travel to another location, resolving its <b>Travel</b> effect. (There are now 2 active locations.)</p>")
+                .WithCommunityVersion("Autumn/Widfast")
                 .WithInfo(2, 1, Artist.Katerina_Poliakova);
             addAlly("Lily Cotton", 2, Sphere.Leadership, true, 1, 1, 1, 2)
                 .WithTraits("Hobbit.")

@@ -81,6 +81,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithTraits("Rohan.", "Gondor.", "Noble.")
                 .WithTextLine("Action: Put Morwen Steelsheen into play from your hand. Then, discard a Rohan or Gondor ally you control.")
                 .WithTextLine("Response: After a Rohan or Gondor ally leaves play, exhaust Morwen Steelsheen to either heal 2 damage from a character or reduce your threat by 1.")
+                .WithCommunityVersion("Autumn/Morwen-Steelsheen")
                 .WithInfo(10, 3, Artist.Howard_Lyon);
             addEvent("It Should Be Spared", 0, Sphere.Lore)
                 .WithTextLine("Response: After a Trap card you control attaches to an enemy, return it to your hand. Then, play it from your hand for no cost.")

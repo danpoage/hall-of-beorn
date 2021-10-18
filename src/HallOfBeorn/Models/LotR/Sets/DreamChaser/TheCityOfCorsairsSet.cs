@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Combat Action: Spend 1 resource from Prince Imrahil's resource pool to search the top 5 cards of your deck for an ally who shares at least 1 Trait with him, and put that ally into play. Shuffle your deck. At the end of the phase, if that ally is still in play, shuffle it into your deck. (Limit once per round.)")
                 .WithCommunityVersion("RiddermarkLord/Prince-Imrahil-Tactics-Hero-1")
                 .WithCommunityVersion("Hrodebert/Prince-Imrahil-Tactics-Hero")
+                .WithCommunityVersion("Autumn/Prince-Imrahil-Tactics")
                 .WithInfo(138, 1, Artist.Micah_Epstein);
             addAlly("Knight of the White Tower", 4, Sphere.Leadership, false, 2, 2, 3, 3)
                 .WithTraits("Gondor.", "Warrior.")

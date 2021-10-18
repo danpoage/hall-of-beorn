@@ -62,6 +62,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithTextLine("Planning Action: Exhaust King of ~Dale to reduce the cost of the next Dale ally you play this phase by 1 for each different player attachment on attached hero. That ally does not require a resource match.")
                 .WithFlavorLine("Then Bard II, Brand's son, became King of Dale..")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("Autumn/Queen-of-Dale")
                 .WithInfo(8, 3, Artist.Antonio_Jose_Manzanedo);
             addAttachment("Bow of Yew", 0, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")

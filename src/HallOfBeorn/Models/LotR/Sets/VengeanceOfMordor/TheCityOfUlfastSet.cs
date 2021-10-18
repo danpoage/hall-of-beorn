@@ -21,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTraits("Gondor.", "Noble.")
                 .WithTextLine("If Éomer is in play, Lothíriel gains the Rohan trait.")
                 .WithTextLine("Response: After Lothíriel commits to a quest, choose an ally in your hand. If that ally shares a Trait with her, put that ally into play exhausted and committed to the quest. At the end of the phase, if that ally is still in play, shuffle it into your deck.")
+                .WithCommunityVersion("Autumn/Lothiriel")
                 .WithInfo(27, 1, Artist.Alvaro_Calvo_Escudero);
             addAlly("Angbor the Fearless", 2, Sphere.Leadership, true, 2, 1, 0, 2)
                 .WithTraits("Gondor.", "Warrior.")
@@ -77,6 +78,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Planning Action: Return each Silvan ally you control to your hand. Then, play each of those allies from your hand one at a time at no cost.")
                 .WithFlavorLine("Celeborn came forth and led the host of Lórien...")
                 .WithFlavorLine("-The Return of the King")
+                .WithCommunityVersion("Autumn/Host-of-Galadhrim")
                 .WithInfo(36, 3, Artist.Leanna_Crossan);
             addEnemy("City Guard", EncounterSet.TheCityOfUlfast, 45, Card.VALUE_X, 9, 4, 20)
                 .WithUnique()

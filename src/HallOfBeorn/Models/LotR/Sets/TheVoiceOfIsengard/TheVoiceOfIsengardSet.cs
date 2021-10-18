@@ -77,6 +77,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheVoiceOfIsengard
                 .WithTextLine("Doomed 4.")
                 .WithTextLine("Action: Add 1 resource to each hero's resource pool.")
                 .WithFlavorLine("\"...in the midst of that valley is a tower of stone called Orthanc. It was not made by Saruman, but by the Men of Númenor long ago: and it is very tall and has many secrets...\" -Gandalf, The Fellowship of the Ring")
+                .WithCommunityVersion("Autumn/Legacy-of-Numenor")
                 .WithInfo(11, 3, Artist.Matt_Stewart);
             addEvent("Deep Knowledge", 0, Sphere.Lore)
                 .WithKeywords("Doomed 2.")

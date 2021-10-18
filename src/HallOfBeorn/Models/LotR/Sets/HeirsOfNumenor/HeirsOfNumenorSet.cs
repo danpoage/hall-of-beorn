@@ -40,7 +40,9 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithInfo(4, 3, Artist.Lorraine_Schleter);
             addEvent("Mutual Accord", 0, Sphere.Leadership)
                 .WithTextLine("Action: Until the end of the phase, each Gondor card in play gains the Rohan trait, and each Rohan card in play gains the Gondor trait.")
-                .WithFlavorLine("\"These are the Rohirrim, as we name them, masters of horses... and have ever proved true to us, aiding us at need, and guarding our northern marches and the Gap of Rohan.\" -Faramir, The Two Towers")
+                .WithFlavorLine("\"These are the Rohirrim, as we name them, masters of horses... and have ever proved true to us, aiding us at need, and guarding our northern marches and the Gap of Rohan.\"")
+                .WithFlavorLine("-Faramir, The Two Towers")
+                .WithCommunityVersion("Autumn/Mutual-Accord")
                 .WithInfo(5, 3, Artist.Darek_Zabrocki);
             addEvent("Wealth of Gondor", 0, Sphere.Leadership)
                 .WithTextLine("Action: Choose a Gondor hero. Add 1 resource to that hero's resource pool.")
