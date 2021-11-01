@@ -58,6 +58,13 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Restricted.", "Eingeschränkt." },
                 { "Secrecy 1.", "Heimlichkeit 1." },
                 { "Sentinel.", "Schildwache." },
+
+                { "Steeds 1 Per Player.", "Pferde 1 Per Player." },
+                { "Steeds 1.", "Pferde 1." },
+                { "Steeds 2.", "Pferde 2." },
+                { "Steeds 3.", "Pferde 3." },
+                { "Steeds 4.", "Pferde 4." },
+
                 { "Surge.", "Nachrüsten." },
                 { "Vast.", "Weitläufig." },
             };
@@ -245,6 +252,36 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Voice of Saruman", "Sarumans Stimme" },
                 { "Watch the East Road", "Bewacht die Oststrasse" },
                 { "Wooden Shed", "Hölzerner Schuppen" },
+
+                //Fire on the Eastemnet
+                { "Box of Earth", "Kästchen mit Erde" },
+                { "Breath of Arda", "Atem von Arda" },
+                { "Captured Steeds", "Gefangene Pferde" },
+                { "Chieftain of the Skies", "Häuptling der Lüfte" },
+                { "Cracking Horse Whip", "Knallende Pferdepeitsche" },
+                { "Eastemnet Pasture", "Weide im Ostemnet" },
+                { "Entwash Crossings", "Überquerung des Entwasser" },
+                { "Exhausted Pursuit", "Erschöpfende Verfolgung" },
+                { "Expanded Search", "Ausgeweitete Suche" },
+                { "Golden Crown", "Goldene Krone" },
+                { "Grip", "Greif" },
+                { "Guided by Fate", "Vom Schicksal geleitet" },
+                { "Hidden Orc Camp", "Verstecktes Orklager" },
+                { "Hidden Roosts", "Geheime Horste" },
+                { "Messenger of Manwë", "Manwes Bote" },
+                { "Open Meadows", "Weite Wiesen" },
+                { "Orc Lookout", "Ork-Wachposten" },
+                { "Orcish Wrangler", "Ork-Streiter" },
+                { "Panicked Horses", "Verschreckte Pferde" },
+                { "Pillaged Stables", "Geplünderte Ställe" },
+                { "Poachers in the Night", "Pferdediebe in der Nacht" },
+                { "Relentless Forces", "Unbarmherzige Streitkräfte" },
+                { "Roving Herbmaster", "Wandernde Kräutermeisterin" },
+                { "Shores of Anduin", "Ufer des Anduin" },
+                { "To the River!", "Zum Fluss!" },
+                { "Veteran Eagle", "Adlerveteran" },
+                { "White Mountain Beastmaster", "Bestienmeister des Weissen Gebirges" },
+                { "Wild Steeds", "Freie Pferde" },
             };
         }
 
@@ -261,11 +298,17 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Clue.", "Hinweis." },
                 { "Condition.", "Zustand." },
                 { "Creature.", "Kreatur." },
+
                 { "Doom.", "Verhängnis." },
+                { "Dúnedain.", "Waldläufer." },
+
+                { "Eagle.", "Adler." },
 
                 { "Garrison.", "Garnison." },
                 { "Gate.", "Tor." },
+                { "Gift.", "Geschenk." },
 
+                { "Healer.", "Heiler." },
                 { "Hideout.", "Versteck." },
                 { "Hills.", "Hügel." },
 
@@ -275,8 +318,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Mount.", "Reittier." },
                 { "Noble.", "Adlig." },
                 { "Orc.", "Ork." },
+
                 { "Plains.", "Ebene." },
+
                 { "Ranger.", "Waldläufer." },
+                { "River.", "Fluss." },
                 { "Road.", "Straße." },
                 { "Ruffian.", "Strolch." },
                 
