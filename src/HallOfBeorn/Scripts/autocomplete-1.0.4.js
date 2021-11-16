@@ -99,4 +99,6 @@ var autocompleteSourceFirstAge = [
 var autocompleteSourceAlep = [
     'Thengel', 'Herubrand', 'Deeping Bowman', 'Open the Gates', 'Wealth of Adventure', 'Feast of Plenty', 'Deeping Defender', 'Morwen Steelsheen', 'It Should be Spared', 'Spring the Trap', 'Squire of the Mark', 'Rammas Lookout', 'Theodwyn', 'Light-footed Steed', 'Rammas Sentry', 'Live Bait', 'Worthy of Remembrance', 'Need Brooks No Delay', 'The Last Alliance',
     'Widfast', 'Lily Cotton', 'A Lesson in Caution', 'There and Back Again', 'Buckland Shirriff', 'Weep No More!', 'Fear! Fire! Foes!', 'Horn-call of Buckland', 'Young Tom', 'Gavin',
+    'Alagos', 'Faunith', 'Messenger of Manwe', 'Veteran Eagle', 'Chieftain of the Skies', 'Box of Earth', 'Roving Herbmaster', 'Grip', 'Fang', 'Wolf', 'Hidden Roosts', 'Breath of Arda', 'Golden Crown', 'Guided by Fate',
+    'Into the West',
 ];
