@@ -214,7 +214,7 @@ $(function () {
                 'UMEC84', 'UMEC85',
                 'MEC78-PRM', 'MEC79-PRM', 'MEC80-PRM', 'MEC81-PRM', 'MEC82-PRM', 'MEC83-PRM', 'UMEC84-PRM', 'UMEC85-PRM',
                 'FA01', 'FA02', 'FA03', 'FA04', 'FA05',
-                'ALEP01', 'ALEP02',
+                'ALEP01', 'ALEP02', 'ALEP03', 'ALEP08',
         ];
 
         var ownedProductsValue = '';
