@@ -664,15 +664,15 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheMorgulVale = new EncounterSet { Name = "The Morgul Vale", Set = "The Morgul Vale" };
         
         //The Voice of Isengard and The Ring-maker
-        public static EncounterSet TheFordsOfIsen = new EncounterSet { Name = "The Fords of Isen", Set = "Voice of Isengard" };
-        public static EncounterSet DunlandWarriors = new EncounterSet { Name = "Dunland Warriors", Set = "Voice of Isengard" };
-        public static EncounterSet DunlandRaiders = new EncounterSet { Name = "Dunland Raiders", Set = "Voice of Isengard" };
-        public static EncounterSet ToCatchAnOrc = new EncounterSet { Name = "To Catch an Orc", Set = "Voice of Isengard" };
-        public static EncounterSet MistyMountainOrcs = new EncounterSet { Name = "Misty Mountain Orcs", Set = "Voice of Isengard" };
-        public static EncounterSet BrokenLands = new EncounterSet { Name = "Broken Lands", Set = "Voice of Isengard" };
-        public static EncounterSet IntoFangorn = new EncounterSet { Name = "Into Fangorn", Set = "Voice of Isengard" };
-        public static EncounterSet AncientForest = new EncounterSet { Name = "Ancient Forest", Set = "Voice of Isengard" };
-        public static EncounterSet WearyTravelers = new EncounterSet { Name = "Weary Travelers", Set = "Voice of Isengard" };
+        public static EncounterSet TheFordsOfIsen = new EncounterSet { Name = "The Fords of Isen", Set = "The Voice of Isengard" };
+        public static EncounterSet DunlandWarriors = new EncounterSet { Name = "Dunland Warriors", Set = "The Voice of Isengard" };
+        public static EncounterSet DunlandRaiders = new EncounterSet { Name = "Dunland Raiders", Set = "The Voice of Isengard" };
+        public static EncounterSet ToCatchAnOrc = new EncounterSet { Name = "To Catch an Orc", Set = "The Voice of Isengard" };
+        public static EncounterSet MistyMountainOrcs = new EncounterSet { Name = "Misty Mountain Orcs", Set = "The Voice of Isengard" };
+        public static EncounterSet BrokenLands = new EncounterSet { Name = "Broken Lands", Set = "The Voice of Isengard" };
+        public static EncounterSet IntoFangorn = new EncounterSet { Name = "Into Fangorn", Set = "The Voice of Isengard" };
+        public static EncounterSet AncientForest = new EncounterSet { Name = "Ancient Forest", Set = "The Voice of Isengard" };
+        public static EncounterSet WearyTravelers = new EncounterSet { Name = "Weary Travelers", Set = "The Voice of Isengard" };
         public static EncounterSet TheDunlandTrap = new EncounterSet { Name = "The Dunland Trap", Set = "The Dunland Trap" };
         public static EncounterSet TheThreeTrials = new EncounterSet { Name = "The Three Trials", Set = "The Three Trials" };
         public static EncounterSet TroubleInTharbad = new EncounterSet { Name = "Trouble in Tharbad", Set = "Trouble in Tharbad" };
