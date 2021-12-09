@@ -554,6 +554,7 @@ namespace HallOfBeorn.Models.LotR
             Add(ChildrenOfEorl);
             Add(TheAldburgPlot);
             Add(FireOnTheEastemnet);
+            Add(TheGapOfRohan);
 
             Add(TheScouringOfTheShire);
         }
@@ -771,6 +772,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet ChildrenOfEorl = new Sets.ChildrenOfEorl.ChildrenOfEorlSet();
         public static CardSet TheAldburgPlot = new Sets.OathsOfTheRohirrim.TheAldburgPlotSet();
         public static CardSet FireOnTheEastemnet = new Sets.OathsOfTheRohirrim.FireOnTheEastemnetSet();
+        public static CardSet TheGapOfRohan = new Sets.OathsOfTheRohirrim.TheGapOfRohanSet();
 
         public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireCardSet();
 

@@ -452,6 +452,7 @@
     <Compile Include="Models\LotR\Products\Community\TheAldburgPlotProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheBetrayalOfMimProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheFallOfNargothrondProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\TheGapOfRohanProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheScouringOfTheShireProduct.cs" />
     <Compile Include="Models\LotR\Products\Core\RevisedCoreSetProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\AShadowInTheEastProduct.cs" />
@@ -573,6 +574,7 @@
     <Compile Include="Models\LotR\Sets\EredMithrin\TheWitheredHeathSet.cs" />
     <Compile Include="Models\LotR\Sets\OathsOfTheRohirrim\FireOnTheEastemnetSet.cs" />
     <Compile Include="Models\LotR\Sets\OathsOfTheRohirrim\TheAldburgPlotSet.cs" />
+    <Compile Include="Models\LotR\Sets\OathsOfTheRohirrim\TheGapOfRohanSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\ChallengeOfTheWainridersPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\EscapeFromKhazadDumPreorderPromotionSet.cs" />
     <Compile Include="Models\LotR\Sets\PreorderPromotion\TheCityOfUlfastPreorderPromotionSet.cs" />

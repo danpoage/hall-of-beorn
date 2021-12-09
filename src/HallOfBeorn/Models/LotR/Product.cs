@@ -280,6 +280,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product ChildrenOfEorl = new Products.Community.ChildrenOfEorlProduct();
         public static Product TheAldburgPlot = new Products.Community.TheAldburgPlotProduct();
         public static Product FireOnTheEastemnet = new Products.Community.FireOnTheEastemnetProduct();
+        public static Product TheGapOfRohan = new Products.Community.TheGapOfRohanProduct();
 
         public static Product TheScouringOfTheShire = new Products.Community.TheScouringOfTheShireProduct();
         #endregion

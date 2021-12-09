@@ -10,6 +10,7 @@
 
             AddChildProduct(Product.TheAldburgPlot);
             AddChildProduct(Product.FireOnTheEastemnet);
+            AddChildProduct(Product.TheGapOfRohan);
         }
     }
 }

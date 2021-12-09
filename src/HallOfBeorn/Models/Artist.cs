@@ -824,6 +824,13 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Gus_Hunter);
             all.Add(Artist.Turbine);
 
+            //The Gap of Rohan
+            all.Add(Artist.Aleksandra_Wojtas);
+            all.Add(Artist.Gal_Or);
+            all.Add(Artist.Incantata);
+            all.Add(Artist.Dan_Scott);
+            all.Add(Artist.Daniel_Jimenez_Villalba);
+
             all.Add(Artist.None);
         }
 
@@ -936,6 +943,13 @@ namespace HallOfBeorn.Models
         public static Artist Wouter_Florusse = new Artist { Name = "Wouter Florusse", URL = "https://www.artstation.com/woutart" };
         public static Artist Gus_Hunter = new Artist { Name = "Gus Hunter", URL = "https://conceptartworld.com/artists/gus-hunter/" };
         public static Artist Turbine = new Artist { Name = "Turbine", URL = "https://www.google.com/search?q=turbine+art" };
+
+        //The Gap of Rohan
+        public static Artist Aleksandra_Wojtas = new Artist { Name = "Aleksandra_Wojtas", URL = "https://www.artstation.com/aleksandra" };
+        public static Artist Gal_Or = new Artist { Name = "Gal Or", URL = "https://www.artstation.com/lightwave" };
+        public static Artist Incantata = new Artist { Name = "Incantata", URL = "https://www.artstation.com/incantata" };
+        public static Artist Dan_Scott = new Artist { Name = "Dan Scott", URL = "https://www.danscottfineart.com/" };
+        public static Artist Daniel_Jimenez_Villalba = new Artist { Name = "Daniel_Jimenez_Villalba", URL = "https://www.artstation.com/danieljimenez" };
 
         //The Scouring of the Shire
         public static Artist Studio_Ghibli = new Artist { Name = "Studio Ghibli", URL = "https://www.ghibli-museum.jp" };
