@@ -476,6 +476,8 @@ function initQuestMap() {
         'With the knowledge that a faction of rebels has taken up residence in Aldburg, Ealdwulf entreats you to root them out.');
     addQuest(815, 644, 'Fire on the Eastemnet', 'CoE', 'Fire-on-the-Eastemnet', 'Fire-on-the-Eastemnet/Poachers-in-the-Night-1A.png',
         'With fire and whip, the orc-host has regrouped to rob Rohan of its prized steeds.');
+    addQuest(687, 646, 'The Gap of Rohan', 'CoE', 'The-Gap-of-Rohan', 'The-Gap-of-Rohan/Giving-Chase-1A.png',
+        'You have pursued the traitor Gálmód to the Gap of Rohan. However, unseasonable snows have made your passage difficult.');
 
     var mapElement = document.getElementById('quest-map');
     if (mapElement) {

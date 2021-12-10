@@ -830,6 +830,19 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Incantata);
             all.Add(Artist.Dan_Scott);
             all.Add(Artist.Daniel_Jimenez_Villalba);
+            all.Add(Artist.Stu_Harrington);
+            all.Add(Artist.Slawomir_Maniak);
+            all.Add(Artist.Daniel_Gastager);
+            all.Add(Artist.Warlock_Artist);
+            all.Add(Artist.Tom_Honz);
+            all.Add(Artist.Timi_Honkanen);
+            all.Add(Artist.Brandon_Moore);
+            all.Add(Artist.Bartlomiej_Gawel);
+            all.Add(Artist.Gintas_Galvanauskas);
+            all.Add(Artist.Musaab_Shukri);
+            all.Add(Artist.Reza_Afshar);
+            all.Add(Artist.John_Anthony_Di_Giovanni);
+            all.Add(Artist.Piotr_Foksowicz);
 
             all.Add(Artist.None);
         }
@@ -950,6 +963,19 @@ namespace HallOfBeorn.Models
         public static Artist Incantata = new Artist { Name = "Incantata", URL = "https://www.artstation.com/incantata" };
         public static Artist Dan_Scott = new Artist { Name = "Dan Scott", URL = "https://www.danscottfineart.com/" };
         public static Artist Daniel_Jimenez_Villalba = new Artist { Name = "Daniel_Jimenez_Villalba", URL = "https://www.artstation.com/danieljimenez" };
+        public static Artist Stu_Harrington = new Artist { Name = "Stu Harrington", URL = "https://www.artstation.com/stuharrington" };
+        public static Artist Slawomir_Maniak = new Artist { Name = "Slawomir Maniak", URL = "https://www.artstation.com/maniaks" };
+        public static Artist Daniel_Gastager = new Artist { Name = "Daniel Gastager", URL = "https://www.danielgastager.com/" };
+        public static Artist Warlock_Artist = new Artist { Name = "Warlock Artist", URL = "https://www.saatchiart.com/account/artworks/1293301" };
+        public static Artist Tom_Honz = new Artist { Name = "Tomas Honz", URL = "https://www.artstation.com/tomashonz" };
+        public static Artist Timi_Honkanen = new Artist { Name = "Timi Honkanen", URL = "https://www.artstation.com/themefinland" };
+        public static Artist Brandon_Moore = new Artist { Name = "Brandon Moore", URL = "https://www.artstation.com/bsm48429" };
+        public static Artist Bartlomiej_Gawel = new Artist { Name = "Bartłomiej Gaweł", URL = "https://www.artstation.com/gawel" };
+        public static Artist Gintas_Galvanauskas = new Artist { Name = "Gintas Galvanauskas", URL = "https://www.artstation.com/gintonio" };
+        public static Artist Musaab_Shukri = new Artist { Name = "Musaab Shukri", URL = "https://www.artstation.com/musaabalazawi" };
+        public static Artist Reza_Afshar = new Artist { Name = "Reza Afshar", URL = "https://www.artstation.com/rezaafshar" };
+        public static Artist John_Anthony_Di_Giovanni = new Artist { Name = "John Anthony Di Giovanni", URL = "https://www.artstation.com/jad" };
+        public static Artist Piotr_Foksowicz = new Artist { Name = "Piotr Foksowicz", URL = "https://www.artstation.com/piofoks" };
 
         //The Scouring of the Shire
         public static Artist Studio_Ghibli = new Artist { Name = "Studio Ghibli", URL = "https://www.ghibli-museum.jp" };

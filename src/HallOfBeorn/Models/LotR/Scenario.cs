@@ -559,6 +559,7 @@ namespace HallOfBeorn.Models.LotR
         public static Scenario TheHorseLordsIre = new Scenarios.ChildrenOfEorl.TheHorseLordsIreScenario();
         public static Scenario TheAldburgPlot = new Scenarios.OathsOfTheRohirrim.TheAldburgPlotScenario();
         public static Scenario FireOnTheEastemnet = new Scenarios.OathsOfTheRohirrim.FireOnTheEastemnetScenario();
+        public static Scenario TheGapOfRohan = new Scenarios.OathsOfTheRohirrim.TheGapOfRohanScenario();
         public static Scenario TheScouringOfTheShire = new Scenarios.TheScouringOfTheShire.TheScouringOfTheShireScenario();
         #endregion
 
