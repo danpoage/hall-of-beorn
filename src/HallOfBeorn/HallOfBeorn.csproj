@@ -430,6 +430,7 @@
     <Compile Include="Models\LotR\ProductGroups\OathsOfTheRohirrimProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\AngmarAwakenedNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\DreamChaserNightmareProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\StarterDeckProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\TheScouringTheShireProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\ShadowsOfMirkwoodNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\CustomScenarioKitProductGroup.cs" />
@@ -480,6 +481,10 @@
     <Compile Include="Models\LotR\Products\CustomScenarioKit\TheWoodlandRealmProduct.cs" />
     <Compile Include="Models\LotR\Products\ScenarioPack\TheDarkOfMirkwoodProduct.cs" />
     <Compile Include="Models\LotR\Products\ScenarioPack\TheHuntForTheDreadnaughtProduct.cs" />
+    <Compile Include="Models\LotR\Products\StarterDeck\DefendersOfGondorProduct.cs" />
+    <Compile Include="Models\LotR\Products\StarterDeck\DwarvesOfDurinProduct.cs" />
+    <Compile Include="Models\LotR\Products\StarterDeck\ElvesOfLorienProduct.cs" />
+    <Compile Include="Models\LotR\Products\StarterDeck\RidersOfRohanProduct.cs" />
     <Compile Include="Models\LotR\Products\Starter\TwoPlayerLimitedEditionStarterProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AcrossTheEttenmoorsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\EscapeFromMountGramNightmareProduct.cs" />
@@ -590,6 +595,10 @@
     <Compile Include="Models\LotR\Sets\CustomScenarioKit\TheMinesOfMoriaSet.cs" />
     <Compile Include="Models\LotR\Sets\CustomScenarioKit\TheWizardsQuestSet.cs" />
     <Compile Include="Models\LotR\Sets\CustomScenarioKit\TheWoodlandRealmSet.cs" />
+    <Compile Include="Models\LotR\Sets\StarterDeck\DefendersOfGondorSet.cs" />
+    <Compile Include="Models\LotR\Sets\StarterDeck\DwarvesOfDurinSet.cs" />
+    <Compile Include="Models\LotR\Sets\StarterDeck\ElvesOfLorienSet.cs" />
+    <Compile Include="Models\LotR\Sets\StarterDeck\RidersOfRohanSet.cs" />
     <Compile Include="Models\LotR\Sets\Starter\TwoPlayerLimitedEditionStarterSet.cs" />
     <Compile Include="Models\LotR\Sets\PrintOnDemand\AttackOnDolGuldurSet.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\RaidOnTheGreyHavensNightmareSet.cs" />

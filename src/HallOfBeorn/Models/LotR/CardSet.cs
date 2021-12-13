@@ -346,7 +346,12 @@ namespace HallOfBeorn.Models.LotR
         {
             Add(CoreSet);
             Add(TwoPlayerLimitedEditionStarter);
+
             Add(RevisedCore);
+            Add(DwarvesOfDurin);
+            Add(ElvesOfLorien);
+            Add(DefendersOfGondor);
+            Add(RidersOfRohan);
 
             Add(TheHuntForGollum);
             Add(ConflictAtTheCarrock);
@@ -573,7 +578,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheHillsOfEmynMuil = new Sets.ShadowsOfMirkwood.TheHillsOfEmynMuilSet();
         public static CardSet TheDeadMarshes = new Sets.ShadowsOfMirkwood.TheDeadMarshesSet();
         public static CardSet ReturnToMirkwood = new Sets.ShadowsOfMirkwood.ReturnToMirkwoodSet();
-        
+
         public static CardSet KhazadDum = new Sets.KhazadDum.KhazadDumSet();
         public static CardSet TheRedhornGate = new Sets.Dwarrowdelf.TheRedhornGateSet();
         public static CardSet RoadToRivendell = new Sets.Dwarrowdelf.RoadToRivendellSet();
@@ -777,6 +782,10 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireCardSet();
 
         public static CardSet RevisedCore = new Sets.Core.RevisedCoreSet();
+        public static CardSet DwarvesOfDurin = new Sets.StarterDeck.DwarvesOfDurinSet();
+        public static CardSet ElvesOfLorien = new Sets.StarterDeck.ElvesOfLorienSet();
+        public static CardSet DefendersOfGondor = new Sets.StarterDeck.DefendersOfGondorSet();
+        public static CardSet RidersOfRohan = new Sets.StarterDeck.RidersOfRohanSet();
         #endregion
     }
 }

@@ -10,6 +10,12 @@ namespace HallOfBeorn.Services.LotR.Templates
             TwoPlayerLimitedEditionStarter();
             RevisedCoreSet();
 
+            //Starter Decks
+            DwarvesOfDurin();
+            ElvesOfLorien();
+            DefendersOfGondor();
+            RidersOfRohan();
+
             //Core Shadows of Mirkwood
             CoreSet();
             TheHuntForGollum();
@@ -530,6 +536,30 @@ namespace HallOfBeorn.Services.LotR.Templates
             AddHtml2("Through-the-Caverns-RevCore", "<p class='main-text'><b>Response:</b> After placing any number of progress tokens on this card, flip the &quot;prisoner&quot; hero card face-up, and place 1 damage toke on it. The hero has been &quot;rescued&quot; and may now be used by its controller.</p><p class='main-text'>The players, as a group, cannot play more than 1 ally card each round.</p><p class='main-text'>Players cannot advance to the next stage of the quest unless they have rescued the prisoner and have all 3 &quot;Escape from Dol Guldur&quot; objective cards.</p>");
             AddHtml2("Out-of-the-Dungeons-RevCore", "<p class='main-text'><b>Forced:</b> At the beginning of each quest phase, each player places the top card of his deck, face down in front of him as if it just engaged him from the staging area. These cards are called &quot;Orc Guard&quot; and act as enemies with: 1 hit point, 1 {Attack} and 1 {Defense}</p><p class='main-text'><b>Players cannot defeat this stage while {card:Nazgul-of-Dol-Guldur-Core@Nazgûl of Dol Guldur} is in play. If this stage is defeated and Nazgûl of Dol Guldur is not in play, the players have won the game.</b></p>");
             AddHtml2("To-the-River-RevCore", "<p class='main-text'><b>When Revealed:</b> Search the encounter deck for 1 Hill Troll is one is not already in play, and place it in the staging area. Shuffle the encounter deck.</p><p class='main-text'>Players cannot defeat this stage while any Hill Troll cards are in play.</p><p class='flavor-text'>As you approach the location of a small raft stashed on the riverbank, a fearsome Hill Troll emerges from behind a grouping of rocks, and attacks!</p>");
+        }
+
+        private void DwarvesOfDurin()
+        {
+            AddHtml("Dain-Ironfoot-DoD", "<p class='main-text'>While {self} is ready, {trait:Dwarf.@Dwarf} characters get +1 {Attack} and +1 {Willpower}.</p><p class='flavor-text'>&quot;You have not heard of Dain and the dwarves of the Iron Hills?&quot; &ndash;Bilbo Baggins, The Hobbit</p>");
+            AddHtml("Ori-DoD", "<p class='main-text'>If you control at least 5 {trait:Dwarf.@Dwarf} characters, draw 1 additional card at the beginning of the resource phase.</p><p class='flavor-text'>&quot;He could write well and speedily, and often used the Elvish characters.&quot; &ndash;Gimli, The Fellowship of the Ring</p>");
+        }
+
+        private void ElvesOfLorien()
+        {
+            AddHtml("Celeborn-EoL", "<p class='main-text'><b>Response:</b> After a {trait-ally:Silvan.@Silvan} ally enters play, that ally gets +1 {Willpower} +1 {Attack} and +1 {Defense} until the end of the round.</p><p class='flavor-text'>&quot;...the lord of the Galadhrim is accounted wisest of the Elves of Middle&ndash;earth, and a giver of gifts beyond the power of kings.&quot; &ndash;Galadriel, The Fellowship of the Ring</p>");
+            AddHtml("Galadriel-EoL", "<p class='main-text'>{self} cannot quest, attack, or defend. {type:Ally@Allies} you control do not exhaust to commit to the quest during the round they enter play.</p><p class='main-text'><b>Action:</b> Exhaust {self} to choose a player. That player reduces his threat by 1 and draws 1 card. (Limit once per round.)</p>");
+        }
+
+        private void DefendersOfGondor()
+        {
+            AddHtml("Boromir-DoG", "<p class='main-text'>While {self} has at least 1 resource in his resource pool, {trait-ally:Gondor.@Gondor} allies get +1 {Attack}.</p><p class='flavor-text'>&quot;By our valour the wild fold of the East are still restrained, and the terror of Morgul kept at bay...&quot; &ndash;The Fellowship of the Ring</p>");
+            AddHtml("Mablung-DoG", "<p class='main-text'><b>Response:</b> After you engage an {type:Enemy@enemy}, add 1 resource to {self}'s resource pool. (Limit once per phase.)</p><p class='flavor-text'>But the Captains of the West were well warned by their scouts, skilled men from Henneth Annûn led by Mablung...<br>&ndash;The Return of the King</p>");
+        }
+
+        private void RidersOfRohan()
+        {
+            AddHtml("Eomer-RoR", "<p class='main-text'><b>Response:</b> After a {type:Character@character} leaves play, {self} gets +2 {Attack} until the end of the round. (Limit once per round.)</p><p class='flavor-text'>&quot;I am named Éomer son of Éomund, and am called the Third Marshal of Riddermark.&quot; &ndash;The Two Towers</p>");
+            AddHtml("Lothiriel-RoR", "<p class='main-text'>If {search:Query=Eomer&CardType=Character@Éomer} is in play, {self} gains the {trait:Rohan.@Rohan} trait.</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, choose an ally in your hand. If that ally shares a Trait with her, put that ally into play exhausted and committed to the quest. At the end of the phase, if that ally is still in play, shuffle it into your deck.</p>");
         }
 
         private void TheHuntForGollum()

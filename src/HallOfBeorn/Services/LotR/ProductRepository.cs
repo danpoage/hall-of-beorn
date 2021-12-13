@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
@@ -14,6 +13,7 @@ namespace HallOfBeorn.Services.LotR
         public ProductRepository()
         {
             productGroups.Add(ProductGroup.ShadowsOfMirkwood);
+            productGroups.Add(ProductGroup.StarterDeck);
             productGroups.Add(ProductGroup.Dwarrowdelf);
             productGroups.Add(ProductGroup.AgainstTheShadow);
             productGroups.Add(ProductGroup.TheRingMaker);

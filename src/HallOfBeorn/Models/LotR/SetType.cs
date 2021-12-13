@@ -7,6 +7,7 @@
         OFFICIAL,
         Core,
         Starter,
+        Starter_Deck,
         Adventure_Pack,
         Deluxe_Expansion,
         Preorder_Promotion,

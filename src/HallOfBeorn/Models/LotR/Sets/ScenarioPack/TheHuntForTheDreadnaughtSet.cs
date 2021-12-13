@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
             Abbreviation = "THftD";
             SetType = Models.SetType.Scenario_Pack;
             Cycle = "Scenario Pack";
-            Number = 4001;
+            Number = 5002;
 
             addGenConSetup("Easy Mode", EncounterSet.TheHuntForTheDreadnaught)
                 .WithTextLine("Setup:")

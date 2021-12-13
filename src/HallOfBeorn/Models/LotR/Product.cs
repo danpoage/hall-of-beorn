@@ -79,6 +79,12 @@ namespace HallOfBeorn.Models.LotR
         public static Product CoreSet = new Products.Core.CoreSetProduct();
         public static Product TwoPlayerLimitedEditionStarter = new Products.Starter.TwoPlayerLimitedEditionStarterProduct();
         public static Product RevisedCoreSet = new Products.Core.RevisedCoreSetProduct();
+
+        //Starter Decks
+        public static Product DwarvesOfDurin = new Products.StarterDeck.DwarvesOfDurinProduct();
+        public static Product ElvesOfLorien = new Products.StarterDeck.ElvesOfLorienProduct();
+        public static Product DefendersOfGondor = new Products.StarterDeck.DefendersOfGondorProduct();
+        public static Product RidersOfRohan = new Products.StarterDeck.RidersOfRohanProduct();
         
         //Shadows of Mirkwood Cycle
         public static Product TheHuntForGollum = new Products.AdventurePack.TheHuntForGollumProduct();
