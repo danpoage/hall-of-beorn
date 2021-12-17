@@ -570,6 +570,16 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithShadow("Shadow: Discard 1 random card from your hand.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(84, 2, Artist.Tomasz_Jedruszek);
+            addContract("The Last Alliance")
+                .WithTextLine("Choose two traits, A and B. Each of your starting heroes and each ally in your deck must have either the printed A or B trait (but not both). You must have at least 1 starting hero and 10 allies in your deck with each trait.")
+                .WithTextLine("Setup: Flip this card over.")
+                .WithFlavorLine("“The strength of the Elves to resist him was greater long ago; and not all Men were estranged from them.”")
+                .WithFlavorLine("—Gandalf, The Fellowship of the Ring")
+                .WithTemplate("<p class='main-text'>Choose two traits, <b><i>A</i></b> and <b><i>B</i></b>. Each of your starting heroes and each ally in your deck must have either the printed <b><i>A</i></b> or <b><i>B</i></b> trait (but not both). You must have at least 1 starting hero and 10 allies in your deck with each trait.</p><p class='main-text'><b>Setup</b>: Flip this card over.</p><p class='flavor-text'>“The strength of the Elves to resist him was greater long ago; and not all Men were estranged from them.”<br/>—Gandalf, The Fellowship of the Ring</p>")
+                .WithOppositeTextLine("While you control more A characters than B characters, reduce the cost of the first B ally you play this round by 1, and vice versa.")
+                .WithOppositeTextLine("Action: Exhaust The Last Alliance to choose a card in your hand or a card in play under your control. Replace each printed instance of “A” or “B” in that card’s ability text with “A or B” until the end of the round.")
+                .WithTemplate2("<p class='main-text'>While you control more <b><i>A</i></b> characters than <b><i>B</i></b> characters, reduce the cost of the first <b><i>B</i></b> ally you play this round by 1, and vice versa.</p><p class='main-text'><b>Action</b>: Exhaust The Last Alliance to choose a card in your hand or a card in play under your control. Replace each printed instance of “<b><i>A</i></b>” or “<b><i>B</i></b>” in that card’s ability text with “<b><i>A</i></b> or <b><i>B</i></b>” until the end of the round.</p>")
+                .WithInfo(85, 1, Artist.Unknown);
             addQuest("Drive them Away", EncounterSet.AmbushAtErelas, 1, 'A', Card.VALUE_NA)
                 .WithTextLine("Setup: Set Brigand Ringleader aside, out of play. Add Plundered Goods to the staging area. Each player searches the encounter deck for a different enemy and adds it to the staging area. Shuffle the encounter deck.")
                 .WithFlavorLine("Along the Great West Road, you come upon a Rohirrim camp in the shadow of the green, bald beacon hill of Erelas. But the quiet of your journey is interrupted by a sudden attack from the shadows! The clash of steel and the cries of men soon reach your ears. You must drive them away and free the camp from further destruction!")
