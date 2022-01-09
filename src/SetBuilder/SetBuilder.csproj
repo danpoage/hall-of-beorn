@@ -109,6 +109,9 @@
     <Content Include="ALeP\The-Gap-of-Rohan.English.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ALeP\The-Aldburg-Plot.English.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>

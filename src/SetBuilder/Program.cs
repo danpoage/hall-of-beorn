@@ -246,7 +246,7 @@ namespace SetBuilder
 
             return string.Format(withTraitsFormat,
                 string.Join(", ",
-                    card.Traits.Select(t => "\"" + t.Trim() + "\"")
+                    card.Traits.Select(t => "\"" + t.Trim() + ".\"")
                 )
             ) + Environment.NewLine;
         }
@@ -258,7 +258,7 @@ namespace SetBuilder
 
             return string.Format(withKeywordsFormat,
                 string.Join(", ",
-                    card.Keywords.Select(k => "\"" + k.Trim() + "\"")
+                    card.Keywords.Select(k => "\"" + k.Trim() + ".\"")
                 )
             ) + Environment.NewLine;
         }

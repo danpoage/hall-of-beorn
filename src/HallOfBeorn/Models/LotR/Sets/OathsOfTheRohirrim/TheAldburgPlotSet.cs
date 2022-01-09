@@ -35,10 +35,10 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(2, 1, Artist.Katerina_Poliakova);
             addAlly("Lily Cotton", 2, Sphere.Leadership, true, 1, 1, 1, 2)
                 .WithTraits("Hobbit.")
-                .WithTextLine("Action: Exhaust Lily Cotton to ready a different Hobbit ally and add Lily Cotton's Willpower, Attack, and Defense to that ally's Willpower, Attack, and Defense respectively until the end of the phase. At the end of the phase, if that ally is still in play, return it to your hand (Limit once per phase.)")
+                .WithTextLine("Action: Exhaust Lily Cotton to ready a different Hobbit ally and add Lily Cotton's Willpower, Attack, and Defense to that ally's Willpower, Attack, and Defense respectively until the end of the phase. At the end of the phase, if that ally is still in play, return it to its owner's hand. (Limit once per phase.)")
                 .WithFlavorLine("There is little or no magic about them, except the ordinary everyday sort which helps them disappear quietly and quickly...")
                 .WithFlavorLine("-The Hobbit")
-                .WithTemplate("<p class='main-text'><b>Action:</b> Exhaust {self} to ready a different {trait:Hobbit.@Hobbit} ally and add {self}'s {Willpower}, {Attack}, and {Defense} to that ally's {Willpower}, {Attack}, and {Defense} respectively until the end of the phase. At the end of the phase, if that ally is still in play, return it to your hand (Limit once per phase.)</p><p class='main-text'></p><p class='flavor-text'>There is little or no magic about them, except the ordinary everyday sort which helps them disappear quietly and quickly...<br>&mdash;The Hobbit</p>")
+                .WithTemplate("<p class='main-text'><b>Action:</b> Exhaust {self} to ready a different {trait:Hobbit.@Hobbit} ally and add {self}'s {Willpower}, {Attack}, and {Defense} to that ally's {Willpower}, {Attack}, and {Defense} respectively until the end of the phase. At the end of the phase, if that ally is still in play, return it to its owner's hand (Limit once per phase.)</p><p class='main-text'></p><p class='flavor-text'>There is little or no magic about them, except the ordinary everyday sort which helps them disappear quietly and quickly...<br>&mdash;The Hobbit</p>")
                 .WithInfo(3, 3, Artist.Francesco_Amadio);
             addEvent("A Lesson in Caution", 1, Sphere.Leadership)
                 .WithKeywords("Secrecy 1.")
@@ -94,8 +94,8 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
             addAlly("Gavin", 2, Sphere.Spirit, true, 1, 1, 0, 1)
                 .WithTraits("Creature.", "Scout.")
                 .WithTextLine("Cannot have attachments.")
-                .WithTextLine("Response: After resolving the staging of an encounter card without surge, exhaust Gavin to give that card surge and add 1 resource to the pool of a Scout hero you control. If the next encounter card revealed is not a location, discard it without resolving its effects.")
-                .WithTemplate("<p class='main-text'>Cannot have attachments.</p><p class='main-text'><b>Response:</b> After resolving the staging of an encounter card without surge, exhaust {self} to give that card surge and add 1 resource to the pool of a {trait:Scout.@Scout} hero you control. If the next encounter card revealed is not a location, discard it without resolving its effects.</p>")
+                .WithTextLine("Response: After an encounter card without surge is revealed, exhaust Gavin to give that card surge and add 1 resource to the pool of a Scout hero you control. If the next encounter card revealed is not a location, discard it without resolving its effects.")
+                .WithTemplate("<p class='main-text'>Cannot have attachments.</p><p class='main-text'><b>Response:</b> After an encounter card without surge is revealed, exhaust {self} to give that card surge and add 1 resource to the pool of a {trait:Scout.@Scout} hero you control. If the next encounter card revealed is not a location, discard it without resolving its effects.</p>")
                 .WithInfo(11, 3, Artist.Paul_Canavan);
 
             addEncounterSideQuest("Red Harvest", EncounterSet.TheAldburgPlot, 4)
