@@ -4,7 +4,7 @@ namespace RingsDbBuilder
 {
     public class Program
     {
-        private const string title = "RingsDB Helper v1.2.1 (2021-09-27)";
+        private const string title = "RingsDB Helper v1.3.1 (2022-01-22)";
 
         public static void Main(string[] args)
         {
