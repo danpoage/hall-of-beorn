@@ -15,8 +15,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.OathsOfTheRohirrim
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP03.pdf";
 
             QuestCompanionSlug = "oaths-of-the-rohirrim-quest-fire-on-the-eastemnet";
-            DifficultyRating = 6f;
-            Votes = 1;
+            DifficultyRating = 5f;
+            Votes = 2;
 
             AddEncounterSet(EncounterSet.FireOnTheEastemnet);
             AddEncounterSet(EncounterSet.OrcHost);

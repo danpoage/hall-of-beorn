@@ -14,9 +14,9 @@ namespace HallOfBeorn.Models.LotR.Scenarios.OathsOfTheRohirrim
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP04.pdf";
 
-            //QuestCompanionSlug = "oaths-of-the-rohirrim-quest-the-gap-of-rohan";
-            //DifficultyRating = 6f;
-            //Votes = 1;
+            QuestCompanionSlug = "oaths-of-the-rohirrim-quest-the-gap-of-rohan";
+            DifficultyRating = 6f;
+            Votes = 1;
 
             AddEncounterSet(EncounterSet.TheGapOfRohan);
             AddEncounterSet(EncounterSet.FaithlessRohirrim);

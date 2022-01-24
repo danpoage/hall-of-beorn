@@ -18,8 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.OathsOfTheRohirrim
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP02.pdf";
 
             QuestCompanionSlug = "oaths-of-the-rohirrim-quest-the-aldburg-plot";
-            DifficultyRating = 5f;
-            Votes = 1;
+            DifficultyRating = 4.5f;
+            Votes = 2;
 
             AddEncounterSet(EncounterSet.RohanEncampment);
             AddEncounterSet(EncounterSet.FaithlessRohirrim);
