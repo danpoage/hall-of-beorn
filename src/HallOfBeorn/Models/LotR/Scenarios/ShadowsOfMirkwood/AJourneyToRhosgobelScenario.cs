@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
     public class AJourneyToRhosgobelScenario : Scenario
     {
         public AJourneyToRhosgobelScenario()
+            : base(true)
         {
             Title = "A Journey to Rhosgobel";
             ProductName = "A Journey to Rhosgobel";

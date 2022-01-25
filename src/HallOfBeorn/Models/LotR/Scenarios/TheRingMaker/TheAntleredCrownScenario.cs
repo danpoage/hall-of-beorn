@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
     public class TheAntleredCrownScenario : Scenario
     {
         public TheAntleredCrownScenario()
+            : base(true)
         {
             Title = "The Antlered Crown";
             ProductName = "The Antlered Crown";

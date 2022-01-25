@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
     public class TheLonelyMountainScenario : Scenario
     {
         public TheLonelyMountainScenario()
+            : base(true)
         {
             Title = "The Lonely Mountain";
             ProductName = "The Hobbit: On the Doorstep";

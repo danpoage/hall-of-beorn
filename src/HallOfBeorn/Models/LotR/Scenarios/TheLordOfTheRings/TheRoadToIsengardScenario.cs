@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class TheRoadToIsengardScenario : Scenario
     {
         public TheRoadToIsengardScenario()
+            : base(true)
         {
             Title = "The Road to Isengard";
             ProductName = "The Treason of Saruman";
@@ -18,6 +19,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             AddEncounterSet(EncounterSet.SnagaOrcs);
             AddEncounterSet(EncounterSet.TheRoadToIsengard);
+            AddEncounterSet(EncounterSet.TheRoadToIsengardNightmare);
 
             AddQuestCardId("Rouse-the-Ents-ToS");
             AddQuestCardId("Breaking-Isengard-ToS");
@@ -32,6 +34,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Underground-Armoury-ToS", 1);
             ExcludeFromEasyMode("Wolf-of-Isengard-ToS", 1);
 
+            ExcludeFromNightmareMode("Snaga-ToS", 3);
+            ExcludeFromNightmareMode("Ring-wall-of-Isengard-ToS", 1);
+            ExcludeFromNightmareMode("Open-Pit-ToS", 2);
+            ExcludeFromNightmareMode("Machines-of-Isengard-ToS", 1);
+            ExcludeFromNightmareMode("Blast-of-Sorcery-ToS", 3);
         }
     }
 }

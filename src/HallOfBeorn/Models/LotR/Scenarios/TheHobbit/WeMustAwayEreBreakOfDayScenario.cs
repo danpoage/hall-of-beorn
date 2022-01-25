@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
     public class WeMustAwayEreBreakOfDayScenario : Scenario
     {
         public WeMustAwayEreBreakOfDayScenario()
+            : base(true)
         {
             Title = "We Must Away, Ere Break of Day";
             ProductName = "The Hobbit: Over Hill and Under Hill";

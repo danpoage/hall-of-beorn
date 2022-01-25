@@ -1,6 +1,6 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
 {
-    public class AcrossTheEttenmoorsScenario : Scenario
+    public class AcrossTheEttenmoorsScenario : AngmarAwakenedScenario
     {
         public AcrossTheEttenmoorsScenario()
         {

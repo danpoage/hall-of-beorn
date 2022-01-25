@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
     public class TheFordsOfIsenScenario : Scenario
     {
         public TheFordsOfIsenScenario()
+            : base(true)
         {
             Title = "The Fords of Isen";
             ProductName = "The Voice of Isengard";

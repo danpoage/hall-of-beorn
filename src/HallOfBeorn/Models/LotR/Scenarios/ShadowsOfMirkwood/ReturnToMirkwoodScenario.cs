@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
     public class ReturnToMirkwoodScenario : Scenario
     {
         public ReturnToMirkwoodScenario()
+            : base(true)
         {
             Title = "Return to Mirkwood";
             ProductName = "Return to Mirkwood";

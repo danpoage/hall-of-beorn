@@ -1,6 +1,6 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
 {
-    public class EscapeFromMountGramScenario : Scenario
+    public class EscapeFromMountGramScenario : AngmarAwakenedScenario
     {
         public EscapeFromMountGramScenario()
         {

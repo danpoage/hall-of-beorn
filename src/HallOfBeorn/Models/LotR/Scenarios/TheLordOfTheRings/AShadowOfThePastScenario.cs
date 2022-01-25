@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class AShadowOfThePastScenario : Scenario
     {
         public AShadowOfThePastScenario()
+            : base(true)
         {
             Title = "A Shadow of the Past";
             ProductName = "The Black Riders";
@@ -40,10 +41,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Piercing-Cry-TBR", 2);
             ExcludeFromEasyMode("Black-Steed-TBR", 2);
 
-            ExcludeFromNightmareMode("Bamfurlong-TBR", 1);
+            
             ExcludeFromNightmareMode("Evil-Crow-TBR", 3);
-            ExcludeFromNightmareMode("Green-Hill-Country-TBR", 3);
             ExcludeFromNightmareMode("Woody-End-TBR", 1);
+            ExcludeFromNightmareMode("Bamfurlong-TBR", 1);
+            ExcludeFromNightmareMode("Stock-brook-TBR", 1);
+            ExcludeFromNightmareMode("Green-Hill-Country-TBR", 3);
             ExcludeFromNightmareMode("Pathless-Country-TBR", 3);
             ExcludeFromNightmareMode("Rode-Like-a-Gale-TBR", 2);
         }

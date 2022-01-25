@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class JourneyToTheCrossRoads : Scenario
     {
         public JourneyToTheCrossRoads()
+            : base(true)
         {
             Title = "Journey to the Cross-roads";
             ProductName = "The Land of Shadow";
@@ -20,6 +21,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             AddEncounterSet(EncounterSet.MenOfHarad);
             AddEncounterSet(EncounterSet.JourneyToTheCrossRoads);
+            AddEncounterSet(EncounterSet.JourneyToTheCrossRoadsNightmare);
 
             AddQuestCardId("Ambush-the-Men-of-Harad-TLoS");
 
@@ -28,6 +30,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Marching-Up-the-Road-TLoS", 1);
             ExcludeFromEasyMode("Southward-Road-TLoS", 1);
 
+            ExcludeFromNightmareMode("Captain-of-Harad-TLoS", 1);
+            ExcludeFromNightmareMode("Henneth-Annun-TLoS", 1);
+            ExcludeFromNightmareMode("Southward-Road-TLoS", 2);
+            ExcludeFromNightmareMode("Hills-of-Ithilien-TLoS", 4);
+            ExcludeFromNightmareMode("The-Dark-Lord's-Summons-TLoS", 3);
         }
     }
 }

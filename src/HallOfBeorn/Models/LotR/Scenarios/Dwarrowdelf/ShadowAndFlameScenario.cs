@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
     public class ShadowAndFlameScenario : Scenario
     {
         public ShadowAndFlameScenario()
+            : base(true)
         {
             Title = "Shadow and Flame";
             ProductName = "Shadow and Flame";

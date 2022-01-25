@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
     public class TheSeventhLevelScenario : Scenario
     {
         public TheSeventhLevelScenario()
+            : base(true)
         {
             Title = "The Seventh Level";
             ProductName = "Khazad-dûm";

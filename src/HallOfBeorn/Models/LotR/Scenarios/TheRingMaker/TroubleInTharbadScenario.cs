@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
     public class TroubleInTharbadScenario : Scenario
     {
         public TroubleInTharbadScenario()
+            : base(true)
         {
             Title = "Trouble in Tharbad";
             ProductName = "Trouble in Tharbad";

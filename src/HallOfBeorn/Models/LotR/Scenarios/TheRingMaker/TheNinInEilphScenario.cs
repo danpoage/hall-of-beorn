@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
     public class TheNinInEilphScenario : Scenario
     {
         public TheNinInEilphScenario()
+            : base(true)
         {
             Title = "The Nîn-in-Eilph";
             ProductName = "The Nîn-in-Eilph";

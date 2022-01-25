@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class ShelobsLairScenario : Scenario
     {
         public ShelobsLairScenario()
+            : base(true)
         {
             Title = "Shelob's Lair";
             ProductName = "The Land of Shadow";
@@ -22,6 +23,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             AddEncounterSet(EncounterSet.MorgulNazgul);
             AddEncounterSet(EncounterSet.ShelobsLair);
             AddEncounterSet(EncounterSet.TheGreatSpider);
+            AddEncounterSet(EncounterSet.ShelobsLairNightmare);
 
             AddQuestCardId("The-Stairs-of-Cirith-Ungol-TLoS");
             AddQuestCardId("The-Spider's-Pass-TLoS");
@@ -39,6 +41,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Rage-and-Hunger-TLoS", 1);
             ExcludeFromEasyMode("Shelob's-Poison-TLoS", 1);
 
+            ExcludeFromNightmareMode("Morgul-Orc-TLoS", 4);
+            ExcludeFromNightmareMode("The-Under-way-TLoS", 2);
+            ExcludeFromNightmareMode("Deep-Dark-Passage-TLoS", 3);
+            ExcludeFromNightmareMode("Many-Openings-TLoS", 2);
         }
     }
 }

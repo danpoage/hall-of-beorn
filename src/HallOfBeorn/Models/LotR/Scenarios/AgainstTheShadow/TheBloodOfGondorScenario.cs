@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
     public class TheBloodOfGondorScenario : Scenario
     {
         public TheBloodOfGondorScenario()
+            : base(true)
         {
             Title = "The Blood of Gondor";
             ProductName = "The Blood of Gondor";

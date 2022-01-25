@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
     public class TheWatcherInTheWaterScenario : Scenario
     {
         public TheWatcherInTheWaterScenario()
+            : base(true)
         {
             Title = "The Watcher in the Water";
             ProductName = "The Watcher in the Water";

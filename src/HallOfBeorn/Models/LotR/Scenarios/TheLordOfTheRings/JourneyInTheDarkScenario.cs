@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class JourneyInTheDarkScenario : Scenario
     {
         public JourneyInTheDarkScenario()
+            : base(true)
         {
             Title = "Journey in the Dark";
             ProductName = "The Road Darkens";

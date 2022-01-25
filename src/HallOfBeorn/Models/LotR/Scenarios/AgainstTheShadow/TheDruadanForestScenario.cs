@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
     public class TheDruadanForestScenario : Scenario
     {
         public TheDruadanForestScenario()
+            : base(true)
         {
             Title = "The Drúadan Forest";
             ProductName = "The Drúadan Forest";

@@ -1,6 +1,6 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
 {
-    public class TheWastesOfEriadorScenario : Scenario
+    public class TheWastesOfEriadorScenario : AngmarAwakenedScenario
     {
         public TheWastesOfEriadorScenario()
         {

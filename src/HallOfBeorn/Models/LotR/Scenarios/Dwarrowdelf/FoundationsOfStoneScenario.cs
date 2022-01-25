@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
     public class FoundationsOfStoneScenario : Scenario
     {
         public FoundationsOfStoneScenario()
+            : base(true)
         {
             Title = "Foundations of Stone";
             ProductName = "Foundations of Stone";

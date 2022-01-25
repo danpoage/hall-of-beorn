@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
     public class EncounterAtAmonDinScenario : Scenario
     {
         public EncounterAtAmonDinScenario()
+            : base(true)
         {
             Title = "Encounter at Amon Dîn";
             ProductName = "Encounter at Amon Dîn";

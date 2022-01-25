@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class TheRingGoesSouthScenario : Scenario
     {
         public TheRingGoesSouthScenario()
+            : base(true)
         {
             Title = "The Ring Goes South";
             ProductName = "The Road Darkens";

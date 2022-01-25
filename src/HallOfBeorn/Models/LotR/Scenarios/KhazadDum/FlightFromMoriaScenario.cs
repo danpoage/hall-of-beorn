@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
     public class FlightFromMoriaScenario : Scenario
     {
         public FlightFromMoriaScenario()
+            : base(true)
         {
             Title = "Flight from Moria";
             ProductName = "Khazad-dûm";

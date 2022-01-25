@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
     public class TheBattleOfFiveArmiesScenario : Scenario
     {
         public TheBattleOfFiveArmiesScenario()
+            : base(true)
         {
             Title = "The Battle of Five Armies";
             ProductName = "The Hobbit: On the Doorstep";

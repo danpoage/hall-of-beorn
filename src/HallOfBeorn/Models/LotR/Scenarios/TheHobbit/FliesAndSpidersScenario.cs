@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
     public class FliesAndSpidersScenario : Scenario
     {
         public FliesAndSpidersScenario()
+            : base(true)
         {
             Title = "Flies and Spiders";
             ProductName = "The Hobbit: On the Doorstep";

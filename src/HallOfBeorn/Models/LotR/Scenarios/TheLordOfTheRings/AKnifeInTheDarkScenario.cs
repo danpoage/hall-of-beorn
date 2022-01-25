@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class AKnifeInTheDarkScenario : Scenario
     {
         public AKnifeInTheDarkScenario()
+            : base(true)
         {
             Title = "A Knife in the Dark";
             ProductName = "The Black Riders";
@@ -38,10 +39,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Rider-of-Mordor-TBR", 2);
             ExcludeFromEasyMode("Ringwraith-TBR", 2);
 
-            ExcludeFromNightmareMode("Unwanted-Attention-TBR", 1);
+            ExcludeFromNightmareMode("Shady-Bree-lander-TBR", 4);
             ExcludeFromNightmareMode("Weather-Hills-TBR", 3);
-            ExcludeFromNightmareMode("Weathertop-TBR", 1);
+            ExcludeFromNightmareMode("Unwanted-Attention-TBR", 1);
             ExcludeFromNightmareMode("Pathless-Country-TBR", 3);
+            ExcludeFromNightmareMode("Weathertop-TBR", 1);
         }
     }
 }

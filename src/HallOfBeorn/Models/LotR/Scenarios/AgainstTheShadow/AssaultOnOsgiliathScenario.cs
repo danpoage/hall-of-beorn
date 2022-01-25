@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
     public class AssaultOnOsgiliathScenario : Scenario
     {
         public AssaultOnOsgiliathScenario()
+            : base(true)
         {
             Title = "Assault on Osgiliath";
             ProductName = "Assault on Osgiliath";

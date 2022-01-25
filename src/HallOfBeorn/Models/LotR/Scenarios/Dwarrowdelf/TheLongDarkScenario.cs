@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
     public class TheLongDarkScenario : Scenario
     {
         public TheLongDarkScenario()
+            : base(true)
         {
             Title = "The Long Dark";
             ProductName = "The Long Dark";

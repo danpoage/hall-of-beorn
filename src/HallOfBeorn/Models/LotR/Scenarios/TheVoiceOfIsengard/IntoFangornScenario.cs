@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
     public class IntoFangornScenario : Scenario
     {
         public IntoFangornScenario()
+            : base(true)
         {
             Title = "Into Fangorn";
             ProductName = "The Voice of Isengard";

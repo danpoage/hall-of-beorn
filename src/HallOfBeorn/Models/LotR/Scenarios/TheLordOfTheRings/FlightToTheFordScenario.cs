@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class FlightToTheFordScenario : Scenario
     {
         public FlightToTheFordScenario()
+            : base(true)
         {
             Title = "Flight to the Ford";
             ProductName = "The Black Riders";
@@ -38,6 +39,15 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Power-In-Their-Terror-TBR", 2);
             ExcludeFromEasyMode("Ringwraith-TBR", 2);
 
+            ExcludeFromNightmareMode("Fell-Rider-TBR", 4);
+            ExcludeFromNightmareMode("Ford-of-Bruinen-TBR", 1);
+            ExcludeFromNightmareMode("The-Troll's-Camp-TBR", 1);
+            ExcludeFromNightmareMode("Ettenmoors-TBR", 3);
+            ExcludeFromNightmareMode("Pain-Assailed-Him-TBR", 3);
+            ExcludeFromNightmareMode("The-Old-Road-TBR", 3);
+            ExcludeFromNightmareMode("Pathless-Country-TBR", 3);
+            ExcludeFromNightmareMode("Stricken-Dumb-TBR", 3);
+            ExcludeFromNightmareMode("Rode-Like-a-Gale-TBR", 2);
         }
     }
 }

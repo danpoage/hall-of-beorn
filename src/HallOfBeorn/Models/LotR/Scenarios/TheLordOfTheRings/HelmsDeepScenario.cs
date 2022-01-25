@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class HelmsDeepScenario : Scenario
     {
         public HelmsDeepScenario()
+            : base(true)
         {
             Title = "Helm's Deep";
             ProductName = "The Treason of Saruman";
@@ -19,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
 
             AddEncounterSet(EncounterSet.HelmsDeep);
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);
+            AddEncounterSet(EncounterSet.HelmsDeepNightmare);
 
             AddQuestCardId("The-King-of-the-Golden-Hall-ToS");
             AddQuestCardId("Assault-on-Helm's-Deep-ToS");
@@ -35,6 +37,13 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Fighting-Uruk-hai-ToS", 1);
             ExcludeFromEasyMode("Isengard-Uruk-ToS", 1);
 
+            ExcludeFromNightmareMode("Isengard-Uruk-ToS", 1);
+            ExcludeFromNightmareMode("Uruk-hai-Fighter-ToS", 3);
+            ExcludeFromNightmareMode("Wild-Hillman-ToS", 3);
+            ExcludeFromNightmareMode("The-Hornburg-ToS", 3);
+            ExcludeFromNightmareMode("Deeping-Wall-ToS", 1);
+            ExcludeFromNightmareMode("Postern-Door-ToS", 2);
+            ExcludeFromNightmareMode("Reckless-Hate-ToS", 2);
         }
     }
 }

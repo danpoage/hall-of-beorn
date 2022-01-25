@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.DreamChaser
     public abstract class DreamChaserScenarioScenario : Scenario
     {
         protected DreamChaserScenarioScenario()
-            : base(false)
+            : base(true)
         {
         }
 

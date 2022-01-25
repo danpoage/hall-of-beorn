@@ -559,6 +559,16 @@ namespace HallOfBeorn.Models.LotR
             Add(JourneyInTheDarkNightmare);
             Add(BreakingOfTheFellowshipNightmare);
 
+            //The Lord of the Rings: The Treason of Saruman Nightmare Decks
+            Add(TheUrukHaiNightmare);
+            Add(HelmsDeepNightmare);
+            Add(TheRoadToIsengardNightmare);
+
+            //The Lord of the Rings: The Land of Shadow Nightmare Decks
+            Add(ThePassageOfTheMarshesNightmare);
+            Add(JourneyToTheCrossRoadsNightmare);
+            Add(ShelobsLairNightmare);
+
             //First Age and Doom Mastered
             Add(HuntingOfTheWolf);
             Add(TheIsleOfWerewolves);
@@ -961,6 +971,16 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheRingGoesSouthNightmare = new EncounterSet { Name = "The Ring Goes South Nightmare", Set = "The Rings Goes South Nightmare" };
         public static EncounterSet JourneyInTheDarkNightmare = new EncounterSet { Name = "Journey in the Dark Nightmare", Set = "Journey in the Dark Nightmare" };
         public static EncounterSet BreakingOfTheFellowshipNightmare = new EncounterSet { Name = "Breaking of the Fellowship Nightmare", Set = "Breaking of the Fellowship Nightmare" };
+
+        //The Lord of the Rings: The Treason of Saruman Nightmare Decks
+        public static EncounterSet TheUrukHaiNightmare = new EncounterSet { Name = "The Uruk-hai Nightmare", Set = "The Uruk-hai Nightmare" };
+        public static EncounterSet HelmsDeepNightmare = new EncounterSet { Name = "Helm's Deep Nightmare", Set = "Helm's Deep Nightmare" };
+        public static EncounterSet TheRoadToIsengardNightmare = new EncounterSet { Name = "The Road to Isengard Nightmare", Set = "The Road to Isengard Nightmare" };
+
+        //The Lord of the Rings: The Land of Shadow Nightmare Decks
+        public static EncounterSet ThePassageOfTheMarshesNightmare = new EncounterSet { Name = "The Passage of the Marshes Nightmare", Set = "The Passage of the Marshes Nightmare" };
+        public static EncounterSet JourneyToTheCrossRoadsNightmare = new EncounterSet { Name = "Journey to the Cross-roads Nightmare", Set = "Journey to the Cross-roads Nightmare" };
+        public static EncounterSet ShelobsLairNightmare = new EncounterSet { Name = "Shelob's Lair Nightmare", Set = "Shelob's Lair Nightmare" };
 
         //First Age and Doom Mastered
         public static EncounterSet HuntingOfTheWolf = new EncounterSet { Name = "Hunting of the Wolf", Set = "First Age" };

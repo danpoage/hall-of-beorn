@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
     public class CelebrimborsSecretScenario : Scenario
     {
         public CelebrimborsSecretScenario()
+            : base(true)
         {
             Title = "Celebrimbor's Secret";
             ProductName = "Celebrimbor's Secret";

@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
     public class TheHillsOfEmynMuilScenario : Scenario
     {
         public TheHillsOfEmynMuilScenario()
+            : base(true)
         {
             Title = "The Hills of Emyn Muil";
             ProductName = "The Hills of Emyn Muil";

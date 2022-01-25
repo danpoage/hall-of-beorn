@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
     public class TheDeadMarshesScenario : Scenario
     {
         public TheDeadMarshesScenario()
+            : base(true)
         {
             Title = "The Dead Marshes";
             ProductName = "The Dead Marshes";

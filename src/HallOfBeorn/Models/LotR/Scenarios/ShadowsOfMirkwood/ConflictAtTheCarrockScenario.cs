@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.ShadowsOfMirkwood
     public class ConflictAtTheCarrockScenario : Scenario
     {
         public ConflictAtTheCarrockScenario()
+            : base(true)
         {
             Title = "Conflict at the Carrock";
             ProductName = "Conflict at the Carrock";

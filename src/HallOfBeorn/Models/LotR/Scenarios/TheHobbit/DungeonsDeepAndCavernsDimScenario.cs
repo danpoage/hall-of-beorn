@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
     public class DungeonsDeepAndCavernsDimScenario : Scenario
     {
         public DungeonsDeepAndCavernsDimScenario()
+            : base(true)
         {
             Title = "Dungeons Deep and Caverns Dim";
             ProductName = "The Hobbit: Over Hill and Under Hill";

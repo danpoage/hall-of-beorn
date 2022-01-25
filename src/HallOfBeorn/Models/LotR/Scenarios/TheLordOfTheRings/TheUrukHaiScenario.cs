@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class TheUrukHaiScenario : Scenario
     {
         public TheUrukHaiScenario()
+            : base(true)
         {
             Title = "The Uruk-hai";
             ProductName = "The Treason of Saruman";
@@ -21,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             AddEncounterSet(EncounterSet.OrcsOfTheWhiteHand);
             AddEncounterSet(EncounterSet.SnagaOrcs);
             AddEncounterSet(EncounterSet.TheUrukHai);
+            AddEncounterSet(EncounterSet.TheUrukHaiNightmare);
 
             AddQuestCardId("Follow-the-Orcs-ToS");
             AddQuestCardId("Rescue-the-Captives-ToS");
@@ -33,6 +35,12 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Strange-Weariness-ToS", 1);
             ExcludeFromEasyMode("Ugluk's-Uruk-hai-ToS", 2);
 
+            ExcludeFromNightmareMode("Uruk-hai-Fighter-ToS", 3);
+            ExcludeFromNightmareMode("Snaga-ToS", 1);
+            ExcludeFromNightmareMode("Eastemnet-ToS", 2);
+            ExcludeFromNightmareMode("Plains-of-Rohan-ToS", 2);
+            ExcludeFromNightmareMode("The-Wold-ToS", 3);
+            ExcludeFromNightmareMode("Unseen-Barrier-ToS", 2);
         }
     }
 }

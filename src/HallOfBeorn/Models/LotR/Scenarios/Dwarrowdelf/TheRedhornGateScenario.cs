@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
     public class TheRedhornGateScenario : Scenario
     {
         public TheRedhornGateScenario()
+            : base(true)
         {
             Title = "The Redhorn Gate";
             ProductName = "The Redhorn Gate";

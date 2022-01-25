@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
     public class PerilInPelargirScenario : Scenario
     {
         public PerilInPelargirScenario()
+            : base(true)
         {
             Title = "Peril in Pelargir";
             ProductName = "Heirs of Númenor";

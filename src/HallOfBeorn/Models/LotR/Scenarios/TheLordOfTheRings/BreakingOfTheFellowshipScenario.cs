@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class BreakingOfTheFellowshipScenario : Scenario
     {
         public BreakingOfTheFellowshipScenario()
+            : base(true)
         {
             Title = "Breaking of the Fellowship";
             ProductName = "The Road Darkens";

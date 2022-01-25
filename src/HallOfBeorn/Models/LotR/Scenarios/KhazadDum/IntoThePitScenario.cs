@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.KhazadDum
     public class IntoThePitScenario : Scenario
     {
         public IntoThePitScenario()
+            : base(true)
         {
             Title = "Into the Pit";
             ProductName = "Khazad-dûm";

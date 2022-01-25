@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
     public class TheWeatherHillsScenario : Scenario
     {
         public TheWeatherHillsScenario()
+            : base(true)
         {
             Title = "The Weather Hills";
             ProductName = "The Lost Realm";

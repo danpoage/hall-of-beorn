@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheVoiceOfIsengard
     public class ToCatchAnOrcScenario : Scenario
     {
         public ToCatchAnOrcScenario()
+            : base(true)
         {
             Title = "To Catch an Orc";
             ProductName = "The Voice of Isengard";

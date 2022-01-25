@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLostRealm
     public class IntrudersInChetwoodScenario : Scenario
     {
         public IntrudersInChetwoodScenario()
+            : base(true)
         {
             Title = "Intruders in Chetwood";
             ProductName = "The Lost Realm";

@@ -2,6 +2,11 @@
 {
     public abstract class AngmarAwakenedScenario : Scenario
     {
+        protected AngmarAwakenedScenario()
+            : base(true)
+        {
+        }
+
         protected void ExcludeAngmarOrcsFromEasyMode()
         {
             ExcludeFromEasyMode("Angmar-Captain-TLR", 1);

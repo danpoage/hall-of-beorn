@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheHobbit
     public class OverTheMistyMountainsGrimScenario : Scenario
     {
         public OverTheMistyMountainsGrimScenario()
+            : base(true)
         {
             Title = "Over the Misty Mountains Grim";
             ProductName = "The Hobbit: Over Hill and Under Hill";

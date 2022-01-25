@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
     public class ThePassageOfTheMarshesScenario : Scenario
     {
         public ThePassageOfTheMarshesScenario()
+            : base(true)
         {
             Title = "The Passage of the Marshes";
             ProductName = "The Land of Shadow";
@@ -21,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             AddEncounterSet(EncounterSet.Gollum);
             AddEncounterSet(EncounterSet.MorgulNazgul);
             AddEncounterSet(EncounterSet.ThePassageOfTheMarshes);
+            AddEncounterSet(EncounterSet.ThePassageOfTheMarshesNightmare);
 
             AddQuestCardId("The-Taming-of-Smeagol-TLoS");
             AddQuestCardId("Across-the-Marshes-TLoS");
@@ -36,6 +38,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheLordOfTheRings
             ExcludeFromEasyMode("Evil-smelling-Fens-TLoS", 1);
             ExcludeFromEasyMode("Soft-Mires-TLoS", 1);
 
+            ExcludeFromNightmareMode("Groping-Dead-TLoS", 3);
+            ExcludeFromNightmareMode("Dead-Things-TLoS", 3);
+            ExcludeFromNightmareMode("Soft-Mires-TLoS", 3);
+            ExcludeFromNightmareMode("Haunted-Mere-TLoS", 3);
+            ExcludeFromNightmareMode("Bitter-Reek-TLoS", 3);
         }
     }
 }

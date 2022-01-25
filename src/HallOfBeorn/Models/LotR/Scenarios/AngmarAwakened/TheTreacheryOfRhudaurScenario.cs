@@ -1,6 +1,6 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.AngmarAwakened
 {
-    public class TheTreacheryOfRhudaurScenario : Scenario
+    public class TheTreacheryOfRhudaurScenario : AngmarAwakenedScenario
     {
         public TheTreacheryOfRhudaurScenario()
         {

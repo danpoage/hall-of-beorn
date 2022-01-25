@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
     public class TheStewardsFearScenario : Scenario
     {
         public TheStewardsFearScenario()
+            : base(true)
         {
             Title = "The Steward's Fear";
             ProductName = "The Steward's Fear";

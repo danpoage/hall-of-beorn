@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AgainstTheShadow
     public class TheMorgulValeScenario : Scenario
     {
         public TheMorgulValeScenario()
+            : base(true)
         {
             Title = "The Morgul Vale";
             ProductName = "The Morgul Vale";

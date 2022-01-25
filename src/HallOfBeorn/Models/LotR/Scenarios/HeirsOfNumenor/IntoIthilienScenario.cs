@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
     public class IntoIthilienScenario : Scenario
     {
         public IntoIthilienScenario()
+            : base(true)
         {
             Title = "Into Ithilien";
             ProductName = "Heirs of Númenor";

@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Dwarrowdelf
     public class RoadToRivendellScenario : Scenario
     {
         public RoadToRivendellScenario()
+            : base(true)
         {
             Title = "Road to Rivendell";
             ProductName = "Road to Rivendell";

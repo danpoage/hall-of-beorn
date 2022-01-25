@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.HeirsOfNumenor
     public class TheSiegeOfCairAndrosScenario : Scenario
     {
         public TheSiegeOfCairAndrosScenario()
+            : base(true)
         {
             Title = "The Siege of Cair Andros";
             ProductName = "Heirs of Númenor";

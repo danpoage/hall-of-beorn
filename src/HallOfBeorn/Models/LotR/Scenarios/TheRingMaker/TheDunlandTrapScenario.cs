@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheRingMaker
     public class TheDunlandTrapScenario : Scenario
     {
         public TheDunlandTrapScenario()
+            : base(true)
         {
             Title = "The Dunland Trap";
             ProductName = "The Dunland Trap";
