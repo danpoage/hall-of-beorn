@@ -968,7 +968,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet FlightToTheFordNightmare = new EncounterSet { Name = "Flight to the Ford Nightmare", Set = "Flight to the Ford Nightmare" };
 
         //The Lord of the Rings: The Road Darkens Nightmare Decks
-        public static EncounterSet TheRingGoesSouthNightmare = new EncounterSet { Name = "The Ring Goes South Nightmare", Set = "The Rings Goes South Nightmare" };
+        public static EncounterSet TheRingGoesSouthNightmare = new EncounterSet { Name = "The Ring Goes South Nightmare", Set = "The Ring Goes South Nightmare" };
         public static EncounterSet JourneyInTheDarkNightmare = new EncounterSet { Name = "Journey in the Dark Nightmare", Set = "Journey in the Dark Nightmare" };
         public static EncounterSet BreakingOfTheFellowshipNightmare = new EncounterSet { Name = "Breaking of the Fellowship Nightmare", Set = "Breaking of the Fellowship Nightmare" };
 
