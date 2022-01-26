@@ -56,7 +56,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.AShadowInTheEast
             ExcludeFromEasyMode("Under-Guard-ASitE", 1);
         }
 
-        protected void ExcludeTempleOfDoomFromEasyMode()
+        protected void ExcludeTheTempleOfDoomFromEasyMode()
         {
             ExcludeFromEasyMode("Temple-of-Sauron-ASitE", 1);
             ExcludeFromEasyMode("Hall-of-Horrors-ASitE", 1);

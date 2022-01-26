@@ -373,7 +373,7 @@ namespace HallOfBeorn.Models.LotR
             Add(ServantsOfSauron);
             Add(CityOfRhun);
             Add(UnderGuard);
-            Add(TempleOfDoom);
+            Add(TheTempleOfDoom);
             Add(UlchorsGuard);
             Add(TwistedTunnels);
             Add(ThePowerOfMordor);
@@ -781,7 +781,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet ServantsOfSauron = new EncounterSet { Name = "Servants of Sauron", Set = "A Shadow in the East" };
         public static EncounterSet CityOfRhun = new EncounterSet { Name = "City of Rhûn", Set = "A Shadow in the East" };
         public static EncounterSet UnderGuard = new EncounterSet { Name = "Under Guard", Set = "A Shadow in the East" };
-        public static EncounterSet TempleOfDoom = new EncounterSet { Name = "Temple of Doom", Set = "A Shadow in the East" };
+        public static EncounterSet TheTempleOfDoom = new EncounterSet { Name = "The Temple of Doom", Set = "A Shadow in the East" };
         public static EncounterSet UlchorsGuard = new EncounterSet { Name = "Ulchor's Guard", Set = "A Shadow in the East" };
         public static EncounterSet TwistedTunnels = new EncounterSet { Name = "Twisted Tunnels", Set = "A Shadow in the East" };
         public static EncounterSet ThePowerOfMordor = new EncounterSet { Name = "The Power of Mordor", Set = "A Shadow in the East" };

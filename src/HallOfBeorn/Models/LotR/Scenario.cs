@@ -501,7 +501,7 @@ namespace HallOfBeorn.Models.LotR
 
         public static Scenario TheRiverRunning = new Scenarios.AShadowInTheEast.TheRiverRunningScenario();
         public static Scenario DangerInDorwinion = new Scenarios.AShadowInTheEast.DangerInDorwinionScenario();
-        public static Scenario TempleOfDoom = new Scenarios.AShadowInTheEast.TempleOfDoomScenario();
+        public static Scenario TempleOfDoom = new Scenarios.AShadowInTheEast.TheTempleOfDoomScenario();
         public static Scenario WrathAndRuin = new Scenarios.VengeanceOfMordor.WrathAndRuinScenario();
         public static Scenario TheCityOfUlfast = new Scenarios.VengeanceOfMordor.TheCityOfUlfastScenario();
         public static Scenario ChallengeOfTheWainriders = new Scenarios.VengeanceOfMordor.ChallengeOfTheWainridersScenario();

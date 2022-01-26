@@ -348,13 +348,13 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithFlavorLine("The longer you wander the streets, the more unwanted attention you attract.")
                 .WithVictoryPoints(10)
                 .WithInfo(52, 1, Artist.Marius_Bota);
-            addEncounterSideQuest("Tribute to Mordor", EncounterSet.TempleOfDoom, 12)
+            addEncounterSideQuest("Tribute to Mordor", EncounterSet.TheTempleOfDoom, 12)
                 .WithTextLine("Forced: At the end of the round, place 1 damage token here. Then, if there are 4 or more damage tokens here, remove 4 of them and reveal the top card of the Power of Mordor deck. If you cannot, the player lose the game.")
                 .WithTextLine("This stage cannot be the active quest while Thane Ulchor has any hit points remaining. When this stage is defeated, the players win the game.")
                 .WithFlavorLine("The servants of Sauron perform ritual sacrifice to invoke the power of Mordor.")
                 .WithVictoryPoints(10)
                 .WithInfo(53, 1, Artist.Aleksander_Karcz);
-            addEnemy("Thane Ulchor", EncounterSet.TempleOfDoom, 50, Card.VALUE_X, 6, 4, 9)
+            addEnemy("Thane Ulchor", EncounterSet.TheTempleOfDoom, 50, Card.VALUE_X, 6, 4, 9)
                 .WithUnique()
                 .WithTraits("Mordor.")
                 .WithKeywords("Indestructible.")
@@ -363,13 +363,13 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithTextLine("Forced: When Thane Ulchor attacks and destroys a character, place 1 damage token on Tribute to Mordor.")
                 .WithVictoryPoints(6)
                 .WithInfo(54, 1, Artist.Ivan_Dixon);
-            addLocation("Temple of Sauron", EncounterSet.TempleOfDoom, 4, 1)
+            addLocation("Temple of Sauron", EncounterSet.TheTempleOfDoom, 4, 1)
                 .WithTraits("Underground.")
                 .WithTextLine("Forced: When Temple of Sauron leaves play, place 1 damage token on Tribute to Mordor.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each quest stage in the victory display.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(55, 2, Artist.Alexander_Chelyshev);
-            addLocation("Hall of Horrors", EncounterSet.TempleOfDoom, Card.VALUE_X, 5)
+            addLocation("Hall of Horrors", EncounterSet.TheTempleOfDoom, Card.VALUE_X, 5)
                 .WithTraits("Underground.")
                 .WithTextLine("X is 1 more than the number of quest stages in the victory display.")
                 .WithTextLine("Forced: When Hall of Horrors leaves play, each player deals X damage to a character he controls.")
@@ -377,7 +377,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithFlavorLine("-The Return of the King")
                 .WithEasyModeQuantity(2)
                 .WithInfo(56, 3, Artist.Alvaro_Calvo_Escudero);
-            addTreachery("Place of Evil", EncounterSet.TempleOfDoom)
+            addTreachery("Place of Evil", EncounterSet.TheTempleOfDoom)
                 .WithTextLine("When Revealed: Place 1 damage token on Tribute to Mordor. Then, either place 1 additional damage token on Tribute to Mordor, or Place of Evil gains surge.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, place 1 damage token on Tribute to Mordor.")
                 .WithEasyModeQuantity(1)
@@ -539,7 +539,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithOppositeFlavorLine("Inside the catacombs you see evidence of evil deeds done in Sauron's name, and the leader of the cult at the center of it. You must defeat this agent of Mordor in order order to put an end to these atrocities.")
                 .WithIncludedEncounterSets(EncounterSet.ServantsOfSauron, EncounterSet.CityOfRhun, EncounterSet.UnderGuard)
                 .WithInfo(79, 1, Artist.Sebastian_Zakrzewski);
-            addQuest("The Forgotten Temple", EncounterSet.TempleOfDoom, 1, 'A', Card.VALUE_NA)
+            addQuest("The Forgotten Temple", EncounterSet.TheTempleOfDoom, 1, 'A', Card.VALUE_NA)
                 .WithTextLine("Setup: Shuffle each of the stage 2 quest cards together and place them facedown under this stage. Create The Power of Mordor deck (see insert) and set it next to the quest deck. Add Thane Ulchor and Tribute to Mordor to the staging area. Shuffle the encounter deck.")
                 .WithFlavorLine("Your search for the missing Dorwinions has led you up the mountains of Rhûn. There you discover the remains of an ancient temple built to honor Sauron during the dark years of Middle-earth.")
                 .WithOppositeTextLine("Skip the quest phase.")
@@ -548,7 +548,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithVictoryPoints(10)
                 .WithIncludedEncounterSets(EncounterSet.UlchorsGuard, EncounterSet.TwistedTunnels, EncounterSet.EasterlingRaiders, EncounterSet.ThePowerOfMordor)
                 .WithInfo(80, 1, Artist.Kevin_Zamir_Goeke);
-            addQuest("The Legacy of Mordor", EncounterSet.TempleOfDoom, 2, 'A', 8)
+            addQuest("The Legacy of Mordor", EncounterSet.TheTempleOfDoom, 2, 'A', 8)
                 .WithTextLine("When Revealed: Reveal 1 encounter card per player.")
                 .WithFlavorLine("Rows of iron-barred cells line both sides of a dark dungeon built beneath the old temple. You shudder to think what horrible fate befell the captives that were held here in years past as you continue to search for the missing Dorwinions.")
                 .WithOppositeTextLine("Forced: At the beginning of the quest phase, each player deals 1 damage to a hero he controls and exhausts that hero. That hero cannot ready or be healed until the refresh phase.")
@@ -556,7 +556,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithVictoryPoints(1)
                 .WithIncludedEncounterSets(EncounterSet.UlchorsGuard, EncounterSet.TwistedTunnels, EncounterSet.EasterlingRaiders, EncounterSet.ThePowerOfMordor)
                 .WithInfo(81, 1, Artist.Stanislav_Dikolenko);
-            addQuest("Memory of the Dark Years", EncounterSet.TempleOfDoom, 2, 'A', 12)
+            addQuest("Memory of the Dark Years", EncounterSet.TheTempleOfDoom, 2, 'A', 12)
                 .WithTextLine("When Revealed: Reveal 1 encounter card per player.")
                 .WithFlavorLine("All about you are the cruel trappings of Mordor: evidence of torture and death callously strewn about the cavern floor. You search among the bones and debris for fresh signs of those you seek.")
                 .WithOppositeTextLine("Forced: At the beginning of the quest phase, discard X cards from the top of the encounter deck, where X is 1 more than the number of quest stages in the victory display. Add 2 to the total Threat in the staging area for each different card type discarded this way.")
@@ -564,7 +564,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithVictoryPoints(1)
                 .WithIncludedEncounterSets(EncounterSet.UlchorsGuard, EncounterSet.TwistedTunnels, EncounterSet.EasterlingRaiders, EncounterSet.ThePowerOfMordor)
                 .WithInfo(83, 1, Artist.Dual_Brush_Studios);
-            addQuest("Shrine to Sauron", EncounterSet.TempleOfDoom, 2, 'A', 16)
+            addQuest("Shrine to Sauron", EncounterSet.TheTempleOfDoom, 2, 'A', 16)
                 .WithTextLine("When Revealed: Reveal 1 encounter card per player.")
                 .WithFlavorLine("A blood-stained altar to the Dark Lord of Mordor looks to have been used recently. Though the carved stone is ancient, the blood and cloth you find on it are fresh. You search about frantically to find the captive Dorwinions before more are slaughtered.")
                 .WithOppositeTextLine("Forced: At the beginning of the quest phase, each player discards the top X cards of his deck, where X is 1 more than the number of quest stages in the victory display. Each player examines the cards he controls and the cards in his hand. If any of these cards are copies of the cards he just discarded from the top of his deck, he must discard those copies as well.")
@@ -572,7 +572,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithVictoryPoints(1)
                 .WithIncludedEncounterSets(EncounterSet.UlchorsGuard, EncounterSet.TwistedTunnels, EncounterSet.EasterlingRaiders, EncounterSet.ThePowerOfMordor)
                 .WithInfo(84, 1, Artist.Stanislav_Dikolenko);
-            addQuest("The Lord of Middle-earth", EncounterSet.TempleOfDoom, 2, 'A', 0)
+            addQuest("The Lord of Middle-earth", EncounterSet.TheTempleOfDoom, 2, 'A', 0)
                 .WithTextLine("When Revealed: Reveal 1 encounter card per player.")
                 .WithFlavorLine("At the center of a large temple room is a hideous state of Sauron seated upon an iron throne. It is a terrible reminder of the darkness that awaits Middle-earth should you fail in your vigilance.")
                 .WithOppositeTextLine("This stage gets +4 quest points per player.")
