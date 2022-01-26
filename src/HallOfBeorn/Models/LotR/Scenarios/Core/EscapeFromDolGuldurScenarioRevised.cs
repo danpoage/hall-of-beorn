@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
     public class EscapeFromDolGuldurScenarioRevised : Scenario
     {
         public EscapeFromDolGuldurScenarioRevised()
+            : base(true)
         {
             Title = "Escape from Dol Guldur (Rev)";
             ProductName = "Revised Core Set";

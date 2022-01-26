@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
     public class PassageThroughMirkwoodScenarioRevised : Scenario
     {
         public PassageThroughMirkwoodScenarioRevised()
+            : base(true)
         {
             Title = "Passage Through Mirkwood (Rev)";
             ProductName = "Revised Core Set";

@@ -39,7 +39,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             AddEncounterSet(EncounterSet.EscapeFromDolGuldur);
             AddEncounterSet(EncounterSet.EscapeFromDolGuldurNightmare);
             AddEncounterSet(EncounterSet.SpidersOfMirkwood);
-
+            
             AddQuestCardId("The-Necromancer's-Tower-Core");
             AddQuestCardId("Through-the-Caverns-Core");
             AddQuestCardId("Out-of-the-Dungeons-Core");

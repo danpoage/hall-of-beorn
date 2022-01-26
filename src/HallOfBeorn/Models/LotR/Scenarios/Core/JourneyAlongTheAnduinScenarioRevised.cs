@@ -3,6 +3,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
     public class JourneyAlongTheAnduinScenarioRevised : Scenario
     {
         public JourneyAlongTheAnduinScenarioRevised()
+            : base(true)
         {
             Title = "Journey Along the Anduin (Rev)";
             AlternateTitle = "Journey Down the Anduin";
