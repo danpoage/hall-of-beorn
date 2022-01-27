@@ -45,7 +45,7 @@ namespace HallOfBeorn.Models.LotR
             Set = card.CardSet.NormalizedName;
             EncounterSet = card.EncounterSet;
             EncounterSetNumber = card.CardSet.Number;
-            Link = string.Format("/Cards/Details/{0}", card.Slug);
+            Link = string.Format("/LotR/Details/{0}", card.Slug);
         }
 
         public LotRCard Card { get; private set; }

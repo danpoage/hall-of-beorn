@@ -155,14 +155,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Url
         {
-            get { return string.Format("/Cards/Details/{0}", Slug); }
+            get { return string.Format("/LotR/Details/{0}", Slug); }
         }
 
         public string SetSearchUrl
         {
             get
             {
-                return string.Format("/Cards/Search?CardSet={0}", _card.CardSet.Name.Replace(" ", "+"));
+                return string.Format("/LotR?CardSet={0}", _card.CardSet.Name.Replace(" ", "+"));
             }
         }
 
@@ -488,7 +488,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get
             {
                 return !string.IsNullOrEmpty(EncounterSet) ?
-                    string.Format("/Cards/Search?EncounterSet={0}", _card.EncounterSet.ToSearchString())
+                    string.Format("/LotR?EncounterSet={0}", _card.EncounterSet.ToSearchString())
                     : string.Empty;
             }
         }
