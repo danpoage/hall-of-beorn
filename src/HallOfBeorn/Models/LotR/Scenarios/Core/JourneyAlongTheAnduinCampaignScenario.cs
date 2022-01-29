@@ -1,12 +1,11 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.Core
 {
-    public class JourneyAlongTheAnduinScenarioRevised : Scenario
+    public class JourneyAlongTheAnduinCampaignScenario : Scenario
     {
-        public JourneyAlongTheAnduinScenarioRevised()
+        public JourneyAlongTheAnduinCampaignScenario()
             : base(true)
         {
-            Title = "Journey Along the Anduin (Rev)";
-            AlternateTitle = "Journey Down the Anduin";
+            Title = "Journey Along the Anduin Campaign";
             ProductName = "Revised Core Set";
             GroupName = "Revised Core Set";
             Number = 2;
@@ -51,11 +50,11 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
                 "https://visionofthepalantir.wordpress.com/2018/01/20/journey-along-the-anduin/",
                 "https://www.youtube.com/watch?v=8mKOOq9t-7w");
 
-            AddEncounterSet(EncounterSet.DolGuldurOrcsRev);
-            AddEncounterSet(EncounterSet.JourneyAlongTheAnduinRev);
+            AddEncounterSet(EncounterSet.DolGuldurOrcsCampaign);
+            AddEncounterSet(EncounterSet.JourneyAlongTheAnduinCampaign);
             AddEncounterSet(EncounterSet.JourneyAlongTheAnduinNightmare);
-            AddEncounterSet(EncounterSet.SauronsReachRev);
-            AddEncounterSet(EncounterSet.WilderlandsRev);
+            AddEncounterSet(EncounterSet.SauronsReachCampaign);
+            AddEncounterSet(EncounterSet.WilderlandsCampaign);
 
             AddQuestCardId("To-the-River-RevCore");
             AddQuestCardId("Anduin-Passage-RevCore");

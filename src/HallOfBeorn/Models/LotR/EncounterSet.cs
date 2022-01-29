@@ -231,6 +231,15 @@ namespace HallOfBeorn.Models.LotR
             Add(TheDeadMarshes);
             Add(ReturnToMirkwood);
 
+            //Revised Core Set
+            Add(PassageThroughMirkwoodCampaign);
+            Add(DolGuldurOrcsCampaign);
+            Add(SpidersOfMirkwoodCampaign);
+            Add(JourneyAlongTheAnduinCampaign);
+            Add(SauronsReachCampaign);
+            Add(WilderlandsCampaign);
+            Add(EscapeFromDolGuldurCampaign);
+
             //Khazad-dum and Dwarrowdelf
             Add(IntoThePit);
             Add(TwistsAndTurns);
@@ -631,13 +640,13 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet ReturnToMirkwood = new EncounterSet { Name = "Return to Mirkwood", Set = "Return to Mirkwood" };
         
         //Revised Core Set
-        public static EncounterSet PassageThroughMirkwoodRev = new EncounterSet { Name = "Passage Through Mirkwood", Set = "Revised Core Set" };
-        public static EncounterSet DolGuldurOrcsRev = new EncounterSet { Name = "Dol Guldur Orcs", Set = "Revised Core Set" };
-        public static EncounterSet SpidersOfMirkwoodRev = new EncounterSet { Name = "Spiders of Mirkwood", Set = "Revised Core Set" };
-        public static EncounterSet JourneyAlongTheAnduinRev = new EncounterSet { Name = "Journey Along the Anduin", Set = "Revised Core Set"};
-        public static EncounterSet SauronsReachRev = new EncounterSet { Name = "Sauron's Reach", Set = "Revised Core Set" };
-        public static EncounterSet WilderlandsRev = new EncounterSet { Name = "Wilderlands", Set = "Revised Core Set" };
-        public static EncounterSet EscapeFromDolGuldurRev = new EncounterSet { Name = "Escape from Dol Guldur", Set = "Revised Core Set" };
+        public static EncounterSet PassageThroughMirkwoodCampaign = new EncounterSet { Name = "Passage Through Mirkwood Campaign", Set = "Revised Core Set" };
+        public static EncounterSet DolGuldurOrcsCampaign = new EncounterSet { Name = "Dol Guldur Orcs Campaign", Set = "Revised Core Set" };
+        public static EncounterSet SpidersOfMirkwoodCampaign = new EncounterSet { Name = "Spiders of Mirkwood Campaign", Set = "Revised Core Set" };
+        public static EncounterSet JourneyAlongTheAnduinCampaign = new EncounterSet { Name = "Journey Along the Anduin Campaign", Set = "Revised Core Set"};
+        public static EncounterSet SauronsReachCampaign = new EncounterSet { Name = "Sauron's Reach Campaign", Set = "Revised Core Set" };
+        public static EncounterSet WilderlandsCampaign = new EncounterSet { Name = "Wilderlands Campaign", Set = "Revised Core Set" };
+        public static EncounterSet EscapeFromDolGuldurCampaign = new EncounterSet { Name = "Escape from Dol Guldur Campaign", Set = "Revised Core Set" };
 
         //Khazad-dum and Dwarrowdelf
         public static EncounterSet IntoThePit = new EncounterSet { Name = "Into the Pit", Set = "Khazad-dûm", NormalizedSet = "Khazad-dum" };

@@ -512,9 +512,9 @@
     <Compile Include="Models\LotR\Scenarios\ChildrenOfEorl\AmbushAtErelasScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\ChildrenOfEorl\TheBattleForTheBeaconScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\ChildrenOfEorl\TheHorseLordsIreScenario.cs" />
-    <Compile Include="Models\LotR\Scenarios\Core\PassageThroughMirkwoodScenarioRevised.cs" />
-    <Compile Include="Models\LotR\Scenarios\Core\JourneyAlongTheAnduinScenarioRevised.cs" />
-    <Compile Include="Models\LotR\Scenarios\Core\EscapeFromDolGuldurScenarioRevised.cs" />
+    <Compile Include="Models\LotR\Scenarios\Core\PassageThroughMirkwoodCampaignScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\Core\JourneyAlongTheAnduinCampaignScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\Core\EscapeFromDolGuldurCampaignScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\DoomMastered\TheBetrayalOfMimScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\DoomMastered\TheFallOfNargothrondScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\DreamChaser\AStormOnCobasHavenScenario.cs" />

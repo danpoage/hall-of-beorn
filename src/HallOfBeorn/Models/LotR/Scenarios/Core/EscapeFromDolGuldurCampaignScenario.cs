@@ -1,11 +1,11 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.Core
 {
-    public class EscapeFromDolGuldurScenarioRevised : Scenario
+    public class EscapeFromDolGuldurCampaignScenario : Scenario
     {
-        public EscapeFromDolGuldurScenarioRevised()
+        public EscapeFromDolGuldurCampaignScenario()
             : base(true)
         {
-            Title = "Escape from Dol Guldur (Rev)";
+            Title = "Escape from Dol Guldur Campaign";
             ProductName = "Revised Core Set";
             GroupName = "Revised Core Set";
             Number = 3;
@@ -35,10 +35,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             AddRelatedDeck("5524", "Flawless Victory",
                 "https://www.youtube.com/watch?v=f4euaXWkbNc");
 
-            AddEncounterSet(EncounterSet.DolGuldurOrcsRev);
-            AddEncounterSet(EncounterSet.EscapeFromDolGuldurRev);
+            AddEncounterSet(EncounterSet.DolGuldurOrcsCampaign);
+            AddEncounterSet(EncounterSet.EscapeFromDolGuldurCampaign);
             AddEncounterSet(EncounterSet.EscapeFromDolGuldurNightmare);
-            AddEncounterSet(EncounterSet.SpidersOfMirkwoodRev);
+            AddEncounterSet(EncounterSet.SpidersOfMirkwoodCampaign);
 
             AddQuestCardId("The-Necromancer's-Tower-RevCore");
             AddQuestCardId("Through-the-Caverns-RevCore");

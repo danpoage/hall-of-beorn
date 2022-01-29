@@ -1,11 +1,11 @@
 namespace HallOfBeorn.Models.LotR.Scenarios.Core
 {
-    public class PassageThroughMirkwoodScenarioRevised : Scenario
+    public class PassageThroughMirkwoodCampaignScenario : Scenario
     {
-        public PassageThroughMirkwoodScenarioRevised()
+        public PassageThroughMirkwoodCampaignScenario()
             : base(true)
         {
-            Title = "Passage Through Mirkwood (Rev)";
+            Title = "Passage Through Mirkwood Campaign";
             ProductName = "Revised Core Set";
             GroupName = "Revised Core Set";
             Number = 1;
@@ -29,10 +29,10 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
             AddRelatedDeck("3415", "People of the Golden Wood",
                 "https://darklingdoor.wordpress.com/2016/10/28/passage-through-mirkwood/");
 
-            AddEncounterSet(EncounterSet.DolGuldurOrcsRev);
-            AddEncounterSet(EncounterSet.PassageThroughMirkwoodRev);
+            AddEncounterSet(EncounterSet.DolGuldurOrcsCampaign);
+            AddEncounterSet(EncounterSet.PassageThroughMirkwoodCampaign);
             AddEncounterSet(EncounterSet.PassageThroughMirkwoodNightmare);
-            AddEncounterSet(EncounterSet.SpidersOfMirkwoodRev);
+            AddEncounterSet(EncounterSet.SpidersOfMirkwoodCampaign);
 
             AddQuestCardId("Flies-and-Spiders-RevCore");
             AddQuestCardId("A-Fork-in-the-Road-RevCore");
