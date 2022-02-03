@@ -19,6 +19,23 @@ namespace HallOfBeorn.Services
                 relationship(subName, type, objName);
             };
 
+            initializeCharacters();
+            initializeGroups();
+            initializePlaces();
+            initializeThings();
+        }
+
+        private readonly Dictionary<string, Character> all = new Dictionary<string, Character>();
+        private readonly Dictionary<string, List<CharacterRelationship>> relationshipsBySubject = new Dictionary<string, List<CharacterRelationship>>();
+        private readonly Dictionary<string, List<CharacterRelationship>> relationshipsByObject = new Dictionary<string, List<CharacterRelationship>>();
+
+        private void add(Character character)
+        {
+            all.Add(character.Slug, character);
+        }
+
+        private void initializeCharacters()
+        {
             add(new AnbornCharacter());
             add(new AngborTheFearlessCharacter());
             add(new AragornCharacter());
@@ -33,6 +50,7 @@ namespace HallOfBeorn.Services
             add(new BifurCharacter());
             add(new BilboBagginsCharacter());
             add(new BillThePonyCharacter());
+            add(new BobCharacter());
             add(new BofurCharacter());
             add(new BomburCharacter());
             add(new BoromirCharacter());
@@ -59,7 +77,6 @@ namespace HallOfBeorn.Services
             add(new EowynCharacter());
             add(new ErestorCharacter());
             add(new ErkenbrandCharacter());
-            add(new FangornPlace());
             add(new FaramirCharacter());
             add(new FarmerMaggotCharacter());
             add(new FastredCharacter());
@@ -81,7 +98,6 @@ namespace HallOfBeorn.Services
             add(new GloinCharacter());
             add(new GlorfindelCharacter());
             add(new GollumCharacter());
-            add(new GondorPlace());
             add(new GrimaCharacter());
             add(new GrimbeornTheOldCharacter());
             add(new GrimboldCharacter());
@@ -91,24 +107,24 @@ namespace HallOfBeorn.Services
             add(new HaldirOfLorienCharacter());
             add(new HalfastGamgeeCharacter());
             add(new HamaCharacter());
+            add(new HarryGoatleafCharacter());
             add(new HerubrandCharacter());
             add(new HirgonCharacter());
             add(new HirluinTheFairCharacter());
             add(new IngoldCharacter());
-            add(new IorethCharacter());
-            add(new IstariGroup());
+            add(new IorethCharacter());            
             add(new KiliCharacter());
             add(new LandrovalCharacter());
             add(new LeaflockCharacter());
             add(new LegolasCharacter());
             add(new LilyCottonCharacter());
             add(new LindirCharacter());
-            add(new LorienPlace());
             add(new LothirielCharacter());
             add(new MablungCharacter());
             add(new MeneldorCharacter());
             add(new MerryCharacter());
             add(new MorwenSteelsheenCharacter());
+            add(new NobCharacter());
             add(new NoriCharacter());
             add(new OinCharacter());
             add(new OriCharacter());
@@ -117,53 +133,58 @@ namespace HallOfBeorn.Services
             add(new PrinceImrahilCharacter());
             add(new QuickbeamCharacter());
             add(new RadagastCharacter());
-            add(new RangersOfIthilienGroup());
-            add(new RivendellPlace());
             add(new RobinSmallburrowCharacter());
-            add(new RohanPlace());
             add(new RosieCottonCharacter());
             add(new RumilCharacter());
             add(new SamGamgeeCharacter());
             add(new SarumanCharacter());
             add(new SkinbarkCharacter());
-            add(new TheBeorningsGroup());
-            add(new TheCouncilOfElrondGroup());
-            add(new TheEaglesGroup());
-            add(new TheEntsGroup());
-            add(new TheEyriePlace());
-            add(new TheFellowshipOfTheRingGroup());
-            add(new TheGreyCompanyGroup());
             add(new ThengelCharacter());
             add(new TheodenCharacter());
             add(new TheodwynCharacter());
-            add(new TheShirePlace());
-            add(new TheThreeHuntersGroup());
-            add(new TheWhiteCouncilGroup());
             add(new TheodredCharacter());
             add(new ThorinOakenshieldCharacter());
             add(new ThorinStonehelmCharacter());
-            add(new ThorinsCompanyGroup());
             add(new TomBombadilCharacter());
             add(new TomCottonCharacter());
             add(new ThranduilCharacter());
             add(new TreebeardCharacter());
             add(new YoungTomCharacter());
-
-            //Things
-            add(new Glamdring());
-            add(new MithrilShirt());
-            add(new Orcrist());
-            add(new Sting());
-            add(new TheOneRingThing());
         }
 
-        private readonly Dictionary<string, Character> all = new Dictionary<string, Character>();
-        private readonly Dictionary<string, List<CharacterRelationship>> relationshipsBySubject = new Dictionary<string, List<CharacterRelationship>>();
-        private readonly Dictionary<string, List<CharacterRelationship>> relationshipsByObject = new Dictionary<string, List<CharacterRelationship>>();
-
-        private void add(Character character)
+        private void initializeGroups()
         {
-            all.Add(character.Slug, character);
+            add(new BeorningsGroup());
+            add(new CouncilOfElrondGroup());
+            add(new EaglesGroup());
+            add(new EntsGroup());
+            add(new FellowshipOfTheRingGroup());
+            add(new GreyCompanyGroup());
+            add(new IstariGroup());
+            add(new RangersOfIthilienGroup());
+            add(new ThorinsCompanyGroup());
+            add(new ThreeHuntersGroup());
+            add(new WhiteCouncilGroup());
+        }
+
+        private void initializePlaces()
+        {
+            add(new EyriePlace());
+            add(new FangornPlace());
+            add(new GondorPlace());
+            add(new LorienPlace());
+            add(new RivendellPlace());
+            add(new RohanPlace());
+            add(new ShirePlace());
+        }
+
+        private void initializeThings()
+        {
+            add(new Glamdring());
+            add(new MithrilShirt());
+            add(new OneRingThing());
+            add(new Orcrist());
+            add(new Sting());
         }
 
         private void relationship(string subjectName, RelationshipType type, string objectName)

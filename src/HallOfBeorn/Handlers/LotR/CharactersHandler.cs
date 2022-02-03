@@ -48,21 +48,29 @@ namespace HallOfBeorn.Handlers.LotR
 
             var cardUrls = new HashSet<string>();
 
-            var links = _linkService.GetCharacterLinks(character.Name);
-
-            foreach (var link in links)
+            if (!character.DisableAutoLinks)
             {
-                if (cardUrls.Contains(link.Url))
-                    continue;
+                var links = _linkService.GetCharacterLinks(character.Name);
 
-                cardUrls.Add(link.Url);
+                foreach (var link in links)
+                {
+                    if (cardUrls.Contains(link.Url))
+                        continue;
 
-                model.AddLotRCardLink(link);
+                    cardUrls.Add(link.Url);
+
+                    model.AddLotRCardLink(link);
+                }
             }
 
             foreach (var slug in character.LotRCards)
             {
                 var card = _lotrCardRepository.FindBySlug(slug);
+                if (card.Slug != slug)
+                {
+                    continue;
+                }
+
                 var link = Link.CreateLotRImageLink(card);
 
                 if (link == null || cardUrls.Contains(link.Url))

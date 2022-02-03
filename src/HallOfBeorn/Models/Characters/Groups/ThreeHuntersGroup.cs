@@ -1,10 +1,10 @@
 ﻿namespace HallOfBeorn.Models.Characters.Groups
 {
-    public class TheThreeHuntersGroup
+    public class ThreeHuntersGroup
         : CharacterGroup
     {
-        public TheThreeHuntersGroup()
-            : base("The Three Hunters", "The Three Hunters")
+        public ThreeHuntersGroup()
+            : base("Three Hunters", "Three Hunters")
         {
             Bio = 
 @"<blockquote>

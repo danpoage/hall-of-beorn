@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.Characters
 {
@@ -27,13 +24,14 @@ namespace HallOfBeorn.Models.Characters
             ImageArtist = Artist.Owen_William_Weber;
 
             addFriend("Gandalf", "Gandalf");
-            addFriend("Tom Bombadil");
-            addFriend("Nob");
-            addFriend("Bob");
+            addFriend("Tom Bombadil", "Tom-Bombadil");
+            addFriend("Nob", "Nob");
+            addFriend("Bob", "Bob");
 
             addGroup("Bree");
 
-            DigitalCard("Barliman-Butterbur-Valor");
+            LotRCard("Barliman-Butterbur-TGoR");
+            //DigitalCard("Barliman-Butterbur-Valor");
         }
     }
 }

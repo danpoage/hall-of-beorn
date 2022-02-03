@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Groups
 {
-    public class TheCouncilOfElrondGroup : CharacterGroup
+    public class CouncilOfElrondGroup : CharacterGroup
     {
-        public TheCouncilOfElrondGroup()
-            : base("The Council of Elrond", "The Council of Elrond")
+        public CouncilOfElrondGroup()
+            : base("Council of Elrond", "Council of Elrond")
         {
             Bio =
 @"<p>The Council of Elrond was a council called and led by Elrond, held on 25 October, T.A. 3018[1] in Rivendell. The main purpose of the council was to discuss what should be done with the One Ring, which was brought there by the Ring-bearer Frodo Baggins.</p>

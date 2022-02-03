@@ -14,30 +14,30 @@
         <div class="list-left">
             <h2>Characters</h2>
             @foreach (var pair in @Model.AllCharacters()) {
-                var checkFirst = pair.Key.Substring(0, 1).NormalizeCaseSensitiveString();
+                var checkFirst = pair.Value.Name.Substring(0, 1).NormalizeCaseSensitiveString();
                 if (checkFirst != firstLetter) {
                     <h4>@checkFirst</h4>
                 }
                 firstLetter = checkFirst;
-                var charId = @pair.Key.Slugify();
-                <div class="character-list-item"><a id="@charId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+                var charId = @pair.Value.Name.Slugify();
+                <div class="character-list-item"><a id="@charId" href="@pair.Key" title="@pair.Value.FullName">@pair.Value.Name</a></div>
             }
         </div>
         <div class="list-right">
             <h2>Groups</h2>
             @foreach (var pair in @Model.AllGroups()) {
-                var groupId = @pair.Key.Slugify();
-                <div class="character-list-item"><a id="@groupId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+                var groupId = @pair.Value.Name.Slugify();
+                <div class="character-list-item"><a id="@groupId" href="@pair.Key" title="@pair.Value.FullName">@pair.Value.Name</a></div>
             }
             <h2>Places</h2>
             @foreach (var pair in @Model.AllPlaces()) {
-                var placeId = @pair.Key.Slugify();
-                <div class="character-list-item"><a id="@placeId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+                var placeId = @pair.Value.Name.Slugify();
+                <div class="character-list-item"><a id="@placeId" href="@pair.Key" title="@pair.Value.FullName">@pair.Value.Name</a></div>
             }
             <h2>Things</h2>
             @foreach (var pair in @Model.AllThings()) {
-                var thingId = @pair.Key.Slugify();
-                <div class="character-list-item"><a id="@thingId" href="@pair.Value" title="@pair.Key">@pair.Key</a></div>
+                var thingId = @pair.Value.Name.Slugify();
+                <div class="character-list-item"><a id="@thingId" href="@pair.Key" title="@pair.Value.FullName">@pair.Value.Name</a></div>
             }
         </div>
     </div>

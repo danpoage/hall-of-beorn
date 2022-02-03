@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Groups
 {
-    public class TheBeorningsGroup : CharacterGroup
+    public class BeorningsGroup : CharacterGroup
     {
-        public TheBeorningsGroup()
-            : base("The Beornings", "The Beornings")
+        public BeorningsGroup()
+            : base("Beornings", "Beornings")
         {
             Bio =
 @"<p>Beornings were a people of the upper Vales of Anduin, between Mirkwood and the Misty Mountains.</p>

@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Places
 {
-    public class TheShirePlace : CharacterPlace
+    public class ShirePlace : CharacterPlace
     {
-        public TheShirePlace()
-            : base("The Shire", "The Shire")
+        public ShirePlace()
+            : base("Shire", "The Shire")
         {
             Bio =
 @"<p>The Shire was a region in Eriador inhabited by Hobbits.</p>

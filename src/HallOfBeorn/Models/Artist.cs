@@ -1626,5 +1626,6 @@ namespace HallOfBeorn.Models
         public static Artist Sceith_A = new Artist { Name = "Sceith-A", URL = "https://sceith-a.deviantart.com" };
         public static Artist The_Brothers_Hildebrandt = new Artist { Name = "The Brothers Hildebrandt", URL = "http://www.brothershildebrandt.com" };
         public static Artist Warren_Mahy = new Artist { Name = "Warren Mahy", URL = "https://www.originalmagicart.store/collections/warren-mahy" };
+        public static Artist Anna_Kulisz = new Artist { Name = "Anna Kulisz", URL = "https://fineartamerica.com/profiles/anna-kulisz" };
     }
 }

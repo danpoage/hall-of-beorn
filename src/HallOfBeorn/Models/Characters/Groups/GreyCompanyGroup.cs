@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Groups
 {
-    public class TheGreyCompanyGroup : CharacterGroup
+    public class GreyCompanyGroup : CharacterGroup
     {
-        public TheGreyCompanyGroup()
-            : base("The Grey Company", "The Grey Company")
+        public GreyCompanyGroup()
+            : base("Grey Company", "Grey Company")
         {
             Bio =
 @"<p>The Grey Company was a company of thirty Northern Dúnedain (clad in grey) commanded by Aragorn's kinsman Halbarad.</p>

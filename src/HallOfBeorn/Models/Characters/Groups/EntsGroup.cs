@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Groups
 {
-    public class TheEntsGroup : CharacterGroup
+    public class EntsGroup : CharacterGroup
     {
-        public TheEntsGroup()
-            : base("The Ents", "The Ents")
+        public EntsGroup()
+            : base("Ents", "Ents")
         {
             Bio =
 @"<p>The <b>Ents</b> were sentient, humanoid beings created at the request of Yavanna to protect the trees from other creatures, particularly Dwarves,[1] and thus were called 'Shepherds of the Trees'.</p>

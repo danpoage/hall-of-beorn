@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Things
 {
-    public class TheOneRingThing : CharacterThing
+    public class OneRingThing : CharacterThing
     {
-        public TheOneRingThing()
-            : base("The One Ring", "The One Ring", "Ring")
+        public OneRingThing()
+            : base("One Ring", "The One Ring", "Ring")
         {
             Bio =
 @"<blockquote>
@@ -67,12 +67,12 @@ One Ring to bring them all and in the darkness bind them.<br>
             BioSourceUrl = "http://tolkiengateway.net/wiki/The_One_Ring";
             ImageArtist = Artist.John_Howe;
 
-            Alias("Ruling Ring");
-            Alias("Master-ring");
+            Alias("Ruling Ring", "The-Ruling-Ring-ASitE");
+            Alias("Master-ring", "The-Master-Ring-ASitE");
             Alias("Great Ring");
-            Alias("the One");
+            Alias("The One", "The-One-Ring-ASitE");
             Alias("Ring of Rings");
-            Alias("Ring of Power");
+            Alias("Ring of Power", "The-Ring-of-Power-ASitE");
             Alias("Ring of Doom");
             Alias("Isildur's Bane");
             Alias("the Burden");

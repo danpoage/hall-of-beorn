@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.Characters.Places
     public class FangornPlace : CharacterPlace
     {
         public FangornPlace()
-            : base("Fangorn Forest", "Fangorn Forest")
+            : base("Fangorn", "Fangorn Forest")
         {
             Bio =
 @"<blockquote>&ldquo;All that lies north of Rohan is now to us so far away that fancy can wander freely there&rdquo;<br>&ndash;Boromir</blockquote>

@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Places
 {
-    public class TheEyriePlace : CharacterPlace
+    public class EyriePlace : CharacterPlace
     {
-        public TheEyriePlace()
-            : base("The Eyrie", "The Eyrie")
+        public EyriePlace()
+            : base("Eyrie", "The Eyrie")
         {
             Bio =
 @"<blockquote>&ldquo;The Lord of the Eagles bids you to bring your prisoners to the Great Shelf&rdquo;<br>&ndash;An Eagle</blockquote>

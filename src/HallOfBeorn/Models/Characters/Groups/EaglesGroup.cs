@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Groups
 {
-    public class TheEaglesGroup : CharacterGroup
+    public class EaglesGroup : CharacterGroup
     {
-        public TheEaglesGroup()
-            : base("The Eagles", "The Eagles")
+        public EaglesGroup()
+            : base("Eagles", "Eagles")
         {
             Bio =
 @"<p>The Eagles were birds that served as messengers of Manwë. Among those were the Great Eagles, immense birds who were sentient and capable of speech, and often helped Men, Elves and Wizards in the quests to defeat evil. They were &ldquo;devised&rdquo; by Manwë Súlimo, King of the Valar, and were often called the Eagles of Manwë.</p>

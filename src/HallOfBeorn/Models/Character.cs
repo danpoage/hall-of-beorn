@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 using HallOfBeorn;
 
@@ -35,6 +33,7 @@ namespace HallOfBeorn.Models
         }
 
         public CharacterType Type { get; protected set; }
+        public bool DisableAutoLinks { get; protected set; }
 
         protected readonly List<ILink> leaders = new List<ILink>();
         protected readonly List<ILink> members = new List<ILink>();

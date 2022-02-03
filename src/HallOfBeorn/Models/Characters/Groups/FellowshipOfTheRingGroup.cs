@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Groups
 {
-    public class TheFellowshipOfTheRingGroup : CharacterGroup
+    public class FellowshipOfTheRingGroup : CharacterGroup
     {
-        public TheFellowshipOfTheRingGroup()
-            : base("The Fellowship", "The Fellowship of the Ring")
+        public FellowshipOfTheRingGroup()
+            : base("Fellowship", "The Fellowship of the Ring")
         {
             Bio =
 @"<blockquote>

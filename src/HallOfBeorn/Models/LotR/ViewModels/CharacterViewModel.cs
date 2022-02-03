@@ -82,29 +82,29 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             cardLinks.Add(new Link(LinkType.Hall_of_Beorn_Digital_Image, card, title));
         }
 
-        private readonly Dictionary<string, string> allCharacters = new Dictionary<string, string>();
-        private readonly Dictionary<string, string> allGroups = new Dictionary<string, string>();
-        private readonly Dictionary<string, string> allPlaces = new Dictionary<string, string>();
-        private readonly Dictionary<string, string> allThings = new Dictionary<string, string>();
+        private readonly Dictionary<string, Character> allCharacters = new Dictionary<string, Character>();
+        private readonly Dictionary<string, Character> allGroups = new Dictionary<string, Character>();
+        private readonly Dictionary<string, Character> allPlaces = new Dictionary<string, Character>();
+        private readonly Dictionary<string, Character> allThings = new Dictionary<string, Character>();
 
         public bool IsListView { get { return allCharacters.Count > 0; } }
 
-        public IEnumerable<KeyValuePair<string, string>> AllCharacters()
+        public IEnumerable<KeyValuePair<string, Character>> AllCharacters()
         {
             return allCharacters;
         }
 
-        public IEnumerable<KeyValuePair<string, string>> AllGroups()
+        public IEnumerable<KeyValuePair<string, Character>> AllGroups()
         {
             return allGroups;
         }
 
-        public IEnumerable<KeyValuePair<string, string>> AllPlaces()
+        public IEnumerable<KeyValuePair<string, Character>> AllPlaces()
         {
             return allPlaces;
         }
 
-        public IEnumerable<KeyValuePair<string, string>> AllThings()
+        public IEnumerable<KeyValuePair<string, Character>> AllThings()
         {
             return allThings;
         }
@@ -116,16 +116,16 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
                 switch (character.Type) {
                     case CharacterType.Group:
-                        allGroups.Add(character.Name, url);
+                        allGroups.Add(url, character);
                         break;
                     case CharacterType.Place:
-                        allPlaces.Add(character.Name, url);
+                        allPlaces.Add(url, character);
                         break;
                     case CharacterType.Thing:
-                        allThings.Add(character.Name, url);
+                        allThings.Add(url, character);
                         break;
                     default:
-                        allCharacters.Add(character.Name, url);
+                        allCharacters.Add(url, character);
                         break;
                 }
             }

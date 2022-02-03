@@ -5,10 +5,10 @@ using System.Web;
 
 namespace HallOfBeorn.Models.Characters.Groups
 {
-    public class TheWhiteCouncilGroup : CharacterGroup
+    public class WhiteCouncilGroup : CharacterGroup
     {
-        public TheWhiteCouncilGroup()
-            : base("The White Council", "The Second White Council")
+        public WhiteCouncilGroup()
+            : base("White Council", "The Second White Council")
         {
             Bio =
 @"<p><b>The White Council</b>, also referred to as the <b>Council of the Wise</b>, was a group of the wise in Middle-earth which met irregularly. Its purpose was 'to unite and direct the forces of the West, in resistance to the shadow.'</p>
