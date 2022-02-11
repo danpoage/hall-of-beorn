@@ -64,8 +64,10 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Steeds 2.", "Pferde 2." },
                 { "Steeds 3.", "Pferde 3." },
                 { "Steeds 4.", "Pferde 4." },
-
                 { "Surge.", "Nachrüsten." },
+
+                { "Time 7.", "Zeit 7." },
+
                 { "Vast.", "Weitläufig." },
             };
         }
@@ -282,6 +284,37 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Veteran Eagle", "Adlerveteran" },
                 { "White Mountain Beastmaster", "Bestienmeister des Weissen Gebirges" },
                 { "Wild Steeds", "Freie Pferde" },
+
+                //The Gap of Rohan
+                { "A Dangerous Pursuit", "Eine gefährliche Verfolgung" },
+                { "A Stout Heart", "Sehr beherzt" },
+                { "Archet Alekeeper", "Schankwirt aus Archet" },
+                { "Barliman Butterbur", "Gerstenmann Butterblume" },
+                { "Biting Winds", "Beissende Winde" },
+                { "Bob", "Hinz" },
+                { "Bree Pony", "Pony aus Bree" },
+                { "Bree-land Protector", "Beschützerin des Breelandes" },
+                { "Dunlending Rearguard", "Nachhut der Dunländer" },
+                { "Exposed Ridge", "Ungeschützer Höhenzug" },
+                { "Frantic Dunlending", "Verzweifelter Dunländer" },
+                { "Frozen Lake", "Gefrorener See" },
+                { "Frozen Solid", "Festgefroren" },
+                { "Gálmód’s Escort", "Gálmóds Eskorte" },
+                { "Gift of Foresight", "Gabe der Voraussicht" },
+                { "Giving Chase", "Auf der Jagd" },
+                { "Half-pint", "Ein kleines Bier" },
+                { "Harry Goatleaf", "Heinrich Geissblatt" },
+                { "Nob", "Kunz" },
+                { "Pint", "Ein grosses Bier" },
+                { "Recapture the Traitor", "Fangt den Verräter" },
+                { "Scheming Staddler", "Gewiefte Sattlerin" },
+                { "Seasoned Forager", "Erfahrener Wildbeuter" },
+                { "Slippery Hill", "Rutschiger Hügel" },
+                { "Snow Squall", "Schneeschauer" },
+                { "Snowbank", "Schneewehe" },
+                { "Stumble in the Snow", "Stolpern im Schnee" },
+                { "Unnatural Cold", "Unnatürliche Kälte" },
+                { "White Wall", "Weisse Wand" },
             };
         }
 
@@ -310,12 +343,15 @@ namespace HallOfBeorn.Services.LotR.Translation
 
                 { "Healer.", "Heiler." },
                 { "Hideout.", "Versteck." },
+                { "Hill.", "Hügel." },
                 { "Hills.", "Hügel." },
 
                 { "Inferno.", "Feuersbrunst." },
                 { "Item.", "Artefakt." },
                 
+                { "Lake.", "See." },
                 { "Mount.", "Reittier." },
+                { "Mountain.", "Berg." },
                 { "Noble.", "Adlig." },
                 { "Orc.", "Ork." },
 
@@ -332,6 +368,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Shire.", "Auenland." },
                 { "Shirriff.", "Landbüttel." },
                 { "Skill.", "Fertigkeit." },
+                { "Snow.", "Schnee." },
                 { "Spy.", "Spion." },
                 { "Stair.", "Treppe." },
                 { "Suspicious.", "Verdächtig." },
