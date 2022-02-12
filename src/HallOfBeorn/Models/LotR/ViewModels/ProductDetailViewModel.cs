@@ -82,6 +82,15 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return product.LearnToPlayUrl; }
         }
 
+        public string PrintAndPlayUrl 
+        {
+            get { 
+                return !string.IsNullOrEmpty(product.PrintAndPlayFile)
+                    ? string.Format("https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Print-and-Play/{0}", product.PrintAndPlayFile)
+                    : string.Empty; 
+            }
+        }
+
         public string EasyModeUrl
         {
             get { return product.EasyModeUrl; }

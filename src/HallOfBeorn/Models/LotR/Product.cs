@@ -47,6 +47,7 @@ namespace HallOfBeorn.Models.LotR
         public string LearnToPlayUrl { get; protected set; }
         public string BuyLink { get; protected set; }
         public DateTime FirstReleased { get; protected set; }
+        public string PrintAndPlayFile { get; protected set; }
 
         public IEnumerable<CardSet> CardSets
         {

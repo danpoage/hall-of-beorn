@@ -11581,6 +11581,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             {
                 //Core Set
                 case "Core":
+                case "RevCore":
                     return 1;
                     
                 //Khazad-dum
@@ -11675,12 +11676,14 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                 return "98001";
             }
 
-            if (!cardsBySlug.ContainsKey(slug))
+            var normSlug = slug;
+
+            if (!cardsBySlug.ContainsKey(normSlug))
             {
                 return null;
             }
 
-            var card = cardsBySlug[slug];
+            var card = cardsBySlug[normSlug];
 
             if (card.CardSet == null)
             {
@@ -11688,7 +11691,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             }
 
             var setNumber = getRingsDbSet(card.CardSet);
-
+     
             if (setNumber >= 100)
             {
                 return string.Format("{0:000}{1:000}", setNumber, card.CardNumber);

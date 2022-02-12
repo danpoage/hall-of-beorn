@@ -48,10 +48,10 @@
         {
             <div style="margin: 4px 0px 6px 20px;width:300px;display:inline-block;vertical-align:top;">
                 <div style="margin:4px 4px 8px 4px; font-family:Georgia;font-size:14px;font-weight:bold;">Scenarios</div>
-                <div style="overflow:auto;max-height:100px;">
+                <div style="overflow:auto;max-height:120px;">
                     @foreach (var scenario in @Model.Detail.Scenarios())
                     {
-                        <a style="margin:4px;font-size:20px;display:block;" target="_blank" href="@scenario.Link" title="@scenario.Title Details">@scenario.Title</a>
+                        <a style="margin:4px;font-size:16px;display:block;" target="_blank" href="@scenario.Link" title="@scenario.Title Details">@scenario.Title</a>
                     }
                 </div>
                 @if (!string.IsNullOrWhiteSpace(@Model.Detail.RulesUrl))
@@ -59,15 +59,22 @@
                     <div style="margin:16px 4px 4px 4px; font-family:Georgia;font-size:14px;font-weight:bold;">Rules</div>
                     <div style="overflow:auto;max-height:100px">
                     
-                    <a style="margin:4px;font-size:20px;display:block;" target="_blank" href="@Model.Detail.RulesUrl" title="Rules Sheet">Rules Sheet</a>
+                    <a style="margin:4px;font-size:16px;display:block;" target="_blank" href="@Model.Detail.RulesUrl" title="Rules Sheet">Rules Sheet</a>
                         @if (!string.IsNullOrWhiteSpace(@Model.Detail.LearnToPlayUrl))
                         {
-                            <a style="margin:4px;font-size:20px;display:block;" target="_blank" href="@Model.Detail.LearnToPlayUrl" title="Learn to Play">Learn to Play</a>
+                            <a style="margin:4px;font-size:16px;display:block;" target="_blank" href="@Model.Detail.LearnToPlayUrl" title="Learn to Play">Learn to Play</a>
                         }
                         @if (!string.IsNullOrWhiteSpace(@Model.Detail.EasyModeUrl))
                         {
-                            <a style="margin:4px;font-size:20px;display:block;" target="_blank" href="@Model.Detail.EasyModeUrl" title="Easy Mode">Easy Mode</a>
+                            <a style="margin:4px;font-size:16px;display:block;" target="_blank" href="@Model.Detail.EasyModeUrl" title="Easy Mode">Easy Mode</a>
                         }
+                    </div>
+                }
+                @if (!string.IsNullOrWhiteSpace(@Model.Detail.PrintAndPlayUrl))
+                {
+                    <div>
+                        <div style="margin:16px 4px 4px 4px; font-family:Georgia;font-size:14px;font-weight:bold;">Files</div>
+                        <a style="margin:4px;font-size:16px;display:block;" target="_blank" href="@Model.Detail.PrintAndPlayUrl" title="Print and Play Images">Print and Play</a>
                     </div>
                 }
             </div>
