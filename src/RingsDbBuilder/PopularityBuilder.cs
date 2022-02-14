@@ -68,7 +68,7 @@ namespace RingsDbBuilder
             "22091", //Council of the Wise
             "22134", //Messenger of the King
             "22147", //Bond of Friendship
-            "98001", //A Perilous Voyage
+            "40047", //A Perilous Voyage
             "300085", //The Last Alliance,
             "500042", //Into the West
         };

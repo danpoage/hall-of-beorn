@@ -128,12 +128,18 @@ namespace HallOfBeorn.Handlers.LotR
                 case CardType.Ally:
                 case CardType.Attachment:
                 case CardType.Event:
+                case CardType.Treasure:
                 case CardType.Player_Side_Quest:
                 case CardType.Contract:
                     return true;
                 default:
                     return false;
             }
+        }
+
+        private bool hasRingsDbLink(LotRCard card)
+        {
+            return isPlayerCard(card) || card.CardSubtype == CardSubtype.Boon || card.CardSubtype == CardSubtype.Burden;
         }
 
         private Tuple<LotRCard, string> GetCardAndRedirect(string id)
@@ -206,14 +212,17 @@ namespace HallOfBeorn.Handlers.LotR
             model.LoadTags(_tagService.GetTags(card.Slug));
             model.LoadContentLinks(_linkService.GetLinks(card.Slug));
 
-            if (isPlayerCard(card))
+            if (hasRingsDbLink(card))
             {
                 var cardId = _ringsDbService.GetCardId(model.Slug);
                 if (!string.IsNullOrEmpty(cardId))
                 {
                     model.RingsDbUrl = string.Format("http://ringsdb.com/card/{0}", cardId);
                 }
+            }
 
+            if (isPlayerCard(card))
+            {
                 var popularity = _ringsDbService.GetPopularity(model.Slug);
                 if (popularity > 0)
                 {

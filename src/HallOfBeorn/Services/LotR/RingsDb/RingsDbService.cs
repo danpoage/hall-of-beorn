@@ -10477,7 +10477,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             addContractPopularity("22134", 8097);
             addContractPopularity("22147", 7195);
             addContractPopularity("21074", 6025);
-            addContractPopularity("98001", 4558);
+            addContractPopularity("40047", 4558);
             addContractPopularity("300085", 1988);
             addContractPopularity("22024", 1959);
             addContractPopularity("22091", 1873);
@@ -11622,7 +11622,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
 
                 //The Hunt for the Dreadnaught
                 case "THftD":
-                    return 23;
+                    return 40;
 
                 //The Hobbit
                 case "THOHaUH":
@@ -11643,7 +11643,10 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                     return 145;
                 case "TMoF":
                     return 146;
-
+                case "TOF":
+                    return 147;
+                case "FotBD":
+                    return 148;
 
                 //Community
                 case "CoE":
@@ -11670,12 +11673,6 @@ namespace HallOfBeorn.Services.LotR.RingsDb
 
         public string GetCardId(string slug)
         {
-            //RingsDB has a strange mapping for A Perilous Voyage
-            if (slug == "A-Perilous-Voyage-THftD")
-            {
-                return "98001";
-            }
-
             var normSlug = slug;
 
             if (!cardsBySlug.ContainsKey(normSlug))
