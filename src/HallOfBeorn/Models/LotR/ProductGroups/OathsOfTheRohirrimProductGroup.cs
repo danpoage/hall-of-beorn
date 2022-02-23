@@ -11,6 +11,7 @@
             AddChildProduct(Product.TheAldburgPlot);
             AddChildProduct(Product.FireOnTheEastemnet);
             AddChildProduct(Product.TheGapOfRohan);
+            AddChildProduct(Product.TheGlitteringCaves);
         }
     }
 }

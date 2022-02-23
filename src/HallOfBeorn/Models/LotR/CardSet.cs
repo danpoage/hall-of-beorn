@@ -560,6 +560,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheAldburgPlot);
             Add(FireOnTheEastemnet);
             Add(TheGapOfRohan);
+            Add(TheGlitteringCaves);
 
             Add(TheScouringOfTheShire);
         }
@@ -778,6 +779,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheAldburgPlot = new Sets.OathsOfTheRohirrim.TheAldburgPlotSet();
         public static CardSet FireOnTheEastemnet = new Sets.OathsOfTheRohirrim.FireOnTheEastemnetSet();
         public static CardSet TheGapOfRohan = new Sets.OathsOfTheRohirrim.TheGapOfRohanSet();
+        public static CardSet TheGlitteringCaves = new Sets.OathsOfTheRohirrim.TheGlitteringCavesSet();
 
         public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireCardSet();
 
