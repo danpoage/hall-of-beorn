@@ -175,7 +175,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                return IsQuest() || Card.HasHorizontalArt ? "180px" : "127px";
+                return IsQuest() || Card.HasHorizontalArt || Card.CardType == LotR.CardType.Cave ? "180px" : "127px";
             }
         }
 
@@ -183,7 +183,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                return IsQuest() || Card.HasHorizontalArt ? "127px" : "180px";
+                return IsQuest() || Card.HasHorizontalArt || Card.CardType == LotR.CardType.Cave ? "127px" : "180px";
             }
         }
 
@@ -567,7 +567,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 CardType.Objective_Ally,
                 CardType.Objective_Hero,
                 CardType.Objective_Location,
-                CardType.Encounter_Side_Quest
+                CardType.Encounter_Side_Quest,
+                CardType.Cave
             };
 
             return encounterCardTypes.Contains(_card.CardType);
@@ -580,8 +581,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string BackgroundImage()
         {
-
-
             switch (_card.Sphere) 
             {
                 case Models.LotR.Sphere.Leadership:
@@ -952,7 +951,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         private readonly static HashSet<string> englishSetsPng = new HashSet<string>
         {
-            "Children of Eorl", "The Scouring of the Shire", "Fire on the Eastemnet", "The Gap of Rohan"
+            "Children of Eorl", "The Scouring of the Shire", "Fire on the Eastemnet", "The Gap of Rohan", "The Glittering Caves"
         };
 
         private static string getEnglishImageExtension(LotRCard card)

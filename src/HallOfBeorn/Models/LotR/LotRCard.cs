@@ -296,6 +296,7 @@ namespace HallOfBeorn.Models.LotR
                     case LotR.CardType.Encounter_Side_Quest:
                     case LotR.CardType.Ship_Objective:
                     case LotR.CardType.Ship_Enemy:
+                    case LotR.CardType.Cave:
                         return DeckType.Encounter;
                     case LotR.CardType.Quest:
                     case LotR.CardType.Campaign:
@@ -635,6 +636,17 @@ namespace HallOfBeorn.Models.LotR
                 Attack = attack,
                 Defense = defense,
                 HitPoints = hitPoints
+            };
+        }
+
+        public static LotRCard Cave(string title, string encounterSet)
+        {
+            return new LotRCard
+            {
+                CardType = CardType.Cave,
+                Title = title,
+                Id = string.Empty,
+                EncounterSet = encounterSet
             };
         }
 

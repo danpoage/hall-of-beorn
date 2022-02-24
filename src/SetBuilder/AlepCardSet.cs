@@ -207,6 +207,9 @@ namespace SetBuilder
                 case "Objective Location":
                     card = addObjectiveLocation(aCard.name, aCard.encounter_set, aCard.quest_points.ToStat(), aCard.is_unique, aCard.victory_points.ToStat());
                     break;
+                case "Cave":
+                    card = addCave(aCard.name, aCard.encounter_set);
+                    break;
             }
 
             if (aCard.subtype_name == "Boon") {

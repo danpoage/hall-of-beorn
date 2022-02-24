@@ -844,6 +844,18 @@ namespace HallOfBeorn.Models
             all.Add(Artist.John_Anthony_Di_Giovanni);
             all.Add(Artist.Piotr_Foksowicz);
 
+            //The Glittering Caves
+            all.Add(Artist.Melanie_Stanford);
+            all.Add(Artist.Steven_Shan);
+            all.Add(Artist.Kieran_Yanner);
+            all.Add(Artist.Julian_Bauer);
+            all.Add(Artist.Bogna_Gawronska);
+            all.Add(Artist.Maciej_Laszkiewicz);
+            all.Add(Artist.Dinesh_Kumar);
+            all.Add(Artist.WB_Games);
+            all.Add(Artist.Calvin_Streeting);
+            all.Add(Artist.R_Adrian_Z);
+
             all.Add(Artist.None);
         }
 
@@ -976,6 +988,18 @@ namespace HallOfBeorn.Models
         public static Artist Reza_Afshar = new Artist { Name = "Reza Afshar", URL = "https://www.artstation.com/rezaafshar" };
         public static Artist John_Anthony_Di_Giovanni = new Artist { Name = "John Anthony Di Giovanni", URL = "https://www.artstation.com/jad" };
         public static Artist Piotr_Foksowicz = new Artist { Name = "Piotr Foksowicz", URL = "https://www.artstation.com/piofoks" };
+
+        //The Glittering Caves
+        public static Artist Melanie_Stanford = new Artist { Name = "Melanie Stanford", URL = "https://www.google.com/search?q=Melanie+Stanford+artist" };
+        public static Artist Steven_Shan = new Artist { Name = "Steven Shan", URL = "https://www.artstation.com/cha4os" };
+        public static Artist Kieran_Yanner = new Artist { Name = "Kieran Yanner", URL = "https://www.artstation.com/kieranyanner" };
+        public static Artist Julian_Bauer = new Artist { Name = "Julian Bauer", URL = "https://www.artstation.com/julianb" };
+        public static Artist Bogna_Gawronska = new Artist { Name = "Bogna Gawrońska", URL = "https://www.artstation.com/denikina" };
+        public static Artist Maciej_Laszkiewicz = new Artist { Name = "Maciej Łaszkiewicz", URL = "https://www.artstation.com/scarned" };
+        public static Artist Dinesh_Kumar = new Artist { Name = "Dinesh Kumar", URL = "https://www.artstation.com/dinesh-kumar95" };
+        public static Artist WB_Games = new Artist { Name = "WB Games", URL = "https://www.google.com/search?q=WB+Games+art" };
+        public static Artist Calvin_Streeting = new Artist { Name = "Calvin Streeting", URL = "https://www.patreon.com/calvinstreeting" };
+        public static Artist R_Adrian_Z = new Artist { Name = "R Adrian Z", URL = "https://www.artwanted.com/solidgrafi/gallery/" };
 
         //The Scouring of the Shire
         public static Artist Studio_Ghibli = new Artist { Name = "Studio Ghibli", URL = "https://www.ghibli-museum.jp" };

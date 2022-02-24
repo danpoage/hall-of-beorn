@@ -41,6 +41,7 @@ namespace SetBuilder
         private const string addObjectiveAllyFormat      = "            addObjectiveAlly(\"{0}\", {1}, {2}, {3}, {4}, {5})";
         private const string addObjectiveLocationFormat  = "            addObjectiveLocation(\"{0}\", {1}, {2}, {3}, {4})";
         private const string addObjectiveHeroFormat      = "            addObjectiveHero(\"{0}\", {1}, {2}, {3}, {4}, {5})";
+        private const string addCaveFormat               = "            addCave(\"{0}\", {1})";
         private const string withTraitsFormat                = "                .WithTraits({0})";
         private const string withKeywordsFormat              = "                .WithKeywords({0})";
         private const string withTextLineFormat              = "                .WithTextLine(\"{0}\")";
@@ -847,6 +848,20 @@ namespace SetBuilder
             return s.ToString();
         }
 
+        private static string addCave(LotRCard cave)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addCaveFormat,
+                cave.Title,
+                encounterSet(cave.EncounterSet)
+                );
+            s.AppendLine();
+
+            s.Append(cardTextBox(cave));
+
+            return s.ToString();
+        }
+
         private static void writeCardSet(CardSet cardSet)
         {
             Console.WriteLine(header(cardSet));
@@ -879,6 +894,7 @@ namespace SetBuilder
             { CardType.Enemy, enemy => addEnemy(enemy) },
             { CardType.Ship_Enemy, shipEnemy => addShipEnemy(shipEnemy) },
             { CardType.Ship_Objective, shipObjective => addShipObjective(shipObjective) },
+            { CardType.Cave, cave => addCave(cave) },
             { CardType.Location, location => addLocation(location) },
             { CardType.Treachery, treachery => addTreachery(treachery) },
             { CardType.Encounter_Side_Quest, sideQuest => addEncounterSideQuest(sideQuest) },

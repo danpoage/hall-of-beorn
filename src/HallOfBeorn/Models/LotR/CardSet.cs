@@ -249,6 +249,18 @@ namespace HallOfBeorn.Models.LotR
             return addShipObjective(title, encounterSet.Name, isUnique, willpower, attack, defense, hitPoints);
         }
 
+        protected LotRCard addCave(string title, string encounterSet)
+        {
+            var cave = LotRCard.Cave(title, encounterSet);
+            addCard(cave);
+            return cave;
+        }
+
+        protected LotRCard addCave(string title, EncounterSet encounterSet)
+        {
+            return addCave(title, encounterSet.Name);
+        }
+
         protected LotRCard addCampaign(string title, string encounterSet, string oppositeTitle)
         {
             var campaign = LotRCard.Campaign(title, encounterSet, oppositeTitle);

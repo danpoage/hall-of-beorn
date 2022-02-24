@@ -22,8 +22,9 @@
         Enemy = 112,
         Ship_Enemy = 113,
         Location = 116,
-        Treachery = 118,
-        Encounter_Side_Quest = 119,
+        Treachery = 117,
+        Encounter_Side_Quest = 118,
+        Cave = 119,
         Objective = 121,
         Objective_Hero = 122,
         Objective_Ally = 123,
@@ -66,6 +67,7 @@
                 case CardType.Ship_Enemy:
                 case CardType.Ship_Objective:
                 case CardType.Treasure:
+                case CardType.Cave:
                     return true;
                 default:
                     return false;

@@ -602,6 +602,9 @@ namespace HallOfBeorn.Models.LotR
             Add(TheAldburgPlot);
             Add(FireOnTheEastemnet);
             Add(TheGapOfRohan);
+            Add(TheGlitteringCaves);
+            Add(SearchForTheHorn);
+            Add(ExploringTheCaves);
 
             //The Scouring of the Shire
             Add(TheScouringOfTheShire);
@@ -1014,6 +1017,9 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheAldburgPlot = new EncounterSet { Name = "The Aldburg Plot", Set = "The Aldburg Plot" };
         public static EncounterSet FireOnTheEastemnet = new EncounterSet { Name = "Fire on the Eastemnet", Set = "Fire on the Eastemnet" };
         public static EncounterSet TheGapOfRohan = new EncounterSet { Name = "The Gap of Rohan", Set = "The Gap of Rohan" };
+        public static EncounterSet TheGlitteringCaves = new EncounterSet { Name = "The Glittering Caves", Set = "The Glittering Caves" };
+        public static EncounterSet SearchForTheHorn = new EncounterSet { Name = "Search for the Horn", Set = "The Glittering Caves" };
+        public static EncounterSet ExploringTheCaves = new EncounterSet { Name = "Exploring the Caves", Set = "The Glittering Caves" };
 
         public static EncounterSet TheScouringOfTheShire = new EncounterSet { Name = "The Scouring of the Shire", Set = "The Scouring of the Shire" };
     }

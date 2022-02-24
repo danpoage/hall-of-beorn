@@ -538,6 +538,7 @@
     <Compile Include="Models\LotR\Scenarios\OathsOfTheRohirrim\FireOnTheEastemnetScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\OathsOfTheRohirrim\TheAldburgPlotScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\OathsOfTheRohirrim\TheGapOfRohanScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\OathsOfTheRohirrim\TheGlitteringCavesScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\PrintOnDemand\AttackOnDolGuldurScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\PrintOnDemand\TheHuntForTheDreadnaughtScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Starter\StarterScenario.cs" />

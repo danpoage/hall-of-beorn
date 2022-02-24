@@ -9,6 +9,8 @@ namespace HallOfBeorn.Models.LotR.Products.Community
         {
             AddCardSet(CardSet.TheGapOfRohan);
             AddScenario(Scenario.TheGapOfRohan);
+
+            RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP04.pdf";
         }
     }
 }
