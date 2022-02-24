@@ -102,5 +102,6 @@ var autocompleteSourceAlep = [
     'Widfast', 'Lily Cotton', 'A Lesson in Caution', 'There and Back Again', 'Buckland Shirriff', 'Weep No More!', 'Fear! Fire! Foes!', 'Horn-call of Buckland', 'Young Tom', 'Gavin',
     'Alagos', 'Faunith', 'Messenger of Manwe', 'Veteran Eagle', 'Chieftain of the Skies', 'Box of Earth', 'Roving Herbmaster', 'Grip', 'Fang', 'Wolf', 'Hidden Roosts', 'Breath of Arda', 'Golden Crown', 'Guided by Fate',
     'Nob', 'Harry Goatleaf', 'Bob', 'Bree Pony', 'Half-pint', 'Seasoned Forager', 'Pint', 'Scheming Staddler', 'Bree-land Protector', 'A Stout Heart', 'Gift of Foresight', 'Archet Alekeeper',
+    'Gaeronel', 'Harlond Lookout', 'Helm Hammerhand', 'Lay of Nauglamir', 'Legacy of Gondolin', 'Onward Into Battle', 'Relic of Nargothrond', 'Salvaged Supplies', 'Wandering Spirit',
     'Into the West'
 ];

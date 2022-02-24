@@ -1417,7 +1417,7 @@
     <Content Include="Images\willpower-small.png" />
     <Content Include="Scripts\arkhamAutocomplete1.js" />
     <Content Include="Scripts\arkhamCardSearch.js" />
-    <Content Include="Scripts\autocomplete-1.0.6.js" />
+    <Content Include="Scripts\autocomplete-1.0.7.js" />
     <Content Include="Scripts\cardDetails-1.0.1.js" />
     <Content Include="Scripts\cardSearch-1.0.3.js" />
     <Content Include="Scripts\cookie-1.0.1.js" />
@@ -1441,7 +1441,7 @@
     <Content Include="Scripts\Marvel\marvelAutocomplete1.js" />
     <Content Include="Scripts\Marvel\marvelCardSearch1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\scenarios-1.0.15.js" />
+    <Content Include="Scripts\scenarios-1.0.16.js" />
     <Content Include="Scripts\settings-1.0.9.js" />
     <Content Include="Scripts\storage.js" />
     <Content Include="Web.config">

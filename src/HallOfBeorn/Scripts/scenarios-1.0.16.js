@@ -478,6 +478,8 @@ function initQuestMap() {
         'With fire and whip, the orc-host has regrouped to rob Rohan of its prized steeds.');
     addQuest(687, 646, 'The Gap of Rohan', 'CoE', 'The-Gap-of-Rohan', 'The-Gap-of-Rohan/Giving-Chase-1A.png',
         'You have pursued the traitor Gálmód to the Gap of Rohan. However, unseasonable snows have made your passage difficult.');
+    addQuest(668, 696, 'The Glittering Caves', 'CoE', 'The-Glittering-Caves', 'The-Glittering-Caves/Search-the-Caves-1A.png',
+        'Fleeing the violent blizzard, you are pursued by the wraith of Helm Hammerhand. He follows inexorably, seeking to claim the bones of your Dunlending captives. You must navigate the caverns below Helm’s Deep to find Helm’s great warhorn. Sounding it may be your only hope of restoring the wraith’s mind.');
 
     var mapElement = document.getElementById('quest-map');
     if (mapElement) {
@@ -485,7 +487,7 @@ function initQuestMap() {
         mapElement.addEventListener('mousemove', function (e) {
             var x = getMapX(e);
             var y = getMapY(e);
-            console.log('move x: ' + x + ' y: ' + y);
+            //console.log('move x: ' + x + ' y: ' + y);
             //console.log('page x: ' + e.pageX + ' page y: ' + e.pageY);
             var quest = getSelectedQuest(e);
             if (quest && quest.length == 1) {
@@ -522,11 +524,11 @@ function initQuestMap() {
         mapElement.addEventListener('click', function (e) {
             var x = getMapX(e);
             var y = getMapY(e);
-            console.log('click: ' + x + ', ' + y);
+            //console.log('click: ' + x + ', ' + y);
             var quest = getSelectedQuest(e);
             if (quest && quest.length == 1) {
                 var link = '/LotR/Scenarios/' + questMap[quest];
-                //console.log('url: ' + link);
+                console.log('url: ' + link);
                 window.open(link);
             }
         });

@@ -957,6 +957,12 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        public LotRCard WithCaveDirection(string direction)
+        {
+            Direction = direction;
+            return this;
+        }
+
         public LotRCard WithHorizontalArt()
         {
             HasHorizontalArt = true;
