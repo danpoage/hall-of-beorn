@@ -444,18 +444,11 @@ The players have won the game.",
                 CardNumber = 6,
                 Artist = Artist.Carmen_Cianelti
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Foe-hammer",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9033",
-                CardType = CardType.Event,
-                Sphere = Sphere.Tactics,
-                Quantity = 3,
-                ResourceCost = 0,
-                Text = "Response: After a hero you control attacks and destroys an enemy, exhaust a Weapon card attached to that hero to draw 3 cards.",
-                CardNumber = 15,
-                Artist = Artist.Magali_Villeneuve
-            });
+            addEvent("Foe-hammer", 0, Sphere.Tactics)
+                .WithTextLine("Response: After a hero you control attacks and destroys an enemy, exhaust a Weapon card attached to that hero to draw 3 cards.")
+                .WithFlavorLine("It burned with a rage that made it gleam if goblins were about; now it was bright as blue flame for delight in the killing of the great lord of the cave.")
+                .WithFlavorLine("-The Hobbit")
+                .WithInfo(15, 3, Artist.Magali_Villeneuve);
             Cards.Add(new LotRCard() {
                 
                 Title = "Front Porch",
