@@ -787,5 +787,52 @@ namespace HallOfBeorn
             return self.Replace("<b>", "")
                 .Replace("</b>", "");
         }
+
+        public static string Simplify(this string self)
+        {
+            var stopWords = new HashSet<string> {
+                "a", "and", "at", "for", "of", "or", "the", "to", "yet", "with"
+            };
+
+            Func<string, string> removePunctuartion = (s) =>
+            {
+                return s
+                    .Replace("-", string.Empty)
+                    .Replace(",", string.Empty)
+                    .Replace(".", string.Empty)
+                    .Replace(":", string.Empty)
+                    .Replace(";", string.Empty)
+                    .Replace("'", string.Empty)
+                    .Replace("’", string.Empty)
+                    .Replace("\"", string.Empty);
+            };
+
+            if (string.IsNullOrEmpty(self))
+            {
+                return string.Empty;
+            }
+
+            var sb = new StringBuilder(string.Empty);
+            foreach (var token in self.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
+            {
+                var norm = removePunctuartion(token).NormalizeCaseSensitiveString().ToLower();
+                if (!stopWords.Contains(norm))
+                {
+                    sb.Append(norm);
+                }
+            }
+
+            return sb.ToString();
+        }
+
+        public static bool FuzzyMatches(this string self, string value)
+        {
+            if (string.IsNullOrEmpty(self) || string.IsNullOrEmpty(value))
+            {
+                return false;
+            }
+
+            return self.Simplify() == value.Simplify();
+        }
     }
 }
