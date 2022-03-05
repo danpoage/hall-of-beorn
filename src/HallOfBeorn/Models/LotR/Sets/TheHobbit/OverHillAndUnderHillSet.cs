@@ -135,18 +135,9 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 CardNumber = 46,
                 Artist = Artist.Ignacio_Bazan_Lazcano
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "A Very Good Tale",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9011",
-                CardType = CardType.Event,
-                Sphere = Sphere.Leadership,
-                Quantity = 3,
-                ResourceCost = 0,
-                Text = "Action: Exhaust 2 allies you control to shuffle your deck and discard the top 5 cards. Put up to 2 allies discarded by this effect into play under your control. The total cost of the allies put into play cannot exceed the total cost of the allies exhausted to pay for this effect.",
-                CardNumber = 14,
-                Artist = Artist.Magali_Villeneuve
-            });
+            addEvent("A Very Good Tale", 0, Sphere.Leadership)
+                .WithTextLine("Action: Exhaust 2 allies you control to shuffle your deck and discard the top 5 cards. Put up to 2 allies discarded by this effect into play under your control. The total cost of the allies put into play cannot exceed the total cost of the allies exhausted to pay for this effect.")
+                .WithInfo(14, 3, Artist.Magali_Villeneuve);
             Cards.Add(new LotRCard() {
                 
                 Title = "A Worn Sack",
@@ -331,19 +322,11 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 CardNumber = 80,
                 Artist = Artist.Marco_Caradonna
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Cram",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9024",
-                CardType = CardType.Attachment,
-                Sphere = Sphere.Leadership,
-                Traits = new List<string>() { "Item." },
-                Quantity = 3,
-                ResourceCost = 0,
-                Text = "Attach to a hero.\r\nAction: Discard Cram to ready attached hero.",
-                CardNumber = 11,
-                Artist = Artist.Adam_Lane
-            });
+            addAttachment("Cram", 0, Sphere.Leadership, false)
+                .WithTraits("Item.")
+                .WithTextLine("Attach to a hero.")
+                .WithTextLine("Action: Discard Cram to ready attached hero.")
+                .WithInfo(11, 3, Artist.Adam_Lane);
             Cards.Add(new LotRCard() {
                 
                 Title = "Dawn Take You All",
@@ -363,25 +346,12 @@ The players have won the game.",
                 Artist = Artist.Titus_Lunter,
                 IncludedEncounterSets = new List<EncounterSet> { EncounterSet.WesternLands }
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Dori",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9027",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Lore,
-                Traits = new List<string>() { "Dwarf." },
-                Quantity = 3,
-                ResourceCost = 3,
-                IsUnique = true,
-                Attack = 2,
-                Defense = 1,
-                Willpower = 1,
-                HitPoints = 3,
-                Text = "Response: After a hero is assigned any amount of damage, exhaust Dori to place that damage on Dori instead.",
-                FlavorText = "'I can't always be carrying burglars on my back,' said Dori, 'down tunnels and up trees! What do you think I am? A porter?' -Dori, The Hobbit",
-                CardNumber = 9,
-                Artist = Artist.Jake_Murray
-            });
+            addAlly("Dori", 3, Sphere.Lore, true, 1, 2, 1, 3)
+                .WithTraits("Dwarf.")
+                .WithTextLine("Response: After a hero is assigned any amount of damage, exhaust Dori to place that damage on Dori instead.")
+                .WithFlavorLine("'I can't always be carrying burglars on my back,' said Dori, 'down tunnels and up trees! What do you think I am? A porter?'")
+                .WithFlavorLine("-Dori, The Hobbit")
+                .WithInfo(9, 3, Artist.Jake_Murray);
             Cards.Add(new LotRCard() {
                 
                 Title = "Down, Down to Goblin Town",
@@ -426,24 +396,10 @@ The players have won the game.",
                 CardNumber = 18,
                 Artist = Artist.Ilich_Henriquez
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Fili",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9032",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Leadership,
-                Traits = new List<string>() { "Dwarf." },
-                Quantity = 3,
-                ResourceCost = 3,
-                IsUnique = true,
-                Attack = 1,
-                Defense = 1,
-                Willpower = 1,
-                HitPoints = 2,
-                Text = "Response: After you play Fili from your hand during the planning phase, search your deck for Kili and put him into play under your control. Then, shuffle your deck.",
-                CardNumber = 6,
-                Artist = Artist.Carmen_Cianelti
-            });
+            addAlly("Fili", 3, Sphere.Leadership, true, 1, 1, 1, 2)
+                .WithTraits("Dwarf.")
+                .WithTextLine("Response: After you play Fili from your hand during the planning phase, search your deck for Kili and put him into play under your control. Then, shuffle your deck.")
+                .WithInfo(6, 3, Artist.Carmen_Cianelti);
             addEvent("Foe-hammer", 0, Sphere.Tactics)
                 .WithTextLine("Response: After a hero you control attacks and destroys an enemy, exhaust a Weapon card attached to that hero to draw 3 cards.")
                 .WithFlavorLine("It burned with a rage that made it gleam if goblins were about; now it was bright as blue flame for delight in the killing of the great lord of the cave.")
@@ -757,24 +713,10 @@ The players have won the game.",
                 CardNumber = 81,
                 Artist = Artist.Jason_Ward
             });
-            Cards.Add(new LotRCard() {
-                
-                Title = "Kili",
-                Id = "51223bd0-ffd1-11df-a976-1801204c9055",
-                CardType = CardType.Ally,
-                Sphere = Sphere.Spirit,
-                Traits = new List<string>() { "Dwarf." },
-                Quantity = 3,
-                ResourceCost = 3,
-                IsUnique = true,
-                Attack = 1,
-                Defense = 1,
-                Willpower = 1,
-                HitPoints = 2,
-                Text = "Response: After you play Kili from your hand during the planning phase, search your deck for Fili and put him into play under your control. Then, shuffle your deck.",
-                CardNumber = 7,
-                Artist = Artist.Carmen_Cianelti
-            });
+            addAlly("Kili", 3, Sphere.Spirit, true, 1, 1, 1, 2)
+                .WithTraits("Dwarf.")
+                .WithTextLine("Response: After you play Kili from your hand during the planning phase, search your deck for Fili and put him into play under your control. Then, shuffle your deck.")
+                .WithInfo(7, 3, Artist.Carmen_Cianelti);
             Cards.Add(new LotRCard() {
                 
                 Title = "Lake in the Cavern",

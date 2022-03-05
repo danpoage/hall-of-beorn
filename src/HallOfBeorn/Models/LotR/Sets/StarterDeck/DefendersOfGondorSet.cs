@@ -88,20 +88,20 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTemplate("<p class='main-text'><b>Action:</b> Exhaust {self} to choose a player. Each character controlled by that player gets +1 {Willpower} until the end of the phase.</p><p class='flavor-text'>&quot;He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.&quot;<br>&ndash;Mablung, Ranger of Ithilien,<br>The Two Towers</p>")
                 .WithCommunityVersion("Faramir-Core-Set-Completion")
                 .WithCommunityVersion("Autumn/Faramir-Leadership-Ally")
-                .WithInfo(11, 3, Artist.Jeff_Himmelman);
+                .WithInfo(11, 2, Artist.Jeff_Himmelman);
             addAlly("Gandalf", 5, Sphere.Neutral, true, 4, 4, 4, 4)
                 .WithTraits("Istari.")
                 .WithTextLine("At the end of the round, discard Gandalf from play.")
                 .WithTextLine("Response: After Gandalf enters play, (choose 1): draw 3 cards, deal 4 damage to 1 enemy in play, or reduce your threat by 5.")
                 .WithCommunityVersion("Gandalf-Core-Set-Completion")
-                .WithInfo(12, 3, Artist.Lucas_Graciano);
+                .WithInfo(12, 2, Artist.Lucas_Graciano);
             addAlly("Gondorian Spearman", 2, Sphere.Tactics, false, 0, 1, 1, 1)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Response: After Gondorian Spearman is declared as a defender, deal 1 damage to the attacking enemy.")
                 .WithFlavor("More than a thousand were there mustered. Their spears were like a springing wood. -The Two Towers")
-                .WithInfo(13, 3, Artist.Winona_Nelson);
+                .WithInfo(13, 2, Artist.Winona_Nelson);
             addAlly("Pelargir Ship Captain", 2, Sphere.Leadership, false, 1, 1, 0, 2)
                 .WithTraits("Gondor.")
                 .WithTextLine("Response: After Pelargir Ship Captain enters play, move 1 resource from the resource pool of a hero you control to another hero's resource pool.")
@@ -166,7 +166,7 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("Action: Exhaust Steward of Gondor to add 2 resources to attached hero's resource pool.")
                 .WithFlavor("\"It was commanded yesterday.\" -Denethor, The Return of the King")
                 .WithTemplate("<p class='main-text'>Attach to a hero.</p><p>Attached hero gains the {trait:Gondor.@Gondor} trait.</p><p><b>Action:</b> Exhaust {self} to add 2 resources to attached hero's resource pool.</p><p class='flavor-text'>&quot;It was commanded yesterday.&quot;<br>&ndash;Denethor, The Return of the King</p>")
-                .WithInfo(24, 3, Artist.Empty_Room_Studios);
+                .WithInfo(24, 2, Artist.Empty_Room_Studios);
             addAttachment("Valiant Sword", 1, Sphere.Leadership, false)
                 .WithTraits("Item.", "Weapon.")
                 .WithKeywords("Restricted.")
@@ -194,7 +194,7 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("Combat Action: Choose an enemy engaged with a player. That enemy cannot attack that player this phase.")
                 .WithFlavor("A few brave men were strung before them to make a feint of resistance, and many there fell before the rest drew back and fled to either side. -The Hobbit")
                 .WithCommunityVersion("Feint-Core-Set-Completion")
-                .WithInfo(29, 3, Artist.Lius_Lasahido);
+                .WithInfo(29, 2, Artist.Lius_Lasahido);
             addEvent("Foe-hammer", 0, Sphere.Tactics)
                 .WithTextLine("Response: After a hero you control attacks and destroys an enemy, exhaust a Weapon card attached to that hero to draw 3 cards.")
                 .WithFlavorLine("It burned with a rage that made it gleam if goblins were about; now it was bright as blue flame for delight in the killing of the great lord of the cave.")
@@ -217,7 +217,7 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
             addEvent("Valiant Sacrifice", 1, Sphere.Leadership)
                 .WithTextLine("Response: After an ally card leaves play, that card's controller draws 2 cards.")
                 .WithFlavor("\"He fell defending the Hobbits, while I was away upon the hill.\"\r\n-Aragorn, The Two Towers")
-                .WithInfo(34, 3, Artist.David_A_Nash);
+                .WithInfo(34, 2, Artist.David_A_Nash);
         }
     }
 }

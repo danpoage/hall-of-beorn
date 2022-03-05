@@ -432,7 +432,9 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             addAlly("Henamarth Riversong", 1, Sphere.Lore, true, 1, 1, 0, 1)
                 .WithTraits("Silvan.")
                 .WithTextLine("Action: Exhaust Henamarth Riversong to look at the top card of the encounter deck.")
-                .WithFlavor("\"And I reckon there's Elves and Elves. They're all elvish enough, but they're not all the same.\"\r\n-Sam Gamgee,\r\nThe Fellowship of the Ring")
+                .WithFlavorLine("\"And I reckon there's Elves and Elves. They're all elvish enough, but they're not all the same.\"")
+                .WithFlavorLine("-Sam Gamgee,")
+                .WithFlavorLine("The Fellowship of the Ring")
                 .WithInfo(60, 1, Artist.Jen_Zee);
             addAlly("Miner of the Iron Hills", 2, Sphere.Lore, false, 0, 1, 1, 2)
                 .WithTraits("Dwarf.")

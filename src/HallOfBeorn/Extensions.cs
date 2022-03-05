@@ -788,34 +788,39 @@ namespace HallOfBeorn
                 .Replace("</b>", "");
         }
 
-        public static string Simplify(this string self)
+        public static string RemovePunctuation(this string self)
         {
-            var stopWords = new HashSet<string> {
-                "a", "and", "at", "for", "of", "or", "the", "to", "yet", "with"
-            };
-
-            Func<string, string> removePunctuartion = (s) =>
-            {
-                return s
-                    .Replace("-", string.Empty)
-                    .Replace(",", string.Empty)
-                    .Replace(".", string.Empty)
-                    .Replace(":", string.Empty)
-                    .Replace(";", string.Empty)
-                    .Replace("'", string.Empty)
-                    .Replace("’", string.Empty)
-                    .Replace("\"", string.Empty);
-            };
-
             if (string.IsNullOrEmpty(self))
             {
                 return string.Empty;
             }
 
+            return self
+                .Replace("-", string.Empty)
+                .Replace(",", string.Empty)
+                .Replace(".", string.Empty)
+                .Replace(":", string.Empty)
+                .Replace(";", string.Empty)
+                .Replace("'", string.Empty)
+                .Replace("’", string.Empty)
+                .Replace("\"", string.Empty);
+        }
+
+        public static string Simplify(this string self)
+        {
+            if (string.IsNullOrEmpty(self))
+            {
+                return string.Empty;
+            }
+
+            var stopWords = new HashSet<string> {
+                "a", "and", "at", "for", "of", "or", "the", "to", "yet", "with"
+            };
+
             var sb = new StringBuilder(string.Empty);
             foreach (var token in self.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries))
             {
-                var norm = removePunctuartion(token).NormalizeCaseSensitiveString().ToLower();
+                var norm = token.RemovePunctuation().NormalizeCaseSensitiveString().ToLower();
                 if (!stopWords.Contains(norm))
                 {
                     sb.Append(norm);
