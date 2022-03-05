@@ -25,8 +25,10 @@ namespace HallOfBeorn.Services.LotR.Search
                     points += Matches((card, q) => card.GetTitle(lang.Value).IsEqualToLower(q), query, score, 36);
                     points += Matches((card, q) => card.GetTitle(lang.Value).ContainsLower(q), query, score, 12);
                     points += Matches((card, q) => card.GetTitle(lang.Value).FuzzyMatches(q), query, score, 6);
-                    points += Matches((card, q) => card.GetText(lang.Value).ContainsLower(q), query, score, 2);
+                    points += Matches((card, q) => card.GetText(lang.Value).ContainsLower(q), query, score, 4);
+                    //points += Matches((card, q) => card.GetText(lang.Value).FuzzyMatches(q), query, score, 2);
                     points += Matches((card, q) => card.GetOppositeText(lang.Value).ContainsLower(q), query, score, 2);
+                    //points += Matches((card, q) => card.GetOppositeText(lang.Value).FuzzyMatches(q), query, score, 1);
                     points += Matches((card, q) => card.TraitsByLang(lang.Value).Any(tr => tr.ToLowerSafe().Equals(q)), query, score, 4);    
                     points += Matches((card, q) => card.TraitsByLang(lang.Value).Any(tr => tr.ToLowerSafe().Contains(q)), query, score, 2);
                     points += Matches((card, q) => card.KeywordsByLang(lang.Value).Any(kw => kw.ToLowerSafe().Equals(q)), query, score, 4);
@@ -41,8 +43,10 @@ namespace HallOfBeorn.Services.LotR.Search
                 points += Matches((card, q) => card.Title.ContainsLower(q), query, score, 12);
                 points += Matches((card, q) => card.NormalizedTitle.ContainsLower(q), query, score, 12);
                 points += Matches((card, q) => card.Title.FuzzyMatches(q), query, score, 6);
-                points += Matches((card, q) => card.Text.ContainsLower(q), query, score, 2);
+                points += Matches((card, q) => card.Text.ContainsLower(q), query, score, 4);
+                //points += Matches((card, q) => card.Text.FuzzyMatches(q), query, score, 2);
                 points += Matches((card, q) => card.OppositeText.ContainsLower(q), query, score, 2);
+                //points += Matches((card, q) => card.OppositeText.FuzzyMatches(q), query, score, 1);
                 points += Matches((card, q) => card.Traits.Any(tr => tr.ToLowerSafe().Equals(q)), query, score, 4);
                 points += Matches((card, q) => card.NormalizedTraits.Any(tr => tr.ToLowerSafe().Equals(q)), query, score, 4);
                 points += Matches((card, q) => card.Traits.Any(tr => tr.ToLowerSafe().Contains(q)), query, score, 2);
