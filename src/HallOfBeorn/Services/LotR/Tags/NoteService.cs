@@ -38,6 +38,7 @@ namespace HallOfBeorn.Services.LotR.Tags
             datesByVersion[1.8] = new DateTime(2016, 1, 26);
             datesByVersion[1.9] = new DateTime(2017, 11, 15);
             datesByVersion[2.0] = new DateTime(2019, 9, 9);
+            datesByVersion[2.1] = new DateTime(2022, 3, 3);
         }
 
         private void loadFaq11()
@@ -143,6 +144,13 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Helm-of-Secrecy-UtAM", "<p>Should read: <blockquote>Swap those heroes, moving all eligible attachments to the hero from your collection.</blockquote><br>Omit &ldquo;and damage tokens&rdquo;</p>", version);
         }
 
+        private void loadFaq21()
+        {
+            var version = 2.1;
+            addFaq("Dain-Ironfoot-DoD", "<p>Should have the <b><i>Noble</i></b> trait.</p>", version);
+            addFaq("Ered-Luin-Miner-DoD", "<p>Should read: <bockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);
+        }
+
         private void loadFaqs()
         {
             loadFaq11();
@@ -155,6 +163,7 @@ namespace HallOfBeorn.Services.LotR.Tags
             loadFaq18();
             loadFaq19();
             loadFaq20();
+            loadFaq21();
         }
 
         private void loadRulings()

@@ -27,6 +27,7 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithCommunityVersion("Hrodebert/Dain-Ironfoot-Leadership-Hero-1")
                 .WithCommunityVersion("Hrodebert/Dain-Ironfoot-Leadership-Hero-2")
                 .WithCommunityVersion("Hrodebert/Dain-Ironfoot-Leadership-Hero-3")
+                .WithErrata(1)
                 .WithInfo(1, 1, Artist.Tiziano_Baracchi);
             addHero("Ori", 8, Sphere.Lore, 2, 2, 1, 3)
                 .WithTraits("Dwarf.")
@@ -68,7 +69,7 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTraits("Dwarf.", "Craftsman.")
                 .WithTextLine("Response: After you play Erebor Hammersmith, return the topmost attachment in any player's discard pile to his hand.")
                 .WithFlavor("\"In Erebor in the Kingdom of Dain there is such skill...\" -Aragorn, The Return of the King")
-                .WithInfo(7, 2, Artist.Empty_Room_Studios);
+                .WithInfo(7, 3, Artist.Empty_Room_Studios);
             addAlly("Erebor Record Keeper", 1, Sphere.Lore, false, 1, 0, 0, 1)
                 .WithTraits("Dwarf.")
                 .WithTextLine("Erebor ~Record Keeper cannot attack or defend.")
@@ -76,9 +77,10 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithInfo(8, 3, Artist.Andrew_Johanson);
             addAlly("Ered Luin Miner", 3, Sphere.Neutral, false, 1, 1, 1, 2)
                 .WithTraits("Dwarf.")
-                .WithTextLine("Response: After Ered Luin Miner is discarded from the top of your deck, put it into play under your control.")
+                .WithTextLine("Response: After Ered Luin Miner is discarded from your deck, put it into play under your control.")
                 .WithFlavorLine("Tools were to be found in plenty that the miners and quarriers and builders of old had used; and at such work the dwarves were still very skilled.")
                 .WithFlavorLine("-The Hobbit")
+                .WithErrata(1)
                 .WithInfo(9, 3, Artist.Lukasz_Jaskolski);
             addAlly("Ered Nimrais Prospector", 2, Sphere.Lore, false, 1, 0, 1, 2)
                 .WithTraits("Dwarf.")
@@ -89,7 +91,7 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("At the end of the round, discard Gandalf from play.")
                 .WithTextLine("Response: After Gandalf enters play, (choose 1): draw 3 cards, deal 4 damage to 1 enemy in play, or reduce your threat by 5.")
                 .WithCommunityVersion("Gandalf-Core-Set-Completion")
-                .WithInfo(11, 4, Artist.Lucas_Graciano);
+                .WithInfo(11, 3, Artist.Lucas_Graciano);
             addAlly("Glóin", 3, Sphere.Leadership, true, 2, 1, 1, 3)
                 .WithTraits("Dwarf.")
                 .WithTextLine("While you control at least 5 Dwarf characters, Glóin gains: 'Response: After you play Glóin from your hand, choose a hero. Add 2 resources to that hero's resource pool.'")

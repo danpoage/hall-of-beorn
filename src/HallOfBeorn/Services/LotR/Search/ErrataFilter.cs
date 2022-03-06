@@ -71,6 +71,8 @@ namespace HallOfBeorn.Services.LotR.Search
                     return 1.9;
                 case ErrataVersion.FAQ_2_0:
                     return 2.0;
+                case ErrataVersion.FAQ_2_1:
+                    return 2.1;
                 default:
                     return 0;
             }
