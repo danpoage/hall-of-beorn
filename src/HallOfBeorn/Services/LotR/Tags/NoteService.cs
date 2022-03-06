@@ -148,7 +148,7 @@ namespace HallOfBeorn.Services.LotR.Tags
         {
             var version = 2.1;
             addFaq("Dain-Ironfoot-DoD", "<p>Should have the <b><i>Noble</i></b> trait.</p>", version);
-            addFaq("Ered-Luin-Miner-DoD", "<p>Should read: <bockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);
+            addFaq("Ered-Luin-Miner-DoD", "<p>Should read: <blockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);
         }
 
         private void loadFaqs()
