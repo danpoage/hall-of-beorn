@@ -15,7 +15,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             Cycle = "Shadows of Mirkwood";
 
             addHero("Dáin Ironfoot", 11, Sphere.Leadership, 1, 2, 3, 5)
-                .WithTraits("Dwarf.")
+                .WithTraits("Dwarf.", "Noble.")
                 .WithTextLine("While Dáin Ironfoot is ready, Dwarf characters get +1 Attack and +1 Willpower.")
                 .WithFlavor("\"You have not heard of Dáin and the dwarves of the Iron Hills?\" -Bilbo Baggins, The Hobbit")
                 .WithCommunityVersion("Autumn/Dain-Ironfoot-Leadership")
@@ -25,6 +25,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithCommunityVersion("Hrodebert/Dain-Ironfoot-Leadership-Hero-1")
                 .WithCommunityVersion("Hrodebert/Dain-Ironfoot-Leadership-Hero-2")
                 .WithCommunityVersion("Hrodebert/Dain-Ironfoot-Leadership-Hero-3")
+                .WithErrata(1)
                 .WithInfo(116, 1, Artist.Tiziano_Baracchi);
             addAttachment("Dúnedain Signal", 1, Sphere.Leadership, false)
                 .WithTraits("Signal.")

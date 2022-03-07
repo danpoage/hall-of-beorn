@@ -69,9 +69,10 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithInfo(65, 3, Artist.Tristan_Denecke);
             addAlly("Ered Luin Miner", 3, Sphere.Neutral, false, 1, 1, 1, 2)
                 .WithTraits("Dwarf.")
-                .WithTextLine("Response: After Ered Luin Miner is discarded from the top of your deck, put it into play under your control.")
+                .WithTextLine("Response: After Ered Luin Miner is discarded from your deck, put it into play under your control.")
                 .WithFlavorLine("Tools were to be found in plenty that the miners and quarriers and builders of old had used; and at such work the dwarves were still very skilled.")
                 .WithFlavorLine("-The Hobbit")
+                .WithErrata(1)
                 .WithInfo(66, 3, Artist.Lukasz_Jaskolski);
             addQuest("Searching the Island", EncounterSet.TempleOfTheDeceived, 1, 'A', null)
                 .WithKeywords("Exploration.")
