@@ -151,6 +151,7 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Dain-Ironfoot-DoD", "<p>Should have the <b><i>Noble</i></b> trait.</p>", version);
             addFaq("Ered-Luin-Miner-TotD", "<p>Should read: <blockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);
             addFaq("Ered-Luin-Miner-DoD", "<p>Should read: <blockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);            
+            addFaq("Helm-of-Secrecy-DoG", "<p>Should read: <blockquote>Swap those heroes, moving all eligible attachments to the hero from your collection.</blockquote><br>Omit &ldquo;and damage tokens&rdquo;</p>", version);
         }
 
         private void loadFaqs()
