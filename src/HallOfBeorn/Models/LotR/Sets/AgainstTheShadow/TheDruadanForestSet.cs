@@ -44,10 +44,11 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithErrata(1)
                 .WithInfo(36, 3, Artist.Magali_Villeneuve);
             addAlly("Silvan Refugee", 1, Sphere.Spirit, false, 2, 0, 0, 1)
-                .WithTraits("Silvan.")
+                .WithTraits("Silvan.", "Scout.")
                 .WithTextLine("Forced: After a character leaves play, discard Silvan Refugee from play.")
                 .WithFlavorLine("\"The Elves have their own labours and their own sorrows...\" -Gildor, The Fellowship of the Ring")
                 .WithTemplate("<p><b>Forced:</b> After a character leaves play, discard {self} from play.</p><p class='flavor-text'>&quot;The Elves have their own labours and their own sorrows...&quot;<br/>&ndash;Gildor, The Fellowship of the Ring</p>")
+                .WithErrata(1)
                 .WithInfo(37, 3, Artist.Lorraine_Schleter);
             addEvent("Against the Shadow", 2, Sphere.Spirit)
                 .WithTextLine("Play only if each hero you control has the printed Spirit resource icon.")

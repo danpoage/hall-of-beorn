@@ -152,6 +152,9 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Ered-Luin-Miner-TotD", "<p>Should read: <blockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);
             addFaq("Ered-Luin-Miner-DoD", "<p>Should read: <blockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);            
             addFaq("Helm-of-Secrecy-DoG", "<p>Should read: <blockquote>Swap those heroes, moving all eligible attachments to the hero from your collection.</blockquote><br>Omit &ldquo;and damage tokens&rdquo;</p>", version);
+            addFaq("Nori-DoD", "<p>Should read: <blockquote><b>Response:</b> After you play a Dwarf character from your hand, reduce your threat by 1.</blockquote></p>", version);
+            addFaq("Silvan-Refugee-TDF", "<p>Should have the <b><i>Scout</i></b> trait.</p>", version);
+            addFaq("Silvan-Refugee-EoL", "<p>Should have the <b><i>Scout</i></b> trait.</p>", version);
         }
 
         private void loadFaqs()
