@@ -104,8 +104,10 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("Action: Discard Cram to ready attached hero.")
                 .WithInfo(14, 3, Artist.Adam_Lane);
             addAttachment("Healing Herbs", 0, Sphere.Lore, false)
+                .WithTraits("Item.")
                 .WithTextLine("Attach to a Lore hero.")
                 .WithTextLine("Action: Discard Healing Herbs and exhaust attached hero to heal all damage on 1 character.")
+                .WithErrata(1)
                 .WithInfo(15, 3, Artist.Sara_Biddle);
             addAttachment("King Under the Mountain", 2, Sphere.Leadership, true)
                 .WithTraits("Title.")

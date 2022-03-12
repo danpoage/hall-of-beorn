@@ -64,8 +64,10 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
                 .WithInfo(108, 3, Artist.Carolina_Eade);
             addAttachment("Healing Herbs", 0, Sphere.Lore, false)
+                .WithTraits("Item.")
                 .WithTextLine("Attach to a Lore hero.")
                 .WithTextLine("Action: Discard Healing Herbs and exhaust attached hero to heal all damage on 1 character.")
+                .WithErrata(1)
                 .WithInfo(109, 3, Artist.Sara_Biddle);
             addAttachment("Asfaloth", 2, Sphere.Lore, true)
                 .WithTraits("Mount.")

@@ -155,6 +155,8 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Nori-DoD", "<p>Should read: <blockquote><b>Response:</b> After you play a Dwarf character from your hand, reduce your threat by 1.</blockquote></p>", version);
             addFaq("Silvan-Refugee-TDF", "<p>Should have the <b><i>Scout</i></b> trait.</p>", version);
             addFaq("Silvan-Refugee-EoL", "<p>Should have the <b><i>Scout</i></b> trait.</p>", version);
+            addFaq("Healing-Herbs-FoS", "<p>Should have the <b><i>Item</i></b> trait.</p>", version);
+            addFaq("Healing-Herbs-DoD", "<p>Should have the <b><i>Item</i></b> trait.</p>", version);
         }
 
         private void loadFaqs()
