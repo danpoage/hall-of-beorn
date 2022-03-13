@@ -11583,7 +11583,17 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                 case "Core":
                 case "RevCore":
                     return 1;
-                    
+                
+                //Starter Decks
+                case "DoD":
+                    return 310;
+                case "DoG":
+                    return 330;
+                case "EoL":
+                    return 320;
+                case "RoR":
+                    return 340;
+
                 //Khazad-dum
                 case "KD":
                     return 3;

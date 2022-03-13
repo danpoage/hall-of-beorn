@@ -231,7 +231,7 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithCommunityVersion("Hrodebert/Elrond-Jon-Hodgson-2")
                 .WithCommunityVersion("Hrodebert/Elrond-Magali")
                 .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
-                .WithInfo(4, 1, Artist.Magali_Villeneuve);
+                .WithInfo(31, 1, Artist.Magali_Villeneuve);
         }
     }
 }
