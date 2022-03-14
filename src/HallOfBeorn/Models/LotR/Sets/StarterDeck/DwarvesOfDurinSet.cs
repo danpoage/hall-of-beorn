@@ -164,7 +164,7 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithInfo(24, 3, Artist.Cristi_Balanescu);
 
             //Sideboard
-            addHero("Nori", 40, Sphere.Spirit, 2, 1, 2, 4)
+            addHero("Nori", 9, Sphere.Spirit, 2, 1, 2, 4)
                 .WithTraits("Dwarf.")
                 .WithTextLine("Response: After you play a Dwarf character from your hand, reduce your threat by 1.")
                 .WithFlavorLine("\"Nori, at your service.\"")
