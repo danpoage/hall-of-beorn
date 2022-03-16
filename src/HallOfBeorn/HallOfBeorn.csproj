@@ -393,6 +393,7 @@
     <Compile Include="Models\CharacterThing.cs" />
     <Compile Include="Models\LotR\Age.cs" />
     <Compile Include="Models\LotR\Archetype.cs" />
+    <Compile Include="Models\LotR\CardDesign.cs" />
     <Compile Include="Models\LotR\Community\CardboardOfTheRings\CardboardOfTheRingsChannel.cs" />
     <Compile Include="Models\LotR\Community\CardTalk\CardTalkBlog.cs" />
     <Compile Include="Models\LotR\Community\CardTalk\CardTalkChannel.cs" />
@@ -668,7 +669,9 @@
     <Compile Include="Models\Arkham\ViewModels\LinkViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\Card.cs" />
+    <Compile Include="Models\LotR\ViewModels\CardImageViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\CardQuantityViewModel.cs" />
+    <Compile Include="Models\LotR\ViewModels\CardDesignViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\ProductDetailViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\ProductListViewModel.cs" />
     <Compile Include="Models\CardNote.cs" />
@@ -1071,6 +1074,7 @@
     <Compile Include="Services\LotR\Categories\RegionService.cs" />
     <Compile Include="Services\LotR\Community\CreatorService.cs" />
     <Compile Include="Services\LotR\Community\ICreatorService.cs" />
+    <Compile Include="Services\LotR\Design\CardDesignService.cs" />
     <Compile Include="Services\LotR\Links\ILinkService.cs" />
     <Compile Include="Services\LotR\Links\LinkService.cs" />
     <Compile Include="Services\LotR\LotRCardRepository.cs" />

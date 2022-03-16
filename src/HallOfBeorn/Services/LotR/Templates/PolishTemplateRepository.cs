@@ -1,10 +1,16 @@
 ﻿using System;
+using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Templates
 {
     public class PolishTemplateRepository
         : TemplateRepository
     {
+        public PolishTemplateRepository()
+            : base(Language.PL)
+        {
+        }
+
         protected override void Initialize()
         {
             ChildrenOfEorl();

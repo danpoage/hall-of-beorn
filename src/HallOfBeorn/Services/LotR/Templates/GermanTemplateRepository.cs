@@ -1,9 +1,15 @@
 ﻿using System;
+using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Templates
 {
     public class GermanTemplateRepository : TemplateRepository
     {
+        public GermanTemplateRepository()
+            : base(Language.DE)
+        {
+        }
+
         protected override void Initialize()
         {
             CoreSet();

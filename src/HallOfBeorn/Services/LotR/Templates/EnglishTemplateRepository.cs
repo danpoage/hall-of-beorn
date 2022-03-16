@@ -1,9 +1,15 @@
 ﻿using System;
+using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Templates
 {
     public class EnglishTemplateRepository : TemplateRepository
     {
+        public EnglishTemplateRepository()
+            : base(Language.EN)
+        {
+        }
+
         protected override void Initialize()
         {
             //Two Player Limited Edition Starter

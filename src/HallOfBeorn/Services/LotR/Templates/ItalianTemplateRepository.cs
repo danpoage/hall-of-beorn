@@ -1,10 +1,16 @@
 ﻿using System;
+using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Templates
 {
     public class ItalianTemplateRepository
         : TemplateRepository
     {
+        public ItalianTemplateRepository()
+            : base(Language.IT)
+        {
+        }
+
         protected override void Initialize()
         {
             ChildrenOfEorl();

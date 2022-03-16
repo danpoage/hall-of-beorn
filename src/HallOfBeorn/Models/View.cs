@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models
         Card_Image = 2,
         Card_Art = 3,
         Card_Text = 4,
+        Card_Design = 5,
         Product = 11,
         Character = 21,
         Community = 31,

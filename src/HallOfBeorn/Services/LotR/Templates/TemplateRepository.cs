@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Templates
 {
     public abstract class TemplateRepository : ITemplateRepository
     {
-        public TemplateRepository()
+        public TemplateRepository(Language lang)
         {
+            Lang = lang;
             Initialize();
         }
 
@@ -16,6 +16,8 @@ namespace HallOfBeorn.Services.LotR.Templates
         private readonly Dictionary<string, string> htmlBackBySlug = new Dictionary<string, string>();
 
         protected abstract void Initialize();
+
+        public Language Lang { get; private set; }
 
         public void AddHtml(string slug, string html)
         {

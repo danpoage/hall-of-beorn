@@ -55,6 +55,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Restricted.", "Restringido." },
                 { "Secrecy 1.", "En secreto 1." },
                 { "Sentinel.", "Centinela." },
+                { "Steeds 1 Per Player.", "Corceles 1 Per Player." },
+                { "Steeds 1.", "Corceles 1." },
+                { "Steeds 2.", "Corceles 2." },
+                { "Steeds 3.", "Corceles 3." },
+                { "Steeds 4.", "Corceles 4." },
                 { "Surge.", "Oleada." },
                 { "Vast.", "Vasto." },
             };
@@ -252,6 +257,38 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Voice of Saruman", "La Voz de Saruman" },
                 { "Watch the East Road", "Vigilar el Camino del Este" },
                 { "Wooden Shed", "Cobertizo de Madera" },
+
+                //Fire on the Eastemnet
+                { "Box of Earth", "Caja de Tierra" },
+                { "Breath of Arda", "Aliento de Arda" },
+                { "Captured Steeds", "Corceles Capturados" },
+                { "Chieftain of the Skies", "Jefe de los Cielos" },
+                { "Cracking Horse Whip", "Látigo Restallante" },
+                { "Eastemnet Pasture", "Pastura del Estemnet" },
+                { "Entwash Crossings", "Cruces del Entaguas" },
+                { "Exhausted Pursuit", "Persecución Agotadora" },
+                { "Expanded Search", "Búsqueda Ampliada" },
+                { "Fang", "Colmillo" },
+                { "Golden Crown", "Corona de Oro" },
+                { "Grip", "Garra" },
+                { "Guided by Fate", "Guiada por el Destino" },
+                { "Hidden Orc Camp", "Campamento Orco Escondido" },
+                { "Hidden Roosts", "Nidos Ocultos" },
+                { "Messenger of Manwë", "Mensajero de Manwë" },
+                { "Open Meadows", "Prados Abiertos" },
+                { "Orc Lookout", "Vigía Orco" },
+                { "Orcish Wrangler", "Cuatrero Orco" },
+                { "Panicked Horses", "Caballos Aterrados" },
+                { "Pillaged Stables", "Establos Saqueados" },
+                { "Poachers in the Night", "Cazadores Furtivos en la Noche" },
+                { "Relentless Forces", "Fuerzas Implacables" },
+                { "Roving Herbmaster", "Herborista Errante" },
+                { "Shores of Anduin", "Orillas del Anduin" },
+                { "To the River!", "¡Al Río!" },
+                { "Veteran Eagle", "Águila Veterana" },
+                { "White Mountain Beastmaster", "Amo de Bestias de las Montañas Blancas" },
+                { "Wild Steeds", "Corceles Salvajes" },
+                { "Wolf", "Lobo" },
             };
         }
 
@@ -280,7 +317,9 @@ namespace HallOfBeorn.Services.LotR.Translation
 
                 { "Garrison.", "Guarnición." },
                 { "Gate.", "Puerta." },
+                { "Gift.", "Regalo." },
 
+                { "Healer.", "Curandero." },
                 { "Hideout.", "Escondrijo." },
                 { "Hills.", "Colinas." },
 
@@ -294,6 +333,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Plains.", "Llanuras." },
 
                 { "Ranger.", "Montaraz." },
+                { "River.", "Río." },
                 { "Road.", "Camino." },
                 { "Ruffian.", "Rufián." },
                 
