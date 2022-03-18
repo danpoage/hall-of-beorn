@@ -11,6 +11,8 @@
         Adventure_Pack,
         Deluxe_Expansion,
         Preorder_Promotion,
+        Campaign_Expansion,
+        Hero_Expansion,
         SAGA,
         Saga_Expansion,
         GenConSaga_Expansion,

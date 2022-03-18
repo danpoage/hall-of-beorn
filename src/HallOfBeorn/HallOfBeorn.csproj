@@ -469,6 +469,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheGhostOfFramsburgProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\TheWitheredHeathProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\TheWildsOfRhovanionProduct.cs" />
+    <Compile Include="Models\LotR\Products\Hero\AngmarAwakenedHeroExpansionProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AStormOnCobasHavenNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheCityOfCorsairsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheDrownedRuinsNightmareProduct.cs" />
@@ -567,6 +568,7 @@
     <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\WrathAndRuinScenario.cs" />
     <Compile Include="Models\LotR\ScenarioView.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmareSet.cs" />
+    <Compile Include="Models\LotR\Sets\AngmarAwakened\AngmarAwakenedHeroExpansionCardSet.cs" />
     <Compile Include="Models\LotR\Sets\AShadowInTheEast\AShadowInTheEastSet.cs" />
     <Compile Include="Models\LotR\Sets\ChildrenOfEorl\ChildrenOfEorlSet.cs" />
     <Compile Include="Models\LotR\Sets\Core\RevisedCoreSet.cs" />
@@ -1507,6 +1509,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\LotR\Play\" />
+    <Folder Include="Models\LotR\Products\Campaign\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

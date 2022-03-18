@@ -133,6 +133,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheTreacheryOfRhudaur = new Products.AdventurePack.TheTreacheryOfRhudaurProduct();
         public static Product TheBattleOfCarnDum = new Products.AdventurePack.TheBattleOfCarnDumProduct();
         public static Product TheDreadRealm = new Products.AdventurePack.TheDreadRealmProduct();
+        public static Product AngmarAwakenedHeroExpansion = new Products.Hero.AngmarAwakenedHeroExpansionProduct();
 
         //The Grey Havens and Dream-chaser Cycle
         public static Product TheGreyHavens = new Products.Deluxe.TheGreyHavensProduct();
@@ -260,7 +261,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheTreacheryOfRhudaurNightmare = new Products.Nightmare.TheTreacheryOfRhudaurNightmareProduct();
         public static Product TheBattleOfCarnDumNightmare = new Products.Nightmare.TheBattleOfCarnDumNightmareProduct();
         public static Product TheDreadRealmNightmare = new Products.Nightmare.TheDreadRealmNightmareProduct();
-
+        
         public static Product TheGreyHavensNightmare = new Products.Nightmare.TheGreyHavensNightmareProduct();
         public static Product FlightOfTheStormcallerNightmare = new Products.Nightmare.FlightOfTheStormcallerNightmareProduct();
         public static Product TheThingInTheDepthsNightmare = new Products.Nightmare.TheThingInTheDepthsNightmareProduct();

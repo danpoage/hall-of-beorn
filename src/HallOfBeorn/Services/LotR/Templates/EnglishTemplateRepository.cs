@@ -2254,6 +2254,12 @@ namespace HallOfBeorn.Services.LotR.Templates
             AddHtml("Gather-Your-Courage-DDN", "<p class='flavor-text'>Battling the dead drains your spirit as well as your body.</p><p class='main-text'>Surge.</p><p class='main-text'><b>When Revealed:</b> Each player placed the top 8 cards fo his deck facedown under this quest.</p><p class='main-text'><b>Forced:</b> When this quest is defeated, shuffle each card under this quest into its owner's deck.</p>{victory:10}");
         }
 
+        private void AngmarAwakenedHeroExpansion()
+        {
+            AddHtml("Aragorn-AAH", "<p class='main-text'>Each {type:Enemy@enemy} engaged with you gets -1 {Defense}.</p><p class='main-text'><b>Response:</b> After {self} participates in an attack that destroys an enemy, choose an enemy not engaged with you and engage that enemy.</p><p class='flavor-text'>&quot;I serve no man,&quot; said Aragorn; &quot;but the servants of Sauron I pursue into whatever land they may go.&quot; &ndash;The Two Towers</p>");
+            AddHtml("Halbarad-AAH", "<p class='main-text'>While you are engaged with any {type:Enemy@enemy}, {self} does not exhaust to commit to a quest.</p><p class='main-text'>You may optionally engage 1 additional enemy during the encounter phase.</p><p class='flavor-text'>&quot;Little do they know of our long labour for the safekeeping of their borders, and yet I grudge it not.&quot; &ndash;The Return of the King</p>");
+        }
+
         private void TheWastesOfEriador()
         {
             AddHtml("Merry-TWoE", "<b>Response:</b> After an enemy is revealed from the top of the encounter deck, exhaust {self} to reduce your threat by that enemy's {Threat}.</p><p class='flavor-text'>&quot;We have come a long way with you and been through some stiff times. We want to go on.&quot;<br/>&ndash;The Fellowship of the Ring</p>");

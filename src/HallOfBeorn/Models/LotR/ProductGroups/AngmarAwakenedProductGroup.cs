@@ -11,6 +11,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             : base("Angmar Awakened Cycle")
         {
             AddMainProduct(Product.TheLostRealm);
+            AddMainProduct(Product.AngmarAwakenedHeroExpansion);
             AddChildProduct(Product.TheWastesOfEriador);
             AddChildProduct(Product.EscapeFromMountGram);
             AddChildProduct(Product.AcrossTheEttenmoors);
