@@ -5,27 +5,40 @@ using System.Linq;
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Services.LotR.Templates;
+using HallOfBeorn.Services.LotR.Translation;
 
 namespace HallOfBeorn.Services.LotR.Design
 {
     public class CardDesignService
+        : ICardDesignService
     {
-        public CardDesignService(LotRCardRepository cardRepository, ITemplateService templateService)
+        public CardDesignService(LotRCardRepository cardRepository, 
+            ITemplateService templateService,
+            ITranslationService translationService)
         {
             this.cardRepository = cardRepository;
             this.templateService = templateService;
+            this.translationService = translationService;
         }
 
         private readonly LotRCardRepository cardRepository;
         private readonly ITemplateService templateService;
+        private readonly ITranslationService translationService;
         
-        private Func<string, bool, string> lookupTemplate(Language lang)
+        private Func<string, Language, string> getTitle
         {
-            return (slug, front) => {
-                return front 
-                    ? templateService.GetFrontHtml(slug, lang)
-                    : templateService.GetBackHtml(slug, lang);
-            };
+            get { return (title, lang) => translationService.TranslateTitle(lang, title); }
+        }
+
+        private Func<string, bool, Language, string> getTemplate
+        {
+            get {
+                return (slug, front, lang) => {
+                    return front 
+                        ? templateService.GetFrontHtml(slug, lang)
+                        : templateService.GetBackHtml(slug, lang);
+                };
+            }
         }
 
         private IEnumerable<LotRCard> lookupCards(HashSet<string> slugs)
@@ -54,7 +67,7 @@ namespace HallOfBeorn.Services.LotR.Design
 
             foreach (var key in map.Keys)
             {
-                designs.Add(new CardDesign(map[key], lookupTemplate(lang)));
+                designs.Add(new CardDesign(map[key], lang, getTitle, getTemplate));
             }
 
             return designs;
@@ -67,7 +80,28 @@ namespace HallOfBeorn.Services.LotR.Design
 
         public IEnumerable<CardDesign> ForCards(IEnumerable<LotRCard> cards, Language lang)
         {
-            return lookupDesigns(cards, lang);
+            var map = new Dictionary<string, CardDesign>();
+
+            var slugs = cards.Select(card => card.Slug);
+
+            foreach (var design in lookupDesigns(cardRepository.Cards(), lang))
+            {
+                if (map.ContainsKey(design.Slug))
+                {
+                    continue;
+                }
+
+                foreach (var slug in slugs)
+                {
+                    if (design.IncludesVersion(slug))
+                    {
+                        map[design.Slug] = design;
+                        break;
+                    }
+                }
+            }
+
+            return map.Values;
         }
     }
 }

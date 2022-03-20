@@ -29,5 +29,6 @@ namespace HallOfBeorn.Services.LotR
         public static string TemplateService = "templateService";
         public static string TranslationService = "translationService";
         public static string CreatorService = "creatorService";
+        public static string CardDesignService = "designService";
     }
 }

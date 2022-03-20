@@ -674,6 +674,7 @@
     <Compile Include="Models\LotR\ViewModels\CardImageViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\CardQuantityViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\CardDesignViewModel.cs" />
+    <Compile Include="Models\LotR\ViewModels\CardVersionViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\ProductDetailViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\ProductListViewModel.cs" />
     <Compile Include="Models\CardNote.cs" />
@@ -1077,6 +1078,7 @@
     <Compile Include="Services\LotR\Community\CreatorService.cs" />
     <Compile Include="Services\LotR\Community\ICreatorService.cs" />
     <Compile Include="Services\LotR\Design\CardDesignService.cs" />
+    <Compile Include="Services\LotR\Design\ICardDesignService.cs" />
     <Compile Include="Services\LotR\Links\ILinkService.cs" />
     <Compile Include="Services\LotR\Links\LinkService.cs" />
     <Compile Include="Services\LotR\LotRCardRepository.cs" />

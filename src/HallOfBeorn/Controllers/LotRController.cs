@@ -13,6 +13,7 @@ using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.Community;
+using HallOfBeorn.Services.LotR.Design;
 using HallOfBeorn.Services.LotR.Links;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
@@ -48,6 +49,7 @@ namespace HallOfBeorn.Controllers
             var tagService = (ITagService)System.Web.HttpContext.Current.Application[LotRServiceNames.TagService];
             var translationService = (ITranslationService)System.Web.HttpContext.Current.Application[LotRServiceNames.TranslationService];
             var creatorService = (ICreatorService)System.Web.HttpContext.Current.Application[LotRServiceNames.CreatorService];
+            var designService = (ICardDesignService)System.Web.HttpContext.Current.Application[LotRServiceNames.CardDesignService];
 
             _translationHandler = new TranslationHandler(statService, templateService, translationService);
 
@@ -79,7 +81,7 @@ namespace HallOfBeorn.Controllers
             _searchHandler = new SearchHandler(cardRepository, characterRepository,
                 searchService, scenarioService, linkService, statService, 
                 playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
-                ringsDbService, _translationHandler);
+                ringsDbService, designService, _translationHandler);
 
             _creatorsHandler = new CreatorsHandler(creatorService);
         }

@@ -6,37 +6,48 @@ namespace HallOfBeorn.Models.LotR
 {
     public class CardDesign
     {
-        public CardDesign(IEnumerable<LotRCard> versions, Func<string, bool, string> getTemplate)
+        public CardDesign(IEnumerable<LotRCard> versions,
+            Language lang,
+            Func<string, Language, string> getTitle,
+            Func<string, bool, Language, string> getTemplate)
         {
             if (versions == null || versions.Count() == 0)
             {
                 throw new ArgumentException("versions empty");
             }
 
-            this.versions.AddRange(versions);
+            foreach (var version in versions)
+            {
+                if (!this.versions.ContainsKey(version.Slug))
+                {
+                    this.versions.Add(version.Slug, version);
+                }
+            }
 
             First = versions.First();
-            Title = First.Title;
-            NormalizedTitle = First.NormalizedTitle;
+            Title = getTitle(First.Title, lang);
+            NormalizedTitle = Title.NormalizeCaseSensitiveString();
             FrontText = First.Text;
-            FrontHtml = getTemplate(First.Slug, true);
+            FrontHtml = getTemplate(First.Slug, true, lang);
             BackText = First.OppositeText;
-            BackHtml = getTemplate(First.Slug, false);
+            BackHtml = getTemplate(First.Slug, false, lang);
             Sphere = First.Sphere;
             CardType = First.CardType;
             CardSubtype = First.CardSubtype;
             ThreatCost = First.ThreatCost;
             ResourceCost = First.ResourceCost;
+            Threat = First.Threat;
             Willpower = First.Willpower;
             Attack = First.Attack;
             Defense = First.Defense;
             HitPoints = First.HitPoints;
+            QuestPoints = First.QuestPoints;
             HasErrata = First.HasErrata;
             Traits = First.Traits;
             Keywords = First.Keywords;
         }
 
-        private readonly List<LotRCard> versions = new List<LotRCard>();
+        private readonly Dictionary<string, LotRCard> versions = new Dictionary<string, LotRCard>();
 
         public static string GetSlug(LotRCard card)
         {
@@ -47,7 +58,7 @@ namespace HallOfBeorn.Models.LotR
         }
 
         public string Slug { get { return GetSlug(First); } }
-        public IEnumerable<LotRCard> Versions { get { return versions; } }
+        public IEnumerable<LotRCard> Versions { get { return versions.Values; } }
         public LotRCard First { get; private set; }
 
         public string Title { get; private set; }
@@ -56,17 +67,25 @@ namespace HallOfBeorn.Models.LotR
         public string FrontHtml { get; private set; }
         public string BackText { get; private set; }
         public string BackHtml { get; private set; }
+
         public Sphere Sphere { get; private set; }
         public CardType CardType { get; private set; }
         public CardSubtype CardSubtype { get; private set; }
+        public byte? Threat { get; private set; }
         public byte? ThreatCost { get; private set; }
         public byte? ResourceCost { get; private set; }
         public byte? Willpower { get; private set; }
         public byte? Attack { get; private set; }
         public byte? Defense { get; private set; }
         public byte? HitPoints { get; private set; }
+        public byte? QuestPoints { get; private set; }
         public bool HasErrata { get; private set; }
         public IEnumerable<string> Traits { get; private set; }
         public IEnumerable<string> Keywords { get; private set; }
+
+        public bool IncludesVersion(string slug)
+        {
+            return versions.ContainsKey(slug);
+        }
     }
 }

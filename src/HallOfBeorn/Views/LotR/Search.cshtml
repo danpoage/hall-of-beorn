@@ -453,6 +453,26 @@
             </div>
     }
 }
+@if (@Model.IsCardDesignView())
+{
+    foreach (var design in @Model.CardDesigns)
+    {
+        <div style="display:block;margin-left:4px;margin-right:4px;margin-top:6px;margin-bottom:6px;vertical-align: top;">
+            <h3>@design.Title</h3>
+            <a title="@design.Title" href="@design.DetailsLink">
+                <img src="@design.Image.ThumbnailFrontPath" style="width:@design.Image.ThumbnailPixelWidth" />
+            </a>
+            <div>
+            @foreach (var ver in @design.Versions)
+            {
+                <div>
+                    <a title="@ver.Description" href="@ver.Link">@ver.Description</a>
+                </div>
+            }
+            </div>
+        </div>
+    }
+}
 @if (@Model.IsCharacterView())
 {
     foreach (var character in @Model.Characters)

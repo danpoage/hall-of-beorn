@@ -9,6 +9,7 @@ using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Design;
 using HallOfBeorn.Services.LotR.Links;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
@@ -31,6 +32,7 @@ namespace HallOfBeorn.Handlers.LotR
             ICategoryService<Region> regionService,
             ICategoryService<Archetype> archetypeService,
             IRingsDbService ringsDbService,
+            ICardDesignService cardDesignService,
             TranslationHandler translationHandler)
         {
             _cardRepository = cardRepository;
@@ -45,6 +47,7 @@ namespace HallOfBeorn.Handlers.LotR
             _regionService = regionService;
             _archetypeService = archetypeService;
             _ringsDbService = ringsDbService;
+            _cardDesignService = cardDesignService;
             _translationHandler = translationHandler;
         }
 
@@ -60,6 +63,7 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICategoryService<Region> _regionService;
         private readonly ICategoryService<Archetype> _archetypeService;
         private readonly IRingsDbService _ringsDbService;
+        private readonly ICardDesignService _cardDesignService;
         private readonly TranslationHandler _translationHandler;
         
         private void InitializeSearch(SearchViewModel model)
@@ -68,6 +72,7 @@ namespace HallOfBeorn.Handlers.LotR
             model.Products = new List<ProductViewModel>();
             model.Characters = new List<CharacterViewModel>();
             model.Links = new List<LinkViewModel>();
+            model.CardDesigns = new List<CardDesignViewModel>();
 
             SearchViewModel.CardTypes = _statService.CardTypes(model.Lang).GetSelectListItems();
             SearchViewModel.Keywords = _statService.Keywords(model.Lang).GetSelectListItems();
@@ -244,6 +249,15 @@ namespace HallOfBeorn.Handlers.LotR
                 if (model.View.GetValueOrDefault(View.None) == View.RingsDB)
                 {
                     CrossReferenceRingsDbDecks(model, settings);
+                }
+                if (model.View.GetValueOrDefault(View.None) == View.Card_Design)
+                {
+                    var lang = model.Lang.GetValueOrDefault(Language.EN);
+                    var designs = _cardDesignService.ForCards(
+                        model.Cards.Select(viewModel => viewModel.Card), lang)
+                        .Select(design => new CardDesignViewModel(design, lang)).ToList();
+
+                    model.CardDesigns.AddRange(designs);
                 }
                 if (model.View == Models.View.Product)
                 {

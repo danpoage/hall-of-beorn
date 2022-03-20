@@ -11,6 +11,7 @@ using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.Community;
+using HallOfBeorn.Services.LotR.Design;
 using HallOfBeorn.Services.LotR.Links;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
@@ -107,7 +108,8 @@ namespace HallOfBeorn
             var tagService = new TagService();
             System.Web.HttpContext.Current.Application[LotRServiceNames.TagService] = tagService;
 
-            
+            var designService = new CardDesignService(cardRepository, templateService, translationService);
+            System.Web.HttpContext.Current.Application[LotRServiceNames.CardDesignService] = designService;
 
             System.Web.HttpContext.Current.Application.UnLock();
         }
