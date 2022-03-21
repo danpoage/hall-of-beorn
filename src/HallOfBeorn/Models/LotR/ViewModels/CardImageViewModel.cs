@@ -12,16 +12,19 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             this.card = card;
             this.lang = lang;
 
-            if (hasSecondImage)
+            if (isLandscapeImage)
             {
-                DetailPixelHeight = 200;
-                ThumbnailPixelHeight = 180;
+                DetailPixelHeight = 280;
+                DetailPixelWidth = 400;
+                ThumbnailPixelHeight = 128;
+                ThumbnailPixelWidth = 180;
             }
             else
             {
                 DetailPixelHeight = 400;
+                DetailPixelWidth = 280;
                 ThumbnailPixelHeight = 180;
-                ThumbnailPixelWidth = 96;
+                ThumbnailPixelWidth = 128;
             }
         }
 
@@ -29,6 +32,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private readonly Language lang;
 
         private readonly HashSet<CardType> canBeDoubleSided = new HashSet<CardType> { CardType.Location, CardType.Encounter_Side_Quest };
+        private readonly HashSet<CardType> landscapeCardTypes = new HashSet<CardType> { CardType.Quest, CardType.Encounter_Side_Quest, CardType.Player_Side_Quest, CardType.Cave };
 
         private string secondImagePath
         {
@@ -43,7 +47,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
-        private bool hasSecondImage
+        public bool HasSecondImage
         {
             get
             {
@@ -68,6 +72,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             }
         }
 
+        private bool isLandscapeImage
+        {
+            get { return landscapeCardTypes.Contains(card.CardType); }
+        }
+
         private static string getImagePath(LotRCard card, string directory, Language lang)
         {
             var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
@@ -82,7 +91,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 extension = getTranslatedImageExtension(card, lang);
             }
 
-            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/LotR/{0}/{1}/{2}{3}.{4}", directory, set, title, suffix, extension);
+            return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/{0}/{1}/{2}{3}.{4}", directory, set, title, suffix, extension);
         }
 
         private static string getImagePathForLanguage(LotRCard card, Language? lang = null, bool isFirst = true)
@@ -154,13 +163,23 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 : "jpg";
         }
 
+        private string detailImagePath
+        {
+            get
+            {
+                return lang == Language.EN
+                    ? getImagePath(card, "Cards", lang)
+                    : getImagePath(card, "LotR/Cards", lang);
+            }
+        }
+
         private string thumbImagePath
         {
             get
             {
                 return lang == Language.EN
-                    ? getImagePath(card, "Thumbnails", lang)
-                    : getImagePath(card, "Cards", lang);
+                    ? getImagePath(card, "LotR/Thumbnails", lang)
+                    : getImagePath(card, "LotR/Cards", lang);
             }
         }
 
@@ -265,7 +284,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
              get {
 
-                if (hasSecondImage && !string.IsNullOrEmpty(secondImagePath))
+                if (HasSecondImage && !string.IsNullOrEmpty(secondImagePath))
                 {
                     return getImagePathForLanguage(card, lang, true);
                 }
@@ -282,7 +301,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case Models.LotR.CardType.Contract:
                         return getContractCardImagePath(card, true, lang);
                     default:
-                        return null;
+                        return detailImagePath;
                 }
             }
         }
@@ -291,7 +310,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             get
             {
-                if (hasSecondImage && !string.IsNullOrEmpty(secondImagePath))
+                if (HasSecondImage && !string.IsNullOrEmpty(secondImagePath))
                 {
                     var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
                     return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Cards/{0}/{1}.jpg", set, secondImagePath);
@@ -309,7 +328,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                     case Models.LotR.CardType.Contract:
                         return getContractCardImagePath(card, false, lang);
                     default:
-                        return null;
+                        return detailImagePath;
                 }
             }
         }

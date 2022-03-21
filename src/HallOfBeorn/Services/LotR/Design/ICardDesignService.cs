@@ -7,7 +7,8 @@ namespace HallOfBeorn.Services.LotR.Design
 {
     public interface ICardDesignService
     {
-        IEnumerable<CardDesign> All(Language lang);
-        IEnumerable<CardDesign> ForCards(IEnumerable<LotRCard> cards, Language lang);
+        CardDesign Lookup(string slug, Language lang);
+        IEnumerable<CardDesign> Designs(Language lang);
+        IEnumerable<CardDesign> WithVersions(IEnumerable<LotRCard> cards, Language lang);
     }
 }

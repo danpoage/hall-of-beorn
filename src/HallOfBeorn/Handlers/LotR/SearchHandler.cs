@@ -253,7 +253,7 @@ namespace HallOfBeorn.Handlers.LotR
                 if (model.View.GetValueOrDefault(View.None) == View.Card_Design)
                 {
                     var lang = model.Lang.GetValueOrDefault(Language.EN);
-                    var designs = _cardDesignService.ForCards(
+                    var designs = _cardDesignService.WithVersions(
                         model.Cards.Select(viewModel => viewModel.Card), lang)
                         .Select(design => new CardDesignViewModel(design, lang)).ToList();
 

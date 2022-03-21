@@ -200,6 +200,7 @@
     </Compile>
     <Compile Include="Handlers\Digital\DetailsHandler.cs" />
     <Compile Include="Handlers\Digital\SearchHandler.cs" />
+    <Compile Include="Handlers\LotR\DesignsHandler.cs" />
     <Compile Include="Handlers\LotR\ProductsHandler.cs" />
     <Compile Include="Handlers\LotR\CharactersHandler.cs" />
     <Compile Include="Handlers\LotR\CreatorsHandler.cs" />
@@ -1508,6 +1509,7 @@
     <Content Include="Views\Marvel\Search.cshtml" />
     <Content Include="Views\LotR\Creators.cshtml" />
     <Content Include="Views\LotR\Settings.cshtml" />
+    <Content Include="Views\LotR\Designs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\LotR\Play\" />

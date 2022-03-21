@@ -458,14 +458,32 @@
     foreach (var design in @Model.CardDesigns)
     {
         <div style="display:block;margin-left:4px;margin-right:4px;margin-top:6px;margin-bottom:6px;vertical-align: top;">
-            <h3>@design.Title</h3>
-            <a title="@design.Title" href="@design.DetailsLink">
-                <img src="@design.Image.ThumbnailFrontPath" style="width:@design.Image.ThumbnailPixelWidth" />
-            </a>
             <div>
+                @if (@design.IsUnique)
+                {
+                        <img src="/Images/unique-card-small.png" style="margin-bottom:-3px;margin-right:-4px;"/>
+                }
+                <a title="@design.Title" href="@design.DetailsLink" style="margin-bottom:4px;">
+                    <span style="font-size:medium;font-weight:bold;">@design.Title</span>
+                </a>
+                @if (!string.IsNullOrEmpty(@design.Sphere))
+                {
+                     <span><img style="width:20px;height:20px;margin:1px 1px -4px 1px;" src='@string.Format("/Images/{0}-med.png", design.Sphere)' /></span>
+                }
+            </div>
+            <div style="display:inline-block;max-width:300px;">
+                <a title="@design.Title" href="@design.DetailsLink">
+                    <img src="@design.Image.ThumbnailFrontPath" style="width:@design.Image.ThumbnailPixelWidth px;height:@design.Image.ThumbnailPixelHeight px" width="@design.Image.ThumbnailPixelWidth"/>
+                </a>
+            </div>
+            <div style="display:inline-block;max-width:400px;vertical-align:top;">
+                <p>@Html.Raw(@design.FrontHtml)</p>
+            </div>
+            <div style="display:inline-block;max-width:300px;vertical-align:top;">
+                <b>Versions</b>
             @foreach (var ver in @design.Versions)
             {
-                <div>
+                <div style="margin: 2px;">
                     <a title="@ver.Description" href="@ver.Link">@ver.Description</a>
                 </div>
             }

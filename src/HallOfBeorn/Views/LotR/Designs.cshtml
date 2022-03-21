@@ -1,0 +1,82 @@
+﻿@using HallOfBeorn.Models
+@using HallOfBeorn.Models.LotR
+@using HallOfBeorn.Models.LotR.ViewModels
+@model CardDesignViewModel
+
+@{
+    ViewBag.Title = @Model.Title;
+}
+
+<div class="titleBox" style="display:inline-block;max-width:310px;margin-right:10px;">
+    <div class="titleNameBox">
+        @if (@Model.IsUnique)
+        {
+            <div style="font-size:1.75em;font-family:Verdana;"><img src="/Images/unique-card.png" style="margin-right:3px;margin-bottom:-5px;height:28px;width:28px;"/>@Model.Title</div>
+        } else {
+            <div style="font-size:1.75em;font-family:Verdana;">@Model.Title</div>
+        
+            if (!string.IsNullOrEmpty(@Model.OppositeTitle))
+            {
+                <div style="font-size:1em;font-family:Verdana;color:#34282C;">@Model.OppositeTitle</div>
+            }
+        }
+        @*
+        <div style="margin-top:4px;margin-bottom:2px;">
+            <span style="display:inline-block;max-width:154px;">
+                <a href="@string.Format("/LotR?Query={0}View=Card_Design&Lang={1}&Sort=Set_Number#search-result-{2}", @Model.Title, @Model.Lang, @Model.Slug)" title="Search for @Model.Title (@Model.Lang)">@Model.Title</a>
+            </span>
+            <span style="margin-left:8px;display:inline-block;">@string.Format("#{0} {1}", @Model.Number, @Model.CountLabel)</span>
+        </div>
+        *@
+    </div>
+</div>
+<div>
+    <div style="display:inline-block">
+        @if (@Model.Image.HasSecondImage)
+        {
+            <span>
+                <img src="@Model.Image.DetailFrontPath" style="max-height:200px;" class="card-image"/>
+                <img src="@Model.Image.DetailBackPath" style="max-height:200px;" class="card-image"/>
+            </span>
+        }
+        else
+        {
+            <img src="@Model.Image.DetailFrontPath" style="max-width: 285px;max-height: 400px;"  class="card-image"/>
+        }
+    </div>
+    <div style="display:inline-block;width:300px;vertical-align:top;margin:4px;">
+        <p style="margin:4px;">@Html.Raw(@Model.FrontHtml)</p>
+        @if (!string.IsNullOrEmpty(@Model.BackHtml))
+        {
+            <p style="margin:4px;">@Html.Raw(@Model.BackHtml)</p>
+        }
+    </div>
+    <div style="display:inline-block;width:300px;vertical-align:top;margin:4px;">
+        <div style="margin:4px;">
+            <div><b>Versions</b></div>
+            @foreach (var ver in @Model.Versions)
+            {
+                <div><a href="@ver.Link" title="@ver.Description">@ver.Description</a></div>
+            }
+        </div>
+
+        @if (@Model.HasErrata)
+        {
+            <div style="margin-top:24px;">
+                <div><b>Errata</b></div>
+                @foreach (var note in @Model.Notes())
+                {
+                    <p>
+                        @Html.Raw(@note.Text)
+                    </p>
+                    <div>FAQ @note.FaqVersion</div>
+                }
+            </div>
+        }
+        else
+        {
+            @*<div style="margin:4px;">No Errata</div>*@
+        }
+    </div>
+</div>
+

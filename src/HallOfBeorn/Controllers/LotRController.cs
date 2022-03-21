@@ -72,6 +72,8 @@ namespace HallOfBeorn.Controllers
                 linkService, noteService, tagService, 
                 templateService, octgnService);
 
+            _designsHandler = new DesignsHandler(designService, noteService);
+
             _ringsDbHandler = new RingsDbHandler(ringsDbService);
 
             _scenariosHandler = new ScenariosHandler(cardRepository, 
@@ -94,8 +96,14 @@ namespace HallOfBeorn.Controllers
         private readonly SearchHandler _searchHandler;
         private readonly TranslationHandler _translationHandler;
         private readonly CreatorsHandler _creatorsHandler;
+        private readonly DesignsHandler _designsHandler;
 
         private readonly Language defaultLang = Language.EN;
+
+        private Language getTargetLanguage(Language? lang)
+        {
+            return lang.HasValue && lang != Language.None ? lang.Value : defaultLang;
+        }
 
         public ActionResult Index()
         {
@@ -240,9 +248,18 @@ namespace HallOfBeorn.Controllers
                 return Redirect(redirectUrl);
             }
 
-            var targetLang = lang.HasValue && lang != Language.None ? lang.Value : defaultLang;
+            var targetLang = getTargetLanguage(lang);
 
             var model = _detailsHandler.HandleDetails(id, targetLang);
+
+            return View(model);
+        }
+
+        public ActionResult Designs(string id, Language? lang)
+        {
+            var targetLang = getTargetLanguage(lang);
+
+            var model = _designsHandler.HandleDesigns(id, targetLang);
 
             return View(model);
         }

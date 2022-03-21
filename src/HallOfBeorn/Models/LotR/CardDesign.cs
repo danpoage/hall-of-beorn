@@ -24,8 +24,9 @@ namespace HallOfBeorn.Models.LotR
                 }
             }
 
-            First = versions.First();
+            First = Versions.First();
             Title = getTitle(First.Title, lang);
+            IsUnique = First.IsUnique;
             NormalizedTitle = Title.NormalizeCaseSensitiveString();
             FrontText = First.Text;
             FrontHtml = getTemplate(First.Slug, true, lang);
@@ -58,10 +59,16 @@ namespace HallOfBeorn.Models.LotR
         }
 
         public string Slug { get { return GetSlug(First); } }
-        public IEnumerable<LotRCard> Versions { get { return versions.Values; } }
+
+        public IEnumerable<LotRCard> Versions
+        { 
+            get { return versions.Values.OrderBy(ver => ver.CardSet.Product.FirstReleased); } 
+        }
+
         public LotRCard First { get; private set; }
 
         public string Title { get; private set; }
+        public bool IsUnique { get; private set; }
         public string NormalizedTitle { get; private set; }
         public string FrontText { get; private set; }
         public string FrontHtml { get; private set; }

@@ -48,9 +48,10 @@ namespace HallOfBeorn.Services.LotR.Design
                 .ToList();
         }
 
-        private IEnumerable<CardDesign> lookupDesigns(IEnumerable<LotRCard> cards, Language lang)
+        private Dictionary<string, CardDesign> lookupDesigns(
+            IEnumerable<LotRCard> cards, Language lang)
         {
-            var designs = new List<CardDesign>();
+            var designsBySlug = new Dictionary<string, CardDesign>();
 
             var map = new Dictionary<string, List<LotRCard>>();
 
@@ -67,41 +68,32 @@ namespace HallOfBeorn.Services.LotR.Design
 
             foreach (var key in map.Keys)
             {
-                designs.Add(new CardDesign(map[key], lang, getTitle, getTemplate));
+                var design = new CardDesign(map[key], lang, getTitle, getTemplate);
+                designsBySlug.Add(design.Slug, design);
             }
 
-            return designs;
+            return designsBySlug;
         }
 
-        public IEnumerable<CardDesign> All(Language lang)
+        public CardDesign Lookup(string slug, Language lang)
         {
-            return lookupDesigns(cardRepository.Cards(), lang);
+            var designs = lookupDesigns(cardRepository.Cards(), lang);
+
+            return designs.ContainsKey(slug) ? designs[slug] : null;
         }
 
-        public IEnumerable<CardDesign> ForCards(IEnumerable<LotRCard> cards, Language lang)
+        public IEnumerable<CardDesign> Designs(Language lang)
         {
-            var map = new Dictionary<string, CardDesign>();
+            return lookupDesigns(cardRepository.Cards(), lang).Values;
+        }
 
+        public IEnumerable<CardDesign> WithVersions(IEnumerable<LotRCard> cards, Language lang)
+        {
             var slugs = cards.Select(card => card.Slug);
 
-            foreach (var design in lookupDesigns(cardRepository.Cards(), lang))
-            {
-                if (map.ContainsKey(design.Slug))
-                {
-                    continue;
-                }
+            var designs = lookupDesigns(cardRepository.Cards(), lang);
 
-                foreach (var slug in slugs)
-                {
-                    if (design.IncludesVersion(slug))
-                    {
-                        map[design.Slug] = design;
-                        break;
-                    }
-                }
-            }
-
-            return map.Values;
+            return designs.Values.Where(design => slugs.Any(slug => design.IncludesVersion(slug))).ToList();
         }
     }
 }
