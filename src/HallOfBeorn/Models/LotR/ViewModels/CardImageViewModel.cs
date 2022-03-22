@@ -79,6 +79,21 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         private static string getImagePath(LotRCard card, string directory, Language lang)
         {
+            if (card.CardType == CardType.Quest)
+            {
+                return getQuestCardImagePath(card, true, lang);
+            }
+
+            if (card.CardType == CardType.Contract)
+            {
+                return getContractCardImagePath(card, true, lang);
+            }
+
+            if (card.CardType == CardType.Nightmare_Setup || card.CardType == CardType.GenCon_Setup)
+            {
+                return getSetupCardImagePath(card, true, lang);
+            }
+
             var set = !string.IsNullOrEmpty(card.CardSet.NormalizedName) ? card.CardSet.NormalizedName.ToUrlSafeString() : card.CardSet.Name.ToUrlSafeString();
             var title = card.GetTitle(lang).ToUrlSafeString();
             var suffix = !string.IsNullOrEmpty(card.SlugSuffix) ? string.Format("-{0}", card.SlugSuffix.ToUrlSafeString()) : string.Empty;
