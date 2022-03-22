@@ -72,7 +72,7 @@ namespace HallOfBeorn.Controllers
                 linkService, noteService, tagService, 
                 templateService, octgnService);
 
-            _designsHandler = new DesignsHandler(designService, noteService);
+            _designsHandler = new DesignsHandler(designService, noteService, tagService, linkService);
 
             _ringsDbHandler = new RingsDbHandler(ringsDbService);
 

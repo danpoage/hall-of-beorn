@@ -344,5 +344,138 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public int DetailPixelWidth { get; private set; }
         public int ThumbnailPixelHeight { get; private set; }
         public int ThumbnailPixelWidth { get; private set; }
+
+        public string BackgroundImage()
+        {
+            switch (card.Sphere) 
+            {
+                case Models.LotR.Sphere.Leadership:
+                case Models.LotR.Sphere.Tactics:
+                case Models.LotR.Sphere.Spirit:
+                case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
+                    return string.Format("/Images/{0}.png", card.Sphere.ToString());
+                default:
+                    if (card.IsEncounterCard())
+                    {
+                        return "/Images/encounter-card-back.jpg";
+                    }
+                    return null;
+            }
+        }
+
+        public string BackgroundImageTop()
+        {
+            switch (card.Sphere)
+            {
+                case Models.LotR.Sphere.Leadership:
+                case Models.LotR.Sphere.Tactics:
+                case Models.LotR.Sphere.Spirit:
+                case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
+                    return "-5px";
+                default:
+                    if (card.IsEncounterCard())
+                    {
+                        return "0px";
+                    }
+                    return "-5px";
+            }
+        }
+
+        public string BackgroundImageLeft()
+        {
+            //48px
+            switch (card.Sphere)
+            {
+                case Models.LotR.Sphere.Leadership:
+                case Models.LotR.Sphere.Tactics:
+                case Models.LotR.Sphere.Spirit:
+                case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
+                    return "48px";
+                default:
+                    if (card.IsEncounterCard())
+                    {
+                        return "0px";
+                    }
+                    return "48px;";
+            }
+        }
+
+        public string BackgroundImageHeight()
+        {
+            switch (card.Sphere)
+            {
+                case Models.LotR.Sphere.Leadership:
+                case Models.LotR.Sphere.Tactics:
+                case Models.LotR.Sphere.Spirit:
+                case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
+                    return "200px";
+                default:
+                    if (card.IsEncounterCard())
+                    {
+                        return "100%";
+                    }
+                    return "200px";
+            }
+        }
+
+        public string BackgroundImageWidth()
+        {
+            switch (card.Sphere)
+            {
+                case Models.LotR.Sphere.Leadership:
+                case Models.LotR.Sphere.Tactics:
+                case Models.LotR.Sphere.Spirit:
+                case Models.LotR.Sphere.Lore:
+                case Models.LotR.Sphere.Baggins:
+                case Models.LotR.Sphere.Fellowship:
+                    return "200";
+                default:
+                    if (card.IsEncounterCard())
+                    {
+                        return "100%";
+                    }
+                    return "200";
+            }
+        }
+
+        public string BackgroundColor()
+        {
+            switch (card.Sphere)
+            {
+                case Models.LotR.Sphere.Leadership:
+                    return "rgba(128, 0, 128, .1)";
+                case Models.LotR.Sphere.Tactics:
+                    return "rgba(255, 0, 0, .1)";
+                case Models.LotR.Sphere.Spirit:
+                    return "rgba(0, 0, 255, .05)";
+                case Models.LotR.Sphere.Lore:
+                    return "rgba(0, 128, 0, .1)";
+                case Models.LotR.Sphere.Baggins:
+                    return "rgba(255, 255, 0, .1)";
+                case Models.LotR.Sphere.Fellowship:
+                    return "rgba(255, 210, 0, .1)";
+                case Models.LotR.Sphere.Neutral:
+                    return "#e4e4e4";
+                default:
+                    if (card.IsEncounterCard())
+                    {
+                        return "rgba(0, 0, 0, .1)";
+                    }
+                    else if (card.IsQuestCard())
+                    {
+                        return "#d3d3d3";
+                    }
+                    return "White";
+            }
+        }
+
     }
 }

@@ -29,54 +29,227 @@
         </div>
         *@
     </div>
+    @if (@Model.Image.HasSecondImage)
+    {
+        <span>
+            <img src="@Model.Image.DetailFrontPath" style="max-height:200px;" class="card-image"/>
+            <img src="@Model.Image.DetailBackPath" style="max-height:200px;" class="card-image"/>
+        </span>
+    }
+    else
+    {
+        <img src="@Model.Image.DetailFrontPath" style="max-width: 285px;max-height: 400px;"  class="card-image"/>
+    }
+
 </div>
-<div>
-    <div style="display:inline-block">
-        @if (@Model.Image.HasSecondImage)
-        {
-            <span>
-                <img src="@Model.Image.DetailFrontPath" style="max-height:200px;" class="card-image"/>
-                <img src="@Model.Image.DetailBackPath" style="max-height:200px;" class="card-image"/>
-            </span>
-        }
-        else
-        {
-            <img src="@Model.Image.DetailFrontPath" style="max-width: 285px;max-height: 400px;"  class="card-image"/>
-        }
-    </div>
-    <div style="display:inline-block;width:300px;vertical-align:top;margin:4px;">
-        <p style="margin:4px;">@Html.Raw(@Model.FrontHtml)</p>
-        @if (!string.IsNullOrEmpty(@Model.BackHtml))
-        {
-            <p style="margin:4px;">@Html.Raw(@Model.BackHtml)</p>
-        }
-    </div>
-    <div style="display:inline-block;width:300px;vertical-align:top;margin:4px;">
-        <div style="margin:4px;">
-            <div><b>Versions</b></div>
-            @foreach (var ver in @Model.Versions)
+<div class="statBox" style="display:inline-block;max-width:300px;vertical-align:top;">
+    <div style="display:inline-block;min-width:30px;min-height:300px;">
+        <div class="statHeaderBox" style="min-height:120px;">
+            <div class="statTypeBox">
+                @if (@Model.HasSphere)
+                {
+                    <img style="margin-bottom:-4px;margin-right:8px;" src='@string.Format("/Images/{0}-med.png", @Model.Sphere)' />
+                }
+                <div style="display:inline-block;">
+                    <div style="font-weight:bold;font-size:20pt;">@Model.CardTypeName</div>
+                    @if (!string.IsNullOrEmpty(@Model.CardSubtype))
+                    {
+                        <div style="font-weight:bold;font-size:16pt;">@Model.CardSubtype</div>
+                    }
+                </div>
+            </div>
+            <div class="statValueBox" style="margin-top:2px;margin-bottom:8px;">
+                <div style="display:inline-block;">
+                @switch (@Model.CardType)
+                {
+                    case CardType.Hero:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ThreatCost</span><span style="color:#616161;">)</span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Willpower</span><img style="margin-bottom:-3px;height:20px" src="/Images/willpower-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px" src="/Images/attack-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;height:20px" src="/Images/defense-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
+                        }
+                        break;
+                    case CardType.Ally:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Willpower</span><img style="margin-bottom:-3px;height:20px" src="/Images/willpower-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px" src="/Images/attack-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;height:20px" src="/Images/defense-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
+                        }
+                        break;
+                    case CardType.Attachment:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
+                        }
+                        break;
+                    case CardType.Event:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
+                        }
+                        break;
+                    case CardType.Enemy:
+                    case CardType.Ship_Enemy:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.EngagementCost</span><span style="color:#616161;">)</span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Threat</span><img style="margin-bottom:-3px;height:20px" src="/Images/threat-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px" src="/Images/attack-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;height:20px" src="/Images/defense-med.png" /></span>
+                            <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
+                        }
+                        break;
+                    case CardType.Location:
+                        {
+                            <span style="margin-left:2px;margin-right:2px;width:24px;"><span style="margin-right:2px;font-weight:bold;">@Model.Threat</span><img style="margin-bottom:-3px;height:20px;" src="/Images/threat-med.png" /></span>
+                            <span style="margin-left:20px;width:60px;color:#616161;">(</span><span style="margin-left:8px;margin-right:8px;font-weight:bold;">@Model.QuestPoints</span><span style="margin-right:2px;width:60px;color:#616161;">)</span>
+                        }
+                        break;
+                    case CardType.Objective_Location:
+                        {
+                            <span style="margin-left:20px;width:60px;color:#616161;">(</span><span style="margin-left:8px;margin-right:8px;font-weight:bold;">@Model.QuestPoints</span><span style="margin-right:2px;width:60px;color:#616161;">)</span>
+                        }
+                        break;
+                    case CardType.Treachery:
+                        {
+                        }
+                        break;
+                    case CardType.Objective_Ally:
+                    case CardType.Objective_Hero:
+                    case CardType.Objective:
+                    case CardType.Ship_Objective:
+                    case CardType.Contract:
+                        {
+                            if (@Model.HasCharacterStats)
+                            {
+                                <span style="margin-left:2px;width:24px;"><span style="margin-right:2px;font-weight:bold;">@Model.Willpower</span><img style="margin-bottom:-3px;height:20px;" src="/Images/willpower-med.png" /></span>
+                                <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Attack</span><img style="margin-bottom:-3px;height:20px;" src="/Images/attack-med.png" /></span>
+                                <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.Defense</span><img style="margin-bottom:-3px;height:20px;" src="/Images/defense-med.png" /></span>
+                                <span style="width:24px;margin-left:20px;"><span style="margin-right:2px;font-weight:bold;">@Model.HitPoints</span><img style="margin-bottom:-4px;height:20px;" src="/Images/heart-med.png"/></span>
+                            }
+                        }
+                        break;
+                    case CardType.Quest:
+                        {
+                            <span style="margin-left:4px;font-weight:bold;">@Model.StageNumber</span><span style="width:40px;margin-left:2px;color:#616161;font-size:10px;font-weight:bold;">@Model.StageLetters</span>
+                            <span style="width:40px;color:#616161;margin-left:14px;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
+                        }
+                        break;
+                    case CardType.Treasure:
+                        {
+                            <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
+                        }
+                        break;
+                    case CardType.Player_Side_Quest:
+                        <span style="margin-left:2px;width:40px;color:#616161;">[</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.ResourceCost</span><span style="color:#616161;">]</span>
+                        <span style="width:40px;color:#616161;margin-left:14px;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
+                        break;
+                    case CardType.Encounter_Side_Quest:
+                        <span style="width:40px;color:#616161;margin-left:14px;">(</span><span style="margin-left:4px;margin-right:4px;font-weight:bold;">@Model.QuestPoints</span><span style="width:40px;color:#616161;">)</span>
+                        break;    
+                    case CardType.Nightmare_Setup:
+                    case CardType.Campaign:
+                        break;
+                    default:
+                        break;
+                }
+                </div>
+            </div>
+
+            <div class="statTextBox" style="margin:2px;padding-top:0px;padding-left:6px;padding-right:6px;border: 1px solid gray;border-radius:4px;max-width:500px;min-height:180px;min-width:200px;position:relative;background-color:@Model.Image.BackgroundColor();">
+            
+            @if (!string.IsNullOrEmpty(@Model.Image.BackgroundImage()))
             {
-                <div><a href="@ver.Link" title="@ver.Description">@ver.Description</a></div>
+                <img src='@Model.Image.BackgroundImage()' style="pointer-events:none;position: absolute;left:@Model.Image.BackgroundImageLeft();top:@Model.Image.BackgroundImageTop();width:@Model.Image.BackgroundImageWidth();height:@Model.Image.BackgroundImageHeight();opacity:.08;" />
+            }
+
+            @if (@Model.Traits.Count() > 0)
+            {
+                <div style="text-align:center;">
+                @foreach (var trait in Model.Traits)
+                {
+                    <a title="Trait Search" href='@string.Format("/LotR?Trait={0}", @trait.Trim())'><b><i>@trait</i></b></a> @: &nbsp;
+                }
+                </div>
+            }
+       
+            @if (!string.IsNullOrEmpty(@Model.FrontHtml))
+            {
+                @Html.Raw(@Model.FrontHtml);
+            }
+            </div>
+        </div>
+    </div>
+</div>
+<div style="display:inline-block;width:300px;vertical-align:top;margin:4px 4px 4px 8px;">
+    <div class="statBox">
+        <div style="font-weight: bold; margin: 4px">Versions</div>
+        @foreach (var ver in @Model.Versions)
+        {
+            <div><a href="@ver.Link" title="@ver.Description" style="font-size: 12pt;">@ver.Description</a></div>
+        }
+    </div>
+
+    @if (@Model.HasErrata)
+    {
+        <br />
+        <div class="statBox">
+            <div style="font-weight:bold;margin: 4px;">Notes &amp; Errata</div>
+            @foreach (var note in @Model.Notes()) {
+                <div style="padding:4px 12px 4px 12px;border-radius:4px;border-width: 1px; border-style: solid; margin: 4px 0px 4px 0px; border-color: grey;">
+                    <div>
+                        <span style="float: right; font-weight: bold">
+                        @if (!string.IsNullOrEmpty(@note.Url)) {
+                            @: <a href="@note.Url" target="_blank">
+                        }
+                        @if (@note.Type == CardNoteType.FAQ) {
+                            <span style="color:red;margin-right: 6px;">FAQ @note.FaqVersion @note.GetDateText()</span>
+                        }
+                        @if (@note.Type == CardNoteType.Ruling) {
+                            <span style="color:orangered;margin-right: 6px;">Ruling @note.GetDateText()</span>
+                        }
+                        @if (@note.Type == CardNoteType.Clarification) {
+                            <span style="color:blue;margin-right: 6px;">Clarification @note.GetDateText()</span>
+                        }
+                        @if (!string.IsNullOrEmpty(@note.Url)) {
+                            @: </a>
+                        }
+                        </span>
+                    </div>
+                    <div>@Html.Raw(@note.Text)</div>
+                </div>
             }
         </div>
-
-        @if (@Model.HasErrata)
-        {
-            <div style="margin-top:24px;">
-                <div><b>Errata</b></div>
-                @foreach (var note in @Model.Notes())
+    }
+    
+    @if (@Model.HasContentLinks())
+    {
+        <div>
+            <div style="margin-top:12px;"><b>Community Content</b></div>
+            <div style="overflow-y: scroll;height:210px;border-color:lightgray;border-width:1px;border-style:solid;">
+                @foreach (var link in @Model.ContentLinks)
                 {
-                    <p>
-                        @Html.Raw(@note.Text)
-                    </p>
-                    <div>FAQ @note.FaqVersion</div>
+                    <div style="margin: 4px;display:inline-block;background-color:black;color:white">
+                        <a href="@link.Url" target="_blank" title="@link.Title">
+                            <img src="@link.ThumbnailUrl" title="@link.Title" height="@link.ThumbnailHeight"/>
+                        </a>
+                        <div style="text-align:center;">@link.Title</div>
+                    </div>
                 }
             </div>
-        }
-        else
-        {
-            @*<div style="margin:4px;">No Errata</div>*@
-        }
-    </div>
-</div>
+        </div>
+    }
 
+    @if (@Model.HasTags())
+    {
+        <div class="tag-box">
+            @foreach (var tag in @Model.Tags())
+            {
+                <a target="_blank" title="@tag.Description" href="@tag.Url" class="tag-link">
+                    @Html.Raw(@tag.Text)
+                </a>
+            }
+        </div>
+    }
+</div>

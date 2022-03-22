@@ -37,12 +37,15 @@ namespace HallOfBeorn.Models.LotR
             CardSubtype = First.CardSubtype;
             ThreatCost = First.ThreatCost;
             ResourceCost = First.ResourceCost;
+            EngagementCost = First.EngagementCost;
             Threat = First.Threat;
             Willpower = First.Willpower;
             Attack = First.Attack;
             Defense = First.Defense;
             HitPoints = First.HitPoints;
             QuestPoints = First.QuestPoints;
+            StageNumber = First.StageNumber;
+
             HasErrata = First.HasErrata;
             Traits = First.Traits;
             Keywords = First.Keywords;
@@ -81,11 +84,14 @@ namespace HallOfBeorn.Models.LotR
         public byte? Threat { get; private set; }
         public byte? ThreatCost { get; private set; }
         public byte? ResourceCost { get; private set; }
+        public byte? EngagementCost { get; private set; }
         public byte? Willpower { get; private set; }
         public byte? Attack { get; private set; }
         public byte? Defense { get; private set; }
         public byte? HitPoints { get; private set; }
         public byte? QuestPoints { get; private set; }
+        public uint StageNumber { get; private set; }
+
         public bool HasErrata { get; private set; }
         public IEnumerable<string> Traits { get; private set; }
         public IEnumerable<string> Keywords { get; private set; }
