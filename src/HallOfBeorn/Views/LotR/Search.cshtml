@@ -466,7 +466,7 @@
                 <a title="@design.Title" href="@design.DetailsLink" style="margin-bottom:4px;">
                     <span style="font-size:medium;font-weight:bold;">@design.Title</span>
                 </a>
-                @if (!string.IsNullOrEmpty(@design.Sphere))
+                @if (@design.HasSphere)
                 {
                      <span><img style="width:20px;height:20px;margin:1px 1px -4px 1px;" src='@string.Format("/Images/{0}-med.png", design.Sphere)' /></span>
                 }

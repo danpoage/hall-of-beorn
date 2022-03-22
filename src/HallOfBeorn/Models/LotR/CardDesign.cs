@@ -55,10 +55,30 @@ namespace HallOfBeorn.Models.LotR
 
         public static string GetSlug(LotRCard card)
         {
-            return string.Format("{0}-{1}-{2}", 
-                    card.NormalizedTitle.ToUrlSafeString(), 
-                    Enum.GetName(typeof(Sphere), card.Sphere), 
-                    Enum.GetName(typeof(CardType), card.CardType));
+            var title = card.NormalizedTitle.ToUrlSafeString();
+
+            var qualifier = string.Empty;
+            if (card.CardType == CardType.Hero || (card.Sphere != Sphere.None && card.Sphere != Sphere.Neutral))
+            {
+                qualifier = Enum.GetName(typeof(Sphere), card.Sphere);
+            }
+            else
+            {
+                if (card.CardSet.SetType == SetType.Saga_Expansion)
+                {
+                    qualifier = "Saga";
+                }
+                else if (card.CardSet.SetType == SetType.Custom_Scenario_Kit)
+                {
+                    qualifier = "Kit";
+                }
+            }
+
+            var type = Enum.GetName(typeof(CardType), card.CardType);
+
+            return !string.IsNullOrEmpty(qualifier)
+                ? string.Format("{0}-{1}-{2}", title, qualifier, type)
+                : string.Format("{0}-{1}", title, type);
         }
 
         public string Slug { get { return GetSlug(First); } }
