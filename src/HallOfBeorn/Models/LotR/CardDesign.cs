@@ -60,7 +60,14 @@ namespace HallOfBeorn.Models.LotR
             var qualifier = string.Empty;
             if (card.CardType == CardType.Hero || (card.Sphere != Sphere.None && card.Sphere != Sphere.Neutral))
             {
-                qualifier = Enum.GetName(typeof(Sphere), card.Sphere);
+                if (card.CardType == CardType.Hero && (card.Sphere == Sphere.Baggins || card.Sphere == Sphere.Fellowship))
+                {
+                    qualifier = card.CardSet.Abbreviation;
+                }
+                else
+                {
+                    qualifier = Enum.GetName(typeof(Sphere), card.Sphere);
+                }
             }
             else
             {
