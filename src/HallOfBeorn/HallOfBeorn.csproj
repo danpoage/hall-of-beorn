@@ -1063,6 +1063,7 @@
     <Compile Include="Models\LotR\Token.cs" />
     <Compile Include="Models\LotR\Uniqueness.cs" />
     <Compile Include="Models\RingsDb\RingsDbDeckList.cs" />
+    <Compile Include="Models\RingsDb\RingsDbVersion.cs" />
     <Compile Include="Models\TranslationMap.cs" />
     <Compile Include="Models\View.cs" />
     <Compile Include="Models\YouTube\RingsDbCardLink.cs" />

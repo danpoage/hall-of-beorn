@@ -12,6 +12,7 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Simple;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Design;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
@@ -27,6 +28,7 @@ namespace HallOfBeorn.Controllers
             cardRepository = (LotRCardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
             scenarioService = (IScenarioService)System.Web.HttpContext.Current.Application[LotRServiceNames.ScenarioService];
             searchService = (SearchService)System.Web.HttpContext.Current.Application[LotRServiceNames.SearchService];
+            cardDesignService = (ICardDesignService)System.Web.HttpContext.Current.Application[LotRServiceNames.CardDesignService];
             octgnService = (IOctgnService)System.Web.HttpContext.Current.Application[LotRServiceNames.OctgnService];
             ringsDbService = GetService<IRingsDbService>(LotRServiceNames.RingsDbService);
         }
@@ -35,6 +37,7 @@ namespace HallOfBeorn.Controllers
         private readonly ProductRepository productRepository;
         private readonly LotRCardRepository cardRepository;
         private readonly IScenarioService scenarioService;
+        private readonly ICardDesignService cardDesignService;
         private readonly IOctgnService octgnService;
         private readonly IRingsDbService ringsDbService;
 
@@ -189,6 +192,42 @@ namespace HallOfBeorn.Controllers
             simpleCard.RingsDbVotes = ringsDbService.GetVotes(card.Slug);
 
             return simpleCard;
+        }
+
+        public ActionResult BeornBot(string lang)
+        {
+            Func<string, string> getRingsDbCode = (slug) =>
+                    ringsDbService.GetCardId(slug);
+
+            Func<string, string> getOctgnId = (slug) =>
+                octgnService.GetCardOctgnGuid(slug);
+
+            var cards = new List<Models.RingsDb.RingsDbCard>();
+
+            Language language;
+
+            if (!Enum.TryParse<Language>(lang, out language))
+            {
+                language = Language.EN;
+            }
+
+            foreach (var design in cardDesignService.Designs(language))
+            {
+                cards.Add(
+                    Models.RingsDb.RingsDbCard.FromDesign(design, getRingsDbCode, getOctgnId));
+            }
+
+            var content = JsonConvert.SerializeObject(cards, 
+                Formatting.None, 
+                new JsonSerializerSettings { 
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+
+            return new ContentResult {
+                Content = content,
+                ContentEncoding = System.Text.Encoding.UTF8,
+                ContentType = "application/json",
+            };
         }
 
         public ActionResult Cards(string setType)

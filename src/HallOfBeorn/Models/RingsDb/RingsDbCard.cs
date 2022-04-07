@@ -42,6 +42,7 @@ namespace HallOfBeorn.Models.RingsDb
         public string imagesrc { get; set; }
         public string imagesrc2 { get; set; }
         public string shadow { get; set; }
+        public RingsDbVersion[] versions { get; set; }
 
         private static string Normalize(string text)
         {
@@ -107,6 +108,21 @@ namespace HallOfBeorn.Models.RingsDb
         {
             SetType.First_Age, SetType.A_Long_extended_Party
         };
+
+        public static RingsDbCard FromDesign(
+            LotR.CardDesign design,
+            Func<string, string> getRingsDbCode, Func<string, string> getOctgnId)
+        {
+            var card = FromCard(design.First, getRingsDbCode, getOctgnId);
+
+            if (design.Versions.Count() > 1)
+            {
+                card.versions = design.Versions.Select(v =>
+                    new RingsDbVersion { set_name = v.CardSetName, year = v.CardSet.Product.FirstReleased.Year.ToString() }).ToArray();
+            }
+
+            return card;
+        }
 
         public static RingsDbCard FromCard(
             LotR.LotRCard card, 
