@@ -673,6 +673,9 @@ namespace HallOfBeorn.Models
             //all.Add(Artist.Falk);
             //all.Add(Artist.Linda_Tso);
 
+            //Dark of Mirkwood
+            all.Add(Artist.Andreas_Zafiratos);
+
             //Characters
             all.Add(Artist.Weta_Workshop);
 
@@ -1293,6 +1296,7 @@ namespace HallOfBeorn.Models
         public static Artist Alyn_Spiller = new Artist { Name = "Alyn Spiller", URL = "http://niltrace.deviantart.com" };
         public static Artist Andreia_Ugrai = new Artist { Name = "Andreia Ugrai", URL = "http://andreiaugrai.deviantart.com" };
         public static Artist Andreas_Adamek = new Artist { Name = "Andreas Adamek", URL = "https://www.artstation.com/paintangel" };
+        public static Artist Andreas_Zafiratos = new Artist { Name = "Andreas Zafiratos", URL = "https://www.deviantart.com/albino-z" };
         public static Artist Andrew_Johanson = new Artist { Name = "Andrew Johanson", URL = "http://andrewjohanson.blogspot.com" };
         public static Artist Andrew_Olson = new Artist { Name = "Andrew Olson", URL = "http://mysticaldonkey1.deviantart.com" };
         public static Artist Andrew_Ryan = new Artist { Name = "Andrew Ryan", URL = "http://andrewryanart.deviantart.com" };

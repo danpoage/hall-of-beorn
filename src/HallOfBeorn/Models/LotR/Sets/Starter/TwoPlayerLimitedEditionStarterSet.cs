@@ -356,6 +356,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithText("Action: Return a Silvan ally you control to your hand to choose a player. Deal 1 damage to each enemy engaged with that player.")
                 .WithFlavor("The marauding orcs had been waylaid and almost all destroyed...\r\n-The Fellowship of the Ring")
                 .WithInfo(65, 2, Artist.Cristi_Balanescu);
+
             addEnemy("Spiders of Mirkwood", setOath, 18, 3, 2, 2, 4)
                 .WithTraits("Spider.")
                 .WithText("While it is engaged with you, Spiders of Mirkwood gets +1 Attack for each exhausted character you control.")
