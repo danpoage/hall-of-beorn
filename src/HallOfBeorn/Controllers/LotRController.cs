@@ -199,6 +199,11 @@ namespace HallOfBeorn.Controllers
             return Json(details, JsonRequestBehavior.AllowGet);
         }
 
+        public JsonResult Version()
+        {
+            return Json(new { version = "2.4.1" }, JsonRequestBehavior.AllowGet);
+        }
+
         public ActionResult Search(SearchViewModel model)
         {
             if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
