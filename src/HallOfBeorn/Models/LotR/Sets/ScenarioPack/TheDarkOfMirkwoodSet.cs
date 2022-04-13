@@ -101,7 +101,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithText("Travel: Reveal the top card of the encounter deck to travel here.\r\nResponse: When Goblin Trail leaves play as an explored location, place 6 progress on the current quest.")
                 .WithVictoryPoints(3)
                 .WithInfo(14, 2, Artist.Jokubas_Uoginitas);
-            addLocation("Ambandoned Camp", setOath, 2, 3)
+            addLocation("Abandoned Camp", setOath, 2, 3)
                 .WithTraits("Forest.")
                 .WithTextLine("Response: After the players travel to Abandoned Camp, the first player discards the top card of their deck, If that card is any ally, put it into play under their control.")
                 .WithTextLine("Travel: Discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.")
@@ -141,7 +141,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithInfo(22, 2, Artist.Jarreau_Wimberly);
             addEnemy("Wild Wargs", setGoblins, 28, 2, 2, 1, 3)
                 .WithTraits("Creature.", "Warg.")
-                .WithTextLine("")
+                .WithTextLine("Forced: After Wild Wargs engages you, discard the top card of the encounter deck. If that card is a Goblin enemy, put it into play engaged with you.")
                 .WithFlavor("\"Where the Warg howls, there the Orc prowls.\"")
                 .WithInfo(23, 1, Artist.Piya_Wannachaiwong);
             addTreachery("Goblins are Upon You!", setGoblins)
@@ -230,7 +230,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
             addEnemy("Stalking Goblin", setOath, 10, 2, 2, 2, 2)
                 .WithBurden()
                 .WithTraits("Goblin.", "Orc.")
-                .WithTextLine("Forced: ")
+                .WithTextLine("Forced: After Stalking Goblin engages you, search the encounter deck, discard pile, and your collection (in that order) for a Goblin Sniper and add it to the staging area. Shuffle the encounter deck.")
                 .WithShadow("Shadow: Add Stalking Goblin to the staging area.")
                 .WithInfo(41, 1, Artist.JB_Casacop);
             addTreachery("Shiny Distraction", setCaves)
@@ -284,19 +284,19 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
             addEvent("Ranger Sense", 0, Sphere.Neutral)
                 .WithBoon()
                 .WithTextLine("When playing this card, choose one:")
-                .WithTextLine("Action: Remove Range Sense from the game and from the Campaign Pool to look at the top 4 cards of your deck. Add 1 to your hand and put the rest back in any order.")
+                .WithTextLine("Action: Remove Ranger Sense from the game and from the Campaign Pool to look at the top 4 cards of your deck. Add 1 to your hand and put the rest back in any order.")
                 .WithTextLine("Action: Draw 1 card.")
                 .WithInfo(49, 4, Artist.Andreas_Zafiratos);
             addCampaign(setOath, setOath, "Mirkwood Paths")
                 .WithTextLine("You are playing Campaign Mode.")
-                .WithTextLine("Setup: Each player chooses 1 Adaptation boon attachment and attaches it to one of their heroes. Shuffle the Stalking Goblins burden enemy into the encounter deck. Add Stalking Goblin and each attached Adaptation to the Campaign Pool.")
-                .WithTextLine("Response: At the end of each round, place 1 resource token here.")
+                .WithTextLine("Setup: Each player chooses 1 Adaptation boon attachment and attaches it to one of their heroes. Shuffle the Stalking Goblin burden enemy into the encounter deck. Add Stalking Goblin and each attached Adaptation to the Campaign Pool.")
+                .WithTextLine("Forced: At the end of each round, place 1 resource token here.")
                 .WithOppositeTextLine("Resolution: If there are 6 or more resource tokens here, the thought of the captured villagers suffering weighs heavily on you. Add the Guilty Conscience treachery burden to the Campaign Pool.")
                 .WithOppositeFlavorLine("You have defeated the enemy rearguard, but the rest have escaped into the Mountains of Mirkwood with their prisoners. You must track the goblins to their hold if you are to fulfill your oath.")
                 .WithInfo(50, 1, Artist.Stanislav_Dikolenko);
             addCampaign(setCaves, setCaves, "Mirkwood Paths")
                 .WithTextLine("You are playing Campaign Mode.")
-                .WithTextLine("Setup: Each player adds 2 copy of the \"No Time to Waste!\" boon to their hand after drawing their starting hand (including taking a mulligan). Add each copy of \"No Time to Waste!\" in a player's hand to the Campaign Pool. Shuffle the Shiny Distraction burden into the encounter deck and add it to the Campaign Pool.")
+                .WithTextLine("Setup: Each player adds a copy of the \"No Time to Waste!\" boon to their hand after drawing their starting hand (including taking a mulligan). Add each copy of \"No Time to Waste!\" in a player's hand to the Campaign Pool. Shuffle the Shiny Distraction burden into the encounter deck and add it to the Campaign Pool.")
                 .WithFlavorLine("That, of course, is the dangerous part about caves: you don't know how far they go back...")
                 .WithFlavorLine("-The Hobbit")
                 .WithOppositeTextLine("Resolution: Check the final threat of the player with the highest threat: If it is under 40, you have rescued a retired Ranger who shares his wisdom with you. Each player may add 1 copy of Ranger Sense to their deck and to the Campaign Pool. At the start of your next campaign, each player may also shuffle 1 copy of Ranger Sense into their deck and add it to the Campaign Pool.")

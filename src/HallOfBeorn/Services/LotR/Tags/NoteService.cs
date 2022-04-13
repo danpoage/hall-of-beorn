@@ -75,6 +75,7 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Narvi's-Belt-KD", "<p>Should read: <blockquote><b>Action:</b> Exhaust Narvi’s Belt to give attached hero a <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Leadership.png' />, <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Lore.png' />, <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Tactics.png' />, or <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Spirit.png' /> icon until the end of the phase.</blockquote></p>", version);
             addFaq("Out-of-Sight-TLD", "<p>Should read: <blockquote><b>Action:</b> Enemies engaged with you cannot attack you this phase.</blockquote>", version);
             addFaq("Nori-THOHaUH", "<p>Should read: <blockquote><b>Response:</b> After you play a Dwarf character from your hand, reduce your threat by 1.</blockquote></p>", version);
+            addFaq("Nori-DoD", "<p>Should read: <blockquote><b>Response:</b> After you play a Dwarf character from your hand, reduce your threat by 1.</blockquote></p>", version);
             addFaq("Thror's-Map-THOHaUH", "<p>Should read: Should read: <blockquote><b>Travel Action:</b> Exhaust Thrór’s Map to choose a location in the staging area...</blockquote></p>", version);
             addFaq("Troll-Purse-THOHaUH", "<p>Should read: <blockquote>If Troll Purse is discarded, add it to the staging area. If Troll Purse is unattached and in the staging area, attach it to a <b><i>Troll</i></b> enemy, if able.</blockquote></p>", version);
             addFaq("Troll-Key-THOHaUH", "<p>Should read: <blockquote>If Troll Key is discarded, add it to the staging area. If Troll Key is unattached and in the staging area, attach it to a <b><i>Troll</i></b> enemy, if able.</blockquote></p>", version);
@@ -142,6 +143,7 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Erebor-Battle-Master-TLD", "<p>Should read: <blockquote>Erebor Battle Master gets +1 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> for each other <b><i>Dwarf</i></b> ally you control. (Limit +4 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />.)</blockquote></p>", version);
             addFaq("Thror's-Map-THOHaUH", "<p>Should read: <blockquote><b>Travel Action:</b> Discard Thrór's Map to choose a location in the staging area.</blockquote></p>", version);
             addFaq("Helm-of-Secrecy-UtAM", "<p>Should read: <blockquote>Swap those heroes, moving all eligible attachments to the hero from your collection.</blockquote><br>Omit &ldquo;and damage tokens&rdquo;</p>", version);
+            addFaq("Helm-of-Secrecy-DoG", "<p>Should read: <blockquote>Swap those heroes, moving all eligible attachments to the hero from your collection.</blockquote><br>Omit &ldquo;and damage tokens&rdquo;</p>", version);
         }
 
         private void loadFaq21()
@@ -150,13 +152,12 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Dain-Ironfoot-RtM", "<p>Should have the <b><i>Noble</i></b> trait.</p>", version);
             addFaq("Dain-Ironfoot-DoD", "<p>Should have the <b><i>Noble</i></b> trait.</p>", version);
             addFaq("Ered-Luin-Miner-TotD", "<p>Should read: <blockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);
-            addFaq("Ered-Luin-Miner-DoD", "<p>Should read: <blockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);            
-            addFaq("Helm-of-Secrecy-DoG", "<p>Should read: <blockquote>Swap those heroes, moving all eligible attachments to the hero from your collection.</blockquote><br>Omit &ldquo;and damage tokens&rdquo;</p>", version);
-            addFaq("Nori-DoD", "<p>Should read: <blockquote><b>Response:</b> After you play a Dwarf character from your hand, reduce your threat by 1.</blockquote></p>", version);
+            addFaq("Ered-Luin-Miner-DoD", "<p>Should read: <blockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);
             addFaq("Silvan-Refugee-TDF", "<p>Should have the <b><i>Scout</i></b> trait.</p>", version);
             addFaq("Silvan-Refugee-EoL", "<p>Should have the <b><i>Scout</i></b> trait.</p>", version);
             addFaq("Healing-Herbs-FoS", "<p>Should have the <b><i>Item</i></b> trait.</p>", version);
             addFaq("Healing-Herbs-DoD", "<p>Should have the <b><i>Item</i></b> trait.</p>", version);
+            addFaq("The-Oath-Campaign-TDoM", "<p>Should read: <blockquote><b>Forced:</b> At the end of each round, place 1 resource token here.</p>", version);
         }
 
         private void loadFaqs()
