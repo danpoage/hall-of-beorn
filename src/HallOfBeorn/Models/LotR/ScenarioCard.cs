@@ -37,15 +37,29 @@ namespace HallOfBeorn.Models.LotR
         private void Init(LotRCard card)
         {
             Card = card;
-            var suffix = card.CardType == CardType.Scenario
-                ? "Scenario"
-                : card.SlugSuffix;
-            Title = !string.IsNullOrEmpty(suffix) ? string.Format("{0} ({1})", card.Title, suffix) : card.Title;
+            Title = getTitle(card);
             Slug = card.Slug;
             Set = card.CardSet.NormalizedName;
             EncounterSet = card.EncounterSet;
             EncounterSetNumber = card.CardSet.Number;
             Link = string.Format("/LotR/Details/{0}", card.Slug);
+        }
+
+        private static string getTitle(LotRCard card)
+        {
+            var suffix = string.Empty;
+            
+            if (card.CardType == CardType.Scenario) {
+                suffix = "Scenario";
+            } else if (card.CardSubtype != CardSubtype.None) {
+                suffix = card.CardSubtype.ToString();
+            } else suffix = card.SlugSuffix;
+
+            var title = !string.IsNullOrEmpty(suffix) 
+                ? string.Format("{0} ({1})", card.Title, suffix) 
+                : card.Title;
+
+            return title;
         }
 
         public LotRCard Card { get; private set; }

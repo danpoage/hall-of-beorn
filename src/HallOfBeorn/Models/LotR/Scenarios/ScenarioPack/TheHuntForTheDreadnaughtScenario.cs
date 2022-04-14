@@ -1,4 +1,4 @@
-﻿namespace HallOfBeorn.Models.LotR.Scenarios.PrintOnDemand
+﻿namespace HallOfBeorn.Models.LotR.Scenarios.ScenarioPack
 {
     public class TheHuntForTheDreadnaughtScenario
         : Scenario

@@ -5,7 +5,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
         public JourneyAlongTheAnduinCampaignScenario()
             : base(true)
         {
-            Title = "Journey Along the Anduin Campaign";
+            Title = "Journey Along the Anduin (Campaign)";
             ProductName = "Revised Core Set";
             GroupName = "Revised Core Set";
             Number = 2;

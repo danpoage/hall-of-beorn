@@ -33,6 +33,8 @@ namespace HallOfBeorn
                 .Replace("”", string.Empty)
                 .Replace("«", string.Empty)
                 .Replace("»", string.Empty)
+                .Replace("(", string.Empty)
+                .Replace(")", string.Empty)
                 .Trim();
         }
 

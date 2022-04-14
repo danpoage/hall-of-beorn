@@ -4,7 +4,7 @@
 .flavor-text-right {font-family: 'Times New Roman';font-size: small;font-style: italic;margin-left: auto;margin-right: auto;text-align: right;width: 88%;}
 .scenario-sub-group {margin: 12px 0px 0px 24px; font-family: Arial; font-size: 14px; color: gray;}
 .scenario-view-link {margin: 4px 8px 4px 8px; font-weight: bold; color: darkgrey;}
-.scenario-title{display: inline-block; width: 220px;margin:4px;}
+.scenario-title{display: inline-block; width: 250px;margin:4px;}
 .scenario-difficulty{display:inline-block; width: 200px; margin-left: 4px;}
 .difficulty-icon{margin-bottom: -2px;}
 .difficulty-votes{color:gray;font-size:12px;margin-left:8px;margin-bottom:2px;}

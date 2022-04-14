@@ -9,9 +9,9 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
         : CardSet
     {
         public const string setName = "The Dark of Mirkwood";
-        public const string setOath = "The Oath";
-        public const string setGoblins = "The Goblins";
-        public const string setCaves = "The Caves of Nibin-Dûm";
+        public const string setOath = "The Oath (Campaign)";
+        public const string setGoblins = "The Goblins (Campaign)";
+        public const string setCaves = "The Caves of Nibin-Dûm (Campaign)";
 
         protected override void Initialize()
         {
@@ -25,45 +25,45 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithFlavor("Marauding Goblins have raided a woodman village on the eaves of Mirkwood forest. The Goblins killed the guards and took many of the villages captive. Those left behind beg you to rescue their loved ones.")
                 .WithText("Setup: ~Search the encounter deck for 1 copy of The Eaves of ~Mirkwood and ~Goblin Troop. Add The Eaves of ~Mirkwood to the staging area and set ~Goblin Troop aside, out of play. Shuffle of the encounter deck.")
                 .WithOppositeFlavor("You swear an oath to the survivors that you will rescue the captured woodmen and bring justice to the Goblins who attacked them, then you enter Mirkwood forest to find their trail.")
-                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithIncludedEncounterSets(EncounterSet.TheGoblinsCampaign)
                 .WithInfo(1, 1, Artist.Stanislav_Dikolenko);
             addQuest("Mirkwood Forest", setOath, 2, 'A', 12)
                 .WithFlavor("The Goblins' trail leads you deeper into the dark forest of Mirkwood. The enemy has a significant lead, but the sign of their passing is easy to follow. You may yet overtake them if you press on.")
                 .WithOppositeText("When Revealed: Each player searches the encounter deck and discard pile for a Forest location and adds it to the staging area. Shuffle the encounter deck. This stage cannot be defeated unless at least 1 copy of ~Goblin Trail is in the vitory display.")
-                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithIncludedEncounterSets(EncounterSet.TheGoblinsCampaign)
                 .WithInfo(2, 1, Artist.Jeff_Lee_Johnson);
             addQuest("The Rearguard", setOath, 3, 'A', 6)
                 .WithText("When Revealed: The first player adds the set-aside ~Goblin Troop to the staging area. Each other player searches the encounter deck and discard pile for a Goblin enemy and adds it to the staging area.")
                 .WithOppositeFlavor("The Goblins are aware of your pursuit and form a rearguard to confront you while the others retreat to their secret hideaway. You must defeat this troop before you can continue your chanse.")
                 .WithOppositeText("This stage cannot be defeated while Goblin Troop is in play. When this stage is defeated, the heroes discover the trail to the Goblins' secret lair and the players win the game.")
-                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithIncludedEncounterSets(EncounterSet.TheGoblinsCampaign)
                 .WithInfo(3, 1, Artist.Stanislav_Dikolenko);
             addQuest("The Dark of Nibin-Dûm", setCaves, 1, 'A', 8)
                 .WithFlavor("You have pursued the Goblins that attacked a woodman village to the mountains of Mirkwood. The trail leads over a steep ridge where you discover the forgotten Dwarf home of Nibin-Dûm. You light a torch and enter in.")
                 .WithText("Setup: ~Search the encounter deck for ~Goblin ~Chieftain, Cracked Pillar, and ~Cave ~Torch. Set ~Goblin ~Chieftain and Cracked Pillar aside, out of play. The first player attached ~Cave ~Torch to one of his heroes. Shuffle the encounter deck.")
                 .WithOppositeFlavor("The Dwarves abandonded Nibin-Dûm after an earthquake collapsed part of the mine, but it seems these Goblins have since adopted it as their home. The flickering light of your torch reveals a network of dark passages and you set about searching for signs of the enemy.")
                 .WithOppositeText("When Revealed: Each player searches the encounter deck for a different location and adds it to the staging area. Shuffle the encounter deck.")
-                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithIncludedEncounterSets(EncounterSet.TheGoblinsCampaign)
                 .WithInfo(4, 1, Artist.Jason_Jenicke);
             addQuest("Surprise Attack", setCaves, 2, 'A', 0)
                 .WithFlavor("As you search the caves of Nibin-Dûm you are ambushed by Goblins!")
                 .WithText("When Revealed: Add ~Goblin Chieftain to the staging area. Each player searches the encounter deck and discard pile for a different enemy of his choice and adds it to the staging area. Shuffle the encounter deck.")
                 .WithOppositeFlavor("The Goblins are led by a large chieftain who whips them into a frenzy. His soldiers attack you with reckless savagery and you struggle to gain the upper hand.")
                 .WithOppositeText("During the encounter phase, treat each enemy's engagement cost as if it were 0.\r\nThe stage gets +4 quest points for each enemy in play.")
-                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithIncludedEncounterSets(EncounterSet.TheGoblinsCampaign)
                 .WithInfo(5, 1, Artist.Stanislav_Dikolenko);
             addQuest("The Chasm", setCaves, 3, 'A', Card.VALUE_NA)
                 .WithFlavor("The Goblins retreat down a dark tunnel, and you chase them into a large hall of many pillars. A wide chasm runs the width of the hall and the Goblins race across on a large plank. Their chieftain casts the plan into the depths of the chasm and disappeats, leaving you stranded on the other side.")
                 .WithText("When Revealed: Set ~Goblin ~Chieftain aside, out of play. Add Cracked Pillar to the staging area.")
                 .WithOppositeFlavor("As you search for a way across, you see that one tall pillar near the edge of the chasm has cracked where it meets the ceiling. If you topple the pillar, it could serve to bridge the gap.")
                 .WithOppositeText("Forced: Reveal an additional encounter card during the quest phase.\r\nProgress cannot be placed on Cracked Pillar while it is in the staging area.\r\nAfter Cracked Pillar leaves play as an explored location, advance to stage 4A.")
-                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithIncludedEncounterSets(EncounterSet.TheGoblinsCampaign)
                 .WithInfo(6, 1, Artist.Stanislav_Dikolenko);
             addQuest("Oathkeepers", setCaves, 4, 'A', 8)
                 .WithFlavor("You've made it across the chasm and resumed the chase. The Goblins rally around their chieftain outside the dungeons where the woodmen villagers are being held. You must defeat the big Goblin if you are to fulfill your oath and rescue the captives.")
                 .WithText("When Revealed: Add ~Goblin ~Chieftain to the staging area.")
                 .WithOppositeText("While there are at least 8 progress tokens on this stage, ~Goblin ~Chieftain loses the text: \"Cannot take damage.\"\r\nThis stage cannot be defeated while ~Goblin ~Chieftain is in play. When this stage is defeated, the heroes rescue the captives, fulfilling their oaths, and the players win the game!")
-                .WithIncludedEncounterSets(EncounterSet.TheGoblins)
+                .WithIncludedEncounterSets(EncounterSet.TheGoblinsCampaign)
                 .WithInfo(7, 1, Artist.Alexander_Kozachenko);
 
             addEnemy("Spiders of Mirkwood", setOath, 18, 3, 2, 2, 4)
@@ -234,6 +234,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithShadow("Shadow: Add Stalking Goblin to the staging area.")
                 .WithInfo(41, 1, Artist.JB_Casacop);
             addTreachery("Shiny Distraction", setCaves)
+                .WithBurden()
                 .WithTraits("Treasure.")
                 .WithKeywords("Surge.", "Doomed 1.")
                 .WithTextLine("When Revealed: Each player may add 1 resource to each of their heroes' pools. Each player that does raises their threat by 5.")
@@ -287,14 +288,14 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithTextLine("Action: Remove Ranger Sense from the game and from the Campaign Pool to look at the top 4 cards of your deck. Add 1 to your hand and put the rest back in any order.")
                 .WithTextLine("Action: Draw 1 card.")
                 .WithInfo(49, 4, Artist.Andreas_Zafiratos);
-            addCampaign(setOath, setOath, "Mirkwood Paths")
+            addCampaign("The Oath", setOath, "Mirkwood Paths")
                 .WithTextLine("You are playing Campaign Mode.")
                 .WithTextLine("Setup: Each player chooses 1 Adaptation boon attachment and attaches it to one of their heroes. Shuffle the Stalking Goblin burden enemy into the encounter deck. Add Stalking Goblin and each attached Adaptation to the Campaign Pool.")
                 .WithTextLine("Forced: At the end of each round, place 1 resource token here.")
                 .WithOppositeTextLine("Resolution: If there are 6 or more resource tokens here, the thought of the captured villagers suffering weighs heavily on you. Add the Guilty Conscience treachery burden to the Campaign Pool.")
                 .WithOppositeFlavorLine("You have defeated the enemy rearguard, but the rest have escaped into the Mountains of Mirkwood with their prisoners. You must track the goblins to their hold if you are to fulfill your oath.")
                 .WithInfo(50, 1, Artist.Stanislav_Dikolenko);
-            addCampaign(setCaves, setCaves, "Mirkwood Paths")
+            addCampaign("The Caves of Nibin-Dûm", setCaves, "Mirkwood Paths")
                 .WithTextLine("You are playing Campaign Mode.")
                 .WithTextLine("Setup: Each player adds a copy of the \"No Time to Waste!\" boon to their hand after drawing their starting hand (including taking a mulligan). Add each copy of \"No Time to Waste!\" in a player's hand to the Campaign Pool. Shuffle the Shiny Distraction burden into the encounter deck and add it to the Campaign Pool.")
                 .WithFlavorLine("That, of course, is the dangerous part about caves: you don't know how far they go back...")

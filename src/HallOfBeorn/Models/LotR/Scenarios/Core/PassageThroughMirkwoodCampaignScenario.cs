@@ -5,7 +5,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
         public PassageThroughMirkwoodCampaignScenario()
             : base(true)
         {
-            Title = "Passage Through Mirkwood Campaign";
+            Title = "Passage Through Mirkwood (Campaign)";
             ProductName = "Revised Core Set";
             GroupName = "Revised Core Set";
             Number = 1;

@@ -544,7 +544,10 @@ namespace HallOfBeorn.Models.LotR
         public static Scenario MurderAtThePrancingPony = new Scenarios.PrintOnDemand.MurderAtThePrancingPonyScenario();
         public static Scenario TheSiegeOfAnnuminas = new Scenarios.PrintOnDemand.TheSiegeOfAnnuminasScenario();
         public static Scenario AttackOnDolGuldur = new Scenarios.PrintOnDemand.AttackOnDolGuldurScenario();
-        public static Scenario TheHuntForTheDreadnaught = new Scenarios.PrintOnDemand.TheHuntForTheDreadnaughtScenario();
+
+        public static Scenario TheHuntForTheDreadnaught = new Scenarios.ScenarioPack.TheHuntForTheDreadnaughtScenario();
+        public static Scenario TheOathCampaign = new Scenarios.ScenarioPack.TheOathCampaignScenario();
+        public static Scenario TheCavesOfNibinDumCampaign = new Scenarios.ScenarioPack.TheCavesOfNibinDumCampaignScenario();
 
         public static Scenario HuntingOfTheWolf = new Scenarios.FirstAge.HuntingOfTheWolfScenario();
         public static Scenario TheIsleOfWerewolves = new Scenarios.FirstAge.TheIsleOfWerewolvesScenario();

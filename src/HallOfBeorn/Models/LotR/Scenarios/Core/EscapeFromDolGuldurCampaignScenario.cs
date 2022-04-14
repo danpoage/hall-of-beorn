@@ -5,7 +5,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.Core
         public EscapeFromDolGuldurCampaignScenario()
             : base(true)
         {
-            Title = "Escape from Dol Guldur Campaign";
+            Title = "Escape from Dol Guldur (Campaign)";
             ProductName = "Revised Core Set";
             GroupName = "Revised Core Set";
             Number = 3;
