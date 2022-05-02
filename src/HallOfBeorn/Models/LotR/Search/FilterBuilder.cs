@@ -23,37 +23,37 @@ namespace HallOfBeorn.Models.LotR.Search
                 case ErrataVersion.No_Errata:
                     return new SearchFilter((s, c) => { return !hasErrata(c.Slug, 0); }, 100, "Does Not Have Errata");
                 case ErrataVersion.FAQ_1_1:
-                    faq = 1.1;
+                    faq = 1.01;
                     break;
                 case ErrataVersion.FAQ_1_2:
-                    faq = 1.2;
+                    faq = 1.02;
                     break;
                 case ErrataVersion.FAQ_1_3:
-                    faq = 1.3;
+                    faq = 1.03;
                     break;
                 case ErrataVersion.FAQ_1_4:
-                    faq = 1.4;
+                    faq = 1.04;
                     break;
                 case ErrataVersion.FAQ_1_5:
-                    faq = 1.5;
+                    faq = 1.05;
                     break;
                 case ErrataVersion.FAQ_1_6:
-                    faq = 1.6;
+                    faq = 1.06;
                     break;
                 case ErrataVersion.FAQ_1_7:
-                    faq = 1.7;
+                    faq = 1.07;
                     break;
                 case ErrataVersion.FAQ_1_8:
-                    faq = 1.8;
+                    faq = 1.08;
                     break;
                 case ErrataVersion.FAQ_1_9:
-                    faq = 1.9;
+                    faq = 1.09;
                     break;
-                case ErrataVersion.FAQ_2_0:
-                    faq = 2.0;
+                case ErrataVersion.FAQ_1_10:
+                    faq = 1.10;
                     break;
-                case ErrataVersion.FAQ_2_1:
-                    faq = 2.1;
+                case ErrataVersion.FAQ_1_11:
+                    faq = 1.11;
                     break;
                 default:
                     break;

@@ -28,22 +28,22 @@ namespace HallOfBeorn.Services.LotR.Tags
         private void loadDates()
         {
             datesByVersion[1.0] = new DateTime(2011, 5, 20);
-            datesByVersion[1.1] = new DateTime(2011, 6, 28);
-            datesByVersion[1.2] = new DateTime(2011, 11, 2); 
-            datesByVersion[1.3] = new DateTime(2012, 8, 1);
-            datesByVersion[1.4] = new DateTime(2013, 2, 27);
-            datesByVersion[1.5] = new DateTime(2013, 7, 28);
-            datesByVersion[1.6] = new DateTime(2014, 2, 6);
-            datesByVersion[1.7] = new DateTime(2015, 1, 20);
-            datesByVersion[1.8] = new DateTime(2016, 1, 26);
-            datesByVersion[1.9] = new DateTime(2017, 11, 15);
-            datesByVersion[2.0] = new DateTime(2019, 9, 9);
-            datesByVersion[2.1] = new DateTime(2022, 3, 3);
+            datesByVersion[1.01] = new DateTime(2011, 6, 28);
+            datesByVersion[1.02] = new DateTime(2011, 11, 2); 
+            datesByVersion[1.03] = new DateTime(2012, 8, 1);
+            datesByVersion[1.04] = new DateTime(2013, 2, 27);
+            datesByVersion[1.05] = new DateTime(2013, 7, 28);
+            datesByVersion[1.06] = new DateTime(2014, 2, 6);
+            datesByVersion[1.07] = new DateTime(2015, 1, 20);
+            datesByVersion[1.08] = new DateTime(2016, 1, 26);
+            datesByVersion[1.09] = new DateTime(2017, 11, 15);
+            datesByVersion[1.10] = new DateTime(2019, 9, 9);
+            datesByVersion[1.11] = new DateTime(2022, 3, 3);
         }
 
-        private void loadFaq11()
+        private void loadFaq101()
         {
-            var version = 1.1;
+            var version = 1.01;
             addFaq("Eleanor-Core", "<p>Eleanor's Response can be used during initial game Setup if necessary, but remember that When Revealed effects don't occur unless the setup text specifically says to &quot;reveal&quot; cards (official FAQ v1.1).</p>", version);
             addFaq("Legolas-Core", "<p>If you have an active Location, progress tokens are placed there instead of the current Quest card (official FAQ v1.1). This benefit occurs any time Legolas is part of an attack that destroys an enemy, whether he attacks alone or with somebody else.</p>", version);
             addFaq("Thalin-Core", "<p>The ability resolves before any keyword (including <b>Doomed</b> and <b>Surge</b>) or <b>When Revealed</b> effects on the enemy which are never triggered if the ability destroys the enemy (official FAQ)</p>", version);
@@ -53,23 +53,23 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("The-Necromancer's-Tower-Core", "<p>Should read: <blockquote>... reveal and place them in the staging area.</blockquote></p>", version);
         }
 
-        private void loadFaq12()
+        private void loadFaq102()
         {
-            var version = 1.2;
+            var version = 1.02;
             addFaq("Eleanor-Core", "<p>Eleanor's ability can't cancel other keywords, just When Revealed. Any When Revealed effects and keywords on the replacement card are still resolved because it is considered &quot;Revealed&quot; (errata, FAQ 1.2).</p>", version);
         }
 
-        private void loadFaq13()
+        private void loadFaq103()
         {
-            var version = 1.3;
+            var version = 1.03;
             addFaq("Beravor-Core", "<p>Should read: <blockquote><b>Action:</b> Exhaust Beravor to choose a player. That player draws 2 cards. Limit once per round.</blockquote></p>", version);
             addFaq("Protector-of-Lorien-Core", "<p>Should read: <blockquote><b>Action:</b> Discard a card from your hand to give attached hero +1 <img src='/Images/defense-small.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> or +1 <img src='/Images/willpower-small.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> until the end of the phase. Limit 3 times per phase.</blockquote></p>", version);
             addFaq("Zigil-Miner-KD", "<p>Should read: <blockquote><b>Action:</b> Exhaust Zigil Miner and name a number to discard the top 2 cards of your deck. If at least one of those cards has cost equal to the named number, choose a hero you control. For each card that matches the named number, add 1 resource to that hero’s resource pool.</blockquote></p>", version);
         }
 
-        private void loadFaq14()
+        private void loadFaq104()
         {
-            var version = 1.4;
+            var version = 1.04;
             addFaq("Feint-Core", "<p>Should read: <blockquote><b>Combat Action:</b> Choose an enemy engaged with a player. That enemy cannot attack that player this phase.</blockquote></p>", version);
             addFaq("Thicket-of-Spears-Core", "<p>Should read: <blockquote><b>Action:</b> Choose a player. That player’s engaged enemies cannot attack that player this phase.</blockquote></p>", version);
             addFaq("Narvi's-Belt-KD", "<p>Should read: <blockquote><b>Action:</b> Exhaust Narvi’s Belt to give attached hero a <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Leadership.png' />, <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Lore.png' />, <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Tactics.png' />, or <img style='margin-bottom:-4px;margin-left:-2px;margin-right:-4px;height:16px;width:16px;' src='/Images/Spirit.png' /> icon until the end of the phase.</blockquote></p>", version);
@@ -83,26 +83,26 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Blocking-Wargs-HoN", "<p>Should read: <blockquote>Surge. <b>When Revealed:</b> Deal 1 damage to each character committed to the quest.</blockquote><br>Omit the parenthetical.</p>", version);
         }
 
-        private void loadFaq15()
+        private void loadFaq105()
         {
-            var version = 1.5;
+            var version = 1.05;
             addFaq("Snow-Warg-TRG", "<p>Should read: <blockquote><b>Forced:</b> After a character is declared as a defender against Snow Warg, deal 1 damage to the defending character, if able.</blockquote></p>", version);
             addFaq("Ravens-of-the-Mountain-THOtD", "<p>Should read: <blockquote><b>Action:</b> Exhaust a hero you control to shuffle the encounter deck and look at its top card..</blockquote></p>", version);
             addFaq("Lost-in-the-Dark-THOtD", "<p>Should read: <blockquote><b>When Revealed:</b> Reveal stage 3 and create a separate staging area for the first player using that stage. If there are no other players in the game, discard this stage and each card in its staging area. All other players advance to stage 4.</blockquote></p>", version);
         }
 
-        private void loadFaq16()
+        private void loadFaq106()
         {
-            var version = 1.6;
+            var version = 1.06;
             addFaq("Erebor-Battle-Master-TLD", "<p>Should read: <blockquote>Erebor Battle Master gets +1 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> for each other <b><i>Dwarf</i></b> ally you control.</blockquote></p>", version);
             addFaq("Expert-Treasure-hunter-THOtD", "<p>Should read: </blockquote>Attach to a hero. Limit 1 per hero.</blockquote></p>", version);
             addFaq("The-Ambush-TBoG", "<p>Should read: <blockquote>At the beginning of the combat phase, each player must either turn each of his hidden cards faceup, or take 1 hidden card.</blockquote></p>", version);
             addFaq("The-Cross-roads-TBoG", "<p>Should read: <blockquote>The current quest card gains siege (and loses battle).</blockquote></p>", version);
         }
 
-        private void loadFaq17()
+        private void loadFaq107()
         {
-            var version = 1.7;
+            var version = 1.07;
             addFaq("Will-of-the-West-Core", "<p>Should read: <blockquote><b>Action:</b> Choose a player. Shuffle that player’s discard pile back into his deck. Remove Will of the West from the game.</blockquote></p>", version);
             addFaq("A-Elbereth-Gilthoniel-SaF", "<p>Title should read: “A Elbereth! Gilthoniel!”</p><p>Should read: <blockquote><b>Resonse:</b> After a non-unique enemy attacks you...</blockquote></p>", version);
             addFaq("Secret-Entrance-THOtD", "<p>Should read: <blockquote>Then, look at the top card of the encounter deck. If the looked at card is not...</blockquote></p>", version);
@@ -114,18 +114,18 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Blue-Mountain-Trader-TDT", "<p>Should read: <blockquote>...Then, that player moves 1 resource from the resource pool of a hero he controls to the resource pool of a hero you control, or Blue Mountain Trader is discarded. (Limit once per round.)</blockquote></p>", version);
         }
 
-        private void loadFaq18()
+        private void loadFaq108()
         {
-            var version = 1.8;
+            var version = 1.08;
             addFaq("Horn-of-Gondor-Core", "<p>Should read: <blockquote><b>Response:</b> After a character is destroyed, add 1 resource to attached hero’s pool.</blockquote></p>", version);
             addFaq("Love-of-Tales-TLD", "<p>Should read: <blockquote><b>Response:</b> After a <b><i>Song</i></b> card is played, exhaust Love of Tales to add 1 resource...</blockquote></p>", version);
             addFaq("Devilry-of-Saruman-ToS", "<p>Should read: <blockquote><b>When Revealed:</b> Place 3 progress on the main quest...</blockquote></p>", version);
             addFaq("The-Passage-of-the-Marshes-Campaign-TLoS", "<p>Should read: <blockquote><b>Setup:</b> Each player may change hero cards he controls without incurring the +1 threat penalty. Each player shuffles 1 copy...</blockquote></p>", version);
         }
 
-        private void loadFaq19()
+        private void loadFaq109()
         {
-            var version = 1.9;
+            var version = 1.09;
             addFaq("Wandering-Took-Core", "<p>Should read: <blockquote>(Limit once per round.)</blockquote></p>", version);
             addFaq("Boromir-TDM", "<p>Should read: <blockquote>Raise your threat by 1 to ready Boromir. (Limit once per phase.)</blockquote></p>", version);
             addFaq("Out-of-the-Wild-RtR", "<p>Should read: <blockquote>Shuffle the encounter deck. Add Out of the Wild to the victory display.</blockquote></p>", version);
@@ -135,9 +135,9 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Wingfoot-NiE", "<p>Should read: <blockquote>If a card of the named type is revealed during this quest phase, exhaust Wingfoot to ready attached hero.</blockquote></p>", version);
         }
 
-        private void loadFaq20()
+        private void loadFaq110()
         {
-            var version = 2.0;
+            var version = 1.10;
             addFaq("A-Burning-Brand-CatC", "<p>Should read: <blockquote>Restricted. <b>Response:</b> Exhaust A Burning Brand to cancel a shadow effect just triggered during an attack that attached character is defending.</blockquote></p>", version);
             addFaq("Legacy-of-Durin-TWitW", "<p>Should read: <blockquote><b>Response:</b> After you play a <b><i>Dwarf</i></b> character from your hand, exhaust Legacy of Durin to draw 1 card.</blockquote></p>", version);
             addFaq("Erebor-Battle-Master-TLD", "<p>Should read: <blockquote>Erebor Battle Master gets +1 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' /> for each other <b><i>Dwarf</i></b> ally you control. (Limit +4 <img src='/Images/attack-med.png' style='height:16px;margin-left:2px;margin-right:2px;margin-bottom:-2px;' />.)</blockquote></p>", version);
@@ -146,9 +146,9 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Helm-of-Secrecy-DoG", "<p>Should read: <blockquote>Swap those heroes, moving all eligible attachments to the hero from your collection.</blockquote><br>Omit &ldquo;and damage tokens&rdquo;</p>", version);
         }
 
-        private void loadFaq21()
+        private void loadFaq111()
         {
-            var version = 2.1;
+            var version = 1.11;
             addFaq("Dain-Ironfoot-RtM", "<p>Should have the <b><i>Noble</i></b> trait.</p>", version);
             addFaq("Dain-Ironfoot-DoD", "<p>Should have the <b><i>Noble</i></b> trait.</p>", version);
             addFaq("Ered-Luin-Miner-TotD", "<p>Should read: <blockquote><b>Response:</b> After Ered Luin Miner is discarded from your deck, put it into play under your control.</blockquote></p>", version);
@@ -158,21 +158,23 @@ namespace HallOfBeorn.Services.LotR.Tags
             addFaq("Healing-Herbs-FoS", "<p>Should have the <b><i>Item</i></b> trait.</p>", version);
             addFaq("Healing-Herbs-DoD", "<p>Should have the <b><i>Item</i></b> trait.</p>", version);
             addFaq("The-Oath-Campaign-TDoM", "<p>Should read: <blockquote><b>Forced:</b> At the end of each round, place 1 resource token here.</p>", version);
+            addFaq("Dwarf-Pipe-TMk", "<p>Should read: <blockquote><b>Response:</b> After a card is discarded from your deck...</blockquote></p>", version);
+            addFaq("Dwarf-Pipe-DoD", "<p>Should read: <blockquote><b>Response:</b> After a card is discarded from your deck...</blockquote></p>", version);
         }
 
         private void loadFaqs()
         {
-            loadFaq11();
-            loadFaq12();
-            loadFaq13();
-            loadFaq14();
-            loadFaq15();
-            loadFaq16();
-            loadFaq17();
-            loadFaq18();
-            loadFaq19();
-            loadFaq20();
-            loadFaq21();
+            loadFaq101();
+            loadFaq102();
+            loadFaq103();
+            loadFaq104();
+            loadFaq105();
+            loadFaq106();
+            loadFaq107();
+            loadFaq108();
+            loadFaq109();
+            loadFaq110();
+            loadFaq111();
         }
 
         private void loadRulings()

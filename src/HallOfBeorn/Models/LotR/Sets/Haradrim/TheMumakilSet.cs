@@ -57,9 +57,10 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addAttachment("Dwarf Pipe", 1, Sphere.Spirit, false)
                 .WithTraits("Item.", "Pipe.")
                 .WithTextLine("Attach to a Dwarf character. Limit 1 per character.")
-                .WithTextLine("Response: After a card is discarded from the top of your deck, exhaust ~Dwarf ~Pipe to place that card on the bottom of your deck.")
+                .WithTextLine("Response: After a card is discarded from your deck, exhaust ~Dwarf ~Pipe to place that card on the bottom of your deck.")
                 .WithFlavorLine("He held a small pipe with a wide flattened bowl...")
                 .WithFlavorLine("-The Two Towers")
+                .WithErrata(1)
                 .WithInfo(7, 3, Artist.Mark_Bulahao);
             addAlly("Firyal", 5, Sphere.Lore, true, 3, 1, 2, 3)
                 .WithTraits("Harad.", "Scout.")

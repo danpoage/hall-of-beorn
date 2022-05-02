@@ -199,9 +199,10 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
             addAttachment("Dwarf Pipe", 1, Sphere.Spirit, false)
                 .WithTraits("Item.", "Pipe.")
                 .WithTextLine("Attach to a Dwarf character. Limit 1 per character.")
-                .WithTextLine("Response: After a card is discarded from the top of your deck, exhaust ~Dwarf ~Pipe to place that card on the bottom of your deck.")
+                .WithTextLine("Response: After a card is discarded from your deck, exhaust ~Dwarf ~Pipe to place that card on the bottom of your deck.")
                 .WithFlavorLine("He held a small pipe with a wide flattened bowl...")
                 .WithFlavorLine("-The Two Towers")
+                .WithErrata(1)
                 .WithInfo(30, 3, Artist.Mark_Bulahao);
             addAttachment("Magic Ring", 2, Sphere.Neutral, false)
                 .WithTraits("Artifact.", "Item.", "Ring.")

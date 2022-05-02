@@ -52,27 +52,27 @@ namespace HallOfBeorn.Services.LotR.Search
                 case ErrataVersion.No_Errata:
                     return -1;
                 case ErrataVersion.FAQ_1_1:
-                    return 1.1;
+                    return 1.01;
                 case ErrataVersion.FAQ_1_2:
-                    return 1.2;
+                    return 1.02;
                 case ErrataVersion.FAQ_1_3:
-                    return 1.3;
+                    return 1.03;
                 case ErrataVersion.FAQ_1_4:
-                    return 1.4;
+                    return 1.04;
                 case ErrataVersion.FAQ_1_5:
-                    return 1.5;
+                    return 1.05;
                 case ErrataVersion.FAQ_1_6:
-                    return 1.6;
+                    return 1.06;
                 case ErrataVersion.FAQ_1_7:
-                    return 1.7;
+                    return 1.07;
                 case ErrataVersion.FAQ_1_8:
-                    return 1.8;
+                    return 1.08;
                 case ErrataVersion.FAQ_1_9:
-                    return 1.9;
-                case ErrataVersion.FAQ_2_0:
-                    return 2.0;
-                case ErrataVersion.FAQ_2_1:
-                    return 2.1;
+                    return 1.09;
+                case ErrataVersion.FAQ_1_10:
+                    return 1.10;
+                case ErrataVersion.FAQ_1_11:
+                    return 1.11;
                 default:
                     return 0;
             }
