@@ -49,6 +49,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Restricted.", "Restreint." },
                 { "Secrecy 1.", "Secret 1." },
                 { "Sentinel.", "Sentinelle." },
+                { "Steeds 1 Per Player.", "Coursiers 1 Per Player." },
+                { "Steeds 1.", "Coursiers 1." },
+                { "Steeds 2.", "Coursiers 2." },
+                { "Steeds 3.", "Coursiers 3." },
+                { "Steeds 4.", "Coursiers 4." },
                 { "Surge.", "Renfort." },
                 { "Vast.", "Vaste." },
             };
@@ -323,6 +328,38 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Whisperer in the Darkness", "Chuchotement dans les Ténèbres" },
                 { "Young Tom", "Tom le Jeune" },
 
+                //Fire on the Eastemnet
+                { "Box of Earth", "Boîte de Terre" },
+                { "Breath of Arda", "Souffle d'Arda" },
+                { "Captured Steeds", "Coursiers Capturés" },
+                { "Chieftain of the Skies", "Souverain du Ciel" },
+                { "Cracking Horse Whip", "Fouet Claquant" },
+                { "Eastemnet Pasture", "Pâturage de l'Estemnet" },
+                { "Entwash Crossings", "Traversées de l'Entalluve" },
+                { "Exhausted Pursuit", "Poursuite Éreintante" },
+                { "Expanded Search", "Recherche Étendue" },
+                { "Fang", "Croc" },
+                { "Golden Crown", "Couronne d'Or" },
+                { "Grip", "Étau" },
+                { "Guided by Fate", "Guidé par le Destin" },
+                { "Hidden Orc Camp", "Camp Orque Caché" },
+                { "Hidden Roosts", "Perchoirs Cachés" },
+                { "Messenger of Manwë", "Messager de Manwë" },
+                { "Open Meadows", "Prairies Dégagées" },
+                { "Orc Lookout", "Guetteur Orque" },
+                { "Orcish Wrangler", "Éleveur Orque" },
+                { "Panicked Horses", "Chevaux Paniqués" },
+                { "Pillaged Stables", "Écuries Pillées" },
+                { "Poachers in the Night", "Braconniers dans la Nuit" },
+                { "Relentless Forces", "Forces Implacables" },
+                { "Roving Herbmaster", "Herboriste Itinérante" },
+                { "Shores of Anduin", "Rivages de l'Anduin" },
+                { "To the River!", "À la Rivière !" },
+                { "Veteran Eagle", "Vétéran Aigle" },
+                { "White Mountain Beastmaster", "Maître des Bêtes des Montagnes Blanches" },
+                { "Wild Steeds", "Coursiers Sauvages" },
+                { "Wolf", "Loup" },
+
                 //Scouring of the Shire
                 { "Against the Rules", "Contre les Règles" },
                 { "Ambush Sharkey's Men", "Tendre une Embuscade aux Hommes de Sharcoux" },
@@ -384,9 +421,13 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Doom.", "Destin." },
                 { "Dunland.", "Pays de Dun." },
                 
+                { "Eagle.", "Aigle." },
+
                 { "Garrison.", "Garnison." },
                 { "Gate.", "Porte." },
-
+                { "Gift.", "Présent." },
+                
+                { "Healer.", "Guérisseur." },
                 { "Hideout.", "Refuge." },
                 { "Hills.", "Collines." },
 
@@ -398,6 +439,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Plains.", "Plaines." },
 
                 { "Ranger.", "Rôdeur." },
+                { "River.", "Rivière." },
                 { "Road.", "Route." },
                 { "Ruffian.", "Bandit." },
                 

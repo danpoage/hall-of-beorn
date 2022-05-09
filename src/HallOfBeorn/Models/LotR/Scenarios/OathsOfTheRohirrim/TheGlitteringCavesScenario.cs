@@ -18,8 +18,8 @@ namespace HallOfBeorn.Models.LotR.Scenarios.OathsOfTheRohirrim
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP05.pdf";
 
             //QuestCompanionSlug = "oaths-of-the-rohirrim-quest-the-glittering-caves";
-            //DifficultyRating = 7f;
-            //Votes = 1;
+            DifficultyRating = 6.4f;
+            Votes = 1;
 
             AddEncounterSet(EncounterSet.TheGlitteringCaves);
             AddEncounterSet(EncounterSet.SearchForTheHorn);

@@ -1515,7 +1515,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                         html.Append(icon);
                     }*/
 
-                    html.AppendFormat("<span style='color:gray;font-size:12px;margin-left:8px;margin-bottom:2px;'>[{0}]</span>", Votes);
+                    //html.AppendFormat("<span style='color:gray;font-size:12px;margin-left:8px;margin-bottom:2px;'>[{0}]</span>", Votes);
 
                     return html.ToString();
                 }
