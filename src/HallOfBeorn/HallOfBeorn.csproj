@@ -1516,7 +1516,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\LotR\Play\" />
-    <Folder Include="Models\LotR\Products\Campaign\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

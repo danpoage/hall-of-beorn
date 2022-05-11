@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
             AddCardSet(CardSet.TheTreasonOfSaruman);
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC45.pdf";
+            HasCampaignMode = true;
 
             AddScenario(Scenario.TheUrukHai);
             AddScenario(Scenario.HelmsDeep);

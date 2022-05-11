@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
             AddCardSet(CardSet.TheLandOfShadow);
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC46.pdf";
+            HasCampaignMode = true;
 
             AddScenario(Scenario.ThePassageOfTheMarshes);
             AddScenario(Scenario.JourneyToTheCrossRoads);

@@ -68,13 +68,21 @@
                         {
                             <a style="margin:4px;font-size:16px;display:block;" target="_blank" href="@Model.Detail.EasyModeUrl" title="Easy Mode">Easy Mode</a>
                         }
+                        
                     </div>
                 }
-                @if (!string.IsNullOrWhiteSpace(@Model.Detail.PrintAndPlayUrl))
+                @if (@Model.Detail.HasFiles)
                 {
                     <div>
                         <div style="margin:16px 4px 4px 4px; font-family:Georgia;font-size:14px;font-weight:bold;">Files</div>
-                        <a style="margin:4px;font-size:16px;display:block;" target="_blank" href="@Model.Detail.PrintAndPlayUrl" title="Print and Play Images">Print and Play</a>
+                        @if (!string.IsNullOrWhiteSpace(@Model.Detail.PrintAndPlayUrl))
+                        {
+                            <a style="margin:4px;font-size:16px;display:block;" target="_blank" href="@Model.Detail.PrintAndPlayUrl" title="Print and Play Images">Print and Play</a>
+                        }
+                        @if (!string.IsNullOrWhiteSpace(@Model.Detail.CampaignLogUrl))
+                        {
+                            <a style="margin:4px;font-size:16px;display:block;" target="_blank" href="@Model.Detail.CampaignLogUrl" title="Campaign Log">Campaign Log</a>
+                        }
                     </div>
                 }
             </div>

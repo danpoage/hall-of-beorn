@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
             AddCardSet(CardSet.TheHobbitOverHillAndUnderHill);
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC16.pdf";
+            HasCampaignMode = true;
 
             AddScenario(Scenario.WeMustAwayEreBreakOfDay);
             AddScenario(Scenario.OverTheMistyMountainsGrim);

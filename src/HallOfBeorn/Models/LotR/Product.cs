@@ -45,6 +45,7 @@ namespace HallOfBeorn.Models.LotR
         public string RulesUrl { get; protected set; }
         public string EasyModeUrl { get; protected set; }
         public string LearnToPlayUrl { get; protected set; }
+        public bool HasCampaignMode { get; protected set; }
         public string BuyLink { get; protected set; }
         public DateTime FirstReleased { get; protected set; }
         public string PrintAndPlayFile { get; protected set; }

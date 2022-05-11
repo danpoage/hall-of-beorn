@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
             AddCardSet(CardSet.TheMountainOfFire);
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC62.pdf";
+            HasCampaignMode = true;
 
             AddScenario(Scenario.TheTowerOfCirithUngol);
             AddScenario(Scenario.TheBlackGateOpens);

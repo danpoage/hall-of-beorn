@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
             AddCardSet(CardSet.TheHobbitOnTheDoorstep);
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC24.pdf";
+            HasCampaignMode = true;
 
             AddScenario(Scenario.FliesAndSpiders);
             AddScenario(Scenario.TheLonelyMountain);

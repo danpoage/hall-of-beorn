@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
             AddCardSet(CardSet.TheRoadDarkens);
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC34.pdf";
+            HasCampaignMode = true;
 
             AddScenario(Scenario.TheRingGoesSouth);
             AddScenario(Scenario.JourneyInTheDark);

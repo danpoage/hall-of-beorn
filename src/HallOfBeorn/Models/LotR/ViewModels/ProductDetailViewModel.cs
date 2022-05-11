@@ -82,6 +82,20 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return product.LearnToPlayUrl; }
         }
 
+        public bool HasFiles
+        {
+            get { return !string.IsNullOrWhiteSpace(CampaignLogUrl) || !string.IsNullOrWhiteSpace(PrintAndPlayUrl); }
+        }
+
+        public string CampaignLogUrl
+        {
+            get {
+                return product.HasCampaignMode
+                    ? "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Print-and-Play/campaign-log.pdf"
+                    : string.Empty;
+            }
+        }
+
         public string PrintAndPlayUrl 
         {
             get { 

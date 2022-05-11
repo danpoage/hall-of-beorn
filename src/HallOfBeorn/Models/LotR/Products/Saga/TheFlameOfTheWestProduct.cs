@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.LotR.Products.Saga
             AddCardSet(CardSet.TheFlameOfTheWest);
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/MEC54.pdf";
+            HasCampaignMode = true;
 
             AddScenario(Scenario.ThePassingOfTheGreyCompany);
             AddScenario(Scenario.TheSiegeOfGondor);
