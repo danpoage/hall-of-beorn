@@ -548,22 +548,20 @@
 }
 @if (@Model.IsAltArtView())
 {
-    foreach (var card in @Model.Cards.Where(c => c.HasCommunityImages))
+    foreach (var card in @Model.CardDesigns.Where(design => design.First.HasCommunityVersions()))
     {
         <div style="display:inline-block;margin:4px;">
-            @if (card.HasCommunityImages)
+            <div class="display:inline-block">
+                
+            @foreach (var image in CardViewModel.GetCommunityImages(card.First.CommunityVersions)) 
             {
-                <div class="display:inline-block">
-                @foreach (var image in card.CommunityImages()) 
-                {
-                    <div style="float:left;margin-right:4px;display:inline-block">
-                        <a href="@Href(string.Format("/LotR/Details/{0}", @card.Slug))">
-                        <img title="@image.Item1" src="@image.Item2" style="height: 180px" class="card-image" />
-                        </a>
-                    </div>
-                }
+                <div style="float:left;margin-right:4px;display:inline-block">
+                    <a href="@Href(string.Format("/LotR/Details/{0}", @card.Slug))">
+                    <img title="@image.Item1" src="@image.Item2" style="height: 180px" class="card-image" />
+                    </a>
                 </div>
             }
+            </div>
         </div>
     }
     @*

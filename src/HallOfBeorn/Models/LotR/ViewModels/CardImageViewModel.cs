@@ -89,7 +89,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 return getContractCardImagePath(card, true, lang);
             }
 
-            if (card.CardType == CardType.Nightmare_Setup || card.CardType == CardType.GenCon_Setup)
+            var setupTypes = new HashSet<CardType> { CardType.Campaign, CardType.Nightmare_Setup, CardType.GenCon_Setup };
+
+            if (setupTypes.Contains(card.CardType))
             {
                 return getSetupCardImagePath(card, true, lang);
             }

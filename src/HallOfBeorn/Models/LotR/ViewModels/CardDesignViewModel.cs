@@ -27,7 +27,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         private readonly CardDesign design;
         private readonly List<CardVersionViewModel> versions = new List<CardVersionViewModel>();
-        
+
+        public LotRCard First { get { return design.First; } }
         public Language Lang { get; private set; }
         public string Title { get { return design.Title; } }
         public string OppositeTitle { get { return design.First.OppositeTitle; } }

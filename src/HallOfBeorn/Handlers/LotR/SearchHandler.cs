@@ -49,6 +49,12 @@ namespace HallOfBeorn.Handlers.LotR
             _ringsDbService = ringsDbService;
             _cardDesignService = cardDesignService;
             _translationHandler = translationHandler;
+            _viewHandlers.Add(View.RingsDB, new RingsDbSearchHandler(_cardRepository, _ringsDbService));
+            _viewHandlers.Add(View.Card_Design, new CardDesignSearchHandler(_cardDesignService));
+            _viewHandlers.Add(View.Product, new ProductSearchHandler(_ringsDbService));
+            _viewHandlers.Add(View.Character, new CharacterSearchHandler(_cardRepository, _characterRepository));
+            _viewHandlers.Add(View.Community, new CommunitySearchHandler(_linkService, _ringsDbService, _scenarioService));
+            _viewHandlers.Add(View.Alt_Art, new CardDesignSearchHandler(_cardDesignService));
         }
 
         private readonly LotRCardRepository _cardRepository;
@@ -65,7 +71,8 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly IRingsDbService _ringsDbService;
         private readonly ICardDesignService _cardDesignService;
         private readonly TranslationHandler _translationHandler;
-        
+        private readonly Dictionary<View, ISearchViewHandler> _viewHandlers = new Dictionary<View, ISearchViewHandler>();
+
         private void InitializeSearch(SearchViewModel model)
         {
             model.Cards = new List<CardViewModel>();
@@ -101,125 +108,6 @@ namespace HallOfBeorn.Handlers.LotR
             SearchViewModel.Projects = typeof(Project).GetSelectListItems(" ", true, null);
         }
 
-        private void AddRelatedCharacters(IEnumerable<ILink> links, Dictionary<string, CharacterViewModel> charactersByUrl, Dictionary<string, CharacterViewModel> relatedCharactersByUrl)
-        {
-            foreach (var member in links)
-            {
-                var memberTitle = member.Title.Contains("(") ? (member.Title.Split('('))[0].Trim() : member.Title;
-                var memberCharacter = _characterRepository.Lookup(memberTitle.NormalizeCaseSensitiveString().ToUrlSafeString());
-                if (memberCharacter != null && !charactersByUrl.ContainsKey(memberCharacter.Url) && !relatedCharactersByUrl.ContainsKey(memberCharacter.Url))
-                {
-                    relatedCharactersByUrl.Add(memberCharacter.Url, new CharacterViewModel(memberCharacter));
-
-                    foreach (var memberSlug in memberCharacter.LotRCards)
-                    {
-                        var memberCard = _cardRepository.FindBySlug(memberSlug);
-                        if (memberCard != null)
-                        {
-                            if (charactersByUrl.ContainsKey(memberCharacter.Url) || relatedCharactersByUrl.ContainsKey(memberCharacter.Url))
-                                continue;
-
-                            var memberLink = Link.CreateLotRImageLink(memberCard);
-
-                            relatedCharactersByUrl[memberCharacter.Url].AddLotRCardLink(memberLink);
-                        }
-                    }
-                }
-            }
-        }
-
-        private RingsDbDeckViewModel GetDeckViewModel(
-            HashSet<string> foundSlugs,
-            Models.RingsDb.RingsDbDeckList deck)
-        {
-            var found = false;
-
-            var description = !string.IsNullOrEmpty(deck.description_md)
-                ? new MarkdownSharp.Markdown().Transform(deck.description_md).Replace("/card/", "https://ringsdb.com/card/")
-                : "<i>No deck description</i>";
-
-            var deckViewModel = new RingsDbDeckViewModel(deck.id, deck.name, description);
-            foreach (var heroId in deck.heroes.Keys)
-            {
-                var lookupId = heroId;
-                //Remove the 99 prefix from Messenger of the King heroes
-                if (heroId.StartsWith("99"))
-                {
-                    lookupId = heroId.Remove(0, 2);
-                }
-
-                var heroSlug = _ringsDbService.GetSlug(lookupId);
-                if (!string.IsNullOrEmpty(heroSlug))
-                {
-                    var heroCard = _cardRepository.FindBySlug(heroSlug); //This may be a unique ally
-                    if (heroCard != null && heroCard.IsUnique && heroCard.IsCharacter()) {
-                        if (foundSlugs.Contains(heroSlug))
-                        {
-                            found = true;
-                        }
-
-                        deckViewModel.AddHero(heroCard);
-                    }
-                }
-            }
-
-            foreach (var cardId in deck.slots.Keys)
-            {
-                var cardSlug = _ringsDbService.GetSlug(cardId);
-                if (!string.IsNullOrEmpty(cardSlug)) 
-                {
-                    var card = _cardRepository.FindBySlug(cardSlug);
-                    if (card != null)
-                    {
-                        if (foundSlugs.Contains(cardSlug))
-                        {
-                            found = true;
-                        }
-
-                        deckViewModel.AddCard(card, deck.slots[cardId]);
-                    }
-                }
-            }
-
-            if (!found)
-            {
-                return null;
-            }
-
-            return deckViewModel;
-        }
-
-        private void CrossReferenceRingsDbDecks(SearchViewModel model, UserSettings settings)
-        {
-            HashSet<string> foundSlugs = new HashSet<string>();
-            foreach (var card in model.Cards)
-            {
-                if (!foundSlugs.Contains(card.Slug))
-                {
-                    foundSlugs.Add(card.Slug);
-                }
-            }
-
-            model.RingsDbDecks = new List<RingsDbDeckViewModel>();
-
-            var userId = settings.RingsDbUserId.GetValueOrDefault(0);
-            if (userId == 0)
-            {
-                return;
-            }
-
-            var decks = _ringsDbService.GetUserDecks(userId);
-
-            foreach (var deck in decks)
-            {
-                var deckViewModel = GetDeckViewModel(foundSlugs, deck);
-                if (deckViewModel != null)
-                {
-                    model.RingsDbDecks.Add(deckViewModel);
-                }
-            }
-        }
-
         public void HandleSearch(SearchViewModel model, UserSettings settings)
         {
             InitializeSearch(model);
@@ -244,196 +132,9 @@ namespace HallOfBeorn.Handlers.LotR
                 model.Cards.Add(viewModel);
             }
 
-            if (model.View.HasValue)
+            if (model.View.HasValue && _viewHandlers.ContainsKey(model.View.Value))
             {
-                if (model.View.GetValueOrDefault(View.None) == View.RingsDB)
-                {
-                    CrossReferenceRingsDbDecks(model, settings);
-                }
-                if (model.View.GetValueOrDefault(View.None) == View.Card_Design)
-                {
-                    var lang = model.Lang.GetValueOrDefault(Language.EN);
-                    var designs = _cardDesignService.WithVersions(
-                        model.Cards.Select(viewModel => viewModel.Card), lang)
-                        .Select(design => new CardDesignViewModel(design, lang)).ToList();
-
-                    model.CardDesigns.AddRange(designs);
-                }
-                if (model.View == Models.View.Product)
-                {
-                    var productsByCode = new Dictionary<string, ProductViewModel>();
-
-                    Func<string, byte> getPopularity = (slug) => {
-                        return _ringsDbService.GetPopularity(slug);
-                    };
-
-                    var key = string.Empty;
-                    foreach (var cardViewModel in model.Cards)
-                    {
-                        key = cardViewModel.Card.CardSet.Product.Code;
-                        if (!productsByCode.ContainsKey(key))
-                        {
-                            productsByCode[key] = new ProductViewModel(cardViewModel.Card.CardSet.Product, getPopularity);
-                        }
-
-                        productsByCode[key].AddCard(cardViewModel);
-                    }
-
-                    model.Products.AddRange(productsByCode.Values.OrderBy(prod => prod.Code));
-                }
-                if (model.View == Models.View.Character)
-                {
-                    var charactersByUrl = new Dictionary<string, CharacterViewModel>();
-                    var relatedCharactersByUrl = new Dictionary<string, CharacterViewModel>();
-
-                    foreach (var cardViewModel in model.Cards)
-                    {
-                        var character = _characterRepository.Lookup(cardViewModel.Title.NormalizeCaseSensitiveString().ToUrlSafeString());
-                        if (character != null)
-                        {
-                            if (!charactersByUrl.ContainsKey(character.Url))
-                            {
-                                charactersByUrl.Add(character.Url, new CharacterViewModel(character));
-                            }
-
-                            var characterLink = Link.CreateLotRImageLink(cardViewModel.Card);
-                            charactersByUrl[character.Url].AddLotRCardLink(characterLink);
-
-                            AddRelatedCharacters(character.RelatedCharacters(), charactersByUrl, relatedCharactersByUrl);
-
-                            foreach (var group in character.Groups)
-                            {
-                                var groupTitle = group.Title.Contains("(") ? (group.Title.Split('('))[0].Trim() : group.Title;
-                                var groupCharacter = _characterRepository.Lookup(groupTitle.NormalizeCaseSensitiveString().ToUrlSafeString());
-                                if (groupCharacter != null)
-                                {
-                                    AddRelatedCharacters(groupCharacter.RelatedCharacters(), charactersByUrl, relatedCharactersByUrl);
-                                }
-                            }
-                        }
-                    }
-
-                    model.Characters.AddRange(charactersByUrl.Values.OrderBy(ch => ch.Title));
-                    foreach (var relatedPair in relatedCharactersByUrl.OrderBy(pair => pair.Value.Title))
-                    {
-                        if (charactersByUrl.ContainsKey(relatedPair.Key))
-                            continue;
-
-                        model.Characters.Add(relatedCharactersByUrl[relatedPair.Key]);
-                    }
-                }
-                if (model.View == Models.View.Community)
-                {
-                    var linksByUrl = new Dictionary<string, Tuple<LinkViewModel, double>>();
-                    var scenariosByTitle = new Dictionary<string, Tuple<Scenario, double>>();
-                    var relevantDecks = new HashSet<string>();
-
-                    foreach (var cardViewModel in model.Cards)
-                    {
-                        var communityLinks = _linkService.GetLinks(cardViewModel.Card.Slug);
-                        foreach (var link in communityLinks)
-                        {
-                            linksByUrl[link.Url] = new Tuple<LinkViewModel, double>(new LinkViewModel(link), 200); 
-                        }
-
-                        foreach (var link in _linkService.Links())
-                        {
-                            var labels = link.Labels();
-                            if (!labels.Any())
-                            {
-                                continue;
-                            }
-
-                            if (labels.Any(label => cardViewModel.Title.Contains(label)))
-                            {
-                                if (!linksByUrl.ContainsKey(link.Url))
-                                {
-                                    linksByUrl[link.Url] = new Tuple<LinkViewModel,double>(new LinkViewModel(link), 100);
-                                }
-                            }
-                        }
-
-                        var associatedScenarios = _scenarioService.AssociatedScenarios(
-                            cardViewModel.Card.Slug, cardViewModel.Card.CardType, cardViewModel.Score);
-
-                        foreach (var result in associatedScenarios)
-                        {
-                            var isRelevant = false;
-                            foreach (var link in result.Item1.PlayLinks)
-                            {
-                                if (link.Item2.Any(deckId => 
-                                    _ringsDbService.DeckIncludesCard(deckId, cardViewModel.Slug)))
-                                {
-                                    foreach (var deckId in link.Item2)
-                                        relevantDecks.Add(deckId);
-
-                                    isRelevant = true;
-                                    break;
-                                }
-                            }
-
-                            if (!isRelevant)
-                            {
-                                continue;
-                            }
-
-                            if (!scenariosByTitle.ContainsKey(result.Item1.Title))
-                            {
-                                scenariosByTitle[result.Item1.Title] = 
-                                    new Tuple<Scenario, double>(result.Item1, result.Item2);
-                            }
-                            else
-                            {
-                                var existingScore = scenariosByTitle[result.Item1.Title].Item2;
-                                scenariosByTitle[result.Item1.Title] = 
-                                    new Tuple<Scenario, double>(result.Item1, existingScore + result.Item2);
-                            }
-                        }
-                    }
-
-                    foreach (var result in scenariosByTitle.Values)
-                    {
-                        foreach (var linkItem in result.Item1.PlayLinks)
-                        {
-                            var link = linkItem.Item1;
-                            var includedDecks = linkItem.Item2;
-
-                            var isRelevant = false;
-                            foreach (var deckId in includedDecks)
-                            {
-                                if (relevantDecks.Contains(deckId))
-                                {
-                                    isRelevant = true;
-                                    break;
-                                }
-                            }
-
-                            if (!isRelevant)
-                            {
-                                continue;
-                            }
-
-                            if (!linksByUrl.ContainsKey(link.Url))
-                            {
-                                linksByUrl[link.Url] = 
-                                    new Tuple<LinkViewModel, double>(new LinkViewModel(link), result.Item2);
-                            }
-                            else
-                            {
-                                var existingLink = linksByUrl[link.Url].Item1;
-                                var existingScore = linksByUrl[link.Url].Item2;
-                                linksByUrl[link.Url] =
-                                    new Tuple<LinkViewModel, double>(existingLink, existingScore + result.Item2);
-                            }
-                        }
-                    }
-
-                    model.Links.AddRange(
-                        linksByUrl.Values
-                            .OrderByDescending(ln => ln.Item2)
-                            .Select(ln => ln.Item1)
-                    );
-                }
+                _viewHandlers[model.View.Value].HandleSearch(model, settings);
             }
         }
 

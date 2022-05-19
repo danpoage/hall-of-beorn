@@ -184,6 +184,10 @@ namespace HallOfBeorn.Models.LotR
         public byte? QuestPoints { get; set; }
 
         public List<string> CommunityVersions = new List<string>();
+        public bool HasCommunityVersions()
+        {
+            return CommunityVersions.Count > 0;
+        }
 
         public double StatScore()
         {

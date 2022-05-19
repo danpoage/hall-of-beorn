@@ -869,11 +869,16 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public IEnumerable<Tuple<string, string>> CommunityImages()
         {
+            return GetCommunityImages(_card.CommunityVersions);
+        }
+
+        public static IEnumerable<Tuple<string, string>> GetCommunityImages(IEnumerable<string> versions)
+        {
             const string format = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Community/{0}.jpg";
 
             Func<string, string> getTitle = (s) => s.Replace('-', ' ').Replace("/", ": ");
 
-            return _card.CommunityVersions.Select(
+            return versions.Select(
                 slug => new Tuple<string, string>(getTitle(slug), string.Format(format, slug)));
         }
 

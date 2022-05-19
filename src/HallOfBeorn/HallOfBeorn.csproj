@@ -200,12 +200,18 @@
     </Compile>
     <Compile Include="Handlers\Digital\DetailsHandler.cs" />
     <Compile Include="Handlers\Digital\SearchHandler.cs" />
+    <Compile Include="Handlers\LotR\CardDesignSearchHandler.cs" />
+    <Compile Include="Handlers\LotR\CharacterSearchHandler.cs" />
+    <Compile Include="Handlers\LotR\CommunitySearchHandler.cs" />
     <Compile Include="Handlers\LotR\DesignsHandler.cs" />
+    <Compile Include="Handlers\LotR\ISearchViewHandler.cs" />
+    <Compile Include="Handlers\LotR\ProductSearchHandler.cs" />
     <Compile Include="Handlers\LotR\ProductsHandler.cs" />
     <Compile Include="Handlers\LotR\CharactersHandler.cs" />
     <Compile Include="Handlers\LotR\CreatorsHandler.cs" />
     <Compile Include="Handlers\LotR\DetailsHandler.cs" />
     <Compile Include="Handlers\LotR\RingsDbHandler.cs" />
+    <Compile Include="Handlers\LotR\RingsDbSearchHandler.cs" />
     <Compile Include="Handlers\LotR\ScenariosHandler.cs" />
     <Compile Include="Handlers\LotR\SearchHandler.cs" />
     <Compile Include="Handlers\LotR\TranslationHandler.cs" />
