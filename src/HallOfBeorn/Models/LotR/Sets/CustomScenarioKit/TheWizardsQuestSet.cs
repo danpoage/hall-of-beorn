@@ -99,12 +99,12 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithSetNumberAndCost(15, 0)
                 .WithTraits("Dol Guldur.")
                 .WithTextLine("When Revealed: The first player chooses a card in his hand. The opposing team looks at the first player's hand and chooses a different card to place faceup under Necromancer's Pass as a guarded objective. While Necromancer's Pass is guarding a card, copies of that card cannot be played. When Necromancer's Pass is explored, return the guarded card to its owner's hand.")
-                .WithInfo(13, 1, Artist.Daryl_Mandryk);
+                .WithInfo(13, 2, Artist.Daryl_Mandryk);
             addTreachery("Pursued by Shadow", string.Empty)
                 .WithSetNumberAndCost(15, 0)
                 .WithTextLine("When Revealed: The highest Attack enemy in the staging area makes an immediate attack against the first player. If no attack is made this way, Pursued by Shadow gains surge.")
                 .WithShadow("Shadow: If attacking enemy is uniquie, it makes an additional attack against you after this one.")
-                .WithInfo(14, 0, Artist.Matthew_Starbuck);
+                .WithInfo(14, 2, Artist.Matthew_Starbuck);
             addEnemy("Bane of Amon Lanc", string.Empty, 37, 3, 7, 1, 9)
                 .WithSetNumberAndCost(16, 3)
                 .WithUnique()
@@ -117,17 +117,17 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithTraits("Forest.")
                 .WithTextLine("While Oak-wood Grove is in the staging area, progress cannot be placed on other locations in the staging area.")
                 .WithTextLine("Travel: Each player exhausts a character.")
-                .WithInfo(16, 1, Artist.Unknown);
+                .WithInfo(16, 2, Artist.Unknown);
             addTreachery("Smoking Blood", string.Empty)
                 .WithSetNumberAndCost(16, 0)
                 .WithTextLine("When Revealed: The opposing team attached Smoking Blood to a Troll enemu. If they cannot, Smoking Blood gains surge.(Counts as a Condition attachment with the text: \"Limit 1 per enemy. Forced: When attached enemy is dealt enough damage to destroy it, cancel the damage and discard Smoking Blood instead.\")")
-                .WithInfo(17, 1, Artist.Magali_Villeneuve);
+                .WithInfo(17, 2, Artist.Magali_Villeneuve);
             addEnemy("Forest Flies", string.Empty, 6, 2, 1, 1, 6)
                 .WithSetNumberAndCost(17, 0)
                 .WithTraits("Creature.", "Insect.")
                 .WithTextLine("Forced: When Forest Flies attacks, raise the defending player's threat by 1.")
                 .WithShadow("Shadow: Raise your threat by 1 for each enemy engaged with you.")
-                .WithInfo(18, 1, Artist.Rafal_Hrynkiewicz);
+                .WithInfo(18, 2, Artist.Rafal_Hrynkiewicz);
             addLocation("Twilight Hall", string.Empty, 0, 6)
                 .WithSetNumberAndCost(17, 3)
                 .WithUnique()
@@ -140,7 +140,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithSetNumberAndCost(17, 0)
                 .WithTextLine("When Revealed: Each player deals X damage to a character he controls, where X is 1 more than the stage number of the main quest.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character has an attachment).")
-                .WithInfo(20, 1, Artist.Owen_William_Weber);
+                .WithInfo(20, 2, Artist.Owen_William_Weber);
             addEnemy("Goblin Sniper", string.Empty, 38, 2, 4, 2, 5)
                 .WithSetNumberAndCost(18, 2)
                 .WithTraits("Orc.", "Goblin.")
@@ -153,13 +153,13 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithTraits("Mountain.", "Forest.")
                 .WithTextLine("When Revealed: Each Pine Slopes +2 Threat until the end of the phase.")
                 .WithTextLine("Travel: Raise your threat by 1 for each Pine Slopes in the staging area.")
-                .WithInfo(22, 1, Artist.Unknown);
+                .WithInfo(22, 3, Artist.Unknown);
             addTreachery("Under the Shadow", string.Empty)
                 .WithSetNumberAndCost(18, 1)
                 .WithKeywords("Doomed 1.")
                 .WithTextLine("Doomed 1.")
                 .WithTextLine("When Revealed: Attach to the main quest. (Counts as a condition attachment with the text: \"Each player cannot play more than 1 card each phase.\")")
-                .WithInfo(23, 0, Artist.Igor_Kieryluk);
+                .WithInfo(23,1, Artist.Igor_Kieryluk);
             addEnemy("Necromancer's Warg", string.Empty, 21, 2, 2, 1, 2)
                 .WithSetNumberAndCost(19, 0)
                 .WithTraits("Warg.")
@@ -175,7 +175,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithSetNumberAndCost(19, 0)
                 .WithTraits("Forest.")
                 .WithTextLine("Forced: When Watched Path is explored, discard the top card of the encounter deck. If the discarded card is an enemy, add it to the staging area.")
-                .WithInfo(26, 1, Artist.Jose_Vega);
+                .WithInfo(26, 2, Artist.Jose_Vega);
             addTreachery("Evil Storm", string.Empty)
                 .WithSetNumberAndCost(19, 1)
                 .WithTraits("Weather.")
@@ -198,12 +198,12 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithSetNumberAndCost(20, 0)
                 .WithTextLine("When Revealed: The opposing team chooses a questing character controlled by each player. Ready each chosen character and remove them from the quest.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, raise each player's threat by 1.")
-                .WithInfo(30, 1, Artist.Unknown);
+                .WithInfo(30, 3, Artist.Unknown);
             addEnemy("Eastern Crows", string.Empty, 11, 1, 2, 0, 2)
                 .WithSetNumberAndCost(21, 0)
                 .WithTraits("Creature.")
                 .WithTextLine("While there is a copy of Eastern Crows in the discard pile, Eastern Crows gains surge.")
-                .WithInfo(31, 1, Artist.Matthew_Starbuck);
+                .WithInfo(31, 3, Artist.Matthew_Starbuck);
             addLocation("The Sorcerer's Tower", string.Empty, 4, 4)
                 .WithSetNumberAndCost(21, 2)
                 .WithUnique()
@@ -220,7 +220,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithSetNumberAndCost(22, 1)
                 .WithTraits("Troll.")
                 .WithTextLine("Cannot have non-objective palyer card attachments.")
-                .WithInfo(34, 1, Artist.Florian_Stitz);
+                .WithInfo(34, 2, Artist.Florian_Stitz);
             addLocation("Troll Cave", string.Empty, 3, 5)
                 .WithSetNumberAndCost(22, 1)
                 .WithTraits("Forest.", "Cave.")
@@ -230,12 +230,12 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
             addTreachery("Befouled Equipment", string.Empty)
                 .WithSetNumberAndCost(22, 0)
                 .WithTextLine("When Revealed: Attack to the character with the most attachments without Befouled Equipment attached. (Counts as a Condition attachment with the text: \"Forced: At the end of the round, discard an attachment from attached character. Befouled Equipment cannot be discarded this way unless it is the only attachment on attached character.\")")
-                .WithInfo(36, 1, Artist.Ed_Mattinian);
+                .WithInfo(36, 2, Artist.Ed_Mattinian);
             addEnemy("Hunting Warg", string.Empty, 32, 2, 3, 2, 4)
                 .WithSetNumberAndCost(23, 1)
                 .WithTraits("Warg.")
                 .WithTextLine("Forced: After Hunting Warg engages a player, it makes an immediate attack. If Hunting Warg is dealt a shadow card with no shadow effect for this attack, it gets +2 Attack until the end of the phase.")
-                .WithInfo(37, 1, Artist.Aurelien_Hubert);
+                .WithInfo(37, 2, Artist.Aurelien_Hubert);
             addLocation("Hunter's Lookout", string.Empty, 3, 4)
                 .WithSetNumberAndCost(23, 1)
                 .WithTraits("Mountain.", "Forest.")
@@ -246,13 +246,13 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithSetNumberAndCost(23, 0)
                 .WithTextLine("When Revealed: Return each engaged enemy to the staging area. If no enemies were returned this way, Restless Hunters gains surge.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, return attacking enemy to the staging area.")
-                .WithInfo(39, 1, Artist.Adam_Lane);
+                .WithInfo(39, 2, Artist.Adam_Lane);
             addEnemy("Dol Guldur Orcs", string.Empty, 24, 2, 3, 1, 4)
                 .WithSetNumberAndCost(24, 0)
                 .WithTraits("Orc.")
                 .WithTextLine("When Revealed: Each player deals 1 damage to a character he controls.")
                 .WithShadow("Shadow: Defending character gets -1 Defense for each damage on it.")
-                .WithInfo(40, 1, Artist.Unknown);
+                .WithInfo(40, 2, Artist.Unknown);
             addLocation("The Shadow Road", string.Empty, 3, 3)
                 .WithSetNumberAndCost(24, 1)
                 .WithTraits("Forest.", "Road.")
@@ -263,7 +263,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithSetNumberAndCost(24, 1)
                 .WithTextLine("When Revealed: Deal 1 damage to each exhausted character.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character is damaged).")
-                .WithInfo(42, 1, Artist.Anna_Christenson);
+                .WithInfo(42, 2, Artist.Anna_Christenson);
             addEnemy("Ravenous Spider", string.Empty, 34, 3, 4, 2, 5)
                 .WithSetNumberAndCost(25, 1)
                 .WithTraits("Spider.")
@@ -275,7 +275,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithTraits("Forest.")
                 .WithTextLine("Forest Gate gets +1 Threat for each enemy in the staging area.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack for each enemy engaged with you.")
-                .WithInfo(44, 1, Artist.Unknown);
+                .WithInfo(44, 2, Artist.Unknown);
             addTreachery("Nightfall", string.Empty)
                 .WithSetNumberAndCost(25, 1)
                 .WithKeywords("Doomed 1.")
@@ -287,13 +287,13 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithTraits("Spider.")
                 .WithTextLine("Forced: After Venomous Spider attacks and damages a character, that character cannot ready until the end of the round.")
                 .WithShadow("Shadow: Defending character cannot ready until the end of the round.")
-                .WithInfo(46, 1, Artist.Florian_Devos);
+                .WithInfo(46, 2, Artist.Florian_Devos);
             addLocation("Pitch-dark Thicket", string.Empty, 2, 3)
                 .WithSetNumberAndCost(26, 0)
                 .WithTraits("Forest.")
                 .WithTextLine("While Pitch-dark Thicket is in the staging area, enemies in the staging area cannot take damage.")
                 .WithShadow("Shadow: If attacking enemy was engaged this round, it cannot take damage until the end of the round.")
-                .WithInfo(47, 1, Artist.Unknown);
+                .WithInfo(47, 2, Artist.Unknown);
             addTreachery("Fastness of Mirkwood", string.Empty)
                 .WithSetNumberAndCost(26, 1)
                 .WithTextLine("When Revealed: The opposing team searches the encounter deck and discard pile for one different 0 cost location per player (limit 2) and adds them to the staging area. Shuffle the encounter deck.")
@@ -304,13 +304,13 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithTraits("Creature.")
                 .WithTextLine("Forced: After Dark Bats attacks and damages a character, reveal the top card of the encounter deck. Then, discard Dark Bats.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. Deal it an additional shadow card.")
-                .WithInfo(49, 1, Artist.Aurelien_Hubert);
+                .WithInfo(49, 2, Artist.Aurelien_Hubert);
             addLocation("Forest Stream", string.Empty, 2, 5)
                 .WithSetNumberAndCost(27, 1)
                 .WithTraits("Forest.", "River.")
                 .WithTextLine("While Forest Stream is in the staging area, it gains: \"Forced: At the end of the round, remove 2 progress from the main quest.\"")
                 .WithTextLine("Travel: Raise each player's threat by 2.")
-                .WithInfo(50, 1, Artist.Trudi_Castle);
+                .WithInfo(50, 2, Artist.Trudi_Castle);
             addTreachery("Treacherous Fog", string.Empty)
                 .WithSetNumberAndCost(27, 1)
                 .WithTraits("Weather.")
@@ -322,7 +322,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithTraits("Warg.")
                 .WithTextLine("When Revealed: Discard the top card of the encounter deck. If that card has the Warg trait, reveal it and add it to the staging area.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if it has the the Warg trait).")
-                .WithInfo(52, 1, Artist.Dylan_Pierpont);
+                .WithInfo(52, 3, Artist.Dylan_Pierpont);
             addLocation("The Wargs' Glade", string.Empty, 3, 5)
                 .WithSetNumberAndCost(28, 2)
                 .WithUnique()
