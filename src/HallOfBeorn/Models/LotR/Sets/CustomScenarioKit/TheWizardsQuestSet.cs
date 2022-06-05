@@ -281,7 +281,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithKeywords("Doomed 1.")
                 .WithTextLine("Doomed 1.")
                 .WithTextLine("When Revealed: Attach to the first player's threat dial. (Counts as a Condition attachment with the text: \"Forced: Raise your threat by an additional point during the refresh phase.\")")
-                .WithInfo(45, 1, Artist.David_Lecossu);
+                .WithInfo(45, 2, Artist.David_Lecossu);
             addEnemy("Venomous Spider", string.Empty, 28, 2, 3, 2, 4)
                 .WithSetNumberAndCost(26, 1)
                 .WithTraits("Spider.")
