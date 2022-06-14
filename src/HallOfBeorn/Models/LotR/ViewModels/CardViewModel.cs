@@ -956,7 +956,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         private readonly static HashSet<string> englishSetsPng = new HashSet<string>
         {
-            "Children of Eorl", "The Scouring of the Shire", "Fire on the Eastemnet", "The Gap of Rohan", "The Glittering Caves"
+            "Children of Eorl", "The Scouring of the Shire", "Fire on the Eastemnet", "The Gap of Rohan", "The Glittering Caves",
+            "Mustering of the Rohirrim"
         };
 
         private static string getEnglishImageExtension(LotRCard card)

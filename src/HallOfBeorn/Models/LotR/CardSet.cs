@@ -574,6 +574,7 @@ namespace HallOfBeorn.Models.LotR
             Add(FireOnTheEastemnet);
             Add(TheGapOfRohan);
             Add(TheGlitteringCaves);
+            Add(MusteringOfTheRohirrim);
 
             Add(TheScouringOfTheShire);
         }
@@ -794,6 +795,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet FireOnTheEastemnet = new Sets.OathsOfTheRohirrim.FireOnTheEastemnetSet();
         public static CardSet TheGapOfRohan = new Sets.OathsOfTheRohirrim.TheGapOfRohanSet();
         public static CardSet TheGlitteringCaves = new Sets.OathsOfTheRohirrim.TheGlitteringCavesSet();
+        public static CardSet MusteringOfTheRohirrim = new Sets.OathsOfTheRohirrim.MusteringOfTheRohirrimSet();
 
         public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireCardSet();
 

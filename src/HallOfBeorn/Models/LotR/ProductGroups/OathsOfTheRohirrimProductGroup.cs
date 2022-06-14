@@ -12,6 +12,7 @@
             AddChildProduct(Product.FireOnTheEastemnet);
             AddChildProduct(Product.TheGapOfRohan);
             AddChildProduct(Product.TheGlitteringCaves);
+            AddChildProduct(Product.MusteringOfTheRohirrim);
         }
     }
 }

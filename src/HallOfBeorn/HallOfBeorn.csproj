@@ -461,6 +461,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\WrathAndRuinProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\ChildrenOfEorlProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\FireOnTheEastemnetProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\MusteringOfTheRohirrimProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheAldburgPlotProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheBetrayalOfMimProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheFallOfNargothrondProduct.cs" />
@@ -545,6 +546,7 @@
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheBlackSerpentScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheDungeonsOfCirithGuratScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\OathsOfTheRohirrim\FireOnTheEastemnetScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\OathsOfTheRohirrim\MusteringOfTheRohirrimScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\OathsOfTheRohirrim\TheAldburgPlotScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\OathsOfTheRohirrim\TheGapOfRohanScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\OathsOfTheRohirrim\TheGlitteringCavesScenario.cs" />
@@ -596,6 +598,7 @@
     <Compile Include="Models\LotR\Sets\EredMithrin\TheGhostOfFramsburgSet.cs" />
     <Compile Include="Models\LotR\Sets\EredMithrin\TheWitheredHeathSet.cs" />
     <Compile Include="Models\LotR\Sets\OathsOfTheRohirrim\FireOnTheEastemnetSet.cs" />
+    <Compile Include="Models\LotR\Sets\OathsOfTheRohirrim\MusteringOfTheRohirrimSet.cs" />
     <Compile Include="Models\LotR\Sets\OathsOfTheRohirrim\TheAldburgPlotSet.cs" />
     <Compile Include="Models\LotR\Sets\OathsOfTheRohirrim\TheGapOfRohanSet.cs" />
     <Compile Include="Models\LotR\Sets\OathsOfTheRohirrim\TheGlitteringCavesSet.cs" />

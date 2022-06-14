@@ -1004,6 +1004,15 @@ namespace HallOfBeorn.Models
         public static Artist Calvin_Streeting = new Artist { Name = "Calvin Streeting", URL = "https://www.patreon.com/calvinstreeting" };
         public static Artist R_Adrian_Z = new Artist { Name = "R Adrian Z", URL = "https://www.artwanted.com/solidgrafi/gallery/" };
 
+        //Mustering the Rohirrim
+        public static Artist yangzheyy = new Artist { Name = "yangzheyy", URL = "" };
+        public static Artist Sarel_Theron = new Artist { Name = "Sarel Theron", URL = "" };
+        public static Artist Charmaine_Zoe = new Artist { Name = "Charmaine Zoe", URL = "" };
+        public static Artist Simone_De_Salvatore = new Artist { Name = "Simone De Salvatore", URL = "" };
+        public static Artist Vincent_Van_Gogh = new Artist { Name = "Vincent Van Gogh", URL = "" };
+        public static Artist XallowArt = new Artist { Name = "XallowArt", URL = "" };
+        public static Artist arvdevable = new Artist { Name = "arvdevable", URL = "" };
+
         //The Scouring of the Shire
         public static Artist Studio_Ghibli = new Artist { Name = "Studio Ghibli", URL = "https://www.ghibli-museum.jp" };
         public static Artist Filip_Storch = new Artist { Name = "Filip Štorch", URL = "http://google.com/search?q=Filip+Storch+art" };
