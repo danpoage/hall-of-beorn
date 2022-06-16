@@ -859,6 +859,30 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Calvin_Streeting);
             all.Add(Artist.R_Adrian_Z);
 
+            //Mustering of the Rohirrim
+            all.Add(Artist.yangzheyy);
+            all.Add(Artist.Sarel_Theron);
+            all.Add(Artist.Charmaine_Zoe);
+            all.Add(Artist.Simone_De_Salvatore);
+            all.Add(Artist.Vincent_Van_Gogh);
+            all.Add(Artist.XallowArt);
+            all.Add(Artist.arvdevable);
+            all.Add(Artist.Bitbox_Ltd);
+            all.Add(Artist.Laura_Csajagi);
+            all.Add(Artist.Eliott_Bon);
+            all.Add(Artist.Bayard_Wu);
+            all.Add(Artist.Conor_Burke);
+            all.Add(Artist.Jarek_Nocon);
+            all.Add(Artist.Bastien_Grivet);
+            all.Add(Artist.Sergey_Zabelin);
+            all.Add(Artist.ASTERAS);
+            all.Add(Artist.Heerie);
+            all.Add(Artist.Laszlo_Neogrady);
+            all.Add(Artist.Matt_Donnici);
+            all.Add(Artist.Tatiana_Tyukina);
+            all.Add(Artist.Runar_Steinn);
+            all.Add(Artist.Onur_Bakar);
+
             all.Add(Artist.None);
         }
 
@@ -1005,13 +1029,28 @@ namespace HallOfBeorn.Models
         public static Artist R_Adrian_Z = new Artist { Name = "R Adrian Z", URL = "https://www.artwanted.com/solidgrafi/gallery/" };
 
         //Mustering the Rohirrim
-        public static Artist yangzheyy = new Artist { Name = "yangzheyy", URL = "" };
-        public static Artist Sarel_Theron = new Artist { Name = "Sarel Theron", URL = "" };
-        public static Artist Charmaine_Zoe = new Artist { Name = "Charmaine Zoe", URL = "" };
-        public static Artist Simone_De_Salvatore = new Artist { Name = "Simone De Salvatore", URL = "" };
-        public static Artist Vincent_Van_Gogh = new Artist { Name = "Vincent Van Gogh", URL = "" };
-        public static Artist XallowArt = new Artist { Name = "XallowArt", URL = "" };
-        public static Artist arvdevable = new Artist { Name = "arvdevable", URL = "" };
+        public static Artist yangzheyy = new Artist { Name = "yang zheyy", URL = "https://www.artstation.com/zheyang" };
+        public static Artist Sarel_Theron = new Artist { Name = "Sarel Theron", URL = "https://www.sareltheron.com/" };
+        public static Artist Charmaine_Zoe = new Artist { Name = "Charmaine Zoe", URL = "https://fineartamerica.com/profiles/charmainezoe-troup" };
+        public static Artist Simone_De_Salvatore = new Artist { Name = "Simone De Salvatore", URL = "https://www.artstation.com/simonedesalvatore" };
+        public static Artist Vincent_Van_Gogh = new Artist { Name = "Vincent Van Gogh", URL = "https://www.vangoghgallery.com/painting/" };
+        public static Artist XallowArt = new Artist { Name = "XallowArt", URL = "https://www.deviantart.com/xallowart" };
+        public static Artist arvdevable = new Artist { Name = "arvdevable", URL = "https://www.deviantart.com/arvdevable" };
+        public static Artist Bitbox_Ltd = new Artist { Name = "Bitbox Ltd", URL = "https://www.google.com/search?q=Bitbox+Ltd+art" };
+        public static Artist Laura_Csajagi = new Artist { Name = "Laura Csajagi", URL = "https://www.artstation.com/laura-csajagi" };
+        public static Artist Eliott_Bon = new Artist { Name = "Eliott Bon", URL = "https://www.artstation.com/eliottgood" };
+        public static Artist Bayard_Wu = new Artist { Name = "Bayard Wu", URL = "https://www.artstation.com/bayardwu" };
+        public static Artist Conor_Burke = new Artist { Name = "Conor Burke", URL = "https://www.artstation.com/conorburke" };
+        public static Artist Jarek_Nocon = new Artist { Name = "Jarek Nocon", URL = "https://www.artstation.com/jareknocon" };
+        public static Artist Bastien_Grivet = new Artist { Name = "Bastien Grivet", URL = "https://www.artstation.com/grivetart" };
+        public static Artist Sergey_Zabelin = new Artist { Name = "Sergey Zabelin", URL = "https://www.artstation.com/sergeyzabelin" };
+        public static Artist ASTERAS = new Artist { Name = "ASTERAS", URL = "https://www.deviantart.com/asteras" };
+        public static Artist Heerie = new Artist { Name = "Heerie", URL = "https://www.artstation.com/heerie" };
+        public static Artist Laszlo_Neogrady = new Artist { Name = "Laszlo Neogrady", URL = "http://www.artnet.com/artists/laszlo-neogrady/" };
+        public static Artist Matt_Donnici = new Artist { Name = "Matt Donnici", URL = "https://mattdonnici.com/" };
+        public static Artist Tatiana_Tyukina = new Artist { Name = "Tatiana Tyukina", URL = "https://www.artstation.com/lis" };
+        public static Artist Runar_Steinn = new Artist { Name = "Runar Steinn", URL = "https://www.artstation.com/runarsteinn" };
+        public static Artist Onur_Bakar = new Artist { Name = "Onur Bakar", URL = "https://www.artstation.com/onurbakar" };
 
         //The Scouring of the Shire
         public static Artist Studio_Ghibli = new Artist { Name = "Studio Ghibli", URL = "https://www.ghibli-museum.jp" };

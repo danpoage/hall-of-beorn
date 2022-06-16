@@ -117,49 +117,49 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTraits("Massing.")
                 .WithTextLine("When Revealed: The highest cost ally each player controls makes an immediate attack against the player that controls it. Until the end of these attacks, each of these cards loses the ally card type and gains the enemy card type. Then, remove those allies from the game. Add Bitter Betrayal to the victory display. This effect cannot be canceled.")
                 .WithVictoryPoints(1)
-                .WithInfo(157, 1, Artist.Dynamic("Bitbox_Ltd"));
+                .WithInfo(157, 1, Artist.Bitbox_Ltd);
             addTreachery("Coup", EncounterSet.MusteringOfTheRohirrim)
                 .WithTraits("Massing.")
                 .WithTextLine("When Revealed: Each player must choose: either raise your threat by 6, or discard a hero you control from play. Add Coup to the victory display. This effect cannot be canceled.")
                 .WithFlavorLine("“When I heard that Shadowfax had come back riderless, I rejoiced at the return of the horse, but still more at the lack of the rider.”")
                 .WithFlavorLine("—Gríma, The Two Towers")
                 .WithVictoryPoints(1)
-                .WithInfo(158, 1, Artist.Dynamic("Laura_Csajagi"));
+                .WithInfo(158, 1, Artist.Laura_Csajagi);
             addTreachery("Scattered to the Winds", EncounterSet.MusteringOfTheRohirrim)
                 .WithTraits("Massing.")
                 .WithTextLine("When Revealed: Each player chooses half the non-objective allies they control (rounded up) and shuffles them into their owner’s deck. Add Scattered to the Winds to the victory display. This effect cannot be canceled.")
                 .WithFlavorLine("“We shall all be scattered and lost.”")
                 .WithFlavorLine("—Aragorn, The Fellowship of the Ring")
                 .WithVictoryPoints(1)
-                .WithInfo(159, 1, Artist.Dynamic("Eliott_Bon"));
+                .WithInfo(159, 1, Artist.Eliott_Bon);
             addEnemy("Orc-host Remnant", EncounterSet.MusteringOfTheRohirrim, 33, Card.VALUE_X, Card.VALUE_X, 4, 12)
                 .WithUnique()
                 .WithTraits("Orc.")
                 .WithTextLine("X is the number of damage tokens on Orc-host Remnant. Cannot have attachments. Only the engaged player may declare attackers or defenders against Orc-host Remnant.")
                 .WithTextLine("Forced: After Orc-host Remnant takes any amount of damage, return it to the staging area.")
                 .WithVictoryPoints(5)
-                .WithInfo(160, 1, Artist.Dynamic("Bayard_Wu"));
+                .WithInfo(160, 1, Artist.Bayard_Wu);
             addEnemy("Curuwyn The Whisperer", EncounterSet.MusteringOfTheRohirrim, 20, 5, 4, 6, 4)
                 .WithUnique()
                 .WithTraits("Assassin.", "Gondor.")
                 .WithTextLine("Forced: At the beginning of the encounter phase, Curuwyn The Whisperer engages the player with the highest threat.")
                 .WithTextLine("Forced: After Curuwyn The Whisperer attacks, the defending player must either place 1 damage token on Massing at the Isen, or raise their threat by 4.")
                 .WithVictoryPoints(5)
-                .WithInfo(161, 1, Artist.Dynamic("akunohako"));
+                .WithInfo(161, 1, Artist.Akunohako);
             addEnemy("Felberen Scion of Freca", EncounterSet.MusteringOfTheRohirrim, 30, 3, 5, 5, 4)
                 .WithUnique()
                 .WithTraits("Assassin.", "Dunland.", "Rohan.")
                 .WithTextLine("Forced: At the beginning of the encounter phase, Felberen Scion of Freca engages the player with the most cards in hand.")
                 .WithTextLine("Forced: After Felberen Scion of Freca attacks, the defending player must either place 1 damage token on Massing at the Isen, or discard their hand.")
                 .WithVictoryPoints(5)
-                .WithInfo(162, 1, Artist.Dynamic("Conor_Burke"));
+                .WithInfo(162, 1, Artist.Conor_Burke);
             addEnemy("Smeóhbrand Rogue of Orthanc", EncounterSet.MusteringOfTheRohirrim, 25, 5, 4, 4, 6)
                 .WithUnique()
                 .WithTraits("Assassin.", "Isengard.", "Rohan.")
                 .WithTextLine("Forced: At the beginning of the encounter phase, Smeóhbrand Rogue of Orthanc engages the player who controls the fewest characters.")
                 .WithTextLine("Forced: After Smeóhbrand Rogue of Orthanc attacks for the first time each round, he makes an additional attack. The engaged player may place 1 damage token on Massing at the Isen to cancel this effect.")
                 .WithVictoryPoints(5)
-                .WithInfo(163, 1, Artist.Dynamic("Jarek_Nocon"));
+                .WithInfo(163, 1, Artist.Jarek_Nocon);
             addLocation("Írensaga", EncounterSet.MusteringOfTheRohirrim, 4, 8)
                 .WithUnique()
                 .WithTraits("Mountain.")
@@ -167,7 +167,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Írensaga gets +2Per Player quest points. While Írensaga is the active location, players cannot play allies.")
                 .WithTextLine("Forced: At the end of the round, if Írensaga is in the staging area, place 1 damage token on Massing at the Isen.")
                 .WithVictoryPoints(5)
-                .WithInfo(164, 1, Artist.Dynamic("Bastien_Grivet"));
+                .WithInfo(164, 1, Artist.Bastien_Grivet);
             addEncounterSideQuest("Assassin at Edoras", EncounterSet.MusteringOfTheRohirrim, 6)
                 .WithTraits("Mustering.")
                 .WithTextLine("When Revealed: The first player randomly selects a set aside Assassin enemy and adds it to the staging area. Each other player reveals an encounter card.")
@@ -175,7 +175,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("This stage cannot be defeated while an Assassin enemy is in play.")
                 .WithFlavorLine("Under threat of assassination, Thengel has placed Edoras on high alert.")
                 .WithSideA()
-                .WithInfo(165, 1, Artist.Dynamic("Sergey_Zabelin"));
+                .WithInfo(165, 1, Artist.Sergey_Zabelin);
             addObjectiveAlly("Host of Rohan", EncounterSet.MusteringOfTheRohirrim, 3, 4, 3, 5)
                 .WithTraits("Rohan.")
                 .WithKeywords("Immune to player card effects.", "Sentinel.")
@@ -199,14 +199,14 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Action: Exhaust Folcwine to either ready attached hero, or give attached hero +1 Willpower, +1 Attack, and +1 Defense until the end of the phase.")
                 .WithFlavorLine("The last foal of Felaróf the Mighty, wrested from the clutches of the orcish horde.")
-                .WithInfo(166, 1, Artist.Dynamic("ASTERAS"));
+                .WithInfo(166, 1, Artist.ASTERAS);
             addEncounterSideQuest("Winter in Westemnet", EncounterSet.MusteringOfTheRohirrim, 1)
                 .WithTraits("Mustering.")
                 .WithTextLine("When Revealed: The first player adds Írensaga to the staging area. Each other player reveals an encounter card.")
                 .WithTextLine("Enemies get +1 Threat and do not make engagement checks.")
                 .WithTextLine("This stage cannot be defeated unless Írensaga is in the victory display.")
                 .WithFlavorLine("Éomund’s scouts have ranged far and wide in their hunt for Gálmód. News of his capture will surely bring new allies to your cause.")
-                .WithInfo(167, 1, Artist.Dynamic("Heerie"));
+                .WithInfo(167, 1, Artist.Heerie);
             addObjective("Devoted Determination", EncounterSet.MusteringOfTheRohirrim)
                 .WithTraits("Condition.")
                 .WithTextLine("The first ally played by each player each round does not require a resource match.")
@@ -224,20 +224,20 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Forced: At the end of the round, place 1 damage token on Massing at the Isen.")
                 .WithFlavorLine("You must ride from your paltry camp beside the Glittering Caves, ere Ealdwulf sunders the kingdom of Rohan with his ambition.")
                 .WithVictoryPoints(5)
-                .WithInfo(169, 1, Artist.Dynamic("Laszlo_Neogrady"));
+                .WithInfo(169, 1, Artist.Laszlo_Neogrady);
             addEnemy("Aldburg Provocateur", EncounterSet.MusteringOfTheRohirrim, 35, 4, 2, 4, 3)
                 .WithTraits("Rohan.", "Traitor.")
                 .WithTextLine("Each card played by the engaged player gains Doomed 1.")
                 .WithFlavorLine("“There is a third kind: pickers of bones, meddlers in other men’s sorrows, carrion-fowl that grow fat on war.”")
                 .WithFlavorLine("—Gríma, The Two Towers")
                 .WithEasyModeQuantity(1)
-                .WithInfo(170, 3, Artist.Dynamic("Matt_Donnici"));
+                .WithInfo(170, 3, Artist.Matt_Donnici);
             addEnemy("Pernicious Plotter", EncounterSet.MusteringOfTheRohirrim, 40, 2, 2, 2, 2)
                 .WithTraits("Rohan.", "Brigand.", "Traitor.")
                 .WithTextLine("Forced: At the end of the round, place 1 damage token on Massing at the Isen.")
                 .WithShadow("Shadow: Either place 1 damage token on Massing at the Isen, or return attacking enemy to the staging area after this attack.")
                 .WithEasyModeQuantity(1)
-                .WithInfo(171, 3, Artist.Dynamic("Tatiana_Tyukina"));
+                .WithInfo(171, 3, Artist.Tatiana_Tyukina);
             addEnemy("Sniveling Courtier", EncounterSet.MusteringOfTheRohirrim, 11, 2, 0, 0, 1)
                 .WithTraits("Rohan.", "Servant.", "Traitor.")
                 .WithKeywords("Indestructible.")
@@ -249,7 +249,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTraits("Rohan.", "Brigand.", "Traitor.")
                 .WithTextLine("Spiteful Hunter gets +1 Attack for each exhausted hero controlled by the defending player.")
                 .WithShadow("Shadow: Either place 1 damage token on Massing at the Isen, or attacking enemy gets +3 Attack.")
-                .WithInfo(173, 2, Artist.Dynamic("Runar_Steinn"));
+                .WithInfo(173, 2, Artist.Runar_Steinn);
             addEnemy("Raven Clan Sharpshooter", EncounterSet.MusteringOfTheRohirrim, 41, 2, 4, 1, 3)
                 .WithTraits("Dunland.", "Raven Clan.")
                 .WithTextLine("While any player has 3 or more cards in hand, Raven Clan Sharpshooter gains Archery 3.")
@@ -301,7 +301,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithOppositeTextLine("Forced: When a Mustering side quest is completed, flip it over and reveal it. Then, the first player chooses another set aside Mustering side quest and reveals it. If the first player is unable to do so, advance to stage 3.")
                 .WithOppositeFlavorLine("With each dawn, Ealdwulf’s army grows more prepared. You must make haste.")
                 .WithIncludedEncounterSets(EncounterSet.RohanLands, EncounterSet.RohanWeather)
-                .WithInfo(180, 1, Artist.Dynamic("Onur_Bakar"));
+                .WithInfo(180, 1, Artist.Onur_Bakar);
             addQuest("Halls of Ealdwulf", EncounterSet.MusteringOfTheRohirrim, 3, 'A', 7)
                 .WithTextLine("When Revealed: Place 1Per Player damage tokens on Massing at the Isen. Add the remaining set aside Assassin enemies to the staging area.")
                 .WithFlavorLine("You return to Aldburg to confront Ealdwulf. The traitor’s war party has already departed, but he has left behind a parting gift: two grimacing assassins, their blades sharp and glinting.")
