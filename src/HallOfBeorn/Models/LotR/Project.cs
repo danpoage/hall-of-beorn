@@ -2,7 +2,8 @@
 {
     public enum Project
     {
-        None = 0,
+        Any = 0,
+        Official,
         Community,
         First_Age,
         ALeP

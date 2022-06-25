@@ -105,6 +105,7 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new EnumFilter<Sphere>((score) => score.Card.Sphere, model.Sphere));
             AddFilter(filters, new EnumFilter<Uniqueness>((score) => score.Card.IsUnique ? Uniqueness.Yes : Uniqueness.No, model.IsUnique));
             AddFilter(filters, new Filter((score) => _scenarioService.HasSetType(score.Card, model.SetType, settings)));
+            AddFilter(filters, new ProjectFilter(model.Project));
 
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ResourceCost, model.Cost, model.CostOperator));
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ThreatCost, model.ThreatCost, model.ThreatCostOperator));

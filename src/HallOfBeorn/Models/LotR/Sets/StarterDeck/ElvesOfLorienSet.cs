@@ -216,7 +216,7 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTemplate("<p>Attach to {title:Elrond}. He gains a {sphere:Spirit} resource icon.</p><p><b>Action:</b> Exhaust {title:Elrond} and {self} to reveal the top card of your deck. You can immediately play or put into play the revealed card for no cost, if able. Otherwise, move the revealed card to the bottom of your deck.</p><p class='flavor-text'>...mightiest of the Three. &ndash;The Return of the King</p>")
                 .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(30, 3, Artist.Sara_Biddle);
-            addHero("Elrond", 31, Sphere.Lore, 3, 2, 3, 4)
+            addHero("Elrond", 13, Sphere.Lore, 3, 2, 3, 4)
                 .WithTraits("Noldor.", "Noble.")
                 .WithTextLine("You may spend resources from Elrond's resource pool to pay for Spirit, Leadership, and Tactics allies.")
                 .WithTextLine("Response: After a character is healed by another card effect, heal 1 damage on it.")

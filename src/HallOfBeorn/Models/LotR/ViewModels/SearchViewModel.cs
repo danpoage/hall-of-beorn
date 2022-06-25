@@ -186,7 +186,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 model.Errata = null;
             }
 
-            if (model.Project.HasValue && model.Project.Value == LotR.Project.None)
+            if (model.Project.HasValue && model.Project.Value == LotR.Project.Any)
             {
                 model.Project = null;
             }

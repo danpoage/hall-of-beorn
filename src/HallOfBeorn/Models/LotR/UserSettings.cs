@@ -155,7 +155,7 @@ namespace HallOfBeorn.Models.LotR
                 || !string.IsNullOrWhiteSpace(model.DefaultLimit));
             */
 
-            return model.Project.GetValueOrDefault(Project.None) != Project.None 
+            return model.Project.GetValueOrDefault(Project.Any) != Project.Any 
                 ? new UserSettings
                     {
                         IncludeCommunity = model.Project == Project.Community,
