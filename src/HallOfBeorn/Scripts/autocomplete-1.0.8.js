@@ -103,5 +103,6 @@ var autocompleteSourceAlep = [
     'Alagos', 'Faunith', 'Messenger of Manwe', 'Veteran Eagle', 'Chieftain of the Skies', 'Box of Earth', 'Roving Herbmaster', 'Grip', 'Fang', 'Wolf', 'Hidden Roosts', 'Breath of Arda', 'Golden Crown', 'Guided by Fate',
     'Nob', 'Harry Goatleaf', 'Bob', 'Bree Pony', 'Half-pint', 'Seasoned Forager', 'Pint', 'Scheming Staddler', 'Bree-land Protector', 'A Stout Heart', 'Gift of Foresight', 'Archet Alekeeper',
     'Gaeronel', 'Harlond Lookout', 'Helm Hammerhand', 'Lay of Nauglamir', 'Legacy of Gondolin', 'Onward Into Battle', 'Relic of Nargothrond', 'Salvaged Supplies', 'Wandering Spirit',
+    'Rowan', 'Osbera', 'Woodmen\'s Outpost', 'Lie of the Land', 'Hunting Dogs', 'Beorning Pony', 'Birna', 'Descendants of Beorn', 'Beorn\'s Welcome', 'Subdued', 'Without My Hat',
     'Into the West'
 ];
