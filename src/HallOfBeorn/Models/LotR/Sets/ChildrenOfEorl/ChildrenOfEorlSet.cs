@@ -16,6 +16,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
             Abbreviation = "CoE";
             Number = 10001;
             SetType = Models.SetType.A_Long_extended_Party;
+            Cycle = Cycles.OathsOfTheRohirrim;
 
             addHero("Ingold", 10, Sphere.Leadership, 3, 1, 2, 4)
                 .WithTraits("Gondor.", "Warrior.")

@@ -245,6 +245,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTextLine("Ranged.")
                 .WithTextLine("Response: After you engage an enemy, ready an ally you control. (Limit once per phase.)")
                 .WithTemplate("<p class='main-text'>{keyword:Ranged.} <b>Response:</b> After you engage an enemy, ready an ally you control. (Limit once per phase.)</p>")
+                .WithPromotion()
                 .WithInfo(2, 1, Artist.Aurore_Folny);
         }
     }

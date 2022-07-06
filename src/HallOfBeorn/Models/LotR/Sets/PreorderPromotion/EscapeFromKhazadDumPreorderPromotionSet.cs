@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("When Revealed: The opposing team searches the top 5 cards of the encounter deck for a card with cost 1 or less (cost 2 or less instead if there are two or more players), sets it aside, and shuffles the encounter deck. Reveal the set aside card. It's 'when revealed' effects cannot be canceled.")
                 .WithOppositeTextLine("Add the active location's Threat to the staging area.")
                 .WithOppositeTextLine("During the travel phase, the players must travel, if able.")
+                .WithPromotion()
                 .WithInfo(5, 1, Artist.Ben_Zweifel);
             addEnemy("Durin's Bane", EncounterSet.EscapeFromKhazadDum, 50, 4, 8, 3, 15)
                 .WithUnique()
@@ -30,6 +31,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("Cannot be optionally engaged.")
                 .WithTextLine("Forced: After Durin's Bane attacks and destroys a character you control, raise your threat by 2 and heal 2 damage from Durin's Bane.")
                 .WithVictoryPoints(5)
+                .WithPromotion()
                 .WithInfo(11, 1, Artist.Magali_Villeneuve);
             addEnemy("Black Bats", emptySetName, 23, 1, 3, 1, 2)
                 .WithSetNumberAndCost(15, 0)
@@ -37,6 +39,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("When Revealed: Eithe raise each player's threat by 2, or reveal an additional encounter card.")
                 .WithShadow("Shadow: Either raise your threat by 2, or this attack is considered undefended.")
                 .WithHorizontalArt()
+                .WithPromotion()
                 .WithInfo(12, 1, Artist.Lukasz_Jaskolski);
             addLocation("Lightless Grotto", emptySetName, 2, 3)
                 .WithSetNumberAndCost(21, 0)
@@ -44,6 +47,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("While Lightless Grotto is in the staging area, non-unique enemies in the staging area cannot take damage.")
                 .WithTextLine("Travel: The first player chooses an enemy in the staging area and engages it.")
                 .WithHorizontalArt()
+                .WithPromotion()
                 .WithInfo(31, 1, Artist.Ivan_Dixon);
         }
     }

@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
             Abbreviation = "KD";
             Number = 8;
             SetType = Models.SetType.Deluxe_Expansion;
+            Cycle = Cycles.Dwarrowdelf;
 
             addHero("Dwalin", 9, Sphere.Spirit, 1, 2, 2, 4)
                 .WithTraits("Dwarf.")

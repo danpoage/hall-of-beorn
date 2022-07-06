@@ -83,11 +83,12 @@ Cards with the text 'Immune to player card effects' ignore the effects of all pl
 Page 4/4",
                 CardNumber = 0
             });
-            Cards.Add(LotRCard.Hero("Gimli", "", Sphere.Tactics, 11, 2, 2, 2, 5)
+            addHero("Gimli", 11, Sphere.Tactics, 2, 2, 2, 5)
                 .WithTraits("Dwarf.", "Noble.", "Warrior.")
                 .WithText("Gimli gets +1 Attack for each damage token on him.")
                 .WithTemplate("<p>{self} gets +1 {Attack} for each damage token on him.</p>")
-                .WithInfo(0, 1, Artist.Sebastian_Giacobino));
+                .WithPromotion()
+                .WithInfo(4, 1, Artist.Sebastian_Giacobino);
             Cards.Add(LotRCard.Quest("Ruins of the First Age", 1, "The Ruins of Belegost", 6)
                 .WithText("Setup: Add Stalking the Ruins and 1 copy of Abandoned Mine per player to the staging area. Set Lurker of the Depths, Naurlhûg, Naurlhûg's Lair, and Sword of Belegost aside, out of play. Randomly select 1 of the 5 remaining Loot objectives and place it facedown underneath Stalking the Ruins (without looking). Shuffle the others into the encounter deck (without looking at them).")
                 .WithFlavor("You have entered the dark, half-sunken ruins of Belegost in search of powerful artifacts and ancient treasure.")

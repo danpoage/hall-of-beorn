@@ -24,6 +24,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithText("Ranged.\r\nResponse: After Legolas participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.")
                 .WithTemplate("<p>{keyword:Ranged.}</p><p><b>Response:</b> After {self} participates in an attack that destroys an enemy, place 2 progress tokens on the current quest.</p>")
                 .WithYear(2015)
+                .WithPromotion()
                 .WithInfo(5, 1, Artist.Sebastian_Giacobino);
             Cards.Add(LotRCard.GenConSetup("Murder at the Prancing Pony Scenario Rules 2-3", setName)
                 .WithText("Scenario Rules\r\nThe Investigation Deck\r\nBegin the game by following the Setup instructions on stage 1A. When the players are instructed to \"build the investigation deck,\" do the following: Take the 4 remaining Hideout locations, plus each copy of Taken By Surprise, and shuffle them together without looking at them. This is the Investigation deck.\r\nThe players are not allowed to look at cards in the Investigation deck except when resolving the Investigation keyword or instructed by a card effect.\r\nThe Investigation List\r\nThe Investigation List\r\nThe Investigation List on page 5 of the rules has the name of all 5 Suspect enemies and all 5 Hideout locations. During the game, players should check enemies and locations off of their Investigation list in order to help them determine the correct Suspect and HIdeout by process of elimination.\r\nPage 2/5")

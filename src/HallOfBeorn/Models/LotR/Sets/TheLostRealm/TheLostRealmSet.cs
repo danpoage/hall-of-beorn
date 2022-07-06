@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLostRealm
             Abbreviation = "TLR";
             Number = 29;
             SetType = Models.SetType.Deluxe_Expansion;
+            Cycle = Cycles.AngmarAwakened;
 
             addHero("Aragorn", 12, Sphere.Tactics, 2, 3, 2, 5)
                 .WithTraits("Dúnedain.", "Ranger.", "Warrior.")

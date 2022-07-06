@@ -69,28 +69,15 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
                 CardNumber = 0,
                 Quantity = 1
             });
-            Cards.Add(new LotRCard()
-            {
-                
-                Title = "Aragorn",
-                Id = "AAF34EE7-24B9-4962-AE9F-079772089407",
-                CardType = CardType.Hero,
-                Sphere = Sphere.Leadership,
-                ThreatCost = 12,
-                IsUnique = true,
-                Attack = 3,
-                Defense = 2,
-                Willpower = 2,
-                HitPoints = 5,
-                Traits = new List<string>() { "Dúnedain.", "Noble.", "Ranger." },
-                Text = "Sentinel.\r\nResponse: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.",
-                HtmlTemplate = "<p>{keyword:Sentinel.}</p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p>",
-                Keywords = new List<string>() { "Sentinel." },
-                Quantity = 1,
-                Year = 2014,
-                Artist = Artist.Sebastian_Giacobino,
-                CardNumber = 1
-            });
+            addHero("Aragorn", 12, Sphere.Leadership, 2, 3, 2, 5)
+                .WithTraits("Dúnedain.", "Noble.", "Ranger.")
+                .WithKeywords("Sentinel.")
+                .WithTextLine("Sentinel.")
+                .WithTextLine("Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.")
+                .WithTemplate("<p>{keyword:Sentinel.}</p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p>")
+                .WithYear(2014)
+                .WithPromotion()
+                .WithInfo(1, 1, Artist.Sebastian_Giacobino);
             Cards.Add(new LotRCard()
             {
                 Title = "The House of Tom Bombadil",

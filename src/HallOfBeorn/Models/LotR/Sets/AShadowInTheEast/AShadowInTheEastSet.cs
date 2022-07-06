@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
             Abbreviation = "ASitE";
             Number = 56;
             SetType = Models.SetType.Deluxe_Expansion;
+            Cycle = Cycles.VengeanceOfMordor;
 
             addAttachment("The One Ring", 0, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Ring.", "Master.")

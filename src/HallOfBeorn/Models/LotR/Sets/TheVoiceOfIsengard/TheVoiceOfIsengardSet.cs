@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheVoiceOfIsengard
             Abbreviation = "VoI";
             Number = 22;
             SetType = Models.SetType.Deluxe_Expansion;
+            Cycle = Cycles.TheRingMaker;
 
             addHero("Éomer", 10, Sphere.Tactics, 1, 3, 2, 4)
                 .WithTraits("Rohan.", "Noble.", "Warrior.")

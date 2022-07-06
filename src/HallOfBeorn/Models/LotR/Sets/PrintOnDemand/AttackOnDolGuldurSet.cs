@@ -240,11 +240,13 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             addHero("Celeborn", 11, Sphere.Leadership, 3, 2, 2, 4)
                 .WithTraits("Silvan.", "Noble.")
                 .WithText("Response: After a Silvan ally enters play, that ally gets +1 Willpower, +1 Attack, and +1 Defense until the end of the round.")
+                .WithPromotion()
                 .WithInfo(1, 1, Artist.Drazenka_Kimpel);
             addHero("Galadriel", 9, Sphere.Spirit, 4, 0, 0, 4)
                 .WithTraits("Noldor.", "Noble.")
                 .WithTextLine("Galadriel cannot quest, attack or defend. Allies you control do not exhaust to commit to the quest during the round they enter play.")
                 .WithTextLine("Action: Exhaust Galadriel to choose a player. That player reduces his threat by 1 and draws 1 card. (Limit once per round.)")
+                .WithPromotion()
                 .WithInfo(112, 1, Artist.Drazenka_Kimpel);
         }
     }

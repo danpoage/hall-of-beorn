@@ -45,6 +45,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 model.EncounterSet = null;
             }
+            if (string.IsNullOrEmpty(model.Cycle) || model.Cycle == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Cycle = null;
+            }
             if (string.IsNullOrEmpty(model.Scenario) || model.Scenario == SearchViewModel.DEFAULT_FILTER_VALUE)
             {
                 model.Scenario = null;
@@ -124,6 +128,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             if (string.IsNullOrEmpty(model.VictoryPoints) || model.VictoryPoints == SearchViewModel.DEFAULT_FILTER_VALUE)
             {
                 model.VictoryPoints = null;
+            }
+            if (model.Status.HasValue && model.Status.Value == CardStatus.None)
+            {
+                model.Status = null;
             }
 
             if (model.IsUnique.HasValue && model.IsUnique.Value == Uniqueness.Any)
@@ -635,6 +643,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name="Encounter Set")]
         public string EncounterSet { get; set; }
 
+        [Display(Name="Cycle")]
+        public string Cycle { get; set; }
+
         [Display(Name="Player Category")]
         public string Category { get; set; }
 
@@ -746,6 +757,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         [Display(Name = "Victory")]
         public string VictoryPoints { get; set; }
+
+        [Display(Name = "Status")]
+        public CardStatus? Status { get; set; }
 
         public bool? Random { get; set; }
 
@@ -1197,6 +1211,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public static IEnumerable<SelectListItemExtends> CardSets { get; set; }
         public static IEnumerable<SelectListItem> Scenarios { get; set; }
         public static IEnumerable<SelectListItem> EncounterSets { get; set; }
+        public static IEnumerable<SelectListItem> Cycles { get; set; }
 
         public static IEnumerable<SelectListItem> ResourceCosts { get; set; }
         public static IEnumerable<SelectListItem> ThreatCosts { get; set; }
@@ -1279,5 +1294,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         }
 
         public static IEnumerable<SelectListItem> VictoryPointValues { get; set; }
+
+        public static IEnumerable<SelectListItem> Statuses { get; set; }
     }
 }

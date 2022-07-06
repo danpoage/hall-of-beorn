@@ -20,6 +20,7 @@ namespace HallOfBeorn.Models.LotR.Sets.FirstAge
             Abbreviation = "FA";
             Number = 9001;
             SetType = Models.SetType.First_Age;
+            Cycle = Cycles.DoomMastered;
 
             addScenario(EncounterSet.HuntingOfTheWolf.Name, 1, setName)
                 .WithTextLine("Corruption")

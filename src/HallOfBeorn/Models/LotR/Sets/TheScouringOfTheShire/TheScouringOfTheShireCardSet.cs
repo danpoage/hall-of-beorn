@@ -399,6 +399,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
             addHero("Frodo Baggins", 7, Sphere.Leadership, 2, 1, 2, 2)
                 .WithTraits("Hobbit.")
                 .WithTextLine("Response: After Frodo Baggins commits to the quest, spend 1 resource from his resource pool to ready another unique character committed to the quest. If you quest successfully this phase, reduce your threat by 1.")
+                .WithPromotion()
                 .WithInfo(2, 1, Artist.Lukasz_Jaskolski);
             /*
             addGenConSetup("Back Card", EncounterSet.TheScouringOfTheShire)

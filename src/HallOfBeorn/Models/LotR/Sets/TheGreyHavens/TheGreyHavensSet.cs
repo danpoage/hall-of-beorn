@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
             Abbreviation = "TGH";
             Number = 35;
             SetType = Models.SetType.Deluxe_Expansion;
+            Cycle = Cycles.DreamChaser;
 
             addHero("Círdan the Shipwright", 12, Sphere.Spirit, 4, 2, 2, 4)
                 .WithTraits("Noldor.", "Noble.")

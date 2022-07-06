@@ -1013,6 +1013,12 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        public LotRCard WithPromotion()
+        {
+            this.Status = CardStatus.Promotion;
+            return this;
+        }
+
         #endregion
     }
 }

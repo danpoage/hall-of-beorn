@@ -97,6 +97,8 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new GenericFilter(model.CardSet, (score, target) => score.Card.MatchesCardSet(target)));
             AddFilter(filters, new GenericFilter(model.Scenario, (score, target) =>  _scenarioService.BelongsToScenario(score.Card.Slug, score.Card.CardType, target)));
             AddFilter(filters, new GenericFilter(model.EncounterSet, (score, target) => score.Card.EncounterSet == target, (score, target) => score.Card.AlternateEncounterSet == target));
+            AddFilter(filters, new GenericFilter(model.Cycle, (score, target) => score.Card.CardSet.Cycle == target));
+            AddFilter(filters, new EnumFilter<CardStatus>((score) => score.Card.Status, model.Status));
 
             AddFilter(filters, new CardTypeFilter(getTranslatedCardType(model.Lang, model.CardType)));
             AddFilter(filters, new EnumFilter<CardSubtype>((score) => score.Card.CardSubtype, model.CardSubtype, (target) => { return target == "No Subtype" ? "None" : target; }));

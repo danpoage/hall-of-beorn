@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
             Abbreviation = "TSoH";
             Number = 42;
             SetType = Models.SetType.Deluxe_Expansion;
+            Cycle = Cycles.Haradrim;
 
             addHero("Gimli", 11, Sphere.Leadership, 2, 2, 2, 5)
                 .WithTraits("Dwarf.", "Noble.", "Warrior.")

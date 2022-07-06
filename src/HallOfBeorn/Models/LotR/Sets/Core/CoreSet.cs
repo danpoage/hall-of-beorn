@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Core
             Abbreviation = "Core";
             Number = 1;
             SetType = Models.SetType.Core;
+            Cycle = Cycles.ShadowsOfMirkwood;
 
             addHero("Aragorn", 12, Sphere.Leadership, 2, 3, 2, 5)
                 .WithThumbnail()

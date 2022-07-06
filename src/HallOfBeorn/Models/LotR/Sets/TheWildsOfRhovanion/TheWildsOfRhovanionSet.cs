@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
             Abbreviation = "TWoR";
             Number = 49;
             SetType = Models.SetType.Deluxe_Expansion;
+            Cycle = Cycles.EredMithrin;
 
             addHero("Brand son of Bain", 10, Sphere.Leadership, 2, 3, 2, 3)
                 .WithTraits("Dale.", "Noble.")

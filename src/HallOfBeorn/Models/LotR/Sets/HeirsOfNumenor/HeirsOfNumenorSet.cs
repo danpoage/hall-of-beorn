@@ -12,6 +12,7 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
             Abbreviation = "HoN";
             Number = 15;
             SetType = Models.SetType.Deluxe_Expansion;
+            Cycle = Cycles.AgaintTheShadow;
 
             addHero("Beregond", 10, Sphere.Tactics, 0, 1, 4, 4)
                 .WithTraits("Gondor.", "Warrior.")

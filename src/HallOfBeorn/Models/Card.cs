@@ -233,6 +233,7 @@ namespace HallOfBeorn.Models
         public Artist BackArtist { get; set; }
         
         public ushort Year { get; set; }
+        public CardStatus Status { get; set; }
 
         public IEnumerable<string> Traits
         {
