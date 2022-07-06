@@ -227,6 +227,7 @@ $(document).ready(function () {
         $('#Query').focus().val('');
 
         $('#CardSet').val('Any');
+        $('#Cycle').val('Any');
         $('#Scenario').val('Any');
         $('#EncounterSet').val('Any');
 
@@ -237,7 +238,8 @@ $(document).ready(function () {
         $('#Sphere').val('Any');
         $('#IsUnique').val('Any');
         $('#SetType').val('Any');
-        $('#Project').val('None');
+        $('#Project').val('Any');
+        $('#Status').val('Any');
 
         $('#Cost').val('Any');
         $('#CostOperator').val('=');
@@ -265,10 +267,11 @@ $(document).ready(function () {
 
         $('#Category').val('Any');
         $('#EncounterCategory').val('Any');
+        $('#QuestCategory').val('Any');
         $('#Region').val('Any');
         $('#Archetype').val('Any');
-        $('#QuestCategory').val('Any');
-
+        $('#Age').val('Any');
+        
         $('#Artist').val('Any');
         $('#PopularityOp').val('=');
         $('#Popularity').val('Any');

@@ -20,6 +20,8 @@ namespace HallOfBeorn.Models.LotR
             all.Add(VengeanceOfMordor);
             all.Add(TheHobbit);
             all.Add(TheLordOfTheRings);
+            all.Add(DoomMastered);
+            all.Add(OathsOfTheRohirrim);
         }
 
         private static readonly List<string> all = new List<string>();
