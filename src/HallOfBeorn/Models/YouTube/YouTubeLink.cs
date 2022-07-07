@@ -9,11 +9,13 @@ namespace HallOfBeorn.Models.YouTube
     {
         public YouTubeLink(string title, string videoId)
         {
+            this.videoId = videoId;
             Url = string.Format(urlFormat, videoId);
             ThumbnailUrl = string.Format(thumbnailFormat, videoId);
             Text = string.Format(textFormat, ThumbnailUrl, title, thumbnailHeight, thumbnailWidth);
         }
 
+        private readonly string videoId;
         private const string urlFormat = "https://www.youtube.com/watch?v={0}";
         private const string textFormat = "<img src='{0}' title='{1}' style='height:{2}px;width:{3}px'></img>";
         private const string thumbnailFormat = "https://i.ytimg.com/vi/{0}/hqdefault.jpg";
@@ -27,6 +29,8 @@ namespace HallOfBeorn.Models.YouTube
         public string Text { get; private set; }
         
         public string Url { get; private set; }
+
+        public string Slug { get { return videoId; } }
 
         public string ThumbnailUrl { get; private set; }
 

@@ -238,6 +238,7 @@ $(document).ready(function () {
         $('#Sphere').val('Any');
         $('#IsUnique').val('Any');
         $('#SetType').val('Any');
+        $('#Character').val('Any');
         $('#Project').val('Any');
         $('#Status').val('Any');
 

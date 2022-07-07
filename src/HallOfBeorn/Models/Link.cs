@@ -188,6 +188,22 @@ namespace HallOfBeorn.Models
         public string Title { get; set; }
         public string Text { get; set; }
         public string Url { get; set; }
+        public string Slug
+        {
+            get {
+                if (string.IsNullOrEmpty(Url))
+                {
+                    return string.Empty;
+                }
+
+                var lastSlash = Url.LastIndexOf('/');
+                if (lastSlash > -1)
+                {
+                    return Url.Substring(lastSlash + 1, Url.Length - (lastSlash + 1));
+                }
+                return string.Empty;
+            }
+        }
         public string ThumbnailUrl { get; private set; }
         public int ThumbnailHeight { get { return _thumbnailHeight.HasValue ? _thumbnailHeight.Value : 118; } } 
         public int ThumbnailWidth { get { return _thumbnailWidth.HasValue ? _thumbnailWidth.Value : 210; } }

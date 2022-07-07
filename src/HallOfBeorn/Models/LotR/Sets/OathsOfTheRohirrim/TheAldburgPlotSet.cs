@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-
-namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
+﻿namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
 {
     public class TheAldburgPlotSet
         : CardSet
@@ -63,10 +58,10 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(6, 3, Artist.Justin_Gerard);
             addEvent("Weep No More!", 1, Sphere.Lore)
                 .WithTextLine("Limit 3 copies of Weep No More! in the victory display.")
-                .WithTextLine("Response: After a \"when revealed\" effect or a shadow effect on a treachery card resolved, add Weep No More! to the victory display to add that treachery card to the victory display.")
+                .WithTextLine("Response: After a \"when revealed\" effect or a shadow effect on a treachery card resolves, add Weep No More! to the victory display to add that treachery card to the victory display.")
                 .WithFlavorLine("\"At least we may yet be avenged. Let us gird ourselves and weep no more!\"")
                 .WithFlavorLine("-Aragorn, The Fellowship of the Ring")
-                .WithTemplate("<p class='main-text'>Limit 3 copies of {self} in the victory display.</p><p class='main-text'><b>Response:</b> After a \"when revealed\" effect or a shadow effect on a treachery card resolved, add {self} to the victory display to add that treachery card to the victory display.</p><p class='flavor-text'>&ldquo;At least we may yet be avenged. Let us gird ourselves and weep no more!&rdquo;<br>&mdash;Aragorn, The Fellowship of the Ring</p>")
+                .WithTemplate("<p class='main-text'>Limit 3 copies of {self} in the victory display.</p><p class='main-text'><b>Response:</b> After a \"when revealed\" effect or a shadow effect on a treachery card resolves, add {self} to the victory display to add that treachery card to the victory display.</p><p class='flavor-text'>&ldquo;At least we may yet be avenged. Let us gird ourselves and weep no more!&rdquo;<br>&mdash;Aragorn, The Fellowship of the Ring</p>")
                 .WithInfo(7, 3, Artist.Andrea_Piparo);
             addEvent("Fear! Fire! Foes!", 2, Sphere.Lore)
                 .WithKeywords("Secrecy 1.")

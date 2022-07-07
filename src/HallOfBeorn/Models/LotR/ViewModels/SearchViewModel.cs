@@ -761,6 +761,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name = "Status")]
         public CardStatus? Status { get; set; }
 
+        [Display(Name = "Character")]
+        public string Character { get; set; }
+
         public bool? Random { get; set; }
 
         public string Quest { get; set; }
@@ -1296,5 +1299,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public static IEnumerable<SelectListItem> VictoryPointValues { get; set; }
 
         public static IEnumerable<SelectListItem> Statuses { get; set; }
+
+        public static IEnumerable<SelectListItem> CharacterValues { get; set; }
     }
 }

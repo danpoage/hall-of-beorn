@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
@@ -231,6 +232,29 @@ namespace HallOfBeorn.Services
         public IEnumerable<Character> All()
         {
             return all.Values;
+        }
+
+        public bool IncludesCard(string name, string cardTitle, string cardSlug, Func<string, IEnumerable<ILink>> getLinksByName)
+        {
+            var character = Lookup(name);
+            if (character == null)
+            {
+                return false;
+            }
+
+            if (character.LotRCards.Any(slug => slug == cardSlug))
+            {
+                return true;
+            }
+
+            if (character.RelatedCharacters().Any(link => link.Slug == cardTitle))
+            {
+                return true;
+            }
+
+            var links = getLinksByName(name);
+
+            return links.Any(link => link.Slug == cardSlug);
         }
     }
 }

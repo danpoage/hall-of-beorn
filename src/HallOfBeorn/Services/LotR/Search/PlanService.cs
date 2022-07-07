@@ -6,6 +6,7 @@ using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Links;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
 using HallOfBeorn.Services.LotR.Tags;
@@ -24,7 +25,9 @@ namespace HallOfBeorn.Services.LotR.Search
             ICategoryService<Archetype> archetypeService,
             IRingsDbService ringsDbService,
             IFilterService filterService,
-            ITranslationService translationService)
+            ITranslationService translationService,
+            ICharacterRepository characterRepository,
+            ILinkService linkService)
         {
             _noteService = noteService;
             _scenarioService = scenarioService;
@@ -35,6 +38,8 @@ namespace HallOfBeorn.Services.LotR.Search
             _archetypeService = archetypeService;
             _filterService = filterService;
             _translationService = translationService;
+            _characterRepository = characterRepository;
+            _linkService = linkService;
             _getPopularity = (slug) => { return ringsDbService.GetPopularity(slug); };
             _getVotes = (card) => { return ringsDbService.GetVotes(card.Slug); };
         }
@@ -50,6 +55,8 @@ namespace HallOfBeorn.Services.LotR.Search
         private readonly ITranslationService _translationService;
         private readonly Func<string, byte> _getPopularity;
         private readonly Func<LotRCard, uint> _getVotes;
+        private readonly ICharacterRepository _characterRepository;
+        private readonly ILinkService _linkService;
 
         private const string defaultCardSet = "Core Set";
         private const CardType defaultCardType = CardType.Hero;
@@ -87,6 +94,8 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private IEnumerable<IComponent> CreateFilters(SearchViewModel model, UserSettings settings)
         {
+            Func<string, IEnumerable<ILink>> getLinksByName = (name) => _linkService.GetCharacterLinks(name);
+
             var filters = new List<IComponent>();
 
             AddFilter(filters, new StringBasicQueryFilter(model.BasicQuery(), model.Lang));
@@ -108,6 +117,7 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new EnumFilter<Uniqueness>((score) => score.Card.IsUnique ? Uniqueness.Yes : Uniqueness.No, model.IsUnique));
             AddFilter(filters, new Filter((score) => _scenarioService.HasSetType(score.Card, model.SetType, settings)));
             AddFilter(filters, new ProjectFilter(model.Project));
+            AddFilter(filters, new GenericFilter(model.Character, (score, target) => _characterRepository.IncludesCard(target, score.Card.Title, score.Card.Slug, getLinksByName)));
 
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ResourceCost, model.Cost, model.CostOperator));
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ThreatCost, model.ThreatCost, model.ThreatCostOperator));

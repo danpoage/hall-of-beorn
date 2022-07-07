@@ -13,6 +13,7 @@ namespace HallOfBeorn.Models
         string Title { get; }
         string Text { get; }
         string Url { get; }
+        string Slug { get; }
         string ThumbnailUrl { get; }
         int ThumbnailHeight { get; } 
         int ThumbnailWidth { get; }

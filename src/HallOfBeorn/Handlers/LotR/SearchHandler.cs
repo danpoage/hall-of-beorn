@@ -100,6 +100,7 @@ namespace HallOfBeorn.Handlers.LotR
             SearchViewModel.EncounterSets = _scenarioService.EncounterSetNames().GetSelectListItems();
             SearchViewModel.Cycles = Cycles.All().GetSelectListItems();
             SearchViewModel.Statuses = typeof(CardStatus).GetSelectListItems(" ", false, null);
+            SearchViewModel.CharacterValues = _characterRepository.All().Select(c => c.Name).GetSelectListItems();
 
             SearchViewModel.Categories = _playerCategoryService.CategoryNames().GetSelectListItems();
             SearchViewModel.EncounterCategories = _encounterCategoryService.CategoryNames().GetSelectListItems();

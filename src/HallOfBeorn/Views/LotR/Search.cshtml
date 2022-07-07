@@ -8,7 +8,7 @@
 }
 
 @section scripts {
-<script type="text/javascript" src="~/Scripts/cardSearch-1.0.4.js" defer></script>
+<script type="text/javascript" src="~/Scripts/cardSearch-1.0.5.js" defer></script>
 <script type="text/javascript" src="~/Scripts/cookie-1.0.1.js" defer></script>
 <script type="text/javascript" src="~/Scripts/autocomplete-1.0.8.js" defer></script>
 <script type="text/javascript">
@@ -58,15 +58,15 @@
                 <a id="resetButton" href="#" class="clear-button">Clear</a>
                 <span style="display:inline-block;">
                 <span class="search-label-right">Sort</span>
-                @Html.DropDownListFor(x => x.Sort, SearchViewModel.Sorts, new { @class = "search-select-short" })
+                @Html.DropDownListFor(m => m.Sort, SearchViewModel.Sorts, new { @class = "search-select-short" })
                 </span>
                 <span style="display:inline-block">
                 <span class="search-label-right">View</span>
-                @Html.DropDownListFor(x => x.View, SearchViewModel.Views, new { @class = "search-select-short" })
+                @Html.DropDownListFor(m => m.View, SearchViewModel.Views, new { @class = "search-select-short" })
                 </span>
                 <span style="display:inline-block">
                 <span class="search-label-right">Lang</span>
-                @Html.DropDownListFor(v => v.Lang, SearchViewModel.Languages, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(m => m.Lang, SearchViewModel.Languages, new { @class = "search-select-tiny" })
                 </span>
             </div>
         </div>
@@ -77,23 +77,28 @@
                 <div class="search-sub-section">
                     <span class="search-filter">
                     <span class="search-label-short">Card Set</span>
-                    @Html.DropDownListFor(search => search.CardSet, SearchViewModel.CardSets, new { @class = "search-select" })
+                    @Html.DropDownListFor(m => m.CardSet, SearchViewModel.CardSets, new { @class = "search-select" })
                     </span>
 
                     <span class="search-filter">
                     <span class="search-label-short" title="Cycle">Cycle</span>
-                    @Html.DropDownListFor(search => search.Cycle, SearchViewModel.Cycles, new { @class = "search-select" })
+                    @Html.DropDownListFor(m => m.Cycle, SearchViewModel.Cycles, new { @class = "search-select" })
+                    </span>
+
+                    <span class="search-filter">
+                    <span class="search-label-short">Set Type</span>
+                    @Html.DropDownListFor(m => m.SetType, SearchViewModel.SetTypeValues, new { @class = "search-select" })
                     </span>
                 </div>
                 <div class="search-sub-section">
                     <span class="search-filter">
                     <span class="search-label-short" title="Scenario">Scenario</span>
-                    @Html.DropDownListFor(x => x.Scenario, SearchViewModel.Scenarios, new { @class = "search-select" })
+                    @Html.DropDownListFor(m => m.Scenario, SearchViewModel.Scenarios, new { @class = "search-select" })
                     </span>
 
                     <span class="search-filter">
                     <span class="search-label-short">Encounter</span>
-                    @Html.DropDownListFor(x => x.EncounterSet, SearchViewModel.EncounterSets, new { @class = "search-select" })
+                    @Html.DropDownListFor(m => m.EncounterSet, SearchViewModel.EncounterSets, new { @class = "search-select" })
                     </span>
                 </div>    
             </div>
@@ -105,37 +110,37 @@
                 <div class="search-sub-section">
                     <span class="search-filter">
                     <span class="search-label-short">Card Type</span>
-                    @Html.DropDownListFor(x => x.CardType, SearchViewModel.CardTypes, new { @class = "search-select" })
+                    @Html.DropDownListFor(m => m.CardType, SearchViewModel.CardTypes, new { @class = "search-select" })
                     </span>
 
                     <span class="search-filter">
                     <span class="search-label-short" title="Card Subtype">Subtype</span>
-                    @Html.DropDownListFor(x => x.CardSubtype, SearchViewModel.CardSubtypes, new { @class = "search-select-short-padded" })
+                    @Html.DropDownListFor(m => m.CardSubtype, SearchViewModel.CardSubtypes, new { @class = "search-select-short-padded" })
                     </span>
 
                     <span class="search-filter">
                     <span class="search-label-short" title="Deck Type">Deck Type</span>
-                    @Html.DropDownListFor(x => x.DeckType, SearchViewModel.DeckTypes, new { @class = "search-select-short-padded" })
+                    @Html.DropDownListFor(m => m.DeckType, SearchViewModel.DeckTypes, new { @class = "search-select-short-padded" })
                     </span>
                 </div>
                 <div class="search-sub-section">
                     <span class="search-filter">
                     <span class="search-label-short">Sphere</span>
-                    @Html.DropDownListFor(x => x.Sphere, SearchViewModel.Spheres, new { @class = "search-select-short-padded" })
+                    @Html.DropDownListFor(m => m.Sphere, SearchViewModel.Spheres, new { @class = "search-select-short-padded" })
                     </span>
 
                     <span class="search-filter">
                     <span class="search-label-short">Unique</span>
                     @*<img src="/Images/unique-card-small.png" />*@
-                    @Html.DropDownListFor(x => x.IsUnique, SearchViewModel.UniquenessValues, new { @class = "search-select-short-padded" })
+                    @Html.DropDownListFor(m => m.IsUnique, SearchViewModel.UniquenessValues, new { @class = "search-select-short-padded" })
                     </span>
 
                     
                 </div>
                 <div class="search-sub-section">
                     <span class="search-filter">
-                    <span class="search-label-short">Set Type</span>
-                    @Html.DropDownListFor(x => x.SetType, SearchViewModel.SetTypeValues, new { @class = "search-select" })
+                    <span class="search-label-short">Character</span>
+                    @Html.DropDownListFor(m => m.Character, SearchViewModel.CharacterValues, new { @class = "search-select" })
                     </span>
 
                     <span class="search-filter">
@@ -160,20 +165,20 @@
             <div class="search-items">
                 <span class="search-filter">
                 <span class="search-label-short">Resource</span>
-                @Html.DropDownListFor(x => x.CostOperator, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                @Html.DropDownListFor(x => x.Cost, SearchViewModel.ResourceCosts, new { @class = "search-select-short" })
+                @Html.DropDownListFor(m => m.CostOperator, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(m => m.Cost, SearchViewModel.ResourceCosts, new { @class = "search-select-short" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short">Threat</span>
-                @Html.DropDownListFor(x => x.ThreatCostOperator, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                @Html.DropDownListFor(x => x.ThreatCost, SearchViewModel.ThreatCosts, new { @class = "search-select-short" })
+                @Html.DropDownListFor(m => m.ThreatCostOperator, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(m => m.ThreatCost, SearchViewModel.ThreatCosts, new { @class = "search-select-short" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short">Engagement</span>
-                @Html.DropDownListFor(x => x.EngagementCostOperator, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                @Html.DropDownListFor(x => x.EngagementCost, SearchViewModel.EngagementCosts, new { @class = "search-select-short" })
+                @Html.DropDownListFor(m => m.EngagementCostOperator, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(m => m.EngagementCost, SearchViewModel.EngagementCosts, new { @class = "search-select-short" })
                 </span>
             </div>
         </div>
@@ -184,39 +189,39 @@
                 <div class="search-sub-section">
                     <span class="search-filter">
                     <span class="search-label-short"><img src="/Images/attack-small.png" class="search-icon" style="height:16px;"></span>
-                    @Html.DropDownListFor(x => x.AttackOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                    @Html.DropDownListFor(x => x.Attack, SearchViewModel.AttackStrengthValues, new { @class = "search-select-short" })
+                    @Html.DropDownListFor(m => m.AttackOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(m => m.Attack, SearchViewModel.AttackStrengthValues, new { @class = "search-select-short" })
                     </span>
 
                     <span class="search-filter">
                     <span class="search-label-short"><img src="/Images/defense-small.png" class="search-icon" style="height:16px;"></span>
-                    @Html.DropDownListFor(x => x.DefenseOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                    @Html.DropDownListFor(x => x.Defense, SearchViewModel.DefenseStrengthValues, new { @class = "search-select-short" })
+                    @Html.DropDownListFor(m => m.DefenseOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(m => m.Defense, SearchViewModel.DefenseStrengthValues, new { @class = "search-select-short" })
                     </span>
 
                     <span class="search-filter">
                     <span class="search-label-short">Hit Points</span>
-                    @Html.DropDownListFor(x => x.HitPointsOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                    @Html.DropDownListFor(x => x.HitPoints, SearchViewModel.HitPointsValues, new { @class = "search-select-short" })
+                    @Html.DropDownListFor(m => m.HitPointsOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(m => m.HitPoints, SearchViewModel.HitPointsValues, new { @class = "search-select-short" })
                     </span>
                 </div>
                 <div class="search-sub-section">
                     <span class="search-filter">
                     <span class="search-label-short"><img src="/Images/willpower-small.png" class="search-icon" style="height:16px;"></span>
-                    @Html.DropDownListFor(x => x.WillpowerOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                    @Html.DropDownListFor(x => x.Willpower, SearchViewModel.WillpowerStrengthValues, new { @class = "search-select-short" })
+                    @Html.DropDownListFor(m => m.WillpowerOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(m => m.Willpower, SearchViewModel.WillpowerStrengthValues, new { @class = "search-select-short" })
                     </span>
 
                     <span class="search-filter">
                     <span class="search-label-short"><img src="/Images/threat-small.png" class="search-icon" style="height:16px;"></span>
-                    @Html.DropDownListFor(x => x.ThreatOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                    @Html.DropDownListFor(x => x.Threat, SearchViewModel.ThreatStrengthValues, new { @class = "search-select-short" })
+                    @Html.DropDownListFor(m => m.ThreatOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(m => m.Threat, SearchViewModel.ThreatStrengthValues, new { @class = "search-select-short" })
                     </span>
 
                     <span class="search-filter">
                     <span class="search-label-short">Quest Points</span>
-                    @Html.DropDownListFor(x => x.QuestPointsOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                    @Html.DropDownListFor(x => x.QuestPoints, SearchViewModel.QuestPointsValues, new { @class = "search-select-short" })
+                    @Html.DropDownListFor(m => m.QuestPointsOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                    @Html.DropDownListFor(m => m.QuestPoints, SearchViewModel.QuestPointsValues, new { @class = "search-select-short" })
                 </span>
                 </div>
             </div>
@@ -227,17 +232,17 @@
             <div class="search-items">
                 <span class="search-filter">
                 <span class="search-label-short">Trait</span>
-                @Html.DropDownListFor(x => x.Trait, SearchViewModel.Traits, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.Trait, SearchViewModel.Traits, new { @class = "search-select" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short">Keyword</span>
-                @Html.DropDownListFor(x => x.Keyword, SearchViewModel.Keywords, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.Keyword, SearchViewModel.Keywords, new { @class = "search-select" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short">Victory</span>
-                @Html.DropDownListFor(x => x.VictoryPoints, SearchViewModel.VictoryPointValues, new { @class = "search-select-short-padded" })
+                @Html.DropDownListFor(m => m.VictoryPoints, SearchViewModel.VictoryPointValues, new { @class = "search-select-short-padded" })
                 </span>
             </div>
         </div>
@@ -247,17 +252,17 @@
             <div class="search-items">
                 <span class="search-filter">
                 <span class="search-label-short" title="Player Card Category">Player</span>
-                @Html.DropDownListFor(x => x.Category, SearchViewModel.Categories, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.Category, SearchViewModel.Categories, new { @class = "search-select" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short" title="Encounter Card Category">Encounter</span>
-                @Html.DropDownListFor(x => x.EncounterCategory, SearchViewModel.EncounterCategories, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.EncounterCategory, SearchViewModel.EncounterCategories, new { @class = "search-select" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short" title="Quest Card Category">Quest</span>
-                @Html.DropDownListFor(x => x.QuestCategory, SearchViewModel.QuestCategories, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.QuestCategory, SearchViewModel.QuestCategories, new { @class = "search-select" })
                 </span>
             </div>
         </div>
@@ -267,17 +272,17 @@
             <div class="search-items">
                 <span class="search-filter">
                 <span class="search-label-short" title="Region">Region</span>
-                @Html.DropDownListFor(model => model.Region, SearchViewModel.Regions, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.Region, SearchViewModel.Regions, new { @class = "search-select" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short" title="Archetype">Archetype</span>
-                @Html.DropDownListFor(model => model.Archetype, SearchViewModel.Archetypes, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.Archetype, SearchViewModel.Archetypes, new { @class = "search-select" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short" title="Age">Age</span>
-                @Html.DropDownListFor(model => model.Age, SearchViewModel.Ages, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.Age, SearchViewModel.Ages, new { @class = "search-select" })
                 </span>
             </div>
         </div>
@@ -287,18 +292,18 @@
             <div class="search-items">
                 <span class="search-filter">
                 <span class="search-label-short">Artist</span>
-                @Html.DropDownListFor(x => x.Artist, SearchViewModel.Artists, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.Artist, SearchViewModel.Artists, new { @class = "search-select" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short">Popularity</span>
-                @Html.DropDownListFor(x => x.PopularityOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
-                @Html.DropDownListFor(x => x.Popularity, SearchViewModel.PopularityValues, new { @class = "search-select-short" })
+                @Html.DropDownListFor(m => m.PopularityOp, SearchViewModel.NumericOperators, new { @class = "search-select-tiny" })
+                @Html.DropDownListFor(m => m.Popularity, SearchViewModel.PopularityValues, new { @class = "search-select-short" })
                 </span>
 
                 <span class="search-filter">
                 <span class="search-label-short">Errata</span>
-                @Html.DropDownListFor(x => x.Errata, SearchViewModel.ErrataVersions, new { @class = "search-select" })
+                @Html.DropDownListFor(m => m.Errata, SearchViewModel.ErrataVersions, new { @class = "search-select" })
                 </span>
             </div>
         </div>
