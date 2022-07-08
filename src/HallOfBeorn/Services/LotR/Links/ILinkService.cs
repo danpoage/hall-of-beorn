@@ -10,5 +10,6 @@ namespace HallOfBeorn.Services.LotR.Links
         IEnumerable<ILink> Links();
         IEnumerable<ILink> GetLinks(string slug);
         IEnumerable<ILink> GetCharacterLinks(string name);
+        bool LinksToCard(string name, string slug);
     }
 }

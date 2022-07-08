@@ -18,6 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
             addHero("Éowyn", 9, Sphere.Spirit, 4, 1, 1, 3)
                 .WithTraits("Noble.", "Rohan.")
                 .WithTextLine("Action: Discard 1 card from your hand to give Éowyn +1 Willpower until the end of the phase. This effect may be triggered by each player once each round.")
+                .WithPromotion()
                 .WithInfo(0, 1, Artist.Audrey_Hotte);
 
             addQuest("Captured by Spiders", setName, 1, 'A', 10)

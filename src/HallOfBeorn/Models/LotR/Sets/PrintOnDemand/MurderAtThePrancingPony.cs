@@ -116,7 +116,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
             Cards.Add(LotRCard.Enemy("Johnny Goblin-fingers", "", investigationSetName, 45, 3, 4, 4, 6)
                 .WithUnique()
                 .WithTraits("Suspect.", "Brigand.")
-                .WithText("Cannot have attachments.\r\nForced: When Johnny Goblin-finders attacks, the defending player discards 1 random card from his hand and raises his threat by X, where X is the printed cost of the discarded card.")
+                .WithText("Cannot have attachments.\r\nForced: When Johnny Goblin-fingers attacks, the defending player discards 1 random card from his hand and raises his threat by X, where X is the printed cost of the discarded card.")
                 .WithVictoryPoints(5)
                 .WithInfo(12, 1, Artist.Romana_Kendelic));
             Cards.Add(LotRCard.Enemy("Old Orc-eyes", "", investigationSetName, 45, 3, 4, 3, 9)

@@ -35,19 +35,47 @@ namespace HallOfBeorn.Models
         public CharacterType Type { get; protected set; }
         public bool DisableAutoLinks { get; protected set; }
 
-        protected readonly List<ILink> leaders = new List<ILink>();
-        protected readonly List<ILink> members = new List<ILink>();
+        protected readonly Dictionary<string, List<ILink>> leaders = new Dictionary<string, List<ILink>>();
+        protected readonly Dictionary<string, List<ILink>> members = new Dictionary<string, List<ILink>>();
 
-        private readonly List<ILink> family = new List<ILink>();
-        private readonly List<ILink> friends = new List<ILink>();
-        private readonly List<ILink> items = new List<ILink>();
-        private readonly List<ILink> aliases = new List<ILink>();
-        private readonly List<ILink> places = new List<ILink>();
-        private readonly List<ILink> groups = new List<ILink>();
-        private readonly List<ILink> articles = new List<ILink>();
+        private readonly Dictionary<string, List<ILink>> family = new Dictionary<string, List<ILink>>();
+        private readonly Dictionary<string, List<ILink>> friends = new Dictionary<string, List<ILink>>();
+        private readonly Dictionary<string, List<ILink>> items = new Dictionary<string, List<ILink>>();
+        private readonly Dictionary<string, List<ILink>> aliases = new Dictionary<string, List<ILink>>();
+        private readonly Dictionary<string, List<ILink>> places = new Dictionary<string, List<ILink>>();
+        private readonly Dictionary<string, List<ILink>> groups = new Dictionary<string, List<ILink>>();
+        private readonly Dictionary<string, List<ILink>> articles = new Dictionary<string, List<ILink>>();
         private readonly List<string> books = new List<string>();
 
-        private readonly List<string> lotrCards = new List<string>();
+        private static IEnumerable<ILink> UnrollMap(Dictionary<string, List<ILink>> map)
+        {
+            foreach (var key in map.Keys)
+            {
+                foreach (var item in map[key])
+                    yield return item;
+            }
+        }
+
+        private static void AddToMap(Dictionary<string, List<ILink>> map, string key, ILink link)
+        {
+            var suffixes = new List<string> { "(Father)", "(Mother)", "(Son)", "(Daughter)", "(Spouse)" };
+
+            var norm = key;
+            foreach (var suffix in suffixes)
+            {
+                norm = norm.Replace(suffix, string.Empty);
+            }
+            norm = norm.Trim();
+
+            if (!map.ContainsKey(norm))
+            {
+                map.Add(norm, new List<ILink>());
+            }
+
+            map[norm].Add(link);
+        }
+
+        private readonly HashSet<string> lotrCards = new HashSet<string>();
         private readonly List<string> digitalCards = new List<string>();
 
         private readonly HashSet<string> traits = new HashSet<string>();
@@ -72,12 +100,12 @@ namespace HallOfBeorn.Models
                 url = string.Format("/LotR/Details/{0}", slug);
             }
 
-            aliases.Add(new Link(type, url, alias));
+            AddToMap(aliases, alias, new Link(type, url, alias));
         }
 
         protected void AliasLink(string alias, string url)
         {
-            aliases.Add(new Link(LinkType.None, url, alias));
+            AddToMap(aliases, alias, new Link(LinkType.None, url, alias));
         }
 
         protected void addFamily(string name)
@@ -142,10 +170,10 @@ namespace HallOfBeorn.Models
 
         protected void addArticle(string url, string title)
         {
-            articles.Add(new Link(LinkType.None, url, title));
+            AddToMap(articles, title, new Link(LinkType.None, url, title));
         }
 
-        protected void addCharacterLink(List<ILink> links, string title, string slug)
+        protected void addCharacterLink(Dictionary<string, List<ILink>> links, string title, string slug)
         {
             var type = LinkType.None;
             var url = string.Empty;
@@ -155,10 +183,10 @@ namespace HallOfBeorn.Models
                 url = getCharacterUrl(slug);
             }
 
-            links.Add(new Link(type, url, title));
+            AddToMap(links, title, new Link(type, url, title));
         }
 
-        protected void addDetailLink(List<ILink> links, string title, string slug)
+        protected void addDetailLink(Dictionary<string, List<ILink>> links, string title, string slug)
         {
             var type = LinkType.None;
             var url = string.Empty;
@@ -168,7 +196,7 @@ namespace HallOfBeorn.Models
                 url = getDetailUrl(slug);
             }
 
-            links.Add(new Link(type, url, title));
+            AddToMap(links, title, new Link(type, url, title));
         }
 
         protected string getCharacterUrl(string slug)
@@ -233,13 +261,13 @@ namespace HallOfBeorn.Models
 
         public string Race { get; protected set; }
         
-        public IEnumerable<ILink> Places { get { return places; } }
+        public IEnumerable<ILink> Places { get { return UnrollMap(places); } }
 
-        public IEnumerable<ILink> Leaders { get { return leaders; } }
-        public IEnumerable<ILink> Members { get { return members; } }
+        public IEnumerable<ILink> Leaders { get { return UnrollMap(leaders); } }
+        public IEnumerable<ILink> Members { get { return UnrollMap(members); } }
 
-        public IEnumerable<ILink> Family { get { return family; } }
-        public IEnumerable<ILink> Friends { get { return friends; } }
+        public IEnumerable<ILink> Family { get { return UnrollMap(family); } }
+        public IEnumerable<ILink> Friends { get { return UnrollMap(friends); } }
         
         public IEnumerable<ILink> RelatedCharacters()
         {
@@ -256,19 +284,32 @@ namespace HallOfBeorn.Models
                 yield return friend;
         }
         
-        public IEnumerable<ILink> Groups { get { return groups; } }
-        public IEnumerable<ILink> Items { get { return items; } }
+        public bool IsRelatedTo(string name)
+        {
+            return leaders.ContainsKey(name) ||
+                members.ContainsKey(name) ||
+                family.ContainsKey(name) ||
+                friends.ContainsKey(name);
+        }
 
-        public IEnumerable<ILink> Articles { get { return articles; } }
+        public IEnumerable<ILink> Groups { get { return UnrollMap(groups); } }
+        public IEnumerable<ILink> Items { get { return UnrollMap(items); } }
+
+        public IEnumerable<ILink> Articles { get { return UnrollMap(articles); } }
 
         public string Bio { get; protected set; }
         public string BioSourceUrl { get; protected set; }
         public Artist ImageArtist { get; protected set; }
 
-        public IEnumerable<ILink> Aliases { get { return aliases; } }
+        public IEnumerable<ILink> Aliases { get { return UnrollMap(aliases); } }
         public IEnumerable<string> Books { get { return books; } }
 
         public IEnumerable<string> LotRCards { get { return lotrCards; } }
+        public bool IncludesCard(string slug)
+        {
+            return lotrCards.Contains(slug);
+        }
+
         public IEnumerable<string> DigitalCards { get { return digitalCards; } }
 
         public IEnumerable<string> Traits()

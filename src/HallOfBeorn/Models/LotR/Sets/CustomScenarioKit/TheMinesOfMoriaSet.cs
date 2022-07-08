@@ -23,6 +23,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithTraits("Hobbit.")
                 .WithTextLine("The first player draws 1 additional card in the resource phase.")
                 .WithTemplate("<p>The first player draws 1 additional card in the resource phase.</p>")
+                .WithPromotion()
                 .WithInfo(1, 1, Artist.Tony_Foti);
 
             addQuest("To the West-door", EncounterSet.TheMinesOfMoria, 1, 'A', 5)

@@ -238,6 +238,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTextLine("Action: Raise your threat by 1 to ready Boromir.")
                 .WithTextLine("Action: Discard Boromir to deal 2 damage to each enemy engaged with a single player.")
                 .WithTemplate("<p class='main-text'><b>Action:</b> Raise your threat by 1 to ready {self}.</p><p class='main-text'><b>Action:</b> Discard {self} to deal 2 damage to each enemy engaged with a single player.</p>")
+                .WithPromotion()
                 .WithInfo(95, 1, Artist.Aurore_Folny);
             addHero("Faramir", 11, Sphere.Leadership, 2, 2, 2, 5)
                 .WithTraits("Gondor.", "Noble.", "Ranger.")

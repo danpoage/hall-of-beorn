@@ -429,6 +429,13 @@ namespace HallOfBeorn.Services.LotR.Links
                 .Select(card => Link.CreateLotRImageLink(card));
         }
 
+        private bool CharacterLinksToCard(IEnumerable<LotRCard> cards, string slug)
+        {
+            return cards
+                .Where(card => card != null && card.Slug == slug)
+                .Any();
+        }
+
         private IEnumerable<LotRCard> GetCards(Func<IEnumerable<LotRCard>> generator)
         {
             return generator()
@@ -446,6 +453,16 @@ namespace HallOfBeorn.Services.LotR.Links
                 .OrderByDescending(card => card.ImportanceScore())
                 .ThenBy(card => card.Title)
                 .ThenBy(card => card.Sphere);
+        }
+
+        private HashSet<string> GetCardSlugs(string name)
+        {
+            var slugs = cardRepository.Cards()
+                .Where(card => card.Title.ContainsLower(name)
+                    && !card.CardSet.SetType.IsCommunity())
+                .Select(card => card.Slug);
+
+            return new HashSet<string>(slugs);
         }
 
         private Func<LotRCard, bool> GetTitleFilter(string title, params Func<LotRCard, bool>[] aliases)
@@ -534,6 +551,15 @@ namespace HallOfBeorn.Services.LotR.Links
                 : GetCards(name);
 
             return GetCharacterLinks(cards);
+        }
+
+        public bool LinksToCard(string name, string slug)
+        {
+           var cards = getCardsByName.ContainsKey(name)
+                ? GetCards(getCardsByName[name])
+                : GetCards(name);
+
+            return CharacterLinksToCard(cards, slug);
         }
     }
 }

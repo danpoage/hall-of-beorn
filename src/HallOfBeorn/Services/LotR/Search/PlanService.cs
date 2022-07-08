@@ -94,7 +94,7 @@ namespace HallOfBeorn.Services.LotR.Search
 
         private IEnumerable<IComponent> CreateFilters(SearchViewModel model, UserSettings settings)
         {
-            Func<string, IEnumerable<ILink>> getLinksByName = (name) => _linkService.GetCharacterLinks(name);
+            Func<string, string, bool> linksToCard = (name, slug) => _linkService.LinksToCard(name, slug);
 
             var filters = new List<IComponent>();
 
@@ -117,7 +117,7 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new EnumFilter<Uniqueness>((score) => score.Card.IsUnique ? Uniqueness.Yes : Uniqueness.No, model.IsUnique));
             AddFilter(filters, new Filter((score) => _scenarioService.HasSetType(score.Card, model.SetType, settings)));
             AddFilter(filters, new ProjectFilter(model.Project));
-            AddFilter(filters, new GenericFilter(model.Character, (score, target) => _characterRepository.IncludesCard(target, score.Card.Title, score.Card.Slug, getLinksByName)));
+            AddFilter(filters, new GenericFilter(model.Character, (score, target) => _characterRepository.IncludesCard(target, score.Card.Title, score.Card.Slug, linksToCard)));
 
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ResourceCost, model.Cost, model.CostOperator));
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ThreatCost, model.ThreatCost, model.ThreatCostOperator));

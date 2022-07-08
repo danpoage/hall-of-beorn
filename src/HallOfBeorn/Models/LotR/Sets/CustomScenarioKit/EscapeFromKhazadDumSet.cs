@@ -19,25 +19,30 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
             addHero("Gandalf", 14, Sphere.Neutral, 3, 3, 3, 5)
                 .WithTraits("Istari.")
                 .WithTextLine("Play with the top card of your deck faceup. Once per phase, you may play the top card of your deck as if it was in your hand. When playing a card this way, Gandalf is considered to have the printed Leadership, Lore, Tactics, and Spirit icons.")
+                .WithPromotion()
                 .WithInfo(2, 1, Artist.Rafal_Hrynkiewicz);
             addHero("Elrond", 13, Sphere.Lore, 3, 2, 3, 4)
                 .WithTraits("Noldor.", "Noble.")
                 .WithTextLine("You may spend resources from Elrond's resource pool to pay for Spirit, Leadership, and Tactics allies.")
                 .WithTextLine("Response: After a character is healed by another card effect, heal 1 damage on it.")
+                .WithPromotion()
                 .WithInfo(128, 1, Artist.Magali_Villeneuve);
             addHero("Arwen Undómiel", 9, Sphere.Spirit, 3, 1, 2, 3)
                 .WithTraits("Noldor.", "Noble.")
                 .WithTextLine("Action: Discard a card from your hand to add 1 resource to a Noldor hero's resource pool, or to Aragorn's resource pool. (Limit once per round.)")
+                .WithPromotion()
                 .WithInfo(140, 1, Artist.Magali_Villeneuve);
             addHero("Beregond", 10, Sphere.Tactics, 0, 1, 4, 4)
                 .WithTraits("Gondor.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Lower the cost to play Weapon and Armor attachments on Beregond by 2.")
+                .WithPromotion()
                 .WithInfo(1, 1, Artist.Magali_Villeneuve);
             addHero("Sam Gamgee", 8, Sphere.Leadership, 3, 1, 1, 3)
                 .WithTraits("Hobbit.")
                 .WithTextLine("Response: After you engage an enemy with a higher engagement cost than your threat, ready Sam Gamgee. He gets +1 Willpower, +1 Attack and +1 Defense until the end of the round.")
+                .WithPromotion()
                 .WithInfo(2, 1, Artist.Alexandre_Dainche);
 
             addQuest("Out of the Depths", EncounterSet.EscapeFromKhazadDum, 1, 'A', 10)

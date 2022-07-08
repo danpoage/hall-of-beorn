@@ -234,7 +234,7 @@ namespace HallOfBeorn.Services
             return all.Values;
         }
 
-        public bool IncludesCard(string name, string cardTitle, string cardSlug, Func<string, IEnumerable<ILink>> getLinksByName)
+        public bool IncludesCard(string name, string cardTitle, string cardSlug, Func<string, string, bool> linksToCard)
         {
             var character = Lookup(name);
             if (character == null)
@@ -242,19 +242,17 @@ namespace HallOfBeorn.Services
                 return false;
             }
 
-            if (character.LotRCards.Any(slug => slug == cardSlug))
+            if (character.IncludesCard(cardSlug))
             {
                 return true;
             }
 
-            if (character.RelatedCharacters().Any(link => link.Slug == cardTitle))
+            if (character.IsRelatedTo(cardTitle))
             {
                 return true;
             }
 
-            var links = getLinksByName(name);
-
-            return links.Any(link => link.Slug == cardSlug);
+            return linksToCard(name, cardSlug);
         }
     }
 }

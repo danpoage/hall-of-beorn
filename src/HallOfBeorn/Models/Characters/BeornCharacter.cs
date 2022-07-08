@@ -43,7 +43,6 @@ namespace HallOfBeorn.Models.Characters
 
             addFamily("Grimbeorn the Old (Son)", "Grimbeorn-the-Old");
 
-            addFriend("Gandalf", "Gandalf");
             addFriend("Thorin's Company", "Thorin's-Company");
 
             DigitalCard("Beorn-Valor");

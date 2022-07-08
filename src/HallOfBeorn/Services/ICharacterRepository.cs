@@ -10,6 +10,6 @@ namespace HallOfBeorn.Services
         bool Exists(string name);
         Character Lookup(string name);
         IEnumerable<Character> All();
-        bool IncludesCard(string name, string cardTitle, string cardSlug, Func<string, IEnumerable<ILink>> getLinksByName);
+        bool IncludesCard(string name, string cardTitle, string cardSlug, Func<string, string, bool> linksToCard);
     }
 }
