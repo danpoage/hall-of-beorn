@@ -764,6 +764,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name = "Character")]
         public string Character { get; set; }
 
+        [Display(Name="Creator")]
+        public string Creator { get; set; }
+
         public bool? Random { get; set; }
 
         public string Quest { get; set; }
@@ -1301,5 +1304,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         public static IEnumerable<SelectListItem> Statuses { get; set; }
 
         public static IEnumerable<SelectListItem> CharacterValues { get; set; }
+
+        public static IEnumerable<SelectListItem> CreatorValues { get; set; }
     }
 }

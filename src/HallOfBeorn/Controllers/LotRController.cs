@@ -83,7 +83,7 @@ namespace HallOfBeorn.Controllers
             _searchHandler = new SearchHandler(cardRepository, characterRepository,
                 searchService, scenarioService, linkService, statService, 
                 playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
-                ringsDbService, designService, _translationHandler);
+                ringsDbService, designService, creatorService, _translationHandler);
 
             _creatorsHandler = new CreatorsHandler(creatorService);
         }
@@ -201,7 +201,7 @@ namespace HallOfBeorn.Controllers
 
         public JsonResult Version()
         {
-            return Json(new { version = "2.6.0" }, JsonRequestBehavior.AllowGet);
+            return Json(new { version = "2.7.0" }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Search(SearchViewModel model)

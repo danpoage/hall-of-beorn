@@ -135,7 +135,10 @@
                     @Html.DropDownListFor(m => m.IsUnique, SearchViewModel.UniquenessValues, new { @class = "search-select-short-padded" })
                     </span>
 
-                    
+                    <span class="search-filter">
+                    <span class="search-label-short">Status</span>
+                    @Html.DropDownListFor(m => m.Status, SearchViewModel.Statuses, new { @class = "search-select-short-padded" })
+                    </span>
                 </div>
                 <div class="search-sub-section">
                     <span class="search-filter">
@@ -149,8 +152,8 @@
                     </span>
 
                     <span class="search-filter">
-                    <span class="search-label-short">Status</span>
-                    @Html.DropDownListFor(m => m.Status, SearchViewModel.Statuses, new { @class = "search-select-short-padded" })
+                    <span class="search-label-short">Creator</span>
+                    @Html.DropDownListFor(m => m.Creator, SearchViewModel.CreatorValues, new { @class = "search-select" })
                     </span>
                 </div>
             </div>

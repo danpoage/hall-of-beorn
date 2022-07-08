@@ -561,5 +561,30 @@ namespace HallOfBeorn.Services.LotR.Links
 
             return CharacterLinksToCard(cards, slug);
         }
+
+        public bool HasCreator(string slug, string creator)
+        {
+            var type = LinkType.None;
+            var linkTypeMap = new Dictionary<string, LinkType>
+            {
+                { "Hall of Beorn Blog", LinkType.Hall_of_Beorn }
+            };
+
+            if (linkTypeMap.ContainsKey(creator))
+            {
+                type = linkTypeMap[creator];
+            }
+            else
+            {
+                var name = creator.Replace(" ", "_");
+                if (!Enum.TryParse<LinkType>(name, out type))
+                {
+                    return false;
+                }
+            }
+
+            var links = GetLinks(slug);
+            return links.Where(link => link.Type == type).Any();
+        }
     }
 }

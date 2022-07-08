@@ -240,6 +240,7 @@ $(document).ready(function () {
         $('#SetType').val('Any');
         $('#Character').val('Any');
         $('#Project').val('Any');
+        $('#Creator').val('Any');
         $('#Status').val('Any');
 
         $('#Cost').val('Any');

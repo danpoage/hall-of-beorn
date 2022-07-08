@@ -118,6 +118,7 @@ namespace HallOfBeorn.Services.LotR.Search
             AddFilter(filters, new Filter((score) => _scenarioService.HasSetType(score.Card, model.SetType, settings)));
             AddFilter(filters, new ProjectFilter(model.Project));
             AddFilter(filters, new GenericFilter(model.Character, (score, target) => _characterRepository.IncludesCard(target, score.Card.Title, score.Card.Slug, linksToCard)));
+            AddFilter(filters, new GenericFilter(model.Creator, (score, target) => _linkService.HasCreator(score.Card.Slug, target)));
 
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ResourceCost, model.Cost, model.CostOperator));
             AddFilter(filters, new ByteComparisonFilter((score) => score.Card.ThreatCost, model.ThreatCost, model.ThreatCostOperator));

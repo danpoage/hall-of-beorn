@@ -9,6 +9,7 @@ using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Community;
 using HallOfBeorn.Services.LotR.Design;
 using HallOfBeorn.Services.LotR.Links;
 using HallOfBeorn.Services.LotR.RingsDb;
@@ -33,6 +34,7 @@ namespace HallOfBeorn.Handlers.LotR
             ICategoryService<Archetype> archetypeService,
             IRingsDbService ringsDbService,
             ICardDesignService cardDesignService,
+            ICreatorService creatorService,
             TranslationHandler translationHandler)
         {
             _cardRepository = cardRepository;
@@ -48,6 +50,7 @@ namespace HallOfBeorn.Handlers.LotR
             _archetypeService = archetypeService;
             _ringsDbService = ringsDbService;
             _cardDesignService = cardDesignService;
+            _creatorService = creatorService;
             _translationHandler = translationHandler;
             _viewHandlers.Add(View.RingsDB, new RingsDbSearchHandler(_cardRepository, _ringsDbService));
             _viewHandlers.Add(View.Card_Design, new CardDesignSearchHandler(_cardDesignService));
@@ -70,6 +73,7 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICategoryService<Archetype> _archetypeService;
         private readonly IRingsDbService _ringsDbService;
         private readonly ICardDesignService _cardDesignService;
+        private readonly ICreatorService _creatorService;
         private readonly TranslationHandler _translationHandler;
         private readonly Dictionary<View, ISearchViewHandler> _viewHandlers = new Dictionary<View, ISearchViewHandler>();
 
@@ -101,6 +105,7 @@ namespace HallOfBeorn.Handlers.LotR
             SearchViewModel.Cycles = Cycles.All().GetSelectListItems();
             SearchViewModel.Statuses = typeof(CardStatus).GetSelectListItems(" ", false, null);
             SearchViewModel.CharacterValues = _characterRepository.All().Select(c => c.Name).GetSelectListItems();
+            SearchViewModel.CreatorValues = _creatorService.Creators().Select(c => c.Name).GetSelectListItems();
 
             SearchViewModel.Categories = _playerCategoryService.CategoryNames().GetSelectListItems();
             SearchViewModel.EncounterCategories = _encounterCategoryService.CategoryNames().GetSelectListItems();
