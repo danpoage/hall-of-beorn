@@ -133,6 +133,14 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 model.Status = null;
             }
+            if (!string.IsNullOrEmpty(model.Character) || model.Character == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Character = null;
+            }
+            if (!string.IsNullOrEmpty(model.Creator) || model.Creator == SearchViewModel.DEFAULT_FILTER_VALUE)
+            {
+                model.Creator = null;
+            }
 
             if (model.IsUnique.HasValue && model.IsUnique.Value == Uniqueness.Any)
             {
