@@ -28,8 +28,10 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(1, 1, Artist.Javier_Charro_Martinez);
             addHero("Éowyn", 9, Sphere.Tactics, 4, 1, 1, 3)
                 .WithTraits("Rohan.", "Noble.")
-                .WithText("Setup: Reduce your threat by 3.\r\nAction: Raise your threat by 3 to ready Éowyn. She gets +9 Attack until the end of the phase. (Limit once per game for the group.)")
-                .WithFlavor("\"But no living man am I! You look upon a woman. Éowyn I am, Éomund's daughter.\"\r\n-The Return of the King")
+                .WithTextLine("Setup: Reduce your threat by 3.")
+                .WithTextLine("Action: Raise your threat by 3 to ready Éowyn. She gets +9 Attack until the end of the phase. (Limit once per game for the group.)")
+                .WithFlavorLine("\"But no living man am I! You look upon a woman. Éowyn I am, Éomund's daughter.\"")
+                .WithFlavorLine("-The Return of the King")
                 .WithCommunityVersion("Autumn/Eowyn-Tactics-Hero")
                 .WithCommunityVersion("RiddermarkLord/Eowyn-Tactics-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Eowyn-Tactics-Hero-2")
