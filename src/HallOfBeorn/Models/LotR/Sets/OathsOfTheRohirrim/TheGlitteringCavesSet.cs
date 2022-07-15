@@ -124,7 +124,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(114, 3, Artist.Dinesh_Kumar);
             addLocation("Wonders of Aglarond", EncounterSet.TheGlitteringCaves, 3, 4)
                 .WithTraits("Underground.")
-                .WithTextLine("Forced: After Wonders of Aglarond leaves play, place 4 progress on any cave without a player token and reveal an encounter card.")
+                .WithTextLine("Forced: After Wonders of Aglarond leaves play, place 4 progress on any 1 cave without a player token and reveal an encounter card.")
                 .WithShadow("Shadow: Either move Helm Hammerhand 1 adjacent cave toward the nearest player, or raise the defending player's threat by 2.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(115, 2, Artist.Ted_Nasmith);
@@ -269,7 +269,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Travel Action: Raise your threat by 1 for each clue in play to search this cave.")
                 .WithInfo(141, 1, Artist.Calvin_Streeting);
             addQuest("Search the Caves", EncounterSet.TheGlitteringCaves, 1, 'A', Card.VALUE_NA)
-                .WithTextLine("When Revealed: Set Helm's Horn aside, out of play. Add Helm Hammerhand to the staging area, Stalking side faceup. Set up the Caves Map and Clues (see insert).")
+                .WithTextLine("Setup: Set Helm's Horn aside, out of play. Add Helm Hammerhand to the staging area, Stalking side faceup. Set up the Caves Map and Clues (see insert).")
                 .WithFlavorLine("Fleeing the violent blizzard, you are pursued by the wraith of Helm Hammerhand. He follows inexorably, seeking to claim the bones of your Dunlending captives. You must navigate the caverns below Helm's Deep to find Helm's great warhorn. Sounding it may be your only hope of restoring the wraith's mind.")
                 .WithOppositeTextLine("Progress that would be placed here is instead distributed among caves that contain player tokens.")
                 .WithOppositeTextLine("Travel Action: Any player may remove 4 progress tokens from their current cave to move to a connected cave. There is no limit to the number of times a player may trigger this effect.")

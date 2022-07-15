@@ -219,7 +219,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithFlavorLine("As the traitor’s horse stumbles just ahead of the mountain pass, one of Gálmód’s confederates rips him from his saddle.")
                 .WithOppositeTextLine("Frostbite 3.")
                 .WithOppositeTextLine("Gálmód’s Escort cannot take damage until Recapture the Traitor has at least 6 progress on it.")
-                .WithOppositeTextLine("When Gálmód is free of encounters, he is captured and the players win the game.")
+                .WithOppositeTextLine("The players cannot defeat this stage while Gálmód is guarded by an enemy. When Gálmód is free of encounters, he is captured and the players win the game.")
                 .WithOppositeFlavorLine("Gálmód and his bodyguard have nearly escaped into the wilderness! Soon he will be out of reach entirely.")
                 .WithIncludedEncounterSets(EncounterSet.FaithlessRohirrim, EncounterSet.RohanWeather)
                 .WithInfo(100, 1, Artist.Piotr_Foksowicz);
