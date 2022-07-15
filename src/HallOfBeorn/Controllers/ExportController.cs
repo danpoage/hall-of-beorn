@@ -12,6 +12,7 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Simple;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.Design;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
@@ -31,6 +32,11 @@ namespace HallOfBeorn.Controllers
             cardDesignService = (ICardDesignService)System.Web.HttpContext.Current.Application[LotRServiceNames.CardDesignService];
             octgnService = (IOctgnService)System.Web.HttpContext.Current.Application[LotRServiceNames.OctgnService];
             ringsDbService = GetService<IRingsDbService>(LotRServiceNames.RingsDbService);
+            archetypeService = new ArchetypeService(cardRepository);
+            playerCategoryService = new PlayerCategoryService(cardRepository);
+            encounterCategoryService = new EncounterCategoryService(cardRepository);
+            questCategoryService = new QuestCategoryService(cardRepository);
+            regionService = new RegionService(cardRepository);
         }
 
         private readonly SearchService searchService;
@@ -40,6 +46,12 @@ namespace HallOfBeorn.Controllers
         private readonly ICardDesignService cardDesignService;
         private readonly IOctgnService octgnService;
         private readonly IRingsDbService ringsDbService;
+
+        private readonly ICategoryService<Archetype> archetypeService;
+        private readonly ICategoryService<PlayerCategory> playerCategoryService;
+        private readonly ICategoryService<EncounterCategory> encounterCategoryService;
+        private readonly ICategoryService<QuestCategory> questCategoryService;
+        private readonly ICategoryService<Region> regionService;
 
         private static T GetService<T>(string key)
         {
@@ -230,6 +242,65 @@ namespace HallOfBeorn.Controllers
             };
         }
 
+        private void AddCategories(string slug, Models.RingsDb.RingsDbCard card)
+        {
+            var playerCategories = playerCategoryService.Categories(slug);
+            if (playerCategories.Any())
+                card.player_categories = string.Join(", ", playerCategories.Select(c => Enum.GetName(typeof(PlayerCategory), c).Replace("_", " ")));
+
+            var encounterCategories = encounterCategoryService.Categories(slug);
+            if (encounterCategories.Any())
+                card.encounter_categories = string.Join(", ", encounterCategories.Select(c => Enum.GetName(typeof(EncounterCategory), c).Replace("_", " ")));
+
+            var questCategories = questCategoryService.Categories(slug);
+            if (questCategories.Any())
+                card.quest_categories = string.Join(", ", questCategories.Select(c => Enum.GetName(typeof(QuestCategory), c).Replace("_", " ")));
+
+            var archetypes = archetypeService.Categories(slug);
+            if (archetypes.Any())
+                card.archetypes = string.Join(", ", archetypes.Select(c => Enum.GetName(typeof(Archetype), c).Replace("_", " ")));
+
+            var regions = regionService.Categories(slug);
+            if (regions.Any())
+                card.regions = string.Join(", ", regions.Select(c => Enum.GetName(typeof(Region), c).Replace("_", " ")));
+        }
+
+        public ActionResult ALeP()
+        {
+            Func<string, string> getRingsDbCode = (slug) =>
+                    ringsDbService.GetCardId(slug);
+
+            Func<string, string> getOctgnId = (slug) =>
+                octgnService.GetCardOctgnGuid(slug);
+
+            var includeAlepFields = true;
+
+            var cards = new List<Models.RingsDb.RingsDbCard>();
+            foreach (var cardSet in productRepository.CardSets())
+            {
+                foreach (var card in cardSet.Cards)
+                {
+                    var ringsDbCard = Models.RingsDb.RingsDbCard.FromCard(card, getRingsDbCode, getOctgnId, includeAlepFields);
+
+                    AddCategories(card.Slug, ringsDbCard);
+
+                    cards.Add(ringsDbCard);
+                }
+            }
+
+            var content = JsonConvert.SerializeObject(cards, 
+                Formatting.None, 
+                new JsonSerializerSettings { 
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+
+            return new ContentResult {
+                Content = content,
+                ContentEncoding = System.Text.Encoding.UTF8,
+                ContentType = "application/json",
+            };
+        }
+
         public ActionResult Cards(string setType)
         {
             try
@@ -239,6 +310,8 @@ namespace HallOfBeorn.Controllers
 
                 Func<string, string> getOctgnId = (slug) =>
                     octgnService.GetCardOctgnGuid(slug);
+
+                var includeAlepFields = false;
 
                 var cards = new List<Models.RingsDb.RingsDbCard>();
                 foreach (var cardSet in productRepository.CardSets())
@@ -251,7 +324,7 @@ namespace HallOfBeorn.Controllers
                     foreach (var card in cardSet.Cards)
                     {
                         cards.Add(
-                            Models.RingsDb.RingsDbCard.FromCard(card, getRingsDbCode, getOctgnId));
+                            Models.RingsDb.RingsDbCard.FromCard(card, getRingsDbCode, getOctgnId, includeAlepFields));
                     }
                 }
 

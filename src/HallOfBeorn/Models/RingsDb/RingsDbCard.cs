@@ -44,6 +44,26 @@ namespace HallOfBeorn.Models.RingsDb
         public string shadow { get; set; }
         public RingsDbVersion[] versions { get; set; }
 
+        //ALeP Fields
+        public byte? easy_mode_quantity {get; set; }
+        public char? card_side { get; set; }
+        public string tokens { get; set; }
+
+        //Quest Fields
+        public string[] included_encounter_sets { get; set; }
+        public uint? stage_number { get; set; }
+        public char? stage_letter { get; set; }
+        public char? opposite_stage_letter { get; set; }
+        public string opposite_title { get; set; }
+
+        //Generic fields
+        public string player_categories { get; set; }
+        public string encounter_categories { get; set; }
+        public string quest_categories { get; set; }
+        public string regions { get; set; }
+        public string archetypes { get; set; }
+        public string ages { get; set; }
+
         private static string Normalize(string text)
         {
             if (text == null)
@@ -113,7 +133,7 @@ namespace HallOfBeorn.Models.RingsDb
             LotR.CardDesign design,
             Func<string, string> getRingsDbCode, Func<string, string> getOctgnId)
         {
-            var card = FromCard(design.First, getRingsDbCode, getOctgnId);
+            var card = FromCard(design.First, getRingsDbCode, getOctgnId, false);
 
             if (design.Versions.Count() > 1)
             {
@@ -126,7 +146,7 @@ namespace HallOfBeorn.Models.RingsDb
 
         public static RingsDbCard FromCard(
             LotR.LotRCard card, 
-            Func<string, string> getRingsDbCode, Func<string, string> getOctgnId)
+            Func<string, string> getRingsDbCode, Func<string, string> getOctgnId, bool includeAlepFields)
         {
             Func<LotR.LotRCard, bool> getIsOfficial = (c) =>
                 !unofficialSetTypes.Contains(c.CardSet.SetType);
@@ -200,7 +220,7 @@ namespace HallOfBeorn.Models.RingsDb
             Func<LotR.LotRCard, byte?> getVictory = (c) =>
                 c.VictoryPoints > 0 ? c.VictoryPoints : (byte?)null;
 
-            return new RingsDbCard
+            var result = new RingsDbCard
             {
                 is_official = getIsOfficial(card),
                 pack_code = card.CardSet.Abbreviation,
@@ -239,6 +259,34 @@ namespace HallOfBeorn.Models.RingsDb
                 imagesrc2 = getImageSource2(card),
                 shadow = getShadow(card)
             };
+
+            if (includeAlepFields)
+            {
+                if (card.EasyModeQuantity.HasValue)
+                    result.easy_mode_quantity = card.EasyModeQuantity.Value;
+
+                if (card.SideLetter.HasValue)
+                    result.card_side = card.SideLetter.Value;
+
+                //TODO: Check for all token types (sailing icons, eye of Sauron, etc.)
+
+                if (card.IncludedEncounterSets != null && card.IncludedEncounterSets.Any())
+                    result.included_encounter_sets = card.IncludedEncounterSets.Select(es => es.Name).ToArray();
+                if (card.StageNumber > 0)
+                {
+                    result.stage_number = card.StageNumber;
+                    result.stage_letter = card.StageLetter;
+                }
+                if (card.BackStageLetter.HasValue)
+                    result.opposite_stage_letter = card.BackStageLetter.Value;
+                if (!string.IsNullOrEmpty(card.OppositeTitle))
+                    result.opposite_title = card.OppositeTitle;
+
+                if (card.Ages.Any())
+                    result.ages = string.Join(",", card.Ages.Select(a => Enum.GetName(typeof(LotR.Age), a).Replace("_", " ")));
+            }
+
+            return result;
         }
     }
 }
