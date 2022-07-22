@@ -412,6 +412,13 @@ namespace HallOfBeorn.Services.LotR.Links
             return links;
         }
 
+        public IEnumerable<ILink> GetLinks(LinkType type, IEnumerable<string> labels)
+        {
+            var creator = creatorService.GetCreator(type);
+            var links = creator != null ? creator.Links() : Enumerable.Empty<ILink>();
+            return links.Where(link => labels.Any(label => link.HasLabel(label)));
+        }
+
         private readonly Dictionary<string, Func<IEnumerable<LotRCard>>> getCardsByName
             = new Dictionary<string, Func<IEnumerable<LotRCard>>>();
 
@@ -562,29 +569,25 @@ namespace HallOfBeorn.Services.LotR.Links
             return CharacterLinksToCard(cards, slug);
         }
 
-        public bool HasCreator(string slug, string creator)
+        public bool HasCreator(string slug, string title, string creator)
         {
             var type = LinkType.None;
-            var linkTypeMap = new Dictionary<string, LinkType>
+            
+            var name = creator.Replace(" ", "_");
+            if (!Enum.TryParse<LinkType>(name, out type))
             {
-                { "Hall of Beorn Blog", LinkType.Hall_of_Beorn }
-            };
-
-            if (linkTypeMap.ContainsKey(creator))
-            {
-                type = linkTypeMap[creator];
-            }
-            else
-            {
-                var name = creator.Replace(" ", "_");
-                if (!Enum.TryParse<LinkType>(name, out type))
-                {
-                    return false;
-                }
+                return false;
             }
 
-            var links = GetLinks(slug);
-            return links.Where(link => link.Type == type).Any();
+            //TODO: Optimize this
+            var linksByCreator = GetLinks(type, new List<string> { title });
+            if (linksByCreator.Any())
+            {
+                return true;
+            }
+
+            var linksBySlug = GetLinks(slug);
+            return linksBySlug.Where(link => link.Type == type).Any();
         }
     }
 }

@@ -113,6 +113,11 @@ namespace HallOfBeorn.Services.LotR.Community
 
         }
 
+        public ICreator GetCreator(LinkType type)
+        {
+            return creatorsBySlug.Values.Where(c => c.DefaultLinkType == type).FirstOrDefault();
+        }
+
         public IEnumerable<ICreator> Creators()
         {
             return creatorsBySlug.Values;

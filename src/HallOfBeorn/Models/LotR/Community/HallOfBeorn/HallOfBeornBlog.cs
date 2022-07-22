@@ -12,8 +12,17 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             : base("Hall of Beorn Blog",
             "https://hallofbeorn.wordpress.com",
             "https://hallofbeorn.wordpress.com/feed",
-            LinkType.Hall_of_Beorn)
+            LinkType.Hall_of_Beorn_Blog)
         {
+            AddYear(2022);
+            AddLink("Bear Draft v7", "https://hallofbeorn.wordpress.com/2022/07/12/bear-draft-v7/", "12 July 2022")
+                .WithLabels("Aragorn", "Brand son of Brain", "Celeborn", "Rowan", "Frodo Baggins", "Denethor", "Gimli", "Amarthiul", "Gildor Inglorion", "Ingold")
+                .WithLabels("Legolas", "Eomer", "Beregond", "Mablung", "Glorfindel", "Prince Imrahil", "Eowyn", "Hirgon", "Grimbeorn the Old", "Herebrand")
+                .WithLabels("Dunhere", "Merry", "Galadriel", "Arwen Undomiel", "Lanwyn", "Cirdan the Shipwright", "Bard son of Brand", "Dain Ironfoot", "Idraen", "Thengel")
+                .WithLabels("Beravor", "Bifur", "Elrond", "Haldan", "Haldir of Lorien", "Thurindir", "Galdor of the Havens", "Damrod", "Radagast", "Nob");
+            AddLink("Deck: Be Our Guest", "https://hallofbeorn.wordpress.com/2022/06/15/deck-be-our-guest/", "15 Jun 2022")
+                .WithLabels("Osbera", "Balin", "Thorin Stonehelm", "Birna", "Beorn's Welcome", "Beorn", "Giant Bear", "Beorning Skin-changer");
+            AddLink("The Downfall of Númenor – Part 3", "https://hallofbeorn.wordpress.com/2022/06/05/discussion-the-downfall-of-numenor-part-3/", "5 Jun 2022");
             AddYear(2021);
             AddLink("News: A Long-extended Party - Hidden Roosts", "https://hallofbeorn.wordpress.com/2021/09/05/news-a-long-extended-party-hidden-roosts/", "5 Sep 2021")
                 .WithLabels("Hidden Roosts");

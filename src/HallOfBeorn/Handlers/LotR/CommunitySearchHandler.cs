@@ -34,21 +34,37 @@ namespace HallOfBeorn.Handlers.LotR
                 return true;
             }
 
-            var normalizedCreator = creator == "Hall of Beorn Blog" ? "Hall_of_Beorn" : creator.Replace(" ", "_");
-            var creatorLinkType = LinkType.None;
-            if (Enum.TryParse<LinkType>(normalizedCreator, out creatorLinkType))
+            var creatorLinkType = GetLinkType(creator);
+            if (creatorLinkType.HasValue && link.Type != creatorLinkType.Value)
             {
-                if (link.Type != creatorLinkType)
-                {
-                    return false;
-                }
+                return false;
             }
 
             return true;
         }
 
+        private LinkType? GetLinkType(string creator)
+        {
+            var creatorLinkType = LinkType.None;
+            return Enum.TryParse<LinkType>(creator.Replace(" ", "_"), out creatorLinkType)
+                ? creatorLinkType
+                : (LinkType?)null;
+        }
+
         public void HandleSearch(Models.LotR.ViewModels.SearchViewModel model, Models.LotR.UserSettings settings)
         {
+            if (!string.IsNullOrEmpty(model.Creator))
+            {
+                var linkType = GetLinkType(model.Creator);
+                if (linkType.HasValue)
+                {
+                    //TODO: Get cards from a normal search, then pass their labels here...
+                    var links = linkService.GetLinks(linkType.Value, model.Cards.Select(card => card.Title));
+                    model.Links.AddRange(links.Select(link => new LinkViewModel(link)));
+                    return;
+                }
+            }
+
             var linksByUrl = new Dictionary<string, Tuple<LinkViewModel, double>>();
             var scenariosByTitle = new Dictionary<string, Tuple<Scenario, double>>();
             var relevantDecks = new HashSet<string>();

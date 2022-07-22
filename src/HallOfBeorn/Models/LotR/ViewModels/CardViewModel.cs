@@ -226,7 +226,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
             var links = new List<Link>();
 
-            links.Add(new Link(LinkType.Hall_of_Beorn, _card));
+            links.Add(new Link(LinkType.Hall_of_Beorn_Blog, _card));
             links.Add(new Link(LinkType.Tales_from_the_Cards, _card));
             links.Add(new Link(LinkType.Master_of_Lore, _card));
             links.Add(new Link(LinkType.Dor_Cuarthol, _card));

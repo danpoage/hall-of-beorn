@@ -54,5 +54,10 @@ namespace HallOfBeorn.Models.YouTube
             }
             return this;
         }
+
+        public bool HasLabel(string label)
+        {
+            return labels.Any(l => l.ToLowerSafe() == label.ToLowerSafe());
+        }
     }
 }

@@ -54,9 +54,10 @@ namespace HallOfBeorn.Models
             { LinkType.The_Grey_Company, "" },
             { LinkType.Cardboard_of_the_Rings, "" },
             { LinkType.Card_Talk, "" },
+            { LinkType.Card_Talk_Blog, "" },
             { LinkType.The_Card_Game_Cooperative, "" },
             { LinkType.Tales_from_the_Cards, "" },
-            { LinkType.Hall_of_Beorn, "" },
+            { LinkType.Hall_of_Beorn_Blog, "" },
             { LinkType.Master_of_Lore, "" },
             { LinkType.Darkling_Door, "" },
             { LinkType.Vision_of_the_Palantir, "" },
@@ -105,7 +106,7 @@ namespace HallOfBeorn.Models
                     return string.Format("http://www.glyphweb.com/arda/search.asp?search={0}", title);
                 case LinkType.Expecting_Mischief:
                     return string.Format("https://expectingmischief.wordpress.com/?s={0}", title);
-                case LinkType.Hall_of_Beorn:
+                case LinkType.Hall_of_Beorn_Blog:
                     return string.Format("http://hallofbeorn.wordpress.com/?s={0}", title);
                 case LinkType.Lord_of_the_Rings_Wiki:
                     return string.Format("http://lotr.wikia.com/wiki/{0}", title);
@@ -210,6 +211,11 @@ namespace HallOfBeorn.Models
 
         private readonly HashSet<string> labels = new HashSet<string>();
         public IEnumerable<string> Labels() { return labels; }
+
+        public bool HasLabel(string label)
+        {
+            return labels.Any(l => l.ToLowerSafe() == label.ToLowerSafe());
+        }
 
         public ILink WithLabel(string label)
         {

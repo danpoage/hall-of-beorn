@@ -68,12 +68,12 @@ namespace HallOfBeorn.Models.LotR
 
         protected void AddBeornsPathLink(string url)
         {
-            AddPlayLink(LinkType.Beorn__s_Path, url, Title, TheHallOfBeornBlogLogo);
+            AddPlayLink(LinkType.Hall_of_Beorn_Blog, url, Title, TheHallOfBeornBlogLogo);
         }
 
         protected void AddBeornsPathLink(string title, string videoId)
         {
-            AddYouTubeLink(LinkType.Beorn__s_Path, title, videoId);
+            AddYouTubeLink(LinkType.Hall_of_Beorn_Blog, title, videoId);
         }
 
         protected void AddCardboardOfTheRingsLink(string url, string title, string thumbnailUrl)
@@ -113,7 +113,7 @@ namespace HallOfBeorn.Models.LotR
 
         protected void AddTheHallOfBeornBlogLink(string url, string title)
         {
-            AddPlayLink(LinkType.Hall_of_Beorn, url, title, TheHallOfBeornBlogLogo);
+            AddPlayLink(LinkType.Hall_of_Beorn_Blog, url, title, TheHallOfBeornBlogLogo);
         }
 
         protected void AddTheLineUnbrokenLink(string episode, string videoId)

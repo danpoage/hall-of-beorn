@@ -15,8 +15,7 @@ namespace HallOfBeorn.Models
         Encyclopedia_of_Arda,
 
         The_Grey_Company,
-        Hall_of_Beorn,
-        Beorn__s_Path,
+        Hall_of_Beorn_Blog,
         Tales_from_the_Cards,
         
         Cardboard_of_the_Rings,
@@ -53,6 +52,7 @@ namespace HallOfBeorn.Models
         Very_Late_Adventurer,
         Vision_of_the_Palantir,
         Card_Talk,
+        Card_Talk_Blog,
         Susurros_del_Bosque_Viejo,
         El_Libro_Rojo_de_Bolson_Cerrado,
         Expecting_Mischief,
