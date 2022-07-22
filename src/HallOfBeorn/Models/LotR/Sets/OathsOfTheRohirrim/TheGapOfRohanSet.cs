@@ -190,6 +190,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithVictoryPoints(1)
                 .WithInfo(96, 1, Artist.Musaab_Shukri);
             addQuest("Giving Chase", EncounterSet.TheGapOfRohan, 1, 'A', 10)
+                .WithKeywords("Frostbite 1.")
                 .WithTextLine("Setup: Set Gálmód’s Escort aside, out of play. Add Gálmód and 1Per Player copies of Snowbank to the staging area.")
                 .WithFlavorLine("You have pursued the traitor Gálmód to the Gap of Rohan. However, unseasonable snows have made your passage difficult.")
                 .WithOppositeTextLine("Frostbite 1.")
@@ -198,6 +199,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithIncludedEncounterSets(EncounterSet.FaithlessRohirrim, EncounterSet.RohanWeather)
                 .WithInfo(97, 1, Artist.Reza_Afshar);
             addQuest("A Dangerous Pursuit", EncounterSet.TheGapOfRohan, 2, 'A', 8)
+                .WithKeywords("Frostbite 2.")
                 .WithTextLine("When Revealed: Add 1 time counter to Gálmód. Shuffle the encounter discard pile into the encounter deck. Discard cards from the top of the encounter deck until 1Per Player enemies are discarded. Add each discarded enemy to the staging area.")
                 .WithFlavorLine("Pressing onward, Gálmód is joined by a small group of fellow rebels. As he rides through, they close ranks behind him to stall your pursuit.")
                 .WithOppositeTextLine("Frostbite 2.")
@@ -206,6 +208,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithIncludedEncounterSets(EncounterSet.FaithlessRohirrim, EncounterSet.RohanWeather)
                 .WithInfo(98, 1, Artist.Xia_Taptara);
             addQuest("Biting Winds", EncounterSet.TheGapOfRohan, 3, 'A', 8)
+                .WithKeywords("Frostbite 2.")
                 .WithTextLine("When Revealed: Add 1 time counter to Gálmód. The first player searches the encounter deck, encounter discard pile, and victory display for a copy of Unnatural Cold and attaches it to the main quest. Shuffle the encounter deck. Each other player reveals an encounter card.")
                 .WithFlavorLine("As Gálmód races through the flurry, the brutal weather worsens. He pushes his stallion beyond all limits, determined to escape a traitor’s bloody justice.")
                 .WithOppositeTextLine("Frostbite 2.")
@@ -215,6 +218,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithIncludedEncounterSets(EncounterSet.FaithlessRohirrim, EncounterSet.RohanWeather)
                 .WithInfo(99, 1, Artist.John_Anthony_Di_Giovanni);
             addQuest("Recapture the Traitor", EncounterSet.TheGapOfRohan, 4, 'A', 6)
+                .WithKeywords("Frostbite 3.")
                 .WithTextLine("When Revealed: Add 1 time counter to Gálmód. The first player adds Gálmód’s Escort to the staging area and attaches Gálmód to it as a guarded objective. Each other player searches the encounter deck, encounter discard pile, and victory display for a copy of Snowbank and adds it to the staging area. Shuffle the encounter deck.")
                 .WithFlavorLine("As the traitor’s horse stumbles just ahead of the mountain pass, one of Gálmód’s confederates rips him from his saddle.")
                 .WithOppositeTextLine("Frostbite 3.")

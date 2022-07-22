@@ -605,6 +605,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ChildrenOfEorl
                 .WithIncludedEncounterSets(EncounterSet.DunlendingWarriors, EncounterSet.FaithlessRohirrim)
                 .WithInfo(88, 1, Artist.Wenjun_Lin);
             addQuest("Hold the Hilltop", EncounterSet.TheBattleForTheBeacon, 2, 'A', Card.VALUE_NA)
+                .WithKeywords("Time 3.")
                 .WithTextLine("When Revealed: Place progress on Defend the Beacon (bypassing the active location) until it has X progress on it, where X is equal to 2, plus 1Per Player. Shuffle the encounter discard pile into the encounter deck. Each player discards cards from the top of the encounter deck until an enemy is discarded and adds that enemy to the staging area.")
                 .WithFlavorLine("As your foes gather for another assault on the beacon, you can spot the torchlights of Gálmód’s troops massing amid the hills below.")
                 .WithOppositeTextLine("Time 3.")

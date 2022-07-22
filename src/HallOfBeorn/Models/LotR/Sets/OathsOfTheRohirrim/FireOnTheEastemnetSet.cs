@@ -217,6 +217,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithVictoryPoints(10)
                 .WithInfo(67, 1, Artist.Veli_Nystrom);
             addQuest("Poachers in the Night", EncounterSet.FireOnTheEastemnet, 1, 'A', 8)
+                .WithKeywords("Steeds 3 Per Player.")
                 .WithTextLine("Setup: Set Shores of Anduin, Orc Battalion, and Morgahk aside, out of play. Make a copy of Pillaged Stables the active location. Add Wild Steeds, Captured Steeds, and 1 copy of Eastemnet Pastures to the staging area. Place 1 plus 3Per Player steeds on Wild Steeds. Each player searches the encounter deck for a different enemy and adds it to the staging area. Shuffle the encounter deck.")
                 .WithFlavorLine("Side A: With fire and whip, the orc-host has regrouped to rob Rohan of its prized steeds. Side B: Setting out from the stables, you attack the horse-thieves head on! Push them back from the fields before they make away with their stolen beasts.")
                 .WithOppositeTextLine("Steeds 3Per Player.")
@@ -224,6 +225,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithIncludedEncounterSets(EncounterSet.OrcHost)
                 .WithInfo(68, 1, Artist.Brian_Vadell);
             addQuest("Relentless Forces", EncounterSet.FireOnTheEastemnet, 2, 'A', 12)
+                .WithKeywords("Steeds 3 Per Player.")
                 .WithTextLine("When Revealed: Shuffle the encounter discard pile into the encounter deck. The first player adds Orc Battalion to the staging area. Each other player discards cards from the top of the encounter deck until an enemy is discarded and adds that enemy to the staging area.")
                 .WithFlavorLine("Side A: Raging after the defeat of warchief Thruk, the orc-host masses over the countryside, wreaking havoc. “On, on!” they cry, baying for horse-meat. Side B: The orcs will not be satisfied until they reap the fields of stallion and mare. Flank them and scatter them to the east!")
                 .WithOppositeTextLine("Steeds 3Per Player.")
