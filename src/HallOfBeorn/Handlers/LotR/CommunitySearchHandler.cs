@@ -27,6 +27,26 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly IRingsDbService ringsDbService;
         private readonly IScenarioService scenarioService;
 
+        private bool LinkMatchesCreator(string creator, ILink link)
+        {
+            if (string.IsNullOrEmpty(creator))
+            {
+                return true;
+            }
+
+            var normalizedCreator = creator == "Hall of Beorn Blog" ? "Hall_of_Beorn" : creator.Replace(" ", "_");
+            var creatorLinkType = LinkType.None;
+            if (Enum.TryParse<LinkType>(normalizedCreator, out creatorLinkType))
+            {
+                if (link.Type != creatorLinkType)
+                {
+                    return false;
+                }
+            }
+
+            return true;
+        }
+
         public void HandleSearch(Models.LotR.ViewModels.SearchViewModel model, Models.LotR.UserSettings settings)
         {
             var linksByUrl = new Dictionary<string, Tuple<LinkViewModel, double>>();
@@ -49,6 +69,11 @@ namespace HallOfBeorn.Handlers.LotR
                         continue;
                     }
 
+                    if (!LinkMatchesCreator(model.Creator, link))
+                    {
+                        continue;
+                    }
+
                     if (labels.Any(label => cardViewModel.Title.Contains(label)))
                     {
                         if (!linksByUrl.ContainsKey(link.Url))
@@ -66,6 +91,12 @@ namespace HallOfBeorn.Handlers.LotR
                     var isRelevant = false;
                     foreach (var link in result.Item1.PlayLinks)
                     {
+                        if (!LinkMatchesCreator(model.Creator, link.Item1))
+                        {
+                            continue;
+                        }
+
+
                         if (link.Item2.Any(deckId => 
                             ringsDbService.DeckIncludesCard(deckId, cardViewModel.Slug)))
                         {
@@ -100,6 +131,11 @@ namespace HallOfBeorn.Handlers.LotR
             {
                 foreach (var linkItem in result.Item1.PlayLinks)
                 {
+                    if (!LinkMatchesCreator(model.Creator, linkItem.Item1))
+                    {
+                        continue;
+                    }
+
                     var link = linkItem.Item1;
                     var includedDecks = linkItem.Item2;
 
@@ -133,11 +169,17 @@ namespace HallOfBeorn.Handlers.LotR
                 }
             }
 
+            Func<ILink, bool> filter = link => true;
+            if (!string.IsNullOrEmpty(model.Creator))
+            {
+                filter = link => LinkMatchesCreator(model.Creator, link);
+            }
+
             model.Links.AddRange(
                 linksByUrl.Values
+                    .Where(lvm => filter(lvm.Item1.Link))
                     .OrderByDescending(ln => ln.Item2)
-                    .Select(ln => ln.Item1)
-            );
+                    .Select(ln => ln.Item1));
         }
     }
 }

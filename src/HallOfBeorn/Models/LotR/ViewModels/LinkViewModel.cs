@@ -15,6 +15,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         private readonly ILink _link;
 
+        public ILink Link { get { return _link; } }
+
         public string Url { get { return _link.Url; } }
 
         public string TypeName { get { return Enum.GetName(typeof(LinkType), _link.Type).Replace("__", "'").Replace("_", " "); } }
