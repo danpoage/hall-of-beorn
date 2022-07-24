@@ -290,16 +290,16 @@ namespace HallOfBeorn.Models
             return WithLabels(labeled.Labels());
         }
 
-        public CreatorLink WithDeckLabels(int deckId)
+        public CreatorLink WithDeckLabels(params int[] deckIds)
         {
-            var labels = HallOfBeorn.Services.LotR.RingsDb.RingsDbService.Instance
-                .GetDeckLabels(deckId.ToString());
+            foreach (var deckId in deckIds)
+            {
+                var labels = HallOfBeorn.Services.LotR.RingsDb.RingsDbService.Instance
+                    .GetDeckLabels(deckId.ToString());
 
-            if (deckId == 12992) {
-                var x = labels.Count();
+                WithLabels(labels);
             }
-
-            return WithLabels(labels);
+            return this;
         }
     }
 }

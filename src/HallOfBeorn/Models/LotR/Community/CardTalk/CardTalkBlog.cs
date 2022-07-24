@@ -16,7 +16,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Encounter at Amon Din with Mono-Tactics – October 19, 2019", "https://cardtalk2018.com/2022/07/20/encounter-at-amon-din-with-mono-tactics-october-19-2019/", "Jul 20 2022")
                 .WithLabels("Encounter at Amon Din").WithDeckLabels(12992);
             AddLink("Fellowship of the Ring", "https://cardtalk2018.com/2022/07/19/fellowship-of-the-ring/", "Jul 19 2022")
-                .WithLabels("Fellowship of the Ring").WithDeckLabels(16864).WithDeckLabels(8835).WithDeckLabels(6252);
+                .WithLabels("Fellowship of the Ring").WithDeckLabels(16864, 8835, 6252);
             AddLink("Spear of the Citadel Community Review", "https://cardtalk2018.com/2022/07/18/spear-of-the-citadel-community-review/", "Jul 18 2022")
                 .WithLabels("Spear of the Citadel", "Beregond", "Master of the Forge");
             AddLink("FFG Announces First Repackaged Saga Expansion", "https://cardtalk2018.com/2022/07/15/ffg-announces-first-saga-repackaged-sgag-expansion/", "Jul 15 2022")
@@ -30,7 +30,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Steward’s Fear with Mono-Tactics 4 – July 31, 2019", "https://cardtalk2018.com/2022/07/12/stewards-fear-with-mono-tactics-4-july-31-2019/", "Jul 12 2022")
                 .WithDeckLabels(12732);
             AddLink("Windfola Community Review", "https://cardtalk2018.com/2022/07/11/windfola-community-review/", "Jul 11 2022")
-                .WithLabels("Windfola", "Eowyn", "Merry", "Forth, the Three Hunters", "Golden Belt", "Armored Destrier", "Elfhelm");
+                .WithLabels("Windfola", "Eowyn", "Éowyn", "Merry", "Forth, the Three Hunters", "Golden Belt", "Armored Destrier", "Elfhelm");
             AddLink("Intruders in Chetwood with Angmar Awakened Campaign Minimum Purchase Deck 2 – July 2, 2022", "https://cardtalk2018.com/2022/07/08/intruders-in-chetwood-with-angmar-awakened-campaign-minimum-purchase-deck-2-july-2-2022/", "Jul 8 2022")
                 .WithLabels("Aragor", "Arwen Undomiel", "Arwen Undómiel", "Beravor");
             AddLink("Steward’s Fear with Mono-Tactics 3 – July 31, 2019", "https://cardtalk2018.com/2022/07/07/stewards-fear-with-mono-tactics-3-july-31-2019/", "Jul 7 2022")
@@ -45,9 +45,24 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Card Talk Blog's ", "https://cardtalk2018.com/2022/07/02/card-talk-blogs-1st-anniversary/", "Jul 2 2022")
                 .WithLabels("Followed");
             AddLink("Intruders in Chetwood with Angmar Awakened Campaign Minimum Purchase Deck 1 – June 26, 2022", "https://cardtalk2018.com/2022/07/01/intruders-in-chetwood-with-angmar-awakened-campaign-minimum-purchase-deck-1-june-26-2022/", "Jul 1 2022")
-                .WithLabels("Aragor", "Arwen Undomiel", "Arwen Undómiel", "Beravor");
+                .WithLabels("Aragorn", "Arwen Undomiel", "Arwen Undómiel", "Beravor");
             AddLink("Drinking Song", "https://cardtalk2018.com/2022/06/28/drinking-song/", "Jun 28 2022")
-                .WithLabels("Drinking Song", "Daeron's Runes", "Gandalf's Search", "Deep Knowledge", "Mithrandir's Advice", "Peace, and Thought", "Erestor", "Love of Tales", "Master of Lore", "Scroll of Isildur", "Erebor Hammersmith", "Council of the Wise");
+                .WithLabels("Drinking Song", "Daeron's Runes", "Gandalf's Search", "Deep Knowledge", "Mithrandir's Advice", "Peace, and Thought", "Erestor", "Love of Tales", "Master of Lore", "Scroll of Isildur", "Erebor Hammersmith", "Council of the Wise")
+                .WithDeckLabels(16418);
+            AddLink("Steward’s Fear with Mono-Tactics 1 – July 30, 2019", "https://cardtalk2018.com/2022/06/24/stewards-fear-with-mono-tactics-1-july-30-2019/", "Jun 24 2022")
+                .WithDeckLabels(12732);
+            AddLink("Pippin (Ally)", "https://cardtalk2018.com/2022/06/22/pippin-ally/", "Jun 22 2022")
+                .WithLabels("Pippin", "Tom Cotton", "Raise the Shire", "Halfling Determination", "Odo Proudfoot", "Fast Hitch", "Take No Notice", "Mablung", "Secret Vigil", "The Shirefolk", "Elevensies", "Galadriel", "Fastred", "The Galadhrim's Greeting", "Beregond")
+                .WithLabels("Fellowship", "Messenger of the King", "Sword-thain", "Forth, the Three Hunters", "Celebrian's Stone", "Celebrían's Stone", "Dagger of Westerness", "Thorongil", "Rosie Cotton")
+                .WithDeckLabels(15361, 22208);
+            AddLink("Seige of Cair Andros with Mono-Tactics 4 – July 29, 2019", "https://cardtalk2018.com/2022/06/21/seige-of-cair-andros-with-mono-tactics-4-july-29-2019/", "Jun 21 2022")
+                .WithLabels("Siege of Cair Andros").WithDeckLabels(12718);
+            AddLink("The Fortress of Nurn 6 – June 12, 2022", "https://cardtalk2018.com/2022/06/17/the-fortress-of-nurn-6-june-12-2022/", "Jun 17 2022")
+                .WithLabels("The Fortress of Nurn", "Eowyn", "Éowyn", "Beregond", "Thurindir", "Amarthiul", "Amarthiúl");
+            AddLink("Honour Guard", "https://cardtalk2018.com/2022/06/15/honour-guard/", "Jun 15 2022")
+                .WithLabels("Honour Guard", "Beorn", "Dori", "Ever Vigilant", "Grim Resolve", "Narya").WithDeckLabels(12992);
+            AddLink("Seige of Cair Andros with Mono-Tactics 2 & 3 – July 29, 2019", "https://cardtalk2018.com/2022/06/14/seige-of-cair-andros-with-mono-tactics-2-3-july-29-2019/", "Jun 14 2022")
+                .WithDeckLabels(12718);
             AddYear(2021);
             AddLink("Blade of Gondolin", "https://cardtalk2018.com/2021/09/21/blade-of-gondolin/", "Sep 21 2021")
                 .WithLabels("Blade of Gondolin");
