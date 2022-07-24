@@ -33,7 +33,7 @@ namespace RingsDbBuilder
                 }
                 return true;
             }
-
+            
             try
             {
                 using (var client = new HttpClient())

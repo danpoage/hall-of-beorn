@@ -24,6 +24,9 @@ namespace RingsDbBuilder
         {
             if (info.FileExists)
             {
+                return true;
+                //TODO: Write a file hash to the DB and use it to detect file content changes
+                /*
                 if (info.FileMatchesJson())
                 {
                     return true;
@@ -34,7 +37,7 @@ namespace RingsDbBuilder
                     {
                         Console.WriteLine(string.Format(fileChangedFormat, info.DeckId, info.Path));
                     }
-                }
+                }*/
             }
 
             try

@@ -295,6 +295,10 @@ namespace HallOfBeorn.Models
             var labels = HallOfBeorn.Services.LotR.RingsDb.RingsDbService.Instance
                 .GetDeckLabels(deckId.ToString());
 
+            if (deckId == 12992) {
+                var x = labels.Count();
+            }
+
             return WithLabels(labels);
         }
     }
