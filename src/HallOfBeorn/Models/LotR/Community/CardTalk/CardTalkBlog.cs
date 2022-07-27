@@ -63,6 +63,79 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("Honour Guard", "Beorn", "Dori", "Ever Vigilant", "Grim Resolve", "Narya").WithDeckLabels(12992);
             AddLink("Seige of Cair Andros with Mono-Tactics 2 & 3 – July 29, 2019", "https://cardtalk2018.com/2022/06/14/seige-of-cair-andros-with-mono-tactics-2-3-july-29-2019/", "Jun 14 2022")
                 .WithDeckLabels(12718);
+            AddLink("The Fortress of Nurn 5 – June 4, 2022", "https://cardtalk2018.com/2022/06/10/the-fortress-of-nurn-5-june-4-2022/", "Jun 10 2022")
+                .WithLabels("The Fortress of Nurn", "Amarthiúl", "Amarthiul", "Beregond", "Éowyn", "Eowyn", "Thurindir");
+            AddLink("Seige of Cair Andros with Mono-Tactics 1 – July 29, 2019", "https://cardtalk2018.com/2022/06/07/seige-of-cair-andros-with-mono-tactics-1-july-29-2019/", "Jun 6 2022")
+                .WithLabels("The Siege of Cair Andros").WithDeckLabels(12718);
+            AddLink("Into Ithilien with Mono-Tactics – July 29, 2019", "https://cardtalk2018.com/2022/06/03/into-ithilien-with-mono-tactics-july-29-2019/", "Jun 3 2022")
+                .WithLabels("Into Ithilien", "Tactics").WithDeckLabels(12718);
+            AddLink("Curious Brandybuck", "https://cardtalk2018.com/2022/05/31/curious-brandybuck/", "May 31 2022")
+                .WithLabels("Curious Brandybuck", "Tom Cotton", "Merry", "Pippin", "Horn of the Mark", "West Road Traveller", "Erestor", "Valiant Sacrifice")
+                .WithDeckLabels(23873, 11716);
+            AddLink("The Fortress of Nurn 4 – May 21, 2022", "https://cardtalk2018.com/2022/05/28/the-fortress-of-nurn-4-may-21-2022/", "May 28 2022")
+                .WithLabels("The Fortress of Nurn", "Amarthiúl", "Amarthiul", "Aragorn", "Glorfindel", "Thurindir");
+            AddLink("A Journey in the Dark", "https://cardtalk2018.com/2022/05/27/a-journey-in-the-dark/", "May 27 2022")
+                .WithLabels("A Journey in the Dark", "Frodo Baggins", "The One Ring").WithDeckLabels(30023);
+            AddLink("A Jorueny in the Dark (YouTube)", "https://youtu.be/ns6pbXon7gw", "May 27 2022")
+                .WithLabels("A Journey in the Dark", "Frodo Baggins", "The One Ring").WithDeckLabels(30023);
+            AddLink("Bill the Pony", "https://cardtalk2018.com/2022/05/24/bill-the-pony/", "May 24 2022")
+                .WithLabels("Bill the Pony", "Citadel Plate", "Ring Mail", "Ancestral Armor", "Ent Draught", "Spare Hood and Cloak", "Spare Pipe", "Sam Gamgee", "Tom Cotton", "Fatty Bolger", "Bilbo Baggins", "Fellowship")
+                .WithDeckLabels(17917, 13810);
+            AddLink("The Fortress of Nurn 3 – May 8, 2022", "https://cardtalk2018.com/2022/05/20/the-fortress-of-nurn-3-may-8-2022/", "May 20 2022")
+                .WithLabels("The Fortress of Nurn").WithDeckLabels(17959);
+            AddLink("The Ring Goes South", "https://cardtalk2018.com/2022/05/19/the-ring-goes-south/", "May 19 2022")
+                .WithLabels("The Ring Goes South", "Thorongil", "Unexpected Courage").WithDeckLabels(30023);
+            AddLink("Reinforcements", "https://cardtalk2018.com/2022/05/18/reinforcements/", "May 18 2022")
+                .WithLabels("Reinforcements", "Gandalf", "Meneldor", "Woodland Courier", "Marksman of Lórien", "Marksman of Lorien", "Mablung", "Son of Arnor", "Sarn Ford Sentry", "Sneak Attack")
+                .WithLabels("The Galadhrim's Greeting", "Galadhrim Weaver", "Tome of Atanatar", "Second Breakfast", "Narya", "Strength of Arms", "A Very Good Tale")
+                .WithLabels(LabelsByPlayerCategory(PlayerCategory.Leaves_Play))
+                .WithDeckLabels(8451);
+            AddLink("The Fortress of Nurn 2 – May 8, 2022", "https://cardtalk2018.com/2022/05/12/the-fortress-of-nurn-1-may-8-2022/", "May 12 2022")
+                .WithLabels("The Fortress of Nurn").WithDeckLabels(17959);
+            AddLink("Flight to the Ford", "https://cardtalk2018.com/2022/05/12/flight-to-the-ford/", "May 12 2022")
+                .WithLabels("Flight to the Ford", "Frodo's Intuition").WithDeckLabels(30023);
+            AddLink("The Great Hunt", "https://cardtalk2018.com/2022/05/11/the-great-hunt/", "May 11 2022")
+                .WithLabels("The Great Hunt", "Strength of Arms", "Advanced Warning", "Song of Wisdom", "A Good Harvest", "Messenger of the King", "Thorongil", "Galadriel", "Aragorn", "Nenya", "Ring of Barahir")
+                .WithLabels("Folco Boffin", "The Shirefolk", "Elrond's Counsel", "Woodmen's Clearing", "Aragorn", "Pippin", "Take No Notice", "Mablung", " Drinking Song", "Daeron's Runes", "Mithrandir's Advice", "Peace, and Thought", "Deep Knowledge")
+                .WithDeckLabels(17606, 12392);
+            AddLink("Into Ithilien with Mono-Tactics- May 5, 2019", "https://cardtalk2018.com/2022/05/06/into-ithilien-with-mono-tactics-may-5-2019/", "May 6 2022")
+                .WithLabels("Into Ithilien", "Tactics").WithDeckLabels(12718);
+            AddLink("A Knife in the Dark", "https://cardtalk2018.com/2022/05/05/a-knife-in-the-dark/", "May 5 2022")
+                .WithLabels("A Knife in the Dark", "Sneak Attack", "Gandalf").WithDeckLabels(30023);
+            AddLink("Into Ithilien with Mono-Spirit – April 13, 2019", "https://cardtalk2018.com/2022/05/03/into-ithilien-with-mono-spirit-april-13-2019/", "May 3 2022")
+                .WithLabels("Into Ithilien", "Spirit", "Arwen Undómiel", "Arwen Undomiel", "Caldara", "Eleanor", "Damrod", "Dwalin", "Elfhelm", "Emery", "Ethir Swordsman", "Gandalf", "Háma", "Hama", "Lórien Guide", "Lorien Guide", "Pelargir Shipwright", "Prince Imrahil", "Warden of Annúminas", "Warden of Annuminas", "Zigil Miner")
+                .WithLabels("Blood of Númenor", "Sword-thain")
+                .WithLabels("A Test of Will", "Elven-light", "Fortune or Fate", "Hasty Stroke", "The Galadhrim's Greeting", "Will of the West");
+            AddLink("Peril in Pelargir with Mono-Spirit – April 13, 2019", "https://cardtalk2018.com/2022/04/29/peril-in-pelargir-with-mono-spirit-april-13-2019/", "Apr 29 2022")
+                .WithLabels("Peril in Pelargir", "Spirit", "Arwen Undómiel", "Arwen Undomiel", "Caldara", "Eleanor", "Damrod", "Dwalin", "Elfhelm", "Emery", "Ethir Swordsman", "Gandalf", "Háma", "Hama", "Lórien Guide", "Lorien Guide", "Pelargir Shipwright", "Prince Imrahil", "Warden of Annúminas", "Warden of Annuminas", "Zigil Miner")
+                .WithLabels("Blood of Númenor", "Sword-thain")
+                .WithLabels("A Test of Will", "Elven-light", "Fortune or Fate", "Hasty Stroke", "The Galadhrim's Greeting", "Will of the West");
+            AddLink("Fog on the Barrow Downs", "https://cardtalk2018.com/2022/04/28/fog-on-the-barrow-downs/", "Apr 28 2022")
+                .WithLabels("Fog on the Barrow Downs", "Dagger of Westernesse", "https://youtu.be/sxRClepE9ho");
+            AddLink("Gwaihir (Hero)", "https://cardtalk2018.com/2022/04/26/gwaihir-hero/", "Apr 26 2022")
+                .WithLabels("Gwaihir", "Eagles of the Misty Mountains", "Landroval", "Meneldor", "Eagle Emissary", "Vassel of the Windlord", "Wilyador", "Winged Guardian", "Descendent of Thorondor", "Support of the Eagles", "Born Aloft", "Meneldor's Flight", "Flight of the Eagles", "Sneak Attack", "Horns! Horns! Horns!", "Gwaihir's Debt")
+                .WithLabels("A Very Good Tale", "Timely Aid", "The Red Arrow", "Send for Aid", "Vilya", "Stand and Fight", "Unexpected Courage", "Ent Draught", "Self Preservation", "Lembas", "Dúnedain Mark", "Dunedain Mark", "Dúnedain Warning", "Dunedain Warning", "Black Arrow", "Beregond", "The Eagles Are Coming!")
+                .WithLabels("Éowyn", "Eowyn", "Thengel", "The Last Alliance", "Escort from Edoras", "Gamling", "Grimbold", "Morwen Steelsheen", "The Riddermark's Finest", "Théodwyn", "Theodwyn", "Westfold Horse-breaker", "Golden Shield", "Horn of the Mark", "Light-footed Steed", "Snowmane", "Thrór's Key", "Thror's Key", "A Test of Will")
+                .WithDeckLabels(17992, 17621);
+            AddLink("Second Breakfast, and a Double Giveaway!", "https://cardtalk2018.com/2022/04/23/second-breakfast-and-a-double-giveaway/", "Apr 23 2022")
+                .WithLabels("Second Breakfast");
+            AddLink("The Fortress of Nurn – April 18, 2022", "https://cardtalk2018.com/2022/04/22/the-fortress-of-nurn-april-18-2022/", "Apr 22 2022")
+                .WithLabels("The Fortress of Nurn")
+                .WithDeckLabels(17959);
+            AddLink("The Old Forest", "https://cardtalk2018.com/2022/04/21/the-old-forest/", "Apr 21 2022")
+                .WithLabels("The Old Forest", "Tom Bombadill", "Old Man Willow", "Red Book of Westmarch", "Rosie Cotton", "https://youtu.be/oFgos_hpVKE");
+            AddLink("Peril in Pelargir with Mono-Tactics – Attempt 2 – April 11, 2019", "https://cardtalk2018.com/2022/04/19/peril-in-pelargir-with-mono-tactics-attempt-2-april-11-2019/", "Apr 19 2022")
+                .WithLabels("Peril in Pelargir", "Tactics").WithDeckLabels(12718);
+            AddLink("The Land of Sorrow – April 2, 2022", "https://cardtalk2018.com/2022/04/15/the-land-of-sorrow-april-2-2022/", "Apr 15 2022")
+                .WithLabels("The Land of Sorrow", "The One Deck").WithDeckLabels(9896);
+            AddLink("A Shadow of the Past", "https://cardtalk2018.com/2022/04/14/a-shadow-of-the-past/", "Apr 14 2022")
+                .WithLabels("A Shadow of the Past", "Bilbo Baggins", "Gaffer Gamgee", "https://youtu.be/8cDLMA5cbeM");
+            AddLink("Gléowine", "https://cardtalk2018.com/2022/04/13/gleowine/", "Apr 13 2022")
+                .WithLabels("Gléowine", "Gleowine", "Rivendell Minstrel", "Galadhrim Minstrel", "Gríma", "Grima", "Song of Wisdom", "A Good Harvest", "Éomund", "Eomund", "Théoden", "Theoden")
+                .WithLabels("Daeron's Runes", "Deep Knowledge", "Beravor", "Campfire Tales", "Hidden Cache", "Radagast's Cunning", "Secret Paths", "Sneak Attack", "Gandalf", "Grim Resolve")
+                .WithLabels("Brand Son of Bain", "Narya", "Círdan the Shipwright", "Cirdan the Shipwright", "Gandalf", "The Free Peoples", "Leather Boots", "Spare Hood and Cloak", "Faramir", "Ancient Mathom", "Foe-hammer")
+                .WithLabels("Messenger of the King")
+                .WithDeckLabels(26846, 18426, 16418);
             AddYear(2021);
             AddLink("Blade of Gondolin", "https://cardtalk2018.com/2021/09/21/blade-of-gondolin/", "Sep 21 2021")
                 .WithLabels("Blade of Gondolin");

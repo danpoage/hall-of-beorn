@@ -290,6 +290,16 @@ namespace HallOfBeorn.Models
             return WithLabels(labeled.Labels());
         }
 
+        public CreatorLink WithCategoryLabels (Func<string, IEnumerable<string>> getTitles, params string[] categories)
+        {
+            foreach (var category in categories)
+            {
+                var titles = getTitles(category);
+                this.WithLabels(titles);
+            }
+            return this;
+        }
+
         public CreatorLink WithDeckLabels(params int[] deckIds)
         {
             foreach (var deckId in deckIds)

@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
+
+using HallOfBeorn.Services.LotR;
+using HallOfBeorn.Services.LotR.Categories;
 
 namespace HallOfBeorn.Models
 {
@@ -107,6 +109,37 @@ namespace HallOfBeorn.Models
                     .Select(url => linksByUrl[url])
                     .Distinct()
                 : new List<ILink>();
+        }
+
+        public Func<LotR.PlayerCategory, IEnumerable<string>> LabelsByPlayerCategory
+        {
+            get
+            {
+                Func<LotR.PlayerCategory, IEnumerable<string>> func = (cat) =>
+                {
+                    var titles = new HashSet<string>();
+
+                    foreach (var cardSet in ProductRepository.Instance.CardSets())
+                    {
+                        foreach (var card in cardSet.Cards
+                            .Where(c => PlayerCategoryService.Instance.HasCategory(c, cat)))
+                        {
+                            if (!titles.Contains(card.Title))
+                            {
+                                titles.Add(card.Title);
+                                if (card.NormalizedTitle != card.Title && !titles.Contains(card.NormalizedTitle))
+                                {
+                                    titles.Add(card.NormalizedTitle);
+                                }
+                            }
+                        }
+                    }
+
+                    return titles;
+                };
+
+                return func;
+            }
         }
     }
 }

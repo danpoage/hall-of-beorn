@@ -13,6 +13,20 @@ namespace HallOfBeorn.Services.LotR.Categories
         {
         }
 
+        private static PlayerCategoryService instance;
+        public static PlayerCategoryService Instance
+        {
+            get
+            {
+                if (instance == null)
+                {
+                    instance = new PlayerCategoryService(new LotRCardRepository(ProductRepository.Instance));
+                }
+
+                return instance;
+            }
+        }
+
         private Func<LotRCard, PlayerCategory> CreateCategoryFilter(Func<LotRCard, bool> predicate, PlayerCategory category)
         {
             return new Func<LotRCard, PlayerCategory>((card) => {
