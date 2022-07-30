@@ -80,7 +80,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithFlavorLine("He tossed wolves and goblins from his path like straws and feathers.")
                 .WithFlavorLine("—The Hobbit")
                 .WithInfo(151, 3, Artist.Jon_Hodgson);
-            addAttachment("Beorn’s Welcome", 1, Sphere.Tactics, false)
+            addAttachment("Beorn's Welcome", 1, Sphere.Tactics, false)
                 .WithTraits("Boon.")
                 .WithTextLine("Play only if you control a Beorning hero. Attach to a hero. Limit 1 per hero.")
                 .WithTextLine("Response: After you spend any resources from attached hero’s pool for a purpose other than paying to play a card, exhaust Beorn’s Welcome to add 1 resource to attached hero’s pool.")
@@ -257,14 +257,14 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithShadow("Shadow: Attacking enemy gets +2 Attack.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(174, 3, Artist.Paolo_Puggioni);
-            addLocation("Orator’s Hall", EncounterSet.MusteringOfTheRohirrim, 2, 6)
+            addLocation("Orator's Hall", EncounterSet.MusteringOfTheRohirrim, 2, 6)
                 .WithUnique()
                 .WithTraits("Village.")
                 .WithTextLine("The players cannot travel to Orator’s Hall. Progress cannot be placed here by player card effects.")
                 .WithTextLine("Planning Action: Exhaust a hero you control to place progress on Orator’s Hall equal to that hero’s printed Willpower. If Orator’s Hall is explored by this effect, remove 1 damage token from Massing at the Isen. Any player may trigger this effect.")
                 .WithVictoryPoints(1)
                 .WithInfo(175, 1, Artist.Nele_Diel);
-            addLocation("Traitor’s Redoubt", EncounterSet.MusteringOfTheRohirrim, 4, 4)
+            addLocation("Traitor's Redoubt", EncounterSet.MusteringOfTheRohirrim, 4, 4)
                 .WithUnique()
                 .WithTraits("Fortification.")
                 .WithTextLine("Immune to player card effects.")
@@ -280,7 +280,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("While Plains of Strife is the active location, Rohan enemies get +1 Attack.")
                 .WithShadow("Shadow: If attacking enemy has the Rohan trait, it makes an additional attack against you after this one.")
                 .WithInfo(177, 2, Artist.Vilius_Petrauskas);
-            addTreachery("Cutthroat’s Strike", EncounterSet.MusteringOfTheRohirrim)
+            addTreachery("Cutthroat's Strike", EncounterSet.MusteringOfTheRohirrim)
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
                 .WithTextLine("While attached to an enemy, counts as a Condition attachment with the text: “Forced: When attached enemy attacks, it gets +5 Attack for that attack. Then, discard Cutthroat’s Strike.”")
