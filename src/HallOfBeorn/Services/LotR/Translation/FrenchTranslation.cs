@@ -5,14 +5,14 @@ using HallOfBeorn.Models;
 namespace HallOfBeorn.Services.LotR.Translation
 {
     public class FrenchTranslation
-        : ITranslation
+        : TranslationBase
     {
-        public Language Lang
+        public FrenchTranslation()
+            : base(Language.FR)
         {
-            get { return Language.FR; }
         }
 
-        public Dictionary<string, string> CardTypeNames()
+        protected override Dictionary<string, string> AddCardTypeNames()
         {
             return new Dictionary<string, string> {
                 { "Player", "Joueur" },
@@ -30,7 +30,7 @@ namespace HallOfBeorn.Services.LotR.Translation
             };
         }
 
-        public Dictionary<string, string> Keywords()
+        protected override Dictionary<string, string> AddKeywords()
         {
             return new Dictionary<string, string> {
                 { "Archery 1.", "Archerie 1." },
@@ -59,9 +59,12 @@ namespace HallOfBeorn.Services.LotR.Translation
             };
         }
 
-        public Dictionary<string, string> Titles()
+        protected override Dictionary<string, string> AddTitles()
         {
-            return new Dictionary<string, string> {
+            var all = new Dictionary<string, string>();
+
+            //Core Set
+            SafeMap(all, new Dictionary<string, string> {
                 { "A Chosen Path", "Le Chemin Choisi" },
                 { "A Fork in the Road", "Un Embranchement sur la Route" },
                 { "A Light in the Dark", "Une Lumière dans les Ténèbres" },
@@ -193,9 +196,11 @@ namespace HallOfBeorn.Services.LotR.Translation
 
                 { "Wandering Took", "Touque Aventureux" },
                 { "Will of the West", "Volonté de l'Ouest" },
-                { "Wolf Rider", "Chevaucheur de Loup" },
+                { "Wolf Rider", "Chevaucheur de Loup" }
+            });
                 
-                //Children of Eorl
+            //Children of Eorl
+            SafeMap(all, new Dictionary<string,string> {
                 { "Defend the Beacon", "Défendre le Feu d'Alarme" },
                 { "Deeping Bowman", "Archer du Gouffre" },
                 { "Open the Gates", "Ouvrez les Portes" },
@@ -283,8 +288,10 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Thieves and Coursers", "Voleurs et Coursiers" },
                 { "The King's Stallion", "L'Étalon du Roi" },
                 { "The Sweeping Tide", "Raz-de-Marée" },
+            });
 
-                //The Aldburg Plot
+            //The Aldburg Plot
+            SafeMap(all, new Dictionary<string,string> {
                 { "A Case of Identity", "Une Affaire d'Identité" },
                 { "A Fire Rises", "Un Début d'Incendie" },
                 { "A Lesson in Caution", "Une Leçon de Prudence" },
@@ -327,8 +334,10 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Well-lit Hall", "Hall Lumineux" },
                 { "Whisperer in the Darkness", "Chuchotement dans les Ténèbres" },
                 { "Young Tom", "Tom le Jeune" },
+            });
 
-                //Fire on the Eastemnet
+            //Fire on the Eastemnet
+            SafeMap(all, new Dictionary<string,string> {
                 { "Box of Earth", "Boîte de Terre" },
                 { "Breath of Arda", "Souffle d'Arda" },
                 { "Captured Steeds", "Coursiers Capturés" },
@@ -359,8 +368,10 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "White Mountain Beastmaster", "Maître des Bêtes des Montagnes Blanches" },
                 { "Wild Steeds", "Coursiers Sauvages" },
                 { "Wolf", "Loup" },
+            });
 
-                //Scouring of the Shire
+            //Scouring of the Shire
+            SafeMap(all, new Dictionary<string,string> {
                 { "Against the Rules", "Contre les Règles" },
                 { "Ambush Sharkey's Men", "Tendre une Embuscade aux Hommes de Sharcoux" },
                 { "Awake! Fire, Foes! Awake!", "Debout ! La Peur, le Feu, les Ennemis ! Debout !" },
@@ -404,10 +415,12 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Voice of Saruman", "Voix de Saroumane" },
                 { "Watch the East Road", "Surveiller la Route de l'Est" },
                 { "Wooden Shed", "Cabane en Bois" },
-            };
+            });
+
+            return all;
         }
 
-        public Dictionary<string, string> Traits()
+        protected override Dictionary<string, string> AddTraits()
         {
             return new Dictionary<string, string> {
                 { "Armor.", "Armure." },

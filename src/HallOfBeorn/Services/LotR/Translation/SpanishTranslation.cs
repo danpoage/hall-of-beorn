@@ -1,20 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 
 using HallOfBeorn.Models;
 
 namespace HallOfBeorn.Services.LotR.Translation
 {
     public class SpanishTranslation
-        : ITranslation
+        : TranslationBase
     {
-        public Language Lang
+        public SpanishTranslation()
+            : base(Language.ES)
         {
-            get { return Language.ES; }
         }
 
-        public Dictionary<string, string> CardTypeNames()
+        protected override Dictionary<string, string> AddCardTypeNames()
         {
             return new Dictionary<string, string> {
                 { "Player", "Jugador" },
@@ -35,7 +34,7 @@ namespace HallOfBeorn.Services.LotR.Translation
             };
         }
 
-        public Dictionary<string, string> Keywords()
+        protected override Dictionary<string, string> AddKeywords()
         {
             return new Dictionary<string, string> {
                 { "Archery 1.", "Tiro con arco 1." },
@@ -67,9 +66,12 @@ namespace HallOfBeorn.Services.LotR.Translation
         }
 
         //áÁéÉíÍóÓùúûüÙÚÛÜñÑ
-        public Dictionary<string, string> Titles()
+        protected override Dictionary<string, string> AddTitles()
         {
-            return new Dictionary<string, string> {
+            var all = new Dictionary<string, string>();
+
+            //Core Set
+            SafeMap(all, new Dictionary<string, string> {
                 { "Brok Ironfist", "Brok Puñohierro" },
                 { "Dungeon Torch", "Antorcha de la Mazmorra" },
                 { "Erebor Hammersmith", "Herrero de Erebor" },
@@ -79,8 +81,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Longbeard Orc Slayer", "Mataorcos de Barba Larga" },
                 { "Miner of the Iron Hills", "Minero de las Colinas de Hierro" },
                 { "Silverlode Archer", "Arquero del Cauce de Plata" },
-                { "Veteran Axehand", "Soldado con Hacha Veterano" },
+                { "Veteran Axehand", "Soldado con Hacha Veterano" }
+            });
 
+            //Children of Eorl
+            SafeMap(all, new Dictionary<string,string> {
                 { "Defend the Beacon", "Defiende la Almenara" },
                 { "Deeping Bowman", "Arquero del Muro del Bajo" },
                 { "Open the Gates", "Abrir las Puertas" },
@@ -167,7 +172,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "The Last Push", "El Último Empujón" },
                 { "Thieves and Coursers", "Ladrones y Corceles" },
                 { "The King's Stallion", "El Semental del Rey" },
-                { "The Sweeping Tide", "La Marea Incontrolable" },
+                { "The Sweeping Tide", "La Marea Incontrolable" }
+            });
+
+            //The Aldburg Plot
+            SafeMap(all, new Dictionary<string,string> {
 
                 { "A Case of Identity", "Un Caso de Identidad" },
                 { "A Fire Rises", "Un Fuego se Propaga" },
@@ -214,8 +223,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Weep No More!", "Dejemos de Llorar" },
                 { "Well-lit Hall", "Salón Bien Iluminado" },
                 { "Whisperer in the Darkness", "Susurradora en la Oscuridad" },
-                { "Young Tom", "Joven Tom" },
+                { "Young Tom", "Joven Tom" }
+            });
 
+            //The Scouring of the Shire
+            SafeMap(all, new Dictionary<string,string> {
                 { "Against the Rules", "Contra Las Reglas" },
                 { "Ambush Sharkey's Men", "Emboscar a los Hombres de Zarquino" },
                 { "Awake! Fire, Foes! Awake!", "¡Despertad! ¡Fuego! ¡Enemigos! ¡Despertad!" },
@@ -257,9 +269,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "To the Road Again, Worm!", "¡A los Caminos, Serpiente!" },
                 { "Voice of Saruman", "La Voz de Saruman" },
                 { "Watch the East Road", "Vigilar el Camino del Este" },
-                { "Wooden Shed", "Cobertizo de Madera" },
+                { "Wooden Shed", "Cobertizo de Madera" }
+            });
 
-                //Fire on the Eastemnet
+            //Fire on the Eastemnet
+            SafeMap(all, new Dictionary<string,string> {
                 { "Box of Earth", "Caja de Tierra" },
                 { "Breath of Arda", "Aliento de Arda" },
                 { "Captured Steeds", "Corceles Capturados" },
@@ -289,9 +303,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Veteran Eagle", "Águila Veterana" },
                 { "White Mountain Beastmaster", "Amo de Bestias de las Montañas Blancas" },
                 { "Wild Steeds", "Corceles Salvajes" },
-                { "Wolf", "Lobo" },
+                { "Wolf", "Lobo" }
+            });
 
-                //The Gap of Rohan
+            //The Gap of Rohan
+            SafeMap(all, new Dictionary<string,string> {
                 { "A Dangerous Pursuit", "Una Persecución Peligrosa" },
                 { "A Stout Heart", "Un Corazón a Toda Prueba" },
                 { "Archet Alekeeper", "Tabernero de Archet" },
@@ -319,10 +335,12 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Stumble in the Snow", "Tropiezo en la Nieve" },
                 { "Unnatural Cold", "Frío Antinatural" },
                 { "White Wall", "Muro Blanco" },
-            };
+            });
+
+            return all;
         }
 
-        public Dictionary<string, string> Traits()
+        protected override Dictionary<string, string> AddTraits()
         {
             return new Dictionary<string, string> {
                 { "Archer.", "Arquero." },

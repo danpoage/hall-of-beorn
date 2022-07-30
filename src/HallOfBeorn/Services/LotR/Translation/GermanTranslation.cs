@@ -5,14 +5,14 @@ using HallOfBeorn.Models;
 namespace HallOfBeorn.Services.LotR.Translation
 {
     public class GermanTranslation
-        : ITranslation
+        : TranslationBase
     {
-        public Language Lang
+        public GermanTranslation()
+            : base(Language.DE)
         {
-            get { return Language.DE; }
         }
 
-        public Dictionary<string, string> CardTypeNames()
+        protected override Dictionary<string, string> AddCardTypeNames()
         {
             return new Dictionary<string, string> {
                 { "Player", "Spieler" },
@@ -31,7 +31,7 @@ namespace HallOfBeorn.Services.LotR.Translation
             };
         }
 
-        public Dictionary<string, string> Keywords()
+        protected override Dictionary<string, string> AddKeywords()
         {
             return new Dictionary<string, string> {
                 { "Archery 1.", "Bogenschießen 1." },
@@ -73,11 +73,17 @@ namespace HallOfBeorn.Services.LotR.Translation
             };
         }
 
-        public Dictionary<string, string> Titles()
+        protected override Dictionary<string, string> AddTitles()
         {
-            return new Dictionary<string, string> {
-                { "Guard of the Citadel", "Wächter der Veste" },
+            var all = new Dictionary<string, string>();
 
+            //Core Set
+            SafeMap(all, new Dictionary<string, string> {
+                { "Guard of the Citadel", "Wächter der Veste" },
+            });
+
+            //Children of Eorl
+            SafeMap(all, new Dictionary<string, string> {
                 { "Defend the Beacon", "Verteidigt das Leuchtfeuer" },
                 { "Deeping Bowman", "Bogenschütze der Klamm" },
                 { "Open the Gates", "Öffnet die Tore" },
@@ -164,8 +170,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "The Last Push", "Der letzte Vorstoss" },
                 { "Thieves and Coursers", "Diebe und Rennpferde" },
                 { "The King's Stallion", "Des Königs Hengst" },
-                { "The Sweeping Tide", "Die Reissende Flut" },
+                { "The Sweeping Tide", "Die Reissende Flut" }
+            });
 
+            //The Aldburg Plot
+            SafeMap(all, new Dictionary<string,string> {
                 { "Fatty Bolger", "Dick Bolger" },
                 { "Lily Cotton", "Lily Hüttinger" },
                 { "A Lesson in Caution", "Eine Lektion in Vorsicht" },
@@ -201,8 +210,6 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Gathering Clues", "Hinweise sammeln" },
                 { "The Uncertain Dawn", "Eine ungewisse Dämmerung" },
                 { "Ossian", "Geständnis eines Verräters" },
-
-                //{ "Spreading Inferno", "Sich ausbreitende Feuersbrunst" },
                 { "Ruby Cloak-pin", "Weinrote Fibel" },
                 { "Silver Dagger", "Silberdolch" },
                 { "Prison Key", "Gefängnisschlüssel" },
@@ -210,9 +217,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Raven Signet Ring", "Rabensiegelring" },
                 { "Rohirric Coins", "Münzen der Rohirrim" },
                 { "Red Fletched Arrow", "Rotgefiederter Pfeil" },
-                { "Letter from Dunland", "Brief aus Dunland" },
+                { "Letter from Dunland", "Brief aus Dunland" }
+            });
 
-                //The Scouring of the Shire
+            //The Scouring of the Shire
+            SafeMap(all, new Dictionary<string,string> {
                 { "Against the Rules", "Gegen die Regeln" },
                 { "Ambush Sharkey's Men", "Lauert Scharrers Leuten auf" },
                 { "Awake! Fire, Foes! Awake!", "Erwacht! Feuer, Feinde! Erwacht!" },
@@ -254,9 +263,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "To the Road Again, Worm!", "Auf die Strasse, Schlange!" },
                 { "Voice of Saruman", "Sarumans Stimme" },
                 { "Watch the East Road", "Bewacht die Oststrasse" },
-                { "Wooden Shed", "Hölzerner Schuppen" },
+                { "Wooden Shed", "Hölzerner Schuppen" }
+            });
 
-                //Fire on the Eastemnet
+            //Fire on the Eastemnet
+            SafeMap(all, new Dictionary<string,string> {
                 { "Box of Earth", "Kästchen mit Erde" },
                 { "Breath of Arda", "Atem von Arda" },
                 { "Captured Steeds", "Gefangene Pferde" },
@@ -284,9 +295,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "To the River!", "Zum Fluss!" },
                 { "Veteran Eagle", "Adlerveteran" },
                 { "White Mountain Beastmaster", "Bestienmeister des Weissen Gebirges" },
-                { "Wild Steeds", "Freie Pferde" },
+                { "Wild Steeds", "Freie Pferde" }
+            });
 
-                //The Gap of Rohan
+            //The Gap of Rohan
+            SafeMap(all, new Dictionary<string,string> {
                 { "A Dangerous Pursuit", "Eine gefährliche Verfolgung" },
                 { "A Stout Heart", "Sehr beherzt" },
                 { "Archet Alekeeper", "Schankwirt aus Archet" },
@@ -315,10 +328,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Snowbank", "Schneewehe" },
                 { "Stumble in the Snow", "Stolpern im Schnee" },
                 { "Unnatural Cold", "Unnatürliche Kälte" },
-                { "White Wall", "Weisse Wand" },
+                { "White Wall", "Weisse Wand" }
+            });
 
-                //The Glittering Caves
-                /*
+            //The Glittering Caves
+            SafeMap(all, new Dictionary<string,string> {
                 { "Alluring Paths", "Verlockende Pfade" },
                 { "Cave Opening", "Höhlenöffnung" },
                 { "Crossroads", "Kreuzung" },
@@ -349,11 +363,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Twisting Paths", "Verschlungene Pfade" },
                 { "Vast Cave", "Weite Höhle" },
                 { "Wandering Spirit", "Wanderner Geist" },
-                { "Wonders of Aglarond", "Wunder von Aglarond" },
-                 * */
+                { "Wonders of Aglarond", "Wunder von Aglarond" }
+            });
 
-                //Mustering of the Rohirrim
-                /*
+            //Mustering of the Rohirrim
+            SafeMap(all, new Dictionary<string,string> {
                 { "Aldburg Provocateur", "Herausforderer von Aldburg" },
                 { "Assassin at Edoras", "Attentäter in Edoras" },
                 { "Beorn's Welcome", "Beorns Begrüssung" },
@@ -388,12 +402,13 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Traitor's Redoubt", "Kasematte des Verräters" },
                 { "Winter in Westemnet", "Winter im Westemnet" },
                 { "Without My Hat", "Ohne Hut" },
-                { "Woodmen's Outpost", "Aussenposten der Waldmenschen" },
-                */
-            };
+                { "Woodmen's Outpost", "Aussenposten der Waldmenschen" }
+            });
+
+            return all;
         }
 
-        public Dictionary<string, string> Traits()
+        protected override Dictionary<string, string> AddTraits()
         {
             return new Dictionary<string, string> {
                 { "Armor.", "Rüstung." },

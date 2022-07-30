@@ -5,14 +5,14 @@ using HallOfBeorn.Models;
 namespace HallOfBeorn.Services.LotR.Translation
 {
     public class PolishTranslation
-        : ITranslation
+        : TranslationBase
     {
-        public Language Lang
+        public PolishTranslation()
+            : base(Language.PL)
         {
-            get { return Language.PL; }
         }
 
-        public Dictionary<string, string> CardTypeNames()
+        protected override Dictionary<string, string> AddCardTypeNames()
         {
             return new Dictionary<string,string>{
                 { "Player", "Gracza" },
@@ -44,7 +44,7 @@ namespace HallOfBeorn.Services.LotR.Translation
             };
         }
 
-        public Dictionary<string, string> Keywords()
+        protected override Dictionary<string, string> AddKeywords()
         {
             return new Dictionary<string, string>
             {
@@ -70,10 +70,12 @@ namespace HallOfBeorn.Services.LotR.Translation
             };
         }
 
-        public Dictionary<string, string> Titles()
+        protected override Dictionary<string, string> AddTitles()
         {
-            return new Dictionary<string, string>
-            {
+            var all = new Dictionary<string, string>();
+
+            //Children of Eorl
+            SafeMap(all, new Dictionary<string, string> {
                 { "Deeping Bowman", "Helmowy Łucznik" },
                 { "Open the Gates", "Otworzyć Bramę" },
                 { "Wealth of Adventure", "Bogactwo Przygody" },
@@ -162,7 +164,10 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Thieves and Coursers", "Koniokradzi" },
                 { "The King's Stallion", "Królewskie rumaki" },
                 { "The Sweeping Tide", "Nadciągające niebezpieczeństwo" },
-                //The Aldburg Plot
+            });
+
+            //The Aldburg Plot 
+            SafeMap(all, new Dictionary<string,string> {
                 { "A Case of Identity", "Sprawa Tożsamości" },
                 { "A Fire Rises", "Ogień Płonie" },
                 { "A Lesson in Caution", "Lekcja Ostrożności" },
@@ -207,8 +212,10 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Whisperer in the Darkness", "Szepcząca w Ciemności" },
                 { "Widfast", "Widfasta" },
                 { "Young Tom", "Młody Tom" },
+            });
 
-                //The Scouring of the Shire
+            //The Scouring of the Shire
+            SafeMap(all, new Dictionary<string,string> {
                 { "Against the Rules", "Przeciw Nowym Porządkom" },
                 { "Ambush Sharkey's Men", "Zasadzka na Ludzi Sharkeya" },
                 { "Awake! Fire, Foes! Awake!", "Trwoga, Napaść, Pożoga! Zbudźcie się!" },
@@ -250,10 +257,12 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Voice of Saruman", "Głos Sarumana" },
                 { "Watch the East Road", "Obserwujcie Wschodni Gościniec" },
                 { "Wooden Shed", "Drewniana Szopa" }
-            };
+            });
+
+            return all;
         }
 
-        public Dictionary<string, string> Traits()
+        protected override Dictionary<string, string> AddTraits()
         {
             return new Dictionary<string, string>
             {

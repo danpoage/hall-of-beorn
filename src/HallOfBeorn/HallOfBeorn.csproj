@@ -1274,6 +1274,7 @@
     <Compile Include="Services\LotR\Translation\ITranslation.cs" />
     <Compile Include="Services\LotR\Translation\ITranslationService.cs" />
     <Compile Include="Services\LotR\Translation\Phrase.cs" />
+    <Compile Include="Services\LotR\Translation\TranslationBase.cs" />
     <Compile Include="Services\LotR\Translation\TranslationService.cs" />
     <Compile Include="Services\Marvel\MarvelProductRepository.cs" />
     <Compile Include="Services\Marvel\MarvelSearchService.cs" />
