@@ -45,6 +45,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Guarded (enemy).", "Bewacht (Gegner)." },
                 { "Guarded (location).", "Bewacht (Ort)." },
                 
+                { "Immune to player card effects.", "Immun gegen Spielerkarteneffekte." },
                 { "Indestructible.", "Unzerstörbar." },
                 
                 { "Looter 0.", "Erbeuten 0." },
@@ -315,6 +316,80 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Stumble in the Snow", "Stolpern im Schnee" },
                 { "Unnatural Cold", "Unnatürliche Kälte" },
                 { "White Wall", "Weisse Wand" },
+
+                //The Glittering Caves
+                /*
+                { "Alluring Paths", "Verlockende Pfade" },
+                { "Cave Opening", "Höhlenöffnung" },
+                { "Crossroads", "Kreuzung" },
+                { "Dark Pit", "Dunkle Grube" },
+                { "Dead End", "Sackgasse" },
+                { "Echoes in the Deep", "Echos in den Tiefen" },
+                { "Forgotten Shade", "Vergessener Schatten" },
+                { "Fork", "Gabelung" },
+                { "Guard the Entrance!", "Bewacht den Eingang!" },
+                { "Guarded Hall", "Bewachte Halle" },
+                { "Harlond Lookout", "Wachposten von Harlond" },
+                { "Helm's Horn", "Helms Horn" },
+                { "Jewelled Cavern", "Juwelenniesche" },
+                { "Killing With Fear", "Vor Angst sterben" },
+                { "Lay of the Nauglamír", "Lied vom Nauglamír" },
+                { "Legacy of Gondolin", "Vermächtnis von Gondolin" },
+                { "Locked Door", "Verschlossene Tür" },
+                { "Lurking Ghûl", "Lauernder Ghul" },
+                { "Onward Into Battle", "Vorn in der Schlacht" },
+                { "Radiant Caverns", "Leuchtende Höhlen" },
+                { "Relic of Nargothrond", "Überbleibsel aus Nargothrond" },
+                { "Salvaged Supplies", "Geborgene Vorräte" },
+                { "Search the Caves", "Durchsucht die Höhlen" },
+                { "Secret Passage", "Geheimer Durchgang" },
+                { "Small Stream", "Kleiner Bach" },
+                { "Stairwell", "Treppe" },
+                { "The Horn's Discovery", "Die Entdeckung des Horns" },
+                { "Twisting Paths", "Verschlungene Pfade" },
+                { "Vast Cave", "Weite Höhle" },
+                { "Wandering Spirit", "Wanderner Geist" },
+                { "Wonders of Aglarond", "Wunder von Aglarond" },
+                 * */
+
+                //Mustering of the Rohirrim
+                /*
+                { "Aldburg Provocateur", "Herausforderer von Aldburg" },
+                { "Assassin at Edoras", "Attentäter in Edoras" },
+                { "Beorn's Welcome", "Beorns Begrüssung" },
+                { "Beorning Pony", "Pony der Beorninger" },
+                { "Bitter Betrayal", "Bitterer Verrat" },
+                { "Coup", "Staatsstreich" },
+                { "Curuwyn The Whisperer", "Curuwyn die Flüsterin" },
+                { "Cutthroat's Strike", "Hieb des Mörders" },
+                { "Deeping-stream", "Klammbach" },
+                { "Descendants of Beorn", "Beorns Nachfahren" },
+                { "Felberen Scion of Freca", "Felberen, Sprössling des Freca" },
+                { "Halls of Ealdwulf", "Ealdwulfs Hallen" },
+                { "Host of Rohan", "Heer aus Rohan" },
+                { "Hunting Dogs", "Jagdhunde" },
+                { "Lie of the Land", "Die Lage des Landes" },
+                { "Massing at the Isen", "Versammlung am Isen" },
+                { "Oaths of the Rohirrim", "Eide der Rohirrim" },
+                { "Orator’s Hall", "Rednersaal" },
+                { "Orc-host Remnant", "Überbleibsel des Orkheeres" },
+                { "Pernicious Plotter", "Verderbter Verschwörer" },
+                { "Plains of Strife", "Ebene der Zwietracht" },
+                { "Raven Clan Sharpshooter", "Scharfschütze des Raben-Stamms" },
+                { "Raven Clan Warchief", "Kriegshäuptling des Raben-Stamms" },
+                { "Road to Ruin", "Weg zur Vernichtung" },
+                { "Scattered to the Winds", "In alle Winde zerstreut" },
+                { "Seeking Support", "Auf der Suche nach Hilfe" },
+                { "Smeóhbrand Rogue of Orthanc", "Smeóhbrand, Schurke vom Orthanc" },
+                { "Sniveling Courtier", "Herumschnüffelnder Höfling" },
+                { "Spiteful Hunter", "Gehässiger Jäger" },
+                { "Subdued", "Überwältigt" },
+                { "The Far Bank", "Das Ferne Ufer" },
+                { "Traitor's Redoubt", "Kasematte des Verräters" },
+                { "Winter in Westemnet", "Winter im Westemnet" },
+                { "Without My Hat", "Ohne Hut" },
+                { "Woodmen's Outpost", "Aussenposten der Waldmenschen" },
+                */
             };
         }
 
@@ -325,7 +400,9 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Artifact.", "Gegenstand." },
                 { "Assassin.", "Attentäter." },
                 
+                { "Battleground.", "Schlachtfeld." },
                 { "Beorning.", "Beorninger." },
+                { "Boon.", "Gunst." },
                 { "Brigand.", "Gesetzloser." },
                 { "Camp.", "Lager." },
                 { "Clue.", "Hinweis." },
@@ -334,9 +411,12 @@ namespace HallOfBeorn.Services.LotR.Translation
 
                 { "Doom.", "Verhängnis." },
                 { "Dúnedain.", "Waldläufer." },
+                { "Dwarf.", "Zwerg." },
 
                 { "Eagle.", "Adler." },
 
+                { "Fortification.", "Befestigung." },
+                
                 { "Garrison.", "Garnison." },
                 { "Gate.", "Tor." },
                 { "Gift.", "Geschenk." },
@@ -347,17 +427,21 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Hills.", "Hügel." },
 
                 { "Inferno.", "Feuersbrunst." },
+                { "Isengard.", "Isengart." },
                 { "Item.", "Artefakt." },
                 
                 { "Lake.", "See." },
+                { "Massing.", "Versammlung." },
                 { "Mount.", "Reittier." },
                 { "Mountain.", "Berg." },
+                { "Mustering.", "Heerschau." },
                 { "Noble.", "Adlig." },
                 { "Orc.", "Ork." },
 
                 { "Plains.", "Ebene." },
 
                 { "Ranger.", "Waldläufer." },
+                { "Raven Clan.", "Raben-Stamm." },
                 { "River.", "Fluss." },
                 { "Road.", "Straße." },
                 { "Ruffian.", "Strolch." },
@@ -369,19 +453,26 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Shirriff.", "Landbüttel." },
                 { "Skill.", "Fertigkeit." },
                 { "Snow.", "Schnee." },
+                { "Song.", "Lied." },
+                { "Spirit.", "Geist." },
                 { "Spy.", "Spion." },
                 { "Stair.", "Treppe." },
+                { "Stalking.", "Lauernd." },
+                { "Stream.", "Bach." },
+                { "Summoned.", "Gerufen." },
                 { "Suspicious.", "Verdächtig." },
 
                 { "Traitor.", "Verräter." },
                 { "Trap.", "Falle." },
                 
+                { "Undead.", "Untot." },
                 { "Underground.", "Unterirdisch." },
 
                 { "Village.", "Dorf." },
                 { "Warrior.", "Krieger." },
                 { "Weather.", "Wetter." },
                 { "Woodman.", "Waldmensch." },
+                { "Wraith.", "Böser Geist." },
             };
         }
     }

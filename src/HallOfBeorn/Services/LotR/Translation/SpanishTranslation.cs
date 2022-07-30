@@ -61,6 +61,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Steeds 3.", "Corceles 3." },
                 { "Steeds 4.", "Corceles 4." },
                 { "Surge.", "Oleada." },
+                { "Time 7.", "Tiempo 7." },
                 { "Vast.", "Vasto." },
             };
         }
@@ -289,6 +290,35 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "White Mountain Beastmaster", "Amo de Bestias de las Montañas Blancas" },
                 { "Wild Steeds", "Corceles Salvajes" },
                 { "Wolf", "Lobo" },
+
+                //The Gap of Rohan
+                { "A Dangerous Pursuit", "Una Persecución Peligrosa" },
+                { "A Stout Heart", "Un Corazón a Toda Prueba" },
+                { "Archet Alekeeper", "Tabernero de Archet" },
+                { "Barliman Butterbur", "Cebadilla Mantecona" },
+                { "Biting Winds", "Vientos Penetrantes" },
+                { "Bree Pony", "Póney de Bree" },
+                { "Bree-land Protector", "Protectora de las Tierras de Bree" },
+                { "Dunlending Rearguard", "Retaguardia Dunlendina" },
+                { "Exposed Ridge", "Cresta Expuesta" },
+                { "Frantic Dunlending", "Dunlendino Frenético" },
+                { "Frozen Lake", "Lago Congelado" },
+                { "Frozen Solid", "Congelado" },
+                { "Gálmód’s Escort", "Escolta de Gálmód" },
+                { "Gift of Foresight", "Don de la Previsión" },
+                { "Giving Chase", "Dando Caza" },
+                { "Half-pint", "Media Pinta" },
+                { "Harry Goatleaf", "Enrique Madreselva" },
+                { "Pint", "Pinta" },
+                { "Recapture the Traitor", "Recapturar al Traidor" },
+                { "Scheming Staddler", "Intrigante de Entibo" },
+                { "Seasoned Forager", "Recolector Experto" },
+                { "Slippery Hill", "Colina Resbaladiza" },
+                { "Snow Squall", "Borrasca de Nieve" },
+                { "Snowbank", "Banco de Nieve" },
+                { "Stumble in the Snow", "Tropiezo en la Nieve" },
+                { "Unnatural Cold", "Frío Antinatural" },
+                { "White Wall", "Muro Blanco" },
             };
         }
 
@@ -321,12 +351,16 @@ namespace HallOfBeorn.Services.LotR.Translation
 
                 { "Healer.", "Curandero." },
                 { "Hideout.", "Escondrijo." },
+                { "Hill.", "Colina." },
                 { "Hills.", "Colinas." },
 
                 { "Inferno.", "Infierno." },
                 { "Item.", "Objeto." },
 
+                { "Lake.", "Lago." },
+
                 { "Mount.", "Montura." },
+                { "Mountain.", "Montaña." },
 
                 { "Orc.", "Orco." },
 
@@ -344,6 +378,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Shirriff.", "Oficial de la Comarca." },
                 { "Silvan.", "Silvano." },
                 { "Skill.", "Habilidad." },
+                { "Snow.", "Nieve." },
                 { "Spider.", "Araña." },
                 { "Spy.", "Espía." },
                 { "Stair.", "Escalera." },
@@ -358,6 +393,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 
                 { "Warrior.", "Guerrero." },
                 { "Weather.", "Tiempo atmosférico." },
+                { "Westfold.", "Folde Oeste." },
                 { "Woodman.", "Leñador." },
             };
         }
