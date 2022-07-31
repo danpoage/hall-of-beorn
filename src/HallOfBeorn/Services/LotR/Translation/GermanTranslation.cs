@@ -335,7 +335,7 @@ namespace HallOfBeorn.Services.LotR.Translation
             SafeMap(all, new Dictionary<string,string> {
                 { "Alluring Paths", "Verlockende Pfade" },
                 { "Cave Opening", "Höhlenöffnung" },
-                { "Crossroads", "Kreuzung" },
+                //{ "Crossroads", "Kreuzung" },
                 { "Dark Pit", "Dunkle Grube" },
                 { "Dead End", "Sackgasse" },
                 { "Echoes in the Deep", "Echos in den Tiefen" },
