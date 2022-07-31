@@ -11,6 +11,23 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             : base("Card Talk Blog", "https://cardtalk2018.com/", "https://cardtalk2018.com/feed/", LinkType.Card_Talk_Blog)
         {
             AddYear(2022);
+            AddLink("Deadmen’s Dike with New Angmar Awakened Minimum Purchase Deck – July 26, 2022", "https://cardtalk2018.com/2022/07/29/deadmens-dike-with-new-angmar-awakened-minimum-purchase-deck-july-26-2022/", "Jul 29 2022")
+                .WithLabels("Deadmen's Dike", "Arwen Undómiel", "Arwen Undomiel", "Beravor", "Halbarad", "Curious Brandybuck", "East Road Ranger", "Galadhrim Healer", "Galadhrim Weaver", "Gandalf", "Guardian of Arnor", "Ranger of Cardolan", "Sarn Ford Sentry", "Weather Hills Watchman", "Wellinghall Preserver")
+                .WithLabels("Athelas", "Forest Snare", "Heir of Valandil", "Steward of Gondor", "The Long Defeat", "Unexpected Courage", "A Test of Will", "Dwarven Tomb", "Elven-light", "Hasty Stroke", "Sneak Attack", "Will of the West");
+            AddLink("Asfaloth – Community Review", "https://cardtalk2018.com/2022/07/28/asfaloth-community-review/", "Jul 28 2022")
+                .WithLabels("Asfaloth", "Glorfindel");
+            AddLink("The Blood of Gondor with Mono-Tactics – November 2, 2019", "https://cardtalk2018.com/2022/07/27/the-blood-of-gondor-with-mono-tactics-november-2-2019/", "Jul 27 2022")
+                .WithLabels("The Blood of Gondor", "Tactics", "Beregond", "Éowyn", "Eowyn", "Legolas", "Beechbone", "Bofur", "Defender of Rammas", "Derndingle Warrior", "Dúnedain Hunter", "Dunedain Hunter", "Eagles of the Misty Mountains", "Gandalf", "Honour Guard", "Knights of the Swan")
+                .WithLabels("Arod", "Dagger of Westernesse", "Favor of the Valar", "Gondorian Shield", "Rivendell Blade", "Secret Vigil", "Feint", "Foe-hammer", "Hands Upon the Bow");
+            AddLink("Hobbit Cloak", "https://cardtalk2018.com/2022/07/26/hobbit-cloak/", "Jul 26 2022")
+                .WithLabels("Hobbit Cloak", "Pippin", "Take No Notice", "Mablung", "Sneak Attack", "Gandalf", "The Shirefolk", "Elevensies", "The Galadhrim's Greeting", "Merry", "Galadriel", "Fastred", "Beregond")
+                .WithLabels("Frodo Baggins", "Sam Gamgee", "Tom Cotton", "Gondorian Shield", "Shining Shield", "Cloak of Lórien", "Cloak of Lorien")
+                .WithDeckLabels(17917);
+            AddLink("Palantir Community Review", "https://cardtalk2018.com/2022/07/25/palantir-community-review/", "Jul 25 2022")
+                .WithLabels("Palantir", "The Grey Wanderer", "Denethor", "Needful to Know", "Celduin Traveler", "Ithilien Lookout", "Far-sighted", "Double Back");
+            AddLink("Assault on Osgiliath with Mono-Tactics 1 & 2 – October 19, 2019", "https://cardtalk2018.com/2022/07/22/assault-on-osgiliath-with-mono-tactics-1-2-october-19-2019/", "Jul 22 2022")
+                .WithLabels("Assault on Osgiliath", "Tactics", "Beregond", "Éowyn", "Eowyn", "Legolas", "Beechbone", "Bofur", "Defender of Rammas", "Derndingle Warrior", "Dúnedain Hunter", "Dunedain Hunter", "Eagles of the Misty Mountains", "Gandalf", "Honour Guard", "Knights of the Swan")
+                .WithLabels("Arod", "Dagger of Westernesse", "Favor of the Valar", "Gondorian Shield", "Rivendell Blade", "Secret Vigil", "Feint", "Foe-hammer", "Hands Upon the Bow");
             AddLink("Guardian of Esgaroth Community Review", "https://cardtalk2018.com/2022/07/21/guardian-of-esgaroth-community-review/", "Jul 21 2022")
                 .WithLabels("Guardian of Esgaroth");
             AddLink("Encounter at Amon Din with Mono-Tactics – October 19, 2019", "https://cardtalk2018.com/2022/07/20/encounter-at-amon-din-with-mono-tactics-october-19-2019/", "Jul 20 2022")
@@ -136,6 +153,13 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("Brand Son of Bain", "Narya", "Círdan the Shipwright", "Cirdan the Shipwright", "Gandalf", "The Free Peoples", "Leather Boots", "Spare Hood and Cloak", "Faramir", "Ancient Mathom", "Foe-hammer")
                 .WithLabels("Messenger of the King")
                 .WithDeckLabels(26846, 18426, 16418);
+            AddLink("Second Breakfast #3", "https://cardtalk2018.com/2022/04/11/second-breakfast-3/", "Apr 11 2022")
+                .WithLabels("Flies and Spiders")
+                .WithDeckLabels(27355, 27237);
+            AddLink("Card Talk Interviews with Caleb Grace and Tyler Parrot Available en Español", "https://cardtalk2018.com/2022/04/08/card-talk-interviews-with-caleb-grace-and-tyler-parrot-available-en-espanol/", "Apr 8 2022")
+                .WithLabels("Caleb Grace", "Tyler Parrot", "Español", "Las Cartas de Poder");
+            AddLink("Caves of Niben Dum – Paths of Mirkwood Campaign – April 2, 2022", "https://cardtalk2018.com/2022/04/08/caves-of-niben-dum-paths-of-mirkwood-campaign-march-20-2022/", "Apr 8 2022")
+                .WithLabels("Caves of Niben Dum", "The Oath");
             AddYear(2021);
             AddLink("Blade of Gondolin", "https://cardtalk2018.com/2021/09/21/blade-of-gondolin/", "Sep 21 2021")
                 .WithLabels("Blade of Gondolin");
