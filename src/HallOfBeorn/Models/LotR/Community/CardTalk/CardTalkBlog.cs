@@ -159,7 +159,37 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Card Talk Interviews with Caleb Grace and Tyler Parrot Available en Español", "https://cardtalk2018.com/2022/04/08/card-talk-interviews-with-caleb-grace-and-tyler-parrot-available-en-espanol/", "Apr 8 2022")
                 .WithLabels("Caleb Grace", "Tyler Parrot", "Español", "Las Cartas de Poder");
             AddLink("Caves of Niben Dum – Paths of Mirkwood Campaign – April 2, 2022", "https://cardtalk2018.com/2022/04/08/caves-of-niben-dum-paths-of-mirkwood-campaign-march-20-2022/", "Apr 8 2022")
-                .WithLabels("Caves of Niben Dum", "The Oath");
+                .WithLabels("Caves of Niben Dum", "The Oath").WithDeckLabels(26615);
+            AddLink("Introducing the Theatrical Campaign", "https://cardtalk2018.com/2022/04/07/introducing-the-theatrical-campaign/", "Apr 7 2022")
+                .WithLabels("Bond of Friendship", "Campaign", "Saga", "Thoringil");
+            AddLink("Erebor Hammersmith", "https://cardtalk2018.com/2022/04/05/erebor-hammersmith/", "Apr 5 2022")
+                .WithLabels("Erebor Hammersmith", "Reforged", "Steward of Gondor", "Self Preservation", "Hidden Cache", "Lembas", "Athelas", "Healing Herbs", "Thrór's Map", "Thror's Map", "Miruvor", "Cram", "Tome of Atanatar", "Book of Eldacar", "Map of Earnil", "Scroll of Isildur")
+                .WithLabels("Reinforcements", "Sneak Attack", "Risk Some Light", "Anciemt Mathom", "Ranger Provisions", "Secret Vigil", "The Long Defeat", "Forest Snare", "Ithilien Pit", "Poisoned Stakes", "Ambush", "Protector of Lórien", "Protector of Lorien")
+                .WithLabels("Zigil Miner", "Ered Nimrais Prospector", "Dáin Ironfoot", "Dain Ironfoot", "Hardy Leadership", "Armor of Erebor", "Boots from Erebor", "Ring Mail")
+                .WithDeckLabels(17339, 6538, 13310);
+            AddLink("The Oath – Paths of Mirkwood Campaign – March 20, 2022", "https://cardtalk2018.com/2022/04/01/the-oath-paths-of-mirkwood-campaign-march-20-2022/", "Apr 1 2022")
+                .WithLabels("The Oath", "Campaign")
+                .WithDeckLabels(26615);
+            AddLink("Core Set Combos – Dunhere + Quick Strike", "https://cardtalk2018.com/2022/03/31/core-set-combos-dunhere-quick-strike/", "Mar 31 2022")
+                .WithLabels("Core Set", "Combo", "Dúnhere", "Dunhere", "Quick Strike", "Éowyn", "Eowyn", "Faramir", "Dwarven Axe", "Blade of Gondolin", "Blade Mastery", "For Gondor!");
+            AddLink("Eleanor", "https://cardtalk2018.com/2022/03/29/eleanor/", "Mar 29 2022")
+                .WithLabels("Eleanor", "Beregond", "Wealth of Gondor", "Mablung", "Captain's Wisdom", "Denethor", "A Test of Will", "Hasty Stroke", "Gondorian Shield", "Resourceful", "Blood of Númenor", "Blood of Numenor")
+                .WithLabels("Unexpected Courage", "Miruvor", "Risk Some Light", "Scout Ahead", "Leave No Trace", "None Return", "The Door is Closed!", "A Watchful Peace")
+                .WithDeckLabels(3262);
+            AddLink("Core Campaign Escape from Dol Guldur 10 – March 20, 2022", "https://cardtalk2018.com/2022/03/25/core-campaign-escape-from-dol-guldur-10-march-20-2022/", "Mar 25 2022")
+                .WithLabels("Escape from Dol Guldur").WithDeckLabels(26615);
+            AddLink("Core Set Combos – Gloin + Self Preservation", "https://cardtalk2018.com/2022/03/24/core-set-combos-gloin-self-preservation/", "Mar 24 2022")
+                .WithLabels("Core Set", "Combo", "Glóin", "Gloin", "Self Preservation", "Daughter of Nimrodel", "Lore of Imladris", "Hasty Stroke", "Dark Knowledge");
+            AddLink("Power of Grimbeorn the Old Nightmare", "https://cardtalk2018.com/2022/03/23/power-of-grimbeorn-the-old-nightmare/", "Mar 23 2022")
+                .WithLabels("Grimbeorn the Old", "Steward of Gondor", "Hirgon", "Beorning Skin-changer", "Legolas", "Théodred", "Theodred", "Send for Aid", "Gather Information", "Armored Destrier", "Raven-winged Helm", "Honour Guard")
+                .WithDeckLabels(13372);
+            AddLink("Horseback Archer", "https://cardtalk2018.com/2022/03/22/horseback-archer/", "Mar 22 2022")
+                .WithLabels("Horseback Archer", "Core Set", "Tactics", "Marksman of Lórien", "Marksman of Lorien", "Fornost Bowman", "Spear of the Mark", "War Axe", "Raiment of War", "Hands Upon the Bow", "Théoden", "Theoden")
+                .WithLabels("Self Preservation", "Spare Pipe", "Elf-friend", "Bow of the Galadhrim", "Rivendell Bow", "Rivendell Blade");
+            AddLink("Second Breakfast, Challenge 2: The Watcher in the Water", "https://cardtalk2018.com/2022/03/21/second-breakfast-challenge-2-the-watcher-in-the-water/", "Mar 21 2022")
+                .WithLabels("The Watcher in the Water", "https://www.youtube.com/watch?v=IAekPpwr62M").WithDeckLabels(26598, 26599);
+            AddLink("Core Campaign Escape from Dol Guldur 8 & 9 – March 20, 2022", "https://cardtalk2018.com/2022/03/21/core-campaign-escape-from-dol-guldur-8-9-march-1-2022/", "Mar 21 2022")
+                .WithLabels("Escape from DOl Guldur", "Core Set", "Campaign").WithDeckLabels(26615);
             AddYear(2021);
             AddLink("Blade of Gondolin", "https://cardtalk2018.com/2021/09/21/blade-of-gondolin/", "Sep 21 2021")
                 .WithLabels("Blade of Gondolin");
