@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             : base("Card Talk Blog", "https://cardtalk2018.com/", "https://cardtalk2018.com/feed/", LinkType.Card_Talk_Blog)
         {
             AddYear(2022);
+            AddLink("First Year Retrospective", "https://cardtalk2018.com/2022/08/01/first-year-retrospective/", "Aug 1 2022")
+                .WithLabels("First Anniversary", "Glorfindel", "Brok Ironfist");
             AddLink("Deadmen’s Dike with New Angmar Awakened Minimum Purchase Deck – July 26, 2022", "https://cardtalk2018.com/2022/07/29/deadmens-dike-with-new-angmar-awakened-minimum-purchase-deck-july-26-2022/", "Jul 29 2022")
                 .WithLabels("Deadmen's Dike", "Arwen Undómiel", "Arwen Undomiel", "Beravor", "Halbarad", "Curious Brandybuck", "East Road Ranger", "Galadhrim Healer", "Galadhrim Weaver", "Gandalf", "Guardian of Arnor", "Ranger of Cardolan", "Sarn Ford Sentry", "Weather Hills Watchman", "Wellinghall Preserver")
                 .WithLabels("Athelas", "Forest Snare", "Heir of Valandil", "Steward of Gondor", "The Long Defeat", "Unexpected Courage", "A Test of Will", "Dwarven Tomb", "Elven-light", "Hasty Stroke", "Sneak Attack", "Will of the West");
@@ -188,8 +190,40 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("Self Preservation", "Spare Pipe", "Elf-friend", "Bow of the Galadhrim", "Rivendell Bow", "Rivendell Blade");
             AddLink("Second Breakfast, Challenge 2: The Watcher in the Water", "https://cardtalk2018.com/2022/03/21/second-breakfast-challenge-2-the-watcher-in-the-water/", "Mar 21 2022")
                 .WithLabels("The Watcher in the Water", "https://www.youtube.com/watch?v=IAekPpwr62M").WithDeckLabels(26598, 26599);
+            AddLink("A second Second Breakfast", "https://cardtalk2018.com/2022/03/18/a-second-second-breakfast/", "Mar 18 2022")
+                .WithLabels("Announcement");
             AddLink("Core Campaign Escape from Dol Guldur 8 & 9 – March 20, 2022", "https://cardtalk2018.com/2022/03/21/core-campaign-escape-from-dol-guldur-8-9-march-1-2022/", "Mar 21 2022")
                 .WithLabels("Escape from DOl Guldur", "Core Set", "Campaign").WithDeckLabels(26615);
+            AddLink("First Repackaged Cycle will be Angmar Awakened!", "https://cardtalk2018.com/2022/03/17/first-repackaged-cycle-will-be-angmar-awakened/", "Mar 17 2022")
+                .WithLabels("Angmar Awakened", "Campaign", "Hardy", "Determination", "Silverthorn", "Boon", "Burden", "None Return", "Rossiel");
+            AddLink("Core Set Combos – Eowyn + Stand and Fight", "https://cardtalk2018.com/2022/03/17/core-set-combos-eowyn-stand-and-fight/", "Mar 17 2022")
+                .WithLabels("Éowyn", "Eowyn", "Stand and Fight", "Beorn", "Snowbourn Scout", "Gandalf", "Erebor Hammersmith").WithDeckLabels(26348);
+            AddLink("Core Gandalf", "https://cardtalk2018.com/2022/03/15/core-gandalf/", "Mar 15 2022")
+                .WithLabels("Core Set", "Gandalf", "Horns! Horns! Horns!", "Reinforcements", "Gwaihir's Debt", "Born Aloft", "Ever Vigilant", "Narya", "Flame of Anor", "Faramir", "Stand and Fight")
+                .WithDeckLabels(12749, 8946);
+            AddLink("Core Campaign Escape from Dol Guldur 6 – March 1, 2022", "https://cardtalk2018.com/2022/03/14/core-campaign-escape-from-dol-guldur-6-march-1-2022/", "Mar 14 2022")
+                .WithLabels("Core Set", "Campaign", "Escape from Dol Guldur").WithDeckLabels(26615);
+            AddLink("Core Campaign Escape from Dol Guldur 5 – February 26, 2022", "https://cardtalk2018.com/2022/03/11/core-campaign-escape-from-dol-guldur-5-february-26-2022/", "Mar 11 2022")
+                .WithLabels("Core Set", "Campaign", "Escape from Dol Guldur").WithDeckLabels(26615);
+            AddLink("Citadel Plate", "https://cardtalk2018.com/2022/03/08/citadel-plate/", "Mar 8 2022")
+                .WithLabels("Citadel Plate", "Core Set", "Glóin", "Gloin", "Gimli", "Warden of Healing", "Narvi's Belt", "Song of Wisdom", "Narvi's Belt", "Song of Mocking", "Vigilant Guard", "Denethor", "Amarthuil", "Fastred", "Elrond", "Grimbeorn the Old", "Radagast", "Thranduil", "Dáin Ironfoot", "Dain Ironfoot", "Erkenbrand", "Ancestral Armor", "Resourceful")
+                .WithDeckLabels(1107);
+            AddLink("Core Campaign Escape from Dol Guldur 4 – February 25, 2022", "https://cardtalk2018.com/2022/03/04/core-campaign-escape-from-dol-guldur-4-february-25-2022/", "Mar 4 2022")
+                .WithLabels("Core Set", "Campaign", "Escape from Dol Guldur").WithDeckLabels(26615);
+            AddLink("Starter Decklists Spoiled", "https://cardtalk2018.com/2022/03/04/starter-decklists-spoiled/", "Mar 4 2022")
+                .WithLabels("Starter Decks").WithDeckLabels(26086, 26087, 26088, 26089);
+            AddLink("Fellowship Frodo Baggins (TBR) – Community Review", "https://cardtalk2018.com/2022/03/03/fellowship-frodo-baggins-tbr/", "Mar 3 2022")
+                .WithLabels("Frodo Baggins", "Fellowship", "Campaign", "Saga", "The Black Riders", "Resourceful", "Frodo's Intuition", "The One Ring")
+                .WithDeckLabels(18581, 16819);
+            AddLink("Core Set Combos – Sneak Attack + Beorn", "https://cardtalk2018.com/2022/03/02/core-set-combos-sneak-attack-beorn/", "Mar 2 2022")
+                .WithLabels("Core Set", "Combo", "Sneak Attack", "Beorn", "Gandalf");
+            AddLink("Leadership Aragorn", "https://cardtalk2018.com/2022/03/01/leadership-aragorn/", "Mar 1 2022")
+                .WithLabels("Aragorn", "Core Set", "Steward of Gondor", "Celebrían's Stone", "Celebrian's Stone", "Arwen Undómiel", "Arwen Undomiel", "Sword that was Broken", "Wingfoot", "Rivendell Bow", "Stone of Elostirion", "Orcrist", "Glóin", "Gloin", "Gimli", "The Grey Wanderer", "Strider", "Resourceful", "A Very Good Tale", "Timely Aid")
+                .WithLabels("Heir of Mardil", "Blood of Númenor", "Blood of Numenor", "Gondorian Fire", "Steed of the North", "Sword of Númenor", "Sword of Numenor", "Ring of Barahir", "Roheryn", "Théodred", "Theodred", "Zigil Miner", "Thorongil", "Armored Destrier", "Ancestral Armor", "Dúnedain Warning", "Dunedain Warning", "A Burning Brand")
+                .WithDeckLabels(5290);
+            AddLink("Core Campaign Escape from Dol Guldur 3 – February 20, 2022", "https://cardtalk2018.com/2022/02/28/core-campaign-escape-from-dol-guldur-3-february-20-2022/", "Feb 28 2022")
+                .WithLabels("Core Set", "Campaign", "Escape from Dol Guldur", "Guard of the Citadel", "Erebor Hammersmith")
+                .WithDeckLabels(26615);
             AddYear(2021);
             AddLink("Blade of Gondolin", "https://cardtalk2018.com/2021/09/21/blade-of-gondolin/", "Sep 21 2021")
                 .WithLabels("Blade of Gondolin");
