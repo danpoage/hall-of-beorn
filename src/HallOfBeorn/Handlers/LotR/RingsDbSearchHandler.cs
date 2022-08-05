@@ -97,13 +97,17 @@ namespace HallOfBeorn.Handlers.LotR
 
             model.RingsDbDecks = new List<RingsDbDeckViewModel>();
 
+            IEnumerable<Models.RingsDb.RingsDbDeckList> decks;
+
             var userId = settings.RingsDbUserId.GetValueOrDefault(0);
             if (userId == 0)
             {
-                return;
+                decks = ringsDbService.FindDecks(foundSlugs);
             }
-
-            var decks = ringsDbService.GetUserDecks(userId);
+            else
+            {
+                decks = ringsDbService.GetUserDecks(userId);
+            }
 
             foreach (var deck in decks)
             {

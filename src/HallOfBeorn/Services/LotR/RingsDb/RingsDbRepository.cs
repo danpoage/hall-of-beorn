@@ -27,6 +27,9 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         private const string getDeckSqlFormat = "select card_id, quantity from deck where id = '{0}';";
         private const string getUserDeckIdsSqlFormat = "select id, name, description from deck_info where user_id = {0};";
 
+        private const string getAllDecksSql = "select id, card_id, quantity from deck order by id asc;";
+        private const string getAllUserDecksSql = "select user_id, id, name, description from deck_info;";
+
         private SQLiteConnection GetConnection()
         {
             return new SQLiteConnection(connectionString);
@@ -73,6 +76,124 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             }
 
             return deck;
+        }
+
+        private Dictionary<uint, RingsDbDeckList> GetDecksWithCards(
+            SQLiteConnection connection, HashSet<string> cardIds)
+        {
+            var allDecks = new List<uint>();
+            var deckMap = new Dictionary<uint, RingsDbDeckList>();
+            var matchingDecks = new HashSet<uint>();
+
+            var command = connection.CreateCommand();
+            command.CommandText = getAllDecksSql;
+
+            var sequence = 0; uint lastDeckId = 0;
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    sequence++;
+
+                    var deckIdString = reader.GetString(0);
+                    var cardId = reader.GetString(1);
+                    var quantity = reader.GetByte(2);
+                    
+                    uint deckId = 0;
+                    uint.TryParse(deckIdString, out deckId);
+
+                    if (deckId > 0)
+                    {
+                        if (deckId != lastDeckId)
+                        {
+                            sequence = 1;
+                            lastDeckId = deckId;
+                        }
+
+                        if (!deckMap.ContainsKey(deckId))
+                        {
+                            allDecks.Add(deckId);
+                            deckMap[deckId] = new RingsDbDeckList { 
+                                id = deckId, 
+                                heroes = new Dictionary<string,byte>(),
+                                slots = new Dictionary<string,byte>(),
+                                sideslots = new Dictionary<string,byte>(),
+                            };
+                        }
+
+                        if (sequence < 4)
+                        {
+                            deckMap[deckId].heroes.Add(cardId, quantity);
+                        }
+                        else
+                        {
+                            deckMap[deckId].slots.Add(cardId, quantity);
+                        }
+
+                        if (cardIds.Contains(cardId) && !matchingDecks.Contains(deckId))
+                        {
+                            matchingDecks.Add(deckId);
+                        }
+                    }
+                }
+            }
+
+            //Remove decks which don't match
+            foreach (var deckId in allDecks)
+            {
+                if (!matchingDecks.Contains(deckId))
+                {
+                    deckMap.Remove(deckId);
+                }
+            }
+
+            return deckMap;
+        }
+
+        private void PopulateDecks(SQLiteConnection connection, Dictionary<uint, RingsDbDeckList> deckMap)
+        {
+            var command = connection.CreateCommand();
+            command.CommandText = getAllUserDecksSql;
+
+            using (var reader = command.ExecuteReader())
+            {
+                while (reader.Read())
+                {
+                    var userId = reader.GetInt32(0);
+                    var deckIdString = reader.GetString(1);
+                    var name = reader.GetString(2);
+                    var description = reader.GetString(3);
+
+                    uint deckId = 0;
+                    uint.TryParse(deckIdString, out deckId);
+
+                    if (deckId > 0 && deckMap.ContainsKey(deckId))
+                    {
+                        var deck = deckMap[deckId];
+
+                        deck.user_id = (uint)userId;
+                        deck.name = name;
+                        deck.description_md = description;
+                    }
+                }
+            }
+        }
+
+        public IEnumerable<RingsDbDeckList> AllDecks(HashSet<string> cardIds)
+        {
+            Dictionary<uint, RingsDbDeckList> deckMap;
+
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+
+                deckMap = GetDecksWithCards(connection, cardIds);
+
+                PopulateDecks(connection, deckMap);
+            }
+
+            return deckMap.Values;
         }
 
         public RingsDbDeckList GetDeckList(string deckId)

@@ -13262,6 +13262,21 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             return repository.GetUserDeckLists(userId);
         }
 
+        public IEnumerable<RingsDbDeckList> FindDecks(IEnumerable<string> slugs)
+        {
+            var cardMap = new HashSet<string>();
+            foreach (var slug in slugs)
+            {
+                var cardId = GetCardId(slug);
+                if (cardId != null && !cardMap.Contains(cardId))
+                {
+                    cardMap.Add(cardId);
+                }
+            }
+
+            return repository.AllDecks(cardMap);
+        }
+
         private void AddDistinctLabels(string cardId, HashSet<string> labels)
         {
             var slug = GetSlug(cardId);
