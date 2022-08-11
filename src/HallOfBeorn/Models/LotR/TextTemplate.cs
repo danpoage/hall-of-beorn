@@ -32,8 +32,8 @@ namespace HallOfBeorn.Models.LotR
                 { "<p class='main-text'>", string.Empty },
                 { "<p class='shadow-text'>", string.Empty },
                 { "<p class='flavor-text'>", "{stop}" },
-                { "</p>", string.Empty },
-                { "{shadow}", "\n-----\n" }
+                { "</p>", "\n" },
+                { "{shadow}", "-----\n" }
             };
 
             foreach (var pair in map)
@@ -140,7 +140,7 @@ namespace HallOfBeorn.Models.LotR
                 }
             }
 
-            return s.ToString();
+            return s.ToString().TrimEnd();
         }
 
         private bool insertDiscordToken(StringBuilder sb, string type, string key, string label, Language lang)
