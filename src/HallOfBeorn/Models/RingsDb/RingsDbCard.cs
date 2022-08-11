@@ -131,9 +131,10 @@ namespace HallOfBeorn.Models.RingsDb
 
         public static RingsDbCard FromDesign(
             LotR.CardDesign design,
-            Func<string, string> getRingsDbCode, Func<string, string> getOctgnId)
+            Func<string, string> getRingsDbCode, Func<string, string> getOctgnId, Language? discordLang)
         {
-            var card = FromCard(design.First, getRingsDbCode, getOctgnId, false);
+            var includeAlepFields = false;
+            var card = FromCard(design.First, getRingsDbCode, getOctgnId, includeAlepFields, discordLang);
 
             if (design.Versions.Count() > 1)
             {
@@ -150,7 +151,8 @@ namespace HallOfBeorn.Models.RingsDb
 
         public static RingsDbCard FromCard(
             LotR.LotRCard card, 
-            Func<string, string> getRingsDbCode, Func<string, string> getOctgnId, bool includeAlepFields)
+            Func<string, string> getRingsDbCode, Func<string, string> getOctgnId, bool includeAlepFields, 
+            Language? discordLang)
         {
             Func<LotR.LotRCard, bool> getIsOfficial = (c) =>
                 !unofficialSetTypes.Contains(c.CardSet.SetType);
@@ -181,10 +183,22 @@ namespace HallOfBeorn.Models.RingsDb
                     var front = c.StageLetter.ToString();
                     var back = c.BackStageLetter.HasValue ? c.BackStageLetter.Value.ToString() : "B";
 
+                    string frontMarkup; string backMarkup;
+                    if (discordLang.HasValue)
+                    {
+                        frontMarkup = c.GetFrontDiscordMarkup(discordLang.Value);
+                        backMarkup = c.GetBackDiscordMarkup(discordLang.Value);
+                    }
+                    else
+                    {
+                        frontMarkup = Normalize(c.Text);
+                        backMarkup = Normalize(c.OppositeText);
+                    }
+
                     return !string.IsNullOrEmpty(c.OppositeText)
                         ? string.Format("<b>Side {0}</b> {1} <b>Side {2}</b> {3}", 
-                            front, Normalize(c.Text), back, Normalize(c.OppositeText))
-                        : Normalize(c.Text);
+                            front, frontMarkup, back, backMarkup)
+                        : frontMarkup;
                 };
 
             Func<LotR.LotRCard, string> getShadow = (c) =>

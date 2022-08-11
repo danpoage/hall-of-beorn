@@ -14,11 +14,46 @@ namespace HallOfBeorn.Models.LotR
 
         private readonly LotRCard card;
 
-        public string RenderHtml(string template, Language lang)
+        private static string GetDiscordTemplate(string template)
+        {
+            var map = new Dictionary<string, string>
+            {
+                { "{Willpower}", "[willpower]" },
+                { "{Attack}", "[attack]" },
+                { "{Defense}", "[defense]" },
+                { "{Threat}", "[threat]" },
+                { "{sphere:Leadership}", "[leadership]" },
+                { "{sphere:Tactics}", "[tactics]" },
+                { "{sphere:Spirit}", "[spirit]" },
+                { "{sphere:Lore}", "[lore]" },
+                { "{sphere:Baggins}", "[baggins]" },
+                { "{sphere:Fellowship}", "[fellowship]" },
+                { "{sphere:Mastery}", "Mastery" },
+                { "<p class='main-text'>", string.Empty },
+                { "<p class='shadow-text'>", string.Empty },
+                { "<p class='flavor-text'>", "{stop}" },
+                { "</p>", string.Empty },
+                { "{shadow}", "\n-----\n" }
+            };
+
+            foreach (var pair in map)
+            {
+                template = template.Replace(pair.Key, pair.Value);
+            }
+
+            return template;
+        }
+
+        public string RenderHtml(string template, Language lang, bool forDiscord)
         {
             if (string.IsNullOrEmpty(template))
             {
                 return string.Empty;
+            }
+
+            if (forDiscord)
+            {
+                template = GetDiscordTemplate(template);
             }
 
             var s = new StringBuilder();
@@ -57,7 +92,17 @@ namespace HallOfBeorn.Models.LotR
                                     }
                                 }
 
-                                insertHtmlToken(s, type, key, label, lang);
+                                if (forDiscord)
+                                {
+                                    if (!insertDiscordToken(s, type, key, label, lang))
+                                    {
+                                        return s.ToString();
+                                    }
+                                }
+                                else
+                                {
+                                    insertHtmlToken(s, type, key, label, lang);
+                                }
                                 type = string.Empty;
                                 key = string.Empty;
                                 label = string.Empty;
@@ -98,6 +143,44 @@ namespace HallOfBeorn.Models.LotR
             return s.ToString();
         }
 
+        private bool insertDiscordToken(StringBuilder sb, string type, string key, string label, Language lang)
+        {
+            if (string.IsNullOrEmpty(type))
+            {
+                return true;
+            }
+
+            if (string.IsNullOrEmpty(key))
+            {
+                key = type;
+            }
+
+            if (string.IsNullOrEmpty(label))
+            {
+                label = key;
+            }
+
+            key = key.Replace("'", "’"); //"%27");
+            label = label.Replace("'", "’");
+
+            switch (type.ToLowerSafe())
+            {
+                case "stop":
+                    return false;
+                case "trait":
+                    sb.AppendFormat("<b><i>{0}</i></b>", label);
+                    break;
+                case "victory":
+                    sb.AppendFormat("\n<b>Victory {0}</b>", key);
+                    break;
+                default:
+                    sb.Append(label);
+                    break;
+            }
+
+            return true;
+        }
+
         private void insertHtmlToken(StringBuilder sb, string type, string key, string label, Language lang)
         {
             if (string.IsNullOrEmpty(type))
@@ -115,8 +198,8 @@ namespace HallOfBeorn.Models.LotR
                 label = key;
             }
 
-            key = key.Replace("'", "%27");
-            label = label.Replace("'", "%27");
+            key = key.Replace("'", "’"); //"%27");
+            label = label.Replace("'", "’"); //"%27");
 
             var innerText = string.Empty;
             switch (type.ToLowerSafe())
@@ -138,7 +221,7 @@ namespace HallOfBeorn.Models.LotR
                     break;
                 case "self":
                     //sb.AppendFormat("<a title='Card: {0}' href='/LotR/Details/{1}' target='_blank'>{0}</a>", label, key);
-                    sb.AppendFormat(label.Replace("%27", "'"));
+                    sb.Append(label);
                     break;
                 case "trait":
                     sb.AppendFormat("<a title='Search: {0} Trait' href='/LotR/Search?Trait={1}&Lang={2}' target='_blank'><b><i>{0}</i></b></a>", label, key, lang);
@@ -309,12 +392,22 @@ namespace HallOfBeorn.Models.LotR
 
         public string RenderFrontHtml(Language lang)
         {
-            return RenderHtml(card.HtmlTemplate, lang);
+            return RenderHtml(card.HtmlTemplate, lang, false);
         }
 
         public string RenderBackHtml(Language lang)
         {
-            return RenderHtml(card.HtmlTemplate2, lang);
+            return RenderHtml(card.HtmlTemplate2, lang, false);
+        }
+
+        public string RenderFrontDiscordMarkup(Language lang)
+        {
+            return RenderHtml(card.HtmlTemplate, lang, true);
+        }
+
+        public string RenderBackDiscordMarkup(Language lang)
+        {
+            return RenderHtml(card.HtmlTemplate2, lang, true);
         }
     }
 }

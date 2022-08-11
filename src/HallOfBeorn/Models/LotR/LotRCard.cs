@@ -55,7 +55,7 @@ namespace HallOfBeorn.Models.LotR
         {
             var template = GetFrontHtmlTemplate(lang);
             return !string.IsNullOrEmpty(template) ?
-                new TextTemplate(this).RenderHtml(template, lang)
+                new TextTemplate(this).RenderHtml(template, lang, false)
                 : string.Empty;
         }
 
@@ -89,7 +89,7 @@ namespace HallOfBeorn.Models.LotR
         {
             var template = GetBackHtmlTemplate(lang);
             return !string.IsNullOrEmpty(template) ?
-                new TextTemplate(this).RenderHtml(template, lang)
+                new TextTemplate(this).RenderHtml(template, lang, false)
                 : string.Empty;
         }
 
@@ -117,6 +117,22 @@ namespace HallOfBeorn.Models.LotR
         {
             backHtmlTemplates[lang] = template;
             return this;
+        }
+
+        public string GetFrontDiscordMarkup(Language lang)
+        {
+            var template = GetFrontHtmlTemplate(lang);
+            return !string.IsNullOrEmpty(template) ?
+                new TextTemplate(this).RenderHtml(template, lang, true)
+                : string.Empty;
+        }
+
+        public string GetBackDiscordMarkup(Language lang)
+        {
+            var template = GetBackHtmlTemplate(lang);
+            return !string.IsNullOrEmpty(template) ?
+                new TextTemplate(this).RenderHtml(template, lang, true)
+                : string.Empty;
         }
 
         /*

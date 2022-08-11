@@ -18,6 +18,7 @@ using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
 using HallOfBeorn.Services.LotR.Scenarios;
 using HallOfBeorn.Services.LotR.Search;
+using HallOfBeorn.Services.LotR.Templates;
 
 namespace HallOfBeorn.Controllers
 {
@@ -32,6 +33,8 @@ namespace HallOfBeorn.Controllers
             cardDesignService = (ICardDesignService)System.Web.HttpContext.Current.Application[LotRServiceNames.CardDesignService];
             octgnService = (IOctgnService)System.Web.HttpContext.Current.Application[LotRServiceNames.OctgnService];
             ringsDbService = GetService<IRingsDbService>(LotRServiceNames.RingsDbService);
+            templateService = GetService<ITemplateService>(LotRServiceNames.TemplateService);
+
             archetypeService = new ArchetypeService(cardRepository);
             playerCategoryService = new PlayerCategoryService(cardRepository);
             encounterCategoryService = new EncounterCategoryService(cardRepository);
@@ -46,6 +49,7 @@ namespace HallOfBeorn.Controllers
         private readonly ICardDesignService cardDesignService;
         private readonly IOctgnService octgnService;
         private readonly IRingsDbService ringsDbService;
+        private readonly ITemplateService templateService;
 
         private readonly ICategoryService<Archetype> archetypeService;
         private readonly ICategoryService<PlayerCategory> playerCategoryService;
@@ -225,8 +229,22 @@ namespace HallOfBeorn.Controllers
 
             foreach (var design in cardDesignService.Designs(language))
             {
+                //Check for designs without an HTML template
+                var frontTemplate = design.First.GetFrontHtmlTemplate(language);
+                if (string.IsNullOrEmpty(frontTemplate))
+                {
+                    frontTemplate = templateService.GetFrontHtml(design.First.Slug, language);
+                    design.First.WithFrontHtmlTemplate(language, frontTemplate);
+
+                    var backTemplate = templateService.GetBackHtml(design.First.Slug, language);
+                    if (!string.IsNullOrEmpty(backTemplate))
+                    {
+                        design.First.WithBackHtmlTemplate(language, backTemplate);
+                    }
+                }
+
                 cards.Add(
-                    Models.RingsDb.RingsDbCard.FromDesign(design, getRingsDbCode, getOctgnId));
+                    Models.RingsDb.RingsDbCard.FromDesign(design, getRingsDbCode, getOctgnId, language));
             }
 
             var content = JsonConvert.SerializeObject(cards, 
@@ -267,6 +285,9 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult ALeP()
         {
+            //For now, other languages are not supported
+            Language? lang = null;
+
             Func<string, string> getRingsDbCode = (slug) =>
                     ringsDbService.GetCardId(slug);
 
@@ -280,7 +301,7 @@ namespace HallOfBeorn.Controllers
             {
                 foreach (var card in cardSet.Cards)
                 {
-                    var ringsDbCard = Models.RingsDb.RingsDbCard.FromCard(card, getRingsDbCode, getOctgnId, includeAlepFields);
+                    var ringsDbCard = Models.RingsDb.RingsDbCard.FromCard(card, getRingsDbCode, getOctgnId, includeAlepFields, lang);
 
                     AddCategories(card.Slug, ringsDbCard);
 
@@ -305,6 +326,9 @@ namespace HallOfBeorn.Controllers
         {
             try
             {
+                //For now, other languages are not supported
+                Language? lang = null;
+
                 Func<string, string> getRingsDbCode = (slug) =>
                     ringsDbService.GetCardId(slug);
 
@@ -324,7 +348,7 @@ namespace HallOfBeorn.Controllers
                     foreach (var card in cardSet.Cards)
                     {
                         cards.Add(
-                            Models.RingsDb.RingsDbCard.FromCard(card, getRingsDbCode, getOctgnId, includeAlepFields));
+                            Models.RingsDb.RingsDbCard.FromCard(card, getRingsDbCode, getOctgnId, includeAlepFields, lang));
                     }
                 }
 
