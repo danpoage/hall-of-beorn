@@ -39,7 +39,7 @@ namespace HallOfBeorn
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
 
-            //GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.MaxDepth = 128;
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.MaxDepth = 128;
 
             System.Web.HttpContext.Current.Application.Lock();
             
