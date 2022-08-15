@@ -201,7 +201,7 @@ namespace HallOfBeorn.Controllers
 
         public JsonResult Version()
         {
-            return Json(new { version = "2.10.0" }, JsonRequestBehavior.AllowGet);
+            return Json(new { version = "2.10.1" }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Search(SearchViewModel model)

@@ -38,7 +38,9 @@ namespace HallOfBeorn
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
-            
+
+            GlobalConfiguration.Configuration.Formatters.JsonFormatter.SerializerSettings.MaxDepth = 128;
+
             System.Web.HttpContext.Current.Application.Lock();
             
             var productRepository = new ProductRepository();
