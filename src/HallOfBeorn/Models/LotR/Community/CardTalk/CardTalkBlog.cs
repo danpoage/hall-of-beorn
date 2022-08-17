@@ -224,6 +224,27 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Core Campaign Escape from Dol Guldur 3 – February 20, 2022", "https://cardtalk2018.com/2022/02/28/core-campaign-escape-from-dol-guldur-3-february-20-2022/", "Feb 28 2022")
                 .WithLabels("Core Set", "Campaign", "Escape from Dol Guldur", "Guard of the Citadel", "Erebor Hammersmith")
                 .WithDeckLabels(26615);
+            AddLink("Core Campaign Escape from Dol Guldur 2 – February 19, 2022", "https://cardtalk2018.com/2022/02/25/core-campaign-escape-from-dol-guldur-2-february-19-2022/", "Feb 25 2022")
+                .WithLabels("Core Set", "Campaign", "Escape from Dol Guldur")
+                .WithDeckLabels(26615);
+            AddLink("Tactics Beregond – Community Review", "https://cardtalk2018.com/2022/02/24/tactics-beregond/", "Feb 24 2022")
+                .WithLabels("Beregond", "Tactics", "Community Review", "Gondorian Shield", "Raiment of War", "Citadel Plate", "Raven-winged Helm", "Spear of the Citadel", "Golden Belt", "Round Shield");
+            AddLink("Core Set Combos – Thalin vs Eastern Crows", "https://cardtalk2018.com/2022/02/23/core-set-combos-thalin-vs-eastern-crows/", "Feb 23 2022")
+                .WithLabels("Thalin", "Eastern Crows", "Core Set", "Combo", "Gondorian Spearman");
+            AddLink("Brok Ironfist", "https://cardtalk2018.com/2022/02/22/brok-ironfist/", "Feb 22 2022")
+                .WithLabels("Core Set", "Brok Ironfist", "Dwarf", "Gloin", "Gimli", "Veteran of Nanduhirion", "Beorn", "Dain Ironfoot", "Fellowship", "Gandalf", "Sneak Attack", "To Me! O My Kinsfolk!", "Flame of Anor", "Sauruman", "Radagast", "Messenger of the King")
+                .WithDeckLabels(3470, 13422, 481);
+            AddLink("Core Campaign Escape from Dol Guldur 1 – February 19, 2022", "https://cardtalk2018.com/2022/02/21/core-campaign-escape-from-dol-guldur-1-february-19-2022/", "Feb 21 2022")
+                .WithLabels("Core Set", "Campaign", "Escape from Dol Guldur")
+                .WithDeckLabels(26615);
+            AddLink("Core Campaign Journey Along the Anduin 2 – February 12, 2022", "https://cardtalk2018.com/2022/02/18/core-campaign-journey-along-the-anduin-2-february-12-2022/", "Feb 18 2022")
+                .WithLabels("Core Set", "Campaign", "Journey Along ther Anduin")
+                .WithDeckLabels(26615);
+            AddLink("FAQ on Revised Core Set and New LOTR LCG Release Model", "https://cardtalk2018.com/2022/02/18/faq-on-revised-core-set-and-new-lotr-lcg-release-model/", "Feb 18 2022")
+                .WithLabels("Core Set", "Revised Core Set", "New Release Model", "FAQ");
+            AddLink("Out of the Wild – Community Review", "https://cardtalk2018.com/2022/02/17/out-of-the-wild/", "Feb 17 2022")
+                .WithLabels("Out of the Wild", "Victory Display", "Control", "Encounter Deck Control", "Keen as Lances", "The Door is Closed!")
+                .WithDeckLabels(15410);
             AddYear(2021);
             AddLink("Blade of Gondolin", "https://cardtalk2018.com/2021/09/21/blade-of-gondolin/", "Sep 21 2021")
                 .WithLabels("Blade of Gondolin");

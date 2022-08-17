@@ -33,7 +33,9 @@ namespace HallOfBeorn.Models.LotR
                 { "<p class='shadow-text'>", string.Empty },
                 { "<p class='flavor-text'>", "{stop}" },
                 { "</p>", "\n" },
-                { "{shadow}", "-----\n" }
+                { "<blockquote>", " “" },
+                { "</blockquote>", "”" },
+                { "{shadow}", ">>===≈💀≈===<<\n" }
             };
 
             foreach (var pair in map)
