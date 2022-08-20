@@ -33,6 +33,8 @@ namespace HallOfBeorn.Models.LotR
                 { "<p class='shadow-text'>", string.Empty },
                 { "<p class='flavor-text'>", "{stop}" },
                 { "</p>", "\n" },
+                { "<p>", "\n" },
+                { "&quot;", "\"" },
                 { "<blockquote>", " “" },
                 { "</blockquote>", "”" },
                 { "{shadow}", ">>===≈💀≈===<<\n" }
