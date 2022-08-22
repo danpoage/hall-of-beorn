@@ -100,13 +100,13 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTraits("Escape.")
                 .WithTextLine("When Revealed: Place 2 resource tokens on Gollum. Any player may exhaust a Lore hero to reduce this effect to 1 resource token.Escape: 4")
                 .WithFlavor("Presently it grew altogether dark; the air itself seemed black and heavy to breathe. When lights appeared Sam rubbed his eyes: he thought his head was going queer. He first saw one with the corner of his left eye, a wisp of pale sheen that faded away... -The Two Towers")
-                .WithTemplate("<p><b>When Revealed:</b> Place 2 resource tokens on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a>. Any player may exhaust a {sphere:Lore} hero to reduce this effect to 1 resource token.<p><p><b>Escape:</b> 4</p><p class='flavor-text-smaller'>Presently it grew altogether dark; the air itself seemed black and heavy to breathe. When lights appeared Sam rubbed his eyes: he thought his head was going queer. He first saw one with the corner of his left eye, a wisp of pale sheen that faded away...<br>&ndash;The Two Towers</p>")
+                //.WithTemplate("<p><b>When Revealed:</b> Place 2 resource tokens on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a>. Any player may exhaust a {sphere:Lore} hero to reduce this effect to 1 resource token.<p><p><b>Escape:</b> 4</p><p class='flavor-text-smaller'>Presently it grew altogether dark; the air itself seemed black and heavy to breathe. When lights appeared Sam rubbed his eyes: he thought his head was going queer. He first saw one with the corner of his left eye, a wisp of pale sheen that faded away...<br>&ndash;The Two Towers</p>")
                 .WithEasyModeQuantity(1)
                 .WithInfo(108, 3, Artist.Carolina_Eade);
             addTreachery("Nightfall", "The Dead Marshes")
                 .WithTraits("Escape.")
                 .WithTextLine("When Revealed: The first player makes an escape test, dealing 2 cards from the encounter deck. If this test is failed, place 1 resource token on Gollum and raise each player's threat by 2.Escape: 2")
-                .WithTemplate("<p><b>When Revealed:</b> The first player makes an escape test, dealing 2 cards from the encounter deck. If this test is failed, place 1 resource token on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a> and raise each player's threat by 2.</p><p><b>Escape:</b> 2</p>")
+                //.WithTemplate("<p><b>When Revealed:</b> The first player makes an escape test, dealing 2 cards from the encounter deck. If this test is failed, place 1 resource token on <a title='Gollum (The Dead Marshes)' target='_blank' href='/Cards/Details/Gollum-TDM'>Gollum</a> and raise each player's threat by 2.</p><p><b>Escape:</b> 2</p>")
                 .WithInfo(109, 3, Artist.David_Lecossu);
             addTreachery("Through the Mist", "The Dead Marshes")
                 .WithTraits("Escape.")
