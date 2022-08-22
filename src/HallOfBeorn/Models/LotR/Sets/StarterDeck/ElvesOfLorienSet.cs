@@ -75,7 +75,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("Response: After Greenwood Archer enters play, ready a hero.")
                 .WithFlavorLine("They dwelt most often by the edges of the woods, from which they could escape at times to hunt...")
                 .WithFlavorLine("-The Hobbit")
-                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} enters play, ready a hero.</p><p class='flavor-text'>They dwelt most often by the edges of the woods, from which they could escape at times to hunt...<br>&ndash;The Hobbit</p>")
                 .WithInfo(8, 3, Artist.Tawny_Fritzinger);
             addAlly("Henamarth Riversong", 1, Sphere.Lore, true, 1, 1, 0, 1)
                 .WithTraits("Silvan.")
@@ -88,7 +87,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTraits("Silvan.", "Scout.")
                 .WithTextLine("While Mirkwood Runner is attacking alone, the defending enemy does not count its Defense.")
                 .WithFlavor("\"...let a ploughman plough, but choose an otter for swimming, and for running light over grass and leaf or over snow-an Elf.\" -Legolas, The Fellowship of the Ring")
-                .WithTemplate("<p>While {self} is attacking alone, the defending enemy does not count its {Defense}.</p><p class='flavor-text-smaller'>&quot;...let a ploughman plough, but choose an otter for swimming, and for running light over grass and leaf or over snow-an Elf.&quot;<br>&ndash;Legolas, The Fellowship of the Ring</p>")
                 .WithInfo(10, 3, Artist.Magali_Villeneuve);
             addAlly("Naith Guide", 2, Sphere.Leadership, false, 1, 1, 0, 1)
                 .WithTraits("Silvan.", "Scout.")
@@ -108,7 +106,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTraits("Silvan.", "Scout.")
                 .WithTextLine("Forced: After a character leaves play, discard Silvan Refugee from play.")
                 .WithFlavorLine("\"The Elves have their own labours and their own sorrows...\" -Gildor, The Fellowship of the Ring")
-                .WithTemplate("<p><b>Forced:</b> After a character leaves play, discard {self} from play.</p><p class='flavor-text'>&quot;The Elves have their own labours and their own sorrows...&quot;<br/>&ndash;Gildor, The Fellowship of the Ring</p>")
                 .WithErrata(1)
                 .WithInfo(13, 3, Artist.Lorraine_Schleter);
             addAlly("Silvan Tracker", 3, Sphere.Lore, false, 1, 1, 1, 3)
@@ -149,7 +146,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
             addEvent("A Test of Will", 1, Sphere.Spirit)
                 .WithTextLine("Response: Cancel the 'when revealed' effects of a card that was just revealed from the encounter deck.")
                 .WithFlavor("\"There is naught that you can do, other than to resist, with hope or without it\"\r\n-Elrond, The Fellowship of the Ring")
-                .WithTemplate("<p><b>Response:</b> Cancel the &ldquo;when revealed&rdquo; effects of a card that was just revealed from the encounter deck.</p><p class='flavor-text'>&quot;There is naught that you can do, other than to resist, with hope or without it&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>")
                 .WithCommunityVersion("A-Test-of-Will-Core-Set-Completion")
                 .WithCommunityVersion("A-Test-of-Will-Nouveau-Hunters")
                 .WithCommunityVersion("Autumn/Test-of-Will")
@@ -161,7 +157,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithInfo(20, 3, Artist.Carolina_Eade);            
             addEvent("Elrond's Counsel", 0, Sphere.Spirit)
                 .WithTextLine("Action: If you control a unique Noldor character, give another character +1 Willpower until the end of the phase and lower your threat by 3.")
-                .WithTemplate("<p><b>Action:</b> If you control a {unique-trait-character:Noldor.@Noldor}, give another character +1 {Willpower} until the end of the phase and lower your threat by 3.</p><p class='flavor-text'>&quot;Believe rather that it is so ordered that we, who sit here, and none others, must now find counsel for the peril of the world.&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>")
                 .WithInfo(21, 3, Artist.Anthony_Palumbo);
             addEvent("Feigned Voices", 0, Sphere.Leadership)
                 .WithTextLine("Combat Action: Return a Silvan ally you control to your hand to choose an enemy engaged with a player. That enemy cannot attack that player this phase.")
@@ -202,7 +197,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithInfo(27, 3, Artist.Sara_Biddle);
             addEvent("Hands Upon the Bow", 1, Sphere.Tactics)
                 .WithTextLine("Action: Exhaust a character you control with ranged to immediately declare it as an attacker (and resolve its attack) against an enemy in the staging area. It gets +1 Attack during this attack.")
-                .WithTemplate("<p><b>Action:</b> Exhaust a character you control with {keyword:Ranged.@ranged} to immediately declare it as an attacker (and resolve its attack) against an enemy in the staging area. It gets +1 {attack} during this attack.</p><p class='flavor-text'>&quot;We live now upon an island amid perils, and our hands are more often upon thr bowstring than upon the harp.&quot;<br/>&ndash;Haldir, The Fellowship of the Ring</p>")
                 .WithInfo(28, 3, Artist.Magali_Villeneuve);
             addEvent("Pursuing the Enemy", 0, Sphere.Tactics)
                 .WithTextLine("Action: Return a Silvan ally you control to your hand to choose a player. Deal 1 damage to each enemy engaged with that player.")
@@ -213,7 +207,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("Attach to Elrond. He gains a Spirit resource icon.")
                 .WithTextLine("Action: Exhaust Elrond and Vilya to reveal the top card of your deck. You can immediately play or put into play the revealed card for no cost, if able. Otherwise, move the revealed card to the bottom of your deck.")
                 .WithFlavorLine("...mightiest of the Three. -Return of the King")
-                .WithTemplate("<p>Attach to {title:Elrond}. He gains a {sphere:Spirit} resource icon.</p><p><b>Action:</b> Exhaust {title:Elrond} and {self} to reveal the top card of your deck. You can immediately play or put into play the revealed card for no cost, if able. Otherwise, move the revealed card to the bottom of your deck.</p><p class='flavor-text'>...mightiest of the Three. &ndash;The Return of the King</p>")
                 .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(30, 3, Artist.Sara_Biddle);
             addHero("Elrond", 13, Sphere.Lore, 3, 2, 3, 4)
@@ -222,7 +215,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("Response: After a character is healed by another card effect, heal 1 damage on it.")
                 .WithFlavorLine("\"But you do not stand alone.\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
-                .WithTemplate("<p>You may spend resources from {self}'s resource pool to pay for {sphere:Spirit}, {sphere:Leadership}, and {sphere:Tactics} {type:Ally@allies.}</p><p><b>Response:</b> After a character is healed by another card effect, heal 1 damage on it.</p><p class='flavor-text'>&quot;But you do not stand alone.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithCommunityVersion("Autumn/Elrond-Lore-Hero")
                 .WithCommunityVersion("RiddermarkLord/Elrond-Lore-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Elrond-Lore-Hero-2")

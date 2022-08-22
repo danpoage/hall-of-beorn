@@ -18,18 +18,15 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTraits("Noldor.", "Noble.", "Ranger.")
                 .WithTextLine("While Elrohir is in play, Elladan gets +2 Attack.")
                 .WithTextLine("Response: After Elladan is declared as an attacker, pay 1 resource from his resource pool to ready him.")
-                .WithTemplate("<p>While {title:Elrohir} is in play, {self} gets +2 {Attack}.</p><p><b>Response:</b> After {self} is declared as an attacker, pay 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;Yes, the Dead ride behind.&quot;<br>&ndash;The Return of the King</p>")
                 .WithCommunityVersion("RiddermarkLord/Elladan-Tactics-Hero")
                 .WithInfo(28, 1, Artist.Magali_Villeneuve);
             addAlly("Dúnedain Wanderer", 5, Sphere.Leadership, false, 1, 2, 2, 2)
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithKeywords("Ranged.", "Sentinel.", "Secrecy 3.")
                 .WithTextLine("Ranged. Sentinel. Secrecy 3.")
-                .WithTemplate("<p>{keyword:Ranged.} {keyword:Sentinel.} {keyword:Secrecy 3.}</p><p class='flavor-text'>They roamed at will southwards, and eastwards even as far as the Misty Mountains; but they were no few and rarely seen.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(29, 3, Artist.Ilich_Henriquez);
             addEvent("Lure of Moria", 3, Sphere.Leadership)
                 .WithTextLine("Action: Ready all Dwarf characters.")
-                .WithTemplate("<p><b>Action:</b> Ready all {trait:Dwarf.@Dwarf} characters.</p><p class='flavor-text'>'The road that I speak of leads to the Mines of Moria,' said Gandalf. Only Gimli lifted up his head; a smouldering fire was in his eyes.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(30, 3, Artist.Mike_Nash);
             addAttachment("Rivendell Blade", 1, Sphere.Tactics, false)
                 .WithTraits("Item.", "Weapon.")
@@ -43,14 +40,12 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addAlly("Rider of the Mark", 3, Sphere.Spirit, false, 2, 1, 1, 2)
                 .WithTraits("Rohan.")
                 .WithTextLine("Action: Spend 1 Spirit resource to give control of Rider of the Mark to another player. (Limit once per round.)Response: After Rider of the Mark changes control, discard a shadow card dealt to an enemy you are engaged with.")
-                .WithTemplate("<p><b>Action:</b> Spend 1 {sphere:Spirit} resource to give control of {self} to another player. (Limit once per round.)</p><p><b>Response:</b> After {self} changes control, discard a shadow card dealt to an enemy you are engaged with.</p>")
                 .WithInfo(33, 3, Artist.David_Horne);
             addAttachment("Song of Eärendil", 1, Sphere.Spirit, false)
                 .WithTraits("Song.")
                 .WithTextLine("Attach to a Spirit hero.")
                 .WithTextLine("Response: After ~Song of Eärendil enters play, draw 1 card.")
                 .WithTextLine("Response: After another player raises his threat, raise your threat by 1 to reduce that player's threat by 1.")
-                .WithTemplate("<p>Attach to a {sphere:Spirit} hero.</p><p><b>Response:</b> After {self} enters play, draw 1 card.</p><p><b>Response:</b> After another player raises his threat, raise your threat by 1 to reduce that player's threat by 1.</p>")
                 .WithInfo(34, 3, Artist.K_R_Harris);
             addAlly("Bombur", 3, Sphere.Lore, true, 0, 0, 1, 3)
                 .WithTraits("Dwarf.")
@@ -65,12 +60,9 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithInfo(36, 3, Artist.Magali_Villeneuve);
             addEvent("The End Comes", 0, Sphere.Neutral)
                 .WithTextLine("Response: After a Dwarf character leaves play, shuffle the encounter discard pile back into the encounter deck.")
-                .WithTemplate("<p><b>Response:</b> After a {trait:Dwarf.@Dwarf} character leaves play, shuffle the encounter discard pile back into the encounter deck.</p><p class='flavor-text'>'He is dead then,', said Frodo. 'I feared it was so.'<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(37, 3, Artist.Ryan_Barger);
             addQuest("Along the Misty Mountains", "Road to Rivendell", 1, 'A', 20)
                 .WithTextLine("Setup: Put Arwen Undómiel into play under the control of the first player. Shuffle the encounter deck. Reveal 1 card from the encounter deck per player, and add them to the staging area.")
-                .WithTemplate("<p class='flavor-text'>Your party has braved the snows of the pass, but now must travel North along the Misty Mountains for league upon league as you escort Arwen to her father's house.</p><p><b>Setup:</b> Put <a title='Arwen Undómiel (Road to Rivendell)' href='/Cards/Details/Arwen-Undomiel-RtR' target='_blank'>Arwen Undómiel</a> into play under the control of the first player. Shuffle the encounter deck. Reveal 1 card from the encounter deck per player, and add them to the staging area.</p>")
-                .WithTemplate2("<p class='flavor-text'>This is a wild and perilous country, and it is dangerous to follow the roads. The mountains rise up on the right, impassively watching your slow trek among their foothills.</p>")
                 .WithIncludedEncounterSets(EncounterSet.MistyMountains, EncounterSet.PlunderingGoblins)
                 .WithInfo(38, 1, Artist.Ben_Zweifel);
             addQuest("Orc Outpost", "Road to Rivendell", 2, 'A', 7)
@@ -90,24 +82,20 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTraits("Noldor.", "Noble.", "Ally.")
                 .WithTextLine("The first player gains control of Arwen Undómiel, as an ally.Response: After Arwen Undómiel exhausts, choose a hero. Add 1 resource to that hero's resource pool.")
                 .WithTextLine("If Arwen Undómiel leaves play, the players are defeated.")
-                .WithTemplate("<p>The first player gains control of {self}, as an ally.</p><p><b>Response:</b> After {self} exhausts, choose a hero. Add 1 resource to that hero's resource pool.</p><p><b>If {self} leaves play, the players are defeated.</b></p>")
                 .WithInfo(41, 1, Artist.Magali_Villeneuve);
             addLocation("Ruined Road", "Road to Rivendell", 1, 5)
                 .WithTraits("Road.")
                 .WithTextLine("Response: After you travel to Ruined Road, the first player places 2 progress tokens on it or readies 1 hero he controls.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after it attacks.")
-                .WithTemplate("<p><b>Response:</b> After you travel to {self}, the first player places 2 progress tokens on it or readies 1 hero controls.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Return attacking enemy to the staging area after it attacks.</p>")
                 .WithInfo(42, 2, Artist.Trudi_Castle);
             addLocation("Goblin Gate", "Road to Rivendell", 5, 4)
                 .WithTraits("Gate.")
                 .WithTextLine("While Goblin Gate is the active location, the first enemy revealed from the encounter deck each round gains ambush. If that enemy engages a player, it makes an immediate attack (deal and resolve a shadow card).")
-                .WithTemplate("<p>While {self} is the active location, the first enemy revealed from the encounter deck each round gains ambush. If that enemy engages a player, it makes an immediate attack <i>(deal and resolve a shadow card)</i>.</p><p class='flavor-text'>A crack had opened at the back of the cave, and was already a wide passage.<br>&ndash;The Hobbit</p>")
                 .WithInfo(43, 1, Artist.Trudi_Castle);
             addLocation("Pathless Country", "Road to Rivendell", 3, 5)
                 .WithTraits("Hills.")
                 .WithTextLine("Forced: After at least 1 progress token is placed on Pathless Country, remove 1 progress token from it.")
                 .WithShadow("Shadow: Deal 1 damage to each ally in play.")
-                .WithTemplate("<p><b>Forced:</b> After at least 1 progress token in placed on {self}, remove 1 progress token from it.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Deal 1 damage to each ally in play.</p>")
                 .WithInfo(44, 3, Artist.Trudi_Castle);
             addLocation("Barren Hills", "Road to Rivendell", 2, 4)
                 .WithTraits("Hills.")
@@ -122,7 +110,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addTreachery("Followed by Night", "Road to Rivendell")
                 .WithTextLine("When Revealed: The first player (choose 1): deals 1 damage to all allies in play and Followed by Night gains surge, or all enemies engaged with players make an immediate attack, if able.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after it attacks.")
-                .WithTemplate("<p><b>When Revealed:</b> The first player (choose 1): deals 1 damage to all allies in play and {self} gains surge, or all enemies enaged with players make an immediate attack, if able.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Return attacking enemy to the staging area after it attacks.</p>")
                 .WithEasyModeQuantity(1)
                 .WithInfo(47, 3, Artist.Jasper_Sandner);
             addTreachery("Orc Ambush", "Road to Rivendell")
@@ -149,7 +136,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Surge.")
                 .WithTextLine("While Crebain is in the staging area, encounter card effects cannot be canceled.")
                 .WithShadow("Shadow: Return attacking enemy to the staging area after it attacks.")
-                .WithTemplate("<p>{keyword:Surge.@Surge}<p><p>While {self} is in the staging area, encounter card effects cannot be canceled.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Return attacking enemy to the staging area after it attacks.</p>")
                 .WithInfo(51, 3, Artist.Allison_Theus);
             addEnemy("Wild Bear", "Road to Rivendell", 34, 0, 2, 3, 5)
                 .WithTraits("Creature.")
