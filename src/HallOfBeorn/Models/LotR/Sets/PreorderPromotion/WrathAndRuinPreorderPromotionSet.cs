@@ -34,7 +34,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithKeywords("Encounter.")
                 .WithTextLine("Encounter.")
                 .WithTextLine("When Revealed: Choose a player. That player gains control of Tom Bombadil, ready and committed to the quest. At the end of the round, remove Tom Bombadil and a copy of Tom Bombadillo! in the victory display from the game. This effect cannot be cancelled.")
-                .WithTemplate("<p class='main-text'>{keyword:Encounter.}</p><p class='main-text'><b>When Revealed:</b> Choose a player. That player gains control of Tom Bombadil, ready and committed to the quest. At the end of the round, remove {self} and a copy of {title:Tom_Bombadillo!@Tom Bombadillo!} in the victory display from the game. This effect cannot be cancelled.</p>")
                 .WithPromotion()
                 .WithInfo(10, 1, Artist.Borja_Pindado);
         }

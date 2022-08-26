@@ -40,7 +40,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithKeywords("Ranged.")
                 .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Yazan is declared as an attacker, deal 1 damage to a non-unique enemy in play. (Limit once per phase.)")
-                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} is declared as an attacker, deal 1 damage to a non-unique enemy in play. (Limit once per phase.)</p>")
                 .WithInfo(4, 3, Artist.David_A_Nash);
             addEvent("Wait no Longer", 2, Sphere.Tactics)
                 .WithTextLine("Response: At the beginning of the quest phase, search the top 5 cards of the encounter deck for an enemy and put it into play engaged with you. Then, reveal 1 less encounter card this phase (to a minimum of 0). Shuffle the encounter deck.")
@@ -52,7 +51,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Response: After Jubayr exhausts to defend an attack, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)")
-                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} exhausts to defend an attack, discard 1 facedown shadow card from a non-unique enemy. (Limit once per phase.)</p>")
                 .WithInfo(6, 3, Artist.Colin_Boyer);
             addAttachment("Dwarf Pipe", 1, Sphere.Spirit, false)
                 .WithTraits("Item.", "Pipe.")
@@ -76,7 +74,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("Attach to Kahliel. Restricted.")
                 .WithTextLine("Each Harad character gets +1 Willpower.")
                 .WithTextLine("Refresh Action: Exhaust Kahliel's Headdress to shuffle the topmost Harad ally in your discard pile into your deck.")
-                .WithTemplate("<p class='main-text'>Attach to {title:Kahliel}. {keyword:Restricted.}</p><p class='main-text'>Each {trait:Harad.@Harad} character gets +1 {Willpower}.</p><p class='main-text'><b>Refresh Action:</b> Exhaust {self} to shuffle the topmost {trait-ally:Harad.@Harad} ally in your discard pile into your deck.</p>")
                 .WithInfo(10, 3, Artist.Lucas_Durham);
             addObjective("Horse-hair Lasso", EncounterSet.TheMumakil)
                 .WithTraits("Capture.")

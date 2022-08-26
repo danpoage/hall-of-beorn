@@ -23,7 +23,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("When a player card effect would reduce your threat by any amount, reduce that amount to 1.")
                 .WithTextLine("While playing an event with the printed doomed keyword, Saruman gains the printed Leadership, Spirit, and Tactics icons.")
                 .WithTextLine("Response: After you play a card with the doomed keyword, ready Saruman.")
-                .WithTemplate("<p class='main-text'>When a player card effect would reduce your threat by any amount, reduce that amount to 1.</p><p class='main-text'>While playing <a href='/LotR?Query=%2Bkeyword%3ADoomed&CardType=Event' target='_blank' title='Doomed Events'>an event with the printed doomed keyword</a>, {self} gains the printed {sphere:Leadership}, {sphere:Spirit}, and {sphere:Tactics} icons.<p><p class='main-text'><b>Response:</b> After you play a card with the doomed keyword, ready {self}.</p>")
                 .WithPromotion()
                 .WithInfo(54, 1, Artist.Martin_de_Diego_Sadaba);
             addAttachment("Power of Command", 1, Sphere.Leadership, false)

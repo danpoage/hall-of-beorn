@@ -19,7 +19,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Response: After Háma is declared as an attacker, return a Tactics event from your discard pile to your hand. Then, choose and discard 1 card from your hand. (Limit 3 times per game for the group.)")
                 .WithFlavorLine("\"Yet in doubt a man of worth will trust to his own wisdom.\"")
                 .WithFlavorLine("-The Two Towers")
-                .WithTemplate("<p><b>Response:</b> After {self} is declared as an attacker, return a {sphere-event:Tactics} from your discard pile to your hand. Then, choose and discard 1 card from your hand. (Limit 3 times per game for the group.)</p><p class='flavor-text'>&quot;Yet in doubt a man of worth will trust to his own wisdom.&quot; &ndash;The Two Towers</p>")
                 .WithErrata(1)
                 .WithCommunityVersion("RiddermarkLord/Hama-Tactics-Hero-1")
                 .WithInfo(76, 1, Artist.Magali_Villeneuve);
@@ -45,7 +44,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("Attached character gets +1 hit point and +1 Defense.")
                 .WithFlavorLine("\"And all the arrows of all the hunters in the world would be in vain...")
                 .WithFlavorLine("-Gimli, The Fellowship of the Ring")
-                .WithTemplate("<p>Attach to a {traits-character:Dwarf,Hobbit}. {keyword:Restricted.}</p><p>Attached character gets +1 hit point and +1 {Defense}.</p><p class='flavor-text'>&quot;And all the arrows of all the hunters in the world would be in vain...&quot;<br>&ndash;Gimli, The Fellowship of the Ring</p>")
                 .WithInfo(80, 3, Artist.Magali_Villeneuve);
             addEvent("Out of Sight", 5, Sphere.Spirit)
                 .WithKeywords("Secrecy 3.")
@@ -118,7 +116,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
             addLocation("Twisting Passage", "The Long Dark", 3, 5)
                 .WithTraits("Underground.", "Dark.")
                 .WithTextLine("Forced: Before placing progress tokens on Twisting Passage, the first player must make a locate test. If this test is failed, do not place any progress tokens on Twisting Passage and trigger all 'Lost:' effects in play.")
-                .WithTemplate("<p class='main-text'><b>Forced:</b> Before placing progress tokens on {self}, the first player must make a locate test. If this test is failed, do not place any progress tokens on {self} and trigger all <b>&quot;Lost:&quot;</b> effects in play.</p>{pass}")
                 .WithInfo(92, 2, Artist.Ben_Zweifel);
             addTreachery("Fatigue", "The Long Dark")
                 .WithTextLine("When Revealed: Each player must exhaust 1 character he controls, if able. Then, if any player controls no unexhausted characters, Fatigue gains surge.")
@@ -138,7 +135,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Dwarrowdelf
                 .WithTextLine("When Revealed: The first player makes a locate test. If this test is failed, raise each player's threat by 7, remove all progress tokens from play, and trigger all 'Lost:' effects in play.")
                 .WithFlavorLine("The Mines of Moria were vast and intricate beyond the imagination of Gimli, Glóin's son, dwarf of the mountain-race though he was.")
                 .WithFlavorLine("-The Fellowship of the Ring")
-                .WithTemplate("<p><b>When Revealed:</b> The first player makes a locate test. If this test is failed, raise each player's threat by 7, remove all progress tokens from play, and trigger all <b>&quot;Lost:&quot;</b> effects in play.</p><p class='flavor-text'>The Mines of Moria were vast and intricate beyond the imagination of Gimli, Glóin's son, dwarf of the mountain-race though he was.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithEasyModeQuantity(1)
                 .WithInfo(96, 2, Artist.Eric_Braddock);
             addEnemy("Cave Spider", "The Long Dark", 31, 3, 2, 1, 4)

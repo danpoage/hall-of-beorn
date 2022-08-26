@@ -19,7 +19,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Response: After Grimbeorn the Old defends an attack, spend 1 resource from his pool to declare him as an attacker against that enemy (and resolve his attack). The defending enemy gets -2 Defense for this attack.")
-                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} defends an attack, spend 1 resource from his pool to declare him as an attacker against that enemy (and resolve his attack). The defending enemy gets -2 {Defense} for this attack.</p>")
                 .WithCommunityVersion("Grimbeorn-the-Old-Lure-2019")
                 .WithCommunityVersion("Grimbeorn-the-Old-HoB-Alt-Art")
                 .WithCommunityVersion("Grimbeorn-the-Old-Grimbeorn's-Path")
@@ -40,7 +39,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Attached ally gets +2 hit points.")
                 .WithFlavorLine("\"There are no great weapon-hoards here, lord,\" answered Éomer. \"Maybe a light helm might be found to fit him...\"")
                 .WithFlavorLine("-The Return of the King")
-                .WithTemplate("<p class='main-text'>Attach to an ally. {keyword:Restricted.}</p><p class='main-text'>Limit 1 per ally.</p><p class='main-text'>Attached ally gets +2 hit points.</p><p class='flavor-text'>&ldquo;There are no great weapon-hoards here, lord,&rdquo; answered Éomer. &ldquo;Maybe a light helm might be found to fit him...&rdquo;<br>&ndash;The Return of the King</p>")
                 .WithInfo(3, 3, Artist.Sara_Biddle);
             addAttachment("Woodmen's Clearing", 0, Sphere.Lore, false)
                 .WithTraits("Condition.")
@@ -76,7 +74,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Each unique character you control gains +1 Willpower.")
                 .WithTextLine("Action: Reduce your threat by 2 to attach The Arkenstone to a hero controlled by another player and raise that player's threat by 2. (Limit once per round.)")
-                .WithTemplate("<p class='main-text'>{keyword:Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero.</p><p class='main-text'>Each unique character you control gains +1 {Willpower}.</p><p class='main-text'><b>Action:</b> Reduce your threat by 2 to attach {self} to a hero controlled by another player and raise that player's threat by 2. (Limit once per round.)</p>")
                 .WithInfo(10, 3, Artist.Emilio_Rodriguez);
             addEnemy("Cold-Drake", EncounterSet.TheWitheredHeath, 10, 1, 6, 1, 18)
                 .WithUnique()

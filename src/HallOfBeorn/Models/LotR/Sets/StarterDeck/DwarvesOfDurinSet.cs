@@ -145,7 +145,8 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithInfo(21, 3, Artist.Aurelien_Hubert);
             addEvent("Lure of Moria", 3, Sphere.Leadership)
                 .WithTextLine("Action: Ready all Dwarf characters.")
-                .WithTemplate("<p><b>Action:</b> Ready all {trait:Dwarf.@Dwarf} characters.</p><p class='flavor-text'>'The road that I speak of leads to the Mines of Moria,' said Gandalf. Only Gimli lifted up his head; a smouldering fire was in his eyes.<br>&ndash;The Fellowship of the Ring</p>")
+                .WithFlavorLine("'The road that I speak of leads to the Mines of Moria,' said Gandalf. Only Gimli lifted up his head; a smouldering fire was in his eyes.")
+                .WithFlavorLine("-The Fellowship of the Ring")
                 .WithInfo(22, 3, Artist.Mike_Nash);
             addEvent("We Are Not Idle", 0, Sphere.Leadership)
                 .WithTextLine("Action: Exhaust X Dwarf heroes to add X resources to a hero's resource pool and draw 1 card.")
@@ -194,7 +195,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("Response: When you play Erebor Guard from your hand, discard the top 2 cards of your deck to reduce its cost by 2.")
                 .WithFlavorLine("...the fortress of the dwarves could not be taken by surprise.")
                 .WithFlavorLine("-The Hobbit")
-                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> When you play {self} from your hand, discard the top 2 cards of your deck to reduce its cost by 2.</p><p class='flavor-text'>...the fortress of the dwarves could not be taken by surprise. &ndash;The Hobbit</p>")
                 .WithInfo(29, 3, Artist.Marius_Bota);
             addAttachment("Dwarf Pipe", 1, Sphere.Spirit, false)
                 .WithTraits("Item.", "Pipe.")

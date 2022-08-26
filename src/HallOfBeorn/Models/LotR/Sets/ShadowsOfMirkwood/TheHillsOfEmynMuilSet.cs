@@ -93,14 +93,12 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addLocation("The East Wall of Rohan", "The Hills of Emyn Muil", 4, 2)
                 .WithTraits("Emyn Muil.")
                 .WithTextLine("While The East Wall of Rohan is the active location, non-Rohan characters cost 2 additional matching resources to play.")
-                .WithTemplate("<p>While {self} is the active location, non-{trait:Rohan.@Rohan} characters cost 2 additional matching resources to play.</p>{victory:3}")
                 .WithVictoryPoints(3)
                 .WithEasyModeQuantity(0)
                 .WithInfo(85, 2, Artist.Ben_Zweifel);
             addLocation("The North Stair", "The Hills of Emyn Muil", 3, 3)
                 .WithTraits("Emyn Muil.")
                 .WithTextLine("Forced: After traveling to The North Stair, move the top card of the encounter discard pile to the staging area. Resolve any 'when revealed' effects on that card.")
-                .WithTemplate("<p><b>Forced:</b> After traveling to The North Stair, move the top card of the encounter discard pile to the staging area. Resolve any &quot;when revealed&quot; effects on that card.</p>{victory:3}")
                 .WithVictoryPoints(3)
                 .WithInfo(86, 2, Artist.Michael_Rasmussen);
             addLocation("Rauros Falls", "The Hills of Emyn Muil", 2, 4)
@@ -113,7 +111,6 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTraits("Emyn Muil.")
                 .WithTextLine("Travel: The first player must discard 1 event card from his hand to travel to this location.")
                 .WithShadow("Shadow: After this attack resolves, return attacking enemy to the staging area.")
-                .WithTemplate("<p><b>Travel:</b> The first player must discard 1 {type:event} card from his hand to travel to this location.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> After this attack resolves, return attacking enemy to the staging area.</p>{victory:2}")
                 .WithVictoryPoints(2)
                 .WithInfo(88, 3, Artist.Lin_Bo);
             addLocation("The Outer Ridge", "The Hills of Emyn Muil", 2, 2)
@@ -125,7 +122,6 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addLocation("The Highlands", "The Hills of Emyn Muil", 1, 1)
                 .WithTraits("Emyn Muil.")
                 .WithTextLine("Travel: In order to travel to The Highlands, the players must reveal the top card of the encounter deck, and add it to the staging area.")
-                .WithTemplate("<p><b>Travel:</b> In order to travel to {self}, the players must reveal the top card of the encounter deck, and add it to the staging area.</p>{victory:1}")
                 .WithVictoryPoints(1)
                 .WithInfo(90, 4, Artist.Bill_Corbett);
             addTreachery("Impassable Chasm", "The Hills of Emyn Muil")
@@ -148,7 +144,6 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithKeywords("Doomed 2.")
                 .WithTextLine("Doomed 2.")
                 .WithTextLine("Orc Horse Thieves get +1 Attack for each location in the staging area.")
-                .WithTemplate("<p>{self} get +1 {Attack} for each location in the staging area.</p>")
                 .WithEasyModeQuantity(2)
                 .WithInfo(94, 3, Artist.Brian_Valenzuela);
         }

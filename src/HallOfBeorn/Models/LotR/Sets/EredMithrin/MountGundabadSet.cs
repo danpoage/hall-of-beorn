@@ -49,7 +49,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Attach to a Hobbit hero. Restricted.")
                 .WithTextLine("Attached hero gets +1 Willpower, +1 Attack, and +1 Defense.")
                 .WithTextLine("Response: After attached hero is declared as an attacker or defender against an enemy, deal 1 damage to that enemy.")
-                .WithTemplate("<p class='main-text'>{keyword:Guarded (enemy)}.</p><p class='main-text'>Attach to a {trait:Hobbit.@Hobbit} hero. {keyword:Restricted}</p><p class='main-text'>Attach hero gets +1 {Willpower}, +1 {Attack}, and +1 {Defense}.</p><p class='main-text'><b>Response:</b> After attached hero is declared as an attacker or defender against an enemy, deal 1 damage to that enemy.</p>")
                 .WithInfo(117, 3, Artist.Tropa_Entertainment);
             addAttachment("Round Shield", 0, Sphere.Tactics, false)
                 .WithTraits("Item.", "Armor.")
@@ -107,7 +106,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Indestructible. Immune to player card effects. X is 1 more than the number of quest cards in the victory display.")
                 .WithTextLine("Cannot take more than X damage each round.")
                 .WithTextLine("While there are 5 or more quest cards in the victory display, Dagnir cannot leave the staging area and is considered to be engaged with each player.")
-                .WithTemplate("<p class='main-text'>{keyword:Indestructible.} Immune to player card effects. X is 1 more than the number of quest cards in the victory display.</p><p class='main-text'>Cannot take more than X damage each round.</p><p class='main-text'>While there are 5 or more quest cards in the victory display, {self} cannot leave the staging area and is considered to be engaged with each player.</p>")
                 .WithInfo(125, 1, Artist.Antonio_Jose_Manzanedo);
             addEnemy("Guardian of Gundabad", EncounterSet.MountGundabad, 39, 3, 4, 1, 5)
                 .WithTraits("Orc.", "Goblin.")
@@ -132,7 +130,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Deep.")
                 .WithTextLine("Dagnir gets -10 engagement cost.")
                 .WithShadow("Shadow: If attacking enemy is Dagnir, the defending player must assign X damage among characters he controls, where X is 1 more than the number of quest cards in the victory display.")
-                .WithTemplate("<p class='main-text'>{keyword:Deep.}</p><p class='main-text'>Dagnir gets -10 engagement cost.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If attacking enemy is Dagnir, the defending player must assign X damage among characters he controls, where X is 1 more than the number of quest cards in the victory display.</p>")
                 .WithEasyModeQuantity(2)
                 .WithInfo(129, 3, Artist.Mariusz_Gandzel);
             addLocation("Narrow Stair", EncounterSet.MountGundabad, 2, 3)
@@ -141,7 +138,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Deep.")
                 .WithTextLine("When faced with the option to travel, the players must travel to Narrow Stair.")
                 .WithShadow("Shadow: Until the end of the round, defending character cannot be readied by player card effects.")
-                .WithTemplate("<p class='main-text'>{keyword:Deep.}</p><p class='main-text'>When faced with the option to travel, the players must travel to {self}.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Until the end of the round, defending character cannot be readied by player card effects.</p>")
                 .WithEasyModeQuantity(1)
                 .WithInfo(130, 2, Artist.Mariusz_Gandzel);
             addLocation("Desecrated Ruins", EncounterSet.MountGundabad, 2, 4)
@@ -150,7 +146,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Deep.")
                 .WithTextLine("While there are 3 or more quest cards in the victory display, Desecrated Ruins gets +2 Threat.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack. If this attack destroys a character, each player discards a random card from his hand.")
-                .WithTemplate("<p class='main-text'>{keyword:Deep.} While there are 3 or more quest cards in the victory display, {self} gets +2 {Threat}.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Attacking enemy gets +1 {Attack}. If this attack destroys a character, each player discards a random card from his hand.</p>")
                 .WithInfo(131, 2, Artist.Mariusz_Gandzel);
             addTreachery("Wilderland's Bane", EncounterSet.MountGundabad)
                 .WithTextLine("When Revealed: Dagnir makes an immediate attack against each engaged player. If no attacks were made this way, Dagnir gets -30 engagement cost until the end of the round.")
@@ -276,7 +271,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("If attached hero leaves play, the players lose the game.")
                 .WithFlavorLine("...they tell that he slew Scatha, the great Dragon of Ered Mithrin, and the land had peace from the long-worms afterwards.")
                 .WithFlavorLine("-The Return of the King")
-                .WithTemplate("<p class='main-text'>Attach to a hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +1 {Attack}.</p><p class='main-text'><b>If attached hero leaves play, the players lose the game.</b></p><p class='flavor-text'>...they tell that he slew Scatha, the great Dragon of Ered Mithrin, and the land had peace from the long-worms afterwards.<br>&ndash;The Return of the King</p>")
                 .WithInfo(143, 1, Artist.Sebastian_Zakrzewski);
             addObjective("Wormsbane", EncounterSet.MountGundabad)
                 .WithUnique()
@@ -286,7 +280,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Attach to a hero. Restricted.")
                 .WithTextLine("Attached hero gets +X Attack, where X is 1 more than the number of quest cards in the victory display.")
                 .WithTextLine("If attached hero leaves play, the players lose the game.")
-                .WithTemplate("<p class='main-text'>Attach to a hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +X {Attack}, where X is 1 more than the number of quest cards in the victory display.</p><p class='main-text'><b>If attached hero leaves play, the players lose the game.</b></p><p class='flavor-text'>...they tell that he slew Scatha, the great Dragon of Ered Mithrin, and the land had peace from the long-worms afterwards.<br>&ndash;The Return of the King</p>")
                 .WithSideB()
                 .WithInfo(144, 1, Artist.Sebastian_Zakrzewski);
         }

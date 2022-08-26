@@ -68,7 +68,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTraits("Gondor.", "Noble.", "Ranger.")
                 .WithTextLine("Action: Exhaust Faramir to choose a player. Each character controlled by that player gets +1 Willpower until the end of the phase.")
                 .WithFlavor("\"He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.\"\r\n-Mablung, Ranger of Ithilien,\r\nThe Two Towers")
-                .WithTemplate("<p class='main-text'><b>Action:</b> Exhaust {self} to choose a player. Each character controlled by that player gets +1 {Willpower} until the end of the phase.</p><p class='flavor-text'>&quot;He leads now in all perilous ventures. But his life is charmed, or fate spares him for some other end.&quot;<br>&ndash;Mablung, Ranger of Ithilien,<br>The Two Towers</p>")
                 .WithCommunityVersion("Faramir-Core-Set-Completion")
                 .WithCommunityVersion("Autumn/Faramir-Leadership-Ally")
                 .WithInfo(10, 2, Artist.Jeff_Himmelman);
@@ -108,7 +107,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("Limit 1 per hero.")
                 .WithTextLine("Attached hero gains +1 Defense. (+2 Defense instead if attached hero has the Gondor trait.)")
                 .WithFlavorLine("There flowered a White Tree, and that was for Gondor... -The Return of the King")
-                .WithTemplate("<p>Attach to a {type:hero}. {keyword:Restricted.}</p><p>Limit 1 per hero.</p><p>Attached hero gains +1 {Defense}. (+2 {Defense} instead if attached hero has the {trait:Gondor.@Gondor} trait.)</p><p class='flavor-text'>There flowered a White Tree, and that was for Gondor...<br>&ndash;The Return of the King</p>")
                 .WithInfo(16, 3, Artist.Owen_William_Weber);
             addAttachment("Heir of Mardil", 1, Sphere.Leadership, true)
                 .WithTraits("Title.")
@@ -122,7 +120,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTextLine("Attach to a hero. Attached hero gains the Gondor trait.")
                 .WithTextLine("Action: Exhaust Steward of Gondor to add 2 resources to attached hero's resource pool.")
                 .WithFlavor("\"It was commanded yesterday.\" -Denethor, The Return of the King")
-                .WithTemplate("<p class='main-text'>Attach to a hero.</p><p>Attached hero gains the {trait:Gondor.@Gondor} trait.</p><p><b>Action:</b> Exhaust {self} to add 2 resources to attached hero's resource pool.</p><p class='flavor-text'>&quot;It was commanded yesterday.&quot;<br>&ndash;Denethor, The Return of the King</p>")
                 .WithInfo(18, 2, Artist.Empty_Room_Studios);
             addAttachment("Valiant Sword", 1, Sphere.Leadership, false)
                 .WithTraits("Item.", "Weapon.")

@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTraits("Hobbit.")
                 .WithTextLine("Response: After an enemy is revealed from the top of the encounter deck, exhaust Merry to reduce your threat by that enemy's Threat.")
                 .WithFlavorLine("\"We have come a long way with you and been through some stiff times. We want to go on.\" —The Fellowship of the Ring")
-                .WithTemplate("<b>Response:</b> After an enemy is revealed from the top of the encounter deck, exhaust {self} to reduce your threat by that enemy's {Threat}.</p><p class='flavor-text'>&quot;We have come a long way with you and been through some stiff times. We want to go on.&quot;<br/>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(1, 1, Artist.Romana_Kendelic);
             addAlly("Ingold", 3, Sphere.Leadership, true, 0, 1, 1, 3)
                 .WithTraits("Gondor.")
@@ -28,7 +27,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addEvent("Rallying Cry", 2, Sphere.Leadership)
                 .WithTextLine("Response: After an ally leaves play, add it to its owner’s hand instead of placing it in the discard pile.")
                 .WithTextLine("Valour Action: Until the end of the phase, add each ally that leaves play to its owner's hand instead of placing it in the discard pile.")
-                .WithTemplate("<p><b>Response:</b> After an ally leaves play, add it to its owner's hand instead of placing it in the discard pile.</p><p><b>Valour Action:</b> Until the end of the phase, add each ally that leaves play to its owner's hand instead of placing it in the discard pile.</p><p class='flavor-text'>He let blow the horns to rally all men to his banner that could come thither...<br/>&ndash;The Return of the King</p>")
+                .WithFlavorLine("He let blow the horns to rally all men to his banner that could come thither...")
+                .WithFlavorLine("-The Return of the King")
                 .WithInfo(3, 3, Artist.Lukasz_Jaskolski);
             addAlly("Honour Guard", 2, Sphere.Tactics, false, 0, 0, 1, 3)
                 .WithTraits("Gondor.", "Warrior.")
@@ -39,8 +39,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTraits("Item.", "Armor.")
                 .WithTextLine("Attach to a hero with sentinel. Limit 1 per hero.")
                 .WithTextLine("Response: Exhaust Raven-winged Helm to prevent 1 point of damage just dealt to attached character.")
-                .WithFlavorLine("He had a small hauberk, its rings of forged of steel, maybe, yet black as jet; and a high-crowned helm with small raven-wings on either side, set with a silver star in the centre of the circlet. -The Return of the King")
-                .WithTemplate("<p>Attach a {keyword-hero:Sentinel.} Limit 1 per hero.</p><p><b>Response:</b> Exhaust {self} to prevent 1 point of damage just dealt to attached character.</p><p class='flavor-text'>He had a small hauberk, its rings of forged of steel, maybe, yet black as jet; and a high-crowned helm with small raven-wings on either side, set with a silver star in the centre of the circlet.<br/>&ndash;The Return of the King<p>")
+                .WithFlavorLine("He had a small hauberk, its rings of forged of steel, maybe, yet black as jet; and a high-crowned helm with small raven-wings on either side, set with a silver star in the centre of the circlet.")
+                .WithFlavorLine("-The Return of the King")
                 .WithInfo(5, 3, Artist.Blake_Henriksen);
             addAlly("Curious Brandybuck", 2, Sphere.Spirit, false, 2, 0, 0, 2)
                 .WithTraits("Hobbit.")
@@ -57,8 +57,8 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
             addAlly("East Road Ranger", 3, Sphere.Lore, false, 1, 2, 1, 3)
                 .WithTraits("Dúnedain.", "Scout.")
                 .WithTextLine("East Road Ranger gets +2 Willpower while committed to a side quest.")
-                .WithFlavorLine("\"If you bring a Ranger with you, it is well to pay attention to him...\" -Gandalf, the Fellowship of the Ring")
-                .WithTemplate("<p>{self} gets +2 {willpower} while committed to a side quest.</p><p class='flavor-text'>&quot;If you bring a Ranger with you, it is well to pay attention to him...&quot;<br/>&ndash;Gandalf, the Fellowship of the Ring</p>")
+                .WithFlavorLine("\"If you bring a Ranger with you, it is well to pay attention to him...\"")
+                .WithFlavorLine("-Gandalf, the Fellowship of the Ring")
                 .WithInfo(8, 3, Artist.Beth_Sobel);
             addPlayerSideQuest("Scout Ahead", 0, Sphere.Lore, 4)
                 .WithTextLine("Limit 1 per deck.")

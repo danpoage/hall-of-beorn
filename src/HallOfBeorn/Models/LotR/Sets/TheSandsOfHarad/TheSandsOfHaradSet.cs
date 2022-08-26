@@ -21,7 +21,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithTextLine("Response: After Gimli is declared as a defender, spend 1 resource from his pool to ready another hero. If that hero is Legolas, he gets +1 Attack until the end of the phase. (Limit once per phase.)")
                 .WithFlavorLine("\"Faithless is he that says farewell when the road darkens...\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
-                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} is declared as a defender, spend 1 resource from his pool to ready another hero. If that hero is {title:Legolas}, he gets +1 {Attack} until the end of the phase. (Limit once per phase.)</p><p class='flavor-text'>&ldquo;Faithless is he that says farewell when the road darkens...&rdquo;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithCommunityVersion("Autumn/Gimli-Leadership-Hero")
                 .WithCommunityVersion("Hrodebert/Gimli-Leadership-Hero")
                 .WithInfo(1, 1, Artist.Owen_William_Weber);
@@ -32,7 +31,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithTextLine("Response: After Legolas commits to a quest, discard a card from your hand to ready another hero. If that hero is Gimli, he gets +1 Willpower until the end of the phase. (Limit once per phase.)")
                 .WithFlavorLine("\"I go to find the Sun!\"")
                 .WithFlavorLine("-The Fellowship of the Ring")
-                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, discard a card from your hand to ready another hero. If that hero is {title:Gimli}, he gets +1 {Willpower} until the end of the phase. (Limit once per phase.)</p><p class='flavor-text'>&ldquo;I go to find the Sun!&rdquo;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithCommunityVersion("Autumn/Legolas-Spirit-Hero")
                 .WithCommunityVersion("RiddermarkLord/Legolas-Spirit-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Legolas-Spirit-Hero-2")
@@ -46,7 +44,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithTextLine("Response: After Greenwood Archer enters play, ready a hero.")
                 .WithFlavorLine("They dwelt most often by the edges of the woods, from which they could escape at times to hunt...")
                 .WithFlavorLine("-The Hobbit")
-                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} enters play, ready a hero.</p><p class='flavor-text'>They dwelt most often by the edges of the woods, from which they could escape at times to hunt...<br>&ndash;The Hobbit</p>")
                 .WithInfo(3, 3, Artist.Tawny_Fritzinger);
             addAlly("Erebor Guard", 4, Sphere.Spirit, false, 0, 1, 2, 3)
                 .WithTraits("Dwarf.", "Warrior.")
@@ -55,7 +52,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithTextLine("Response: When you play Erebor Guard from your hand, discard the top 2 cards of your deck to reduce its cost by 2.")
                 .WithFlavorLine("...the fortress of the dwarves could not be taken by surprise.")
                 .WithFlavorLine("-The Hobbit")
-                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> When you play {self} from your hand, discard the top 2 cards of your deck to reduce its cost by 2.</p><p class='flavor-text'>...the fortress of the dwarves could not be taken by surprise. &ndash;The Hobbit</p>")
                 .WithInfo(4, 3, Artist.Marius_Bota);
             addAlly("Halfling Bounder", 2, Sphere.Lore, false, 1, 1, 0, 2)
                 .WithTraits("Hobbit.")
@@ -93,7 +89,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithTextLine("Response: After attached hero takes damage from an enemy attack, exhaust Dwarven Shield to add 1 resource to attached hero's pool.")
                 .WithFlavorLine("...each of them had also a short broad sword at his side and a round shield slung at his back.")
                 .WithFlavorLine("-The Hobbit")
-                .WithTemplate("<p class='main-text'>Attach to a {trait:Dwarf.@Dwarf} hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +1 {Defense}.</p><p class='main-text'><b>Response:</b> After attached hero takes damage from an enemy attack, exhaust {self} to add 1 resource to attached hero's pool.</p><p class='flavor-text'>...each of them had also a short broad sword at his side and a round shield slung at his back.<br>&ndash;The Hobbit</p>")
                 .WithInfo(10, 3, Artist.Mariusz_Gandzel);
             addAttachment("Mirkwood Long-knife", 2, Sphere.Spirit, false)
                 .WithTraits("Item.", "Weapon.")
@@ -102,7 +97,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithTextLine("Attached hero gets +1 Willpower and +1 Attack.")
                 .WithFlavorLine("Legolas had a bow and a quiver, and at his belt a long white knife.")
                 .WithFlavorLine("-The Fellowship of the Ring")
-                .WithTemplate("<p class='main-text'>Attach to a {trait:Silvan.@Silvan} hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +1 {Willpower} and +1 {Attack}.</p><p class='flavor-text'>Legolas had a bow and a quiver, and at his belt a long white knife.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(11, 3, Artist.Alexandr_Elichev);
             addAttachment("The Road Goes Ever On", 0, Sphere.Lore, false)
                 .WithTraits("Song.")
@@ -227,7 +221,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSandsOfHarad
                 .WithTraits("Harad.", "Noble.")
                 .WithTextLine("Response: At the beginning of the planning phase, add 1 resource to a hero's pool.")
                 .WithTextLine("If Kahliel leaves play, you are eliminated from the game.")
-                .WithTemplate("<p class='main-text'><b>Response:</b> At the beginning of the planning phase, add 1 resource to a hero's pool.<br><br><b>If {self} leaves play, you are eliminated from the game.</b></p>")
                 .WithInfo(31, 1, Artist.David_A_Nash);
             addObjectiveHero("Firyal", EncounterSet.TheLongArmOfMordor, 3, 1, 2, 3)
                 .WithTraits("Harad.", "Scout.")

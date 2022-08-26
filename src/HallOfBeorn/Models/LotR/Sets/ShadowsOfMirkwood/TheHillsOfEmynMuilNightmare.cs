@@ -45,12 +45,10 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
             addEnemy("Tunneling Nameless Thing", EncounterSet.TheHillsOfEmynMuilNightmare.Name, 50, 4, 6, 4, 10)
                 .WithTraits("Nameless.")
                 .WithText("Forced: After the players travel to a location, Tunneling Nameless Thing engages the first player.\r\n\r\nIf there is no active location, return Tunneling Nameless Thing to the staging area.")
-                .WithTemplate("<p class='main-text'><b>Forced:</b> After the players travel to a location, {self} engages the first player.</p><p class='main-text'>If there is no active location, return {self} to the staging area.</p>")
                 .WithInfo(2, 3, Artist.Sandara_Tang);
             addEnemy("Orc Interceptor", EncounterSet.TheHillsOfEmynMuilNightmare.Name, 39, 2, 2, 3, 5)
                 .WithTraits("Mordor.", "Orc.")
                 .WithText("Orc Interceptor gets +1 Threat and +1 Attack for each resource token on it.\r\nForced: After a location leaves play as an explored location, place a resource token on Orc Interceptor.")
-                .WithTemplate("<p class='main-text'>{self} gets +1 {Threat} and +1 {Attack} for each resource token on it.</p><p class='main-text'><b>Forced:</b> After a location leaves play as an explored location, place a resource token on {self}.</p>")
                 .WithInfo(3, 2, Artist.Mariusz_Gandzel);
             addLocation("Brambles and Thorns", EncounterSet.TheHillsOfEmynMuilNightmare.Name, 3, 5)
                 .WithTraits("Emyn Muil.")
@@ -75,7 +73,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithTextLine("Doomed 2.")
                 .WithText("When Revealed: Remove all progress from each Emyn Muil location in play. Each Emyn Muil location gets +2 Threat until the end of the round.")
                 .WithShadow("Shadow: Remove all progress from each Emyn Muil location in play.")
-                .WithTemplate("<p class='main-text'>{keyword:Doomed 2.}</p><p class='main-text'><b>When Revealed:</b> Remove all progress from each {trait:Emyn Muil.@Emyn Muil} location in play. Each {trait:Emyn Muil.@Emyn Muil} location gets +2 {Threat} until the end of the round.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Remove all progress from each {trait:Emyn Muil.@Emyn Muil} location in play.</p>")
                 .WithInfo(7, 3, Artist.Christina_Davis);
             addTreachery("Hazardous Terrain", EncounterSet.TheHillsOfEmynMuilNightmare.Name)
                 .WithKeywords("Surge.", "Doomed 2.")

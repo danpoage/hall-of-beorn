@@ -70,7 +70,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
                 .WithTraits("Rohan.")
                 .WithTextLine("Response: After you play West Road Traveller from your hand, switch the active location with any other location in the staging area.")
                 .WithFlavor("The dark world was rushing by, and the wind sang loudly in his ears. -The Return of the King")
-                .WithTemplate("<p><b>Response:</b> After you play {self} from your hand, switch the active location with any other location in the staging area.</p><p class='flavor-text'>The dark world was rushing by, and the wind sang loudly in his ears.<br>&ndash;The Return of the King</p>")
                 .WithInfo(10, 3, Artist.Sara_Biddle);
             addAlly("Westfold Horse-Breaker", 2, Sphere.Spirit, false, 1, 0, 1, 1)
                 .WithTraits("Rohan.")
@@ -135,7 +134,6 @@ namespace HallOfBeorn.Models.LotR.Sets.StarterDeck
             addEvent("A Test of Will", 1, Sphere.Spirit)
                 .WithTextLine("Response: Cancel the 'when revealed' effects of a card that was just revealed from the encounter deck.")
                 .WithFlavor("\"There is naught that you can do, other than to resist, with hope or without it\"\r\n-Elrond, The Fellowship of the Ring")
-                .WithTemplate("<p><b>Response:</b> Cancel the &ldquo;when revealed&rdquo; effects of a card that was just revealed from the encounter deck.</p><p class='flavor-text'>&quot;There is naught that you can do, other than to resist, with hope or without it&quot;<br>&ndash;Elrond, The Fellowship of the Ring</p>")
                 .WithCommunityVersion("A-Test-of-Will-Core-Set-Completion")
                 .WithCommunityVersion("A-Test-of-Will-Nouveau-Hunters")
                 .WithCommunityVersion("Autumn/Test-of-Will")

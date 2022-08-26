@@ -99,7 +99,6 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTextLine("No attachments. The first player gains control of Wilyador.")
                 .WithTextLine("Forced: At the end of each round, Wilyador suffers 2 damage.")
                 .WithTextLine("Wilyador cannot be healed of more than 5 wounds by a single effect. If Wilyador leaves play, the players have lost the game.")
-                .WithTemplate("<p>No attachments. The first player gains control of {self}.<p><b>Forced:</b> At the end of each round, {self} suffers 2 damage.</p><p>{self} cannot be healed of more than 5 wounds by a single effect. If {self} leaves play, the players have lost the game.</p>")
                 .WithInfo(64, 1, Artist.Taufiq);
             addLocation("Rhosgobel", EncounterSet.AJourneyToRhosgobel.Name, Card.VALUE_X, 4)
                 .WithUnique()
@@ -112,7 +111,6 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
             addLocation("Forest Grove", EncounterSet.AJourneyToRhosgobel.Name, 2, 3)
                 .WithTraits("Forest.")
                 .WithTextLine("Response: After the players explore Forest Grove, search the encounter deck and discard pile for 1 Athelas objective, and add it to the staging area. Then, shuffle the encounter deck.")
-                .WithTemplate("<p><b>Response:</b> After the players explore {self}, search the encounter deck and discard pile for 1 <a href='/Cards/Details/Athelas-AJtR' title='Athelas' target='_blank'>Athelas</a> objective, and add it to the staging area. Then, shuffle the encounter deck.</p>")
                 .WithInfo(66, 4, Artist.Anna_Mohrbacher);
             addTreachery("Exhaustion", EncounterSet.AJourneyToRhosgobel.Name)
                 .WithTextLine("When Revealed: Deal 2 damage to each exhausted character.")
@@ -133,13 +131,11 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTraits("Creature.")
                 .WithTextLine("Only Eagle characters or characters with ranged can attack or defend against Mirkwood Flock.")
                 .WithShadow("Shadow: If this attack is undefended, the damage must be placed on Wilyador.")
-                .WithTemplate("<p>Only {trait:Eagle.@Eagle} characters or characters with {keyword:Ranged.@ranged} can attack or defend against {self}.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If this attack is undefended, the damage must be placed on Wilyador</p>")
                 .WithInfo(70, 4, Artist.Brandon_Leach);
             addEnemy("Black Forest Bats", EncounterSet.AJourneyToRhosgobel.Name, 26, 1, 1, 0, 2)
                 .WithTraits("Creature.")
                 .WithTextLine("Only Eagle characters or characters with ranged can attack or defend against Black Forest Bats.")
                 .WithShadow("Shadow: If this attack is undefended, the damage must be placed on Wilyador.")
-                .WithTemplate("<p>Only {trait:Eagle.@Eagle} characters or characters with {keyword:Ranged.@ranged} can attack or defend against {self}.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> If this attack is undefended, the damage must be placed on Wilyador</p>")
                 .WithInfo(71, 5, Artist.Aurelien_Hubert);
         }
     }
