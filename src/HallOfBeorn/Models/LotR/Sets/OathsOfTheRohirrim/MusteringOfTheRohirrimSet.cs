@@ -178,7 +178,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithInfo(165, 1, Artist.Sergey_Zabelin);
             addObjectiveAlly("Host of Rohan", EncounterSet.MusteringOfTheRohirrim, 3, 4, 3, 5)
                 .WithTraits("Rohan.")
-                .WithKeywords("Immune to player card effects.", "Sentinel.")
+                .WithKeywords("Sentinel.")
                 .WithTextLine("Immune to player card effects. Sentinel.")
                 .WithTextLine("The first player gains control of Host of Rohan.")
                 .WithTextLine("Action: The players as a group may spend 2 resources to ready Host of Rohan. (Limit once per phase.)")
