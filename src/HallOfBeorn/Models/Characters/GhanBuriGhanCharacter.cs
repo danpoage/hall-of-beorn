@@ -27,8 +27,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("The Rohirrim", "The-Rohirrim");
 
             addGroup("Drúedain");
-
-            DigitalCard("Ghan-buri-Ghan-Valor");
         }
     }
 }

@@ -57,13 +57,8 @@ namespace HallOfBeorn.Controllers
                 playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
                 ringsDbService);
 
-            //TODO: Move this to a CharacterController
-            var digitalCardRepository = new Services.Digital.DigitalCardRepository(
-                new Services.Digital.DigitalProductRepository()
-                );
-
             _charactersHandler = new CharactersHandler(
-                cardRepository, digitalCardRepository, characterRepository, linkService);
+                cardRepository, characterRepository, linkService);
 
             _detailsHandler = new DetailsHandler(_translationHandler, 
                 cardRepository, characterRepository, 
@@ -201,7 +196,7 @@ namespace HallOfBeorn.Controllers
 
         public JsonResult Version()
         {
-            return Json(new { version = "2.10.8" }, JsonRequestBehavior.AllowGet);
+            return Json(new { version = "2.11.0" }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Search(SearchViewModel model)

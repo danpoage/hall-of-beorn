@@ -95,8 +95,6 @@ namespace HallOfBeorn.Models.Characters
             Alias("Estel");
             Alias("Thorongil", "Thorongil-TFoN");
 
-            DigitalCard("Aragorn-Starter");
-
             addFamily("Arathorn (Father)", string.Empty);
             addFamily("Arwen Undómiel (Wife)", "Arwen-Undomiel");
             addFamily("Elrond (Father-in-Law)", "Elrond");

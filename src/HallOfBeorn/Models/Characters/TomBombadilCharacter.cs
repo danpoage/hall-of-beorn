@@ -62,8 +62,6 @@ namespace HallOfBeorn.Models.Characters
             addItem("Fatty Lumpkin");
             addItem("Ho! Tom Bombadil", "Ho-Tom-Bombadil-FotBD");
             addItem("Old Bogey Stories", "Old-Bogey-stories-TOF");
-
-            DigitalCard("Tom-Bombadil-Valor");
         }
     }
 }

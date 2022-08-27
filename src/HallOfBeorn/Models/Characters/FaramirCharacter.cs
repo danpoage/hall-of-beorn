@@ -60,8 +60,6 @@ namespace HallOfBeorn.Models.Characters
 
             addGroup("Gondor", "Gondor");
             addGroup("Rangers of Ithilien", "Rangers-of-Ithilien");
-
-            DigitalCard("Faramir-FR");
         }
     }
 }

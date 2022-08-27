@@ -61,8 +61,6 @@ namespace HallOfBeorn.Models.Characters
             addItem("Windfola", "Windfola-ASoCH");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            DigitalCard("Eowyn-EW");
         }
     }
 }

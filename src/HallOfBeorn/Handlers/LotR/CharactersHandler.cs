@@ -6,7 +6,6 @@ using HallOfBeorn.Models;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services;
-using HallOfBeorn.Services.Digital;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Links;
 
@@ -14,17 +13,15 @@ namespace HallOfBeorn.Handlers.LotR
 {
     public class CharactersHandler
     {
-        public CharactersHandler(LotRCardRepository lotrCardRepository, DigitalCardRepository digitalCardRepository, 
+        public CharactersHandler(LotRCardRepository lotrCardRepository,
             ICharacterRepository characterRepository, ILinkService linkService)
         {
             _lotrCardRepository = lotrCardRepository;
-            _digitalCardRepository = digitalCardRepository;
             _characterRepository = characterRepository;
             _linkService = linkService;
         }
 
         private readonly LotRCardRepository _lotrCardRepository;
-        private readonly DigitalCardRepository _digitalCardRepository;
         private readonly ICharacterRepository _characterRepository;
         private readonly ILinkService _linkService;
 
@@ -81,12 +78,6 @@ namespace HallOfBeorn.Handlers.LotR
                 model.AddLotRCardLink(link);
             }
             
-            foreach (var slug in character.DigitalCards)
-            {
-                var card = _digitalCardRepository.FindBySlug(slug);
-                model.AddDigitalCardLink(card);
-            }
-
             return model;
         }
     }

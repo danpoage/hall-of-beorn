@@ -155,8 +155,7 @@ Láthspell I name you, Ill-news; and ill news is an ill guest they say.
             LotRCard("Gandalf-RD");
             LotRCard("Gandalf-1-TPLES");
             LotRCard("Gandalf-2-TPLES");
-            DigitalCard("Gandalf-Starter");
-
+            
             addFriend("Aragorn", "Aragorn");
             addFriend("Bilbo Baggins", "Bilbo-Baggins");
             addFriend("Radagast", "Radagast");

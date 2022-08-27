@@ -41,8 +41,6 @@ namespace HallOfBeorn.Models.Characters
             addFriend("Elfhelm", "Elfhelm");
 
             addGroup("The Rohirrim", "The-Rohirrim");
-
-            DigitalCard("Erkenbrand-Valor");
         }
     }
 }

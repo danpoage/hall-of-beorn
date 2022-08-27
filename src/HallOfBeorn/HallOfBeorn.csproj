@@ -186,20 +186,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ArkhamController.cs" />
-    <Compile Include="Controllers\DigitalController.cs" />
     <Compile Include="Controllers\LotRController.cs" />
     <Compile Include="Controllers\ExportController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ImageController.cs" />
-    <Compile Include="Controllers\MarvelController.cs" />
     <Compile Include="Extensions.cs" />
     <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Handlers\Digital\DetailsHandler.cs" />
-    <Compile Include="Handlers\Digital\SearchHandler.cs" />
     <Compile Include="Handlers\LotR\CardDesignSearchHandler.cs" />
     <Compile Include="Handlers\LotR\CharacterSearchHandler.cs" />
     <Compile Include="Handlers\LotR\CommunitySearchHandler.cs" />
@@ -217,7 +212,6 @@
     <Compile Include="Handlers\LotR\TranslationHandler.cs" />
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
-    <Compile Include="Models\Arkham\Products\CurseOfTheRougarou.cs" />
     <Compile Include="Models\CardStatus.cs" />
     <Compile Include="Models\Characters\AngborTheFearlessCharacter.cs" />
     <Compile Include="Models\Characters\BobCharacter.cs" />
@@ -243,36 +237,6 @@
     <Compile Include="Models\Characters\ThranduilCharacter.cs" />
     <Compile Include="Models\Characters\YoungTomCharacter.cs" />
     <Compile Include="Models\Creator.cs" />
-    <Compile Include="Models\Digital\AttachmentSlot.cs" />
-    <Compile Include="Models\Digital\CardSets\DwalinPack.cs" />
-    <Compile Include="Models\Digital\CardSets\EowynPack.cs" />
-    <Compile Include="Models\Digital\CardSets\FaramirPack.cs" />
-    <Compile Include="Models\Digital\CardSets\LegolasPack.cs" />
-    <Compile Include="Models\Digital\CardSets\StarterSet.cs" />
-    <Compile Include="Models\Digital\CardSets\ValorCards.cs" />
-    <Compile Include="Models\Digital\DigitalCard.cs" />
-    <Compile Include="Models\Digital\DigitalCardSet.cs" />
-    <Compile Include="Models\Digital\DigitalKeyword.cs" />
-    <Compile Include="Models\Digital\DigitalTrait.cs" />
-    <Compile Include="Models\Digital\DigitalCardType.cs" />
-    <Compile Include="Models\Digital\DigitalProduct.cs" />
-    <Compile Include="Models\Digital\DigitalProductGroup.cs" />
-    <Compile Include="Models\Digital\DigitalSort.cs" />
-    <Compile Include="Models\Digital\DigitalSphere.cs" />
-    <Compile Include="Models\Digital\DigitalView.cs" />
-    <Compile Include="Models\Digital\Extensions.cs" />
-    <Compile Include="Models\Digital\ProductGroups\HeroPacksProductGroup.cs" />
-    <Compile Include="Models\Digital\ProductGroups\StarterProductGroup.cs" />
-    <Compile Include="Models\Digital\ProductGroups\ValorProductGroup.cs" />
-    <Compile Include="Models\Digital\Products\DwalinPackProduct.cs" />
-    <Compile Include="Models\Digital\Products\EowynPackProduct.cs" />
-    <Compile Include="Models\Digital\Products\FaramirPackProduct.cs" />
-    <Compile Include="Models\Digital\Products\LegolasPackProduct.cs" />
-    <Compile Include="Models\Digital\Products\StarterProduct.cs" />
-    <Compile Include="Models\Digital\DigitalRarity.cs" />
-    <Compile Include="Models\Digital\Products\ValorCardsProduct.cs" />
-    <Compile Include="Models\Digital\ViewModels\DigitalCardViewModel.cs" />
-    <Compile Include="Models\Digital\ViewModels\DigitalSearchViewModel.cs" />
     <Compile Include="Models\ICard.cs" />
     <Compile Include="Models\ICardSet.cs" />
     <Compile Include="Models\ILabeled.cs" />
@@ -659,30 +623,6 @@
     <Compile Include="Models\LotR\UserSettings.cs" />
     <Compile Include="Models\LotR\TextTemplate.cs" />
     <Compile Include="Models\LotR\ViewModels\AdvancedSearchViewModel.cs" />
-    <Compile Include="Models\Arkham\ArkhamCardSubtype.cs" />
-    <Compile Include="Models\Arkham\ArkhamDeckType.cs" />
-    <Compile Include="Models\Arkham\AssetSlot.cs" />
-    <Compile Include="Models\Arkham\ArkhamCard.cs" />
-    <Compile Include="Models\Arkham\ArkhamEncounterSet.cs" />
-    <Compile Include="Models\Arkham\ConnectionSymbol.cs" />
-    <Compile Include="Models\Arkham\DoomValue.cs" />
-    <Compile Include="Models\Arkham\StatType.cs" />
-    <Compile Include="Models\Arkham\ArkhamCardType.cs" />
-    <Compile Include="Models\Arkham\ClueValue.cs" />
-    <Compile Include="Models\Arkham\ArkhamProduct.cs" />
-    <Compile Include="Models\Arkham\ClassSymbol.cs" />
-    <Compile Include="Models\Arkham\ArkhamSearchResult.cs" />
-    <Compile Include="Models\Arkham\Number.cs" />
-    <Compile Include="Models\Arkham\ViewModels\ArkhamSearchView.cs" />
-    <Compile Include="Models\Arkham\ViewModels\ArkhamSearchSort.cs" />
-    <Compile Include="Models\Arkham\Shroud.cs" />
-    <Compile Include="Models\Arkham\Products\CoreSet.cs" />
-    <Compile Include="Models\Arkham\Products\TheDunwichLegacy.cs" />
-    <Compile Include="Models\Arkham\Skill.cs" />
-    <Compile Include="Models\Arkham\SkillIcon.cs" />
-    <Compile Include="Models\Arkham\ViewModels\ArkhamCardViewModel.cs" />
-    <Compile Include="Models\Arkham\ViewModels\ArkhamSearchViewModel.cs" />
-    <Compile Include="Models\Arkham\ViewModels\LinkViewModel.cs" />
     <Compile Include="Models\Artist.cs" />
     <Compile Include="Models\Card.cs" />
     <Compile Include="Models\LotR\ViewModels\CardImageViewModel.cs" />
@@ -750,17 +690,6 @@
     <Compile Include="Models\LotR\ViewModels\LinkViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\RingsDbDeckViewModel.cs" />
     <Compile Include="Models\LotR\ViewModels\UserSettingsViewModel.cs" />
-    <Compile Include="Models\Marvel\MarvelCard.cs" />
-    <Compile Include="Models\Marvel\MarvelCardType.cs" />
-    <Compile Include="Models\Marvel\MarvelDeckType.cs" />
-    <Compile Include="Models\Marvel\MarvelProduct.cs" />
-    <Compile Include="Models\Marvel\MarvelSearchResult.cs" />
-    <Compile Include="Models\Marvel\Products\CoreSet.cs" />
-    <Compile Include="Models\Marvel\MarvelTrait.cs" />
-    <Compile Include="Models\Marvel\ViewModels\MarvelCardViewModel.cs" />
-    <Compile Include="Models\Marvel\ViewModels\MarvelSearchSort.cs" />
-    <Compile Include="Models\Marvel\ViewModels\MarvelSearchView.cs" />
-    <Compile Include="Models\Marvel\ViewModels\MarvelSearchViewModel.cs" />
     <Compile Include="Models\RingsDb\RingsDbCard.cs" />
     <Compile Include="Models\RingsDb\RingsDbDeck.cs" />
     <Compile Include="Models\LotR\Scenarios\AngmarAwakened\AcrossTheEttenmoorsScenario.cs" />
@@ -1082,8 +1011,6 @@
     <Compile Include="Models\YouTube\RingsDbCardLink.cs" />
     <Compile Include="Models\YouTube\YouTubeLink.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Digital\DigitalCardRepository.cs" />
-    <Compile Include="Services\Digital\DigitalProductRepository.cs" />
     <Compile Include="Services\ICardRepository.cs" />
     <Compile Include="Services\IProductRepository.cs" />
     <Compile Include="Services\ICharacterRepository.cs" />
@@ -1201,8 +1128,6 @@
     <Compile Include="Services\LotR\RingsDb\RingsDbRepository.cs" />
     <Compile Include="Services\LotR\Scenarios\IScenarioService.cs" />
     <Compile Include="Services\LotR\Legacy\OldAdvancedSearchService.cs" />
-    <Compile Include="Services\Arkham\ArkhamProductRepository.cs" />
-    <Compile Include="Services\Arkham\ArkhamSearchService.cs" />
     <Compile Include="Services\CardRepository.cs" />
     <Compile Include="Services\LotR\Categories\CategoryServiceBase.cs" />
     <Compile Include="Services\LotR\Categories\EncounterCategoryService.cs" />
@@ -1276,8 +1201,6 @@
     <Compile Include="Services\LotR\Translation\Phrase.cs" />
     <Compile Include="Services\LotR\Translation\TranslationBase.cs" />
     <Compile Include="Services\LotR\Translation\TranslationService.cs" />
-    <Compile Include="Services\Marvel\MarvelProductRepository.cs" />
-    <Compile Include="Services\Marvel\MarvelSearchService.cs" />
     <Compile Include="Views\SelectListItemExtends.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -1517,19 +1440,12 @@
     <Content Include="Views\LotR\Scenarios.cshtml" />
     <Content Include="Views\LotR\AdvancedSearch.cshtml" />
     <Content Include="Error.html" />
-    <Content Include="Views\Arkham\Search.cshtml" />
-    <Content Include="Views\Arkham\Details.cshtml" />
     <Content Include="Views\LotR\Characters.cshtml" />
-    <Content Include="Views\Digital\Search.cshtml" />
-    <Content Include="Views\Digital\Details.cshtml" />
-    <Content Include="Views\Marvel\Search.cshtml" />
     <Content Include="Views\LotR\Creators.cshtml" />
     <Content Include="Views\LotR\Settings.cshtml" />
     <Content Include="Views\LotR\Designs.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\LotR\Play\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>

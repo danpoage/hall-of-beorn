@@ -81,8 +81,6 @@ Thy heart shall then rest in the forest no more.
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
             addGroup("The Three Hunters");
-
-            DigitalCard("Legolas-LG");
         }
     }
 }

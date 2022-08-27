@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
-using HallOfBeorn.Models.Digital;
 
 namespace HallOfBeorn.Models.LotR.ViewModels
 {
@@ -68,18 +66,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                 return;
 
             cardLinks.Add(link);
-        }
-
-        public void AddDigitalCardLink(DigitalCard card)
-        {
-            if (card == null) {
-                return;
-            }
-
-            var sphere = card.Sphere != DigitalSphere.None ? card.Sphere.ToString() + " " : string.Empty;
-            var title = string.Format("{0} ({1}{2})", card.Title, sphere, card.CardType.ToString().Replace("_", "-"));
-
-            cardLinks.Add(new Link(LinkType.Hall_of_Beorn_Digital_Image, card, title));
         }
 
         private readonly Dictionary<string, Character> allCharacters = new Dictionary<string, Character>();

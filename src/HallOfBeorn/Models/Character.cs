@@ -76,7 +76,6 @@ namespace HallOfBeorn.Models
         }
 
         private readonly HashSet<string> lotrCards = new HashSet<string>();
-        private readonly List<string> digitalCards = new List<string>();
 
         private readonly HashSet<string> traits = new HashSet<string>();
 
@@ -249,11 +248,6 @@ namespace HallOfBeorn.Models
             lotrCards.Add(card);
         }
 
-        protected void DigitalCard(string card)
-        {
-            digitalCards.Add(card);
-        }
-
         public string Name { get; private set; }
         public string Slug { get; private set; }
 
@@ -309,8 +303,6 @@ namespace HallOfBeorn.Models
         {
             return lotrCards.Contains(slug);
         }
-
-        public IEnumerable<string> DigitalCards { get { return digitalCards; } }
 
         public IEnumerable<string> Traits()
         {

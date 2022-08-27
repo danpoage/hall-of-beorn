@@ -52,8 +52,6 @@ namespace HallOfBeorn.Models.Characters
             addGroup("Lórien", "Lorien");
 
             addItem("Celebrían's Stone", "Celebrian's-Stone-Core");
-
-            DigitalCard("Arwen-Starter");
         }
     }
 }

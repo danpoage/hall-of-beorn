@@ -62,8 +62,6 @@ His final kill score number was forty-two in that battle, surpassing his friend 
             addGroup("The Council of Elrond", "The-Council-of-Elrond");
             addGroup("The Fellowship", "The-Fellowship");
             addGroup("The Three Hunters");
-
-            DigitalCard("Gimli-Starter");
         }
     }
 }
