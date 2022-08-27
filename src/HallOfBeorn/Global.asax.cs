@@ -45,6 +45,7 @@ namespace HallOfBeorn
             
             var productRepository = new ProductRepository();
             System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository] = productRepository;
+            ProductRepository.Instance = productRepository;
 
             var cardRepository = new LotRCardRepository(productRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository] = cardRepository;
@@ -72,6 +73,7 @@ namespace HallOfBeorn
 
             var ringsDbService = new RingsDbService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.RingsDbService] = ringsDbService;
+            RingsDbService.Instance = ringsDbService;
 
             var scenarioService = new ScenarioService(
                 playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,

@@ -23,9 +23,9 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult CardFront(string id)
         {
-            var productRepo = new ProductRepository();
-            var cardRepo = new LotRCardRepository(productRepo);
-
+            var cardRepo = (LotRCardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
+            var productRepo = (ProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
+            
             var card = cardRepo.FindBySlug(id);
 
             if (card == null)

@@ -109,7 +109,17 @@ namespace HallOfBeorn.Handlers.LotR
                 decks = ringsDbService.GetUserDecks(userId);
             }
 
-            foreach (var deck in decks)
+            var defaultLimit = 0;
+            if (!int.TryParse(settings.DefaultLimit, out defaultLimit))
+            {
+                defaultLimit = 200;
+            }
+            var limit = model.Limit.GetValueOrDefault(defaultLimit);
+
+            //TODO: Add offset support
+            //var offset = model.Offset.GetValueOrDefault(0);
+
+            foreach (var deck in decks.Take(limit))
             {
                 var deckViewModel = GetDeckViewModel(foundSlugs, deck);
                 if (deckViewModel != null)

@@ -13343,10 +13343,14 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             {
                 if (instance == null)
                 {
-                    instance = new RingsDbService(new LotRCardRepository(ProductRepository.Instance));
+                    throw new Exception("RingsDbService.Instance not initialized");
                 }
 
                 return instance;
+            }
+            set
+            {
+                instance = value;
             }
         }
     }

@@ -302,6 +302,8 @@ namespace HallOfBeorn.Models
 
         public CreatorLink WithDeckLabels(params int[] deckIds)
         {
+            //TODO: Fix performance of this
+            /*
             foreach (var deckId in deckIds)
             {
                 var labels = HallOfBeorn.Services.LotR.RingsDb.RingsDbService.Instance
@@ -309,6 +311,7 @@ namespace HallOfBeorn.Models
 
                 WithLabels(labels);
             }
+            */
             return this;
         }
     }

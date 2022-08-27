@@ -112,10 +112,15 @@ namespace HallOfBeorn.Services.LotR
             {
                 if (instance == null)
                 {
-                    instance = new ProductRepository();
+                    throw new Exception("ProductRepository.Instance not initialized");
+                    //instance = new ProductRepository();
                 }
 
                 return instance;
+            }
+            set
+            {
+                instance = value;
             }
         }
     }
