@@ -72,7 +72,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithTextLine("Response: After attached character is declared as an attacker, exhaust Bow of Yew to deal 1 damage to the defending enemy.")
                 .WithFlavorLine("\"They would shoot at us with their great bows of yew...\"")
                 .WithFlavorLine("-The Lord of the Eagles, The Hobbit")
-                .WithTemplate("<p class='main-text'>Attach to a {trait:Dale.@Dale} or {trait:Warrior.@Warrior} character. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached character is declared as an attacker, exhaust {self} to deal 1 damage to the defending enemy.</p><p class='flavor-text'>&ldquo;They would shoot at us with their great bows of yew...&rdquo;<br>&ndash;The Lord of the Eagles, The Hobbit</p>")
                 .WithInfo(9, 3, Artist.Sara_Biddle);
             addAttachment("Map of Rhovanion", 1, Sphere.Lore, false)
                 .WithTraits("Item.")
@@ -89,7 +88,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheWildsOfRhovanion
                 .WithTextLine("Attached hero gets +2 Willpower and collects an additional resource during the resource phase.")
                 .WithFlavorLine("...the necklace of Girion, Lord of Dale, made of five hundred emeralds green as grass, which he gave for the arming of his eldest son...")
                 .WithFlavorLine("-The Hobbit")
-                .WithTemplate("<p class='main-text'>{keyword:Guarded (enemy or location).}</p><p class='main-text'>Attach to a hero.</p><p class='main-text'>Attached hero gets +2 {Willpower} and collects an additional resource during the resource phase.</p><p class='flavor-text'>...the necklace of Girion, Lord of Dale, made of five hundred emeralds green as grass, which he gave for the arming of his eldest son...&ndash;The Hobbit</p>")
                 .WithInfo(11, 3, Artist.Drazenka_Kimpel);
             addEvent("Traffic from Dale", 1, Sphere.Leadership)
                 .WithTextLine("Planning Action: Choose a Dale hero you control. Add 1 resource to its pool for each character you control with a player attachment. You can only play 1 copy of Traffic from ~Dale each round.")

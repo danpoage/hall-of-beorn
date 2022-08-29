@@ -21,9 +21,6 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
 
             addCard(LotRCard.NightmareSetup(setName, setName)
                 .WithText("You are playing Nightmare mode.\r\nForced: After The Thing in the Depths enemy enters play, it attacks each player in turn order from the staging area (deal and resolve a shadow card for each attack).\r\nStage 3B gains: \"Forced: At the beginning of the quest phase, if there are fewer locations in play than the number of players, discard cards from the top of the encounter deck until a location is discarded. Reveal that location.\r\nForced: At the end of the refresh phase, resolve the grapple keyword on each Tentacle enemy in play.")
-                .WithTemplate(
-@"<p class='main-text'>You are playing Nightmare mode.</p>
-<p class='main-text'>Forced: After The Thing in the Depths enemy enters play, it attacks each player in turn order from the staging area (deal and resolve a shadow card for each attack).</p><p class='main-text'>Stage 3B gains: <blockquote><b>Forced:</b> At the beginning of the quest phase, if there are fewer locations in play than the number of players, discard cards from the top of the encounter deck until a location is discarded. Reveal that location.</blockquote></p><p class='main-text'><b>Forced:</b> At the end of the refresh phase, resolve the grapple keyword on each <b><i>Tentacle</i></b> enemy in play.</p>")
                 .WithOppositeText(
 @"Begin with the standard quest deck and encounter deck for the The Thing in the Depths scenario.
 Remove the following cards, in the specified quantities, from the standard encounter deck:
@@ -37,17 +34,6 @@ Remove the following cards, in the specified quantities, from the standard encou
 Then shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Thing in the Depths encounter deck.
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
-                .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for <i>The Thing in the Depths</i> scenario.</p><p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
-<ul style='list-style-type:none'><b>
-<li>2x Corsair Infiltrator</li>
-<li>1x Crew Quarters</li>
-<li>1x Crushing Arm</li>
-<li>1x Grasping Arm</li>
-<li>1x Giant Arm</li>
-</b></ul>
-<p>Then shuffle the encounter cards in this Nightmare Deck into the remainder of the standard <i>The Thing in the Depths</i> encounter deck.</p>
-<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Nicholas_Gregory));
             addCard(LotRCard.Location("Captain's Quarters", string.Empty, setStormcaller, 5, 5)
                 .WithUnique()

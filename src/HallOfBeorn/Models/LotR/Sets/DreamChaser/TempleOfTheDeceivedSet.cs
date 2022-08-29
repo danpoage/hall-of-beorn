@@ -34,14 +34,12 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithKeywords("Restricted.")
                 .WithTextLine("Attach to a Leadership or sentinel hero. Restricted.")
                 .WithTextLine("Response: After attached hero defends against an attack, exhaust Armored Destrier to ready attached hero. Then, discard a shadow card from another enemy engaged with the defending player.")
-                .WithTemplate("<p class='main-text'>Attach to a {sphere:Leadership} or sentinel hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached hero defends against an attack, exhaust {self} to ready attached hero. Then, discard a shadow card from another enemy engaged with the defending player.</p>")
                 .WithInfo(59, 3, Artist.Sandara_Tang);
             addAlly("Déorwine", 4, Sphere.Tactics, true, 0, 1, 3, 3)
                 .WithTraits("Rohan.", "Warrior.")
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Response: While Déorwine is defending, spend 1 Leadership resource to cancel a shadow effect dealt to the attacking enemy. Any player may trigger this action.")
-                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> While {self} is defending, spend 1 {sphere:Leadership} resource to cancel a shadow effect dealt to the attacking enemy. Any player may trigger this action.</p>")
                 .WithInfo(60, 3, Artist.Aleksander_Karcz);
             addEvent("Revealed in Wrath", 1, Sphere.Tactics)
                 .WithTextLine("Play only if you control a Noldor hero.")

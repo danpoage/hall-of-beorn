@@ -23,7 +23,6 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("When a player card effect would reduce your threat by any amount, reduce that amount to 1.")
                 .WithTextLine("While playing an event with the printed doomed keyword, Saruman gains the printed Leadership, Spirit, and Tactics icons.")
                 .WithTextLine("Response: After you play a card with the doomed keyword, ready Saruman.")
-                .WithTemplate("<p class='main-text'>When a player card effect would reduce your threat by any amount, reduce that amount to 1.</p><p class='main-text'>While playing <a href='/LotR?Query=%2Bkeyword%3ADoomed&CardType=Event' target='_blank' title='Doomed Events'>an event with the printed doomed keyword</a>, {self} gains the printed {sphere:Leadership}, {sphere:Spirit}, and {sphere:Tactics} icons.<p><p class='main-text'><b>Response:</b> After you play a card with the doomed keyword, ready {self}.</p>")
                 .WithInfo(54, 1, Artist.Martin_de_Diego_Sadaba);
             addAttachment("Power of Command", 1, Sphere.Leadership, false)
                 .WithTraits("Master.")
@@ -161,12 +160,10 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("Setup: ~Search your deck for an attachment with a printed cost of 1 and put it into play. Then, flip this card over.")
                 .WithFlavorLine("\"...the rule of no realm is mine, neither of Gondor nor any other, great or small. But all worthy things that are in peril as the world now stands, those are my card.\"")
                 .WithFlavorLine("-Gandalf, The Return of the King")
-                .WithTemplate("<p class='main-text'>You cannot choose more than 1 starting hero.</p><p class='main-text'><b>Setup:</b> Search your deck for an <a href='/LotR?CardType=Attachment&Cost=1&CostOperator=eq' target='_blank' title='1-cost attachments'>attachment with a printed cost of 1</a> and put it into play. Then, flip this card over.</p><p class='flavor-text'>&rdquo;...the rule of no realm is mine, neither of Gondor nor any other, great or small. But all worthy things that are in peril as the world now stands, those are my card.&ldquo;<br>&ndash;Gandalf, The Return of the King</p>")
                 .WithOppositeTextLine("The first non-unique card you play each planning phase does not require a resource match.")
                 .WithOppositeTextLine("Action: Exhaust this card and raise your threat by 1 to (choose two): Ready your starting hero, add 2 resources to your starting hero's resource pool, or heal 3 damage from your starting hero.")
                 .WithOppositeFlavorLine("\"...this shall be his great task, and maybe the end of his labours.\"")
                 .WithOppositeFlavorLine("-Elrond, The Fellowship of the Ring")
-                .WithTemplate2("<p class='main-text'>The first non-unique card you play each planning phase does not require a resource match.</p><p class='main-text'><b>Action:</b> Exhaust this card and raise your threat by 1 to <i>(choose two)</i>: Ready your starting hero, add 2 resources to your starting hero's resource pool, or heal 3 damage from your starting hero.</p><p class='flavor-text'>&ldquo;...this shall be his great task, and maybe the end of his labours.&rdquo;<br>&ndash;Elrond, The Fellowship of the Ring</p>")
                 .WithInfo(74, 1, Artist.Justin_Gerard);
             addQuest("Wainrider Camp", EncounterSet.ChallengeOfTheWainriders, 1, 'A', 0)
                 .WithKeywords("Race.")

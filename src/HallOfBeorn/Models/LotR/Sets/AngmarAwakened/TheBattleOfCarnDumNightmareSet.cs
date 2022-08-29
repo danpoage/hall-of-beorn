@@ -36,23 +36,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
 Keyword: Siege
 
 If a quest card has the siege keyword, when characters are commited to that quest, they count their total Defense instead of their total Willpower when resolving the quest. Enemies and locations in the staging area still use their Threat in opposition to this quest attempt.")
-                .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for The Battle of Carn Dûm scenario.</p>
-<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
-<ul style='list-style-type:none'><b>
-<li>1x Vile Afflication</li>
-<li>1x Furious Charge</li>
-<li>1x Orc Ambush</li>
-<li>1x Angmar Orc</li>
-<li>3x Angmar Marauder</li>
-<li>3x Terror of the North</li>
-<li>2x Accursed Battlefield</li>
-<li>1x Blight of Carn Dûm</li>
-</b></ul>
-<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Battle of Carn Dûm encounter deck.</p>
-<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>
-<p><b>Keyword: Siege</b></p>
-<p>If a quest card has the siege keyword, when characters are commited to that quest, they count their total <img src='/Images/defense.png' style='height:12px;margin-bottom:-2px'/> instead of their total <img src='/Images/willpower.png' style='height:12px;margin-bottom:-2px;'/> when resolving the quest. Enemies and locations in the staging area still use their <img src='/Images/threat.png' style='height:12px;margin-bottom:-2px;'/> in opposition to this quest attempt.</p>")
                 .WithInfo(1, 1, Artist.Rafal_Hrynkiewicz);
             addEnemy("Orc Wight", EncounterSet.TheBattleOfCarnDumNightmare.Name, 30, 2, 3, 2, 4)
                 .WithTraits("Orc.", "Undead.")

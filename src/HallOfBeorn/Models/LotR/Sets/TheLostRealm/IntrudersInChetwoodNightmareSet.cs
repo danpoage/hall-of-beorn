@@ -33,22 +33,6 @@ Remove the following cards, in the specified quantities, from the standard encou
 Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Intruders in ~Chetwood encounter deck.
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
-                .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for the Intruders in Chetwood scenario.</p>
-<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
-<ul style='list-style-type:none'><b>
-<li>1x Angmar Orc</li>
-<li>3x Angmar Marauder</li>
-<li>2x Chetwood Forest</li>
-<li>1x Outlying Homestead</li>
-<li>2x Borders of Bree-land</li>
-<li>1x Rugged Country</li>
-<li>1x Shrouded Hills</li>
-<li>3x Surprising Speed</li>
-<li>2x Sudden Assault</li>
-</b></ul>
-<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Intruders in Chetwood encounter deck.</p>
-<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Nicholas_Gregory);
             addEnemy("Orc Abductor", EncounterSet.IntrudersInChetwoodNightmare.Name, 45, 2, 4, 4, 5)
                 .WithTraits("Orc.")

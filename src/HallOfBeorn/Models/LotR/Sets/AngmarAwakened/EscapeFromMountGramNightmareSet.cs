@@ -32,20 +32,6 @@ Then, shuffle the encounter cards in this Nightmare Deck into the remainder of t
 Note: This Nightmare Deck includes a card for the Angmar Orcs encounter set, Orc of Thaurdir. During setup, this card should be set aside along with the rest of the Angmar Orcs encounter set.
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
-                .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for the Escape from Mount Gram scenario.</p>
-<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
-<ul style='list-style-type:none'><b>
-<li>4x Prison Cell</li>
-<li>3x Dungeon Guard</li>
-<li>1x Jailor Gornákh</li>
-<li>2x Interrogation</li>
-<li>1x Goblin Tormentor</li>
-<li>1x Cruel Torturer</li>
-<b></ul>
-<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Escape from Mount Gram encounter deck.</p>
-<p><b>Note:</b> This Nightmare Deck includes a card for the Angmar Orcs encounter set, Orc of Thaurdir. During setup, this card should be set aside along with the rest of the Angmar Orcs encounter set.</p>
-<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Guillaume_Ducos);
             addEnemy("Jailor Gornákh", EncounterSet.EscapeFromMountGramNightmare.Name, 45, 4, 5, 5, 14)
                 .WithUnique()
@@ -64,7 +50,6 @@ Finally, flip this setup card over and place it next to the quest deck. Its effe
                 .WithKeywords("Capture 1.")
                 .WithTextLine("Capture 1.")
                 .WithTextLine("While Prison Cell is the active location, it gains: \"Planning Action: Rescue a random card from underneath Prison Cell. Then, raise each player's threat by X, where X is that card's printed cost. (Limit once per round).\"")
-                .WithTemplate("<p class='main-text'>{keyword:Capture 1.}</p><p class='main-text'>While {self} is the active location, it gains: <blockquote><b>Planning Action:</b> Rescue a random card from underneath {self}. Then, raise each player's threat by X, where X is that card's printed cost. (Limit once per round).</blockquote></p>")
                 .WithInfo(4, 4, Artist.Guillaume_Ducos);
             addLocation("Torture Chamber", EncounterSet.EscapeFromMountGramNightmare.Name, 0, Card.VALUE_X)
                 .WithTraits("Underground.")

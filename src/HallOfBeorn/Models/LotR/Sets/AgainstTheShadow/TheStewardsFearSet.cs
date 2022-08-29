@@ -42,7 +42,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithTextLine("Limit 1 per hero.")
                 .WithTextLine("Attached hero gains +1 Defense. (+2 Defense instead if attached hero has the Gondor trait.)")
                 .WithFlavorLine("There flowered a White Tree, and that was for Gondor... -The Return of the King")
-                .WithTemplate("<p>Attach to a {type:hero}. {keyword:Restricted.}</p><p>Limit 1 per hero.</p><p>Attached hero gains +1 {Defense}. (+2 {Defense} instead if attached hero has the {trait:Gondor.@Gondor} trait.)</p><p class='flavor-text'>There flowered a White Tree, and that was for Gondor...<br>&ndash;The Return of the King</p>")
                 .WithInfo(5, 3, Artist.Owen_William_Weber);
             addAlly("Ethir Swordsman", 2, Sphere.Spirit, false, 1, 1, 1, 1)
                 .WithTraits("Outlands.")

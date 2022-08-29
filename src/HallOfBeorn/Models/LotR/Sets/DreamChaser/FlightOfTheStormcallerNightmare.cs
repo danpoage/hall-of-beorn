@@ -20,10 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
             addCard(LotRCard.NightmareSetup(setName, setName)
                 .WithText("You are playing Nightmare mode.\r\nWhile you are at the same stage as the Stormcaller, the main quest gets +X quest points, where X is the Stormcaller's remaining hit points.")
                 .WithFlavor("...the Sea became a word of fear among them, and a token of death, and they turned their faces away from the hills in the west.\r\n-The Fellowship of the Ring")
-                .WithTemplate(
-@"<p class='main-text'>You are playing Nightmare mode.</p>
-<p class='main-text'>While you are at the same stage as the Stormcaller, the main quest gets +X quest points, where X is the Stormcaller's remaining hit points.</p>
-<p class='flavor-text'>...the Sea became a word of fear among them, and a token of death, and they turned their faces away from the hills in the west.<br>&mdash;The Fellowship of the Ring</p>")
                 .WithOppositeText(
 @"Begin with the standard quest deck and encounter deck for the Flight of the Stormcaller scenario.\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:
 
@@ -39,19 +35,6 @@ Then shuffle the encounter cards in this Nightmare Deck into the remainder of th
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.
 
 ☸*: Some Cards in the Flight of the Stormcaller Nightmare Deck have Sailing Success symbols (☸) with an asterisk (*) next to them. This indicates that the card has a Forced effect which will trigger when the card is discarded during a sailing test.")
-                .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for the Flight of the Stormcaller scenario.</p><p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
-<ul style='list-style-type:none'><b>
-<li>2x Calm Waters</li>
-<li>2x Corsair Skiff</li>
-<li>2x Southron Sailor</li>
-<li>2x Serpent's Blade</li>
-<li>1x Hidden Cove</li>
-<li>2x Jagged Cliff</li>
-</b></ul>
-<p>Then shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Flight of the Stormcaller encounter deck.</p>
-<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>
-<p><b>☸*:</b> Some Cards in the Flight of the Nightmare Deck have Sailing Success symbols (<b>☸</b>) with an asterisk (<b>*</b>) next to them. This indicates that the card has a <b>Forced</b> effect which will trigger when the card is discarded during a sailing test.</p>")
                 .WithInfo(1, 1, Artist.Federico_Musetti));
             addCard(LotRCard.Enemy("Raider of the Storm", string.Empty, setName, 28, 0, 3, 3, 4)
                 .WithTraits("Corsair.")

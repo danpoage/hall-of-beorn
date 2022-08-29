@@ -66,7 +66,6 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithTextLine("Response: When attached hero is dealt any amount of damage, reduce that damage by 1.")
                 .WithFlavorLine("It was of silver-steel which the Elves call mithril, and with it went a belt of pearls and crystals.")
                 .WithFlavorLine("-The Hobbit")
-                .WithTemplate("<p class='main-text'>{keyword:Guarded (location).}</p><p class='main-text;'>Attach to a hero.</p><p class='main-text'><b>Response:</b> When attached hero is dealt any amount of damage, reduce that damage by 1.</p><p class='flavor-text'>It was of silver-steel which the Elves call mithril, and with it went a belt of pearls and crystals. &ndash;The Hobbit</p>")
                 .WithInfo(152, 3, Artist.Sebastian_Zakrzewski);
             addEvent("Reforged", 254, Sphere.Spirit)
                 .WithTextLine("Action: Choose an attachment with a printed cost of X in any player's discard pile and play that attachment for no cost. (The chosen attachment can belong to any sphere of influence.)")

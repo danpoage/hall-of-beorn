@@ -39,7 +39,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addEvent("Fierce Defense", 3, Sphere.Tactics)
                 .WithTextLine("Combat Action: Deal 3 damage to a non-unique enemy engaged with you.")
                 .WithTextLine("Valour Combat Action: Discard a non-unique enemy engaged with you.")
-                .WithTemplate("<p class='main-text'><b>Combat Action:</b> Deal 3 damage to a non-unique enemy engaged with you.</p><p class='main-text'><b>Valour Combat Action:</b> Discard a non-unique enemy engaged with you.</p><p class='flavor-text'>When thirteen had fallen the rest fled shrieking, leaving the defenders unharmed, except for Sam who had a scrath along the scalp.<br>&mdash;The Fellowship of the Ring</p>")
                 .WithInfo(113, 3, Artist.Stanislav_Dikolenko);
             addAlly("Eregion Survivor", 2, Sphere.Spirit, false, 1, 1, 1, 3)
                 .WithTraits("Noldor.")
@@ -62,7 +61,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("Attached hero gets +1 Attack for each side quest in the victory display. (Limit +3 Attack.)")
                 .WithFlavorLine("...glad would he have been to know its fate who wrought it slowly long ago in the North-kingdom when the Dúnedain were young...")
                 .WithFlavorLine("-The Return of the King")
-                .WithTemplate("<p class='main-text'>Attach to a hero. {keyword:Restricted.}</p>Attached hero gets +1 {Attack} for each side quest in the victory display (Limit +3 {Attack}.)</p><p class='flavor-text'>...glad would he have been to know its fate who wrought it slowly long ago in the North-kingdom when the Dúnedain were young...<br>&ndash;The Return of the King</p>")
                 .WithInfo(117, 3, Artist.Lucas_Durham);
             addEvent("Open the Armory", 1, Sphere.Neutral)
                 .WithTextLine("Action: Search the top 10 cards of your deck for a Weapon or Armor attachment and add it to your hand. Shuffle your deck.")

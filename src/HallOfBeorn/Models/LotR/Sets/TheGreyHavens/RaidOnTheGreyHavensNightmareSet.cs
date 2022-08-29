@@ -21,10 +21,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithTextLine("You are playing Nightmare mode.")
                 .WithTextLine("Captain Sahír and Na'asiyah each gain: \"Cannot have attachments.\"")
                 .WithTextLine("Setup: Instead of adding Dream-chaser to the staging area during setup, each player must search the encounter deck for a different unique location and add it to the staging area, one of which must be the Dream-chaser.")
-                .WithTemplate(
-@"<p>You are playing Nightmare mode.</p>
-<p>Captain Sahír and Na'asiyah each gain: &ldquo;Cannot have attachments.&rdquo;</p>
-<p><b>Setup:</b> Instead of adding Dream-chaser to the staging area during setup, each player must search the encounter deck for a different unique location and add it to the staging area, one of which must be the Dream-chaser.</p>")
                 .WithOppositeTextLine("Begin with the standard quest deck and encounter deck for the Raid on the Grey Havens scenario.")
                 .WithOppositeTextLine("Remove the following cards, in the specified quantities, from the standard encounter deck:")
                 .WithOppositeTextLine("1x Sahír's Advance (quest stage 2)")
@@ -33,16 +29,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheGreyHavens
                 .WithOppositeTextLine("1x Umbar Raider")
                 .WithOppositeTextLine("Then shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Raid on the Grey Havens encounter deck.")
                 .WithOppositeTextLine("Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
-                .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for the Raid on the Grey Havens scenario.</p><p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
-<ul style='list-style-type:none'><b>
-<li>1x Sahír's Advance (quest stage 2)</li>
-<li>3x Corsair Arsonist</li>
-<li>2x Elven Wave-runner</li>
-<li>1x Umbar Raider</li>
-</b></ul>
-<p>Then shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Raid on the Grey Havens encounter deck.</p>
-<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Borja_Pindado);
             addQuest("Sahír's Advance", EncounterSet.RaidOnTheGreyHavensNightmare, 2, 'A', Card.VALUE_NA)
                 .WithFlavorLine("A menacing ship leads the raiders, its charismatic captain bellowing orders to the Corsairs: \"Kill the defenders!\" he shouts. \"Destroy their ships!\"")

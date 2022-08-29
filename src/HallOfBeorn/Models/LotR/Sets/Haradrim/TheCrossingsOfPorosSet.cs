@@ -72,7 +72,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("Encounter.")
                 .WithTextLine("When Revealed: Ready each hero committed to the quest and remove Wind from the Sea from the game.")
                 .WithShadow("Shadow: Ready the defending character.")
-                .WithTemplate("<p class='main-text'>{keyword:Encounter.}</p><p class='main-text'><b>When Revealed:</b> Ready each hero committed to the quest and remove {self} from the game.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Ready the defending character.</p>")
                 .WithInfo(144, 3, Artist.Davis_Engel);
             addObjectiveAlly("Poros Garrison", EncounterSet.TheCrossingsOfPoros, 3, 4, 3, 6)
                 .WithUnique()
@@ -154,11 +153,9 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
             addQuest("Flight to Gondor", EncounterSet.TheCrossingsOfPoros, 1, 'A', Card.VALUE_NA)
                 .WithTextLine("Setup: Set Poros Garrison and each of the following encounter sets aside, out of play: Mountains of Shadow, Desert Sands, Desert Creatures, Harad Soldiers, and Mordor Orcs. The first player adds The Black Serpent to the staging area and shuffles the encounter deck. Each other player reveals an encounter card.")
                 .WithFlavorLine("You have escaped the dungeons of Cirith Gurat with the rescued members of Kahliel's tribe, but it's still a long way to Gondor.")
-                .WithTemplate("<p class='flavor-text'>You have escaped the dungeons of Cirith Gurat with the rescued members of Kahliel's tribe, but it's still a long way to Gondor.</p><p class='main-text'><b>Setup:</b> Set Poros Garrison and each of the following encounter sets aside, out of play: Mountains of Shadow, Desert Sands, Desert Creatures, Harad Soldiers, and Mordor Orcs. The first player adds The Black Serpent to the staging area and shuffles the encounter deck. Each other player reveals an encounter card.</p>")
                 .WithOppositeTextLine("Allies enter play exhausted.")
                 .WithOppositeTextLine("Forced: At the end of the planning phase, advance to a random stage 2.")
                 .WithOppositeFlavorLine("By now the Orcs will be searching for their escaped prisoners, and The Black Serpent will be seeking revenge against the outlaws who ambushed his caravan. You cannot hope to outrun your enemies with the exhausted refugees in your care, so you consult with Kahliel to decide the safest way north.")
-                .WithTemplate2("<p class='flavor-text'>By now the Orcs will be searching for their escaped prisoners, and The Black Serpent will be seeking revenge against the outlaws who ambushed his caravan. You cannot hope to outrun your enemies with the exhausted refugees in your care, so you consult with Kahliel to decide the safest way north.</p><p class='main-text'>Allies enter play exhausted.</p><p class='main-text'><b>Forced:</b> At the end of the planning phase, advance to a random stage 2.</p>")
                 .WithIncludedEncounterSets(EncounterSet.MountainsOfShadow, EncounterSet.DesertSands, EncounterSet.DesertCreatures, EncounterSet.HaradSoldiers, EncounterSet.MordorOrcs)
                 .WithInfo(157, 1, Artist.Alexander_Gustafson);
             addQuest("The Desert Path", EncounterSet.TheCrossingsOfPoros, 2, 'A', 10)

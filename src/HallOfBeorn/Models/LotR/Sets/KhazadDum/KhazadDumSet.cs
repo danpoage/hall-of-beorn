@@ -61,7 +61,6 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithTextLine("Action: Choose a Dwarf character. Until the end of the phase, that character gets +3 Attack.")
                 .WithFlavorLine("Down from the wall leapt Gimli with a fierce cry the echoed in the cliffs. \"Khazâd! Khazâd!\" He soon had work enough.")
                 .WithFlavorLine("-The Two Towers")
-                .WithTemplate("<p><b>Action:</b> Choose a {trait-character:Dwarf.@Dwarf} character. Until the end of the phase, that character gets +3 {Attack}.</p><p class='flavor-text'>Down from the wall leapt Gimli with a fierce cry the echoed in the cliffs. &quot;Khazâd! Khazâd!&quot; He soon had work enough.<br>&ndash;The Two Towers</p>")
                 .WithInfo(8, 3, Artist.Igor_Kieryluk);
             addAlly("Zigil Miner", 2, Sphere.Spirit, false, 1, 1, 1, 1)
                 .WithTraits("Dwarf.")
@@ -238,7 +237,6 @@ namespace HallOfBeorn.Models.LotR.Sets.KhazadDum
                 .WithKeywords("Restricted.")
                 .WithTextLine("Attach to a hero. Restricted.")
                 .WithTextLine("Action: Exhaust Cave Torch to place up to 3 progress tokens on a Dark location.Forced: After Cave Torch exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.")
-                .WithTemplate("<p>Attach to a {type:Hero@hero}. {keyword:Restricted.}</p><p><b>Action:</b> Exhaust self to place up to 3 progress on a {trait:Dark.@Dark} location.</p><p><b>Forced:</b> After {self} exhausts, discard the top card of the encounter deck. If that card is an enemy, add it to the staging area.</p>")
                 .WithInfo(41, 1, Artist.David_Lecossu);
             addEnemy("Great Cave-troll", "Deeps of Moria", 38, 2, 7, 3, 10)
                 .WithTraits("Troll.")

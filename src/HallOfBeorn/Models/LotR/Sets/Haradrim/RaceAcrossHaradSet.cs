@@ -34,7 +34,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("Response: After you engage an enemy, exhaust Steed of the North to ready attached hero.")
                 .WithFlavorLine("Their horses were strong and of proud bearing, but rough-haired...")
                 .WithFlavorLine("-The Return of the King")
-                .WithTemplate("<p class='main-text'>Attach to a {trait:Dúnedain.@Dúnedain} or {trait:Ranger.@Ranger} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After you engage an enemy, exhaust {self} to ready attached hero.</p><p class='flavor-text'>Their horses were strong and of proud bearing, but rough-haired...<br>&ndash;The Return of the King</p>")
                 .WithInfo(30, 3, Artist.Alvaro_Calvo_Escudero);
             addAttachment("Mighty Warrior", 1, Sphere.Tactics, false)
                 .WithTraits("Skill.")
@@ -80,7 +79,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("Immune to player card effects.")
                 .WithTextLine("Damage from undefended attacks against you must be assigned to Tamed Mûmak.")
                 .WithTextLine("If Tamed Mûmak leaves play, the controlling player is eliminated.")
-                .WithTemplate("<p class='main-text'>Immune to player card effects.</p><p class='main-text'>Damage from undefended attacks against you must be assigned to {self}.</p><p class='main-text'><b>If {self} leaves play, the controlling player is eliminated.</b></p>")
                 .WithInfo(38, 4, Artist.Piya_Wannachaiwong);
             addLocation("River Harnen", EncounterSet.RaceAcrossHarad, 4, 10)
                 .WithUnique()

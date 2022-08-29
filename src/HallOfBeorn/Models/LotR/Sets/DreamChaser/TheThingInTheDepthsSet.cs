@@ -21,7 +21,6 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Response: After an encounter card with surge is revealed, either ready Lanwyn or give her +2 Willpower until the end of the phase. (Limit twice per phase.)")
                 .WithFlavorLine("\"The Men of Dale used to have the trick of understanding their language, and used them for messengers to fly to the Men of the Lake...\"")
                 .WithFlavorLine("-Thorin, The Hobbit")
-                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After an encounter card with surge is revealed, either ready {self} or give her +2 {Willpower} until the end of the phase. (Limit twice per phase.)</p><p class='flavor-text'>&ldquo;The Men of Dale used to have the trick of understanding their language, and used them for messengers to fly to the Men of the Lake...&rdquo;<br>&ndash;Thorin, The Hobbit</p>")
                 .WithCommunityVersion("Autumn/Lanwyn")
                 .WithCommunityVersion("RiddermarkLord/Lanwyn-1")
                 .WithInfo(30, 1, Artist.Aleksander_Karcz);
@@ -30,7 +29,6 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Action: Spend 1 Lore resource to look at a facedown shadow card dealt to an engaged enemy. If that card has a shadow effect, Eldahir gets +2 Defense until the end of the phase. Any player may trigger this action. (Limit once per phase.)")
-                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Action:</b> Spend 1 {sphere:Lore} resource to look at a facedown shadow card dealt to an engaged enemy. If that card has a shadow effect, {self} gets +2 {Defense} until the end of the phase. Any player may trigger this action. (Limit once per phase.)</p>")
                 .WithInfo(31, 3, Artist.Kim_Sokol);
             addEvent("Captain's Wisdom", 0, Sphere.Leadership)
                 .WithTextLine("Resource Action: Exhaust a Noble hero you control to add 2 resources to that hero's resource pool.")

@@ -57,7 +57,6 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Attached character gets +1 Willpower.")
                 .WithTextLine("Response: After attached character is removed from the quest, exhaust Windfola to commit attached hero to the quest.")
                 .WithFlavorLine("...the great grey steed Windfola made little of the burden; for Dernhelm was less in weight than many men, though lithe and well-knit in frame. -The Return of the King")
-                .WithTemplate("<p class='main-text'>Attach to a {sphere:Spirit} hero, or to {title:Eowyn@Éowyn}. {keyword:Restricted.}</p><p class='main-text'>Attached hero gets +1 {Willpower}.</p><p class='main-text'><b>Response:</b> After attached character is removed from the quest, exhaust {self} to commit attached hero to the quest.</p><p class='flavor-text'>...the great grey steed Windfola made little of the burden; for Dernhelm was less in weight than many men, though lithe and well-knit in frame. &ndash;The Return of the King</p>")
                 .WithInfo(116, 3, Artist.Sandara_Tang);
             addAlly("Ioreth", 0, Sphere.Lore, true, 0, 0, 0, 1)
                 .WithTraits("Gondor.", "Healer.")
@@ -120,7 +119,6 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithTextLine("Boarding 1. Immune to player card effects.")
                 .WithTextLine("Only Ship objectives can be declared as attackers against ~Raider Flagship.")
                 .WithTextLine("Forced: At the end of the encounter phase, the engaged player reveals the top card of the ~Corsair deck and engages it.")
-                .WithTemplate("<p class='main-text'>{keyword:Boarding 1.} Immune to player card effects.</p><p class='main-text'>Only {trait:Ship.@Ship} objectives can be declared as attackers againt {self}.<p class='main-text'><b>Forced:</b> At the end of the encounter phase, the engaged player reveals the top card of the Corsair deck and engages it.</p>{victory:20}")
                 .WithVictoryPoints(20)
                 .WithInfo(124, 1, Artist.Michael_Rasmussen);
             addShipEnemy("Corsair Skirmisher", EncounterSet.AStormOnCobasHaven, 28, 3, 4, 4, 6)

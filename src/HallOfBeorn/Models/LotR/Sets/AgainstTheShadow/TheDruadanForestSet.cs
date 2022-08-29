@@ -47,7 +47,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithTraits("Silvan.", "Scout.")
                 .WithTextLine("Forced: After a character leaves play, discard Silvan Refugee from play.")
                 .WithFlavorLine("\"The Elves have their own labours and their own sorrows...\" -Gildor, The Fellowship of the Ring")
-                .WithTemplate("<p><b>Forced:</b> After a character leaves play, discard {self} from play.</p><p class='flavor-text'>&quot;The Elves have their own labours and their own sorrows...&quot;<br/>&ndash;Gildor, The Fellowship of the Ring</p>")
                 .WithErrata(1)
                 .WithInfo(37, 3, Artist.Lorraine_Schleter);
             addEvent("Against the Shadow", 2, Sphere.Spirit)

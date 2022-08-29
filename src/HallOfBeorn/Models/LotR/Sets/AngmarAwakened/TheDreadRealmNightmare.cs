@@ -35,19 +35,6 @@ Remove the following cards, in the specified quantities, from the standard encou
 Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Dread Realm encounter deck.
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
-                .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for The Dread Realm scenario.</p>
-<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
-<ul style='list-style-type:none'><b>
-<li>3x Witch of Angmar</li>
-<li>2x A Fell Dread</li>
-<li>1x Unholy Crypt</li>
-<li>1x Sinister Dungeon</li>
-<li>2x Dead Lord</li>
-<li>3x Terror of the North</li>
-</b></ul>
-<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Dread Realm encounter deck.</p>
-<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Guillaume_Ducos));
             addCard(LotRCard.Enemy("Silent Guardian", string.Empty, setName, 36, 4, 2, 4, 10)
                 .WithTraits("Undead.")

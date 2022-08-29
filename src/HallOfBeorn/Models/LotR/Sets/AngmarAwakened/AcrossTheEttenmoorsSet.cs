@@ -84,7 +84,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithFlavorLine("over death, over dread, over doom lifted")
                 .WithFlavorLine("out of loss, out of life, unto long glory.")
                 .WithFlavorLine("-The Return of the King")
-                .WithTemplate("<p><b>Action:</b> Reduce the cost of the next event that has a <b>Valour</b> trigger you play this phase by 2.</p><p><b>Valour Action:</b> Search the top 10 cards of your deck for an event that has a <b>Valour</b> trigger and add it to your hand. Shuffle your deck.</p><p class='flavor-text'>Hope he rekindled, and in hope ended;<br>over death, over dread, over doom lifted<br>out of loss, out of life, unto long glory.<br>&ndash;The Return of the King</p>")
                 .WithInfo(63, 3, Artist.Gabrielle_Portal);
             addQuest("Into the Ettenmoors", EncounterSet.AcrossTheEttenmoors, 1, 'A', 10)
                 .WithTextLine("Setup: Set aside each of the 3 Across the Enttenmoors side quests and each of the 4 locations with the safe keyword. Reveal 1 of those side quests at random and 1 of those safe locations at random, adding them to the staging area with the safe location guarded by the side quest. Search the encounter deck for 1 copy of Savage Trollspawn per player and add them to the staging area. Shuffle the remaining side quests and safe locations back into the encounter deck. The first player gains control of Amarthiúl.")

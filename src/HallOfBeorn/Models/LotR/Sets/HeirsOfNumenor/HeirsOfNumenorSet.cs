@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets.HeirsOfNumenor
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Lower the cost to play Weapon and Armor attachments on Beregond by 2.")
                 .WithFlavorLine("\"It is over-late to send for aid when you are already besieged.\" -The Return of the King")
-                .WithTemplate("<p>{keyword:Sentinel.}</p><p>Lower the cost to play {traits-attachment:Weapon,Armor@attachments} on {self} by 2.</p><p class='flavor-text'>&quot;It is over-late to send for aid when you are already besiged.&quot; &ndash;The Return of the King</p>")
                 .WithCommunityVersion("RiddermarkLord/Beregond-Tactics-Hero-1")
                 .WithCommunityVersion("RiddermarkLord/Beregond-Tactics-Hero-2")
                 .WithInfo(1, 1, Artist.Magali_Villeneuve);

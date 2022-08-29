@@ -18,7 +18,6 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTraits("Hobbit.")
                 .WithTextLine("The first player draws 1 additional card in the resource phase.")
                 .WithFlavor("\"Well, my dear fellow,\" said bilbo, \"now you've heard the news, can't you spare me a moment? I want your help in something urgent.\" -The Fellowship of the Ring")
-                .WithTemplate("<p>The first player draws 1 additional card in the resource phase.</p><p class='flavor-text'>&quot;Well, my dear fellow,&quot; said Bilbo, &quot;now you've heard the news, can't you spare me a moment? I want your help in something urgent.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(1, 1, Artist.Tony_Foti);
             addAttachment("Dúnedain Mark", 1, Sphere.Leadership, false)
                 .WithTraits("Signal.")
@@ -105,7 +104,6 @@ namespace HallOfBeorn.Models.LotR.Sets.ShadowsOfMirkwood
                 .WithTraits("Riverland.")
                 .WithTextLine("While River Ninglor is the active location, remove 1 progress token from it and from the current quest at the end of each round.")
                 .WithShadow("Shadow: Remove 1 progress token from the current quest. (2 progress tokens instead if this attack is undefended.)")
-                .WithTemplate("<p>While {self} is the active location, remove 1 progress token from it and from the current quest at the end of each round.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Remove 1 progress token from the current quest. (2 progress tokens instead if this attack is undefended.)</p>")
                 .WithInfo(17, 2, Artist.David_Lecossu);
             addLocation("The East Bank", "The Hunt for Gollum", 3, 3)
                 .WithTraits("Riverland.")

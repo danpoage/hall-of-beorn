@@ -31,20 +31,6 @@ Remove the following cards, in the specified quantities, from the standard encou
 Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Across the Ettenmoors encounter deck.
 
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.")
-                .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for the Across the Ettenmoors scenario.</p>
-<p>Remove the following cards, in the specified quantities, from the standard encounter deck:</p>
-<ul style='list-style-type:none'><b>
-<li>1x Into the Ettenmoors</li>
-<li>2x Shrouded Hills</li>
-<li>3x No Rest</li>
-<li>2x Arador's Bane</li>
-<li>1x Troll-fells</li>
-<li>2x Goblin Pursuer</li>
-<li>2x Cold from Angmar</li>
-</b></ul>
-<p>Then, shuffle the encounter cards in this Nightmare Deck into the remainder of the standard Across the Ettenmoors encounter deck.</p>
-<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>")
                 .WithInfo(1, 1, Artist.Anthony_Devine);
             addQuest("Into the Ettenmoors", EncounterSet.AcrossTheEttenmoorsNightmare.Name, 1, 'A', 10)
                 .WithText("Setup: Set aside each side quest and each location with the safe keyword. Reveal 1 of those side quests and 1 of those safe locations at random, adding them to the staging area with the safe location guarded by the side quest. Shuffle the remaining side quests and safe location into the encounter deck. Discard cards from the top of the encounter deck until X enemies are discarded, where X is the number of players in the game. Add the discarded enemies to the staging area. The first player gains control of Amarthiúl.")

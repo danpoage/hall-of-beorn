@@ -62,7 +62,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addEvent("Hobbit-sense", 2, Sphere.Neutral)
                 .WithTextLine("Play only if each of your heroes is a Hobbit. Combat Action: Enemies engaged with you do not attack this round. You cannot declare attacks this round.")
                 .WithFlavorLine("They possessed from the first the art of disappearing swiftly and silently, when large folk whom they do not wish to meet come blundering by... -The Fellowship of the Ring")
-                .WithTemplate("<p>Play only if each of your heroes is a {trait:Hobbit.}</p><p><b>Combat Action:</b> Enemies engaged with you do not attack this round. You cannot declare attacks this round.</p><p class='flavor-text'>They possessed from the first the art of disappearing swiftly and silently, when large folk whom they do not wish to meet come blundering by...<br/>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(65, 3, Artist.Blake_Henriksen);
             addQuest("Savagery of the Orcs", EncounterSet.EncounterAtAmonDin, 1, 'A', null)
                 .WithKeywords("Villagers 5.")

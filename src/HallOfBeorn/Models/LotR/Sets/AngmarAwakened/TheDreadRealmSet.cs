@@ -33,7 +33,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Response: After a Rohan ally is discarded from play by a card effect, ready Éothain.")
                 .WithFlavorLine("\"We must hasten south, lord. Let us leave these wild folk to their fancies. Or let us bind them and take them to our king.\"")
                 .WithFlavorLine("-The Two Towers")
-                .WithTemplate("<p><b>Response:</b> After a {trait:Rohan.@Rohan} ally is discarded from play by a card effect, ready {self}.</p><p class='flavor-text'>&quot;We must hasten south, lord. Let us leave these wild folk to their fancies. Or let us bind them and take them to our king.&quot;<br>&ndash;The Two Towers</p>")
                 .WithInfo(141, 3, Artist.Glen_Osterberger);
             addAttachment("Sword of Númenor", 1, Sphere.Leadership, false)
                 .WithTraits("Item.", "Weapon.")
@@ -43,7 +42,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithTextLine("Response: After attached hero participates in an attack that destroys an enemy with 5 or more printed hit points, exhaust Sword of Númenor to add 1 resource to attached hero's resource pool.")
                 .WithFlavorLine("...the flowing characters of Númenor glinted like fire upon the blade.")
                 .WithFlavorLine("-The Fellowship of the Ring")
-                .WithTemplate("<p>Attach to a {traits-hero:Dúnedain,Gondor}. {keyword:Restricted.}</p><p>Attached hero gets +1 {Attack}.</p><p><b>Response:</b> After attached hero participates in an attack that destroys an enemy with 5 or more printed hit points, exhaust {self} to add 1 resource to attached hero's resource pool.</p><p class='flavor-text'>...the flowing characters of Númenor glinted like fire upon the blade.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(142, 3, Artist.Romana_Kendelic);
             addAlly("Fornost Bowman", 3, Sphere.Tactics, false, 1, 1, 1, 3)
                 .WithTraits("Dúnedain.", "Ranger.")

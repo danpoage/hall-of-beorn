@@ -20,7 +20,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithTextLine("Restricted. Immune to non-Master card effects.")
                 .WithTextLine("Setup: Attach to a hero you control and search your deck for a Master card. Add it to your hand and shuffle your deck. Your threat elimination level is reduced by 5.")
                 .WithTextLine("If The One Ring leaves play, the players lose the game.")
-                .WithTemplate("<p class='main-text'>{keyword:Restricted.} Immune to non-{trait:Master.@Master} card effects.</p><p class='main-text'><b>Setup:</b> Attach to a hero you control and search your deck for a {trait:Master.@Master} card. Add it to your hand and shuffle your deck. Your threat elimination level is reduced by 5.</p><p class='main-text'><b>If {self} leaves play, the players lose the game.</b></p>")
                 .WithAges(Age.Second_Age, Age.Third_Age)
                 .WithInfo(1, 1, Artist.Torbjorn_Kallstrom);
             addHero("Frodo Baggins", 7, Sphere.Leadership, 2, 1, 2, 2)
@@ -57,7 +56,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithKeywords("Ranged.")
                 .WithTextLine("Ranged.")
                 .WithTextLine("Response: After Derufin participates in an attack that destroys an enemy engaged with a player, discard Derufin to reduce the engaged player's threat by X, where X is the destroyed enemy's printed Threat.")
-                .WithTemplate("<p class='main-text'>{keyword:Ranged.}</p><p class='main-text'><b>Response:</b> After {self} participates in an attack that destroys an enemy engaged with a player, discard {self} to reduce the engaged player's threat by X, where X is the destroyed enemy's printed {Threat}.</p>")
                 .WithInfo(6, 3, Artist.Greg_Bobrowski);
             addEvent("The Gathering Storm", 0, Sphere.Leadership)
                 .WithTextLine("Planning Action: Search the top 5 cards of the encounter deck for an enemy. Add that enemy to the staging area to reduce the cost of the first ally you play this phase by X, where X is that enemy's Threat. Shuffle the encounter deck.")
@@ -71,21 +69,18 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
             addEvent("The Master Ring", 0, Sphere.Neutral)
                 .WithTraits("Master.")
                 .WithTextLine("Response: Exhaust The One Ring and raise your threat by 1 to cancel the effects of an encounter card just revealed from the encounter deck and discard that card. Then, reveal an encounter card.")
-                .WithTemplate("<p class='main-text'><b>Response:</b> Exhaust <a href='/LotR/Details/The-One-Ring-ASitE' target='_blank'>The One Ring</a> and raise your threat by 1 to cancel the effects of an encounter card just revealed from the encounter deck and discard that card. Then, reveal an encounter card.</p><p class='flavor-text'>&ldquo;If I, wearing it, were to command you, you would obey, even if it were to leap from a precipice or to cast yourself into the fire.&rdquo;<br>&ndash;Frodo, The Two Towers</p>")
                 .WithFlavorLine("\"If I, wearing it, were to command you, you would obey, even if it were to leap from a precipice or to cast yourself into the fire.\"")
                 .WithFlavorLine("-Frodo, The Two Towers")
                 .WithInfo(9, 3, Artist.Marius_Bota);
             addEvent("The Ruling Ring", 0, Sphere.Neutral)
                 .WithTraits("Master.")
                 .WithTextLine("Combat Action: Exhaust The One Ring and raise your threat by 1 to choose a non-Nazgul enemy engaged with you. Until the end of the phase, that enemy cannot attack you.")
-                .WithTemplate("<p class='main-text'><b>Combat Action:</b> Exhaust <a href='/LotR/Details/The-One-Ring-ASitE' target='_blank'>The One Ring</a> and raise your threat by 1 to choose a non-Nazgul enemy engaged with you. Until the end of the phase, that enemy cannot attack you.</p><p class='flavor-text'>&ldquo;He vanished. I have never seen such a thing happen before...&rdquo;<br>&ndash;Boromir, The Fellowship of the Ring</p>")
                 .WithFlavorLine("\"He vanished. I have never seen such a thing happen before...\"")
                 .WithFlavorLine("-Boromir, The Fellowship of the Ring")
                 .WithInfo(10, 3, Artist.Lukasz_Jaskolski);
             addEvent("The Ring of Power", 0, Sphere.Neutral)
                 .WithTraits("Master.")
                 .WithTextLine("Action: Exhaust The One Ring and raise your threat by 1 to ready the hero with The One Ring Attached. That hero gets +1 Willpower, +1 Attack, and +1 Defense until the end of the phase.")
-                .WithTemplate("<p class='main-text'><b>Action:</b> Exhaust <a href='/LotR/Details/The-One-Ring-ASitE' target='_blank'>The One Ring</a> and raise your threat by 1 to ready the hero with The One Ring Attached. That hero gets +1 {Willpower}, +1 {Attack}, and +1 {Defense} until the end of the phase.</p><p class='flavor-text'>&ldquo;And behold! in our need chance brings to light the Ring of Power.&rdquo;<br>&ndash;Boromir, The Fellowship of the Ring</p>")
                 .WithFlavorLine("\"And behold! in our need chance brings to light the Ring of Power.\"")
                 .WithFlavorLine("-Boromir, The Fellowship of the Ring")
                 .WithInfo(11, 3, Artist.Echo_Chernik);
@@ -488,7 +483,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithTextLine("Immune to non-Gollum card effects.")
                 .WithTextLine("~Gollum engages the first player.")
                 .WithTextLine("Forced: When ~Gollum is defeated, flip him to Sméagol and return him to his owner's control, exhausted.")
-                .WithTemplate("<p class='main-text'>Immune to non-{trait:Gollum.@Gollum} card effects.</p><p class='main-text'>{self} engages the first player.</p><p class='main-text'><b>Forced:</b> When {self} is defeated, flip him to Sméagol and return him to his owner's control, exhausted.</p>")
                 .WithSideB()
                 .WithInfo(73, 1, Artist.Alexander_Chelyshev);
             addContract("Fellowship")
@@ -497,7 +491,6 @@ namespace HallOfBeorn.Models.LotR.Sets.AShadowInTheEast
                 .WithOppositeTextLine("You cannot play allies or put allies into play.")
                 .WithOppositeTextLine("Each character you control gets +1 Willpower, +1 Attack, and +1 Defense.")
                 .WithOppositeTextLine("Forced: After a character you control leaves play, flip this card over.")
-                //.WithVisionOfThePalantirLink("https://visionofthepalantir.com/2020/03/05/fellowship/")
                 .WithInfo(74, 1, Artist.Leanna_Crossan);
             addQuest("Chased by Easterlings", EncounterSet.TheRiverRunning, 1, 'A', 5)
                 .WithTextLine("Setup: Set Warriors of the East aside, out of play. Add Easterling Pursuit and 1 copy of River Running to the staging area. Each player adds 1 different Easterling enemy to the staging area. Shuffle the encounter deck.")

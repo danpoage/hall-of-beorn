@@ -26,7 +26,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithTextLine("Attach to a Haradrim character. Restricted.")
                 .WithTextLine("Attached character gets +1 Attack.")
                 .WithTextLine("Response: After attached character is declared as an attacker, it gets +3 Attack for this attack. After this attack resolves, discard Haradrim Spear.")
-                .WithTemplate("<p class='main-text'>Attach to a {trait-character:Harad.@Harad} character. {keyword:Restricted.}</p><p class='main-text'>Attached character gets +1 {Attack}.</p><p class='main-text'><b>Response:</b> After attached character is declared as an attacker, it gets +3 {Attack} for this attack. After this attack resolves, discard {self}.</p>")
                 .WithInfo(56, 3, Artist.Lucas_Durham);
             addEvent("Hunting Party", 1, Sphere.Leadership)
                 .WithTextLine("Play only if you control a unique character with the Warrior trait and another unique character with the Scout trait.")

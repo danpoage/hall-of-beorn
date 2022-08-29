@@ -40,25 +40,6 @@ Then shuffle the encounter cards in this Nightmare Deck into the remainder of th
 Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.
 
 Note: As print-on-demand cardstock does not match that in the original scenario, the Uncharted deck from the original scenario should be replaced with the Uncharted deck reprinted in this Nightmare deck. This has already been taken into account in the cards listed above.")
-                .WithTemplate2(
-@"<p>Begin with the standard quest deck and encounter deck for The Fate of Númenor scenario.\r\nRemove the following cards, in the specified quantities, from the standard encounter deck:</p>
-<ul style='list-style-type:none'><b>
-<li>2x Forbidden Coast</li>
-<li>2x Cursed Temple</li>
-<li>2x Flooded Ruins</li>
-<li>2x Drowned Graves</li>
-<li>2x Lush Jungle</li>
-<li>1x Shrine of Morgoth</li>
-<li>3x Steep Plateau</li>
-<li>3x Aimless Wandering</li>
-<li>1x Mysterious Fog</li>
-<li>1x Servant of the Deceiver</li>
-<li>1x Lingering Malevolence</li>
-<li>1x Drowned Dead</li>
-</b></ul>
-<p>Then shuffle the encounter cards in this Nightmare Deck into the remainder of the standard The Fate of Númenor encounter deck.</p>
-<p>Finally, flip this setup card over and place it next to the quest deck. Its effect remains active throughout the game, which is now ready to begin.</p>
-<p><i><b>Note:</b> As print-on-demand cardstock does not match that in the original scenario, the Uncharted deck from the original scenario should be replaced with the Uncharted deck reprinted in this Nightmare deck. This has already been taken into account in the cards listed above.</i></p>")
                 .WithInfo(1, 1, Artist.DinoDrawing));
             addCard(LotRCard.Location("Shrine to Morgoth", string.Empty, setName, 5, 8)
                 .WithUnique()
