@@ -22,7 +22,6 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
             addHero("Bilbo Baggins", 9, Sphere.Lore, 1, 1, 2, 2)
                 .WithTraits("Hobbit.")
                 .WithTextLine("The first player draws 1 additional card in the resource phase.")
-                .WithTemplate("<p>The first player draws 1 additional card in the resource phase.</p>")
                 .WithPromotion()
                 .WithInfo(1, 1, Artist.Tony_Foti);
 

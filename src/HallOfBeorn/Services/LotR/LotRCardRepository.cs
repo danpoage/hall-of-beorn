@@ -46,7 +46,6 @@ namespace HallOfBeorn.Services.LotR
             return Cards().Where(card => card.CardType.IsQuestCard() && !card.CardSet.SetType.IsCommunity());
         }
 
-        /*
         private static LotRCardRepository instance;
 
         public static LotRCardRepository Instance
@@ -55,12 +54,15 @@ namespace HallOfBeorn.Services.LotR
             {
                 if (instance == null)
                 {
-                    instance = new LotRCardRepository(ProductRepository.Instance);
+                    throw new Exception("LotRCardRepository is not initialized");
                 }
 
                 return instance;
             }
+            set
+            {
+                instance = value;
+            }
         }
-        */
     }
 }

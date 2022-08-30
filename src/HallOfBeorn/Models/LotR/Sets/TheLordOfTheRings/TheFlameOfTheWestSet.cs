@@ -43,7 +43,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithKeywords("Sentinel.")
                 .WithText("Response: After Beregond defends an attack and takes no damage, reduce the defending player's threat by 1. (Limit once per round.)")
                 .WithFlavor("\"The Lord does not permit those who wear the black and silver to leave their post for any cause...\"\r\n-The Return of the King")
-                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} defends an attack and takes no damage, reduce the defending player's threat by 1. (Limit once per round.)</p><p class='flavor-text'>&ldquo;The Lord does not permit those who wear the black and silver to leave their post for any cause...&rdquo;<br>&ndash;The Return of the King</p>")
                 .WithCommunityVersion("RiddermarkLord/Beregond-Spirit-Hero")
                 .WithInfo(3, 1, Artist.Adam_Lane);
             Cards.Add(LotRCard.Ally("Grimbold", Sphere.Tactics, 3, 2, 1, 1, 2)
@@ -83,14 +82,12 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Rohan hero. Restricted.\r\nResponse: After attached hero is declared as a defender, exhaust Golden Shield to add attached hero's Willpower to its Defense for this attack.")
                 .WithFlavor("His golden shield was uncovered, and lo! it shone like an image of the Sun...\r\n-The Return of the King")
-                .WithTemplate("<p class='main-text'>Attach to a {trait:Rohan} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> After attached hero is declared as a defender, exhaust {self} to add attached hero's {Willpower} to its {Defense} for this attack.</p><p class='flavor-text'>His golden shield was uncovered, and lo! it shone like an image of the Sun...<br>&ndash;The Return of the King</p>")
                 .WithInfo(10, 3, Artist.Sasha_Jones);
             addAttachment("Livery of the Tower", 0, Sphere.Spirit, false)
                 .WithTraits("Item.", "Armor.")
                 .WithKeywords("Restricted.")
                 .WithText("Attach to a Gondor hero. Restricted.\r\nResponse: Spend X resources from attached hero's pool to cancel X damage just dealt to attached hero.")
                 .WithFlavor("This was the livery of the heirs of Elendil, and none wore it now in all Gondor, save the Guards of the Citadel...\r\n-The Return of the King")
-                .WithTemplate("<p class='main-text'>Attach to {trait-hero:Gondor.@Gondor} hero. {keyword:Restricted.}</p><p class='main-text'><b>Response:</b> Spend X resources from attached hero's pool to cancel X damage just dealt to attached hero.</p><p class='flavor-text'>This was the livery of the heirs of Elendil, and none wore it now in all Gondor, save the Guards of the Citadel...<br>&ndash;The Return of the King</p>")
                 .WithInfo(11, 3, Artist.Suzanne_Helmigh);
             Cards.Add(LotRCard.Attachment("Roheryn", "", Sphere.Leadership, 2)
                 .WithUnique()

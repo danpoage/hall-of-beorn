@@ -172,7 +172,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheHobbit
                 .WithAlternateSlug("🐻")
                 .WithTextLine("Cannot have attachments. Immune to player card effects.")
                 .WithTextLine("Beorn does not exhaust to defend.")
-                .WithTemplate("<p>{keyword:Sentinel.} Cannot have attachments.</p><p>Immune to player card effects.<p><p>{self} does not exhaust to defend.</p><p class='flavor-text'>The roar of his voice was like drums and guns; and he tossed wolves and goblins from his path like straws and feathers.<br>&ndash;The Hobbit</p>")
                 .WithCommunityVersion("Beorn-Lure-2019")
                 .WithCommunityVersion("Beorn-HoB-Alt-Art")
                 .WithCommunityVersion("Autumn/Beorn-Tactics-Hero")
@@ -1056,7 +1055,6 @@ The players have won the game.",
                 .WithTextLine("If you control at least 5 Dwarf characters, add 1 additional resource to Thorin Oakenshield's pool when you collect resources during the resource phase.")
                 .WithFlavorLine("\"I am Thorin son of Thrain son of Thror, King under the Mountain!\"")
                 .WithFlavorLine("-Thorin, The Hobbit")
-                .WithTemplate("<p>If you control at least 5 {trait:Dwarf.@Dwarf} characters, add 1 additional resource to {self}'s pool when you collect resources during the resource phase.</p><p class='flavor-text'>&quot;I am Thorin son of Thrain son of Thror, King under the Mountain!&quot; &ndash;Thorin, The Hobbit</p>")
                 .WithCommunityVersion("RiddermarkLord/Thorin-Oakenshield-1")
                 .WithCommunityVersion("RiddermarkLord/Thorin-Oakenshield-2")
                 .WithCommunityVersion("RiddermarkLord/Thorin-Oakenshield-3")
@@ -1132,8 +1130,8 @@ The players have won the game.",
             addObjective("Troll Key", "We Must Away, Ere Break of Day")
                 .WithUnique()
                 .WithTraits("Item.")
-                .WithText("If ~Troll ~Key is discarded, add it to the staging area. If ~Troll ~Key is unattached and in the staging area, attach it to a Troll enemy, if able. Response: After attached Troll enemy takes damage as the result of an attack, the first player may exhaust Bilbo ~Baggins to claim this objective and attach it to him.")
-                .WithTemplate("<p class='main-text'>If {self} is discarded, add it to the staging area.</p><p class='main-text'>If {self} is unattached and in the staging area, attach it to a {trait:Troll.@Troll} enemy, if able.</p><p class='main-text'><b>Response:</b> After attached {trait:Troll.@Troll} enemy takes damage as the result of an attack, the first player may exhaust {card:Bilbo-Baggins-THOHaUH@Bilbo Baggins} to claim this objective and attach it to him.</p>")
+                .WithTextLine("If ~Troll ~Key is discarded, add it to the staging area. If ~Troll ~Key is unattached and in the staging area, attach it to a Troll enemy, if able.")
+                .WithTextLine("Response: After attached Troll enemy takes damage as the result of an attack, the first player may exhaust Bilbo Baggins to claim this objective and attach it to him.")
                 .WithErrata(1)
                 .WithInfo(43, 1, Artist.Trudi_Castle);
 

@@ -74,7 +74,6 @@ The Lord of the ~Rings: The Black Riders Saga Expansion is required to play Fog 
                 .WithKeywords("Sentinel.")
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.")
-                .WithTemplate("<p>{keyword:Sentinel.}</p><p><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p>")
                 .WithYear(2014)
                 .WithPromotion()
                 .WithInfo(1, 1, Artist.Sebastian_Giacobino);

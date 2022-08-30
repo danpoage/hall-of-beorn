@@ -85,8 +85,7 @@ Page 4/4",
             });
             addHero("Gimli", 11, Sphere.Tactics, 2, 2, 2, 5)
                 .WithTraits("Dwarf.", "Noble.", "Warrior.")
-                .WithText("Gimli gets +1 Attack for each damage token on him.")
-                .WithTemplate("<p>{self} gets +1 {Attack} for each damage token on him.</p>")
+                .WithTextLine("Gimli gets +1 Attack for each damage token on him.")
                 .WithPromotion()
                 .WithInfo(4, 1, Artist.Sebastian_Giacobino);
             Cards.Add(LotRCard.Quest("Ruins of the First Age", 1, "The Ruins of Belegost", 6)

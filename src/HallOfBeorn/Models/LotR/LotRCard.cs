@@ -872,6 +872,7 @@ namespace HallOfBeorn.Models.LotR
             return this;
         }
 
+        /*
         public LotRCard WithTemplate(string htmlTemplate)
         {
             return WithTemplate(htmlTemplate, Language.EN);
@@ -893,6 +894,7 @@ namespace HallOfBeorn.Models.LotR
             this.backHtmlTemplates[lang] = htmlTemplate;
             return this;
         }
+        */
 
         public LotRCard WithFlavor(string flavor)
         {

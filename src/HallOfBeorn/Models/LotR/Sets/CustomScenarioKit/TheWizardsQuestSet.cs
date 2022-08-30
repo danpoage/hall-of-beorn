@@ -341,7 +341,6 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithTextLine("Action: Pay 1 resource from Glorfindel's pool to heal 1 damage on any character. (Limit once per round.)")
                 .WithFlavorLine("\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"")
                 .WithFlavorLine("-Gandalf, The Fellowship of the Ring")
-                .WithTemplate("<p class='main-text'><b>Action:</b> Pay 1 resource from {self}'s pool to heal 1 damage on any character. (Limit once per round.)</p>")
                 .WithYear(2018)
                 .WithPromotion()
                 .WithInfo(111, 1, Artist.Audrey_Hotte);

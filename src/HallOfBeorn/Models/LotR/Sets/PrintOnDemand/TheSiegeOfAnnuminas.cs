@@ -237,7 +237,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithTraits("Gondor.", "Noble.", "Warrior.")
                 .WithTextLine("Action: Raise your threat by 1 to ready Boromir.")
                 .WithTextLine("Action: Discard Boromir to deal 2 damage to each enemy engaged with a single player.")
-                .WithTemplate("<p class='main-text'><b>Action:</b> Raise your threat by 1 to ready {self}.</p><p class='main-text'><b>Action:</b> Discard {self} to deal 2 damage to each enemy engaged with a single player.</p>")
                 .WithPromotion()
                 .WithInfo(95, 1, Artist.Aurore_Folny);
             addHero("Faramir", 11, Sphere.Leadership, 2, 2, 2, 5)
@@ -245,7 +244,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PrintOnDemand
                 .WithKeywords("Ranged.")
                 .WithTextLine("Ranged.")
                 .WithTextLine("Response: After you engage an enemy, ready an ally you control. (Limit once per phase.)")
-                .WithTemplate("<p class='main-text'>{keyword:Ranged.} <b>Response:</b> After you engage an enemy, ready an ally you control. (Limit once per phase.)</p>")
                 .WithPromotion()
                 .WithInfo(2, 1, Artist.Aurore_Folny);
         }

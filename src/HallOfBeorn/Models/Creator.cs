@@ -111,6 +111,7 @@ namespace HallOfBeorn.Models
                 : new List<ILink>();
         }
 
+        /*
         public Func<LotR.PlayerCategory, IEnumerable<string>> LabelsByPlayerCategory
         {
             get
@@ -141,5 +142,6 @@ namespace HallOfBeorn.Models
                 return func;
             }
         }
+        */
     }
 }

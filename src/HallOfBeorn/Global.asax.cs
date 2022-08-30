@@ -49,6 +49,7 @@ namespace HallOfBeorn
 
             var cardRepository = new LotRCardRepository(productRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository] = cardRepository;
+            LotRCardRepository.Instance = cardRepository;
 
             var characterRepository = new CharacterRepository();
             System.Web.HttpContext.Current.Application[LotRServiceNames.CharacterRepository] = characterRepository;
@@ -58,6 +59,7 @@ namespace HallOfBeorn
 
             var playerCategoryService = new PlayerCategoryService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.PlayerCategoryService] = playerCategoryService;
+            PlayerCategoryService.Instance = playerCategoryService;
 
             var encounterCategoryService = new EncounterCategoryService(cardRepository);
             System.Web.HttpContext.Current.Application[LotRServiceNames.EncounterCategoryService] = encounterCategoryService;

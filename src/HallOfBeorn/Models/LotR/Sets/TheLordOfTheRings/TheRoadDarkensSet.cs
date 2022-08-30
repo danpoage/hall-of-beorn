@@ -285,8 +285,9 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithUnique()
                 .WithTraits("Creature.")
                 .WithKeywords("Indestructible.")
-                .WithText("Immune to player card effects. Cannot leave the staging area but is considered to be engaged with each player.\r\nForced: After placing the 6th damage here, the first player takes control of the Ring-bearer, exhausted with 1 damage on it.")
-                .WithTemplate("<p class='main-text'>{keyword:Indestructible.} Immune to player card effects.</p><p class='main-text'>Cannot leave the staging area but is considered to be engaged with each player.</p><p class='main-text'><b>Forced:</b> After placing the 6th damage here, the first player takes control of the {trait:Ring-bearer.@Ring-bearer}, exhausted with 1 damage on it.</p>")
+                .WithTextLine("Immune to player card effects.")
+                .WithTextLine("Cannot leave the staging area but is considered to be engaged with each player.")
+                .WithTextLine("Forced: After placing the 6th damage here, the first player takes control of the Ring-bearer, exhausted with 1 damage on it.")
                 .WithInfo(24, 1, Artist.Florian_Devos);
             Cards.Add(new LotRCard()
             {

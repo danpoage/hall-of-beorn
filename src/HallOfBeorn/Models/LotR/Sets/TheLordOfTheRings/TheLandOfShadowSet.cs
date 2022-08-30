@@ -100,7 +100,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithText("Play only if you control the Ring-bearer.\r\nPlanning Action: Add Brace of Coneys to the victory display to (choose 2): heal up to 2 damage from a hero, add 2 resources to a hero's pool, draw 2 cards, or reduce a player's threat by 2.")
                 .WithFlavor("\"'Sméagol always helps,' he said. 'He has brought rabbits, nice rabbits.'\" —Gollum, The Two Towers")
                 .WithVictoryPoints(2)
-                .WithTemplate("<p class='main-text'>Play only if you control the Ring-bearer.</p><p class='main-text'><b>Planning Action:</b> {self} to the victory display to (choose 2): heal up to 2 damage from a hero, add 2 resources to a hero's pool, draw 2 cards, or reduce a player's threat by 2.</p><p class='flavor-text'>&ldquo;'Sméagol always helps,' he said. 'He has brought rabbits, nice rabbits.'&rdquo;<br>&mdash;Gollum, The Two Towers</p>{victory:2}")
                 .WithInfo(14, 4, Artist.Cristina_Vela);
             Cards.Add(LotRCard.Treachery("The Searching Eye", "", "The Passage of the Marshes")
                 .WithBurden()

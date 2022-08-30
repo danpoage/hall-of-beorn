@@ -25,7 +25,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithTextLine("Sentinel.")
                 .WithTextLine("Response: After Aragorn commits to a quest, spend 1 resource from his resource pool to ready him.")
                 .WithFlavor("\"I am Aragorn son of Arathorn; and if by life or death I can save you, I will.\"\r\n-The Fellowship of the Ring")
-                .WithTemplate("<p class='main-text'>{keyword:Sentinel.}</p><p class='main-text'><b>Response:</b> After {self} commits to a quest, spend 1 resource from his resource pool to ready him.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn; and if by life or death I can save you, I will.&quot;<br>&ndash;The Fellowship of the Ring</p>")
                 .WithYear(2018)
                 .WithAges(Age.Third_Age, Age.Fourth_Age)
                 .WithInfo(1, 1, Artist.John_Stanko);
@@ -69,7 +68,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithTraits("Noldor.", "Noble.")
                 .WithText("Response: After Arwen Undómiel exhausts, choose a character. That character gains sentinel and gets +1 Defense until the end of the round.")
                 .WithFlavor("\"...she was the Evenstar of her people.\"\r\n-The Fellowship of the Ring")
-                .WithTemplate("<p><b>Response:</b> After {self} exhausts, choose a character. That character gains {keyword:Sentinel.@sentinel} and gets +1 {Defense} until the end of the round.</p><p class='flavor-text'>...in whom it was said that the likeness of Lúthien had come on earth again...for she was the Evenstar of her people.<br>&ndash;The Fellowship of the Ring</p>")
                 .WithInfo(8, 1, Artist.Magali_Villeneuve);
             addAlly("Orophin", 3, Sphere.Leadership, true, 2, 2, 0, 2)
                 .WithTraits("Silvan.", "Scout.")
@@ -134,7 +132,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithKeywords("Restricted.")
                 .WithTextLine("Attach to a hero. Restricted.")
                 .WithTextLine("Attached hero gains +2 Willpower. If attached hero is Aragorn, he also gains a Spirit resource icon.")
-                .WithTemplate("<p class='main-text'>Attach to a hero. {keyword:Restricted.}</p><p class='main-text'>Attached hero gains +2 {Willpower}</p><p class='main-text'>If attached hero is Aragorn, he also gains a {sphere:Spirit} resource icon.</p>")
                 .WithInfo(20, 2, Artist.Sara_Biddle);
             addAttachment("Steward of Gondor", 2, Sphere.Leadership, true)
                 .WithTraits("Gondor.", "Title.")
@@ -197,7 +194,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
                 .WithTraits("Noble.", "Noldor.", "Warrior.")
                 .WithText("Action: Pay 1 resource from Glorfindel's pool to heal 1 damage on any character. (Limit once per round.)")
                 .WithFlavor("\"You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.\"\r\n-Gandalf, The Fellowship of the Ring")
-                .WithTemplate("<p class='main-text'><b>Action:</b> Pay 1 resource from {self}'s pool to heal 1 damage on any character. (Limit once per round.)</p><p class='flavor-text'>&quot;You saw him for a moment as he is upon the other side: one of the mighty of the firstborn.&quot;<br>&ndash;Gandalf, The Fellowship of the Ring</p>")
                 .WithYear(2018)
                 .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(34, 1, Artist.Katherine_Dinger);
@@ -346,7 +342,6 @@ namespace HallOfBeorn.Models.LotR.Sets.Starter
             addEvent("Khazâd! Khazâd!", 0, Sphere.Tactics)
                 .WithText("Action: Choose a Dwarf character. Until the end of the phase, that character gets +3 Attack.")
                 .WithFlavor("Down from the wall leapt Gimli with a fierce cry the echoed in the cliffs. \"Khazâd! Khazâd!\" He soon had work enough.\r\n-The Two Towers")
-                .WithTemplate("<p><b>Action:</b> Choose a {trait-character:Dwarf.@Dwarf} character. Until the end of the phase, that character gets +3 {Attack}.</p><p class='flavor-text'>Down from the wall leapt Gimli with a fierce cry the echoed in the cliffs. &quot;Khazâd! Khazâd!&quot; He soon had work enough.<br>&ndash;The Two Towers</p>")
                 .WithInfo(63, 2, Artist.Igor_Kieryluk);
             addEvent("Daeron's Runes", 0, Sphere.Lore)
                 .WithText("Action: Draw 2 cards. Then, discard 1 card for your hand.")

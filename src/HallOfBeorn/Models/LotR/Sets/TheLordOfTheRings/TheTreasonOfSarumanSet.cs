@@ -19,7 +19,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Dúnedain.", "Noble.", "Ranger.")
                 .WithTextLine("The first player gains control of Aragorn. If Aragorn leaves play, the players lose the game.")
                 .WithTextLine("Action: Spend 2 resources from Aragorn's resource pool to ready a hero.")
-                .WithTemplate("<p>The first player gains control of {self}. If {self} leaves play, the players lose the game.</p><p><b>Action:</b> Spend 2 resources from {self}'s resource pool to ready a {type:Hero@hero}.</p><p class='flavor-text'>&quot;I am Aragorn son of Arathorn and am called Elessar, the Elfstone, Dunadan, the heir of Isildur Elendil’s son of Gondor.&quot;<br>&ndash;The Two Towers</p>")
                 .WithAges(Age.Third_Age, Age.Fourth_Age)
                 .WithInfo(1, 1, Artist.Mark_Behm);
             addHero("Théoden", 12, Sphere.Spirit, 2, 3, 2, 4)

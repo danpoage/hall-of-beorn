@@ -14,16 +14,21 @@ namespace HallOfBeorn.Services.LotR.Categories
         }
 
         private static PlayerCategoryService instance;
+
         public static PlayerCategoryService Instance
         {
             get
             {
                 if (instance == null)
                 {
-                    instance = new PlayerCategoryService(new LotRCardRepository(ProductRepository.Instance));
+                    throw new Exception("PlayerCategoryService not initialized");
                 }
 
                 return instance;
+            }
+            set
+            {
+                instance = value;
             }
         }
 

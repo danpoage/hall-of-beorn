@@ -107,7 +107,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Reinforcements", "https://cardtalk2018.com/2022/05/18/reinforcements/", "May 18 2022")
                 .WithLabels("Reinforcements", "Gandalf", "Meneldor", "Woodland Courier", "Marksman of Lórien", "Marksman of Lorien", "Mablung", "Son of Arnor", "Sarn Ford Sentry", "Sneak Attack")
                 .WithLabels("The Galadhrim's Greeting", "Galadhrim Weaver", "Tome of Atanatar", "Second Breakfast", "Narya", "Strength of Arms", "A Very Good Tale")
-                .WithLabels(LabelsByPlayerCategory(PlayerCategory.Leaves_Play))
+                //.WithLabels(LabelsByPlayerCategory(PlayerCategory.Leaves_Play)) //TODO: Fix this
                 .WithDeckLabels(8451);
             AddLink("The Fortress of Nurn 2 – May 8, 2022", "https://cardtalk2018.com/2022/05/12/the-fortress-of-nurn-1-may-8-2022/", "May 12 2022")
                 .WithLabels("The Fortress of Nurn").WithDeckLabels(17959);
