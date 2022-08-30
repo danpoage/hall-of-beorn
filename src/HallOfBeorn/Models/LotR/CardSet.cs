@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR
 {
@@ -21,28 +20,40 @@ namespace HallOfBeorn.Models.LotR
 
         private string normalizedName;
 
+        public static CardSet Create(string name, string abbreviation, SetType setType, string cycle, int number)
+        {
+            return new CardSet {
+                Name = name,
+                Abbreviation = abbreviation,
+                SetType = setType,
+                Cycle = cycle,
+                Number = number
+            };
+        }
+
         protected abstract void Initialize();
 
         protected virtual void addCard(LotRCard card)
         {
+            card.CardSet = this;
             this.Cards.Add(card);
         }
 
-        protected LotRCard addScenario(string encounterSet, int scenarioNumber, string oppositeTitle)
+        public LotRCard addScenario(string encounterSet, int scenarioNumber, string oppositeTitle)
         {
             var scenario = LotRCard.Scenario(encounterSet, scenarioNumber, encounterSet, oppositeTitle);
             addCard(scenario);
             return scenario;
         }
 
-        protected LotRCard addHero(string title, byte threatCost, Sphere sphere, byte willpower, byte attack, byte defense, byte hitPoints)
+        public LotRCard addHero(string title, byte threatCost, Sphere sphere, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             var hero = LotRCard.Hero(title, string.Empty, sphere, threatCost, willpower, attack, defense, hitPoints);
             addCard(hero);
             return hero;
         }
 
-        protected LotRCard addAlly(string title, byte resourceCost, Sphere sphere, bool isUnique, byte willpower, byte attack, byte defense, byte hitPoints)
+        public LotRCard addAlly(string title, byte resourceCost, Sphere sphere, bool isUnique, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             var card = LotRCard.Ally(title, sphere, resourceCost, willpower, attack, defense, hitPoints);
             card.IsUnique = isUnique;
@@ -50,7 +61,7 @@ namespace HallOfBeorn.Models.LotR
             return card;
         }
 
-        protected LotRCard addAttachment(string title, byte resourceCost, Sphere sphere, bool isUnique)
+        public LotRCard addAttachment(string title, byte resourceCost, Sphere sphere, bool isUnique)
         {
             var attachment = LotRCard.Attachment(title, string.Empty, sphere, resourceCost);
             attachment.IsUnique = isUnique;
@@ -58,155 +69,155 @@ namespace HallOfBeorn.Models.LotR
             return attachment;
         }
 
-        protected LotRCard addTreasure(string title, byte resourceCost, Sphere sphere, bool isUnique)
+        public LotRCard addTreasure(string title, byte resourceCost, Sphere sphere, bool isUnique)
         {
             var treasure = LotRCard.Treasure(title, sphere, resourceCost, isUnique);
             addCard(treasure);
             return treasure;
         }
 
-        protected LotRCard addEvent(string title, byte resourceCost, Sphere sphere)
+        public LotRCard addEvent(string title, byte resourceCost, Sphere sphere)
         {
             var card = LotRCard.Event(title, string.Empty, sphere, resourceCost);
             addCard(card);
             return card;
         }
 
-        protected LotRCard addPlayerSideQuest(string title, byte resourceCost, Sphere sphere, byte questPoints)
+        public LotRCard addPlayerSideQuest(string title, byte resourceCost, Sphere sphere, byte questPoints)
         {
             var sideQuest = LotRCard.PlayerSideQuest(title, string.Empty, sphere, resourceCost, questPoints);
             addCard(sideQuest);
             return sideQuest;
         }
 
-        protected LotRCard addContract(string title)
+        public LotRCard addContract(string title)
         {
             var card = LotRCard.Contract(title);
             addCard(card);
             return card;
         }
 
-        protected LotRCard addGenConSetup(string title, string encounterSet)
+        public LotRCard addGenConSetup(string title, string encounterSet)
         {
             var setup = LotRCard.GenConSetup(title, encounterSet);
             addCard(setup);
             return setup;
         }
 
-        protected LotRCard addGenConSetup(string title, EncounterSet encounterSet)
+        public LotRCard addGenConSetup(string title, EncounterSet encounterSet)
         {
             return addGenConSetup(title, encounterSet.Name);
         }
 
-        protected LotRCard addNightmareSetup(string encounterSet)
+        public LotRCard addNightmareSetup(string encounterSet)
         {
             var card = LotRCard.NightmareSetup(encounterSet, encounterSet);
             addCard(card);
             return card;
         }
 
-        protected LotRCard addNightmareSetup(EncounterSet encounterSet)
+        public LotRCard addNightmareSetup(EncounterSet encounterSet)
         {
             return addNightmareSetup(encounterSet.Name);
         }
 
-        protected LotRCard addQuest(string title, string encounterSet, uint stageNumber, char stageLetter, byte? questPoints)
+        public LotRCard addQuest(string title, string encounterSet, uint stageNumber, char stageLetter, byte? questPoints)
         {
             var quest = LotRCard.Quest(title, stageNumber, encounterSet, questPoints, stageLetter);
             addCard(quest);
             return quest;
         }
 
-        protected LotRCard addQuest(string title, EncounterSet encounterSet, uint stageNumber, char stageLetter, byte? questPoints)
+        public LotRCard addQuest(string title, EncounterSet encounterSet, uint stageNumber, char stageLetter, byte? questPoints)
         {
             return addQuest(title, encounterSet.Name, stageNumber, stageLetter, questPoints);
         }
 
-        protected LotRCard addEnemy(string title, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        public LotRCard addEnemy(string title, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
         {
             var enemy = LotRCard.Enemy(title, string.Empty, encounterSet, engagementCost, threat, attack, defense, hitPoints);
             addCard(enemy);
             return enemy;
         }
 
-        protected LotRCard addEnemy(string title, EncounterSet encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        public LotRCard addEnemy(string title, EncounterSet encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
         {
             return addEnemy(title, encounterSet.Name, engagementCost, threat, attack, defense, hitPoints);
         }
 
-        protected LotRCard addShipEnemy(string title, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        public LotRCard addShipEnemy(string title, string encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
         {
             var shipEnemy = LotRCard.ShipEnemy(title, encounterSet, engagementCost, threat, attack, defense, hitPoints);
             addCard(shipEnemy);
             return shipEnemy;
         }
 
-        protected LotRCard addShipEnemy(string title, EncounterSet encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
+        public LotRCard addShipEnemy(string title, EncounterSet encounterSet, byte? engagementCost, byte? threat, byte? attack, byte? defense, byte? hitPoints)
         {
             return addShipEnemy(title, encounterSet.Name, engagementCost, threat, attack, defense, hitPoints);
         }
 
-        protected LotRCard addLocation(string title, string encounterSet, byte? threat, byte? questPoints)
+        public LotRCard addLocation(string title, string encounterSet, byte? threat, byte? questPoints)
         {
             var location = LotRCard.Location(title, string.Empty, encounterSet, threat, questPoints);
             addCard(location);
             return location;
         }
 
-        protected LotRCard addLocation(string title, EncounterSet encounterSet, byte? threat, byte? questPoints)
+        public LotRCard addLocation(string title, EncounterSet encounterSet, byte? threat, byte? questPoints)
         {
             return addLocation(title, encounterSet.Name, threat, questPoints);
         }
 
-        protected LotRCard addTreachery(string title, string encounterSet)
+        public LotRCard addTreachery(string title, string encounterSet)
         {
             var treachery = LotRCard.Treachery(title, string.Empty, encounterSet);
             addCard(treachery);
             return treachery;
         }
 
-        protected LotRCard addTreachery(string title, EncounterSet encounterSet)
+        public LotRCard addTreachery(string title, EncounterSet encounterSet)
         {
             return addTreachery(title, encounterSet.Name);
         }
 
-        protected LotRCard addEncounterSideQuest(string title, string encounterSet, byte? questPoints)
+        public LotRCard addEncounterSideQuest(string title, string encounterSet, byte? questPoints)
         {
             var sideQuest = LotRCard.EncounterSideQuest(title, string.Empty, encounterSet, questPoints);
             addCard(sideQuest);
             return sideQuest;
         }
 
-        protected LotRCard addEncounterSideQuest(string title, EncounterSet encounterSet, byte? questPoints)
+        public LotRCard addEncounterSideQuest(string title, EncounterSet encounterSet, byte? questPoints)
         {
             return addEncounterSideQuest(title, encounterSet.Name, questPoints);
         }
 
-        protected LotRCard addObjective(string title, string encounterSet)
+        public LotRCard addObjective(string title, string encounterSet)
         {
             var objective = LotRCard.Objective(title, string.Empty, encounterSet);
             addCard(objective);
             return objective;
         }
 
-        protected LotRCard addObjective(string title, EncounterSet encounterSet)
+        public LotRCard addObjective(string title, EncounterSet encounterSet)
         {
             return addObjective(title, encounterSet.Name);
         }
 
-        protected LotRCard addObjectiveAlly(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        public LotRCard addObjectiveAlly(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             var objectiveAlly = LotRCard.ObjectiveAlly(title, string.Empty, encounterSet, willpower, attack, defense, hitPoints);
             addCard(objectiveAlly);
             return objectiveAlly;
         }
 
-        protected LotRCard addObjectiveAlly(string title, EncounterSet encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        public LotRCard addObjectiveAlly(string title, EncounterSet encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             return addObjectiveAlly(title, encounterSet.Name, willpower, attack, defense, hitPoints);
         }
 
-        protected LotRCard addObjectiveLocation(string title, string encounterSet, byte questPoints, bool isUnique, byte? victoryPoints)
+        public LotRCard addObjectiveLocation(string title, string encounterSet, byte questPoints, bool isUnique, byte? victoryPoints)
         {
             var objectiveLocation = LotRCard.ObjectiveLocation(title, encounterSet, questPoints);
             objectiveLocation.IsUnique = isUnique;
@@ -218,12 +229,12 @@ namespace HallOfBeorn.Models.LotR
             return objectiveLocation;
         }
 
-        protected LotRCard addObjectiveLocation(string title, EncounterSet encounterSet, byte questPoints, bool isUnique, byte? victoryPoints)
+        public LotRCard addObjectiveLocation(string title, EncounterSet encounterSet, byte questPoints, bool isUnique, byte? victoryPoints)
         {
             return addObjectiveLocation(title, encounterSet.Name, questPoints, isUnique, victoryPoints);
         }
 
-        protected LotRCard addObjectiveHero(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        public LotRCard addObjectiveHero(string title, string encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             var objectiveHero = LotRCard.ObjectiveHero(title, encounterSet, willpower, attack, defense, hitPoints);
             objectiveHero.IsUnique = true;
@@ -231,12 +242,12 @@ namespace HallOfBeorn.Models.LotR
             return objectiveHero;
         }
 
-        protected LotRCard addObjectiveHero(string title, EncounterSet encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
+        public LotRCard addObjectiveHero(string title, EncounterSet encounterSet, byte willpower, byte attack, byte defense, byte hitPoints)
         {
             return addObjectiveHero(title, encounterSet.Name, willpower, attack, defense, hitPoints);
         }
 
-        protected LotRCard addShipObjective(string title, string encounterSet, bool isUnique, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
+        public LotRCard addShipObjective(string title, string encounterSet, bool isUnique, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
         {
             var shipObjective = LotRCard.ShipObjective(title, encounterSet, willpower, attack, defense, hitPoints);
             shipObjective.IsUnique = isUnique;
@@ -244,31 +255,31 @@ namespace HallOfBeorn.Models.LotR
             return shipObjective;
         }
 
-        protected LotRCard addShipObjective(string title, EncounterSet encounterSet, bool isUnique, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
+        public LotRCard addShipObjective(string title, EncounterSet encounterSet, bool isUnique, byte? willpower, byte? attack, byte? defense, byte? hitPoints)
         {
             return addShipObjective(title, encounterSet.Name, isUnique, willpower, attack, defense, hitPoints);
         }
 
-        protected LotRCard addCave(string title, string encounterSet)
+        public LotRCard addCave(string title, string encounterSet)
         {
             var cave = LotRCard.Cave(title, encounterSet);
             addCard(cave);
             return cave;
         }
 
-        protected LotRCard addCave(string title, EncounterSet encounterSet)
+        public LotRCard addCave(string title, EncounterSet encounterSet)
         {
             return addCave(title, encounterSet.Name);
         }
 
-        protected LotRCard addCampaign(string title, string encounterSet, string oppositeTitle)
+        public LotRCard addCampaign(string title, string encounterSet, string oppositeTitle)
         {
             var campaign = LotRCard.Campaign(title, encounterSet, oppositeTitle);
             addCard(campaign);
             return campaign;
         }
 
-        protected LotRCard addCampaign(string title, EncounterSet encounterSet, string oppositeTitle)
+        public LotRCard addCampaign(string title, EncounterSet encounterSet, string oppositeTitle)
         {
             return addCampaign(title, encounterSet.Name, oppositeTitle);
         }
@@ -659,12 +670,12 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheLandOfSorrow = new Sets.VengeanceOfMordor.TheLandOfSorrowSet();
         public static CardSet TheFortressOfNurn = new Sets.VengeanceOfMordor.TheFortressOfNurnSet();
 
-        public static CardSet WrathAndRuinPreorderPromotion = new Sets.PreorderPromotion.WrathAndRuinPreorderPromotionSet();
-        public static CardSet TheCityOfUlfastPreorderPromotion = new Sets.PreorderPromotion.TheCityOfUlfastPreorderPromotionSet();
-        public static CardSet ChallengeOfTheWainridersPreorderPromotion = new Sets.PreorderPromotion.ChallengeOfTheWainridersPreorderPromotionSet();
-        public static CardSet UnderTheAshMountainsPreorderPromotion = new Sets.PreorderPromotion.UnderTheAshMountainsPreorderPromotionSet();
-        public static CardSet TheLandOfSorrowPreorderPromotion = new Sets.PreorderPromotion.TheLandOfSorrowPreorderPromotionSet();
-        public static CardSet TheFortressOfNurnPreorderPromotion = new Sets.PreorderPromotion.TheFortressOfNurnPreorderPromotionSet();
+        public static CardSet WrathAndRuinPreorderPromotion = Sets.PreorderPromotion.WrathAndRuinPreorderPromotionSet.Create();
+        public static CardSet TheCityOfUlfastPreorderPromotion = Sets.PreorderPromotion.TheCityOfUlfastPreorderPromotionSet.Create();
+        public static CardSet ChallengeOfTheWainridersPreorderPromotion = Sets.PreorderPromotion.ChallengeOfTheWainridersPreorderPromotionSet.Create();
+        public static CardSet UnderTheAshMountainsPreorderPromotion = Sets.PreorderPromotion.UnderTheAshMountainsPreorderPromotionSet.Create();
+        public static CardSet TheLandOfSorrowPreorderPromotion = Sets.PreorderPromotion.TheLandOfSorrowPreorderPromotionSet.Create();
+        public static CardSet TheFortressOfNurnPreorderPromotion = Sets.PreorderPromotion.TheFortressOfNurnPreorderPromotionSet.Create();
 
         public static CardSet TheHobbitOverHillAndUnderHill = new Sets.TheHobbit.OverHillandUnderHillSet();
         public static CardSet TheHobbitOnTheDoorstep = new Sets.TheHobbit.OntheDoorstepSet();
@@ -685,9 +696,9 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheWizardsQuest = new Sets.CustomScenarioKit.TheWizardsQuestSet();
         public static CardSet TheWoodlandRealm = new Sets.CustomScenarioKit.TheWoodlandRealmSet();
         public static CardSet TheMinesOfMoria = new Sets.CustomScenarioKit.TheMinesOfMoriaSet();
-        public static CardSet TheMinesOfMoriaPreorderPromotion = new Sets.PreorderPromotion.TheMinesOfMoriaPreorderPromotionSet();
+        public static CardSet TheMinesOfMoriaPreorderPromotion = Sets.PreorderPromotion.TheMinesOfMoriaPreorderPromotionSet.Create();
         public static CardSet EscapeFromKhazadDum = new Sets.CustomScenarioKit.EscapeFromKhazadDumSet();
-        public static CardSet EscapeFromKhazadDumPreorderPromotion = new Sets.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionSet();
+        public static CardSet EscapeFromKhazadDumPreorderPromotion = Sets.PreorderPromotion.EscapeFromKhazadDumPreorderPromotionSet.Create();
         
         public static CardSet TheHuntForTheDreadnaught = new Sets.ScenarioPack.TheHuntForTheDreadnaughtSet();
         public static CardSet TheDarkOfMirkwood = new Sets.ScenarioPack.TheDarkOfMirkwoodSet();

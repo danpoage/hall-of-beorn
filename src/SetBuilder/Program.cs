@@ -48,7 +48,7 @@ namespace SetBuilder
         private const string withShadowFormat                = "                .WithShadow(\"{0}\")";
         private const string withFlavorFormat                = "                .WithFlavor(\"{0}\")";
         private const string withFlavorLineFormat            = "                .WithFlavorLine(\"{0}\")";
-        private const string withTemplateFormat              = "                .WithTemplate(\"{0}\")";
+        //private const string withTemplateFormat              = "                .WithTemplate(\"{0}\")";
         private const string withOppositeTitleFormat         = "                .WithOppositeTitle(\"{0}\")";
         private const string withOppositeTextLineFormat      = "                .WithOppositeTextLine(\"{0}\")";
         private const string withOppositeFlavorFormat        = "                .WithOppositeFlavor(\"{0}\")";
@@ -308,6 +308,7 @@ namespace SetBuilder
             return s.ToString();
         }
 
+        /*
         private static string withTemplate(LotRCard card)
         {
             if (string.IsNullOrWhiteSpace(card.HtmlTemplate))
@@ -317,6 +318,7 @@ namespace SetBuilder
                 card.HtmlTemplate)
                 + Environment.NewLine;
         }
+        */
 
         private static string withOppositeText(LotRCard card)
         {
@@ -461,7 +463,7 @@ namespace SetBuilder
             s.Append(withText(card));
             s.Append(withShadow(card));
             s.Append(withFlavor(card));
-            s.Append(withTemplate(card));
+            //s.Append(withTemplate(card));
             s.Append(withOppositeText(card));
             s.Append(withOppositeFlavor(card));
             s.Append(withOppositeTemplate(card));

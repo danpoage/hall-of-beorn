@@ -35,7 +35,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithTraits("Ent.")
                 .WithTextLine("Cannot have restricted attachments.")
                 .WithTextLine("Action: Deal 1 damage to Treebeard to give him +1 Willpower and +1 Attack until the end of the phase. (Limit 5 times per phase.)")
-                //.WithTemplate("<p><b>Action:</b> Deal 1 damage to {self} to give him +1 {Willpower} and +1 {Attack} until the end of the phase. (Limit 5 times per phase.)</p><p class='flavor-text'>&quot;I am not altogether on anybody's side, because nobody is altogether on my side...&quot;<br>&ndash;The Two Towers</p>")
                 .WithAges(Age.First_Age, Age.Second_Age, Age.Third_Age)
                 .WithInfo(3, 1, Artist.Guillaume_Ducos);
             addAlly("Gimli", 4, Sphere.Leadership, true, 2, 2, 2, 3)
