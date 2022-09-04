@@ -17,7 +17,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
             addNightmareSetup(setName)
                 .WithTextLine("You are playing Nightmare mode.\r\nSetup: Add Palace Remains to the staging area.")
                 .WithTextLine("If there are more Osgiliath locations in the staging area than players in the game, this card gains: \"Response: At the beginning of the quest phase, choose 1 non-unique location. If the players quest successfully this phase, remaining progress made beyond the active location's quest points is placed on the chosen location")
-                .WithFlavorLine("\"This great array of spears and swords is going to Osgiliath.\")
+                .WithFlavorLine("\"This great array of spears and swords is going to Osgiliath.\"")
                 .WithFlavorLine("-Frodo, The Two Towers")
                 .WithOppositeTextLine("Begin with the standard quest deck and encounter deck for the Assault on Osgiliath scenario.")
                 .WithOppositeTextLine("Remove the following cards, in the specified quantities, from the standard encounter deck:")
@@ -48,7 +48,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithTextLine("X is the number of locations controlled by the first player.")
                 .WithTextLine("Forced: After Haradrim Warrior engages a player, it gets +X Attack and +X Defense until the end of the round.")
                 .WithShadow("Shadow: Deal 1 damage to defending character.")
-                .WithInfo(3, 3, Artist.Smirtouille));
+                .WithInfo(3, 3, Artist.Smirtouille);
             addLocation("Palace Remains", setName, 0, 5)
                 .WithTraits("Osgiliath.")
                 .WithTextLine("Immune to player card effects. Palace Remains gets +1 Threat for each resource token on it.")

@@ -260,6 +260,39 @@ namespace HallOfBeorn.Controllers
             };
         }
 
+        public ActionResult BeornBotScenarios(string lang)
+        {
+            var scenarios = new List<Models.BeornBot.Scenario>();
+
+            foreach (var group in scenarioService.ScenarioGroups())
+            {
+                var isOfficial = group.IsOfficial;
+
+                foreach (var scenario in group.Scenarios)
+                {
+                    scenarios.Add(new Models.BeornBot.Scenario
+                    {
+                        name = scenario.Title,
+                        product = scenario.ProductName,
+                        is_official = isOfficial,
+                        url = string.Format("https://hallofbeorn.com/LotR/Scenarios/{0}", scenario.Slug)
+                    });
+                }
+            }
+            
+            var content = JsonConvert.SerializeObject(scenarios, 
+                Formatting.None, 
+                new JsonSerializerSettings { 
+                    NullValueHandling = NullValueHandling.Ignore
+                });
+
+            return new ContentResult {
+                Content = content,
+                ContentEncoding = System.Text.Encoding.UTF8,
+                ContentType = "application/json",
+            };
+        }
+
         private void AddCategories(string slug, Models.RingsDb.RingsDbCard card)
         {
             var playerCategories = playerCategoryService.Categories(slug);

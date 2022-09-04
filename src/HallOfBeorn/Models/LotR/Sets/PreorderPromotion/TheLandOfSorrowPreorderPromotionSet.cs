@@ -38,6 +38,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
             return cs;
         }
 
+        /*
         protected void Initialize()
         {
             Name = setName;
@@ -70,6 +71,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithFlavorLine("-The Return of the King")
                 .WithPromotion()
                 .WithInfo(113, 1, Artist.Carlos_Palma_Cruchaga);
-        }
+        }*/
     }
 }

@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
 
         public static CardSet Create() {
 
-            var cs = CardSet.Create(setName, "UtAM-PRM", Models.SetType.Preorder_Promotion, "Vengeance of Mordor, 4);
+            var cs = CardSet.Create(setName, "UtAM-PRM", Models.SetType.Preorder_Promotion, "Vengeance of Mordor", 4);
 
             cs.addHero("Gildor Inglorion", 9, Sphere.Leadership, 3, 2, 1, 3)
                 .WithTraits("Noldor.", "Noble.")
@@ -36,6 +36,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
             return cs;
         }
 
+        /*
         protected void Initialize()
         {
             Name = setName;
@@ -66,6 +67,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("You cannot play Northern Bowmaster from your hand unless you are engaged with an enemy.")
                 .WithPromotion()
                 .WithInfo(86, 1, Artist.Aleksander_Karcz);
-        }
+        }*/
     }
 }

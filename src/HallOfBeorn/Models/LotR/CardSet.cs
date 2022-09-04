@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace HallOfBeorn.Models.LotR
 {
-    public abstract class CardSet : ICardSet<Product, LotRCard>
+    public class CardSet : ICardSet<Product, LotRCard>
     {
         protected CardSet()
         {
@@ -31,7 +31,9 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
-        protected abstract void Initialize();
+        protected virtual void Initialize()
+        {
+        }
 
         protected virtual void addCard(LotRCard card)
         {

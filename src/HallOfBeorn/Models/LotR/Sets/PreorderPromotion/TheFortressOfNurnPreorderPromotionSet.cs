@@ -34,6 +34,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
             return cs;
         }
 
+        /*
         protected void Initialize()
         {
             Name = setName;
@@ -63,5 +64,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithPromotion()
                 .WithInfo(146, 1, Artist.Chris_Grun);
         }
+         * */
     }
 }

@@ -48,6 +48,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
             return cs;
         }
 
+        /*
         protected void Initialize()
         {
             Name = setName;
@@ -89,6 +90,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithShadow("Shadow: Discard an attachment from the defending character.")
                 .WithPromotion()
                 .WithInfo(13, 1, Artist.Jose_Vega);
-        }
+        }*/
     }
 }

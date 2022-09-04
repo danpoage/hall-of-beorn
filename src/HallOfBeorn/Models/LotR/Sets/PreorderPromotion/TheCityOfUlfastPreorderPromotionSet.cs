@@ -3,7 +3,6 @@
 namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
 {
     public class TheCityOfUlfastPreorderPromotionSet
-        : CardSet
     {
         private const string setName = "The City of Ulfast Preorder Promotion";
 
@@ -33,7 +32,8 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
 
             return cs;
         }
-        
+
+        /*
         protected void Initialize()
         {
             Name = setName;
@@ -61,6 +61,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithFlavorLine("-The Return of the King")
                 .WithPromotion()
                 .WithInfo(36, 1, Artist.Leanna_Crossan);
-        }
+        }*/
     }
 }

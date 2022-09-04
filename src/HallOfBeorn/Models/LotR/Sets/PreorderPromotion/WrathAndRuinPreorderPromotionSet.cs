@@ -35,6 +35,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
             return cs;
         }
 
+        /*
         protected void Initialize()
         {
             Name = setName;
@@ -64,6 +65,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithTextLine("When Revealed: Choose a player. That player gains control of Tom Bombadil, ready and committed to the quest. At the end of the round, remove Tom Bombadil and a copy of Tom Bombadillo! in the victory display from the game. This effect cannot be cancelled.")
                 .WithPromotion()
                 .WithInfo(10, 1, Artist.Borja_Pindado);
-        }
+        }*/
     }
 }

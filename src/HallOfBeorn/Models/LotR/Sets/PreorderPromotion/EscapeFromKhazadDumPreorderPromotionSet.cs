@@ -51,6 +51,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
             return cs;
         }
 
+        /*
         protected void Initialize()
         {
             Name = setName;
@@ -92,6 +93,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithHorizontalArt()
                 .WithPromotion()
                 .WithInfo(31, 1, Artist.Ivan_Dixon);
-        }
+        }*/
     }
 }

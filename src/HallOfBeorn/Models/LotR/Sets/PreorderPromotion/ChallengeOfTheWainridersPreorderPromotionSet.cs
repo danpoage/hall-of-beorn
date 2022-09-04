@@ -8,7 +8,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
 
         public static CardSet Create()
         {
-            var cs = new CardSet.Create(setName, "CotW-PRM", Models.SetType.Preorder_Promotion, "Vengeance of Mordor", 3);
+            var cs = CardSet.Create(setName, "CotW-PRM", Models.SetType.Preorder_Promotion, "Vengeance of Mordor", 3);
 
             cs.addHero("Saruman", 13, Sphere.Lore, 3, 4, 2, 4)
                 .WithTraits("Istari.", "Isengard.")
@@ -38,6 +38,7 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
             return cs;
         }
 
+        /*
         protected void Initialize()
         {
             Name = setName;
@@ -68,6 +69,6 @@ namespace HallOfBeorn.Models.LotR.Sets.PreorderPromotion
                 .WithFlavorLine("-The Fellowship of the Ring")
                 .WithPromotion()
                 .WithInfo(60, 1, Artist.Nino_Vecia);
-        }
+        }*/
     }
 }

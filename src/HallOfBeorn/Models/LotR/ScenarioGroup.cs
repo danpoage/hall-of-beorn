@@ -24,7 +24,22 @@ namespace HallOfBeorn.Models.LotR
         private readonly List<Scenario> scenarios = new List<Scenario>();
 
         public string Name { get; set; }
-        
+
+        private HashSet<string> unofficialGroups = new HashSet<string>
+        {
+            FirstAge,
+            DoomMastered,
+            ChildrenOfEorl,
+            OathsOfTheRohirrim,
+            TheScouringOfTheShire
+        };
+
+        public bool IsOfficial { 
+            get {
+                return !unofficialGroups.Contains(Name);
+            }
+        }
+
         public IEnumerable<Scenario> Scenarios
         {
             get
