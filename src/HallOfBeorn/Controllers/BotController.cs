@@ -13,6 +13,7 @@ using HallOfBeorn.Models.LotR.Simple;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR;
 using HallOfBeorn.Services.LotR.Categories;
+using HallOfBeorn.Services.LotR.Community;
 using HallOfBeorn.Services.LotR.Design;
 using HallOfBeorn.Services.LotR.Octgn;
 using HallOfBeorn.Services.LotR.RingsDb;
@@ -22,9 +23,9 @@ using HallOfBeorn.Services.LotR.Templates;
 
 namespace HallOfBeorn.Controllers
 {
-    public class ExportController : Controller
+    public class BotController : Controller
     {
-        public ExportController()
+        public BotController()
         {
             productRepository = (ProductRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.ProductRepository];
             cardRepository = (LotRCardRepository)System.Web.HttpContext.Current.Application[LotRServiceNames.CardRepository];
@@ -34,6 +35,7 @@ namespace HallOfBeorn.Controllers
             octgnService = (IOctgnService)System.Web.HttpContext.Current.Application[LotRServiceNames.OctgnService];
             ringsDbService = GetService<IRingsDbService>(LotRServiceNames.RingsDbService);
             templateService = GetService<ITemplateService>(LotRServiceNames.TemplateService);
+            creatorService = GetService<ICreatorService>(LotRServiceNames.CreatorService);
 
             archetypeService = new ArchetypeService(cardRepository);
             playerCategoryService = new PlayerCategoryService(cardRepository);
@@ -50,6 +52,7 @@ namespace HallOfBeorn.Controllers
         private readonly IOctgnService octgnService;
         private readonly IRingsDbService ringsDbService;
         private readonly ITemplateService templateService;
+        private readonly ICreatorService creatorService;
 
         private readonly ICategoryService<Archetype> archetypeService;
         private readonly ICategoryService<PlayerCategory> playerCategoryService;
@@ -147,7 +150,12 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Blogs(string lang)
         {
-            var links = new Dictionary<string, List<Link>>();
+            var links = new Dictionary<string, List<ILink>>();
+
+            foreach (var blog in creatorService.Blogs())
+            {
+                links[blog.Name] = new List<ILink>(blog.Links());
+            }
 
             var content = JsonConvert.SerializeObject(links, 
                 Formatting.None, 
@@ -164,7 +172,12 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Podcasts(string lang)
         {
-            var links = new Dictionary<string, List<Link>>();
+            var links = new Dictionary<string, List<ILink>>();
+
+            foreach (var podcast in creatorService.Podcasts())
+            {
+                links[podcast.Name] = new List<ILink>(podcast.Links());
+            }
 
             var content = JsonConvert.SerializeObject(links, 
                 Formatting.None, 
@@ -179,9 +192,14 @@ namespace HallOfBeorn.Controllers
             };
         }
 
-        public ActionResult Videos(string lang)
+        public ActionResult Channels(string lang)
         {
-            var links = new Dictionary<string, List<Link>>();
+            var links = new Dictionary<string, List<ILink>>();
+
+            foreach (var channel in creatorService.Channels())
+            {
+                links[channel.Name] = new List<ILink>(channel.Links());
+            }
 
             var content = JsonConvert.SerializeObject(links, 
                 Formatting.None, 
