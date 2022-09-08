@@ -8,6 +8,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
 using HallOfBeorn.Models;
+using HallOfBeorn.Models.BeornBot;
 using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.Simple;
 using HallOfBeorn.Models.LotR.ViewModels;
@@ -150,11 +151,15 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Blogs(string lang)
         {
-            var links = new Dictionary<string, List<ILink>>();
+            var links = new List<BotLink>();
 
             foreach (var blog in creatorService.Blogs())
             {
-                links[blog.Name] = new List<ILink>(blog.Links());
+                links.AddRange(
+                    blog.Links()
+                        .Where(l => !string.IsNullOrEmpty(l.Url))
+                        .Select(l => BotLink.From(l))
+                );
             }
 
             var content = JsonConvert.SerializeObject(links, 
@@ -172,11 +177,15 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Podcasts(string lang)
         {
-            var links = new Dictionary<string, List<ILink>>();
+            var links = new List<BotLink>();
 
             foreach (var podcast in creatorService.Podcasts())
             {
-                links[podcast.Name] = new List<ILink>(podcast.Links());
+                links.AddRange(
+                    podcast.Links()
+                        .Where(l => !string.IsNullOrEmpty(l.Url))
+                        .Select(l => BotLink.From(l))
+                );
             }
 
             var content = JsonConvert.SerializeObject(links, 
@@ -194,11 +203,15 @@ namespace HallOfBeorn.Controllers
 
         public ActionResult Channels(string lang)
         {
-            var links = new Dictionary<string, List<ILink>>();
+            var links = new List<BotLink>();
 
             foreach (var channel in creatorService.Channels())
             {
-                links[channel.Name] = new List<ILink>(channel.Links());
+                links.AddRange(
+                    channel.Links()
+                        .Where(l => !string.IsNullOrEmpty(l.Url))
+                        .Select(l => BotLink.From(l))
+                );
             }
 
             var content = JsonConvert.SerializeObject(links, 

@@ -213,6 +213,7 @@
     <Compile Include="Handlers\LotR\TranslationHandler.cs" />
     <Compile Include="HtmlHelperExtensions.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\BeornBot\BotLink.cs" />
     <Compile Include="Models\BeornBot\Scenario.cs" />
     <Compile Include="Models\CardStatus.cs" />
     <Compile Include="Models\Characters\AngborTheFearlessCharacter.cs" />
