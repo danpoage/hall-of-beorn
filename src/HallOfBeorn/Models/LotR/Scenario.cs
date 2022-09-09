@@ -565,6 +565,7 @@ namespace HallOfBeorn.Models.LotR
         public static Scenario TheGapOfRohan = new Scenarios.OathsOfTheRohirrim.TheGapOfRohanScenario();
         public static Scenario TheGlitteringCaves = new Scenarios.OathsOfTheRohirrim.TheGlitteringCavesScenario();
         public static Scenario MusteringOfTheRohirrim = new Scenarios.OathsOfTheRohirrim.MusteringOfTheRohirrimScenario();
+        public static Scenario BloodInTheIsen = new Scenarios.OathsOfTheRohirrim.BloodInTheIsenScenario();
         public static Scenario TheScouringOfTheShire = new Scenarios.TheScouringOfTheShire.TheScouringOfTheShireScenario();
         #endregion
 

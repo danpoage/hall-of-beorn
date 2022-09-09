@@ -292,6 +292,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheGapOfRohan = new Products.Community.TheGapOfRohanProduct();
         public static Product TheGlitteringCaves = new Products.Community.TheGlitteringCavesProduct();
         public static Product MusteringOfTheRohirrim = new Products.Community.MusteringOfTheRohirrimProduct();
+        public static Product BloodInTheIsen = new Products.Community.BloodInTheIsenProduct();
 
         public static Product TheScouringOfTheShire = new Products.Community.TheScouringOfTheShireProduct();
         #endregion

@@ -588,6 +588,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheGapOfRohan);
             Add(TheGlitteringCaves);
             Add(MusteringOfTheRohirrim);
+            Add(BloodInTheIsen);
 
             Add(TheScouringOfTheShire);
         }
@@ -809,6 +810,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheGapOfRohan = new Sets.OathsOfTheRohirrim.TheGapOfRohanSet();
         public static CardSet TheGlitteringCaves = new Sets.OathsOfTheRohirrim.TheGlitteringCavesSet();
         public static CardSet MusteringOfTheRohirrim = new Sets.OathsOfTheRohirrim.MusteringOfTheRohirrimSet();
+        public static CardSet BloodInTheIsen = Sets.OathsOfTheRohirrim.BloodInTheIsenSet.Create();
 
         public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireCardSet();
 

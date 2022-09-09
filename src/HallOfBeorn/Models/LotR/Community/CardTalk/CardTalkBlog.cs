@@ -298,7 +298,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Smoke and Think", "https://cardtalk2018.com/2022/01/18/smoke-and-think/", "Jan 18 2022")
                 .WithLabels("Smoke and Think");
             AddLink("The Land of Sorrow – January 9, 2022", "https://cardtalk2018.com/2022/01/14/the-land-of-sorrow-december-21-2021/", "Jan 14 2022")
-                .WithLabels("The Land of Sorrow", "Elrond", "Galdor of the Havens", "Glóin" "Gloin");
+                .WithLabels("The Land of Sorrow", "Elrond", "Galdor of the Havens", "Glóin", "Gloin");
             AddLink("Spare Pipe", "https://cardtalk2018.com/2022/01/12/spare-pipe/", "Jan 12 2022")
                 .WithLabels("Spare Pipe");
             AddLink("Under the Ash Mountains with Electronjon’s Ain’t No Ash Mountain High Enough – December 21, 2021", "https://cardtalk2018.com/2022/01/07/under-the-ash-mountains-with-electronjons-aint-no-ash-mountain-high-enough-december-21-2021/", "Jan 7 2022")
@@ -344,7 +344,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Challenge of the Wainriders with Rohan and Eagles Race the Wainriders – October 30, 2021", "https://cardtalk2018.com/2021/11/04/challenge-of-the-wainriders-with-rohan-and-eagles-race-the-wainriders-october-30-2021/", "Nov 4 2021")
                 .WithLabels("Challenge of the Wainriders", "ALeP", "Éowyn", "Eowyn", "Gwaihir", "Thengel");
             AddLink("Challenge of the Wainriders with The Doom of Men – October 17, 2021", "https://cardtalk2018.com/2021/10/28/challenge-of-the-wainriders-with-the-doom-of-men-october-17-2021/", "Oct 28 2021")
-                .WithLabels("Challenge of the Wainriders", "Bong of Friendship", "ALeP", "Aragorn", "Beregond" "Éowyn" "Eowyn", "Ingold");
+                .WithLabels("Challenge of the Wainriders", "Bong of Friendship", "ALeP", "Aragorn", "Beregond", "Éowyn", "Eowyn", "Ingold");
             AddLink("Forlong", "https://cardtalk2018.com/2021/10/26/forlong/", "Oct 26 2021")
                 .WithLabels("Forlong", "Outlands");
             AddLink("The City of Ulfast with Caldara + Burglar’s Turn – October 12, 2021", "https://cardtalk2018.com/2021/10/21/the-city-of-ulfast-with-modified-turd-burglar-october-12-2021/", "Oct 21 2021")
@@ -356,7 +356,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Secret Vigil – Community Review", "https://cardtalk2018.com/2021/10/12/secret-vigil/", "Oct 12 2021")
                 .WithLabels("Secret Vigil");
             AddLink("Can’t of the Rings 2021: Matt’s Games", "https://cardtalk2018.com/2021/10/07/cant-of-the-rings-2021-matts-games/", "Oct 7 2021")
-                .WithLabels("Con of the Rings", "The Mumakil", "Wandering Took" "kattattack22")
+                .WithLabels("Con of the Rings", "The Mumakil", "Wandering Took", "kattattack22")
                 .WithLabels("Race Across Harad", "Thanee", "hone")
                 .WithLabels("Into Fangorn", "Quetzal", "stoneoferic")
                 .WithLabels("Journey Up the Anduin", "Quetzal", "stoneoferic", "Uruk-Guy")

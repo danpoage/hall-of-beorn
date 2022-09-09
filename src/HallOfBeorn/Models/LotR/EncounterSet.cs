@@ -610,6 +610,7 @@ namespace HallOfBeorn.Models.LotR
             Add(SearchForTheHorn);
             Add(ExploringTheCaves);
             Add(MusteringOfTheRohirrim);
+            Add(BloodInTheIsen);
 
             //The Scouring of the Shire
             Add(TheScouringOfTheShire);
@@ -1029,6 +1030,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet SearchForTheHorn = new EncounterSet { Name = "Search for the Horn", Set = "The Glittering Caves" };
         public static EncounterSet ExploringTheCaves = new EncounterSet { Name = "Exploring the Caves", Set = "The Glittering Caves" };
         public static EncounterSet MusteringOfTheRohirrim = new EncounterSet { Name = "Mustering of the Rohirrim", Set = "Mustering of the Rohirrim" };
+        public static EncounterSet BloodInTheIsen = new EncounterSet { Name = "Blood in the Isen", Set = "Blood in the Isen" };
 
         public static EncounterSet TheScouringOfTheShire = new EncounterSet { Name = "The Scouring of the Shire", Set = "The Scouring of the Shire" };
     }

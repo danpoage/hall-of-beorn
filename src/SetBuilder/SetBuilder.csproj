@@ -151,6 +151,9 @@
     <Content Include="ALeP\Mustering-of-the-Rohirrim.Italian.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ALeP\Blood-in-the-Isen.English.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
