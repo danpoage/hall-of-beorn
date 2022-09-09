@@ -201,7 +201,7 @@ namespace HallOfBeorn.Controllers
             };
         }
 
-        public ActionResult Channels(string lang)
+        public ActionResult Videos(string lang)
         {
             var links = new List<BotLink>();
 
