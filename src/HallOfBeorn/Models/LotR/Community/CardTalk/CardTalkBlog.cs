@@ -11,6 +11,22 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             : base("Card Talk Blog", "https://cardtalk2018.com/", "https://cardtalk2018.com/feed/", LinkType.Card_Talk_Blog)
         {
             AddYear(2022);
+            AddLink("Halbarad (Hero)", "https://cardtalk2018.com/2022/09/06/halbarad-hero/", "Sep 6 2022")
+                .WithLabels("Halbarad");
+            AddLink("The Fords of Isen with Hobbit Decks 2 – December 29, 2019", "https://cardtalk2018.com/2022/09/02/the-fords-of-isen-with-hobbit-decks-2-december-29-2019/", "Sep 2 2022")
+                .WithLabels("The Fords of Isen", "Hobbit").WithDeckLabels(13963, 13964);
+            AddLink("The Shirefolk", "https://cardtalk2018.com/2022/08/30/the-shirefolk/", "Aug 30 2022")
+                .WithLabels("The Shirefolk", "Hobbit Cloak", "Sam Gamgee", "Dagger of Westernesse", "Gaffer Gamgee", "Resourceful", "Timely Aid", "Out of the Wild", "Risk Some Light", "Leaf Brooch");
+            AddLink("The Fords of Isen with Hobbit Decks – November 10, 2019", "https://cardtalk2018.com/2022/08/23/the-fords-of-isen-with-hobbit-decks-november-10-2019/", "Aug 23 2022")
+                .WithLabels("The Fords of Isen", "Hobbit", "Erestor", "Frodo Baggins", "Merry", "Bilbo Baggins", "Pippin", "Sam Gamgee");
+            AddLink("Deadmen’s Dike with Lore Tactics Angmar Awakened Minimum Purchase Deck – August 18, 2022", "https://cardtalk2018.com/2022/08/19/deadmens-dike-with-lore-tactics-angmar-awakened-minimum-purchase-deck-august-18-2022/", "Aug 19 2022")
+                .WithLabels("Deadmen's Dike", "Aragorn", "Beravor", "Denethor");
+            AddLink("Halfling Determination", "https://cardtalk2018.com/2022/08/16/halfling-determination/", "Aug 16 2022")
+                .WithLabels("Halfling Determination", "Hobbit", "Fast Hitch", "Unexected Courage", "Rohan Warhorse", "Rosie Cotton");
+            AddLink("Dwarven Tomb", "https://cardtalk2018.com/2022/08/09/dwarven-tomb/", "Aug 9 2022")
+                .WithLabels("Dwarven Tomb", "A Test of Will", "Hasty Stroke", "Elrond's Counsel", "The Galadhrim's Greeting");
+            AddLink("The Morgul Vale with Mono-Tactics – November 2, 2019", "https://cardtalk2018.com/2022/08/05/the-morgul-vale-with-mono-tactics-november-2-2019/", "Aug 5 2022")
+                .WithLabels("The Morgul Vale", "Mono Tactics", "Beregond", "Éowyn", "Eowyn", "Legolas");
             AddLink("First Year Retrospective", "https://cardtalk2018.com/2022/08/01/first-year-retrospective/", "Aug 1 2022")
                 .WithLabels("First Anniversary", "Glorfindel", "Brok Ironfist");
             AddLink("Deadmen’s Dike with New Angmar Awakened Minimum Purchase Deck – July 26, 2022", "https://cardtalk2018.com/2022/07/29/deadmens-dike-with-new-angmar-awakened-minimum-purchase-deck-july-26-2022/", "Jul 29 2022")
@@ -245,7 +261,121 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Out of the Wild – Community Review", "https://cardtalk2018.com/2022/02/17/out-of-the-wild/", "Feb 17 2022")
                 .WithLabels("Out of the Wild", "Victory Display", "Control", "Encounter Deck Control", "Keen as Lances", "The Door is Closed!")
                 .WithDeckLabels(15410);
+            AddLink("Core Set Combos: Son of Arnor + Forest Snare", "https://cardtalk2018.com/2022/02/16/core-set-combos-son-of-arnor-forest-snare/", "Feb 16 2022")
+                .WithLabels("Core Set", "Son of Arnor", "Forest Snare");
+            AddLink("Beravor", "https://cardtalk2018.com/2022/02/15/beravor/", "Feb 15 2022")
+                .WithLabels("Beravor");
+            AddLink("Core Campaign Journey Along the Anduin 1 - February 12, 2022", "https://cardtalk2018.com/2022/02/14/core-campaign-journey-along-the-anduin-1-february-12-2022/", "Feb 14 2022")
+                .WithLabels("Core Set", "Revised", "Campaign", "Journey Along the Anduin", "Beravor", "Eowyn", "Éowyn", "Gloin", "Glóin");
+            AddLink("Core Campaign Passage Through Mirkwood - February 6, 2022", "https://cardtalk2018.com/2022/02/11/core-campaign-passage-through-mirkwood-february-6-2022/", "Feb 11 2022")
+                .WithLabels("Core Set", "Revised", "Campaign", "Passage Through Mirkwood", "Beravor", "Eowyn", "Éowyn", "Gloin", "Glóin");
+            AddLink("Firyal", "https://cardtalk2018.com/2022/02/10/firyal/", "Feb 10 2022")
+                .WithLabels("Firyal");
+            AddLink("Core Set Combos: Aragorn + Theodred", "https://cardtalk2018.com/2022/02/09/core-set-combos-aragorn-theodred/", "Feb 9 2022")
+                .WithLabels("Core Set", "Aragorn", "Theodred", "Théodred");
+            AddLink("Feint", "https://cardtalk2018.com/2022/02/08/feint/", "Feb 8 2022")
+                .WithLabels("Feint");
+            AddLink("Second Breakfast – Community Review", "https://cardtalk2018.com/2022/02/07/second-breakfast/", "Feb 7 2022")
+                .WithLabels("Second Breakfast");
+            AddLink("The Land of Sorrow with The Golden Liberator – January 29, 2022", "https://cardtalk2018.com/2022/02/04/the-land-of-sorrow-with-the-golden-liberator-january-29-2022/", "Feb 4 2022")
+                .WithLabels("The Land of Sorrow", "Glorfindel", "ALeP", "Arwen Undómiel", "Arwen Undomiel", "Dáin Ironfoot", "Dain Ironfoot");
+            AddLink("The Land of Sorrow with The Golden Liberator – January 23, 2022", "https://cardtalk2018.com/2022/02/03/the-land-of-sorrow-with-the-golden-liberator-january-23-2022/", "Feb 3 2022")
+                .WithLabels("The Land of Sorrow", "Glorfindel", "ALeP", "Arwen Undómiel", "Arwen Undomiel", "Dáin Ironfoot", "Dain Ironfoot");
+            AddLink("Warden of Healing – Community Review", "https://cardtalk2018.com/2022/02/03/warden-of-healing/", "Feb 3 2022")
+                .WithLabels("Warden of Healing");
+            AddLink("Core Set Combos – Sneak Attack + Gandalf", "https://cardtalk2018.com/2022/02/02/core-set-combos-sneak-attack-gandalf/", "Feb 2 2022")
+                .WithLabels("Core Set", "Combo", "Sneak Attack", "Gandalf");
+            AddLink("Core Set and Dark of Mirkwood PnP Campaign Cards available", "https://cardtalk2018.com/2022/02/01/core-set-and-dark-of-mirkwood-pnp-campaign-cards-available/", "Feb 1 2022")
+                .WithLabels("Core Set", "Campaign", "Dark of Mirkwood", "PnP");
+            AddLink("Unexpected Courage", "https://cardtalk2018.com/2022/02/01/unexpected-courage/", "Feb 1 2022")
+                .WithLabels("Unexpected Courage");
+            AddLink("New Player February Extraganza!", "https://cardtalk2018.com/2022/01/30/new-player-february-extraganza/", "Jan 1 2022")
+                .WithLabels("New Player");
+            AddLink("Tactics Glorfindel – Spoiler Review", "https://cardtalk2018.com/2022/01/25/tactics-glorfindel-spoiler-review/", "Jan 25 2022")
+                .WithLabels("Glorfindel", "ALeP");
+            AddLink("Fire in the Night with Side Quest: Reunification of the Numenorian Kingdoms – April 17, 2021", "https://cardtalk2018.com/2022/01/21/fire-in-the-night-with-side-quest-reunification-of-the-numenorian-kingdoms-april-17-2021/", "Jan 21 2022")
+                .WithLabels("Fire in the Night", "ALeP", "Beregond", "Ingold", "Thurindir");
+            AddLink("Smoke and Think", "https://cardtalk2018.com/2022/01/18/smoke-and-think/", "Jan 18 2022")
+                .WithLabels("Smoke and Think");
+            AddLink("The Land of Sorrow – January 9, 2022", "https://cardtalk2018.com/2022/01/14/the-land-of-sorrow-december-21-2021/", "Jan 14 2022")
+                .WithLabels("The Land of Sorrow", "Elrond", "Galdor of the Havens", "Glóin" "Gloin");
+            AddLink("Spare Pipe", "https://cardtalk2018.com/2022/01/12/spare-pipe/", "Jan 12 2022")
+                .WithLabels("Spare Pipe");
+            AddLink("Under the Ash Mountains with Electronjon’s Ain’t No Ash Mountain High Enough – December 21, 2021", "https://cardtalk2018.com/2022/01/07/under-the-ash-mountains-with-electronjons-aint-no-ash-mountain-high-enough-december-21-2021/", "Jan 7 2022")
+                .WithLabels("Under the Ash Mountains", "electronjon", "Beregond", "Eowyn", "Éowyn", "Glorfindel");
+            AddLink("Andrath Guardsman – Community Review", "https://cardtalk2018.com/2022/01/04/andrath-guardsman/", "Jan 4 2022")
+                .WithLabels("Andrath Guardsman");
+
             AddYear(2021);
+            AddLink("Under the Ash Mountains with Electronjon’s Ain’t No Ash Mountain High Enough – November 20, 2021 – Attempt 2", "https://cardtalk2018.com/2021/12/31/under-the-ash-mountains-with-electronjons-aint-no-ash-mountain-high-enough-november-20-2021-attempt-2/", "Dec 31 2021")
+                .WithLabels("Under the Ash Mountains", "electronjon", "Beregond", "Eowyn", "Éowyn", "Glorfindel");
+            AddLink("Bombur (Hero)", "https://cardtalk2018.com/2021/12/28/bombur-hero/", "Dec 28 2021")
+                .WithLabels("Bombur");
+            AddLink("Folco Boffin", "https://cardtalk2018.com/2021/12/21/folco-boffin/", "Dec 21 2021")
+                .WithLabels("Folco Boffin");
+            AddLink("Under the Ash Mountains with Electronjon’s Ain’t No Ash Mountain High Enough – November 20, 2021", "https://cardtalk2018.com/2021/12/17/under-the-ash-mountains-with-electronjons-aint-no-ash-mountain-high-enough-november-20-2021/", "Dec 17 2021")
+                .WithLabels("Under the Ash Mountains", "electronjon", "Beregond", "Eowyn", "Éowyn", "Glorfindel");
+            AddLink("Leadership Elfhelm", "https://cardtalk2018.com/2021/12/14/leadership-elfhelm/", "Dec 14 2022")
+                .WithLabels("Elfhelm", "Leadership", "Hero");
+            AddLink("Under the Ash Mountains with Electronjon’s Ain’t No Ash Mountain High Enough – November 6, 2021 – 2nd Attempt", "https://cardtalk2018.com/2021/12/10/under-the-ash-mountains-with-electronjons-aint-no-ash-mountain-high-enough-november-6-2021-2nd-attempt/", "Dec 10 2021")
+                .WithLabels("Under the Ash Mountains", "electronjon", "Beregond", "Eowyn", "Éowyn", "Glorfindel");
+            AddLink("New Starter Decks Announced", "https://cardtalk2018.com/2021/12/09/new-starter-decks-announced/", "Dec 9 2021")
+                .WithLabels("Starter Deck", "Dwarves of Durin", "Elves of Lórien", "Elves of Lorien", "Defenders of Gondor", "Riders of Rohan");
+            AddLink("Mirkwood Explorer", "https://cardtalk2018.com/2021/12/07/mirkwood-explorer/", "Dec 7 2021")
+                .WithLabels("Mirkwood Explorer");
+            AddLink("Zigil Miner", "https://cardtalk2018.com/2021/12/01/zigil-miner/", "Dec 1 2021")
+                .WithLabels("Zigil Miner");
+            AddLink("Under the Ash Mountains with Electronjon’s Ain’t No Ash Mountain High Enough – November 6, 2021", "https://cardtalk2018.com/2021/11/26/under-the-ash-mountains-with-electronjons-aint-no-ash-mountain-high-enough-november-6-2021/", "Nov 26 2021")
+                .WithLabels("Under the Ash Mountains", "electronjon", "Beregond", "Eowyn", "Éowyn", "Glorfindel");
+            AddLink("Sword-thain", "https://cardtalk2018.com/2021/11/23/sword-thain/", "Nov 23 2021")
+                .WithLabels("Sword-thain");
+            AddLink("Journey Along the Anduin with Ranger Bow Target Practice – October 31, 2021", "https://cardtalk2018.com/2021/11/19/journey-along-the-anduin-with-ranger-bow-target-practice-october-31-2021/", "Nov 19 2021")
+                .WithLabels("Journey Along the Anduin", "Ranger Bow", "Glorfindel", "Mirlonde", "Pippin");
+            AddLink("Autumn’s Across the Ettenmoors Alt Art Encounter Set Giveaway", "https://cardtalk2018.com/2021/11/18/autumns-across-the-ettinmoors-alt-art-encounter-set-giveaway/", "Nov 18 2021")
+                .WithLabels("Alt Art", "Autumn", "Across the Ettenmoors");
+            AddLink("Ranger of Cardolan", "https://cardtalk2018.com/2021/11/16/ranger-of-cardolan/", "Nov 16 2021")
+                .WithLabels("Ranger of Cardolan");
+            AddLink("Challenge of the Wainriders with Rohan and Eagles Race the Wainriders – Attempt 2 – October 30, 2021", "https://cardtalk2018.com/2021/11/11/challenge-of-the-wainriders-with-rohan-and-eagles-race-the-wainriders-attempt-2-october-30-2021/", "Nov 11 2021")
+                .WithLabels("Challenge of the Wainriders", "ALeP", "Éowyn", "Eowyn", "Gwaihir", "Thengel");
+            AddLink("Lore Anborn", "https://cardtalk2018.com/2021/11/09/lore-anborn/", "Nov 9 2021")
+                .WithLabels("Anborn", "Lore");
+            AddLink("Peril in Pelargir with Mono-Tactics – Attempt 1 – April 11, 2019", "https://cardtalk2018.com/2021/11/04/peril-in-pelargir-with-mono-tactics-attempt-1-april-11-2019/", "Nov 4 2021")
+                .WithLabels("Peril in Pelargir", "Mono Tactics", "Aragorn", "Beregond", "Éowyn", "Eowyn");
+            AddLink("Challenge of the Wainriders with Rohan and Eagles Race the Wainriders – October 30, 2021", "https://cardtalk2018.com/2021/11/04/challenge-of-the-wainriders-with-rohan-and-eagles-race-the-wainriders-october-30-2021/", "Nov 4 2021")
+                .WithLabels("Challenge of the Wainriders", "ALeP", "Éowyn", "Eowyn", "Gwaihir", "Thengel");
+            AddLink("Challenge of the Wainriders with The Doom of Men – October 17, 2021", "https://cardtalk2018.com/2021/10/28/challenge-of-the-wainriders-with-the-doom-of-men-october-17-2021/", "Oct 28 2021")
+                .WithLabels("Challenge of the Wainriders", "Bong of Friendship", "ALeP", "Aragorn", "Beregond" "Éowyn" "Eowyn", "Ingold");
+            AddLink("Forlong", "https://cardtalk2018.com/2021/10/26/forlong/", "Oct 26 2021")
+                .WithLabels("Forlong", "Outlands");
+            AddLink("The City of Ulfast with Caldara + Burglar’s Turn – October 12, 2021", "https://cardtalk2018.com/2021/10/21/the-city-of-ulfast-with-modified-turd-burglar-october-12-2021/", "Oct 21 2021")
+                .WithLabels("The City of Ulfast", "Caldara", "Burglar's Turn", "Dáin Ironfoot", "Dain Ironfoot", "Éowyn", "Eowyn");
+            AddLink("Ranger Bow", "https://cardtalk2018.com/2021/10/19/ranger-bow/", "Oct 19 2021")
+                .WithLabels("Ranger Bow");
+            AddLink("Celebrimbor’s Secret with Smoke Screen Alliance – September 22, 2021", "https://cardtalk2018.com/2021/10/14/celebrimbors-secret-with-smoke-screen-alliance-september-22-2021/", "Oct 14 2021")
+                .WithLabels("Celebrimbor's Secret", "Aragorn", "Frodo Baggins", "Pippin");
+            AddLink("Secret Vigil – Community Review", "https://cardtalk2018.com/2021/10/12/secret-vigil/", "Oct 12 2021")
+                .WithLabels("Secret Vigil");
+            AddLink("Can’t of the Rings 2021: Matt’s Games", "https://cardtalk2018.com/2021/10/07/cant-of-the-rings-2021-matts-games/", "Oct 7 2021")
+                .WithLabels("Con of the Rings", "The Mumakil", "Wandering Took" "kattattack22")
+                .WithLabels("Race Across Harad", "Thanee", "hone")
+                .WithLabels("Into Fangorn", "Quetzal", "stoneoferic")
+                .WithLabels("Journey Up the Anduin", "Quetzal", "stoneoferic", "Uruk-Guy")
+                .WithLabels("Beregond", "Éowyn", "Eowyn", "Arwen Undomiel", "Arwen Undómiel", "Grimbeorn the Old", "Lanwyn")
+                .WithLabels("Aragorn", "Brand son of Bain", "Galdor of the Havens", "Theoden", "Théoden")
+                .WithLabels("Faramir", "Messenger of the King", "Frodo Baggins", "Saruman", "Bard son of Brand", "Thurindir")
+                .WithLabels("Bard the Bowman", "Mirlonde", "Pippin", "Rossiel", "Éomer", "Eomer", "Lothíriel", "Lothiriel", "Thengel", "Ingold");
+            AddLink("2021 SWAG REVEAL", "https://cardtalk2018.com/2021/10/05/2021-swag-reveal/", "Oct 5 2021")
+                .WithLabels("Journey Along the Anduin");
+            AddLink("Con of the Rings ’21: Dave’s Perspective", "https://cardtalk2018.com/2021/10/05/con-of-the-rings-21-daves-perspective/", "Oct 5 2021")
+                .WithLabels("Con of the Rings 2021", "Hunt for the Dreadnaught");
+            AddLink("Epic Multiplayer Fire in the Night – Can’t of the Rings 2021", "https://cardtalk2018.com/2021/10/03/epic-multiplayer-fire-in-the-night-cant-of-the-rings-2021/", "Oct 3 2021")
+                .WithLabels("Fire in the Night", "Epic Multiplayer", "Can't of the Rings 2021");
+            AddLink("Wrath and Ruin with The Doom of Men – September 11, 2021", "https://cardtalk2018.com/2021/09/30/wrath-and-ruin-with-the-doom-of-men-september-11-2021/", "Sep 30 2021")
+                .WithLabels("Wrath and Ruin", "Aragorn", "Beregond", "Éowyn", "Eowyn", "Ingold");
+            AddLink("A Test of Will", "https://cardtalk2018.com/2021/09/28/a-test-of-will/", "Sep 28 2021")
+                .WithLabels("A Test of Will");
+            AddLink("Temple of Doom with The Doom of Men – September 04, 2021", "https://cardtalk2018.com/2021/09/23/temple-of-doom-with-the-doom-of-men-september-04-2021/", "Sep 23 2021")
+                .WithLabels("Templ of Doom", "Aragorn", "Beregond", "Éowyn", "Eowyn", "Ingold");           
             AddLink("Blade of Gondolin", "https://cardtalk2018.com/2021/09/21/blade-of-gondolin/", "Sep 21 2021")
                 .WithLabels("Blade of Gondolin");
             AddLink("Guided by Fate", "https://cardtalk2018.com/2021/09/14/guided-by-fate/", "Sep 14 2021")
