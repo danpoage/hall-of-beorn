@@ -482,6 +482,8 @@ function initQuestMap() {
         'Fleeing the violent blizzard, you are pursued by the wraith of Helm Hammerhand. He follows inexorably, seeking to claim the bones of your Dunlending captives. You must navigate the caverns below Helm’s Deep to find Helm’s great warhorn. Sounding it may be your only hope of restoring the wraith’s mind.');
     addQuest(741, 727, 'Mustering of the Rohirrim', 'CoE', 'Mustering-of-the-Rohirrim', 'Mustering-of-the-Rohirrim/Oaths-of-the-Rohirrim-1A.png',
         'The traitor Ealdwulf is raising an army to usurp the throne of Thengel-King.');
+    addQuest(637, 656, 'Blood in the Isen', 'CoE', 'Blood-in-the-Isen', 'Blood-in-the-Isen/Crossing-the-Fords-1A.png',
+        'The traitor Ealdwulf has manipulated a host of Dunlendings and traitorous Rohirrim in a bid for the throne of Rohan. His armies have massed on the banks of the Isen where the Dunlendings prepare to ford.');
 
     var mapElement = document.getElementById('quest-map');
     if (mapElement) {
