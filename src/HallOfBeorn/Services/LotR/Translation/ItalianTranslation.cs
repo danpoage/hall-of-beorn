@@ -313,7 +313,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Wonders of Aglarond", "Meraviglie di Aglarond" }
             });
 
-            //Musterin of the Rohirrim
+            //Mustering of the Rohirrim
             SafeMap(all, new Dictionary<string, string> {
                 { "Aldburg Provocateur", "Provocatore di Aldburg" },
                 { "Assassin at Edoras", "Un Assassino ad Edoras" },
@@ -351,6 +351,31 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Winter in Westemnet", "Inverno nell' Ovestemnet" },
                 { "Without My Hat", "Senza Cappello" },
                 { "Woodmen's Outpost", "Avamposto dei Guardaboschi" },
+            });
+
+            //Blood in the Isen
+            SafeMap(all, new Dictionary<string, string> {
+                { "A Fair Exchange", "Uno Scambio Equo" },
+                { "Chaos and Confusion", "Caos e Confusione" },
+                { "Chieftain of the North", "Capitano del Nord" },
+                { "Contested Battleground", "Campo di Battaglia Conteso" },
+                { "Coordinated Assault", "Assalto Coordinato" },
+                { "Crossing the Fords", "Attraversare i Guadi" },
+                { "Defensive Outcrop", "Postazione Difensiva" },
+                { "Dunland Axe-hand", "Asciere del Dunland" },
+                { "Fleet-footed Dunlending", "Dunlandiano Lesto" },
+                { "Grey Companion", "Grigio Compagno" },
+                { "Hasty Pursuit", "Inseguimento Avventato" },
+                { "Heavy Losses", "Perdite Pesanti" },
+                { "Narrow Crossing", "Attraversamento Ostico" },
+                { "North-South Road", "Strada Nord-Sud" },
+                { "Open Rebellion", "Ribellione Aperta" },
+                { "Rohan Renegade", "Rinnegato di Rohan" },
+                { "Spurned Hillman", "Selvaggio Disprezzato" },
+                { "The Battle is Joined", "Infuria la Battaglia" },
+                { "The Flight of Ealdwulf", "La Fuga di Ealdwulf" },
+                { "The Renewer", "Il Rinnovatore" },
+                { "West Bank", "Sponda Occidentale" },
             });
 
             //The Scouring of the Shire
@@ -409,6 +434,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Artifact.", "Artefatto." },
                 { "Assassin.", "Assassino." },
                 { "Battleground.", "Campo di Battaglia." },
+                { "Boar Clan.", "Clan del Cinghiale." },
                 { "Boon.", "Beneficio." },
                 { "Bree.", "Brea." },
                 { "Brigand.", "Brigante." },
@@ -419,6 +445,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Doom.", "Fato." },
                 { "Dwarf.", "Nano." },
                 { "Eagle.", "Aquila." },
+                { "Fords.", "Guadi." },
                 { "Fortification.", "Fortificazione." },
                 { "Garrison.", "Guarnigione." },
                 { "Gate.", "Cancello." },
@@ -439,6 +466,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Plains.", "Pianure." },
                 { "Raven Clan.", "Clan del Corvo." },
                 { "River.", "Fiume." },
+                { "Riverland.", "Fiumi." },
                 { "Road.", "Strada." },
                 { "Ruffian.", "Furfante." },
                 { "Scout.", "Esploratore." },
@@ -455,14 +483,17 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Stream.", "Torrente." },
                 { "Summoned.", "Evocato." },
                 { "Suspicious.", "Sospetto." },
+                { "Title.", "Titolo." },
                 { "Traitor.", "Traditore." },
                 { "Trap.", "Trappola." },
                 { "Undead.", "Non Morto." },
                 { "Underground.", "Sotterraneo." },
                 { "Village.", "Villaggio." },
                 { "Warrior.", "Guerriero." },
+                { "Weapon.", "Arma." },
                 { "Weather.", "Clima." },
                 { "Westfold.", "Ovestfalda." },
+                { "Wolf Clan.", "Clan del Lupo." },
                 { "Woodman.", "Guardaboschi." },
                 { "Wraith.", "Spettro." },
         };
