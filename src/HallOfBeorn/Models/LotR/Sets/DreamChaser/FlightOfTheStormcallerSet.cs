@@ -202,6 +202,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithShadow("Shadow: Attacking enemy gets +X Attack, where X is The Stormcaller's current quest stage.")
                 .WithInfo(28, 2, Artist.Leanna_Teneycke);
             addTreachery("Raging Squall", EncounterSet.FlightOfTheStormcaller)
+                .WithTraits("Weather.")
                 .WithKeywords("Doomed 2.")
                 .WithTextLine("Doomed 2.")
                 .WithTextLine("When Revealed: Attach Raging Squall to the current quest. (Counts as a Condition attachment with the text: “Forced: After an ally is committed to the quest, deal 1 damage to that ally if you are off-course.”)")

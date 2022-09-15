@@ -196,7 +196,7 @@ namespace HallOfBeorn.Models.LotR.Sets.ScenarioPack
                 .WithInfo(12, 4, Artist.Hyungyung_Bae);
             addShipEnemy("Dreadnaught", EncounterSet.TheHuntForTheDreadnaught, 0, 4, 7, 4, Card.VALUE_ASTERISK)
                 .WithUnique()
-                .WithTraits("Elite.", "Corsair.", "Ship.")
+                .WithTraits("Corsair.", "Ship.", "Elite.")
                 .WithKeywords("Archery 1 Per Player.")
                 .WithTextLine("Archery 1 PerPlayer. Immune to player card effects. Cannot take more than 5 PerPlayer damage each round.")
                 .WithTextLine("*The Dreadnaught has global hit point value (15 hit points for each player among all groups).")

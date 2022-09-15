@@ -208,13 +208,13 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithVictoryPoints(1)
                 .WithInfo(31, 1, Artist.Julepe));
             Cards.Add(LotRCard.Location("Southward Road", "", "Journey to the Cross-roads", 4, 5)
-                .WithTraits("Road.")
+                .WithTraits("Forest.", "Road.")
                 .WithText("While Southward Road is the active location, each player may optionally engage an additional enemy during the encounter phase.\r\nTravel: The first player reveals the top facedown card under The Cross-roads and adds it to the staging area to travel here.")
                 .WithFlavor("\"These cursed Southrons come now marching up the ancient roads to swell the hosts of the Dark Tower.\" —Mablung, The Two Towers")
                 .WithEasyModeQuantity(1)
                 .WithInfo(32, 2, Artist.Julepe));
             Cards.Add(LotRCard.Location("Foothills of Ephel Dúath", "", "Journey to the Cross-roads", 3, 6)
-                .WithTraits("Hills.")
+                .WithTraits("Forest.", "Hills.")
                 .WithText("While Foothills of Ephel Dúath is the active location, each Harad enemy gets -1 Threat.\r\nTravel: The first player engages an enemy in the staging area to travel here.")
                 .WithFlavor("\"And they go ever more heedlessly, we learn, thinking that the power of their new master is great enough, so that the mere shadow of His hills will protect them.\" —Mablung, The Two Towers")
                 .WithInfo(33, 3, Artist.Dimitri_Bielak));
@@ -229,6 +229,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithShadow("Shadow: Discard a non-objective attachment you control.")
                 .WithInfo(35, 4, Artist.Julepe));
             Cards.Add(LotRCard.Treachery("The Dark Lord's Summons", "", "Journey to the Cross-roads")
+                .WithTraits("Mordor.")
                 .WithKeywords("Peril.")
                 .WithText("When Revealed: Either place the lowest Attack Harad enemy engaged with you facedown under The Black Gate, or reveal the top card from under The Cross-roads and put it into play engaged with you.")
                 .WithFlavor("\"Always more people coming to Mordor. One day all the peoples will be inside.\" —Gollum, The Two Towers")
@@ -250,7 +251,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithInfo(39, 3, Artist.Julepe));
             Cards.Add(LotRCard.Enemy("Shelob", "", "Shelob's Lair", 50, 4, 4, 4, 8)
                 .WithUnique()
-                .WithTraits("Spider.")
+                .WithTraits("Creature.", "Spider.")
                 .WithKeywords("Indestructible.")
                 .WithText("Cannot have attachments.\r\nShelob gets +1 Threat for each resource on her.\r\nForced: At the beginning of the quest phase, either place 1 resource on Shelob, or she makes an immediate attack against the first player.")
                 .WithVictoryPoints(8)
@@ -370,7 +371,6 @@ namespace HallOfBeorn.Models.LotR.Sets.TheLordOfTheRings
                 .WithEasyModeQuantity(1)
                 .WithInfo(59, 2, Artist.Julepe));
             Cards.Add(LotRCard.Treachery("Shelob's Poison", "", "The Great Spider")
-                .WithTraits("Poison.")
                 .WithText("When Revealed: Attach to a hero you control and exhaust that hero. (Counts as a Condition attachment with the text: \"Limit 1 per hero. Treat attached hero’s text box as blank, except for Traits. Attached hero cannot ready.\")")
                 .WithShadow("Shadow: If attacking enemy is Shelob, resolve the 'When Revealed' effect on Shelob’s Poison.")
                 .WithEasyModeQuantity(1)

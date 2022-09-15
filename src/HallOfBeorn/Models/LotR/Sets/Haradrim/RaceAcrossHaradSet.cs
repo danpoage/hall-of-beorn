@@ -104,7 +104,7 @@ namespace HallOfBeorn.Models.LotR.Sets.Haradrim
                 .WithFlavorLine("-The Return of the King")
                 .WithInfo(41, 3, Artist.Sergey_Glushakov);
             addLocation("Harad Road", EncounterSet.RaceAcrossHarad, 5, 5)
-                .WithTraits("Desert.", "Road.")
+                .WithTraits("Desert.")
                 .WithTextLine("When Revealed: Add Harad Road to the Orc's area.")
                 .WithShadow("Shadow: If the players are not at the same stage as the Orcs, move attacking enemy to the Orc's area after this attack.")
                 .WithInfo(42, 2, Artist.Jokubas_Uoginitas);

@@ -117,7 +117,7 @@ Progress cannot be placed on this stage unless the players control Arwen Undómi
                 Attack = 5,
                 Defense = 1,
                 HitPoints = 7,
-                Traits = new List<string> { "Mountain.", "Orc." },
+                Traits = new List<string> { "Goblin.", "Orc." },
                 Keywords = new List<string> { "Ambush." },
                 Text = "Ambush.\r\nForced: After Raiding Party engages a player, each player discards the top card of the encounter deck, starting with the first player. Each player who discards an enemy with the ambush keyword must make an engagement check against that enemy.",
                 EncounterSet = "Road to Rivendell Nightmare",

@@ -138,7 +138,7 @@ namespace HallOfBeorn.Models.LotR.Sets.DreamChaser
                 .WithVictoryPoints(10)
                 .WithInfo(49, 1, Artist.Alvaro_Calvo_Escudero);
             addEnemy("Eye of the Beast", EncounterSet.TheThingInTheDepths, 0, 2, Card.VALUE_NA, 5, 5)
-                .WithTraits("Creature.", "Tentacle.")
+                .WithTraits("Creature.", "Body.")
                 .WithKeywords("Surge.")
                 .WithTextLine("Surge.")
                 .WithTextLine("Eye of the Beast cannot attack.")

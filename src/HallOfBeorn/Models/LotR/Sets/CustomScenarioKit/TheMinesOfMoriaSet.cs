@@ -226,7 +226,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
             addEnemy("Brood Mother", emptySetName, 38, 3, 6, 4, 8)
                 .WithSetNumberAndCost(8, 3)
                 .WithUnique()
-                .WithTraits("Creature.")
+                .WithTraits("Spider.")
                 .WithTextLine("Cannot have non-objective player card attachments or take non-combat damage.")
                 .WithTextLine("While Brood Mother is in the staging area, no more than 5 progress can be placed on the main quest each round.")
                 .WithInfo(33, 1, Artist.Dimitri_Bielak);

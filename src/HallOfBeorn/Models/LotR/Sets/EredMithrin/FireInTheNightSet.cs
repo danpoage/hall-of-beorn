@@ -138,13 +138,13 @@ namespace HallOfBeorn.Models.LotR.Sets.EredMithrin
                 .WithVictoryPoints(5)
                 .WithInfo(74, 1, Artist.Antonio_Jose_Manzanedo);
             addEnemy("The Dragon's Thrall", EncounterSet.FireInTheNight, 30, 3, 3, 3, 4)
-                .WithTraits("Goblin.", "Orc.")
+                .WithTraits("Orc.", "Goblin.")
                 .WithTextLine("Forced: After The Dragon’s Thrall engages you, either deal 3 damage to Hrogar’s Hill, or it makes an immediate attack against you.")
                 .WithShadow("Shadow: If this attack destroys a character, deal 3 damage to Hrogar's Hill.")
                 .WithEasyModeQuantity(1)
                 .WithInfo(75, 3, Artist.Martin_de_Diego_Sadaba);
             addEnemy("Orc of the Flame", EncounterSet.FireInTheNight, 25, 2, 2, 2, 3)
-                .WithTraits("Goblin.", "Orc.")
+                .WithTraits("Orc.", "Goblin.")
                 .WithTextLine("When Revealed: The first player must either deal 2 damage to a hero he controls, or deal 3 damage to Hrogar's Hill.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if Hrogar's Hill has at least 25 damage on it).")
                 .WithInfo(76, 4, Artist.Martin_de_Diego_Sadaba);
