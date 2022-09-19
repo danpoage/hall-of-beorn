@@ -14,7 +14,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.OathsOfTheRohirrim
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP06.pdf";
 
-            //QuestCompanionSlug = "oaths-of-the-rohirrim-quest-the-glittering-caves";
+            QuestCompanionSlug = "http://www.lotr-lcg-quest-companion.gamersdungeon.net/#oaths-of-the-rohirrim-quest-mustering-of-the-rohirrim";
             DifficultyRating = 7f;
             Votes = 1;
 

@@ -161,12 +161,6 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             { SetType.Core, new HashSet<Language> { Language.ES, Language.FR } },
         };
 
-        private readonly static HashSet<string> englishSetsPng = new HashSet<string>
-        {
-            "Children of Eorl", "The Aldburg Plot", "Fire on the Eastemnet", "The Gap of Rohan", "The Glittering Caves", 
-            "Mustering of the Rohirrim", "Blood in the Isen", "The Scouring of the Shire",
-        };
-
         private static string getEnglishImageExtension(LotRCard card)
         {
             return card.CardSet.SetType == SetType.A_Long_extended_Party
