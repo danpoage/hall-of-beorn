@@ -396,8 +396,15 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Poll Results: Favorite Epic Moments in The Lord of the Rings", "https://hallofbeorn.wordpress.com/2014/04/26/poll-results-favorite-epic-moments-in-the-lord-of-the-rings/", "Sat, 26 Apr 2014 23:52:42 +0000");
             AddLink("Key Concepts: Splashing", "https://hallofbeorn.wordpress.com/2014/04/16/key-concepts-splashing/", "Thu, 17 Apr 2014 04:06:38 +0000");
             AddLink("Key Concepts: Traits - Rohan", "https://hallofbeorn.wordpress.com/2014/04/04/key-concepts-traits-rohan/", "Fri, 04 Apr 2014 06:27:46 +0000")
-                .WithLabels(ProductRepository.Instance.TraitLabels("Rohan.", c => c.IsPlayerCard()));
-            AddLink("Friendship Is Magic", "https://hallofbeorn.wordpress.com/2014/04/01/friendship-is-magic/", "Wed, 02 Apr 2014 03:07:40 +0000");
+                .WithLabels("Rohan", "Dúnhere", "Dunhere", "Forth Eorlingas", "Dagger of Westernesse", "Spear of the Mark", "Rohan Warhorse", "Westfold Horse-breeder", "Escort from Edoras", "West Road Traveller", "The Galadhrim’s Greeting")
+                .WithLabels("Éomer (tactics)", "Eomer (tactics)", "Snowbourn Scout", "Westfold Outrider", "Éomund", "Eomund", "Westfold Horse-breaker")
+                .WithLabels("Éowyn (spirit)", "Eowyn (spirit)", "Astonishing Speed", "Mutual Accord", "Visionary Leadership", "The Riddermark's Finest")
+                .WithLabels("Gríma", "Grima", "Gléowine", "Gleowine", "Keys of Orthanc", "A Burning Brand", "Feint", "A Test of Will")
+                .WithLabels("Háma (tactics)", "Hama (tactics)", "Forth Eorlingas!", "Foe-Hammer")
+                .WithLabels("Théoden (tactics)", "Theoden (tactics)", "Steed of the Mark", "Unexpected Courage")
+                .WithLabels("Théodred", "Theodred", "Gaining Strength", "Grim Resolve", "We Do Not Sleep", "Sneak Attack", "Éomund", "Eomund");
+            AddLink("Friendship Is Magic", "https://hallofbeorn.wordpress.com/2014/04/01/friendship-is-magic/", "1 Apr 2014")
+                .WithLabels("April 1st");
             AddLink("Deck: Ride Them Down!", "https://hallofbeorn.wordpress.com/2014/03/25/deck-ride-them-down/", "Tue, 25 Mar 2014 06:27:34 +0000");
             AddLink("Bear Market: 5 Great Glue Cards", "https://hallofbeorn.wordpress.com/2014/03/21/beorns-favorites-5-great-glue-cards/", "Fri, 21 Mar 2014 07:33:24 +0000")
                 .WithLabels("Envoy of Pelargir", "Errand-rider", "Halfling Determination", "Westfold Horse-breeder", "Daeron's Runes");
@@ -421,10 +428,12 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Deck: A Desperate Gambit", "https://hallofbeorn.wordpress.com/2014/01/20/deck-a-desperate-gambit/", "Mon, 20 Jan 2014 21:24:06 +0000");
             AddLink("History: Absent, But Not Forgotten", "https://hallofbeorn.wordpress.com/2014/01/19/history-absent-but-not-forgotten/", "Sun, 19 Jan 2014 08:46:15 +0000");
             AddLink("The Grey Company: Troll Exterminators For Hire", "https://hallofbeorn.wordpress.com/2014/01/13/the-grey-company-troll-exterminators-for-hire/", "Tue, 14 Jan 2014 03:11:44 +0000");
-            AddLink("The Grey Company Defends The Carrock From Nightmarish Trolls", "https://hallofbeorn.wordpress.com/2014/01/12/the-grey-company-defends-the-carrock-from-nightmarish-trolls/", "Sun, 12 Jan 2014 20:26:38 +0000");
+            AddLink("The Grey Company Defends The Carrock From Nightmarish Trolls", "https://hallofbeorn.wordpress.com/2014/01/12/the-grey-company-defends-the-carrock-from-nightmarish-trolls/", "Sun, 12 Jan 2014 20:26:38 +0000")
+                .WithLabels("Conflict at the Carrock", "Nightmare");
             AddLink("History: Lord of the Rings LCG Timeline (Updated 4/30/2018)", "https://hallofbeorn.wordpress.com/2014/01/11/lore-lord-of-the-rings-lcg-timeline/", "Sat, 11 Jan 2014 22:06:36 +0000");
             AddLink("Key Concepts: Resource Curves", "https://hallofbeorn.wordpress.com/2014/01/07/key-concepts-resource-curves/", "Wed, 08 Jan 2014 03:59:19 +0000");
-            AddLink("The Hall of Beorn Celebrates One Year!", "https://hallofbeorn.wordpress.com/2014/01/04/the-hall-of-beorn-celebrates-one-year/", "Sat, 04 Jan 2014 20:37:44 +0000");
+            AddLink("The Hall of Beorn Celebrates One Year!", "https://hallofbeorn.wordpress.com/2014/01/04/the-hall-of-beorn-celebrates-one-year/", "Sat, 04 Jan 2014 20:37:44 +0000")
+                .WithLabels("Anniversary");
             AddLink("Poll Results: What other kinds of games do you play?", "https://hallofbeorn.wordpress.com/2014/01/03/poll-results-what-other-kinds-of-games-do-you-play/", "Fri, 03 Jan 2014 19:17:59 +0000");
             AddLink("Custom Cards: Hobbit Fealty", "https://hallofbeorn.wordpress.com/2014/01/03/custom-cards-hobbit-fealty/", "Fri, 03 Jan 2014 09:11:31 +0000");
 
@@ -543,9 +552,11 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
             AddLink("Deck: Secrets of Erebor 2", "https://hallofbeorn.wordpress.com/2013/01/12/deck-secrets-of-erebor-2/", "Sat, 12 Jan 2013 07:26:15 +0000")
                 .WithDeckLabels(631);
             AddLink("Key Concepts: Traits - Dwarf", "https://hallofbeorn.wordpress.com/2013/01/11/key-concepts-traits-dwarf/", "Sat, 12 Jan 2013 05:49:48 +0000")
-                .WithLabels(ProductRepository.Instance.TraitLabels("Dwarf.", c => c.IsPlayerCard()));
+                .WithLabels("Dwarf", "Dain Ironfoot", "Lure of Moria", "Hardy Leadership", "Thorin Oakenshield", "Ori", "Nori", "Bofur", "Fili", "Kili", "Erebor Record Keeper", "Erebor Battle Master", "Legacy of Durin", "We Are Not Idle");
             AddLink("Key Concepts: Support", "https://hallofbeorn.wordpress.com/2013/01/09/key-concepts-support/", "Wed, 09 Jan 2013 21:33:05 +0000");
-            AddLink("Decks: Battle of the Pelennor Fields", "https://hallofbeorn.wordpress.com/2013/01/09/decks-battle-of-the-pelennor-fields/", "Wed, 09 Jan 2013 00:07:40 +0000");
+            AddLink("Decks: Battle of the Pelennor Fields", "https://hallofbeorn.wordpress.com/2013/01/09/decks-battle-of-the-pelennor-fields/", "Wed, 09 Jan 2013 00:07:40 +0000")
+                .WithLabels("Aragorn (leadership)", "Prince Imrahil (leadership)", "Eowyn (spirit)", "Errand-rider", "Snowbourn Scout", "Westfold Horse-Breaker", "Escort from Edoras", "The Riddermark's Finest", "Dunedain Watcher", "Son of Arnor", "Elfhelm", "Faramir", "Gandalf (core)", "Steward of Gondor", "Dunedain Warning", "Celebrian's Stone", "Blood of Numenor", "Unexpected Courage", "Sword That Was Broken", "Wealth of Gondor", "Sneak Attack", "A Test of Will", "For Gondor!", "Hasty Stroke", "Mutual Accord", "Astonishing Speed", "We Do Not Sleep", "Light the Beacons")
+                .WithLabels("Denethor (lore)", "Beregond (tactics)", "Gimli (tactics)", "Envoy of Pelargir", "Defender of Rammas", "Gondorian Spearman", "Horseback Archer", "Warden of Healing", "Ithilien Tracker", "Gleowine", "Gandalf (core)", "Horn of Gondor", "Citadel Plate", "Spear of the Citadel", "Blade of Gondolin", "A Burning Brand", "Dark Knowledge", "Song of Battle", "Feint", "Behind Strong Walls", "Foe-Hammer", "Quick Strike", "Swift Strike", "Thicket of Spears", "Peace, and Thought");
             AddLink("Deck: Secrets of Erebor", "https://hallofbeorn.wordpress.com/2013/01/07/deck-secrets-of-erebor/", "Mon, 07 Jan 2013 22:22:43 +0000")
                 .WithDeckLabels(632);
             AddLink("Key Concepts: Roles", "https://hallofbeorn.wordpress.com/2013/01/07/key-concepts-roles/", "Mon, 07 Jan 2013 19:22:54 +0000");
