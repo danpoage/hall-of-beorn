@@ -55,6 +55,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Steeds 3.", "Coursiers 3." },
                 { "Steeds 4.", "Coursiers 4." },
                 { "Surge.", "Renfort." },
+                { "Time 7.", "Temps 7." },
                 { "Vast.", "Vaste." },
             };
         }
@@ -370,6 +371,37 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Wolf", "Loup" },
             });
 
+            //The Gap of Rohan
+            SafeMap(all, new Dictionary<string, string> {
+                { "A Dangerous Pursuit", "Une Poursuite Dangereuse" },
+                { "A Stout Heart", "Un Cœur Solide" },
+                { "Archet Alekeeper", "Veilleur de Bière d'Archet" },
+                { "Barliman Butterbur", "Prosper Poiredebeurré" },
+                { "Biting Winds", "Vent Mordant" },
+                { "Bree Pony", "Poney de Bree" },
+                { "Bree-land Protector", "Protectrice du Pays de Bree" },
+                { "Dunlending Rearguard", "Arrière-Garde Dunlending" },
+                { "Exposed Ridge", "Crête Exposée" },
+                { "Frantic Dunlending", "Dunlending Acharné" },
+                { "Frozen Lake", "Lac Gelé" },
+                { "Frozen Solid", "Pris par le Gel" },
+                { "Gálmód’s Escort", "Escorte de Gálmód" },
+                { "Gift of Foresight", "Don de Clairvoyance" },
+                { "Giving Chase", "Partir en Chasse" },
+                { "Half-pint", "Demi-Pinte" },
+                { "Harry Goatleaf", "Harry Chèvrefeuille" },
+                { "Pint", "Pinte" },
+                { "Recapture the Traitor", "Recapturer le Traître" },
+                { "Scheming Staddler", "Comploteuse Staddeloise" },
+                { "Seasoned Forager", "Cueilleur Averti" },
+                { "Slippery Hill", "Colline Glissante" },
+                { "Snow Squall", "Rafale de Neige" },
+                { "Snowbank", "Congère" },
+                { "Stumble in the Snow", "Trébucher dans la Neige" },
+                { "Unnatural Cold", "Froid Contre Nature" },
+                { "White Wall", "Mur Blanc" },
+            });
+
             //Scouring of the Shire
             SafeMap(all, new Dictionary<string,string> {
                 { "Against the Rules", "Contre les Règles" },
@@ -442,12 +474,15 @@ namespace HallOfBeorn.Services.LotR.Translation
                 
                 { "Healer.", "Guérisseur." },
                 { "Hideout.", "Refuge." },
+                { "Hill.", "Collines." },
                 { "Hills.", "Collines." },
 
                 { "Inferno.", "Brasier." },
                 { "Item.", "Objet." },
 
+                { "Lake.", "Lac." },
                 { "Mount.", "Monture." },
+                { "Mountain.", "Montagne." },
                 { "Orc.", "Orque." },
                 { "Plains.", "Plaines." },
 
@@ -461,6 +496,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Sharkey.", "Sharcoux." },
                 { "Shire.", "Comté." },
                 { "Skill.", "Compétence." },
+                { "Snow.", "Neige." },
                 { "Spy.", "Espion." },
                 { "Stair.", "Escalier." },
                 { "Suspicious.", "Suspect." },
@@ -472,6 +508,7 @@ namespace HallOfBeorn.Services.LotR.Translation
 
                 { "Warrior.", "Guerrier." },
                 { "Weather.", "Climat." },
+                { "Westfold.", "Ouestfolde." },
                 { "Woodman.", "Homme des Bois." },
             };
         }
