@@ -309,6 +309,23 @@ namespace HallOfBeorn.Models.LotR
             Add(TheTreacheryOfRhudaur);
             Add(TheBattleOfCarnDum);
             Add(TheDreadRealm);
+            //Campaign
+            Add(IntrudersInChetwoodCampaign);
+            Add(IarionCampaign);
+            Add(EriadorWildsCampaign);
+            Add(AngmarOrcsCampaign);
+            Add(RuinsOfArnorCampaign);
+            Add(TheWeatherHillsCampaign);
+            Add(FoulWeatherCampaign);
+            Add(DarkSorceryCampaign);
+            Add(DeadmensDikeCampaign);
+            Add(CursedDeadCampaign);
+            Add(TheWastesOfEriadorCampaign);
+            Add(EscapeFromMountGramCampaign);
+            Add(AcrossTheEttenmoorsCampaign);
+            Add(TheTreacheryOfRhudaurCampaign);
+            Add(TheBattleOfCarnDumCampaign);
+            Add(TheDreadRealmCampaign);
 
             //The Grey Havens and Dream-chaser
             Add(CorsairPirates);
@@ -726,6 +743,24 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheTreacheryOfRhudaur = new EncounterSet { Name = "The Treachery of Rhudaur", Set = "The Treachery of Rhudaur" };
         public static EncounterSet TheBattleOfCarnDum = new EncounterSet { Name = "The Battle of Carn Dûm", Set = "The Battle of Carn Dûm", NormalizedSet = "The Battle of Carn Dum" };
         public static EncounterSet TheDreadRealm = new EncounterSet { Name = "The Dread Realm", Set = "The Dread Realm" };
+        //Campaign
+        public static EncounterSet IntrudersInChetwoodCampaign = new EncounterSet { Name = "Intruders in Chetwood Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet IarionCampaign = new EncounterSet { Name = "Iârion Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet EriadorWildsCampaign = new EncounterSet { Name = "Eriador Wilds Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet AngmarOrcsCampaign = new EncounterSet { Name = "Angmar Orcs Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet RuinsOfArnorCampaign = new EncounterSet { Name = "Ruins of Arnor Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet TheWeatherHillsCampaign = new EncounterSet { Name = "The Weather Hills Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet FoulWeatherCampaign = new EncounterSet { Name = "Foul Weather Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet DarkSorceryCampaign = new EncounterSet { Name = "Dark Sorcery Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet DeadmensDikeCampaign = new EncounterSet { Name = "Deadmen's Dike Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet CursedDeadCampaign = new EncounterSet { Name = "Cursed Dead Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet TheWastesOfEriadorCampaign = new EncounterSet { Name = "The Wastes of Eriador Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet EscapeFromMountGramCampaign = new EncounterSet { Name = "Escape from Mount Gram Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet AcrossTheEttenmoorsCampaign = new EncounterSet { Name = "Across the Ettenmoors Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet TheTreacheryOfRhudaurCampaign = new EncounterSet { Name = "The Treachery of Rhudaur Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        public static EncounterSet TheBattleOfCarnDumCampaign = new EncounterSet { Name = "The Battle of Carn Dûm Campaign", Set = "Angmar Awakened Campaign Expansion"};
+        public static EncounterSet TheDreadRealmCampaign = new EncounterSet { Name = "The Dread Realm Campaign", Set = "Angmar Awakened Campaign Expansion" };
+        
 
         //The Grey Havens and Dream-chaser
         public static EncounterSet CorsairPirates = new EncounterSet { Name = "Corsair Pirates", Set = "The Grey Havens" };

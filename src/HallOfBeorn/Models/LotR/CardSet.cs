@@ -417,6 +417,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheBattleOfCarnDum);
             Add(TheDreadRealm);
             Add(AngmarAwakenedHeroExpansion);
+            Add(AngmarAwakenedCampaignExpansion);
 
             Add(TheGreyHavens);
             Add(FlightOfTheStormcaller);
@@ -639,7 +640,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheTreacheryOfRhudaur = new Sets.AngmarAwakened.TheTreacheryOfRhudaurSet();
         public static CardSet TheBattleOfCarnDum = new Sets.AngmarAwakened.TheBattleOfCarnDumSet();
         public static CardSet TheDreadRealm = new Sets.AngmarAwakened.TheDreadRealmSet();
-        public static CardSet AngmarAwakenedHeroExpansion = new Sets.AngmarAwakened.AngmarAwakenedHeroExpansionCardSet();
+        public static CardSet AngmarAwakenedHeroExpansion = Sets.AngmarAwakened.AngmarAwakenedHeroExpansion.Create();
+        public static CardSet AngmarAwakenedCampaignExpansion = Sets.AngmarAwakened.AngmarAwakenedCampaignExpansion.Create();
 
         public static CardSet TheGreyHavens = new Sets.TheGreyHavens.TheGreyHavensSet();
         public static CardSet FlightOfTheStormcaller = new Sets.DreamChaser.FlightOfTheStormcallerSet();

@@ -553,11 +553,11 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
                 .WithDeckLabels(307);
             AddLink("Deck: The Power of the Palantir", "https://hallofbeorn.wordpress.com/2013/02/05/deck-the-power-of-the-palantir/", "Tue, 05 Feb 2013 19:35:58 +0000")
                 .WithDeckLabels(828);
-            AddLink("Beorn's Path: Part 4 - Journey Along the Anduin", "https://hallofbeorn.wordpress.com/2013/02/04/beorns-path-part-4-journey-along-the-anduin/", "Mon, 04 Feb 2013 07:57:22 +0000");
+            AddLink("Beorn's Path: Part 4 - Journey Along the Anduin", "https://hallofbeorn.wordpress.com/2013/02/04/beorns-path-part-4-journey-along-the-anduin/", "Mon, 04 Feb 2013 07:57:22 +0000")
                 .WithDeckLabels(305);
-            AddLink("Bear Market: 5 Fun Cards With Surprising Utility", "https://hallofbeorn.wordpress.com/2013/02/02/5-fun-cards-with-surprising-utility/", "Sat, 02 Feb 2013 06:42:48 +0000");
+            AddLink("Bear Market: 5 Fun Cards With Surprising Utility", "https://hallofbeorn.wordpress.com/2013/02/02/5-fun-cards-with-surprising-utility/", "Sat, 02 Feb 2013 06:42:48 +0000")
                 .WithLabels("Radagast (ally)", "Campfire Tales", "Song of Mocking", "Rider of the Mark", "Love of Tales");
-            AddLink("Beorn's Path: Part 3 - Deck Tuning", "https://hallofbeorn.wordpress.com/2013/01/31/beorns-path-part-3-deck-tuning/", "Thu, 31 Jan 2013 21:32:23 +0000");
+            AddLink("Beorn's Path: Part 3 - Deck Tuning", "https://hallofbeorn.wordpress.com/2013/01/31/beorns-path-part-3-deck-tuning/", "Thu, 31 Jan 2013 21:32:23 +0000")
                 .WithDeckLabels(305);
             AddLink("Deck: Lore Mastery", "https://hallofbeorn.wordpress.com/2013/01/31/deck-lore-mastery/", "Thu, 31 Jan 2013 19:21:41 +0000")
                 .WithDeckLabels(751);

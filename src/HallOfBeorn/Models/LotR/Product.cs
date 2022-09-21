@@ -135,6 +135,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheBattleOfCarnDum = new Products.AdventurePack.TheBattleOfCarnDumProduct();
         public static Product TheDreadRealm = new Products.AdventurePack.TheDreadRealmProduct();
         public static Product AngmarAwakenedHeroExpansion = new Products.Hero.AngmarAwakenedHeroExpansionProduct();
+        public static Product AngmarAwakenedCampaignExpansion = new Products.Campaign.AngmarAwakenedCampaignProduct();
 
         //The Grey Havens and Dream-chaser Cycle
         public static Product TheGreyHavens = new Products.Deluxe.TheGreyHavensProduct();

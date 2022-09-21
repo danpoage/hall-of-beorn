@@ -2,18 +2,13 @@
 
 namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
 {
-    public class AngmarAwakenedHeroExpansionCardSet
-        : CardSet
+    public class AngmarAwakenedHeroExpansion
     {
-        protected override void Initialize()
+        public static CardSet Create()
         {
-            Name = "Angmar Awakened Hero Expansion";
-            Abbreviation = "AAH";
-            Number = 301;
-            SetType = Models.SetType.Hero_Expansion;
-            Cycle = "Angmar Awakened";
+            var cs = CardSet.Create("Angmar Awakened Hero Expansion", "AAH", SetType.Hero_Expansion, Cycles.AngmarAwakened, 301);
 
-            addHero("Aragorn", 12, Sphere.Tactics, 2, 3, 2, 5)
+            cs.addHero("Aragorn", 12, Sphere.Tactics, 2, 3, 2, 5)
                 .WithTraits("Dúnedain.", "Ranger.", "Warrior.")
                 .WithTextLine("Each enemy engaged with you gets -1 Defense.")
                 .WithTextLine("Response: After Aragorn participates in an attack that destroys an enemy, choose an enemy not engaged with you and engage that enemy.")
@@ -21,13 +16,15 @@ namespace HallOfBeorn.Models.LotR.Sets.AngmarAwakened
                 .WithCommunityVersion("Aragorn-Grey-Company-Gen-Con-2015")
                 .WithCommunityVersion("RiddermarkLord/Aragorn-Tactics")
                 .WithInfo(1, 1, Artist.Sebastian_Giacobino);
-            addHero("Halbarad", 10, Sphere.Leadership, 2, 2, 2, 4)
+            cs.addHero("Halbarad", 10, Sphere.Leadership, 2, 2, 2, 4)
                 .WithTraits("Dúnedain.", "Ranger.")
                 .WithTextLine("While you are engaged with any enemy, Halbarad does not exhaust to commit to a quest.")
                 .WithTextLine("You may optionally engage 1 additional enemy during the encounter phase.")
                 .WithFlavorLine("\"Little do they know of our long labour for the safekeeping of their borders, and yet I grudge it not.\" -The Return of the King")
                 .WithCommunityVersion("Halbarad-Grey-Company-Gen-Con-2015")
                 .WithInfo(2, 1, Artist.Smirtouille);
+
+            return cs;
         }
     }
 }

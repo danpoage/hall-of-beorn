@@ -66,6 +66,8 @@ namespace HallOfBeorn.Services.LotR.Templates
             TheTreacheryOfRhudaur();
             TheBattleOfCarnDum();
             TheDreadRealm();
+            AngmarAwakenedHeroExpansion();
+            AngmarAwakenedCampaignExpansion();
 
             //The Grey Havens and Dream-chaser
             TheGreyHavens();
@@ -2291,6 +2293,12 @@ namespace HallOfBeorn.Services.LotR.Templates
         {
             AddHtml("Aragorn-AAH", "<p class='main-text'>Each {type:Enemy@enemy} engaged with you gets -1 {Defense}.</p><p class='main-text'><b>Response:</b> After {self} participates in an attack that destroys an enemy, choose an enemy not engaged with you and engage that enemy.</p><p class='flavor-text'>&quot;I serve no man,&quot; said Aragorn; &quot;but the servants of Sauron I pursue into whatever land they may go.&quot; &ndash;The Two Towers</p>");
             AddHtml("Halbarad-AAH", "<p class='main-text'>While you are engaged with any {type:Enemy@enemy}, {self} does not exhaust to commit to a quest.</p><p class='main-text'>You may optionally engage 1 additional enemy during the encounter phase.</p><p class='flavor-text'>&quot;Little do they know of our long labour for the safekeeping of their borders, and yet I grudge it not.&quot; &ndash;The Return of the King</p>");
+        }
+
+        private void AngmarAwakenedCampaignExpansion()
+        {
+            AddHtml("Deadmen's-Dike-Campaign-AAC", "<p class='main-text'>You are playing campaign mode.</p><p class='main-text'><b>Setup:</b> Attach Iârion's Pendant to Iârion. Add the Protect the Innocent side quest to the staging area and place damage on it equal to the amount of damage noted in the Campaign Log.</p><p class='main-text'><b>Forced:</b> After Thaurdir enters play, randomly select one of the following burdens and attach it to Thaurdir: Thaurdir's Legacy, Thaurdir's Majesty, or Thaurdir's Spite. Add that card to the Campaign Pool.</p><p class='flavor-text'>&ldquo;To arms, Dúnedain! The wraiths of Angmart are upon us!&rdquo;<br>&ndash;Aragorn</p>");
+            AddHtml2("Deadmen's-Dike-Campaign-AAC", "<p class='main-text'><b>Resolution:</b> Note the amount of damafge on Protect the Innocent in the Campaign Log <i>(replacing the previous number)</i> and remove Protect the Innocent from the Campaign Pool. Add Arnor Ravaged to the Campaign Pool in its place <i>(found on the opposite side of Protect the Innocent)</i>. The players as a group must select either Iârion's Pendant or Amarthiúl's Courage to add to the Campaign Pool. Any player may add Iârion's Pendant to their deck if it is chosen.</p><p class='main-text'></p><p class='flavor-text'>&ldquo;The wraith that attacked us was a powerful sorcerer. It was he that took Iârion.&rdquo;<br><br>&ldquo;Why?&rdquo;, asked Amarthiúl, but none could answer. On the ground, the young Ranger found the hawk pendant of Iârion and regarded it in his hand. &ldquo;It matters not,&rdquo;, said the Dúnadan clutching the pendant and rising to his feet. &dlquo;Thaurdir has taken my friend, so I will pursue him.&rdquo;<br><br>&ldquo;We will aid you in this quest,&rdquo; spoke the heroes with one voice. &ldquo;We cannot abandon Iârion to the same fate as those village people.&rdquo;</p>");
         }
 
         private void TheWastesOfEriador()

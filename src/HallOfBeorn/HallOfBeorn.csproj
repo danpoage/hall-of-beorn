@@ -428,6 +428,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheLandOfSorrowProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\UnderTheAshMountainsProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\WrathAndRuinProduct.cs" />
+    <Compile Include="Models\LotR\Products\Campaign\AngmarAwakenedCampaignProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\BloodInTheIsenProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\ChildrenOfEorlProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\FireOnTheEastemnetProduct.cs" />
@@ -550,7 +551,8 @@
     <Compile Include="Models\LotR\Scenarios\VengeanceOfMordor\WrathAndRuinScenario.cs" />
     <Compile Include="Models\LotR\ScenarioView.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\AcrossTheEttenmoorsNightmareSet.cs" />
-    <Compile Include="Models\LotR\Sets\AngmarAwakened\AngmarAwakenedHeroExpansionCardSet.cs" />
+    <Compile Include="Models\LotR\Sets\AngmarAwakened\AngmarAwakenedCampaignExpansion.cs" />
+    <Compile Include="Models\LotR\Sets\AngmarAwakened\AngmarAwakenedHeroExpansion.cs" />
     <Compile Include="Models\LotR\Sets\AShadowInTheEast\AShadowInTheEastSet.cs" />
     <Compile Include="Models\LotR\Sets\ChildrenOfEorl\ChildrenOfEorlSet.cs" />
     <Compile Include="Models\LotR\Sets\Core\RevisedCoreSet.cs" />
