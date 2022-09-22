@@ -23,6 +23,7 @@ namespace TemplateBuilder
         static int Main(string[] args)
         {
             Language lang = Language.EN;
+            Console.OutputEncoding = Encoding.UTF8;
 
             var productRepo = new ProductRepository();
             var translationService = new TranslationService();
@@ -31,7 +32,15 @@ namespace TemplateBuilder
 
             statService = new StatService(cardRepo, translationService);
 
-            foreach (var card in cardRepo.Cards())
+            var abbreviation = (args != null && args.Length > 0) ? args[0] : string.Empty;
+
+            Func<LotRCard, bool> filter = (c) => true;
+            if (!string.IsNullOrEmpty(abbreviation))
+            {
+                filter = (c) => c.CardSet.Abbreviation == abbreviation;
+            }
+
+            foreach (var card in cardRepo.Cards().Where(filter))
             {
                 if (string.IsNullOrEmpty(card.HtmlTemplate))
                 {
@@ -148,11 +157,11 @@ namespace TemplateBuilder
             if (isQuest)
             {
                 if (!string.IsNullOrEmpty(flavorText))
-            {
-                html.Append("<p class='flavor-text'>");
-                html.Append(flavorText.Replace("\r\n", "<br>").Replace("-", "&ndash;"));
-                html.Append("</p>");
-            }
+                {
+                    html.Append("<p class='flavor-text'>");
+                    html.Append(flavorText.Replace("\r\n", "<br>").Replace("-", "&ndash;"));
+                    html.Append("</p>");
+                }
             }
 
             /*
