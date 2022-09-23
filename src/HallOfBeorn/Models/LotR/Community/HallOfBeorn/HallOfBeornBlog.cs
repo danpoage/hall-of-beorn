@@ -59,7 +59,7 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
                 .WithLabels("Pippin (lore)", "Gaffer Gamgee", "Forest Snare", "The Great Hunt", "Put Off Pursuit", "Fatty Bolger (lore)", "ALeP")
                 .WithDeckLabels(25604);
             AddLink("Metagame: Balance of Power", "https://hallofbeorn.wordpress.com/2022/02/04/metagame-balance-of-power/", "4 Feb 2022")
-                .WithLabels("Glorfindel (spirit)", "Asfaloth (lore)", "Elrond", "Vilya", "Master of the Forge", "Imladris Stargazer", "Warden of Healing". "Glóin (leadership hero)")
+                .WithLabels("Glorfindel (spirit)", "Asfaloth (lore)", "Elrond", "Vilya", "Master of the Forge", "Imladris Stargazer", "Warden of Healing", "Glóin (leadership hero)")
                 .WithLabels("Sudden Pitfall", "Sleeping Sentry", "Dwarrowdelf Cycle")
                 .WithDeckLabels(8682);
             AddLink("Poll Results: Favorite Cycle", "https://hallofbeorn.wordpress.com/2022/01/30/poll-results-favorite-cycle/", "30 Jan 2022")
@@ -88,7 +88,7 @@ namespace HallOfBeorn.Models.LotR.Community.HallOfBeorn
                 .WithLabels("Core Set", "Revised Core Set", "Grim Resolve", "Brok Ironfist", "Celebrían's Stone", "Celebrían's Stone", "Silverlode Archer", "Ever Vigilant", "Greenwood Archer")
                 .WithDeckLabels(23142, 23143, 23144, 23145);
             AddLink("Deck Spotlight: Bear Draft at Con of the Rings 2021", "https://hallofbeorn.wordpress.com/2021/10/05/deck-spotlight-bear-draft-at-con-of-the-rings-2021/", "5 Oct 2021")
-                .WithLabels("Con of the Rings 2021", "Bear Draft", "Game Variant", "Draft" "Convention", "Community", "ALeP")
+                .WithLabels("Con of the Rings 2021", "Bear Draft", "Game Variant", "Draft", "Convention", "Community", "ALeP")
                 .WithDeckLabels(22820, 22821, 22823, 22825, 22826, 22827, 22828, 22830);
             AddLink("News: Con of the Rings 2021", "https://hallofbeorn.wordpress.com/2021/09/29/news-con-of-the-rings-2021/", "Sep 29 2021")
                 .WithLabels("Con of the Rings 2021", "Community", "Convention", "ALeP", "Bear Draft v6", "Cormac McCarthy", "The Crossing", "Cities on the Plain")
