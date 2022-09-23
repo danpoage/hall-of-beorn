@@ -10,6 +10,7 @@ using HallOfBeorn.Models.LotR.Community.CardTalk;
 using HallOfBeorn.Models.LotR.Community.DarklingDoor;
 using HallOfBeorn.Models.LotR.Community.DieMannerVonGondor;
 using HallOfBeorn.Models.LotR.Community.DorCuarthol;
+using HallOfBeorn.Models.LotR.Community.FlyingSolo;
 using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
 using HallOfBeorn.Models.LotR.Community.LotRDeckTestingGround;
 using HallOfBeorn.Models.LotR.Community.MasterOfLore;
@@ -73,6 +74,7 @@ namespace HallOfBeorn.Services.LotR.Community
             AddChannel(new TheBookOfElessarChannel());
             AddChannel(new TheLordsOfGondorChannel());
             AddChannel(new WanderingTookChannel());
+            AddChannel(new FlyingSoloChannel());
         }
 
         private readonly List<ICreator> podcasts = new List<ICreator>();
