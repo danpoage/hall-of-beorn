@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
 namespace HallOfBeorn.Models.LotR.Community.CardTalk
 {
@@ -11,6 +9,12 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             : base("Card Talk Blog", "https://cardtalk2018.com/", "https://cardtalk2018.com/feed/", LinkType.Card_Talk_Blog)
         {
             AddYear(2022);
+            AddLink("The Fords of Isen with Hobbit Decks 3 – December 31, 2019", "https://cardtalk2018.com/2022/09/23/the-fords-of-isen-with-hobbit-decks-3-december-31-2019/", "Sep 23 2022")
+                .WithLabels("The Fords of Isen")
+                .WithDeckLabels(13964);
+            AddLink("Massing at Osgiliath with 3 Unlikely Heroes – September 10, 2022", "https://cardtalk2018.com/2022/09/13/massing-at-osgiliath-with-3-unlikely-heroes-september-10-2022/", "Sep 13 2022")
+                .WithLabels("Massing at Osgiliath", "Bilbo Baggins (tactics)", "Erkenbrand", "Legolas (spirit)", "Forth, The Three Hunters", "Ancestral Armor", "Amored Destrier", "Blade of Gondolin", "Celebrian's Stone", "Dagger of Westernesse", "Golden Belt", "Gondorian Shield", "Hauberk of Mail", "Hobbit Pony", "Magic Ring", "Mirkwood Long-knife", "Raiment of War", "Round Shield", "Silver Circlet", "Silver Harp", "Unexpected Courage")
+                .WithLabels("Elven-light", "Feint", "Hands Upon the Bow", "Hasty Stroke", "Sterner than Steel");
             AddLink("Halbarad (Hero)", "https://cardtalk2018.com/2022/09/06/halbarad-hero/", "Sep 6 2022")
                 .WithLabels("Halbarad");
             AddLink("The Fords of Isen with Hobbit Decks 2 – December 29, 2019", "https://cardtalk2018.com/2022/09/02/the-fords-of-isen-with-hobbit-decks-2-december-29-2019/", "Sep 2 2022")
