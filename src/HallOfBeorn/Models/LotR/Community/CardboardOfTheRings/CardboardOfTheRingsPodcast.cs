@@ -14,10 +14,56 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             "http://cotr.libsyn.com/rss",
             LinkType.Cardboard_of_the_Rings)
         {
+            AddYear(2022);
+            AddLink("202", "The Price of a Kicker", "https://traffic.libsyn.com/cotr/Episode_202_-_priceofakicker.mp3", "Sep 20, 2022")
+                .WithLabels("Heed the Dream", "Knife-work");
+            AddLink("201", "Does Anyone Have A Dollar?", "https://traffic.libsyn.com/cotr/Episode_201_-_Does_Anyone_Have_A_Dollar.mp3", "Sep 5, 2022")
+                .WithLabels("Resource Acceleration");
+            AddLink("200", "Who Wants To Be A Silmarillionaire?", "https://traffic.libsyn.com/cotr/Episode_200_-_whowants.mp3", "Aug 13, 2022")
+                .WithLabels("The Silmarillion");
+            AddLink("199", "An Unexpected Progression", "https://cardboardoftherings.com/2022/07/25/episode-199-an-unexpected-progression/", "Jul 25, 2022")
+                .WithLabels("Progression");
+            AddLink("198", "Leeeeroy Ruxpin!", "https://cardboardoftherings.com/2022/07/01/episode-198-leeeeroy-ruxpin/", "Jul 1, 2022")
+                .WithLabels("Mustering of the Rohirrim", "ALeP", "Osbera");
+            AddLink("197", "McMiddle-earth", "https://cardboardoftherings.com/2022/06/05/episode-197-mcmiddle-earth/", "Jun 5, 2022")
+                .WithLabels("https://www.fantasyflightgames.com/en/news/2022/5/12/different-ways-to-adventure/").WithDeckLabels(18511, 12958);
+            AddLink("196", "Grimbeorn the Swole", "https://cardboardoftherings.com/2022/05/13/episode-196-grimbeorn-the-swole/", "May 13, 2022")
+                .WithLabels("Grimbeorn the Old");
+            AddLink("195", "Precious Cards", "https://cardboardoftherings.com/2022/04/23/episode-195-precious-cards/", "Apr 23, 2022")
+                .WithLabels("Action Windows");
+            AddLink("194", "Start-ing an Adventure", "https://cardboardoftherings.com/2022/04/08/episode-194-starter-ing-an-adventure/", "Apr 8, 2022")
+                .WithLabels("Starter Deck");
+            AddLink("194.5", "Jason Walden Interview", "https://cardboardoftherings.com/2022/03/27/episode-194-5-jason-walden-interview/", "Mar 27, 2022")
+                .WithLabels("Jason Walden", "FFG", "Fantasy Flight Games", "Producer");
+            AddLink("193", "Gliterring Glorfy", "https://cardboardoftherings.com/2022/03/12/episode-193-glittering-glorfy/", "Mar 12, 2022")
+                .WithLabels("Glorfindel (tactics)", "ALeP");
+            AddLink("192", "Delving Deeply Into the Core Set", "https://cardboardoftherings.com/2022/02/18/episode-192-delving-deeply-into-the-core-set/", "Feb 18, 2022")
+                .WithLabels("Revised Core Set");
+            AddLink("191", "The Tolkien Professor", "https://cardboardoftherings.com/2022/01/30/episode-191-the-tolkien-professor/", "Jan 30, 2022")
+                .WithLabels("Interview", "Tolkien Professor");
+            AddLink("190", "Half Pint", "https://cardboardoftherings.com/2022/01/13/episode-190-half-pint/", "Jan 12, 2022")
+                .WithLabels("Half Pint", "ALeP");
+
             AddYear(2021);
-            AddLink("185", "Number 2", "https://cotr.libsyn.com/episode-185-number-2", "14 Sep 2021");
-            AddLink("184", "Middle Earthborne Rangers", "https://cotr.libsyn.com/episode-184-middle-earthborne-rangers", "13 Aug 2021");
-            AddLink("183", "Octa-gone", "https://cotr.libsyn.com/episode-183-octa-gone", "23 July 2021");
+            AddLink("189", "Arwen, Barwen, and Jargon", "https://cardboardoftherings.com/2021/12/22/episode-189-arwen-barwen-and-jargon/", "Dec 22, 2021")
+                .WithLabels("Arwen Undomiel", "Unique Cards", "Terminology", "Jargon");
+            AddLink("188", "Help!", "https://cardboardoftherings.com/2021/11/15/episode-188-help/", "Nov 15, 2021")
+                .WithLabels("Top 10 Questions Asked by New Players");
+            AddLink("187.5", "Sand Dunes of the Rings", "https://cardboardoftherings.com/2021/11/02/episode-187-5-sand-dunes-of-the-rings/", "Nov 2, 2021")
+                .WithLabels("Dune", "Movie");
+            AddLink("187", "Fellow-Ship", "https://cardboardoftherings.com/2021/10/27/episode-187-fellow-ship/", "Oct 27, 2021")
+                .WithLabels("Revised Core Set", "Legacy of Feanor", "A Light in the East", "Lords of the Cards", "Dragon Hunting", "Purple Wizard's Epic Adaptations")
+                .WithLabels("Ninjadorg's LotR LCG Scenarios", "Feonix's LotR LCG CUstom Scenarios", "First Age", "Con of the Rings 2021 Recap");
+            AddLink("186.5", "2021 Convention Special", "https://cardboardoftherings.com/2021/10/21/episode-186-5-2021-convention-special/", "Oct 21, 2022")
+                .WithLabels("Con of the Rings 2021", "League of Cooperative Gaming Community", "Wandering Took", "Shellin");
+            AddLink("186", "The Game Isn't Dead", "https://cardboardoftherings.com/2021/10/07/episode-186-the-game-isnt-dead/", "Oct 7, 2021")
+                .WithLabels("GenCon 2021 FFG In-Flight Report", "ALeP", "Fire on the Eastemnet");
+            AddLink("185", "Number 2", "https://cotr.libsyn.com/episode-185-number-2", "14 Sep 2021")
+                .WithLabels("Broken Token Controversy");
+            AddLink("184", "Middle Earthborne Rangers", "https://cotr.libsyn.com/episode-184-middle-earthborne-rangers", "13 Aug 2021")
+                .WithLabels("Andrew Navaro", "Earthhorne Rangers", "Tesseract Dividers", "ChapCon Recap", "LCG-Weekend recaps");
+            AddLink("183", "Octa-gone", "https://cotr.libsyn.com/episode-183-octa-gone", "23 July 2021")
+                .WithLabels("OCTGN", "DragnCards");
             AddLink("182", "Err of Mardil", "https://cotr.libsyn.com/episode-182-won-deck-rulez", "24 June 2021");
             AddLink("181", "One Stop Colin Shop", "https://cotr.libsyn.com/episode-181-one-stop-colin-shop", "04 Jun 2021");
             AddLink("180", "Faramir's Value", "https://cotr.libsyn.com/episode-180-faramirs-value", "18 May 2021");
