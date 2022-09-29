@@ -45,7 +45,6 @@ namespace HallOfBeorn.Models.LotR.Community.FlyingSolo
                 .WithLabels("Progression", "Redhorn Gate")
                 .WithDeckLabels(14115)
                 .WithLabels("Im back! After 6 months, the legend continues. It's the Redhorn gate.' Stay tuned to the end I added a highlight real of my quest failures for your enjoyment! Here is the deck I used https://ringsdb.com/decklist/view/14115/flyingsololotrprogressionpt12theredhorngate-1.0 Enjoy the game and stay tuned for episode 13!");
-                .WithLabels("");
             
             AddYear(2019);
             AddLink("LOTR Progressions Series Pt. 11. Flight from Moria", "https://www.youtube.com/watch?v=7kbnchLiy3c", "2019-05-30")
