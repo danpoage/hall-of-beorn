@@ -43,7 +43,11 @@ namespace HallOfBeorn.Models
 
         protected CreatorLink AddLink(string title, string url, string releaseDate)
         {
-            var date = DateTime.Parse(releaseDate);
+            var date = DateTime.Now; 
+            if (!DateTime.TryParse(releaseDate, out date))
+            {
+                var badLink = url;
+            }
             var fullTitle = string.Format(simpleTitleFormat, title, date.ToString("MMM dd, yyyy"));
             var link = new Link(DefaultLinkType, url, fullTitle);
             AddLink(link);
