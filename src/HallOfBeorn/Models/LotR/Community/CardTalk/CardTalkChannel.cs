@@ -14,6 +14,141 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             "https://www.youtube.com/feeds/videos.xml?channel_id=UCj-QcL_YcA_DQKe7bSe9byA",
             LinkType.Card_Talk)
         {
+            AddYear(2022);
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #13", "https://www.youtube.com/watch?v=oJJaKG9SSRk", "Sep 25, 2022")
+                .WithLabels("Challenge #13");
+            AddLink("Dunedain Hunter", "https://www.youtube.com/watch?v=JX3iwjAddFg", "Sep 21, 2022")
+                .WithLabels("Dunedain Hunter");
+            AddLink("First Play of the Black Gate Opens", "https://www.youtube.com/watch?v=-M4QEbfrEgs", "Sep 15, 2022")
+                .WithLabels("The Gate Opens");
+            AddLink("Hero Halbarad", "https://www.youtube.com/watch?v=oUBC8sk2B-o", "Sep 6, 2022")
+                .WithLabels("Halabarad (hero)");
+            AddLink("The Shirefolk", "https://www.youtube.com/watch?v=Milz_U0MvwQ", "Aug 30, 2022")
+                .WithLabels("The Shirefolk");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #12", "https://www.youtube.com/watch?v=8KzgqkV5hMo", "Aug 28, 2022")
+                .WithLabels("Challenge #12");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #12 (part 2)", "https://www.youtube.com/watch?v=yse8mekLuPQ", "Aug 28, 2022")
+                .WithLabels("Challenge #12");
+            AddLink("The Siege of Gondor - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=tqoUMqpTU7o", "Aug 25, 2022")
+                .WithLabels("The Siege of Gondor", "Campagin");
+            AddLink("The Siege of Gondor - Note quite good enough", "https://www.youtube.com/watch?v=sgmoJTDYCIs", "Aug 18, 2022")
+                .WithLabels("The Siege of Gondor");
+            AddLink("Halfling Determination", "https://www.youtube.com/watch?v=O6xUKdeHLwo", "Aug 16, 2022")
+                .WithLabels("Halfling Determination");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #11", "https://www.youtube.com/watch?v=GOAMXwXobrU", "Aug 14, 2022")
+                .WithLabels("Challenge #11");
+            AddLink("The Siege of Gondor - 10 Rounds", "https://www.youtube.com/watch?v=Pd8Zwkl1PNw", "Aug 11, 2022")
+                .WithLabels("The Siege of Gondor");
+            AddLink("Dwarven Tomb", "https://www.youtube.com/watch?v=Nr5opj9LnxA", "Aug 9, 2022")
+                .WithLabels("Dwarven Tomb");
+            AddLink("The Siege of Gondor - 8 Rounds", "https://www.youtube.com/watch?v=HzuL-lA5pEE", "Aug 4, 2022")
+                .WithLabels("The Siege of Gondor");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #10", "https://www.youtube.com/watch?v=v8ak5ZDL-Jk", "Jul 31, 2022")
+                .WithLabels("Challenge #10");
+            AddLink("The Siege of Gondor - Misplay", "https://www.youtube.com/watch?v=HCXgkiPnmao", "Jul 28, 2022")
+                .WithLabels("The Siege of Gondor");
+            AddLink("Hobbit Cloak", "https://www.youtube.com/watch?v=owoCptVsJeg", "Jul 26, 2022")
+                .WithLabels("Hobbit Cloak");
+            AddLink("Passing of the Grey Company - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=Z_s4iaf3Qz8", "Jul 21, 2022")
+                .WithLabels("Passing of the Grey Company", "Campaign");
+            AddLink("Shelob's Lair - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=_rhrmwGmWuY", "JUl 14, 2022")
+                .WithLabels("Shelob's Lair", "Campaign");
+            AddLink("Ally Quickbeam", "https://www.youtube.com/watch?v=_ppZuuuG6wE", "Jul 13, 2022")
+                .WithLabels("Quickbeam (ally)");
+            AddLink("Journey to the Cross-roads - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=0ccD3Gb5Ufw", "Jul 7, 2022")
+                .WithLabels("Journey to the Cross-roads", "Campaign");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #9", "https://www.youtube.com/watch?v=RKKROBp3KEQ", "Jul 3, 2022")
+                .WithLabels("Challenge #9");
+            AddLink("Passage of the Marshes - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=LpiEMy_h6i4", "Jun 30, 2022")
+                .WithLabels("Passage of the Marshes", "Campaign");
+            AddLink("Drinking Song", "https://www.youtube.com/watch?v=LpiEMy_h6i4", "Jun 28, 2022")
+                .WithLabels("Drinking Song");
+            AddLink("The Road to Isengard - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=ogkDP4dge5s", "Jun 23, 2022")
+                .WithLabels("The Road to Isengard", "Campaign");
+            AddLink("Tactics Pippin Ally", "https://www.youtube.com/watch?v=jEjG025aS_I", "Jun 22, 2022")
+                .WithLabels("Pippin (Tactics Ally)");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #8", "https://www.youtube.com/watch?v=vBqvoB9_u_w", "Jun 19, 2022")
+                .WithLabels("Challenge #8");
+            AddLink("Helm's Deep - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=ug4KPueH8q4", "Jun 16, 2022")
+                .WithLabels("Helm's Deep", "Campaign");
+            AddLink("Honour Guard", "https://www.youtube.com/watch?v=2Bhn9cKhxpA", "Jun 16, 2022")
+                .WithLabels("Honour Guard");
+            AddLink("The Uruk-hai - THEATRICAL CAMPAIGN (misplay)", "https://www.youtube.com/watch?v=dOMAfuV4Enw", "Jun 9, 2022")
+                .WithLabels("The Uruk-hai", "Campaign");
+            AddLink("The Uruk-hai - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=57hsXkiE7Bk", "Jun 9, 2022")
+                .WithLabels("The Uruk-hai", "Campaign");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #7", "https://www.youtube.com/watch?v=1T8eg0adAGg", "Jun 5, 2022")
+                .WithLabels("Challenge #7");
+            AddLink("Breaking of the Fellowship - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=3sIxgGG1GEc", "Jun 2, 2022")
+                .WithLabels("Breaking of the Fellowship", "Campaign");
+            AddLink("Curious Brandybuck", "https://www.youtube.com/watch?v=hCRdhE8wAh4", "May 31, 2022")
+                .WithLabels("Curious Brandybuck");
+            AddLink("A Journey in the Dark - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=ns6pbXon7gw&t=331s", "May 26, 2022")
+                .WithLabels("A Journey in the Dark", "Campaign");
+            AddLink("A Journey in the Dark - THEATRICAL CAMPAIGN (misplay)", "https://www.youtube.com/watch?v=EVQt8wjf5Jk", "May 26, 2022")
+                .WithLabels("A Journey in the Dakr", "Campaign");
+            AddLink("Bill the Pony", "https://www.youtube.com/watch?v=U-gx9ZWUPZs", "May 24, 2022")
+                .WithLabels("Bill the Pony");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #6", "https://www.youtube.com/watch?v=vcLxQaqcZOw", "May 22, 2022")
+                .WithLabels("Challenge #6");
+            AddLink("The Rings Goes South - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=ZkkVYfRhY7M&t=46s", "May 19, 2022")
+                .WithLabels("The Ring Goes South", "Campaign");
+            AddLink("Guest Host Joe Holme AKA The Purple Wizard", "https://www.youtube.com/watch?v=PhDMV5KAVVo", "May 18, 2022")
+                .WithLabels("The Purple Wizard", "Reinforcements");
+            AddLink("Flight to the Ford - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=5hD6OILzbig", "May 12, 2022")
+                .WithLabels("Flight to the Ford", "Campaign");
+            AddLink("The Great Hunt", "https://www.youtube.com/watch?v=2EXX4ObM4z0", "May 11, 2022")
+                .WithLabels("The Great Hunt");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #5", "https://www.youtube.com/watch?v=OdoI-_07U9o", "May 8, 2022")
+                .WithLabels("Challenge #5");
+            AddLink("A Knife in the Dark - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=pkYJAWTnqJ4", "May 5, 2022")
+                .WithLabels("A Knife in the Dark", "Campaign");
+            AddLink("Fog on the Barrow Downs - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=sxRClepE9ho", "Apr 28, 2022")
+                .WithLabels("Fog on the Barrow Downs", "Campaign");
+            AddLink("Guest Host Matthew Dempsey", "https://www.youtube.com/watch?v=gaHP8k8-i_U", "Apr 26, 2022")
+                .WithLabels("Matthew Dempsey", "Gwaihir (hero)");
+            AddLink("(GIVEAWAY!!) Second Breakfast: An LotR LCG Live Play Series - Challenge #4", "https://www.youtube.com/watch?v=rjlQvQ93BRs", "Apr 24, 2022")
+                .WithLabels("Challenge #4", "GIVEAWAY");
+            AddLink("The Old Forest - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=oFgos_hpVKE", "Apr 21, 2022")
+                .WithLabels("The Old Forest", "Campaign");
+            AddLink("Shadow of the Past - THEATRICAL CAMPAIGN", "https://www.youtube.com/watch?v=8cDLMA5cbeM", "Apr 14, 2022")
+                .WithLabels("Shadow of the Past", "Campaign");
+            AddLink("Gleowine", "https://www.youtube.com/watch?v=Sly5ZLQnCFw", "Apr 13, 2022")
+                .WithLabels("Gleowine");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #3", "https://www.youtube.com/watch?v=nArDtBFmVI0", "Apr 10, 2022")
+                .WithLabels("Challenge #3");
+            AddLink("Erebor Hammersmith", "https://www.youtube.com/watch?v=HVIfaAUOcIM", "Apr 5, 2022")
+                .WithLabels("Erebor Hammersmith");
+            AddLink("Quick Strike and Dunhere", "https://www.youtube.com/watch?v=LnTuHz1AFCk", "Mar 31, 2022")
+                .WithLabels("Quick Strike", "Dunhere");
+            AddLink("Guest Host Tyler Parrott", "https://www.youtube.com/watch?v=gMg7ZJ4Tlms", "May 29, 2022")
+                .WithLabels("Anarmar Awakened Campaign");
+            AddLink("Gloin and Self Preservation", "https://www.youtube.com/watch?v=cKEv9abC5jc", "Mar 26, 2022")
+                .WithLabels("Gloin", "Self Preservation");
+            AddLink("Horseback Archer", "https://www.youtube.com/watch?v=uD5s4Er44KA", "Mar 22")
+                .WithLabels("Horseback Archer");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #2", "https://www.youtube.com/watch?v=IAekPpwr62M", "Mar 20, 2022")
+                .WithLabels("Challenge #2");
+            AddLink("Eowyn and Stand and Fight", "https://www.youtube.com/watch?v=6nPm3rB6or8", "Mar 19, 2022")
+                .WithLabels("Eowyn", "Stand and Fight");
+            AddLink("Wrap-up of New Player February", "https://www.youtube.com/watch?v=KqtQINNYx0o", "Mar 15, 2022")
+                .WithLabels("New Players");
+            AddLink("Gimli with Citadel Plate", "https://www.youtube.com/watch?v=wM9INRcHSsQ", "Mar 14, 2022")
+                .WithLabels("Gimli", "Citadel Plate");
+            AddLink("Designer Caleb Grace Talks Revised Core Set", "https://www.youtube.com/watch?v=Sr6KFOrhQcU", "Mar 8, 2022")
+                .WithLabels("Caleb Grace", "Revised Core Set");
+            AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #1", "https://www.youtube.com/watch?v=77PD3iiawgk", "Mar 6, 2022")
+                .WithLabels("Challenge #1");
+            AddLink("Sneaky Beorn", "https://www.youtube.com/watch?v=VDG7SysHobo", "Mar 2, 2022")
+                .WithLabels("Sneak Attack", "Beorn");
+            AddLink("Designer Jeremy Zwirn Talks Revised Core Set", "https://www.youtube.com/watch?v=gxQYaYPzY_g&t=1291s", "Mar 1, 2022")
+                .WithLabels("Jeremy Zwirn", "Revised Core Set");
+            AddLink("Deck Building, Part 2 (with the Revised Core Set)", "https://www.youtube.com/watch?v=1zvI3K_H0Sw", "Feb 26, 2022")
+                .WithLabels("Revised Core Set");
+            AddLink("Deck Building (with the Revised Core Set)", "https://www.youtube.com/watch?v=rXfuXhJOtu4", "Feb 24, 2022")
+                .WithLabels("Revised Core Set");
+            //TODO: Finish 2022 and late 2021
+
             AddYear(2021);
             AddLink("Spoiler: Con of the Rings 2021", "https://www.youtube.com/watch?v=b1pwxmvdOQ8", "2021-06-15");
             AddLink("Daeron's Runes", "https://www.youtube.com/watch?v=r4lbpR-fEME", "2021-06-08");
