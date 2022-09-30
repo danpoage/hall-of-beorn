@@ -25,7 +25,7 @@ namespace HallOfBeorn.Models.LotR.Community.TheBookOfElessar
                 .WithDeckLabels(31390)
                 .WithLabels("#lordoftherings", "#lordoftheringslcg", "#lotrlcg", "This is the third quest in the repackaged Angmar Awakened campaign!");
             AddLink("Intruders in Chetwood (Angmar Awakened Campaign, pt. 1)", "https://www.youtube.com/watch?v=_2fAwytTdR8", "26 Aug 2022")
-                .WithLables("Campaign", "Angmar Awakened", "Intruders in Chetwood", "#LordoftheRingsLCG", "#LordoftheRings", "#LOTRLCG", "This is the first quest in the new, repackaged Angmar Awakened campaign! Apologies for the weird lighting issues, I'll fix that in the next video.")
+                .WithLabels("Campaign", "Angmar Awakened", "Intruders in Chetwood", "#LordoftheRingsLCG", "#LordoftheRings", "#LOTRLCG", "This is the first quest in the new, repackaged Angmar Awakened campaign! Apologies for the weird lighting issues, I'll fix that in the next video.")
                 .WithDeckLabels(31092);
             AddLink("There Came Gwaihir the Windlord (Eagles vs The River Running)", "https://www.youtube.com/watch?v=eGo11yW5CGE", "14 Mar 2022")
                 .WithLabels("Gwahir", "Radagast", "Eagle", "The River Running", "#LOTRLCG", "#LordoftheRings", "#LivingCardGame")

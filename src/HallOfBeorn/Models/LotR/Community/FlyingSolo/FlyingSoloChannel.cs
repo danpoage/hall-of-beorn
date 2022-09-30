@@ -45,14 +45,13 @@ namespace HallOfBeorn.Models.LotR.Community.FlyingSolo
                 .WithLabels("Progression", "Redhorn Gate")
                 .WithDeckLabels(14115)
                 .WithLabels("Im back! After 6 months, the legend continues. It's the Redhorn gate.' Stay tuned to the end I added a highlight real of my quest failures for your enjoyment! Here is the deck I used https://ringsdb.com/decklist/view/14115/flyingsololotrprogressionpt12theredhorngate-1.0 Enjoy the game and stay tuned for episode 13!");
-                .WithLabels("");
             
             AddYear(2019);
             AddLink("LOTR Progressions Series Pt. 11. Flight from Moria", "https://www.youtube.com/watch?v=7kbnchLiy3c", "2019-05-30")
                 .WithLabels("Progression", "Flight from Moria")
                 .WithDeckLabels(12119)
                 .WithLabels("Your favourite Solo gamer Returns once again and this time it's down to the depths of Moria as we delve deeper into Moria and face off the Seventh Level. Here is the decklist if you want to see what I'm rolling out with. https://ringsdb.com/decklist/view/121... Like and Subscribe, feel free to comment, if you like it!");
-            AddLink("LOTR Progressions Series Pt. 10. The Seventh Level", "https://www.youtube.com/watch?v=PqzplpE1S28", "2019-0523")
+            AddLink("LOTR Progressions Series Pt. 10. The Seventh Level", "https://www.youtube.com/watch?v=PqzplpE1S28", "2019-05-23")
                 .WithLabels("Progression", "The Seventh Level")
                 .WithDeckLabels(12119)
                 .WithLabels("Your favourite Solo gamer Returns once again and this time it's down to the depths of Moria as we delve deeper into Moria and face off the Seventh Level. Here is the decklist if you want to see what I'm rolling out with. https://ringsdb.com/decklist/view/12119/flyingsololotrprogressionpt9intothepit-1.0 Like and Subscribe, feel free to comment, if you like it!");
