@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
 {
@@ -24,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("199", "An Unexpected Progression", "https://cardboardoftherings.com/2022/07/25/episode-199-an-unexpected-progression/", "Jul 25, 2022")
                 .WithLabels("Progression");
             AddLink("198", "Leeeeroy Ruxpin!", "https://cardboardoftherings.com/2022/07/01/episode-198-leeeeroy-ruxpin/", "Jul 1, 2022")
-                .WithLabels("Mustering of the Rohirrim", "ALeP", "Osbera");
+                .WithLabels("Mustering of the Rohirrim", "ALeP", "Osbera", "Mustering of the Rohirrim");
             AddLink("197", "McMiddle-earth", "https://cardboardoftherings.com/2022/06/05/episode-197-mcmiddle-earth/", "Jun 5, 2022")
                 .WithLabels("https://www.fantasyflightgames.com/en/news/2022/5/12/different-ways-to-adventure/").WithDeckLabels(18511, 12958);
             AddLink("196", "Grimbeorn the Swole", "https://cardboardoftherings.com/2022/05/13/episode-196-grimbeorn-the-swole/", "May 13, 2022")
@@ -76,8 +73,10 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             AddLink("174.5", "Look a lot like Mordor", "https://cotr.libsyn.com/episode-1745-look-a-lot-like-mordor", "09 Jan 2021");
 
             AddYear(2020);
-            AddLink("173", "A Long Extended POD", "https://cotr.libsyn.com/episode-173-a-long-extended-pod", "23 Dec 2020");
-            AddLink("172", "Harad Choices", "https://cotr.libsyn.com/episode-172-harad-choices", "30 Nov 2020");
+            AddLink("173", "A Long Extended POD", "https://cotr.libsyn.com/episode-173-a-long-extended-pod", "23 Dec 2020")
+                .WithLabels("A Long-extended Party", "ALeP");
+            AddLink("172", "Harad Choices", "https://cotr.libsyn.com/episode-172-harad-choices", "30 Nov 2020")
+                .WithLabels("Kahliel", "Harad");
             AddLink("171", "Campfire Tales", "https://cotr.libsyn.com/episode-171-campfire-tales", "13 Nov 2020");
             AddLink("170", "Hey, that's my Caleb!", "https://cotr.libsyn.com/episode-170-hey-thats-my-caleb", "11 Oct 2020");
             AddLink("169", "Ancient Mailbag", "https://cotr.libsyn.com/episode-169-ancient-mailbag", "25 Sep 2020");

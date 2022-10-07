@@ -9,6 +9,13 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             : base("Card Talk Blog", "https://cardtalk2018.com/", "https://cardtalk2018.com/feed/", LinkType.Card_Talk_Blog)
         {
             AddYear(2022);
+            AddLink("To Catch an Orc with Flavor of the Lady – January 5, 2020", "https://cardtalk2018.com/2022/10/07/to-catch-an-orc-with-flavor-of-the-lady-january-5-2020/", "Oct 7, 2022")
+                .WithLabels("To Catch an Orc", "Silvan")
+                .WithDeckLabels(100);
+            AddLink("Heir of Valandil", "https://cardtalk2018.com/2022/10/05/heir-of-valandil/", "Oct 5 2022")
+                .WithLabels("Heir of Valandil", "Dunedain Hunter", "Sarn Ford Sentry", "Forest Snare", "Entangling Nets", "Outmatched", "A Burning Brand")
+                .WithLabels("Feint", "Thicket of Spears", "The Wizards's Voice", "Coney in a Trap", "Galadriel (leadership ally)", "Master of the Forge")
+                .WithDeckLabels(28);
             AddLink("The Fords of Isen with Hobbit Decks 3 – December 31, 2019", "https://cardtalk2018.com/2022/09/23/the-fords-of-isen-with-hobbit-decks-3-december-31-2019/", "Sep 23 2022")
                 .WithLabels("The Fords of Isen")
                 .WithDeckLabels(13964);
@@ -213,7 +220,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("A second Second Breakfast", "https://cardtalk2018.com/2022/03/18/a-second-second-breakfast/", "Mar 18 2022")
                 .WithLabels("Announcement");
             AddLink("Core Campaign Escape from Dol Guldur 8 & 9 – March 20, 2022", "https://cardtalk2018.com/2022/03/21/core-campaign-escape-from-dol-guldur-8-9-march-1-2022/", "Mar 21 2022")
-                .WithLabels("Escape from DOl Guldur", "Core Set", "Campaign").WithDeckLabels(26615);
+                .WithLabels("Escape from Dol Guldur", "Core Set", "Campaign").WithDeckLabels(26615);
             AddLink("First Repackaged Cycle will be Angmar Awakened!", "https://cardtalk2018.com/2022/03/17/first-repackaged-cycle-will-be-angmar-awakened/", "Mar 17 2022")
                 .WithLabels("Angmar Awakened", "Campaign", "Hardy", "Determination", "Silverthorn", "Boon", "Burden", "None Return", "Rossiel");
             AddLink("Core Set Combos – Eowyn + Stand and Fight", "https://cardtalk2018.com/2022/03/17/core-set-combos-eowyn-stand-and-fight/", "Mar 17 2022")
