@@ -308,6 +308,51 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             AddLink("Superlative February - Show 1", "https://www.youtube.com/watch?v=uS9iWZiiOLk", "2021-02-01");
             AddLink("Beorn's Hospitality", "https://www.youtube.com/watch?v=s0QwMnG9RQE", "2021-01-29")
                 .WithLabels("Beorn's Hospitality", "Healing");
+            AddLink("Card Talk Live Hunt for the Dreadnaught", "https://www.youtube.com/watch?v=2rhj4fqo_pU", "Jan 22, 2021")
+                .WithLabels("The Hunt for the Dreadnaught");
+            AddLink("Lore of Imladris", "https://www.youtube.com/watch?v=4ielqlAsqd4", "Jan 19, 2021")
+                .WithLabels("Healing");
+            AddLink("Card Talk Live Saga Camapaign with Matt Passing of the Grey Company (part 2)", "https://www.youtube.com/watch?v=EFtHSs3duCw", "Jan 18, 2021")
+                .WithLabels("The Passing of the Grey Company", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga Camapaign with Matt Passing of the Grey Company (part 2)", "https://www.youtube.com/watch?v=Io_pOm4akew", "Jan 18, 2021")
+                .WithLabels("The Passing of the Grey Company", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga Campaign with Matt Shelob's Lair", "https://www.youtube.com/watch?v=XIHA0F7CHHY", "Jan 18, 2021")
+                .WithLabels("Shelob's Lair", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga Campaign with Matt Journey to the Crossroads", "https://www.youtube.com/watch?v=k_kPxBZHx78", "Jan 18, 2021")
+                .WithLabels("Journey to the Crossroads", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga Campaign Passage Through the Marshes", "https://www.youtube.com/watch?v=94RlqhuZVsk", "Jan 17, 2021")
+                .WithLabels("The Passage Through the Marshes", "Campaign", "Saga");
+            AddLink("Card Talk Live with Onidsen Spiders of the Woodland Realm", "https://www.youtube.com/watch?v=szpDLDa2BTE", "Jan 15, 2021")
+                .WithLabels("Spiders of the Woodland Realm", "Onidsen");
+            AddLink("Card Talk Live Saga Campaign with Matt Shelob's Lair", "https://www.youtube.com/watch?v=hW73QGoQRMQ", "Jan 11, 2021")
+                .WithLabels("Shelob's Lair", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga Campaign with Matt Journey to the Crossroads", "https://www.youtube.com/watch?v=Mm8lV3EEXMQ", "Jan 11, 2021")
+                .WithLabels("Journey to the Crossroads", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga Campaign with Matt Passage through the Marshes", "https://www.youtube.com/watch?v=YW_qI8G8W7U", "Jan 11, 2021")
+                .WithLabels("Passage Through the Marshes", "Campaign", "Saga");
+            AddLink("Dunedain Remedy", "https://www.youtube.com/watch?v=YW_qI8G8W7U", "Jan 11, 2021")
+                .WithLabels("Healing", "Signal");
+            /*
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            */
+
 
             AddYear(2020);
             AddLink("Guest Host Chloe Walsh", "https://www.youtube.com/watch?v=SAmEgdIw-0U", "2020-02-07T17:00:08+00:00");
