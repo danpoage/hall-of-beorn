@@ -332,29 +332,119 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("Passage Through the Marshes", "Campaign", "Saga");
             AddLink("Dunedain Remedy", "https://www.youtube.com/watch?v=YW_qI8G8W7U", "Jan 11, 2021")
                 .WithLabels("Healing", "Signal");
-            /*
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            */
-
-
+            
+            AddLink("Card Talk Live Saga with Matt Passage through the Marshes (part 2)", "https://www.youtube.com/watch?v=jrH4cxiZvzs", "Jan 7, 2021")
+                .WithLabels("The Passage Through the Marshes", "Saga", "Campaign");
+            AddLink("Self Preservation", "https://www.youtube.com/watch?v=Z7Rxarbnq7o", "Jan 4, 2021")
+                .WithLabels("Healing");
+            AddLink("Card Talk Live Saga with Matt Passage Through the Marshes (part 1)", "https://www.youtube.com/watch?v=KhQWc7J5F3M", "Jan 3, 2021")
+                .WithLabels("The Passage Through the Marshes", "Saga", "Campaign");
+            
             AddYear(2020);
+            AddLink("Card Talk Live Saga with Matt Road to Isengard", "https://www.youtube.com/watch?v=t-E9U1rTP-A", "Dec 31, 2020")
+                .WithLabels("The Road to Isengard", "Saga", "Campaign");
+            AddLink("Card Talk Live Saga with Matt Helm's Deep (part 2)", "https://www.youtube.com/watch?v=A-cZ2YUDl_k", "Dec 31, 2020")
+                .WithLabels("Helm's Deep", "Saga", "Campaign");
+            AddLink("The End Comes", "https://www.youtube.com/watch?v=CgFYOyqgcrE", "Dec 28, 2020")
+                .WithLabels("Encounter Deck Control", "Dwarf");
+            AddLink("Card Talk Live Saga with Matt Helm's Deep (part 1)", "https://www.youtube.com/watch?v=2jp4KU8GP2M", "Dec 23, 2020")
+                .WithLabels("Helm's Deep", "Campaign", "Saga");
+            AddLink("Stone of Elostirion", "https://www.youtube.com/watch?v=FUEukSpe1c4", "Dec 21, 2020")
+                .WithLabels("Guarded", "Willpower Boost", "Card Draw");
+            AddLink("Card Talk Live Saga with Matt Uruk Hai", "https://www.youtube.com/watch?v=IdGHpkHgfFw", "Dec 20, 2020")
+                .WithLabels("The Uruk Hai", "Campaign", "Saga");
+            AddLink("Can Guarded Cards Beat the Seventh Level", "https://www.youtube.com/watch?v=b4PsBShNg6A", "Dec 17, 2020")
+                .WithLabels("The Seventh Level", "Guarded");
+            AddLink("Durin's Axe", "https://www.youtube.com/watch?v=fNwA_k6Mjz0", "Dec 15, 2020")
+                .WithLabels("Guarded", "Direct Damage");
+            AddLink("Card Talk Live Saga with Matt Breaking the Fellowship", "https://www.youtube.com/watch?v=XDPsGpF-37M", "Dec 13, 2020")
+                .WithLabels("Breaking of the Fellowship", "Campaign", "Saga");
+            AddLink("Guest Host Eric Shell - A Long-extended Party", "https://www.youtube.com/watch?v=KwGclkfoz48", "Dec 11, 2020")
+                .WithLabels("ALeP", "Eric Shell", "Shellin", "A Long-extended Party");
+            AddLink("A Long-extended Party - Thengel", "https://www.youtube.com/watch?v=rDNch76uNaY", "Dec 9, 2020")
+                .WithLabels("Thengel", "Rohan");
+            AddLink("Cram", "https://www.youtube.com/watch?v=7MZKqpGBstU", "Dec 7, 2020")
+                .WithLabels("Readying");
+            AddLink("Card Talk Live Saga with Matt The Ring Goes South", "https://www.youtube.com/watch?v=BiaSOWSyU-8", "Dec 6, 2020")
+                .WithLabels("The Ring Goes South", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga with Matt Journey in the Dark", "https://www.youtube.com/watch?v=ScUIjCPg14o", "Dec 6, 2020")
+                .WithLabels("Journey in the Dark", "Saga", "Campaign");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
             AddLink("Guest Host Chloe Walsh", "https://www.youtube.com/watch?v=SAmEgdIw-0U", "2020-02-07T17:00:08+00:00");
             AddLink("Guest Host Tolkien Road", "https://www.youtube.com/watch?v=-kSqKjSxQmc", "2020-02-05T17:00:00+00:00");
             AddLink("Hero Arwen Umdomiel and any Hero Aragorn", "https://www.youtube.com/watch?v=MuyWpuMII-Q", "2020-02-03T17:00:11+00:00")
