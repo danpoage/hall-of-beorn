@@ -369,62 +369,138 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("The Ring Goes South", "Campaign", "Saga");
             AddLink("Card Talk Live Saga with Matt Journey in the Dark", "https://www.youtube.com/watch?v=ScUIjCPg14o", "Dec 6, 2020")
                 .WithLabels("Journey in the Dark", "Saga", "Campaign");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
+            AddLink("Card Talk Live Saga with Matt The Ring Goes South", "https://www.youtube.com/watch?v=1v_P-Zo0-Fo", "Nov 29, 2020")
+                .WithLabels("The Ring Goes South", "Campaign",  "Saga");
+            AddLink("Card Talk Live Journey Along the Anduin", "https://www.youtube.com/watch?v=1CubTmBlgGc", "Nov 28, 2020")
+                .WithLabels("Journey Along the Anduin");
+            AddLink("Card Talk Live Saga with Matt Flight to the Ford", "https://www.youtube.com/watch?v=emWkoJYjH_A", "Nov 26, 2020")
+                .WithLabels("Flight to the Ford", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga with Matt Passage of the Marshes (part 2)", "https://www.youtube.com/watch?v=uSnw24l-MoM", "Nov 26, 2020")
+                .WithLabels("The Passage of the Marshes", "Campaign", "Saga");
+            AddLink("Card Talk Live with Onidsen Into the Pit", "https://www.youtube.com/watch?v=-Ai974GtGrQ", "Nov 26, 2020")
+                .WithLabels("Into the Pit", "Onidsen");
+            AddLink("Card Talk Live Saga with Matt Passage of the Marshes (part 1)", "https://www.youtube.com/watch?v=-GsGMpOuirA", "Nov 25, 2020")
+                .WithLabels("The Passage of the Marshes", "Campaign", "Saga");
+            AddLink("Card Talk Live The Hills of Emyn Muil", "https://www.youtube.com/watch?v=a1t4LLYhsLU", "Nov 25, 2020")
+                .WithLabels("The Hills of Emyn Muil");
+            AddLink("Card Talk Live: Bond of Hobbitship takes on Massing at Osgiliath", "https://www.youtube.com/watch?v=ZOhDldAniDE", "Nv 25, 2020")
+                .WithLabels("Bond of Friendship", "Hobbit", "Massing at Osgiliath");
+            AddLink("Peace, and Thought", "https://www.youtube.com/watch?v=IEjsrrw8nkg", "Nov 24, 2020")
+                .WithLabels("Card Draw", "Readying");
+            AddLink("Card Talk Live Saga with Matt Road to Isengard", "https://www.youtube.com/watch?v=TiTL4bxZqAU", "Nov 22, 2020")
+                .WithLabels("Road to Isengard", "Campaign", "Saga");
+            AddLink("Superlative February Announcement", "https://www.youtube.com/watch?v=JrJktUSL24Q", "Nov 18, 2020")
+                .WithLabels("News", "Superlative February");
+            AddLink("Guest Host Joe Hoffman", "https://www.youtube.com/watch?v=uFgfKNPU4kI", "Nov 17, 2020")
+                .WithLabels("Raise the Shire", "Hobbit");
+            AddLink("Card Talk Live Saga with Matt A Knife in the Dark (part 2)", "https://www.youtube.com/watch?v=jv3pIrt6flU", "Nov 15 2020")
+                .WithLabels("A Knife in the Dark", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga with Matt A Knife in the Dark (part 1)", "https://www.youtube.com/watch?v=np5pXuXTXTc", "Nov 15, 2020")
+                .WithLabels("A Knife in the Dark", "Campaign", "Saga");
+            AddLink("Ring Mail", "https://www.youtube.com/watch?v=hBly5hUmsTY", "Nov 9, 2020")
+                .WithLabels("Armor", "Dwarf", "Hobbit");
+            AddLink("Card Talk Live Saga with Matt A Shadow of the Past", "https://www.youtube.com/watch?v=yTNvaGD0MDA", "Nov 8, 2020")
+                .WithLabels("A Shadow of the Past", "Campaign", "Saga");
+            AddLink("Card Talk Live Saga with Matt Helm's Deep", "https://www.youtube.com/watch?v=6unfg1b1tbs", "Nov 1, 2020")
+                .WithLabels("Helm's Deep", "Campaign", "Saga");
+            AddLink("Guest Host Justin Gein", "https://www.youtube.com/watch?v=IKRkxQB-QQE", "Oct 26, 2020")
+                .WithLabels("The Free Peoples");
+            AddLink("Bond of Hobbiship vs Into Ithilien", "https://www.youtube.com/watch?v=pUTO_Lgv0Gg", "Oct 22, 2020")
+                .WithLabels("Bond of Friendship", "Hobbit", "Into Ithilien");
+            AddLink("Guest Host Russ Lundgren", "https://www.youtube.com/watch?v=XFpQHjUSH8I", "Oct 20, 2020")
+                .WithLabels("Elrond (lore hero)");
+            AddLink("Card Talk Live Saga with Matt The Uruk-hai", "https://www.youtube.com/watch?v=zqG-bTKb1j4", "Oct 18, 2020")
+                .WithLabels("The Uruk-hai", "Campaign", "Saga");
+            AddLink("Card Talk's New Player Buying Guide", "https://www.youtube.com/watch?v=GUn1t45GL5c", "Oct 15, 2020")
+                .WithLabels("New Players", "Buying Guide");
+            AddLink("Spirit Bofur", "https://www.youtube.com/watch?v=9tD2ZvdUbqw", "Oct 13, 2020")
+                .WithLabels("Bofur (spirit ally)");
+            AddLink("Card Talk Live Lost in Mirkwood", "https://www.youtube.com/watch?v=EfUI8KCJey8", "Oct 9, 2020")
+                .WithLabels("Lost in Mirkwood", "Community");
+            AddLink("Dungeons Deep and Caverns Dim: Matt's Sixth Sense", "https://www.youtube.com/watch?v=wiwXvqk7jRQ", "Oct 8, 2020")
+                .WithLabels("Dungeons Deep and Caverns Dim");
+            AddLink("Guest Host Vardaen (again!)", "https://www.youtube.com/watch?v=hq9m9SuiNI8", "Oct 5, 2020")
+                .WithLabels("Ghan-buri-Ghan", "Vardaen");
+            AddLink("Card Talk Live Nightmare Road to Rivendell", "https://www.youtube.com/watch?v=76sNvkbxVnI", "Sep 14, 2020")
+                .WithLabels("Road to Rivendell", "Nightmare");
+            AddLink("Waters of Nimrodel", "https://www.youtube.com/watch?v=C6_MfPWtoCo", "Sep 14, 2020")
+                .WithLabels("Doomed", "Healing");
+            AddLink("Card Talk Live Breaking of the Fellowship", "https://www.youtube.com/watch?v=8xvm-_Fjl-k", "Sep 13, 2020")
+                .WithLabels("The Breaking of the Fellowship", "Saga", "Campaign");
+            AddLink("Dungeons Deep and Caverns Dim: Fifth Time's the Charm?", "https://www.youtube.com/watch?v=a9UcWEHz35A", "Sep 10, 2020")
+                .WithLabels("Dungeons Deep and Caverns Dim", "Saga");
+            AddLink("Card Talk Live The Dungeons of Cirith Gurat", "https://www.youtube.com/watch?v=dGUjzRMY6jM", "Sep 8, 2020")
+                .WithLabels("The Dungeonss of Cirith Gurat");
+            AddLink("Ring of Barahir", "https://www.youtube.com/watch?v=Kahrd7CzzzY", "Sep 8, 2020")
+                .WithLabels("Artifact", "Hit Point Boost");
+            AddLink("Card Talk Live Into the Pit", "https://www.youtube.com/watch?v=rn5Xs5RMRpg", "Sep 7, 2020")
+                .WithLabels("Into the Pit");
+            AddLink("Dungeons Deep and Caverns Dim (part 4)", "https://www.youtube.com/watch?v=R3wRyRDxHsw", "Sep 3, 2020")
+                .WithLabels("Dungeons Deep and Caverns Dim", "Saga");
+            AddLink("Citadel Custodian", "https://www.youtube.com/watch?v=JUlA3NLXl-M", "Aug 31, 2020")
+                .WithLabels("Gondor Swarm");
+            AddLink("Dungeons Deep and Caverns Dim (part 3)", "https://www.youtube.com/watch?v=wuwQrjC3m6c", "Aug 29, 2020")
+                .WithLabels("Dungeons Deep and Caverns Dim", "Saga");
+            AddLink("Free to Choose", "https://www.youtube.com/watch?v=Ujm3h2zqPaM", "Aug 25, 2020")
+                .WithLabels("Threat Reduction");
+            AddLink("LotR LCG Ancient Mathoms", "https://www.youtube.com/watch?v=1OWL7YRVRsk", "Aug 21, 2020")
+                .WithLabels("Across the Ettenmoors");
+            AddLink("Farmer Maggot", "https://www.youtube.com/watch?v=xjVnvdhDPXo", "Aug 18, 2020")
+                .WithLabels("Direct Damage", "Hobbit Ambush");
+            AddLink("New Player GuideL Card Talk Talks Keywords", "https://www.youtube.com/watch?v=GXrFB-76Kos", "Aug 16, 2020")
+                .WithLabels("New Players", "Keywords");
+            AddLink("Dungeons Deep and Caverns Dim (part 2)", "https://www.youtube.com/watch?v=6u7AaReIAuY", "Aug 13, 2020")
+                .WithLabels("Dungeons Deep and Caverns Dim", "Saga");
+            AddLink("Dungeons Deep and Caverns Dim (part 1)", "https://www.youtube.com/watch?v=1tbR4wiuxiY", "Aug 12, 2020")
+                .WithLabels("Dungeons Deep and Caverns Dim", "Saga");
+            AddLink("Card Talk Live: Still Another Journey in the Dark (part 2)", "https://www.youtube.com/watch?v=uOb7LBBUVh4", "Aug 9, 2020")
+                .WithLabels("Journey in the Dark", "Campaign", "Saga");
+            AddLink("Card Talk Live: Desert Crossing, The Long Arm of Mordor, and Race Across Harad", "https://www.youtube.com/watch?v=njh_tSW6XH4", "Aug 6, 2020")
+                .WithLabels("Desert Crossing", "The Long Arm of Mordor", "Race Across Harad");
+            AddLink("Card Talk Live: The Fate of Wilderland", "https://www.youtube.com/watch?v=FzsaYa9WDw8", "Aug 2, 2020")
+                .WithLabels("The Fate of Wilderland");
+            AddLink("Card Talk Live Episode 2", "https://www.youtube.com/watch?v=sNAIlXrhXnA", "Aug 1, 2020")
+                .WithLabels("Ered Mithrin Player Cards");
+            AddLink("Card Talk Live Episode 1", "https://www.youtube.com/watch?v=gK_DYgxIQcw", "Aug 1, 2020")
+                .WithLabels("Shadows of Mirkwood Player Cards");
+            AddLink("Epic Multiplayer Storm on Cobas Haven", "https://www.youtube.com/watch?v=umyCZ8vCkDU", "Jul 30, 2020")
+                .WithLabels("A Storm on Cobas Haven", "Epic Multiplayer");
+            AddLink("Leadership Hero Faramir", "https://www.youtube.com/watch?v=N_PcOhmps7Q", "Jul 28, 2020")
+                .WithLabels("Faramir (leadership hero)", "Ally Readying", "Enemy Engagement");
+            AddLink("Card Talk Live: Journey in the Dark (part 1)", "https://www.youtube.com/watch?v=z7RsKuT39JQ", "Jul 26, 2020")
+                .WithLabels("Journey in the Dark", "Campaign", "Saga");
+            AddLink("Miruvor", "https://www.youtube.com/watch?v=WxZTu5lp0PM", "Jul 20, 2020")
+                .WithLabels("Readying", "Willpower Boost", "Resource Smoothing");
+            AddLink("Card Talk Live: The Drowned Ruins", "https://www.youtube.com/watch?v=icjxxUgwc8o", "Jul 18, 2020")
+                .WithLabels("The Drowned Ruins");
+            AddLink("Card Talk Live: Over the Misty Mountains Grim", "https://www.youtube.com/watch?v=HW8TzJCJgNk", "Jul 16, 2020")
+                .WithLabels("Over the Misty Mountains Grim", "Saga");
+            AddLink("Thorongil Bilbo on The Road to Rivendell", "https://www.youtube.com/watch?v=SJK6XBM2BLA", "Jul 14, 2020")
+                .WithLabels("Bilbo Baggins", "Thorongil", "The Road to Rivendell");
+            AddLink("Beravor", "https://www.youtube.com/watch?v=GJ5U6liT7TM", "Jul 13, 2020")
+                .WithLabels("Card Draw", "Errata");
+            AddLink("Card Talk Live: Journey in the Dark", "https://www.youtube.com/watch?v=28Ks2F_p994", "Jul 12, 2020")
+                .WithLabels("Journey in the Dark", "Campaign", "Saga");
+            AddLink("Card Talk Live - 4 Player Store on Cobas Haven", "https://www.youtube.com/watch?v=O9xxJVFp-Ns", "Jul 11, 2020")
+                .WithLabels("A Storm on Cobas Haven", "Multiplayer", "Four Player");
+            AddLink("Card Talk Live - 2 Player Storm on Cobas Haven", "https://www.youtube.com/watch?v=yzSEnOhIFSM", "Jul 10, 2020")
+                .WithLabels("A Storm on Cobas Haven", "Multiplayer", "Two Player");
+            AddLink("SPOILER!!! Thorongil", "https://www.youtube.com/watch?v=8eQqC8cBM5w", "Jul 10, 2020")
+                .WithLabels("Hero Versions", "Spoiler");
+            AddLink("Spirit Aragorn Takes on the Mumakil", "https://www.youtube.com/watch?v=sNmiMn81C1g", "Jul 9, 2020")
+                .WithLabels("Aragorn (spirit hero)", "The Mumakil");
+            AddLink("Card Talk Live Over the Misty Mountains Grim", "https://www.youtube.com/watch?v=A0qiyzyRry0", "Jul 8, 2020")
+                .WithLabels("Over the Misty Mountains Grim", "Saga");
+            AddLink("SPOILER!!! Spirit Aragorn", "https://www.youtube.com/watch?v=Szj1h-KmZGs", "Jul 6, 2020")
+                .WithLabels("Aragorn (spirit hero)");
+            AddLink("Card Talk Live - Deck Building with Gran", "https://www.youtube.com/watch?v=Khkswp-wA_A", "Jul 5, 2020")
+                .WithLabels("Deck Building");
+            AddLink("Card Talk Live - The Ring Goes South", "https://www.youtube.com/watch?v=FxiMJuGyR74", "Jul 3, 2020")
+                .WithLabels("The Ring Goes South", "Saga", "Campaign");
+            AddLink("Hobbits: Bond of Friendship - Journey Along the Anduin", "https://www.youtube.com/watch?v=lTyZG2vfPaQ", "Jul 1, 2020")
+                .WithLabels("Journey Along the Anduin", "Bond of Friendship", "Hobbit");
+            AddLink("SPOILER!!! Bond of Friendship Contract", "https://www.youtube.com/watch?v=jeTaCcY-uU4", "Jun 30, 2020")
+                .WithLabels("Bond of Friendship", "Contract");
             AddLink("", "", "")
                 .WithLabels("");
             AddLink("", "", "")
