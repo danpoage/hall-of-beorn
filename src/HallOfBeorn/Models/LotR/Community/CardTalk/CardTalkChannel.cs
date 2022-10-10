@@ -501,28 +501,96 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("Journey Along the Anduin", "Bond of Friendship", "Hobbit");
             AddLink("SPOILER!!! Bond of Friendship Contract", "https://www.youtube.com/watch?v=jeTaCcY-uU4", "Jun 30, 2020")
                 .WithLabels("Bond of Friendship", "Contract");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("Guest Host Chloe Walsh", "https://www.youtube.com/watch?v=SAmEgdIw-0U", "2020-02-07T17:00:08+00:00");
-            AddLink("Guest Host Tolkien Road", "https://www.youtube.com/watch?v=-kSqKjSxQmc", "2020-02-05T17:00:00+00:00");
+            AddLink("Guest Hosts Bob and Chrissy", "https://www.youtube.com/watch?v=rRjNCjVbvzM", "Jun 29, 2020")
+                .WithLabels("Prince Imrahil (tactics hero)");
+            AddLink("Dragon Sickness: We Must Away, Ere Break of Day", "https://www.youtube.com/watch?v=ml4R_SmOoLQ", "Jun 24, 2020")
+                .WithLabels("We Must Away, Ere Break of Day", "Saga");
+            AddLink("Card Talk Live - Nightmare Journey in the Dark/Road to Rivendell", "https://www.youtube.com/watch?v=5KmqYhqgUM4", "Jun 23, 2020")
+                .WithLabels("Nightmare Journey in Dark", "Road to Rivendell");
+            AddLink("Card Talk Live - Flight to the Ford", "https://www.youtube.com/watch?v=zRD35rb3qfg", "Jun 21, 2020")
+                .WithLabels("Flight to the Ford", "Saga");
+            AddLink("Knife in the Dark", "https://www.youtube.com/watch?v=jPiORJVGbzQ", "Jun 21, 2020")
+                .WithLabels("A Knife in the Dark", "Saga");
+            AddLink("Haldir Defends Everything Along the Anduin", "https://www.youtube.com/watch?v=ZwsFgQK1mGE", "Jun 19, 2020")
+                .WithLabels("Journey Along the Anduin", "The Grey Wanderer");
+            AddLink("Card Talk Plays - Desert Crossing", "https://www.youtube.com/watch?v=7F3vkNBsg9w", "Jun 17, 2020")
+                .WithLabels("Desert Crossing");
+            AddLink("Tactics Hero Legolas", "https://www.youtube.com/watch?v=7_h4jFdLCXA", "Jun 15, 2020")
+                .WithLabels("Legolas (tactics hero)");
+            AddLink("Card Talk Live - Nightmare Journey Along the Anduin", "https://www.youtube.com/watch?v=AO17yf32OkU", "Jun 13, 2020")
+                .WithLabels("Journey Along the Anduin", "Nightmare");
+            AddLink("Escape from Umbar with Dwarf Mining", "https://www.youtube.com/watch?v=wuwoNUdrhK4", "Jun 11, 2020")
+                .WithLabels("Escape from Umbar", "Dwarf Mining");
+            AddLink("Ally Treebeard", "https://www.youtube.com/watch?v=AI3TKxgTegE", "JUn 8, 2020")
+                .WithLabels("Treebeard (ally)", "Ent");
+            AddLink("Card Talk Live - Intruders in Chetwood", "https://www.youtube.com/watch?v=8KDqlMtnqO0", "Jun 6, 2020")
+                .WithLabels("Intruders in Chetwood");
+            AddLink("Escape from Dol Guldur", "https://www.youtube.com/watch?v=3ArDdhHGGH4", "Jun 3, 2020")
+                .WithLabels("Escape from Dol Guldur");
+            AddLink("Snowbourn Scout", "https://www.youtube.com/watch?v=GwUXvLG6_AU", "Jun 1, 2020")
+                .WithLabels("Location Control");
+            AddLink("Card Talk Live - Escape from Mount Gram", "https://www.youtube.com/watch?v=cqofmIXR9Hg", "May 30, 2020")
+                .WithLabels("Escape from Mount Gram");
+            AddLink("We Must Away 'Ere Break of Day", "https://www.youtube.com/watch?v=I78Khu3W2KI", "May 27, 2020")
+                .WithLabels("We Must Away Ere Break of Day", "Saga");
+            AddLink("Card Talk Live - The Oath", "https://www.youtube.com/watch?v=yfeKSGBTqaA", "May 24, 2020")
+                .WithLabels("The Oath", "Two Player Limited Starter", "Grimbeorn the Old", "Balin", "Legolas", "The One Ring");
+            AddLink("SPOILER!!! Read Book of Westmarch", "https://www.youtube.com/watch?v=JD7_8Amv9xg", "May 18, 2020")
+                .WithLabels("Red Book of Westmarch", "Hobbit", "Resource Acceleration", "Willpower Boost", "Spoiler");
+            AddLink("Card Talk Live - Nightmare Journey Along the Anduin", "https://www.youtube.com/watch?v=vfvehHfklj4", "May 17, 2020")
+                .WithLabels("Journey Along the Anduin", "Nightmare");
+            AddLink("Card Talk Live - Under the Ash Mountains", "https://www.youtube.com/watch?v=uDMNWSy2Ezs", "May 16, 2020")
+                .WithLabels("Under the Ash Mountains");
+            AddLink("Community Built Deck Play Through", "https://www.youtube.com/watch?v=DTqoH-6EDNM", "May 13, 2020")
+                .WithLabels("Community", "Eowyn (tactics hero)", "Glorfindel (spirit hero)", "Na'asiyah", "Shadow and Flame");
+            AddLink("Guest Host Shane and Bob", "https://www.youtube.com/watch?v=Y5_YXmxXM4w", "May 13, 2020")
+                .WithLabels("We Are Not Idle", "Dwarf", "Card Draw", "Resource Acceleration", "Errata");
+            AddLink("Round Table Discussion: Attack on Dol Guldur", "https://www.youtube.com/watch?v=vILrJU8LRPA", "May 5, 2020")
+                .WithLabels("Attack on Dol Guldur");
+            AddLink("Valiant Sacrifice", "https://www.youtube.com/watch?v=02ervnMJjQ8", "May 4, 2020")
+                .WithLabels("Ally Leaves Play", "Card Draw");
+            AddLink("Shadow of the Past", "https://www.youtube.com/watch?v=UYrsrI_DUNo", "Apr 27, 2020")
+                .WithLabels("A Shadow of the Past", "Campaign", "Saga", "Hobbit");
+            AddLink("Power in the Earth", "https://www.youtube.com/watch?v=uddEgvBHmek", "Apr 27, 2020")
+                .WithLabels("Location Control", "Location Attachment");
+            AddLink("Card Talk Plays - The Silvans Passage through Mirkwood", "https://www.youtube.com/watch?v=su-jf3mQmCc", "Apr 21, 2020")
+                .WithLabels("Passage Through Mirkwood", "Silvan");
+            AddLink("Timely Aid", "https://www.youtube.com/watch?v=W7o9-R3jX-U", "Apr 20, 2020")
+                .WithLabels("Secrecy", "Ally Mustering");
+            AddLink("Sarah McLeod intros Rosie Cotton", "https://www.youtube.com/shorts/UeccVd2y_bg", "Apr 13, 2020")
+                .WithLabels("Hobbit", "Ally Stat Boost");
+            AddLink("Guests Chad G. and Christian S. Talk About Rosie Cotton", "https://www.youtube.com/watch?v=MOy90l4xN_g", "Apr 13, 2020")
+                .WithLabels("Hobbit", "Ally Stat Boost");
+            AddLink("Guest Host Steve Majka AKA Vardean", "https://www.youtube.com/watch?v=gQZXqBm21nU", "Apr 6, 2020")
+                .WithLabels("Elwing's Flight", "Readying", "Willpower Boost");
+            AddLink("Unexpected Courage", "https://www.youtube.com/watch?v=rwvQ1fWJjPA", "Mar 23, 2020")
+                .WithLabels("Readying");
+            AddLink("Guest Host John Rogers 2", "https://www.youtube.com/watch?v=DjvGDMujpwM", "Mar 16, 2020")
+                .WithLabels("Con of the Rings 2020");
+            AddLink("Guest Host Mark Chan", "https://www.youtube.com/watch?v=OLsUNfZ0b4c", "Mar 9, 2020")
+                .WithLabels("RiddermarkLord", "alt-art");
+            AddLink("Risk Some Light", "https://www.youtube.com/watch?v=WCRcufaKTUE", "Mar 2, 2020")
+                .WithLabels("Secrecy", "Encounter Deck Control");
+            AddLink("Guest Hosts Caleb Grace and Matt Newman", "https://www.youtube.com/watch?v=JhJNfdakreg", "Feb 28, 2020")
+                .WithLabels("Eomer", "Lothiriel", "Rohan", "Gondor");
+            AddLink("Guest Host Brandon", "https://www.youtube.com/watch?v=oUgxfAOB63o", "Feb 26, 2020")
+                .WithLabels("Boromir (tactics hero)", "Errata");
+            AddLink("Spirit Theoden and Theodred", "https://www.youtube.com/watch?v=CgPbdaWyK30", "Feb 24, 2020")
+                .WithLabels("Theoden (spirit hero)", "Theodred", "Rohan", "Cost Reduction", "Resource Acceleration");
+            AddLink("Guest Host Ava Walsh", "https://www.youtube.com/watch?v=_paOA44ZyGI", "Feb 21, 2020")
+                .WithLabels("Gandalf (core)");
+            AddLink("Spirit Legolas and Leadership Gimli", "https://www.youtube.com/watch?v=PFZ92neleus", "Feb 19, 2020")
+                .WithLabels("Legolas (spirit hero)", "Gimli (leadership hero)");
+            AddLink("Guest Host Katie Muir", "https://www.youtube.com/watch?v=ppE7FZM2its", "Feb 14, 2020")
+                .WithLabels("Gimli (leadership ally)");
+            AddLink("Guest Hosts Sarah and Jason", "https://www.youtube.com/watch?v=mI5exBd6etA", "Feb 12, 2020")
+                .WithLabels("Kahliel");
+            AddLink("Smeagol and The One Ring", "https://www.youtube.com/watch?v=AkIEyaZGfdg", "Feb 10, 2020")
+                .WithLabels("Smeagol (hero)", "Gollum", "The One Ring", "Stinker");
+            AddLink("Guest Host Chloe Walsh", "https://www.youtube.com/watch?v=SAmEgdIw-0U", "Feb 7, 2020")
+                .WithLabels("Smeagol (hero)", "Stinker");
+            AddLink("Guest Host Tolkien Road", "https://www.youtube.com/watch?v=-kSqKjSxQmc", "2020-02-05T17:00:00+00:00")
+                .WithLabels("Legendarium", "The Lord of the Rings", "Middle-earth", "Haldan");
             AddLink("Hero Arwen Umdomiel and any Hero Aragorn", "https://www.youtube.com/watch?v=MuyWpuMII-Q", "2020-02-03T17:00:11+00:00")
                 .WithLabels("Arwen Undomiel (spirit hero)", "Aragorn (hero)");
             AddLink("Feint", "https://www.youtube.com/watch?v=XTGRkSOQSog", "2020-01-27T17:00:07+00:00")
@@ -550,6 +618,222 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("Caleb Grace");
             AddLink("Explore Secret Ways", "https://www.youtube.com/watch?v=-tuqkZ_ztrQ", "2019-11-18T14:24:46+00:00")
                 .WithLabels("Explore Secret Ways", "Location Control", "Victory Display");
+            AddLink("SPOILER!!! Lore Saruman and Saruman's Staff", "https://www.youtube.com/watch?v=TO4FsbhkF0Y", "Nov 14, 2019")
+                .WithLabels("Saruman (lore hero)", "Saruman's Staff", "Doomed", "Readying", "Resource Smoothing", "Spoiler");
+            AddLink("Fortune or Fate", "https://www.youtube.com/watch?v=9ZmvaFVWyuY", "Nov 13, 2019")
+                .WithLabels("Hero Recursion");
+            AddLink("Guest Host Aaron Fishbaugh", "https://www.youtube.com/watch?v=7biEGd9OXn8", "Nov 4, 2019")
+                .WithLabels("Dori (tactics hero)");
+            AddLink("Leadership Orcrist", "https://www.youtube.com/watch?v=uR-u8gl6K2s", "Oct 28, 2019")
+                .WithLabels("Orcrist (attachment)", "Guarded (enemy or location)", "Attack Boost", "Resource Acceleration");
+            AddLink("Con of the Rings Recap", "https://www.youtube.com/watch?v=zMFGX5Rf5IM", "Oct 23, 2019")
+                .WithLabels("Con of the Rings 2019");
+            AddLink("The King's Return", "https://www.youtube.com/watch?v=BdUzTEA5O-I", "Oct 21, 2019")
+                .WithLabels("Card Fetch", "Guarded Attachments");
+            AddLink("Lore Glamdring", "https://www.youtube.com/watch?v=AX3RZed8wm8", "Oct 14, 2019")
+                .WithLabels("Glamdring (attachment)", "Guarded (enemy or location)", "Attack Boost", "Card Draw");
+            AddLink("Con of the Rings Designer Interview", "https://www.youtube.com/watch?v=Ujl1Qi5l7lw", "Oct 10, 2019")
+                .WithLabels("Con of the Rings 2019", "Caleb Grace", "Matt Newman");
+            AddLink("Con of the Rings Reflections", "https://www.youtube.com/watch?v=hSIi3PBwBW0", "Oct 9, 2019")
+                .WithLabels("Con of the Rings 2019", "Joseph Forster", "Caleb Grace", "John Rogers", "Dan Poage", "Derek Kamal");
+            AddLink("Necklace of Girion", "https://www.youtube.com/watch?v=hSIi3PBwBW0", "Sep 30, 2019")
+                .WithLabels("Guarded (enemy or location)", "Willpower Boost", "Resource Acceleration");
+            AddLink("Guest Host Kristian Priisholm", "https://www.youtube.com/watch?v=B5-NPX9tcDs", "Sep 24, 2019")
+                .WithLabels("Ring of Thror", "Guarded (enemy or location)", "Dwarf", "Readying", "Attachment Mustering");
+            AddLink("Mithril Shirt", "https://www.youtube.com/watch?v=LVrPvUtOhLQ", "Sep 16, 2019")
+                .WithLabels("Mithril Shirt", "Guarded (location)", "Damage Prevention");
+            AddLink("Community Tales - August 2019", "https://www.youtube.com/watch?v=5_oNzotrcuw", "Sep 12, 2019")
+                .WithLabels("Community", "Reddit Poem");
+            AddLink("The Arkenstone", "https://www.youtube.com/watch?v=usT_akP67DE", "Sep 9, 2019")
+                .WithLabels("The Arkenstone (attachment)", "Guarded (enemy or location)", "Willpower Boost", "Threat Reduction", "Threat Smoothing", "Multiplayer");
+            AddLink("Sting", "https://www.youtube.com/watch?v=ljaGNpy4QB4", "Aug 26, 2019")
+                .WithLabels("Sting (attachment)", "Guarded (enemy)", "Willpower Boost", "Attack Boost", "Defense Boost", "Direct Damage");
+            AddLink("Revisiting Tactics Hero Bilbo", "https://www.youtube.com/watch?v=PuMvS6-BZyc", "Aug 19, 2019")
+                .WithLabels("Bilbo (tactics hero)", "Guarded Attachments", "Direct Damage", "Willpower Boost", "Staging Area Control");
+            AddLink("Guest Host Derek Kamal", "https://www.youtube.com/watch?v=9jWUY-ZA338", "Aug 12, 2019")
+                .WithLabels("Small Target", "Hobbit", "Combat Control");
+            AddLink("Guest Host Matt Duckworth", "https://www.youtube.com/watch?v=IqUlz8J-3so", "Aug 8, 2019")
+                .WithLabels("Faramir (lore hero)", "Attack Boost");
+            AddLink("Community Tales July 2019 - GENCON EPISODE", "https://www.youtube.com/watch?v=99EWpqYka9U", "Aug 5, 2019")
+                .WithLabels("GenCon 2019", "Community");
+            AddLink("Fords of Isen", "https://www.youtube.com/watch?v=aPndsEhejwk", "Jul 23, 2019")
+                .WithLabels("Fords of Isen", "Two Player", "Fastred", "Dunhere", "Glorfindel (spirit hero)", "Galadriel (hero)", "Gandalf (hero)", "Elrond (lore hero)");
+            AddLink("Legacy of Numenor", "https://www.youtube.com/watch?v=BY4NnZpFEnA", "Jul 22, 2019")
+                .WithLabels("Doomed", "Resource Acceleration");
+            AddLink("Flight from Moria", "https://www.youtube.com/watch?v=rz12xxJNvEc", "Jul 17, 2019")
+                .WithLabels("Flight from Moria", "Celeborn (hero)", "Galadriel (hero)", "Thranduil (hero)");
+            AddLink("Ancient Mathoms Ep 2. Tactics Core Cards", "https://www.youtube.com/watch?v=DPujons7qzU", "Jul 16, 2019")
+                .WithLabels("Tactics", "Core Set Player Cards");
+            AddLink("Grima", "https://www.youtube.com/watch?v=s0pbNflnAnw", "Jul 15, 2019")
+                .WithLabels("Doomed", "Cost Reduction");
+            AddLink("Treachery of Rhudaur 2P", "https://www.youtube.com/watch?v=MG6TukqIG0Y", "Jul 11, 2019")
+                .WithLabels("Treachery of Rhudaur", "Two Player", "Hirgon (hero)", "Grimbeorn the Old (hero)", "Theodred (hero)", "Galadriel (hero)", "Elrond (hero)", "Gandalf (hero)");
+            AddLink("Across the Ettenmoors 2P", "https://www.youtube.com/watch?v=0yJGoVq5gTQ", "Jul 10, 2019")
+                .WithLabels("Across the Ettenmoors", "Two Player", "Hirgon (hero)", "Grimbeorn the Old (hero)", "Theodred (hero)", "Galadriel (hero)", "Elrond (hero)", "Gandalf (hero)");
+            AddLink("Ancient Mathoms Ep. 1 - Leadership Core Cards", "https://www.youtube.com/watch?v=EkSgKPzlxwA", "Jul 9, 2019")
+                .WithLabels("Leadership", "Core Set Player Cards");
+            AddLink("Guest Host Ted Banach, Winner of the \"Set Us Straight\" Contest", "https://www.youtube.com/watch?v=2C0MnI3BEY8", "Jul 8, 2019")
+                .WithLabels("Gandalf (hero)");
+            AddLink("Leadership Hero Frodo", "https://www.youtube.com/watch?v=voyjQpgv-38", "Jul 1, 2019")
+                .WithLabels("Frodo Baggins (leadership hero)", "Treach Reduction", "Readying");
+            AddLink("Community Tales June 2019", "https://www.youtube.com/watch?v=rt7Hsx9PzyI", " Jul 1, 2019")
+                .WithLabels("Community", "News");
+            AddLink("Fellowship", "https://www.youtube.com/watch?v=EIq9McKSgLM", "Jun 20, 2019")
+                .WithLabels("Fellowship Contract", "Unique Allies");
+            /*
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            AddLink("", "", "")
+                .WithLabels("");
+            */
         }
     }
 }
