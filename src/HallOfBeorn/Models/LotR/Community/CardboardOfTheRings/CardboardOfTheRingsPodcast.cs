@@ -288,11 +288,11 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             return string.Format(urlFormat, episodeNumber, title.Replace(" ", "_"));
         }
 
-        private void AddLink(string episodeNumber, string title, string url, string releaseDateString)
+        private CreatorLink AddLink(string episodeNumber, string title, string url, string releaseDateString)
         {
             var releaseDate = DateTime.Parse(releaseDateString);
             var fullTitle = string.Format(titleFormat, episodeNumber, title, releaseDate.ToString(dateFormat));
-            AddLink(new Link(LinkType.Cardboard_of_the_Rings, url, fullTitle));
+            return AddLink(new Link(LinkType.Cardboard_of_the_Rings, url, fullTitle));
         }
     }
 }
