@@ -680,160 +680,254 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("Community", "News");
             AddLink("Fellowship", "https://www.youtube.com/watch?v=EIq9McKSgLM", "Jun 20, 2019")
                 .WithLabels("Fellowship Contract", "Unique Allies");
-            /*
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            AddLink("", "", "")
-                .WithLabels("");
-            */
+            AddLink("Shadowfax", "https://www.youtube.com/watch?v=sEJFU4mc7us", "Jun 18, 2019")
+                .WithLabels("Readying", "Gandalf", "Sentinel", "Ranged");
+            AddLink("Elrond's Counsel", "https://www.youtube.com/watch?v=xFfG-JOyxog", "Jun 10, 2019")
+                .WithLabels("Willpower Boost", "Threat Reduction", "Noldor", "Silvan");
+            AddLink("Around the Community May 2019", "https://www.youtube.com/watch?v=L_wXAB7kmaI", "Jun 6, 2019")
+                .WithLabels("Community", "News");
+            AddLink("Tactics Hero Gimli", "https://www.youtube.com/watch?v=O3qF0pBo8dQ", "Jun 4, 2019")
+                .WithLabels("Gimli (tactics hero)", "Hit Point Boost");
+            AddLink("Fast Hitch", "https://www.youtube.com/watch?v=id1bxeLkayk", "May 20, 2019")
+                .WithLabels("Readying", "Hobbit");
+            AddLink("Journey Along the Anduin", "https://www.youtube.com/watch?v=DjxHXPePv7A", "May 16, 2019")
+                .WithLabels("Core Set Quests");
+            AddLink("The Ghost of Framsburg Silvan", "https://www.youtube.com/watch?v=3ZmxZEl6fu4", "May 14, 2019")
+                .WithLabels("The Ghost of Framsburg", "Silvan", "Galadriel (hero)", "Celeborn (hero)", "Tranduil");
+            AddLink("Guest Host John Rogers, Con of the Rings", "https://www.youtube.com/watch?v=YEXJp-dXScA", "May 13, 2019")
+                .WithLabels("Con of the Rings 2019");
+            AddLink("Lore Pippin", "https://www.youtube.com/watch?v=65-JyuB3Yww", "May 6, 2019")
+                .WithLabels("Hobbit", "Card Draw", "Optional Engagement", "Staging Area Control");
+            AddLink("Around the Community - April 2019", "https://www.youtube.com/watch?v=dNLpKyK9Rmw", "May 1, 2019")
+                .WithLabels("Community", "News");
+            AddLink("Journey Along the Anduin w/ Hobbit Taticians", "https://www.youtube.com/watch?v=uNaF2vSlzZM", "May 1, 2019")
+                .WithLabels("Jounrey Along the Anduin", "Tom Cotton", "Bilbo Baggins (tactics hero)", "Merry (tactics hero)");
+            AddLink("Which Aragorn?", "https://www.youtube.com/watch?v=U7EV9b5oN0k", "Apr 29, 2019")
+                .WithLabels("Aragorn (leadership hero)", "Aragorn (lore hero)", "Aragorn (tactics hero)");
+            AddLink("Brok Ironfist", "https://www.youtube.com/watch?v=H5IeA9H9dx4", "Apr 22, 2019")
+                .WithLabels("Dwarf");
+            AddLink("Deck Construction: The Rise of the Hobbit Tacticians", "https://www.youtube.com/watch?v=HtwszRjcKeA", "Apr 16, 2019")
+                .WithLabels("Tom Cotton", "Bilbo Baggins (tactics hero)", "Merry (tactics hero)");
+            AddLink("Fastred", "https://www.youtube.com/watch?v=goxYp3u1j5M", "Apr 15, 2019")
+                .WithLabels("Staging Area Control", "Threat Reduction");
+            AddLink("Lure of Middle-earth Recap with Dominik Schonleben", "https://www.youtube.com/watch?v=mSRDNow0ml4", "Apr 10, 2019")
+                .WithLabels("Lure of Middle-earth 2019");
+            AddLink("Around the Community March 2019", "https://www.youtube.com/watch?v=fLkRzQOyvfE", "Apr 7, 2019")
+                .WithLabels("Community", "News");
+            AddLink("Hero Smeagol", "https://www.youtube.com/watch?v=UmQ3fhAF-OQ", "Apr 4, 2019")
+                .WithLabels("Smeagol (hero)", "Gollum (enemy)", "Stinker");
+            AddLink("Frodo's Intuition", "https://www.youtube.com/watch?v=W_E3ytrPTsE", "Apr 2, 2019")
+                .WithLabels("Fellowship", "Saga", "Hobbit", "Willpower Boost", "Card Draw");
+            AddLink("Treachery of Rhudaur Dwarf Mining", "https://www.youtube.com/watch?v=RtlC6SQ8WCU", "Mar 20, 2019")
+                .WithLabels("Treachery of Rhudaur", "Dwarf Mining", "Oin (hero)", "Thorin Oakenshield (hero)", "Dain Ironfoot (spirit hero)");
+            AddLink("Guest Host Beorn (Dan Poage)", "https://www.youtube.com/watch?v=fn2EF3ivD4Q", "Mar 18, 2019")
+                .WithLabels("Beorn (tactics hero)");
+            AddLink("Celebrimbor's Secret Dwarf Mining", "https://www.youtube.com/watch?v=Ve3rZRrPjDg", "Mar 12, 2019")
+                .WithLabels("Celebrimbor's Secret", "Dwarf Mining", "Oin (hero)", "Thorin Oakenshield (hero)", "Dain Ironfoot (spirit hero)");
+            AddLink("Hero Elrond", "https://www.youtube.com/watch?v=LugsC5Luggs", "Mar 11, 2019")
+                .WithLabels("Elrond (lore hero)", "Vilya", "Healing", "Resource Smoothing");
+            AddLink("Guest Host Daan Prins (Durin's Father)", "https://www.youtube.com/watch?v=vwi1CM12sYM", "Mar 4, 2019")
+                .WithLabels("Idraen", "Location Control", "Readying");
+            AddLink("Around the Community February 2019", "https://www.youtube.com/watch?v=9KkzZM6-T9M", "Mar 1, 2019")
+                .WithLabels("Community", "News");
+            AddLink("Lost in Mirkwood Two Player", "https://www.youtube.com/watch?v=yTG9s6TOB2s", "Feb 28, 2019")
+                .WithLabels("Lost in Mirkwood", "Two Player Game", "Thranduil (hero)", "Celeborn (hero)", "Galadriel (spirit hero)", "Hirgon (hero)", "Grimbeorn the Old (tactics hero)", "Theodred (leadership hero)");
+            AddLink("The Seventh Level", "https://www.youtube.com/watch?v=BhaL9JOfhtA", "Feb 28, 2019")
+                .WithLabels("The Seventh Level (quest)", "Celeborn (hero)", "Galadriel (spirit hero)", "Thranduil (leadership hero)");
+            AddLink("Quicker Than Sight", "https://www.youtube.com/watch?v=Z2w8DW9JrH8", "Feb 27, 2019")
+                .WithLabels("Shadow Cancellation", "Silvan Bounce");
+            AddLink("Island Amid Perils", "https://www.youtube.com/watch?v=aiwI0zinpl0", "Feb 26, 2019")
+                .WithLabels("Threat Reduction", "Silvan Bounce");
+            AddLink("Feigned Voices", "https://www.youtube.com/watch?v=w_kLfmhYvow", "Feb 25, 2019")
+                .WithLabels("Combat Control", "Silvan Bounce");
+            AddLink("Into the Pit Silvans", "https://www.youtube.com/watch?v=m65kZStGmLk", "Feb 24, 2019")
+                .WithLabels("Into the Pit (quest)", "Silvan", "Celeborn (hero)", "Galadriel (spirit hero)", "Thranduil (hero)");
+            AddLink("The Three People", "https://www.youtube.com/watch?v=oDirdMoywAY", "Feb 23, 2019")
+                .WithLabels("Ally Mustering", "Silvan Bounce", "Card Fetch");
+            AddLink("O Lorien!", "https://www.youtube.com/watch?v=VVUORHCNZpI", "Feb 22, 2019")
+                .WithLabels("Cost Reduction", "Silvan");
+            AddLink("Across the Ettenmoors Two Player", "https://www.youtube.com/watch?v=rRCgwT6OSdA", "Feb 21, 2019")
+                .WithLabels("Across the Ettenmoors (quest)", "Two Player Game", "Thranduil (hero)", "Celeborn (hero)", "Galadriel (spirit hero)", "Grimebeorn the Old (tactics hero)", "Hirgon (hero)", "Theodred (hero)");
+            AddLink("The Elvenking", "https://www.youtube.com/watch?v=PTGngcecUZg", "Feb 20, 2019")
+                .WithLabels("Readying", "Silvan Bounce");
+            AddLink("Orophin", "https://www.youtube.com/watch?v=b1lBzY9O-8U", "Feb 19, 2019")
+                .WithLabels("Ranged", "Silvan Bounce", "Ally Recursion");
+            AddLink("Greenwood Archer", "https://www.youtube.com/watch?v=BbzpqyF3Smk", "Feb 18, 2019")
+                .WithLabels("Ranged", "Hero Readying", "Silvan Bounce");
+            AddLink("Galion", "https://www.youtube.com/watch?v=TAvzp7r1WS0", "Feb 16, 2019")
+                .WithLabels("Silvan Bounce");
+            AddLink("Galadhrim Weaver", "https://www.youtube.com/watch?v=3aDY1kK9jEQ", "Feb 15, 2019")
+                .WithLabels("Discard Pile Recursion", "Silvan Bounce");
+            AddLink("Lost in Mirkwood - Silvans", "", "")
+                .WithLabels("Lost in the Mirkwood (quest)", "Celeborn (hero)", "Galadriel (spirit hero)", "Thranduil (hero)");
+            AddLink("Galadhon Archer", "https://www.youtube.com/watch?v=NTmX5j8dEN0", "Feb 13, 2019")
+                .WithLabels("Ranged", "Silvan Bounce", "Direct Daamge");
+            AddLink("Galadhrim Minstrel", "https://www.youtube.com/watch?v=j8rH2hjKip8", "Feb 12, 2019")
+                .WithLabels("Silvan Bounce", "Event Card Fetch");
+            AddLink("Thranduil", "https://www.youtube.com/watch?v=KodzqO_5dqQ", "Feb 11, 2019")
+                .WithLabels("Silvan Bounce", "Resource Smoothing", "Combat Control");
+            AddLink("Rumil", "https://www.youtube.com/watch?v=bCtTScx8xj0", "Feb 8, 2019")
+                .WithLabels("Silvan Bounce", "Ranged", "Direct Damage");
+            AddLink("Journey Along the Anduin", "https://www.youtube.com/watch?v=roRQi38aaF8", "Feb 7, 2019")
+                .WithLabels("Celeborn (hero)", "Galadriel (spirit hero)", "Thranduil (hero)");
+            AddLink("Silvan Tracker", "https://www.youtube.com/watch?v=k_gqWSE1VI0", "Feb 6, 2019")
+                .WithLabels("Healing", "Silvan (trait)");
+            AddLink("Naith Guide", "https://www.youtube.com/watch?v=WJnhN3OZ40E", "Feb 5, 2019")
+                .WithLabels("Action Advantage", "Silvan Bounce");
+            AddLink("Celeborn", "https://www.youtube.com/watch?v=yFriaWoXITk", "Feb 4, 2019")
+                .WithLabels("Silvan (trait)", "Silvan Bounce", "Willpower Boost", "Attack Boost", "Defense Boost");
+            AddLink("Passage Through Mirkwood", "https://www.youtube.com/watch?v=2lLvf_3J_6c", "Feb 2, 2019")
+                .WithLabels("Passage Through Mirkwood (quest)", "Celeborn (hero)", "Galadriel (spirit hero)", "Thranduil (hero)");
+            AddLink("Around the Community January 2019", "https://www.youtube.com/watch?v=gVH6PnOulkA", "Feb 1, 2019")
+                .WithLabels("Community", "News");
+            AddLink("The Hunt for Gollum Silvan", "https://www.youtube.com/watch?v=0j8xzyqN2kQ", "Jan 29, 2019")
+                .WithLabels("The Hunt for Gollum (quest)", "Celeborn (hero)", "Galadriel (spirit hero)", "Thranduil (hero)");
+            AddLink("Guest Host Dominik Schonleben", "https://www.youtube.com/watch?v=v_eW--zmeXs", "Jan 28, 2019")
+                .WithLabels("Saruman (ally)", "Doomed", "Staging Area Control");
+            AddLink("Silvan February", "https://www.youtube.com/watch?v=8i7JvlL8quk", "Jan 22, 2019")
+                .WithLabels("Silvan (trait)");
+            AddLink("Guest Host Ian Martin", "https://www.youtube.com/watch?v=TlKrfIebrUo", "Jan 21, 2019")
+                .WithLabels("Palantir (attachment)", "Encounter Deck Control", "Scrying", "Card Draw");
+            AddLink("Sauron's Reach", "https://www.youtube.com/watch?v=UZvqZPgg2ks", "Jan 17, 2019")
+                .WithLabels("Sauron's Reach (encounter set)");
+            AddLink("Tactics Aragorn", "https://www.youtube.com/watch?v=mDRI9xCoZ08", "Jan 14, 2019")
+                .WithLabels("Aragorn (tactics hero)", "Staging Area Control");
+            AddLink("Guest Host Mr. Underhill", "", "Jan 7, 2019")
+                .WithLabels("Aragorn (lore hero)", "Threat Reduction", "Doomed");
+            
+            AddYear(2018);
+            AddLink("Spirit Theoden", "https://www.youtube.com/watch?v=juH70c-BcGw", "Dec 24, 2018")
+                .WithLabels("Theoden (spirit hero)", "Rohan", "Cost Reduction");
+            AddLink("Wilderlands", "https://www.youtube.com/watch?v=g30rNrRap9o", "Dec 20, 2018")
+                .WithLabels("Wilderlands (encounter set)");
+            AddLink("Escort from Edoras", "https://www.youtube.com/watch?v=nCgBjzaJ6UI", "Dec 17, 2018")
+                .WithLabels("Rohan Sacrifice", "Willpower Boost");
+            AddLink("Guest Host Chris Standford", "https://www.youtube.com/watch?v=DjN-FdkYxwU", "Dec 10, 2018")
+                .WithLabels("Erestor (lore hero)", "Card Draw", "Noldor Discard");
+            AddLink("Gaffer Gamgee", "https://www.youtube.com/watch?v=97eTgV3r5mw", "Dec 6, 2018")
+                .WithLabels("Combat Control", "Hobbit Engagement Control");
+            AddLink("Tactics Hero Bilbo", "https://www.youtube.com/watch?v=EBTy_qO_6DM", "Dec 5, 2018")
+                .WithLabels("Bilbo Baggins (tactics hero)", "Guarded Attachments", "Direct Damage", "Willpower Boost");
+            AddLink("Tactics Eowyn", "https://www.youtube.com/watch?v=2xsa2TPhoRI", "Dec 3, 2018")
+                .WithLabels("Eowyn (tactics hero)", "Readying", "Attack Boost");
+            AddLink("Guest Host Caleb Grace", "https://www.youtube.com/watch?v=wu5H7MXtX7w", "Nov 26, 2018")
+                .WithLabels("Galadriel (spirit hero)", "Action Advantage", "Threat Reduction", "Card Draw");
+            AddLink("Friend of Friends", "https://www.youtube.com/watch?v=uTv5cyhC3kM", "Nov 19, 2018")
+                .WithLabels("Hobbit", "Willpower Boost", "Attack Boost", "Defense Boost", "Hit Point Boost");
+            AddLink("The Oath", "https://www.youtube.com/watch?v=5hyCcPyU6wE", "Nov 14, 2018")
+                .WithLabels("The Oath (quest)", "Thorin Stonehelm (tactics hero)", "Bifur (lore hero)", "Glorfindel (lore hero)");
+            AddLink("Guest Host John Meek", "https://www.youtube.com/watch?v=EsWcaTxUe1M", "Nov 12, 2018")
+                .WithLabels("Fatty Bolger", "Staging Area Control");
+            AddLink("The Breaking of the Fellowship", "https://www.youtube.com/watch?v=LIUhe3Y7UBA", "Nov 9, 2018")
+                .WithLabels("The Breaking of the Fellowship (quest)", "Saga", "Campaign", "Prince Imrahil (tactics hero)", "Hirluin the Fair", "Denethor (leadership hero)");
+            AddLink("Peril in Pelargir", "https://www.youtube.com/watch?v=rlfIitV79a4", "Nov 9, 2018")
+                .WithLabels("Peril in Pelargir (quest)", "Theodred (hero)", "Eomer (leadership hero)", "Theoden (spirit hero)");
+            AddLink("We Must Away, Ere Break of Day (part 4)", "https://www.youtube.com/watch?v=saVbBFmFZng", "Nov 9, 2018")
+                .WithLabels("We Must Away, Ere Break of Day (quest)", "Saga", "Pippin (lore hero)", "Sam Gamgee (leadership hero)", "Merry (tactics hero)");
+            AddLink("Over the Misty Mountains Grim", "https://www.youtube.com/watch?v=9lEm8MTzBfE", "Nov 9, 2018")
+                .WithLabels("Over the Misty Mountains Grim (quest)", "Saga", "Pippin (lore hero)", "Sam Gamgee (leadership hero)", "Merry (tactics hero)");
+            AddLink("We Must Away, Ere Break of Day (part 3)", "https://www.youtube.com/watch?v=bgQHOlBO-5g", "Nov 9, 2018")
+                .WithLabels("We Must Away, Ere Break of Day (quest)", "Saga", "Pippin (lore hero)", "Sam Gamgee (leadership hero)", "Merry (tactics hero)");
+            AddLink("We Must Away, Ere Break of Day (part 2)", "https://www.youtube.com/watch?v=U8-r3tFMbm4", "Nov 9, 2018")
+                .WithLabels("We Must Away, Ere Break of Day (quest)", "Saga", "Pippin (lore hero)", "Sam Gamgee (leadership hero)", "Merry (tactics hero)");
+            AddLink("We Must Away, Ere Break of Day (part 1)", "https://www.youtube.com/watch?v=YUnsJfs9-us", "Nov 9, 2018")
+                .WithLabels("We Must Away, Ere Break of Day (quest)", "Saga", "Pippin (lore hero)", "Sam Gamgee (leadership hero)", "Merry (tactics hero)");
+            AddLink("The Hunt for Gollum (part 2)", "https://www.youtube.com/watch?v=Igezaiyubus", "Nov 9, 2018")
+                .WithLabels("The Hunt for Gollum (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Conflict at the Carrock (part 2)", "https://www.youtube.com/watch?v=lRTLQrRItXg", "Nov 8, 2018")
+                .WithLabels("Conflict at the Carrock (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Conflict at the Carrock (part 1)", "https://www.youtube.com/watch?v=rNIDnb_YmzE", "Nov 8, 2018")
+                .WithLabels("Conflict at the Carrock (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("The Hunt for Gollum (part 1)", "https://www.youtube.com/watch?v=SRN3c9v0OVg", "Nov 8, 2018")
+                .WithLabels("The Hunt for Gollum (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Guest Host Samuel Shreeve", "https://www.youtube.com/watch?v=2hNfQ81GZzY", "Nov 8, 2018")
+                .WithLabels("Theoden (tactics hero)", "Willpower Boost");
+            AddLink("Dunedain Mark", "https://www.youtube.com/watch?v=8Rilf5n0DGE", "Nov 8, 2018")
+                .WithLabels("Attack Boost", "Signal");
+            AddLink("Guest Host Chad Garlinghouse", "https://www.youtube.com/watch?v=1lF1iO2gNFM", "Nov 8, 2018")
+                .WithLabels("Haldir of Lorien (lore hero)", "Staging Area Attack", "Combat Control");
+            AddLink("Andrath Guardsman", "https://www.youtube.com/watch?v=o2S7-2XjZNs", "Nov 8, 2018")
+                .WithLabels("Combat Control", "Engaged Enemies");
+            AddLink("Passage Through Mirkwood", "https://www.youtube.com/watch?v=cgtqUfZMl4w", "Nov 8, 2018")
+                .WithLabels("Passage Through Mirkwood (encounter set)");
+            AddLink("Dol Guldur Orcs", "https://www.youtube.com/watch?v=2YRJkI9keyk", "Nov 8, 2018")
+                .WithLabels("Dol Guldur Orcs (encounter set)");
+            AddLink("Spiders of Mirkwood", "https://www.youtube.com/watch?v=XnwDbqvY_9Q", "Nov 8, 2018")
+                .WithLabels("Spiders of Mirkwood (encounter set)");
+            AddLink("Ithilien Archer", "https://www.youtube.com/watch?v=3gLWmi1vK-Q", "Nov 8, 2018")
+                .WithLabels("Ranger", "Staging Area Control");
+            AddLink("Dunhere", "https://www.youtube.com/watch?v=ZRBt_-dYUbE", "Nov 8, 2018")
+                .WithLabels("Staging Area Attack", "Attack Boost");
+            AddLink("Lore Hero Denethor", "https://www.youtube.com/watch?v=EMHVqc9RRH4", "Nov 8, 2018")
+                .WithLabels("Denethor (lore hero)", "Encounter Deck Control", "Encounter Deck Scrying");
+            AddLink("Hero Gandalf", "https://www.youtube.com/watch?v=15gwVHUKQlo", "Nov 8, 2018")
+                .WithLabels("Gandalf (hero)", "Player Deck Scrying");
+            AddLink("Tactics Merry", "https://www.youtube.com/watch?v=CG0gSJowMo4", "Nov 8, 2018")
+                .WithLabels("Merry (tactics hero)", "Attack Boost", "Readying");
+            AddLink("Gondorian Spearman", "https://www.youtube.com/watch?v=k0z1wR3-n2Y", "Nov 8, 2018")
+                .WithLabels("Direct Damage");
+            AddLink("Hirluin the Fair", "https://www.youtube.com/watch?v=ZbZcDIFLH-4", "Nov 8, 2018")
+                .WithLabels("Outlands", "Resource Smoothing", "Ranged");
+            AddLink("Send for Aid", "https://www.youtube.com/watch?v=bTq6A2ngT0A", "Nov 8, 2018")
+                .WithLabels("Side Quest", "Ally Mustering");
+            AddLink("Get to Know Your Host", "https://www.youtube.com/watch?v=luGxlDt_zCA", "Nov 8, 2018")
+                .WithLabels("Grant Thompson");
+            AddLink("Escape from Dol Guldur (part 4)", "https://www.youtube.com/watch?v=ehhcIc8h4RU", "Nov 2, 2018")
+                .WithLabels("Escape from Dol Guldur (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Escape from Dol Guldur (part 3)", "https://www.youtube.com/watch?v=6-Yew-Ge2jY", "Nov 2, 2018")
+                .WithLabels("Escape from Dol Guldur (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Escape from Dol Guldur (part 2)", "https://www.youtube.com/watch?v=AMgoaQSqPv8", "Nov 1, 2018")
+                .WithLabels("Escape from Dol Guldur (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Escape from Dol Guldur (part 1)", "https://www.youtube.com/watch?v=o9dUiCqtmRc", "Nov 1, 2018")
+                .WithLabels("Escape from Dol Guldur (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Guest Host Joseph Forster", "https://www.youtube.com/watch?v=mh39OPSYcQg", "Nov 1, 2018")
+                .WithLabels("Cirdan the Shipwright", "Card Draw", "Noldor Discard");
+            AddLink("Journey Along the Anduin (part 3)", "https://www.youtube.com/watch?v=GRa4h8skHAQ", "Nov 1, 2018")
+                .WithLabels("Journey Along the Anduin (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Passage Through Mirkwood", "https://www.youtube.com/watch?v=_EtA0kkL1FM", "Nov 1, 2018")
+                .WithLabels("Passage Through Mirkwood (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Journey Along the Anduin (part 2)", "https://www.youtube.com/watch?v=lR4pbnix7H8", "Nov 1, 2018")
+                .WithLabels("Journey Along the Anduin (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Journey Along the Anduin (part 1)", "https://www.youtube.com/watch?v=lbAwKqYahzY", "Nov 1, 2018")
+                .WithLabels("Journey Along the Anduin (quest)", "Legolas (tactics hero)", "Haldir of Lorien (lore hero)", "Glorfindel (spirit hero)");
+            AddLink("Sneak Attack", "https://www.youtube.com/watch?v=l1ojKMBOnvk", "Nov 1, 2018")
+                .WithLabels("Ally Mustering");
+            AddLink("Elf Stone", "https://www.youtube.com/watch?v=TL6kKzgHNDE", "Nov 1, 2018")
+                .WithLabels("Location Attachment", "Ally Mustering");
+            AddLink("Rivendell Blade", "https://www.youtube.com/watch?v=xjUSJ9cJPso", "Nov 1, 2018")
+                .WithLabels("Enemy Defense Reduction", "Restricted", "Weapon");
+            AddLink("Derndingle Warrior", "https://www.youtube.com/watch?v=uIQKtyMisvY", "Nov 1, 2018")
+                .WithLabels("Ent", "Defense Boost");
+            AddLink("Leadership Hero Sam Gamgee", "https://www.youtube.com/watch?v=0No_gDKfpl0", "Nov 1, 2018")
+                .WithLabels("Sam Gamgee (leadership hero)", "Readying", "Willpower Boost", "Attack Boost", "Defense Boost");
+            AddLink("Thalin", "https://www.youtube.com/watch?v=iNM-73K9cP4", "Nov 1, 2018")
+                .WithLabels("Thalin (hero)", "Direct Damage");
+            AddLink("On The Doorstep Bilbo Baggins", "https://www.youtube.com/watch?v=KDDbeDNgkWg", "Nov 1, 2018")
+                .WithLabels("Saga", "Bilbo Baggins (baggins hero)");
+            AddLink("Steward of Gondor", "https://www.youtube.com/watch?v=8DJzJugGJhc", "Nov 1, 2018")
+                .WithLabels("Reosurce Acceleration");
+            AddLink("Leadership Ally Faramir", "https://www.youtube.com/watch?v=j5xO3s1vYac", "Nov 1, 2018")
+                .WithLabels("Faramir (leadership ally)", "Willpower Boost", "Ally Swarm");
+            AddLink("Citadel Plate", "https://www.youtube.com/watch?v=BoRuqCDJbMM", "Oct 31, 2018")
+                .WithLabels("Hit Point Boost", "Restricted");
+            AddLink("Spirit Eowyn", "https://www.youtube.com/watch?v=7YVBoI6gZ7c", "Oct 31, 2018")
+                .WithLabels("Willpower Boost", "Multiplayer");
+            AddLink("Core Gandalf", "https://www.youtube.com/watch?v=_9KnRGBMnYM", "Oct 31, 2018")
+                .WithLabels("Gandalf (core)", "Card Draw", "Direct Damage", "Threat Reduction");
+            AddLink("Spirit Hero Glorfindel", "https://www.youtube.com/watch?v=OlncM7cv-v0", "Oct 31, 2018")
+                .WithLabels("Glorfindel (spirit hero)", "Secrecy", "Threat Raise");
+            AddLink("Boots from Erebor", "https://www.youtube.com/watch?v=aiPP9eAFIfs", "Oct 31, 2018")
+                .WithLabels("Hobbit", "Dwarf", "Hit Point Boost");
+            AddLink("Leadership Aragorn", "https://www.youtube.com/watch?v=dQAkDQSIqnM", "Oct 31, 2018")
+                .WithLabels("Aragorn (leadership hero)");
+            AddLink("Hero Gloin", "https://www.youtube.com/watch?v=kfPiTlhyVsc", "Oct 31, 2018")
+                .WithLabels("Resource Acceleration", "Healing", "Hit Point Boost", "Undefended Attack");
+            AddLink("Tactics Hero Boromir", "https://www.youtube.com/watch?v=Tu0GfLHSYPo", "Oct 31, 2018")
+                .WithLabels("Boromir (tactics hero)", "Readying", "Errata");
+            AddLink("Lore Hero Bilbo", "https://www.youtube.com/watch?v=MwfT1GQq3rU", "Oct 30, 2018")
+                .WithLabels("Bilbo Baggins (lore hero)", "Card Draw");
+            AddLink("Frodo Baggins", "https://www.youtube.com/watch?v=zKMIzPASWMI", "Oct 29, 2018")
+                .WithLabels("Frodo Baggins (spirit)", "Damage Prevention", "Threat Reduction", "Defense");
         }
     }
 }
