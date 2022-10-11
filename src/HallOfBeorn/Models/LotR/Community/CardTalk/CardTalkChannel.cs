@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Community.CardTalk
 {
@@ -15,6 +12,12 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             LinkType.Card_Talk)
         {
             AddYear(2022);
+            AddLink("2022 Con of the Rings Recap", "https://www.youtube.com/watch?v=TGG3A4ubuMA", "Oct 11, 2022")
+                .WithLabels("Con of the Rings 2022", "Community", "Grimbeorn the Old (hero)", "Blood of Gondor (quest)", "Hour of Wrath", "Orcrist (attachment)", "Multiplayer", "ALeP");
+            AddLink("Heir of Valandil", "https://www.youtube.com/watch?v=a1ZoxqVS2lY", "Oct 5, 2022")
+                .WithLabels("Dunedain", "Cost Reduction", "Engaged Enemies");
+            AddLink("Second Breakfast: An Lotr Lcg live play series, something different!", "https://www.youtube.com/watch?v=bLLKVewOueA", "Oct 2, 2022")
+                .WithLabels("Hero Tier List");
             AddLink("Second Breakfast: An LotR LCG Live Play Series - Challenge #13", "https://www.youtube.com/watch?v=oJJaKG9SSRk", "Sep 25, 2022")
                 .WithLabels("Challenge #13");
             AddLink("Dunedain Hunter", "https://www.youtube.com/watch?v=JX3iwjAddFg", "Sep 21, 2022")
