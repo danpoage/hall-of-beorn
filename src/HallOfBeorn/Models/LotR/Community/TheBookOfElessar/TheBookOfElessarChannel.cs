@@ -12,8 +12,10 @@ namespace HallOfBeorn.Models.LotR.Community.TheBookOfElessar
             LinkType.The_Book_of_Elessar)
         {
             AddYear(2022);
+            AddLink("Across the Ettenmoors (Angmar Awakened Campaign, pt. 6)", "https://www.youtube.com/watch?v=tGvZTWkZurc", "30 Sep 2022")
+                .WithLabels("Across the Ettenmoors (quest)", "Angmar Awakened", "#lordoftheringslcg", "#lotrlcg");
             AddLink("Escape from Mt. Gram (Angmar Awakened Campaign, pt. 5)", "https://www.youtube.com/watch?v=1J6MY1AGwtQ", "23 Sep 2022")
-                .WithLabels("Escape from Mount Gram", "Angmar Awakened", "#lordoftheringslcg", "#lotrlcg")
+                .WithLabels("Escape from Mount Gram (quest)", "Angmar Awakened", "#lordoftheringslcg", "#lotrlcg")
                 .WithLabels("This is the fifth quest in the Angmar Awakened cycle and new campaign! This is a pretty unique quest that required me to build specifically for it.")
                 .WithDeckLabels(31789);
             AddLink("The Wastes of Eriador (Angmar Awakened Campaign, pt. 4)", "https://www.youtube.com/watch?v=kScaltP8J14", "16 Sep 2022")

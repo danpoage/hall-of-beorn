@@ -9,6 +9,9 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
             : base("Card Talk Blog", "https://cardtalk2018.com/", "https://cardtalk2018.com/feed/", LinkType.Card_Talk_Blog)
         {
             AddYear(2022);
+            AddLink("The Dunland Trap with Minimum Purchase Rohan Deck – January 11, 2020", "https://cardtalk2018.com/2022/10/11/the-dunland-trap-with-minimum-purchase-rohan-deck-january-11-2020/", "Oct 11, 2022")
+                .WithLabels("The Dunland Trap (quest)", "Minimum Purchase")
+                .WithDeckLabels(14058);
             AddLink("To Catch an Orc with Flavor of the Lady – January 5, 2020", "https://cardtalk2018.com/2022/10/07/to-catch-an-orc-with-flavor-of-the-lady-january-5-2020/", "Oct 7, 2022")
                 .WithLabels("To Catch an Orc", "Silvan")
                 .WithDeckLabels(100);

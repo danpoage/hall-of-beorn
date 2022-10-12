@@ -12,6 +12,10 @@ namespace HallOfBeorn.Models.LotR.Community.CardboardOfTheRings
             LinkType.Cardboard_of_the_Rings)
         {
             AddYear(2022);
+            AddLink("Unboxing the Fellowship of the Ring Saga Expansion and Give-away! | Lord of the Rings LCG", "https://www.youtube.com/watch?v=RASbZfjQ1ss", "Oct 11, 2022")
+                .WithLabels("The Lord of the Rings Saga", "The Fellowship of the Ring", "Campaign", "Reprint", "Unboxing", "Contest");
+            AddLink("Single Core Series: Journey to Rhosgobel | Lord of the Rings LCG", "https://www.youtube.com/watch?v=Hi6_0ywziCc", "Oct 10, 2022")
+                .WithLabels("Journey to Rhosgobel", "Progression");
             AddLink("The Road Goes On | Lord of the Rings LCG", "https://www.youtube.com/watch?v=t3lVWKefadg", "Sep 28, 2022")
                 .WithLabels("News");
             AddLink("The Single Core Series: The Hunt for the Dreadnaught | Lord of the Rings LCG", "https://www.youtube.com/watch?v=G96PYXYEnW8", "Sep 26, 2022")
