@@ -174,6 +174,9 @@ namespace SetBuilder
                 case "Player Side Quest":
                     card = AddPlayerSideQuest(aCard.name, aCard.cost, aCard.sphere_name, aCard.quest_points);
                     break;
+                case "Contract":
+                    card = AddContract(aCard.name);
+                    break;
                 case "Campaign":
                     card = addCampaign(aCard.name, aCard.encounter_set, aCard.subtitle);
                     break;
@@ -210,6 +213,16 @@ namespace SetBuilder
                 case "Cave":
                     card = addCave(aCard.name, aCard.encounter_set);
                     break;
+                case "Region":
+                    card = addRegion(aCard.name, aCard.encounter_set);
+                    break;
+                default:
+                    break;
+            }
+
+            if (card == null)
+            {
+                return;
             }
 
             if (aCard.subtype_name == "Boon") {
@@ -218,11 +231,6 @@ namespace SetBuilder
                 card.WithBurden();
             }
 
-            if (card == null)
-            {
-                return;
-            }
-            
             if (aCard.type_name != "Quest" && !string.IsNullOrEmpty(aCard.card_side))
             {
                 if (aCard.card_side == "A")

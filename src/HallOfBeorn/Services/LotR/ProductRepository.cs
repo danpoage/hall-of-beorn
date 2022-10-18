@@ -41,7 +41,7 @@ namespace HallOfBeorn.Services.LotR
             productGroups.Add(ProductGroup.DoomMastered);
 
             productGroups.Add(ProductGroup.OathsOfTheRohirrim);
-            productGroups.Add(ProductGroup.TheScouringOfTheShire);
+            productGroups.Add(ProductGroup.StandAloneScenarios);
         }
 
         private readonly List<ProductGroup> productGroups = new List<ProductGroup>();

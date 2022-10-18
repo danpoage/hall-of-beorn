@@ -883,6 +883,25 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Runar_Steinn);
             all.Add(Artist.Onur_Bakar);
 
+            //The Nine Are Abroad
+            all.Add(Artist.Guglielmo_Simonini);
+            all.Add(Artist.JanPhilipp_Eckert);
+            all.Add(Artist.Pamela_Shanteau);
+            all.Add(Artist.David_Henderson);
+            all.Add(Artist.David_Rosenthal);
+            all.Add(Artist.Douglas_Chaffee);
+            all.Add(Artist.Funcom);
+            all.Add(Artist.Clark_Mitchell);
+            all.Add(Artist.Todd_White);
+            all.Add(Artist.Fawn_McNeill);
+            all.Add(Artist.Raoul_Vitale);
+            all.Add(Artist.Inessa_Khanenko);
+            all.Add(Artist.Kenneth_Sofia);
+            all.Add(Artist.Tara_Rueping);
+            all.Add(Artist.Ivan_Aivazovsky);
+            all.Add(Artist.In_The_Reads);
+            all.Add(Artist.Michael_Whelan);
+
             all.Add(Artist.None);
         }
 
@@ -1679,6 +1698,25 @@ namespace HallOfBeorn.Models
         public static Artist Jonny_Klein = new Artist { Name = "Jonny Klein", URL = "http://jonnyklein.deviantart.com" };
         public static Artist Bryce_Cook = new Artist { Name = "Bryce Cook", URL = "https://www.artstation.com/artist/hammins" };
         public static Artist Anders_Finer = new Artist { Name = "Anders Finer", URL = "http://fantasygallery.net/finer" };
+
+        //The Nine Are Abroad
+        public static Artist Guglielmo_Simonini = new Artist { Name = "Guglielmo Simonini", URL = "https://www.artstation.com/guglielmo" };
+        public static Artist JanPhilipp_Eckert = new Artist { Name = "Jan-Philipp Eckert", URL = "https://www.artstation.com/janphilippeckert" };
+        public static Artist Pamela_Shanteau = new Artist { Name = "Pamela Shanteau", URL = "https://painting.tube/pamela-shanteau-airbrush-artist/" };
+        public static Artist David_Henderson = new Artist { Name = "David Henderson", URL = "http://www.dfhendersonfineart.com/" };
+        public static Artist David_Rosenthal = new Artist { Name = "David Rosenthal", URL = "https://david-rosenthal-artist.tumblr.com/" };
+        public static Artist Douglas_Chaffee = new Artist { Name = "Douglas Chaffee", URL = "http://www.artnet.com/artists/doug-chaffee/" };
+        public static Artist Funcom = new Artist { Name = "Funcom", URL = "https://www.deviantart.com/tag/funcom" };
+        public static Artist Clark_Mitchell = new Artist { Name = "Clark Mitchell", URL = "https://www.cgmitchell.com/" };
+        public static Artist Todd_White = new Artist { Name = "Todd White", URL = "https://www.toddwhite.net/" };
+        public static Artist Fawn_McNeill = new Artist { Name = "Fawn McNeill", URL = "https://www.fawnsartstudio.com/" };
+        public static Artist Raoul_Vitale = new Artist { Name = "Raoul Vitale", URL = "https://www.raoulvitaleart.com/" };
+        public static Artist Inessa_Khanenko = new Artist { Name = "Inessa Khanenko", URL = "https://www.artstation.com/kidness" };
+        public static Artist Kenneth_Sofia = new Artist { Name = "Kenneth Sofia", URL = "https://www.artstation.com/kensofia42" };
+        public static Artist Tara_Rueping = new Artist { Name = "Tara Rueping", URL = "https://conceptartworld.com/artists/tara-rueping/" };
+        public static Artist Ivan_Aivazovsky = new Artist { Name = "Ivan Aivazovsky", URL = "https://www.wikiart.org/en/ivan-aivazovsky" };
+        public static Artist In_The_Reads = new Artist { Name = "In The Reads", URL = "https://inthereads.com/" };
+        public static Artist Michael_Whelan = new Artist { Name = "Michael Whelan", URL = "https://www.michaelwhelan.com/" };
 
         //Character-only Artists
         public static Artist Alex_Tooth = new Artist { Name = "Alex Tooth", URL = "http://www.alextooth.com" };

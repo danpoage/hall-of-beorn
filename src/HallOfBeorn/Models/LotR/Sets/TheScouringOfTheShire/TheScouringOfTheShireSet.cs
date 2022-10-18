@@ -5,7 +5,7 @@ using System.Web;
 
 namespace HallOfBeorn.Models.LotR.Sets.TheScouringOfTheShire
 {
-    public class TheScouringOfTheShireCardSet
+    public class TheScouringOfTheShireSet
         : CardSet
     {
         private const string setName = "The Scouring of the Shire";

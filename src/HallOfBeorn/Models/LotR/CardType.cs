@@ -25,6 +25,7 @@
         Treachery = 117,
         Encounter_Side_Quest = 118,
         Cave = 119,
+        Region = 120,
         Objective = 121,
         Objective_Hero = 122,
         Objective_Ally = 123,

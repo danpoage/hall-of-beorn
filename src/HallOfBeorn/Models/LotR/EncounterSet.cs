@@ -629,8 +629,10 @@ namespace HallOfBeorn.Models.LotR
             Add(MusteringOfTheRohirrim);
             Add(BloodInTheIsen);
 
-            //The Scouring of the Shire
+            //Stand Alon ALEP Scenarios
             Add(TheScouringOfTheShire);
+            Add(TheNineAreAbroad);
+            Add(Region);
         }
 
         private static List<EncounterSet> all = new List<EncounterSet>();
@@ -1068,5 +1070,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet BloodInTheIsen = new EncounterSet { Name = "Blood in the Isen", Set = "Blood in the Isen" };
 
         public static EncounterSet TheScouringOfTheShire = new EncounterSet { Name = "The Scouring of the Shire", Set = "The Scouring of the Shire" };
+        public static EncounterSet TheNineAreAbroad = new EncounterSet { Name = "The Nine are Abroad", Set = "The Nine are Abroad" };
+        public static EncounterSet Region = new EncounterSet { Name = "Region", Set = "The Nine are Abroad" };
     }
 }

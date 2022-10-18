@@ -362,6 +362,12 @@ namespace SetBuilder
                 case "Encounter Side Quest":
                     card.CardType = CardType.Encounter_Side_Quest;
                     break;
+                case "Cave":
+                    card.CardType = CardType.Cave;
+                    break;
+                case "Region":
+                    card.CardType = CardType.Region;
+                    break;
                 case "Objective":
                     card.CardType = CardType.Objective;
                     break;

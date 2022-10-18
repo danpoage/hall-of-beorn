@@ -9,7 +9,7 @@ namespace HallOfBeorn.Models.LotR.Scenarios.TheScouringOfTheShire
         {
             Title = "The Scouring of the Shire";
             ProductName = "The Scouring of the Shire";
-            GroupName = "The Scouring of the Shire";
+            GroupName = ScenarioGroup.StandAlongAlepScenarios;
             Number = 1;
 
             RulesUrl = "https://hallofbeorn-resources.s3.amazonaws.com/Images/LotR/Rules/ALEP08.pdf";

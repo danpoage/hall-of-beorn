@@ -269,6 +269,14 @@ namespace HallOfBeorn.Models.LotR
             return cave;
         }
 
+        public LotRCard addRegion(string title, string encounterSet)
+        {
+            var region = LotRCard.Region(title, encounterSet);
+            region.WithHorizontalArt();
+            addCard(region);
+            return region;
+        }
+
         public LotRCard addCave(string title, EncounterSet encounterSet)
         {
             return addCave(title, encounterSet.Name);
@@ -592,6 +600,7 @@ namespace HallOfBeorn.Models.LotR
             Add(BloodInTheIsen);
 
             Add(TheScouringOfTheShire);
+            Add(TheNineAreAbroad);
         }
 
         public static List<CardSet> All()
@@ -814,7 +823,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet MusteringOfTheRohirrim = new Sets.OathsOfTheRohirrim.MusteringOfTheRohirrimSet();
         public static CardSet BloodInTheIsen = Sets.OathsOfTheRohirrim.BloodInTheIsenSet.Create();
 
-        public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireCardSet();
+        public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireSet();
+        public static CardSet TheNineAreAbroad = new Sets.TheNineAreAbroad.TheNineAreAbroadSet();
 
         public static CardSet RevisedCore = new Sets.Core.RevisedCoreSet();
         public static CardSet DwarvesOfDurin = new Sets.StarterDeck.DwarvesOfDurinSet();

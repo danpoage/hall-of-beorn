@@ -296,6 +296,7 @@ namespace HallOfBeorn.Models.LotR
         public static Product BloodInTheIsen = new Products.Community.BloodInTheIsenProduct();
 
         public static Product TheScouringOfTheShire = new Products.Community.TheScouringOfTheShireProduct();
+        public static Product TheNineAreAbroad = new Products.Community.TheNineAreAbroadProduct();
         #endregion
     }
 }

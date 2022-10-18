@@ -42,6 +42,7 @@ namespace SetBuilder
         private const string addObjectiveLocationFormat  = "            addObjectiveLocation(\"{0}\", {1}, {2}, {3}, {4})";
         private const string addObjectiveHeroFormat      = "            addObjectiveHero(\"{0}\", {1}, {2}, {3}, {4}, {5})";
         private const string addCaveFormat               = "            addCave(\"{0}\", {1})";
+        private const string addRegionFormat             = "            addRegion(\"{0}\")";
         private const string withTraitsFormat                = "                .WithTraits({0})";
         private const string withKeywordsFormat              = "                .WithKeywords({0})";
         private const string withTextLineFormat              = "                .WithTextLine(\"{0}\")";
@@ -864,6 +865,18 @@ namespace SetBuilder
             return s.ToString();
         }
 
+        private static string addRegion(LotRCard region)
+        {
+            var s = new StringBuilder(string.Empty);
+            s.AppendFormat(addRegionFormat,
+                region.Title);
+            s.AppendLine();
+
+            s.Append(cardTextBox(region));
+
+            return s.ToString();
+        }
+
         private static void writeCardSet(CardSet cardSet)
         {
             Console.WriteLine(header(cardSet));
@@ -897,6 +910,7 @@ namespace SetBuilder
             { CardType.Ship_Enemy, shipEnemy => addShipEnemy(shipEnemy) },
             { CardType.Ship_Objective, shipObjective => addShipObjective(shipObjective) },
             { CardType.Cave, cave => addCave(cave) },
+            { CardType.Region, region => addRegion(region) },
             { CardType.Location, location => addLocation(location) },
             { CardType.Treachery, treachery => addTreachery(treachery) },
             { CardType.Encounter_Side_Quest, sideQuest => addEncounterSideQuest(sideQuest) },
@@ -942,7 +956,7 @@ namespace SetBuilder
             var setName = args[1];
             
             //var lang = "English";
-            //var setName = "Fire on the Eastemnet";
+            //var setName = "The Nine are Abroad";
 
             //Console.InputEncoding = Encoding.UTF8;
             Console.OutputEncoding = Encoding.UTF8;

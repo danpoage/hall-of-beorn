@@ -27,7 +27,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             ScenarioGroup.DoomMastered,
             ScenarioGroup.ChildrenOfEorl,
             ScenarioGroup.OathsOfTheRohirrim,
-            ScenarioGroup.TheScouringOfTheShire,
+            ScenarioGroup.StandAlongAlepScenarios,
         };
 
         public IEnumerable<ScenarioGroupViewModel> ScenarioStandardGroups()

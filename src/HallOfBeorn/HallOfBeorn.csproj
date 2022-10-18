@@ -412,7 +412,7 @@
     <Compile Include="Models\LotR\ProductGroups\AngmarAwakenedNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\DreamChaserNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\StarterDeckProductGroup.cs" />
-    <Compile Include="Models\LotR\ProductGroups\TheScouringTheShireProductGroup.cs" />
+    <Compile Include="Models\LotR\ProductGroups\AlepStandaloneProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\ShadowsOfMirkwoodNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\CustomScenarioKitProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\FellowshipDeckProductGroup.cs" />
@@ -439,6 +439,7 @@
     <Compile Include="Models\LotR\Products\Community\TheFallOfNargothrondProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheGapOfRohanProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheGlitteringCavesProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\TheNineAreAbroadProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheScouringOfTheShireProduct.cs" />
     <Compile Include="Models\LotR\Products\Core\RevisedCoreSetProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\AShadowInTheEastProduct.cs" />
@@ -533,6 +534,7 @@
     <Compile Include="Models\LotR\Scenarios\TheLordOfTheRings\MountDoomScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheLordOfTheRings\TheBlackGateOpensScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheLordOfTheRings\TheTowerOfCirithUngolScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheNineAreAbroad\TheNineAreAbroadScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\DesertCrossingScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\EscapeFromUmbarScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\Haradrim\RaceAcrossHaradScenario.cs" />
@@ -620,7 +622,8 @@
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheTreacheryOfRhudaurNightmare.cs" />
     <Compile Include="Models\LotR\Sets\AngmarAwakened\TheWastesOfEriadorNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLostRealm\TheWeatherHillsNightmareSet.cs" />
-    <Compile Include="Models\LotR\Sets\TheScouringOfTheShire\TheScouringOfTheShireCardSet.cs" />
+    <Compile Include="Models\LotR\Sets\TheNineAreAbroad\TheNineAreAbroadCardSet.cs" />
+    <Compile Include="Models\LotR\Sets\TheScouringOfTheShire\TheScouringOfTheShireSet.cs" />
     <Compile Include="Models\LotR\Sets\TheWildsOfRhovanion\TheWildsOfRhovanionSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\TheCityOfUlfastSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\ChallengeOfTheWainridersSet.cs" />

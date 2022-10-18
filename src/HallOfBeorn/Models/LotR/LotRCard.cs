@@ -670,6 +670,17 @@ namespace HallOfBeorn.Models.LotR
             };
         }
 
+        public static LotRCard Region(string title, string encounterSet)
+        {
+            return new LotRCard
+            {
+                CardType = CardType.Region,
+                Title = title,
+                Id = string.Empty,
+                EncounterSet = encounterSet
+            };
+        }
+
         public LotRCard WithAlternateSlug(string slug)
         {
             this.AlternateSlug = slug;
