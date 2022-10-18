@@ -19,6 +19,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Player", "Jugador" },
                 { "Hero", "Héroe" },
                 { "Ally", "Aliado" },
+                { "Cave", "Caverna" },
                 { "Character", "Personaje" },
                 { "Attachment", "Vinculada" },
                 { "Contract", "Contrato" },
@@ -337,11 +338,53 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "White Wall", "Muro Blanco" },
             });
 
+            //The Glittering Caves
+            SafeMap(all, new Dictionary<string, string> {
+                { "Alluring Paths", "Caminos Seductores" },
+                { "Cave Opening", "Pasaje Abierto" },
+                { "Crossroads", "Encrucijada" },
+                { "Dark Pit", "Pozo Oscuro" },
+                { "Dead End", "Cueva sin Salida" },
+                { "Echoes in the Deep", "Ecos en el Abismo" },
+                { "Forgotten Shade", "Sombra Olvidada" },
+                { "Fork", "Bifurcación" },
+                { "Guard the Entrance!", "¡Vigilen la Entrada!" },
+                { "Guarded Hall", "Salón Protegido" },
+                { "Harlond Lookout", "Vigía de Harlond" },
+                { "Helm Hammerhand", "Helm Mano de Hierro" },
+                { "Helm's Horn", "Cuerno de Helm" },
+                { "Jewelled Cavern", "Cueva Enjoyada" },
+                { "Killing With Fear", "Matar de Miedo" },
+                { "Lay of the Nauglamír", "Balada del Nauglamír" },
+                { "Legacy of Gondolin", "Legado de Gondolin" },
+                { "Locked Door", "Puerta Cerrada" },
+                { "Lurking Ghûl", "Ghûl Acechante" },
+                { "Onward Into Battle", "Denodado en la Batalla" },
+                { "Radiant Caverns", "Cavernas Radiantes" },
+                { "Relic of Nargothrond", "Reliquia de Nargothrond" },
+                { "Salvaged Supplies", "Suministros Recuperados" },
+                { "Search the Caves", "Registrar las Cavernas" },
+                { "Secret Passage", "Pasadizo Secreto" },
+                { "Small Stream", "Arroyo Pequeño" },
+                { "Stairwell", "Escalinata" },
+                { "The Horn's Discovery", "El Hallazgo del Cuerno" },
+                { "Tunnel", "Túnel" },
+                { "Twisting Paths", "Caminos Serpenteantes" },
+                { "Vast Cave", "Cueva Inmensa" },
+                { "Wandering Spirit", "Espíritu Errante" },
+                { "Wonders of Aglarond", "Maravillas de Aglarond" },
+            });
+
             return all;
         }
 
         protected override Dictionary<string, string> AddTraits()
         {
+            /*
+                
+                
+             */
+
             return new Dictionary<string, string> {
                 { "Archer.", "Arquero." },
                 { "Armor.", "Armadura." },
@@ -397,14 +440,20 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Silvan.", "Silvano." },
                 { "Skill.", "Habilidad." },
                 { "Snow.", "Nieve." },
+                { "Song.", "Canción." },
                 { "Spider.", "Araña." },
+                { "Spirit.", "Espíritu." },
                 { "Spy.", "Espía." },
                 { "Stair.", "Escalera." },
+                { "Stalking.", "Acechando." },
+                { "Stream.", "Arroyo." },
+                { "Summoned.", "Convocado." },
                 { "Suspicious.", "Sospechoso." },
                 
                 { "Traitor.", "Traidor." },
                 { "Trap.", "Trampa." },
 
+                { "Undead.", "Muerto viviente." },
                 { "Underground.", "Subterráneo." },
 
                 { "Village.", "Aldea." },
@@ -413,6 +462,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Weather.", "Tiempo atmosférico." },
                 { "Westfold.", "Folde Oeste." },
                 { "Woodman.", "Leñador." },
+                { "Wraith.", "Espectro." },
             };
         }
     }

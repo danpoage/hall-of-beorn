@@ -18,6 +18,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Player", "Joueur" },
                 { "Hero", "Héros" },
                 { "Ally", "Allié" },
+                { "Cave", "Grotte" },
                 { "Character", "Personnage" },
                 { "Attachment", "Attachement" },
                 { "Event", "Événement" },
@@ -402,6 +403,42 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "White Wall", "Mur Blanc" },
             });
 
+            //The Glittering Caves
+            SafeMap(all, new Dictionary<string, string> {
+                { "Alluring Paths", "Chemins Attirants" },
+                { "Cave Opening", "Ouverture" },
+                { "Crossroads", "Croisement" },
+                { "Dark Pit", "Puits Sombre" },
+                { "Dead End", "Cul-de-Sac" },
+                { "Echoes in the Deep", "Échos dans le Gouffre" },
+                { "Forgotten Shade", "Ombre Oubliée" },
+                { "Fork", "Intersection" },
+                { "Guard the Entrance!", "Gardez l'Entrée!" },
+                { "Guarded Hall", "Salle Gardée" },
+                { "Harlond Lookout", "Vigie de Harlond" },
+                { "Helm Hammerhand", "Helm Main-Marteau" },
+                { "Helm's Horn", "Cor de Helm" },
+                { "Jewelled Cavern", "Grotte des Gemmes" },
+                { "Killing With Fear", "Foudroyer de Peur" },
+                { "Lay of the Nauglamír", "Lai du Nauglamír" },
+                { "Legacy of Gondolin", "Héritage de Gondolin" },
+                { "Locked Door", "Porte Verrouillée" },
+                { "Lurking Ghûl", "Ghûl à l'Affût" },
+                { "Onward Into Battle", "Premier Au Combat" },
+                { "Radiant Caverns", "Cavernes Rayonnantes" },
+                { "Relic of Nargothrond", "Relique de Nargothrond" },
+                { "Salvaged Supplies", "Provisions Récupérées" },
+                { "Search the Caves", "Fouiller les Grottes" },
+                { "Secret Passage", "Passage Secret" },
+                { "Small Stream", "Petit Ruisseau" },
+                { "Stairwell", "Escalier" },
+                { "The Horn's Discovery", "La Découverte du Cor" },
+                { "Twisting Paths", "Chemins Tortueux" },
+                { "Vast Cave", "Grande Salle" },
+                { "Wandering Spirit", "Esprit Errant" },
+                { "Wonders of Aglarond", "Merveilles d'Aglarond" },
+            });
+
             //Scouring of the Shire
             SafeMap(all, new Dictionary<string,string> {
                 { "Against the Rules", "Contre les Règles" },
@@ -465,6 +502,7 @@ namespace HallOfBeorn.Services.LotR.Translation
 
                 { "Doom.", "Destin." },
                 { "Dunland.", "Pays de Dun." },
+                { "Dwarf.", "Nain." },
                 
                 { "Eagle.", "Aigle." },
 
@@ -497,19 +535,26 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Shire.", "Comté." },
                 { "Skill.", "Compétence." },
                 { "Snow.", "Neige." },
+                { "Song.", "Chant." },
+                { "Spirit.", "Esprit." },
                 { "Spy.", "Espion." },
                 { "Stair.", "Escalier." },
+                { "Stalking.", "Traqueur." },
+                { "Stream.", "Ruisseau." },
+                { "Summoned.", "Convoqué." },
                 { "Suspicious.", "Suspect." },
 
                 { "Traitor.", "Traître." },
                 { "Trap.", "Piège." },
 
+                { "Undead.", "Mort-vivant." },
                 { "Underground.", "Souterrain." },
 
                 { "Warrior.", "Guerrier." },
                 { "Weather.", "Climat." },
                 { "Westfold.", "Ouestfolde." },
                 { "Woodman.", "Homme des Bois." },
+                { "Wraith.", "Spectre." },
             };
         }
     }
