@@ -78,6 +78,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheNineAreAbroad
                 .WithInfo(13, 1, Artist.Anato_Finnstark);
             addObjective("Shadows of Terror", EncounterSet.TheNineAreAbroad)
                 .WithSlugSuffix("Abroad")
+                .WithSideA()
                 .WithTraits("Abroad.")
                 .WithTextLine("Nazgûl enemies are immune to player card effects and cannot be optionally engaged.")
                 .WithTextLine("Forced: The first time a Nazgûl enemy is revealed each round, the first player must trigger its shadow effect.")
@@ -86,6 +87,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheNineAreAbroad
                 .WithInfo(14, 1, Artist.Guglielmo_Simonini);
             addObjective("Shadows of Terror", EncounterSet.TheNineAreAbroad)
                 .WithSlugSuffix("Found")
+                .WithSideB()
                 .WithTraits("Found.")
                 .WithTextLine("Nazgûl enemies are immune to player card effects and cannot be optionally engaged. Nazgûl enemies on your current region are considered to be engaged with each player.")
                 .WithTextLine("Forced: After a Nazgûl enemy attacks, it triggers its own shadow effect.")
@@ -93,6 +95,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheNineAreAbroad
                 .WithInfo(14, 1, Artist.Guglielmo_Simonini);
             addObjectiveAlly("Dúnedain Tracker", EncounterSet.TheNineAreAbroad, 2, 1, 1, 3)
                 .WithSlugSuffix("Standard")
+                .WithSideA()
                 .WithTraits("Dúnedain.", "Scout.", "Standard.")
                 .WithTextLine("Cannot quest. If Dúnedain Tracker leaves play, remove it from the game.")
                 .WithTextLine("Planning Action: Exhaust Dúnedain Tracker to reveal the bottommost location in the encounter discard pile.")
@@ -100,6 +103,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheNineAreAbroad
                 .WithInfo(15, 1, Artist.JanPhilipp_Eckert);
             addObjectiveAlly("Dúnedain Tracker", EncounterSet.TheNineAreAbroad, 2, 1, 1, 3)
                 .WithSlugSuffix("Epic")
+                .WithSideB()
                 .WithTraits("Dúnedain.", "Scout.", "Epic.")
                 .WithTextLine("Cannot quest. If Dúnedain Tracker leaves play, remove it from the game.")
                 .WithTextLine("Planning Action: Exhaust Dúnedain Tracker to reveal the bottommost location in the encounter discard pile.")

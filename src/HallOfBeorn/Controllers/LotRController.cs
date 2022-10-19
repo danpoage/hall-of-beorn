@@ -196,7 +196,7 @@ namespace HallOfBeorn.Controllers
 
         public JsonResult Version()
         {
-            return Json(new { version = "2.11.22", timestamp = DateTime.UtcNow.ToString("u") }, JsonRequestBehavior.AllowGet);
+            return Json(new { version = "2.11.23", timestamp = DateTime.UtcNow.ToString("u") }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Search(SearchViewModel model)
