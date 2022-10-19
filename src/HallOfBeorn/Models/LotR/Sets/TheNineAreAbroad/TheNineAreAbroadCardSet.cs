@@ -77,6 +77,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheNineAreAbroad
                 .WithTextLine("Instead of its printed hit points, the Witch-king has 10 hit points for each group, plus 5 hit points for each player among all groups.")
                 .WithInfo(13, 1, Artist.Anato_Finnstark);
             addObjective("Shadows of Terror", EncounterSet.TheNineAreAbroad)
+                .WithSlugSuffix("Abroad")
                 .WithTraits("Abroad.")
                 .WithTextLine("Nazgûl enemies are immune to player card effects and cannot be optionally engaged.")
                 .WithTextLine("Forced: The first time a Nazgûl enemy is revealed each round, the first player must trigger its shadow effect.")
@@ -84,18 +85,21 @@ namespace HallOfBeorn.Models.LotR.Sets.TheNineAreAbroad
                 .WithFlavorLine("—Radagast, The Fellowship of the Ring")
                 .WithInfo(14, 1, Artist.Guglielmo_Simonini);
             addObjective("Shadows of Terror", EncounterSet.TheNineAreAbroad)
+                .WithSlugSuffix("Found")
                 .WithTraits("Found.")
                 .WithTextLine("Nazgûl enemies are immune to player card effects and cannot be optionally engaged. Nazgûl enemies on your current region are considered to be engaged with each player.")
                 .WithTextLine("Forced: After a Nazgûl enemy attacks, it triggers its own shadow effect.")
                 .WithTextLine("Forced: At the end of the round, each player triggers the Witch-king’s shadow effect.")
                 .WithInfo(14, 1, Artist.Guglielmo_Simonini);
             addObjectiveAlly("Dúnedain Tracker", EncounterSet.TheNineAreAbroad, 2, 1, 1, 3)
+                .WithSlugSuffix("Standard")
                 .WithTraits("Dúnedain.", "Scout.", "Standard.")
                 .WithTextLine("Cannot quest. If Dúnedain Tracker leaves play, remove it from the game.")
                 .WithTextLine("Planning Action: Exhaust Dúnedain Tracker to reveal the bottommost location in the encounter discard pile.")
                 .WithTextLine("Action: Discard Dúnedain Tracker to move 1 resource token from your current region to a neighboring region.")
                 .WithInfo(15, 1, Artist.JanPhilipp_Eckert);
             addObjectiveAlly("Dúnedain Tracker", EncounterSet.TheNineAreAbroad, 2, 1, 1, 3)
+                .WithSlugSuffix("Epic")
                 .WithTraits("Dúnedain.", "Scout.", "Epic.")
                 .WithTextLine("Cannot quest. If Dúnedain Tracker leaves play, remove it from the game.")
                 .WithTextLine("Planning Action: Exhaust Dúnedain Tracker to reveal the bottommost location in the encounter discard pile.")
