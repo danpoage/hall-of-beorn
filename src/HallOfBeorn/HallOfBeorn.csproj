@@ -562,7 +562,7 @@
     <Compile Include="Models\LotR\Sets\DoomMastered\TheBetrayalOfMimSet.cs" />
     <Compile Include="Models\LotR\Sets\DoomMastered\TheFallOfNargothrondSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\AStormOnCobasHavenNightmareSet.cs" />
-    <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TheCityOfCorsairsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TheDrownedRuinsNightmareSet.cs" />
@@ -1377,7 +1377,7 @@
     <Content Include="Images\willpower-small.png" />
     <Content Include="Scripts\arkhamAutocomplete1.js" />
     <Content Include="Scripts\arkhamCardSearch.js" />
-    <Content Include="Scripts\autocomplete-1.0.9.js" />
+    <Content Include="Scripts\autocomplete-1.0.10.js" />
     <Content Include="Scripts\cardDetails-1.0.1.js" />
     <Content Include="Scripts\cardSearch-1.0.5.js" />
     <Content Include="Scripts\cookie-1.0.1.js" />

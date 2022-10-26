@@ -776,7 +776,7 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheFateOfNumenorNightmare = new Sets.TheGreyHavens.TheFateOfNumenorNightmare();
         public static CardSet RaidOnTheGreyHavensNightmare = new Sets.TheGreyHavens.RaidOnTheGreyHavensNightmareSet();
 
-        public static CardSet FlightOfTheStormcallerNightmare = new Sets.DreamChaser.FlightOfTheStormcallerNightmare();
+        public static CardSet FlightOfTheStormcallerNightmare = new Sets.DreamChaser.FlightOfTheStormcallerNightmareSet();
         public static CardSet TheThingInTheDepthsNightmare = new Sets.DreamChaser.TheThingInTheDepthsNightmare();
         public static CardSet TempleOfTheDeceivedNightmare = new Sets.DreamChaser.TempleOfTheDeceivedNightmareSet();
         public static CardSet TheDrownedRuinsNightmare = new Sets.DreamChaser.TheDrownedRuinsNightmareSet();

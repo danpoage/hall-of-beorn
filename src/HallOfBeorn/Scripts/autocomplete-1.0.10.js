@@ -105,5 +105,5 @@ var autocompleteSourceAlep = [
     'Gaeronel', 'Harlond Lookout', 'Helm Hammerhand', 'Lay of Nauglamir', 'Legacy of Gondolin', 'Onward Into Battle', 'Relic of Nargothrond', 'Salvaged Supplies', 'Wandering Spirit',
     'Rowan', 'Osbera', 'Woodmen\'s Outpost', 'Lie of the Land', 'Hunting Dogs', 'Beorning Pony', 'Birna', 'Descendants of Beorn', 'Beorn\'s Welcome', 'Subdued', 'Without My Hat',
     'Gilraen', 'A Fair Exchange', 'Elessar', 'The Renewer', 'Elendilmir', 'Estel', 'Chieftain of the North', 'Grey Companion',
-    'Into the West'
+    'Into the West', 'At the End of All Things'
 ];
