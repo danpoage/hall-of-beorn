@@ -69,6 +69,7 @@ namespace HallOfBeorn.Models
 
         Song_of_Hope,
         Trucks_Thoughts,
+        Late_of_the_Rings,
 
         YouTube,
         RingsDB,

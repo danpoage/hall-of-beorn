@@ -12,6 +12,7 @@ using HallOfBeorn.Models.LotR.Community.DieMannerVonGondor;
 using HallOfBeorn.Models.LotR.Community.DorCuarthol;
 using HallOfBeorn.Models.LotR.Community.FlyingSolo;
 using HallOfBeorn.Models.LotR.Community.HallOfBeorn;
+using HallOfBeorn.Models.LotR.Community.LateOfTheRings;
 using HallOfBeorn.Models.LotR.Community.LotRDeckTestingGround;
 using HallOfBeorn.Models.LotR.Community.MasterOfLore;
 using HallOfBeorn.Models.LotR.Community.ReflectionInHennethAnnun;
@@ -45,6 +46,7 @@ namespace HallOfBeorn.Services.LotR.Community
             AddPodcast(new CardTalkPodcast());
             AddPodcast(new ThreeIsCompanyPodcast());
             AddPodcast(new TheCardGameCooperativePodcast());
+            AddPodcast(new LateOfTheRingsPodcast());
 
             AddBlog(new TalesFromTheCardsBlog());
             AddBlog(new HallOfBeornBlog());

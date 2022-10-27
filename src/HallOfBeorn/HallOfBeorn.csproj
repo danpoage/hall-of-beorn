@@ -376,6 +376,7 @@
     <Compile Include="Models\LotR\Community\DieMannerVonGondor\DieMannerVonGondorBlog.cs" />
     <Compile Include="Models\LotR\Community\DorCuarthol\DorCuartholBlog.cs" />
     <Compile Include="Models\LotR\Community\FlyingSolo\FlyingSoloChannel.cs" />
+    <Compile Include="Models\LotR\Community\LateOfTheRings\LateOfTheRingsPodcast.cs" />
     <Compile Include="Models\LotR\Community\LotRDeckTestingGround\LotRDeckTestingGroundBlog.cs" />
     <Compile Include="Models\LotR\Community\ReflectionInHennethAnnun\ReflectionInHennethAnnunBlog.cs" />
     <Compile Include="Models\LotR\Community\SongOfHope\SongOfHopeBlog.cs" />
