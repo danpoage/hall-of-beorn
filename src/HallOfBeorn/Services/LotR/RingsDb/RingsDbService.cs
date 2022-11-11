@@ -24,6 +24,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                 }
             }
 
+            initializeReprintMap();
             initializeHeroPopularity();
             initializeCardPopularity();
             initializeContractPopularity();
@@ -34,6 +35,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
 
         private readonly IRingsDbRepository repository;
         private readonly Dictionary<string, LotRCard> cardsBySlug = new Dictionary<string,LotRCard>();
+        private readonly Dictionary<string, LotRCard> reprintCardsBySlug = new Dictionary<string,LotRCard>();
         private readonly Dictionary<string, string> slugByCardId = new Dictionary<string, string>();
         private readonly Dictionary<string, byte> popularityByCardId = new Dictionary<string, byte>();
         private readonly Dictionary<string, uint> votesByCardId = new Dictionary<string, uint>();
@@ -126,6 +128,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             "98001", //A Perilous Voyage
             "300085", //The Last Alliance
             "500042", //Into the West
+            "501053", //At the End of All Things
         };
 
         private void addCardPopularity(string cardId, uint votes)
@@ -163,6 +166,118 @@ namespace HallOfBeorn.Services.LotR.RingsDb
 
             popularityByCardId[cardId] = popularity;
             votesByCardId[cardId] = votes;
+        }
+
+        private void initializeReprintMap()
+        {
+            //Two Player Limited Edition Starter
+            reprintCardsBySlug["Gandalf-1-TPLES"] = cardsBySlug["Gandalf-Core"];
+            reprintCardsBySlug["Gandalf-2-TPLES"] = cardsBySlug["Gandalf-Core"];
+
+            //Dwarves of Durin
+            reprintCardsBySlug["Dain-Ironfoot-DoD"] = cardsBySlug["Dain-Ironfoot-RtM"];
+            reprintCardsBySlug["Ori-DoD"] = cardsBySlug["Ori-THOHaUH"];
+            reprintCardsBySlug["Bifur-DoD"] = cardsBySlug["Bifur-KD"];
+            reprintCardsBySlug["Bombur-DoD"] = cardsBySlug["Bombur-RtR"];
+            reprintCardsBySlug["Dori-DoD"] = cardsBySlug["Dori-THOHaUH"];
+            reprintCardsBySlug["Erebor-Hammersmith-DoD"] = cardsBySlug["Erebor-Hammersmith-Core"];
+            reprintCardsBySlug["Erebor-Record-Keeper-DoD"] = cardsBySlug["Erebor-Record-Keeper-KD"];
+            reprintCardsBySlug["Ered-Luin-Miner-DoD"] = cardsBySlug["Ered-Luin-Miner-TotD"];
+            reprintCardsBySlug["Ered-Nimrais-Prospector-DoD"] = cardsBySlug["Ered-Nimrais-Prospector-TMV"];
+            reprintCardsBySlug["Gandalf-DoD"] = cardsBySlug["Gandalf-Core"];
+            reprintCardsBySlug["Gloin-DoD"] = cardsBySlug["Gloin-THOtD"];
+            reprintCardsBySlug["Longbeard-Elder-DoD"] = cardsBySlug["Longbeard-Elder-FoS"];
+            reprintCardsBySlug["Miner-of-the-Iron-Hills-DoD"] = cardsBySlug["Miner-of-the-Iron-Hills-Core"];
+            reprintCardsBySlug["Cram-DoD"] = cardsBySlug["Cram-THOHaUH"];
+            reprintCardsBySlug["Healing-Herbs-DoD"] = cardsBySlug["Healing-Herbs-FoS"];
+            reprintCardsBySlug["King-Under-the-Mountain-DoD"] = cardsBySlug["King-Under-the-Mountain-THOtD"];
+            reprintCardsBySlug["Legacy-of-Durin-DoD"] = cardsBySlug["Legacy-of-Durin-TWitW"];
+            reprintCardsBySlug["Narvi's-Belt-DoD"] = cardsBySlug["Narvi's-Belt-KD"];
+            reprintCardsBySlug["Thror's-Map-DoD"] = cardsBySlug["Thror's-Map-THOHaUH"];
+            reprintCardsBySlug["A-Very-Good-Tale-DoD"] = cardsBySlug["A-Very-Good-Tale-THOHaUH"];
+            reprintCardsBySlug["Hidden-Cache-DoD"] = cardsBySlug["Hidden-Cache-TMV"];
+            reprintCardsBySlug["Lure-of-Moria-DoD"] = cardsBySlug["Lure-of-Moria-RtR"];
+            reprintCardsBySlug["We-Are-Not-Idle-DoD"] = cardsBySlug["We-Are-Not-Idle-SaF"];
+            reprintCardsBySlug["Durin's-Song-DoD"] = cardsBySlug["Durin's-Song-KD"];
+            reprintCardsBySlug["Nori-DoD"] = cardsBySlug["Nori-THOHaUH"];
+            reprintCardsBySlug["Kili-DoD"] = cardsBySlug["Kili-THOHaUH"];
+            reprintCardsBySlug["Fili-DoD"] = cardsBySlug["Fili-THOHaUH"];
+            reprintCardsBySlug["Zigil-Miner-DoD"] = cardsBySlug["Zigil-Miner-KD"];
+            reprintCardsBySlug["Erebor-Guard-DoD"] = cardsBySlug["Erebor-Guard-TSoH"];
+            reprintCardsBySlug["Dwarf-Pipe-DoD"] = cardsBySlug["Dwarf-Pipe-TMk"];
+            reprintCardsBySlug["Magic-Ring-DoD"] = cardsBySlug["Magic-Ring-CoP"];
+
+            //Elves of Lorien
+            reprintCardsBySlug["Celeborn-EoL"] = cardsBySlug["Celeborn-TDT"];
+            reprintCardsBySlug["Galadriel-EoL"] = cardsBySlug["Galadriel-CS"];
+            reprintCardsBySlug["Haldir-of-Lorien-EoL"] = cardsBySlug["Haldir-of-Lorien-TiT"];
+            reprintCardsBySlug["Defender-of-the-Naith-EoL"] = cardsBySlug["Defender-of-the-Naith-TiT"];
+            reprintCardsBySlug["Galadhrim-Minstrel-EoL"] = cardsBySlug["Galadhrim-Minstrel-TDT"];
+            reprintCardsBySlug["Galadriel's-Handmaiden-EoL"] = cardsBySlug["Galadriel's-Handmaiden-CS"];
+            reprintCardsBySlug["Gandalf-EoL"] = cardsBySlug["Gandalf-Core"];
+            reprintCardsBySlug["Greenwood-Archer-EoL"] = cardsBySlug["Greenwood-Archer-TSoH"];
+            reprintCardsBySlug["Henamarth-Riversong-EoL"] = cardsBySlug["Henamarth-Riversong-Core"];
+            reprintCardsBySlug["Mirkwood-Runner-EoL"] = cardsBySlug["Mirkwood-Runner-RtM"];
+            reprintCardsBySlug["Naith-Guide-EoL"] = cardsBySlug["Naith-Guide-TDT"];
+            reprintCardsBySlug["Orophin-EoL"] = cardsBySlug["Orophin-CS"];
+            reprintCardsBySlug["Silvan-Refugee-EoL"] = cardsBySlug["Silvan-Refugee-TDF"];
+            reprintCardsBySlug["Silvan-Tracker-EoL"] = cardsBySlug["Silvan-Tracker-TDM"];
+            reprintCardsBySlug["Lembas-EoL"] = cardsBySlug["Lembas-TiT"];
+            reprintCardsBySlug["Nenya-EoL"] = cardsBySlug["Nenya-CS"];
+            reprintCardsBySlug["O-Lorien-EoL"] = cardsBySlug["O-Lorien-TiT"];
+            reprintCardsBySlug["Wingfoot-EoL"] = cardsBySlug["Wingfoot-NiE"];
+            reprintCardsBySlug["A-Test-of-Will-EoL"] = cardsBySlug["A-Test-of-the-Will-Core"];
+            reprintCardsBySlug["Daeron's-Runes-EoL"] = cardsBySlug["Daeron's-Runes-FoS"];
+            reprintCardsBySlug["Elrond's-Counsel-EoL"] = cardsBySlug["Elrond's-Counsel-TWitW"];
+            reprintCardsBySlug["Feigned-Voices-EoL"] = cardsBySlug["Feigned-Voices-TTT"];
+            reprintCardsBySlug["Host-of-Galadhrim-EoL"] = cardsBySlug["Host-of-the-Galadhrim-TCoU"];
+            reprintCardsBySlug["The-Tree-People-EoL"] = cardsBySlug["The-Tree-People-TDT"];
+            reprintCardsBySlug["Galadhon-Archer-EoL"] = cardsBySlug["Galadhon-Archer-NiE"];
+            reprintCardsBySlug["Rumil-EoL"] = cardsBySlug["Rumil-TTT"];
+            reprintCardsBySlug["Bow-of-the-Galadhrim-EoL"] = cardsBySlug["Bow-of-the-Galadhrim-NiE"];
+            reprintCardsBySlug["Hands-Upon-the-Bow-EoL"] = cardsBySlug["Hands-Upon-the-Bow-SaF"];
+            reprintCardsBySlug["Pursuing-the-Enemy-EoL"] = cardsBySlug["Pursuing-the-Enemy-TiT"];
+            reprintCardsBySlug["Vilya-EoL"] = cardsBySlug["Vilya-SaF"];
+            reprintCardsBySlug["Elrond-EoL"] = cardsBySlug["Elrond-SaF"];
+
+            //Defenders of Gondor
+            reprintCardsBySlug["Boromir-DoG"] = cardsBySlug["Boromir-HoN"];
+            reprintCardsBySlug["Prince-Imrahil-DoG"] = cardsBySlug["Prince-Imrahil-"];
+            reprintCardsBySlug["Mablung-DoG"] = cardsBySlug["Mablung-NiE"];
+            reprintCardsBySlug["Angbor-the-Fearless-DoG"] = cardsBySlug["Angbor-the-Fearless-"];
+            reprintCardsBySlug["Soldier-of-Gondor-DoG"] = cardsBySlug["Soldier-of-Gondor-"];
+            reprintCardsBySlug["Citadel-Custodian-DoG"] = cardsBySlug["Citadel-Custodian-HoN"];
+            reprintCardsBySlug["Defender-of-Rammas-DoG"] = cardsBySlug["Defender-of-Rammas-"];
+            reprintCardsBySlug["Pelargir-Ship-Captain-DoG"] = cardsBySlug["Pelargir-Ship-Captain-"];
+            reprintCardsBySlug["Errand-rider-DoG"] = cardsBySlug["Errand-rider"];
+            reprintCardsBySlug["Faramir-DoG"] = cardsBySlug["Faramir-Core"];
+            reprintCardsBySlug["Gandalf-DoG"] = cardsBySlug["Gandalf-Core"];
+            reprintCardsBySlug["Gondorian-Spearman-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["Envoy-of-Pelargir-DoG"] = cardsBySlug["Envoy-of-Pelargir-HoN"];
+            reprintCardsBySlug["Squire-of-the-Citadel-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["Captain-of-Gondor-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["Gondorian-Shield-DoG"] = cardsBySlug["Gondorian-Shield-TSF"];
+            reprintCardsBySlug["Heir-of-Mardil-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["Steward-of-Gondor-DoG"] = cardsBySlug["Steward-of-Gondor-Core"];
+            reprintCardsBySlug["Valiant-Sword-DoG"] = cardsBySlug["Valiant-Sword-"];
+            reprintCardsBySlug["Visionary-Leadership-DoG"] = cardsBySlug["Visionary-Leadership-TMV"];
+            reprintCardsBySlug["Behind-Strong-Walls-DoG"] = cardsBySlug["Behind-Strong-Walls-HoN"];
+            reprintCardsBySlug["Feint-DoG"] = cardsBySlug["Feint-Core"];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+            reprintCardsBySlug["-DoG"] = cardsBySlug[""];
+
+            //Riders of Rohan
+            reprintCardsBySlug["Gandalf-RoR"] = cardsBySlug["Gandalf-Core"];
         }
 
         private void initializeCardLinks()
@@ -13133,6 +13248,8 @@ namespace HallOfBeorn.Services.LotR.RingsDb
                     return 305;
                 case "TSotS":
                     return 500;
+                case "TNaA":
+                    return 501;
 
                 //TODO: Fix set mapping for re-releases
                 case "AAH":
@@ -13180,14 +13297,21 @@ namespace HallOfBeorn.Services.LotR.RingsDb
         {
             var normSlug = slug;
 
-            if (!cardsBySlug.ContainsKey(normSlug))
+            LotRCard card = null;
+            if (reprintCardsBySlug.ContainsKey(normSlug))
             {
-                return null;
+                card = reprintCardsBySlug[normSlug]
+            }
+            else 
+            {
+                if (!cardsBySlug.ContainsKey(normSlug))
+                {
+                    return null;
+                }
+                card = cardsBySlug[normSlug];
             }
 
-            var card = cardsBySlug[normSlug];
-
-            if (card.CardSet == null)
+            if (card == null || card.CardSet == null)
             {
                 return null;
             }
