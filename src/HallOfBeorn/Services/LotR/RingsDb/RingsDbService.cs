@@ -215,7 +215,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             reprintCardsBySlug["Many-pillared-Hall-TMoM-PRM"] = getCardBySlug("Many-pillared-Hall-TMoM");
             reprintCardsBySlug["Beregond-EfKD"] = getCardBySlug("Beregond-HoN");
             reprintCardsBySlug["Gandalf-EfKD"] = getCardBySlug("Gandalf-RD");
-            reprintCardsBySlug["Sam-Gamgee-EfKD"] = getCardBySlug("Sam-Gamgee-TRB");
+            reprintCardsBySlug["Sam-Gamgee-EfKD"] = getCardBySlug("Sam-Gamgee-TBR");
             reprintCardsBySlug["Elrond-EfKD"] = getCardBySlug("Elrond-SaF");
             reprintCardsBySlug["Arwen-Undomiel-EfKD"] = getCardBySlug("Arwen-Undomiel-TDR");
             reprintCardsBySlug["Search-for-an-Exit-A-Way-Up-EfKD-PRM"] = getCardBySlug("Search-for-an-Exit-A-Way-Up-EfKD-PRM");
