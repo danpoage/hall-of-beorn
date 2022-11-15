@@ -252,7 +252,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             reprintCardsBySlug["Grim-Resolve-TPLES"] = getCardBySlug("Grim-Resolve-Core");
             reprintCardsBySlug["Sneak-Attack-TPLES"] = getCardBySlug("Sneak-Attack-Core");
             reprintCardsBySlug["A-Test-of-Will-TPLES"] = getCardBySlug("A-Test-of-Will-Core");
-            reprintCardsBySlug["Ever-Vigilant-TPLES"] = getCardBySlug("Ever-Vigilan-Core");
+            reprintCardsBySlug["Ever-Vigilant-TPLES"] = getCardBySlug("Ever-Vigilant-Core");
             reprintCardsBySlug["Hasty-Stroke-TPLES"] = getCardBySlug("Hasty-Stroke-Core");
             reprintCardsBySlug["Desperate-Defense-TPLES"] = getCardBySlug("Desperate-Defense-TFotW");
             reprintCardsBySlug["Dwarven-Tomb-TPLES"] = getCardBySlug("Dwarven-Tomb-Core");
