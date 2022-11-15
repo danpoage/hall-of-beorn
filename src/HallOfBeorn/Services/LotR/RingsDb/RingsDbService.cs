@@ -328,7 +328,7 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             reprintCardsBySlug["Galadriel-EoL"] = getCardBySlug("Galadriel-CS");
             reprintCardsBySlug["Haldir-of-Lorien-EoL"] = getCardBySlug("Haldir-of-Lorien-TiT");
             reprintCardsBySlug["Defender-of-the-Naith-EoL"] = getCardBySlug("Defender-of-the-Naith-TiT");
-            reprintCardsBySlug["Galadhrim-Minstrel-EoL"] = getCardBySlug("Galadhrim-Minstrel-TDT");
+            reprintCardsBySlug["Galadhrim-Minstrel-EoL"] = getCardBySlug("Galadhrim-Minstrel-TiT");
             reprintCardsBySlug["Galadriel's-Handmaiden-EoL"] = getCardBySlug("Galadriel's-Handmaiden-CS");
             reprintCardsBySlug["Gandalf-EoL"] = getCardBySlug("Gandalf-Core");
             reprintCardsBySlug["Greenwood-Archer-EoL"] = getCardBySlug("Greenwood-Archer-TSoH");
@@ -342,11 +342,11 @@ namespace HallOfBeorn.Services.LotR.RingsDb
             reprintCardsBySlug["Nenya-EoL"] = getCardBySlug("Nenya-CS");
             reprintCardsBySlug["O-Lorien-EoL"] = getCardBySlug("O-Lorien-TiT");
             reprintCardsBySlug["Wingfoot-EoL"] = getCardBySlug("Wingfoot-NiE");
-            reprintCardsBySlug["A-Test-of-Will-EoL"] = getCardBySlug("A-Test-of-the-Will-Core");
+            reprintCardsBySlug["A-Test-of-Will-EoL"] = getCardBySlug("A-Test-of-Will-Core");
             reprintCardsBySlug["Daeron's-Runes-EoL"] = getCardBySlug("Daeron's-Runes-FoS");
             reprintCardsBySlug["Elrond's-Counsel-EoL"] = getCardBySlug("Elrond's-Counsel-TWitW");
             reprintCardsBySlug["Feigned-Voices-EoL"] = getCardBySlug("Feigned-Voices-TTT");
-            reprintCardsBySlug["Host-of-Galadhrim-EoL"] = getCardBySlug("Host-of-the-Galadhrim-TCoU");
+            reprintCardsBySlug["Host-of-Galadhrim-EoL"] = getCardBySlug("Host-of-Galadhrim-TCoU");
             reprintCardsBySlug["The-Tree-People-EoL"] = getCardBySlug("The-Tree-People-TDT");
             reprintCardsBySlug["Galadhon-Archer-EoL"] = getCardBySlug("Galadhon-Archer-NiE");
             reprintCardsBySlug["Rumil-EoL"] = getCardBySlug("Rumil-TTT");

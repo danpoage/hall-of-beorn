@@ -386,7 +386,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("The Passage of the Marshes", "Campaign", "Saga");
             AddLink("Card Talk Live The Hills of Emyn Muil", "https://www.youtube.com/watch?v=a1t4LLYhsLU", "Nov 25, 2020")
                 .WithLabels("The Hills of Emyn Muil");
-            AddLink("Card Talk Live: Bond of Hobbitship takes on Massing at Osgiliath", "https://www.youtube.com/watch?v=ZOhDldAniDE", "Nv 25, 2020")
+            AddLink("Card Talk Live: Bond of Hobbitship takes on Massing at Osgiliath", "https://www.youtube.com/watch?v=ZOhDldAniDE", "Nov 25, 2020")
                 .WithLabels("Bond of Friendship", "Hobbit", "Massing at Osgiliath");
             AddLink("Peace, and Thought", "https://www.youtube.com/watch?v=IEjsrrw8nkg", "Nov 24, 2020")
                 .WithLabels("Card Draw", "Readying");
@@ -761,7 +761,7 @@ namespace HallOfBeorn.Models.LotR.Community.CardTalk
                 .WithLabels("Silvan Bounce");
             AddLink("Galadhrim Weaver", "https://www.youtube.com/watch?v=3aDY1kK9jEQ", "Feb 15, 2019")
                 .WithLabels("Discard Pile Recursion", "Silvan Bounce");
-            AddLink("Lost in Mirkwood - Silvans", "", "")
+            AddLink("Lost in Mirkwood - Silvans", "https://www.youtube.com/watch?v=QeuTa2uvEXI", "Feb 14, 2019")
                 .WithLabels("Lost in the Mirkwood (quest)", "Celeborn (hero)", "Galadriel (spirit hero)", "Thranduil (hero)");
             AddLink("Galadhon Archer", "https://www.youtube.com/watch?v=NTmX5j8dEN0", "Feb 13, 2019")
                 .WithLabels("Ranged", "Silvan Bounce", "Direct Daamge");
