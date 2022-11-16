@@ -439,6 +439,45 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Wonders of Aglarond", "Merveilles d'Aglarond" },
             });
 
+            SafeMap(all, new Dictionary<string, string> {
+                { "Aldburg Provocateur", "Provocateur d'Aldburg" },
+                { "Assassin at Edoras", "Assassin à Edoras" },
+                { "Beorning Pony", "Poney Beornide" },
+                { "Beorn's Welcome", "L'Accueil de Beorn" },
+                { "Bitter Betrayal", "Trahison Amère" },
+                { "Coup", "Coup dans le Dos" },
+                { "Curuwyn The Whisperer", "Curuwyn La Chuchoteuse" },
+                { "Cutthroat's Strike", "Coupe-Gorge" },
+                { "Deeping-stream", "Rivière du Gouffre" },
+                { "Descendants of Beorn", "Descendants de Beorn" },
+                { "Devoted Determination", "Détermination Dévouée" },
+                { "Felberen Scion of Freca", "Felberen Rejeton de Freca" },
+                { "Halls of Ealdwulf", "Grande Salle d'Ealdwulf" },
+                { "Host of Rohan", "Ost du Rohan" },
+                { "Hunting Dogs", "Chiens de Chasse" },
+                { "Lie of the Land", "Connaissance du Terrain" },
+                { "Massing at the Isen", "Regroupement en Bord d'Isen" },
+                { "Oaths of the Rohirrim", "Serments des Rohirrim" },
+                { "Orator's Hall", "Salle d'Audience" },
+                { "Orc-host Remnant", "Ost des Orques en Déroute" },
+                { "Pernicious Plotter", "Comploteur Pernicieux" },
+                { "Plains of Strife", "Plaines du Conflit" },
+                { "Raven Clan Sharpshooter", "Archer du Clan du Corbeau" },
+                { "Raven Clan Warchief", "Chef de Guerre du Clan du Corbeau" },
+                { "Road to Ruin", "Courir à la Ruine" },
+                { "Scattered to the Winds", "Dispersés aux Vents" },
+                { "Seeking Support", "Chercher de l'Aide" },
+                { "Smeóhbrand Rogue of Orthanc", "Smeóhbrand Truand d'Orthanc" },
+                { "Sniveling Courtier", "Courtisan Médisant" },
+                { "Spiteful Hunter", "Chasseur Rancunier" },
+                { "Subdued", "Maîtrisé" },
+                { "The Far Bank", "L'Autre Rive" },
+                { "Traitor's Redoubt", "Redoute du Traître" },
+                { "Winter in Westemnet", "Hiver sur l'Ouestemnet" },
+                { "Without My Hat", "Sans Chapeau" },
+                { "Woodmen's Outpost", "Avant-Poste des Hommes des Bois" }
+            });
+
             //Scouring of the Shire
             SafeMap(all, new Dictionary<string,string> {
                 { "Against the Rules", "Contre les Règles" },
@@ -495,7 +534,9 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Armor.", "Armure." },
                 { "Artifact.", "Artéfact." },
                 
+                { "Battleground.", "Champ de Bataille." },
                 { "Beorning.", "Beornide." },
+                { "Boon.", "Avantage." },
 
                 { "Clue.", "Indice." },
                 { "Creature.", "Créature." },
@@ -521,10 +562,15 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Lake.", "Lac." },
                 { "Mount.", "Monture." },
                 { "Mountain.", "Montagne." },
+                { "Mustering.", "Rassemblement." },
+
                 { "Orc.", "Orque." },
+
                 { "Plains.", "Plaines." },
+                { "Pony.", "Poney." },
 
                 { "Ranger.", "Rôdeur." },
+                { "Raven Clan.", "Clan du Corbeau." },
                 { "River.", "Rivière." },
                 { "Road.", "Route." },
                 { "Ruffian.", "Bandit." },

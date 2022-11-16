@@ -375,23 +375,60 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Wonders of Aglarond", "Maravillas de Aglarond" },
             });
 
+            //Mustering of the Rohirrim
+            SafeMap(all, new Dictionary<string, string> {
+                { "Aldburg Provocateur", "Incitador de Aldburg" },
+                { "Assassin at Edoras", "Asesino en Edoras" },
+                { "Beorning Pony", "Póney Beórnida" },
+                { "Beorn's Welcome", "La Bienvenida de Beorn" },
+                { "Bitter Betrayal", "Traición Amarga" },
+                { "Coup", "Derrocamiento" },
+                { "Curuwyn The Whisperer", "Curuwyn La Susurradora" },
+                { "Cutthroat's Strike", "Ataque Despiadado" },
+                { "Deeping-stream", "Corriente del Bajo" },
+                { "Descendants of Beorn", "Descendientes de Beorn" },
+                { "Devoted Determination", "Determinación Devota" },
+                { "Felberen Scion of Freca", "Felberen Vástago de Freca" },
+                { "Halls of Ealdwulf", "Los Salones de Ealdwulf" },
+                { "Host of Rohan", "Hueste de Rohan" },
+                { "Hunting Dogs", "Perros de Caza" },
+                { "Lie of the Land", "Configuración del Territorio" },
+                { "Massing at the Isen", "Concentración en el Isen" },
+                { "Oaths of the Rohirrim", "Juramentos de los Rohirrim" },
+                { "Orator's Hall", "Salón de los Oradores" },
+                { "Orc-host Remnant", "Restos de la Hueste Orca" },
+                { "Pernicious Plotter", "Conspirador Pernicioso" },
+                { "Plains of Strife", "Llanuras en Conflicto" },
+                { "Raven Clan Sharpshooter", "Tirador del Clan del Cuervo" },
+                { "Raven Clan Warchief", "Caudillo del Clan del Cuervo" },
+                { "Road to Ruin", "Camino Hacia la Ruina" },
+                { "Scattered to the Winds", "Esparcidos a los Vientos" },
+                { "Seeking Support", "Buscando Apoyo" },
+                { "Smeóhbrand Rogue of Orthanc", "Smeóhbrand Rebelde de Orthanc" },
+                { "Sniveling Courtier", "Cortesano Quejumbroso" },
+                { "Spiteful Hunter", "Cazador Malévolo" },
+                { "Subdued", "Sometido" },
+                { "The Far Bank", "La Otra Orilla" },
+                { "Traitor's Redoubt", "Reducto de Traidores" },
+                { "Winter in Westemnet", "Invierno en el Oestemnet" },
+                { "Without My Hat", "Sin Mi Sombrero" },
+                { "Woodmen's Outpost", "Puesto de Leñadores" }
+            });
+
             return all;
         }
 
         protected override Dictionary<string, string> AddTraits()
         {
-            /*
-                
-                
-             */
-
             return new Dictionary<string, string> {
                 { "Archer.", "Arquero." },
                 { "Armor.", "Armadura." },
                 { "Artifact.", "Artefacto." },
                 { "Assassin.", "Asesino." },
 
+                { "Battleground.", "Campo de batalla." },
                 { "Beorning.", "Beórnida." },
+                { "Boon.", "Ayuda." },
                 { "Brigand.", "Bandido." },
 
                 { "Camp.", "Campamento." },
@@ -405,6 +442,8 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Dwarf.", "Enano." },
                 
                 { "Eagle.", "Águila." },
+
+                { "Fortification.", "Fortificación." },
 
                 { "Garrison.", "Guarnición." },
                 { "Gate.", "Puerta." },
@@ -420,14 +459,18 @@ namespace HallOfBeorn.Services.LotR.Translation
 
                 { "Lake.", "Lago." },
 
+                { "Massing.", "Concentración." },
                 { "Mount.", "Montura." },
                 { "Mountain.", "Montaña." },
+                { "Mustering.", "Acantonamiento." },
 
                 { "Orc.", "Orco." },
 
                 { "Plains.", "Llanuras." },
-
+                { "Pony.", "Póney." },
+                
                 { "Ranger.", "Montaraz." },
+                { "Raven Clan.", "Clan del Cuervo." },
                 { "River.", "Río." },
                 { "Road.", "Camino." },
                 { "Ruffian.", "Rufián." },
