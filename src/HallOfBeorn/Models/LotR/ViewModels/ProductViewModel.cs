@@ -122,7 +122,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             {
                 var ext = (_product.ImageType == ImageType.Jpg) ? "jpg" : "png";
 
-                return string.Format("/Images/Products/{0}.{1}", _product.Code, ext);
+                return string.Format("https://s3.amazonaws.com/hallofbeorn-resources/Images/Products/{0}.{1}", _product.Code, ext);
             }
         }
         public int ImageWidth
