@@ -431,13 +431,19 @@ namespace SetBuilder
                 card.HtmlTemplate2 = template2;
             }
 
-            var lines = parsed.Item1.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
-            foreach (var line in lines)
+            if (!string.IsNullOrEmpty(parsed.Item1))
             {
-                card.WithTextLine(ConvertHtmlToText(line));
+                var lines = parsed.Item1.Split(new string[] { "\r\n", "\n" }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var line in lines)
+                {
+                    card.WithTextLine(ConvertHtmlToText(line));
+                }
             }
 
-            card.Shadow = ConvertHtmlToText(shadow_text);
+            if (!string.IsNullOrEmpty(shadow_text))
+            {
+                card.Shadow = ConvertHtmlToText(shadow_text);
+            }
 
             if (!string.IsNullOrWhiteSpace(parsed.Item2))
             {

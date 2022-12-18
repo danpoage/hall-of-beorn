@@ -956,6 +956,7 @@ namespace SetBuilder
             var setName = args[1];
             
             //var lang = "English";
+            //var lang = "German";
             //var setName = "The Nine are Abroad";
 
             //Console.InputEncoding = Encoding.UTF8;
