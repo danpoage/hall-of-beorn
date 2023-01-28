@@ -27,6 +27,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Treachery", "Perfidia" },
                 { "Objective", "Obiettivo" },
                 { "Quest", "Ricerca" },
+                { "Region", "Regione" },
             };
         }
 
@@ -423,6 +424,50 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Wooden Shed", "Capanno di Legno" }
             });
 
+            //The Nine are Abroad
+            SafeMap(all, new Dictionary<string, string> {
+                { "Anfalas Pillager", "Razziatore dell'Anfalas" },
+                { "At the End of All Things", "Alla Fine di Ogni Cosa" },
+                { "Barrow-wight", "Spettro dei Tumuli" },
+                { "Birds of Ill Omen", "Uccelli del Malaugurio" },
+                { "Charter the Dream-chaser", "Il Viaggio dell'Inseguitrice di Sogni" },
+                { "Chief of the Nine", "Capitano dei Nove" },
+                { "Dúnedain Tracker", "Esploratore Dúnedain" },
+                { "Dunlending Warband", "Banda da Guerra Dunlandiana" },
+                { "Gladden Fields", "Campo Gaggiolo" },
+                { "Icebay of Forochel", "Baia Ghiacciata di Forochel" },
+                { "Johnny Goblin-fingers", "Johnny Dita-di-Goblin" },
+                { "Late for Tea", "In Ritardo per il Tè" },
+                { "Lost in Goblin Town", "Nella Città dei Goblin" },
+                { "Mirkwood", "Bosco Atro" },
+                { "Morgul Scout", "Scout di Morgul" },
+                { "Nameless Fear", "Paura Senza Nome" },
+                { "Old North-South Road", "Vecchia Strada Nord-Sud" },
+                { "Old Púkel Land", "Vecchia Contrada dei Púkel" },
+                { "Paths of the Dead", "Sentieri dei Morti" },
+                { "Pursuing Wargs", "Warg Inseguitori" },
+                { "Roaming Easterling", "Easterling Viandante" },
+                { "Search for the Nine", "In Cerca dei Nove" },
+                { "Shadows of Terror", "Ombre di Terrore" },
+                { "Shores of Belegaer", "Coste del Belegaer" },
+                { "South Downs Troll", "Troll delle Lande del Sud" },
+                { "The Anduin River", "Il Fiume Anduin" },
+                { "The Blue Mountains", "I Monti Azzurri" },
+                { "The Carrock", "La Carroccia" },
+                { "The Eighth Rider", "L'Ottavo Cavaliere" },
+                { "The Fifth Rider", "Il Quinto Cavaliere" },
+                { "The First Rider", "Il Primo Cavaliere" },
+                { "The Fourth Rider", "Il Quarto Cavaliere" },
+                { "The Nine are Abroad", "I Nove Sono in Movimento" },
+                { "The Ninth Rider", "Il Nono Cavaliere" },
+                { "The Outlands", "Le Terre Lontane" },
+                { "The Second Rider", "Il Secondo Cavaliere" },
+                { "The Seventh Rider", "Il Settimo Cavaliere" },
+                { "The Sixth Rider", "Il Sesto Cavaliere" },
+                { "The Third Rider", "Il Terzo Cavaliere" },
+                { "To Mordor We Will Send Them", "A Mordor Li Ricacceremo" },
+            });
+
             return all;
         }
 
@@ -430,49 +475,75 @@ namespace HallOfBeorn.Services.LotR.Translation
         {
             return new Dictionary<string, string>
             {
+                { "Abroad.", "In Movimento." },
                 { "Armor.", "Armatura." },
                 { "Artifact.", "Artefatto." },
                 { "Assassin.", "Assassino." },
+
                 { "Battleground.", "Campo di Battaglia." },
+                { "Black Speech.", "Linguaggio Nero." },
                 { "Boar Clan.", "Clan del Cinghiale." },
                 { "Boon.", "Beneficio." },
                 { "Bree.", "Brea." },
                 { "Brigand.", "Brigante." },
+
                 { "Camp.", "Campo." },
                 { "Clue.", "Indizio." },
+                { "Coastland.", "Costa." },
                 { "Condition.", "Condizione." },
+                { "Corsair.", "Corsaro." },
                 { "Creature.", "Creatura." },
+
                 { "Doom.", "Fato." },
                 { "Dwarf.", "Nano." },
+
                 { "Eagle.", "Aquila." },
+                { "Epic.", "Epico." },
+                
                 { "Fords.", "Guadi." },
                 { "Fortification.", "Fortificazione." },
+                { "Found.", "Scovati." },
+
                 { "Garrison.", "Guarnigione." },
                 { "Gate.", "Cancello." },
                 { "Gift.", "Dono." },
+
                 { "Healer.", "Guaritore." },
                 { "Hideout.", "Nascondiglio." },
                 { "Hill.", "Collina." },
                 { "Hills.", "Colline." },
+
                 { "Inferno.", "Incendio." },
                 { "Item.", "Oggetto." },
+
                 { "Lake.", "Lago." },
+
+                { "Marshland.", "Palude." },
                 { "Massing.", "Schieramento." },
                 { "Mount.", "Cavalcatura." },
                 { "Mountain.", "Montagna." },
                 { "Mustering.", "Adunata." },
+
                 { "Noble.", "Nobile." },
+
+                { "Ocean.", "Oceano." },
                 { "Orc.", "Orco." },
+                { "Outlands.", "Terre Lontane." },
+                
                 { "Plains.", "Pianure." },
+
+                { "Raider.", "Predone." },
                 { "Raven Clan.", "Clan del Corvo." },
                 { "River.", "Fiume." },
                 { "Riverland.", "Fiumi." },
                 { "Road.", "Strada." },
                 { "Ruffian.", "Furfante." },
+
                 { "Scout.", "Esploratore." },
                 { "Servant.", "Servitore." },
                 { "Shire.", "Contea." },
                 { "Shirriff.", "Guardacontea." },
+                { "Silvan.", "Silvano." },
                 { "Skill.", "Abilità." },
                 { "Snow.", "Neve." },
                 { "Song.", "Canzone." },
@@ -483,16 +554,21 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Stream.", "Torrente." },
                 { "Summoned.", "Evocato." },
                 { "Suspicious.", "Sospetto." },
+
                 { "Title.", "Titolo." },
                 { "Traitor.", "Traditore." },
                 { "Trap.", "Trappola." },
+
                 { "Undead.", "Non Morto." },
                 { "Underground.", "Sotterraneo." },
+
                 { "Village.", "Villaggio." },
+
                 { "Warrior.", "Guerriero." },
                 { "Weapon.", "Arma." },
                 { "Weather.", "Clima." },
                 { "Westfold.", "Ovestfalda." },
+                { "Wight.", "Fantasma." },
                 { "Wolf Clan.", "Clan del Lupo." },
                 { "Woodman.", "Guardaboschi." },
                 { "Wraith.", "Spettro." },

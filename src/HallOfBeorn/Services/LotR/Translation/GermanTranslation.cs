@@ -432,34 +432,85 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Wooden Shed", "Hölzerner Schuppen" }
             });
 
+            SafeMap(all, new Dictionary<string, string> {
+                { "Anfalas Pillager", "Plünderer aus Anfalas" },
+                { "At the End of All Things", "Am Ende aller Dinge" },
+                { "Barrow-wight", "Grabunhold" },
+                { "Birds of Ill Omen", "Unheilverheissende Vögel" },
+                { "Charter the Dream-chaser", "Leiht euch die Traumjäger" },
+                { "Chief of the Nine", "Herr der Neun" },
+                { "Dúnedain Tracker", "Fährtenleser der Dúnedain" },
+                { "Dunlending Warband", "Kriegstruppe der Dunländer" },
+                { "Gladden Fields", "Schwertelfelder" },
+                { "Icebay of Forochel", "Eisbucht von Forochel" },
+                { "Johnny Goblin-fingers", "Heini Orkfinger" },
+                { "Late for Tea", "Zu spät zum Tee" },
+                { "Lost in Goblin Town", "Verlaufen in Orkstadt" },
+                { "Mirkwood", "Düsterwald" },
+                { "Morgul Scout", "Morgul-Späher" },
+                { "Nameless Fear", "Namenloses Grauen" },
+                { "Old North-South Road", "Alte Nord-Süd-Strasse" },
+                { "Old Púkel Land", "Altes Púkelland" },
+                { "Paths of the Dead", "Pfade der Toten" },
+                { "Pursuing Wargs", "Verfolgende Warge" },
+                { "Roaming Easterling", "Wandernde Ostlinge" },
+                { "Search for the Nine", "Suche nach den Neun" },
+                { "Shadows of Terror", "Schatten des Schreckens" },
+                { "Shores of Belegaer", "Ufer des Belegaer" },
+                { "South Downs Troll", "Troll aus den Südhöhen" },
+                { "The Anduin River", "Der Fluss Anduin" },
+                { "The Blue Mountains", "Die Blauen Berge" },
+                { "The Carrock", "Der Carrock" },
+                { "The Eighth Rider", "Der achte Reiter" },
+                { "The Fifth Rider", "Der fünfte Reiter" },
+                { "The First Rider", "Der erste Reiter" },
+                { "The Fourth Rider", "Der vierte Reiter" },
+                { "The Nine are Abroad", "Die Neun sind unterwegs" },
+                { "The Ninth Rider", "Der neunte Reiter" },
+                { "The Outlands", "Die Aussenlehen" },
+                { "The Second Rider", "Der zweite Reiter" },
+                { "The Seventh Rider", "Der siebente Reiter" },
+                { "The Sixth Rider", "Der sechste Reiter" },
+                { "The Third Rider", "Der dritte Reiter" },
+                { "To Mordor We Will Send Them", "Nach Mordor wollen wir sie schicken" },
+            });
+
             return all;
         }
 
         protected override Dictionary<string, string> AddTraits()
         {
             return new Dictionary<string, string> {
+                { "Abroad.", "Unterwegs." },
                 { "Armor.", "Rüstung." },
                 { "Artifact.", "Gegenstand." },
                 { "Assassin.", "Attentäter." },
                 
                 { "Battleground.", "Schlachtfeld." },
                 { "Beorning.", "Beorninger." },
+                { "Black Speech.", "Schwarze Sprache." },
                 { "Boar Clan.", "Eber-Stamm." },
                 { "Boon.", "Gunst." },
                 { "Brigand.", "Gesetzloser." },
                 { "Camp.", "Lager." },
                 { "Clue.", "Hinweis." },
+                { "Coastland.", "Küste." },
                 { "Condition.", "Zustand." },
+                { "Corsair.", "Korsar." },
                 { "Creature.", "Kreatur." },
 
+                { "Dale.", "Thal." },
                 { "Doom.", "Verhängnis." },
                 { "Dúnedain.", "Waldläufer." },
                 { "Dwarf.", "Zwerg." },
 
                 { "Eagle.", "Adler." },
-
+                { "Easterling.", "Ostling." },
+                { "Epic.", "Episch." },
+                
                 { "Fords.", "Furten." },
                 { "Fortification.", "Befestigung." },
+                { "Found.", "Gefunden." },
                 
                 { "Garrison.", "Garnison." },
                 { "Gate.", "Tor." },
@@ -475,15 +526,22 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Item.", "Artefakt." },
                 
                 { "Lake.", "See." },
+
+                { "Marshland.", "Marschland." },
                 { "Massing.", "Versammlung." },
                 { "Mount.", "Reittier." },
                 { "Mountain.", "Berg." },
                 { "Mustering.", "Heerschau." },
+
                 { "Noble.", "Adlig." },
+
+                { "Ocean.", "Ozean." },
                 { "Orc.", "Ork." },
+                { "Outlands.", "Außenlehen." },
 
                 { "Plains.", "Ebene." },
 
+                { "Raider.", "Räuber." },
                 { "Ranger.", "Waldläufer." },
                 { "Raven Clan.", "Raben-Stamm." },
                 { "River.", "Fluss." },
@@ -496,6 +554,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Sharkey.", "Scharrer." },
                 { "Shire.", "Auenland." },
                 { "Shirriff.", "Landbüttel." },
+                { "Silvan.", "Waldelb." },
                 { "Skill.", "Fertigkeit." },
                 { "Snow.", "Schnee." },
                 { "Song.", "Lied." },
@@ -515,11 +574,14 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Underground.", "Unterirdisch." },
 
                 { "Village.", "Dorf." },
+
                 { "Warrior.", "Krieger." },
+                { "Wight.", "Unhold." },
                 { "Weapon.", "Waffe." },
                 { "Weather.", "Wetter." },
                 { "Wolf Clan.", "Wolf-Stamm." },
                 { "Woodman.", "Waldmensch." },
+                { "Wose.", "Wasa." },
                 { "Wraith.", "Böser Geist." },
             };
         }
