@@ -28,6 +28,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Treachery", "Traîtrise" },
                 { "Objective", "Objectif" },
                 { "Quest", "Quête" },
+                { "Region", "Région" },
             };
         }
 
@@ -525,20 +526,68 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Wooden Shed", "Cabane en Bois" },
             });
 
+            //The Nine Are Abroad
+            SafeMap(all, new Dictionary<string, string> {
+                { "Anfalas Pillager", "Pillard de l'Anfalas" },
+                { "At the End of All Things", "À la Fin de Toutes Choses" },
+                { "Barrow-wight", "Être des Galgals" },
+                { "Birds of Ill Omen", "Oiseaux de Mauvais Augure" },
+                { "Charter the Dream-chaser", "Affréter le Chasse-Rêve" },
+                { "Chief of the Nine", "Chef des Neuf" },
+                { "Dúnedain Tracker", "Traqueur Dúnedain" },
+                { "Dunlending Warband", "Bande Dunlending" },
+                { "Gladden Fields", "Champs d'Iris" },
+                { "Icebay of Forochel", "Baie Glacée de Forochel" },
+                { "Johnny Goblin-fingers", "Johnny Doigts-de-Gobelin" },
+                { "Late for Tea", "En Retard pour le Thé" },
+                { "Lost in Goblin Town", "Perdu dans Gobelinville" },
+                { "Mirkwood", "La Forêt Noire" },
+                { "Morgul Scout", "Éclaireur de Morgul" },
+                { "Nameless Fear", "Peur Sans Nom" },
+                { "Old North-South Road", "Vieille Route Nord-Sud" },
+                { "Old Púkel Land", "Vieux Pays Biscornu" },
+                { "Paths of the Dead", "Chemins des Morts" },
+                { "Pursuing Wargs", "Wargs Pourchassant" },
+                { "Roaming Easterling", "Oriental Errant" },
+                { "Search for the Nine", "À la recherche des Neuf" },
+                { "Shadows of Terror", "Ombres de Terreur" },
+                { "Shores of Belegaer", "Rivages de la Belegaer" },
+                { "South Downs Troll", "Troll des Hauts du Sud" },
+                { "The Anduin River", "Le Fleuve Anduin" },
+                { "The Blue Mountains", "Les Montagnes Bleues" },
+                { "The Carrock", "Le Carrock" },
+                { "The Eighth Rider", "Le Huitième Cavalier" },
+                { "The Fifth Rider", "Le Cinquième Cavalier" },
+                { "The First Rider", "Le Premier Cavalier" },
+                { "The Fourth Rider", "Le Quatrième Cavalier" },
+                { "The Nine are Abroad", "Les Neuf sont Sortis" },
+                { "The Ninth Rider", "Le Neuvième Cavalier" },
+                { "The Outlands", "Les Terres Extérieures" },
+                { "The Second Rider", "Le Deuxième Cavalier" },
+                { "The Seventh Rider", "Le Septième Cavalier" },
+                { "The Sixth Rider", "Le Sixième Cavalier" },
+                { "The Third Rider", "Le Troisième Cavalier" },
+                { "To Mordor We Will Send Them", "En Mordor Nous les Enverrons" },
+            });
+
             return all;
         }
 
         protected override Dictionary<string, string> AddTraits()
         {
             return new Dictionary<string, string> {
+                { "Abroad.", "Sortis." },
                 { "Armor.", "Armure." },
                 { "Artifact.", "Artéfact." },
                 
                 { "Battleground.", "Champ de Bataille." },
                 { "Beorning.", "Beornide." },
+                { "Black Speech.", "Noir Parler." },
                 { "Boon.", "Avantage." },
 
                 { "Clue.", "Indice." },
+                { "Coastland.", "Littoral." },
+                { "Corsair.", "Corsaire." },
                 { "Creature.", "Créature." },
 
                 { "Doom.", "Destin." },
@@ -546,6 +595,10 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Dwarf.", "Nain." },
                 
                 { "Eagle.", "Aigle." },
+                { "Easterling.", "Oriental." },
+                { "Epic.", "Épique." },
+
+                { "Found.", "Découverts." },
 
                 { "Garrison.", "Garnison." },
                 { "Gate.", "Porte." },
@@ -560,15 +613,20 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Item.", "Objet." },
 
                 { "Lake.", "Lac." },
+
+                { "Marshland.", "Marécage." },
                 { "Mount.", "Monture." },
                 { "Mountain.", "Montagne." },
                 { "Mustering.", "Rassemblement." },
 
+                { "Ocean.", "Océan." },
                 { "Orc.", "Orque." },
+                { "Outlands.", "Terres Extérieures." },
 
                 { "Plains.", "Plaines." },
                 { "Pony.", "Poney." },
 
+                { "Raider.", "Pillard." },
                 { "Ranger.", "Rôdeur." },
                 { "Raven Clan.", "Clan du Corbeau." },
                 { "River.", "Rivière." },
@@ -579,6 +637,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Servant.", "Serviteur." },
                 { "Sharkey.", "Sharcoux." },
                 { "Shire.", "Comté." },
+                { "Silvan.", "Sylvain." },
                 { "Skill.", "Compétence." },
                 { "Snow.", "Neige." },
                 { "Song.", "Chant." },
@@ -599,6 +658,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Warrior.", "Guerrier." },
                 { "Weather.", "Climat." },
                 { "Westfold.", "Ouestfolde." },
+                { "Wight.", "Être." },
                 { "Woodman.", "Homme des Bois." },
                 { "Wraith.", "Spectre." },
             };
