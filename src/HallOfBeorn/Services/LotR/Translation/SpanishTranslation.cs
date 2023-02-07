@@ -228,52 +228,6 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Young Tom", "Joven Tom" }
             });
 
-            //The Scouring of the Shire
-            SafeMap(all, new Dictionary<string,string> {
-                { "Against the Rules", "Contra Las Reglas" },
-                { "Ambush Sharkey's Men", "Emboscar a los Hombres de Zarquino" },
-                { "Awake! Fire, Foes! Awake!", "¡Despertad! ¡Fuego! ¡Enemigos! ¡Despertad!" },
-                { "Brandywine Gate", "Puerta del Brandivino" },
-                { "Brick Building", "Construcción de Ladrillos" },
-                { "Bright Mail", "Cota de Malla Brillante" },
-                { "Curse Upon the Shire", "Maldición Sobre la Comarca" },
-                { "East Road", "Camino del Este" },
-                { "Escorted “Prisoners”", "«Prisioneros» Bajo Escolta" },
-                { "Feather-capped Shirriff", "Oficial con Sombrero Emplumado" },
-                { "Find the Gaffer", "Encontrar al Tío" },
-                { "Frodo Baggins", "Frodo Bolsón" },
-                { "Gang of Ruffians", "Pandilla de Rufianes" },
-                { "Gríma's Choice", "La Decisión de Gríma" },
-                { "Heightened Stature", "Estatura Aumentada" },
-                { "Hidden Blade", "Puñal Escondido" },
-                { "Highway Robber", "Asaltante de Caminos" },
-                { "Hobbiton Road", "Camino de Hobbiton" },
-                { "Into the West", "Rumbo al Oeste" },
-                { "Many Partings", "Numerosas Separaciones" },
-                { "Muster the Tooks", "Reunir a los Tuk" },
-                { "Once Beloved Place", "Lugar Antes Tan Querido" },
-                { "One Ill Turn", "Un Acto Vil" },
-                { "Raise the Shire", "Sublevar a la Comarca" },
-                { "Rouse the Cottons", "Reclutar a los Coto" },
-                { "Roused Hobbits", "Hobbits Incitados" },
-                { "Scatha's Horn", "Cuerno de Scatha" },
-                { "Set up Barriers", "Levantar Barricadas" },
-                { "Sharkey's Men", "Hombres de Zarquino" },
-                { "Shirriff House", "Casa de los Oficiales" },
-                { "Star-like Gem", "Gema Como Una Estrella" },
-                { "Take Him, Lads!", "¡Prendedlo, Muchachos!" },
-                { "The Battle of Bywater", "La Batalla de Delagua" },
-                { "The Lockholes", "Celdas Agujeros" },
-                { "The Scouring of the Shire", "El Saneamiento de la Comarca" },
-                { "The Very Last Stroke", "El Golpe Definitivo" },
-                { "Thieving Ruffian", "Rufián Bandido" },
-                { "Three-Farthing Stone", "Piedra de las Tres Cuadernas" },
-                { "To the Road Again, Worm!", "¡A los Caminos, Serpiente!" },
-                { "Voice of Saruman", "La Voz de Saruman" },
-                { "Watch the East Road", "Vigilar el Camino del Este" },
-                { "Wooden Shed", "Cobertizo de Madera" }
-            });
-
             //Fire on the Eastemnet
             SafeMap(all, new Dictionary<string,string> {
                 { "Box of Earth", "Caja de Tierra" },
@@ -416,6 +370,78 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Woodmen's Outpost", "Puesto de Leñadores" }
             });
 
+            //Blood in the Isen
+            SafeMap(all, new Dictionary<string, string> {
+                { "A Fair Exchange", "Un Intercambio Justo" },
+                { "Chaos and Confusion", "Caos y Confusión" },
+                { "Chieftain of the North", "Jefe del Norte" },
+                { "Contested Battleground", "Campo de Batalla Disputado" },
+                { "Coordinated Assault", "Asalto Coordinado" },
+                { "Crossing the Fords", "Cruzando los Vados" },
+                { "Defensive Outcrop", "Afloramiento Defensivo" },
+                { "Dunland Axe-hand", "Guerrero con Hacha Dunlendino" },
+                { "Fleet-footed Dunlending", "Dunlendino de Pies Ligeros" },
+                { "Grey Companion", "Compañero Gris" },
+                { "Heavy Losses", "Grandes Pérdidas" },
+                { "Hasty Pursuit", "Persecución Apresurada" },
+                { "Narrow Crossing", "Cruce Estrecho" },
+                { "North-South Road", "Camino Norte-Sur" },
+                { "Open Rebellion", "Rebelión Abierta" },
+                { "Rohan Renegade", "Renegado de Rohan" },
+                { "Spurned Hillman", "Montañés Desdeñado" },
+                { "The Battle is Joined", "Unirse a la Batalla" },
+                { "The Flight of Ealdwulf", "La Huida de Ealdwulf" },
+                { "The Renewer", "El Restaurador" },
+                { "West Bank", "Margen Occidental" },
+            });
+
+            //The Scouring of the Shire
+            SafeMap(all, new Dictionary<string,string> {
+                { "Against the Rules", "Contra Las Reglas" },
+                { "Ambush Sharkey's Men", "Emboscar a los Hombres de Zarquino" },
+                { "Awake! Fire, Foes! Awake!", "¡Despertad! ¡Fuego! ¡Enemigos! ¡Despertad!" },
+                { "Brandywine Gate", "Puerta del Brandivino" },
+                { "Brick Building", "Construcción de Ladrillos" },
+                { "Bright Mail", "Cota de Malla Brillante" },
+                { "Curse Upon the Shire", "Maldición Sobre la Comarca" },
+                { "East Road", "Camino del Este" },
+                { "Escorted “Prisoners”", "«Prisioneros» Bajo Escolta" },
+                { "Feather-capped Shirriff", "Oficial con Sombrero Emplumado" },
+                { "Find the Gaffer", "Encontrar al Tío" },
+                { "Frodo Baggins", "Frodo Bolsón" },
+                { "Gang of Ruffians", "Pandilla de Rufianes" },
+                { "Gríma's Choice", "La Decisión de Gríma" },
+                { "Heightened Stature", "Estatura Aumentada" },
+                { "Hidden Blade", "Puñal Escondido" },
+                { "Highway Robber", "Asaltante de Caminos" },
+                { "Hobbiton Road", "Camino de Hobbiton" },
+                { "Into the West", "Rumbo al Oeste" },
+                { "Many Partings", "Numerosas Separaciones" },
+                { "Muster the Tooks", "Reunir a los Tuk" },
+                { "Once Beloved Place", "Lugar Antes Tan Querido" },
+                { "One Ill Turn", "Un Acto Vil" },
+                { "Raise the Shire", "Sublevar a la Comarca" },
+                { "Rouse the Cottons", "Reclutar a los Coto" },
+                { "Roused Hobbits", "Hobbits Incitados" },
+                { "Scatha's Horn", "Cuerno de Scatha" },
+                { "Set up Barriers", "Levantar Barricadas" },
+                { "Sharkey's Men", "Hombres de Zarquino" },
+                { "Shirriff House", "Casa de los Oficiales" },
+                { "Star-like Gem", "Gema Como Una Estrella" },
+                { "Take Him, Lads!", "¡Prendedlo, Muchachos!" },
+                { "The Battle of Bywater", "La Batalla de Delagua" },
+                { "The Lockholes", "Celdas Agujeros" },
+                { "The Scouring of the Shire", "El Saneamiento de la Comarca" },
+                { "The Very Last Stroke", "El Golpe Definitivo" },
+                { "Thieving Ruffian", "Rufián Bandido" },
+                { "Three-Farthing Stone", "Piedra de las Tres Cuadernas" },
+                { "To the Road Again, Worm!", "¡A los Caminos, Serpiente!" },
+                { "Voice of Saruman", "La Voz de Saruman" },
+                { "Watch the East Road", "Vigilar el Camino del Este" },
+                { "Wooden Shed", "Cobertizo de Madera" }
+            });
+
+            //The Nine Are Abroad
             SafeMap(all, new Dictionary<string, string> {
                 { "Anfalas Pillager", "Saqueador de Anfalas" },
                 { "At the End of All Things", "Al Final de Todas las Cosas" },
@@ -464,44 +490,6 @@ namespace HallOfBeorn.Services.LotR.Translation
 
         protected override Dictionary<string, string> AddTraits()
         {
-
-            /*
-             * { "Abroad.", "En movimiento." },
-                { "Beorning.", "Beórnida." },
-                { "Black Speech.", "Lengua Negra." },
-                { "Brigand.", "Bandido." },
-                { "Coastland.", "Costa." },
-                { "Corsair.", "Corsario." },
-                { "Creature.", "Criatura." },
-                { "Dale.", "Valle." },
-                { "Dunland.", "Tierras Brunas." },
-                { "Dwarf.", "Enano." },
-                { "Eagle.", "Águila." },
-                { "Easterling.", "Oriental." },
-                { "Epic.", "Épico." },
-                { "Found.", "Localizados." },
-                { "Marshland.", "Terreno pantanoso." },
-                { "Mordor.", "Orco." },
-                { "Mountain.", "Montaña." },
-                { "Ocean.", "Océano." },
-                { "Orc.", "Mordor." },
-                { "Outlands.", "Tierras Lejanas." },
-                { "Plains.", "Llanura." },
-                { "Raider.", "Incursor." },
-                { "River.", "Río." },
-                { "Road.", "Camino." },
-                { "Scout.", "Explorador." },
-                { "Silvan.", "Silvano." },
-                { "Standard.", "Estándar." },
-                { "Undead.", "Muerto viviente." },
-                { "Underground.", "Subterráneo." },
-                { "Warg.", "Huargo." },
-                { "Warrior.", "Guerrero." },
-                { "Wight.", "Tumulario." },
-                { "Woodman.", "Leñador." },
-
-             */
-
             return new Dictionary<string, string> {
                 { "Abroad.", "En movimiento." },
                 { "Archer.", "Arquero." },
@@ -512,6 +500,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Battleground.", "Campo de batalla." },
                 { "Beorning.", "Beórnida." },
                 { "Black Speech.", "Lengua Negra." },
+                { "Boar Clan.", "Clan del Jabalí." },
                 { "Boon.", "Ayuda." },
                 { "Brigand.", "Bandido." },
 
@@ -532,6 +521,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Easterling.", "Oriental." },
                 { "Epic.", "Épico." },
 
+                { "Fords.", "Vados." },
                 { "Fortification.", "Fortificación." },
                 { "Found.", "Localizados." },
                 
@@ -566,6 +556,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Ranger.", "Montaraz." },
                 { "Raven Clan.", "Clan del Cuervo." },
                 { "River.", "Río." },
+                { "Riverland.", "Tierra de ríos." },
                 { "Road.", "Camino." },
                 { "Ruffian.", "Rufián." },
                 
@@ -588,6 +579,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Summoned.", "Convocado." },
                 { "Suspicious.", "Sospechoso." },
                 
+                { "Title.", "Título." },
                 { "Traitor.", "Traidor." },
                 { "Trap.", "Trampa." },
 
@@ -598,9 +590,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 
                 { "Warg.", "Huargo." },
                 { "Warrior.", "Guerrero." },
+                { "Weapon.", "Arma." },
                 { "Weather.", "Tiempo atmosférico." },
                 { "Westfold.", "Folde Oeste." },
                 { "Wight.", "Tumulario." },
+                { "Wolf Clan.", "Clan del Lobo." },
                 { "Woodman.", "Leñador." },
                 { "Wraith.", "Espectro." },
             };

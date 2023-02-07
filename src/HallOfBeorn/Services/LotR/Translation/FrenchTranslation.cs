@@ -440,6 +440,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Wonders of Aglarond", "Merveilles d'Aglarond" },
             });
 
+            //Mustering of the Rohirrim
             SafeMap(all, new Dictionary<string, string> {
                 { "Aldburg Provocateur", "Provocateur d'Aldburg" },
                 { "Assassin at Edoras", "Assassin à Edoras" },
@@ -454,6 +455,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Devoted Determination", "Détermination Dévouée" },
                 { "Felberen Scion of Freca", "Felberen Rejeton de Freca" },
                 { "Halls of Ealdwulf", "Grande Salle d'Ealdwulf" },
+                { "Hasty Pursuit", "Poursuite Hâtive" },
                 { "Host of Rohan", "Ost du Rohan" },
                 { "Hunting Dogs", "Chiens de Chasse" },
                 { "Lie of the Land", "Connaissance du Terrain" },
@@ -477,6 +479,30 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Winter in Westemnet", "Hiver sur l'Ouestemnet" },
                 { "Without My Hat", "Sans Chapeau" },
                 { "Woodmen's Outpost", "Avant-Poste des Hommes des Bois" }
+            });
+
+            //Blood in the Isen
+            SafeMap(all, new Dictionary<string, string> {
+                { "A Fair Exchange", "Un Échange Équitable" },
+                { "Chaos and Confusion", "Chaos et Confusion" },
+                { "Chieftain of the North", "Chef des Rôdeurs du Nord" },
+                { "Contested Battleground", "Champ de Bataille Disputé" },
+                { "Coordinated Assault", "Assaut Coordonné" },
+                { "Crossing the Fords", "Traversée des Gués" },
+                { "Defensive Outcrop", "Affleurement Défensif" },
+                { "Dunland Axe-hand", "Dunlending à la Hache" },
+                { "Fleet-footed Dunlending", "Dunlending Agile" },
+                { "Grey Companion", "Compagnon Gris" },
+                { "Heavy Losses", "Lourdes Pertes" },
+                { "Narrow Crossing", "Passage Étroit" },
+                { "North-South Road", "Route Nord-Sud" },
+                { "Open Rebellion", "Rébellion Ouverte" },
+                { "Rohan Renegade", "Parjure Rohirrim" },
+                { "Spurned Hillman", "Homme des Collines Expulsé" },
+                { "The Battle is Joined", "La Bataille Commence" },
+                { "The Flight of Ealdwulf", "La Fuite d'Ealdwulf" },
+                { "The Renewer", "Le Régénérateur" },
+                { "West Bank", "Rive Ouest" },
             });
 
             //Scouring of the Shire
@@ -583,6 +609,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Battleground.", "Champ de Bataille." },
                 { "Beorning.", "Beornide." },
                 { "Black Speech.", "Noir Parler." },
+                { "Boar Clan.", "Clan du Sanglier." },
                 { "Boon.", "Avantage." },
 
                 { "Clue.", "Indice." },
@@ -598,6 +625,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Easterling.", "Oriental." },
                 { "Epic.", "Épique." },
 
+                { "Fords.", "Gués." },
                 { "Found.", "Découverts." },
 
                 { "Garrison.", "Garnison." },
@@ -630,6 +658,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Ranger.", "Rôdeur." },
                 { "Raven Clan.", "Clan du Corbeau." },
                 { "River.", "Rivière." },
+                { "Riverland.", "Fleuve." },
                 { "Road.", "Route." },
                 { "Ruffian.", "Bandit." },
                 
@@ -649,6 +678,7 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Summoned.", "Convoqué." },
                 { "Suspicious.", "Suspect." },
 
+                { "Title.", "Titre." },
                 { "Traitor.", "Traître." },
                 { "Trap.", "Piège." },
 
@@ -656,9 +686,11 @@ namespace HallOfBeorn.Services.LotR.Translation
                 { "Underground.", "Souterrain." },
 
                 { "Warrior.", "Guerrier." },
+                { "Weapon.", "Arme." },
                 { "Weather.", "Climat." },
                 { "Westfold.", "Ouestfolde." },
                 { "Wight.", "Être." },
+                { "Wolf Clan.", "Clan du Loup." },
                 { "Woodman.", "Homme des Bois." },
                 { "Wraith.", "Spectre." },
             };

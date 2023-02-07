@@ -202,6 +202,9 @@
     <Content Include="ALeP\The-Nine-are-Abroad.Spanish.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="ALeP\Blood-in-the-Isen.Spanish.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
