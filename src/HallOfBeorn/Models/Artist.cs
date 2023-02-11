@@ -7,6 +7,19 @@ namespace HallOfBeorn.Models
 {
     public class Artist
     {
+        public Artist()
+        {
+        }
+
+        public Artist(string name)
+        {
+            Name = name;
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                URL = string.Format("https://www.google.com/search?q={0}+art", name.Replace(" ", "+"));
+            }
+        }
+
         public string Name { get; set; }
         public string URL { get; set; }
 
@@ -883,6 +896,26 @@ namespace HallOfBeorn.Models
             all.Add(Artist.Runar_Steinn);
             all.Add(Artist.Onur_Bakar);
 
+            //Blood in the Isen
+            all.Add(Artist.Zhihui_Su);
+            all.Add(Artist.Yama_Orce);
+            all.Add(Artist.Cyril_Tahmassebi);
+            all.Add(Artist.Ufuk_Can);
+            all.Add(Artist.Barbara_Golebiewska);
+            all.Add(Artist.Caglayan_Kaya_Goksoy);
+            all.Add(Artist.Serban_Gabriel);
+            all.Add(Artist.Yohann_Schepacz);
+            all.Add(Artist.Benoit_Audibert);
+            all.Add(Artist.Imperia_Online_JSC);
+            all.Add(Artist.James_Rinere);
+            all.Add(Artist.Marta_Nael);
+            all.Add(Artist.Tim_Lochner);
+            all.Add(Artist.Leone_Fabio);
+            all.Add(Artist.Chris_Stanford);
+            all.Add(Artist.Elaureanar);
+            all.Add(Artist.Vladimir_Rikowski);
+            all.Add(Artist.Min_Gyu_Lee);
+
             //The Nine Are Abroad
             all.Add(Artist.Guglielmo_Simonini);
             all.Add(Artist.JanPhilipp_Eckert);
@@ -918,7 +951,7 @@ namespace HallOfBeorn.Models
                 : Artist.Dynamic(name);
         }
 
-        public static Artist Dynamic(string name)
+        private static Artist Dynamic(string name)
         {
             return new Artist { Name = name, URL = string.Format("https://www.google.com/search?q={0}+art", name.Replace(" ", "+")) };
         }
@@ -1070,6 +1103,26 @@ namespace HallOfBeorn.Models
         public static Artist Tatiana_Tyukina = new Artist { Name = "Tatiana Tyukina", URL = "https://www.artstation.com/lis" };
         public static Artist Runar_Steinn = new Artist { Name = "Runar Steinn", URL = "https://www.artstation.com/runarsteinn" };
         public static Artist Onur_Bakar = new Artist { Name = "Onur Bakar", URL = "https://www.artstation.com/onurbakar" };
+
+        //Blood in the Isen
+        public static Artist Zhihui_Su = new Artist("Zhihui Su");
+        public static Artist Yama_Orce = new Artist("Yama Orce");
+        public static Artist Cyril_Tahmassebi = new Artist("Cyril Tahmassebi");
+        public static Artist Ufuk_Can = new Artist("Ufuk Can");
+        public static Artist Barbara_Golebiewska = new Artist("Barbara Gołębiewska");
+        public static Artist Caglayan_Kaya_Goksoy = new Artist("Cağlayan Kaya Goksoy");
+        public static Artist Serban_Gabriel = new Artist("Serban Gabriel");
+        public static Artist Yohann_Schepacz = new Artist("Yohann Schepacz");
+        public static Artist Benoit_Audibert = new Artist("Benoit Audibert");
+        public static Artist Imperia_Online_JSC = new Artist("Imperia Online JSC");
+        public static Artist James_Rinere = new Artist("James Rinere");
+        public static Artist Marta_Nael = new Artist("Marta Nael");
+        public static Artist Tim_Lochner = new Artist("Tim Lochner");
+        public static Artist Leone_Fabio = new Artist("Leone Fabio");
+        public static Artist Chris_Stanford = new Artist("Chris Stanford");
+        public static Artist Elaureanar = new Artist("elaureanar");
+        public static Artist Vladimir_Rikowski = new Artist("Vladimir Rikowski");
+        public static Artist Min_Gyu_Lee = new Artist("Min Gyu Lee");
 
         //The Scouring of the Shire
         public static Artist Studio_Ghibli = new Artist { Name = "Studio Ghibli", URL = "https://www.ghibli-museum.jp" };

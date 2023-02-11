@@ -30,14 +30,14 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Action: Discard a unique card from your hand that shares a title with a card in play to search your deck for a different unique card and add it to your hand. Shuffle your deck.")
                 .WithFlavorLine("“There is nothing like looking, if you want to find something…”")
                 .WithFlavorLine("—Thorin Oakenshield, The Hobbit")
-                .WithInfo(184, 3, Artist.Dynamic("Tim Lochner"));
+                .WithInfo(184, 3, Artist.Tim_Lochner);
             cs.addAttachment("Elessar", 1, Sphere.Leadership, true)
                 .WithTraits("Title.")
                 .WithTextLine("Attach to a Noble hero or Aragorn. Attached character gains the Gondor trait. If attached character is Aragorn, he gains the Noble trait.")
                 .WithTextLine("Action: Exhaust Elessar to choose an ally that is defending an attack and shares a Trait with the attached character. Either ready that ally or give it +1 Defense for that attack.")
                 .WithFlavorLine("“Say not The Lords of Gondor. Say The King Elessar.”")
                 .WithFlavorLine("—Prince Imrahil, The Return of the King")
-                .WithInfo(185, 3, Artist.Dynamic("Leone Fabio"));
+                .WithInfo(185, 3, Artist.Leone_Fabio);
             cs.addAttachment("The Renewer", 1, Sphere.Lore, true)
                 .WithTraits("Title.")
                 .WithTextLine("Attach to a Gondor hero or Aragorn. Attached character gains the Healer trait.")
@@ -52,12 +52,12 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Attach to a hero.")
                 .WithTextLine("Replace each instance of “once per phase” or “once per round” in the attached character’s text box with “twice per phase” or “twice per round” respectively.")
                 .WithTextLine("Action: Exhaust Aragorn to discard the location guarding Elendilmir. Then, attach Elendilmir to Aragorn.")
-                .WithInfo(187, 3, Artist.Dynamic("Chris Stanford"));
+                .WithInfo(187, 3, Artist.Chris_Stanford);
             cs.addAttachment("Estel", 1, Sphere.Spirit, true)
                 .WithTraits("Title.")
                 .WithTextLine("Attach to a Dúnedain hero or Aragorn. Attached character gains the Noldor trait.")
                 .WithTextLine("Action: Exhaust Estel and discard 1 card from your hand to search the top X cards of your deck for 1 card and add it to your hand. Shuffle your deck. X is the number of Traits on the attached character.")
-                .WithInfo(188, 3, Artist.Dynamic("elaureanar"));
+                .WithInfo(188, 3, Artist.Elaureanar);
             cs.addAttachment("Chieftain of the North", 1, Sphere.Tactics, true)
                 .WithTraits("Title.")
                 .WithTextLine("Attach to a Ranger hero or Aragorn. Attached character gains the Warrior trait.")
@@ -72,7 +72,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Response: When you play Grey Companion from your hand, exhaust X Title attachments you control to reduce its cost by X.")
                 .WithFlavorLine("“But I did not summon you,” said Aragorn, “save only in wish.”")
                 .WithFlavorLine("—The Return of the King")
-                .WithInfo(190, 3, Artist.Dynamic("Vladimir Rikowski"));
+                .WithInfo(190, 3, Artist.Vladimir_Rikowski);
             cs.addAttachment("Andúril", 4, Sphere.Neutral, true)
                 .WithTraits("Artifact.", "Item.", "Weapon.")
                 .WithKeywords("Restricted.")
@@ -90,7 +90,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Ealdwulf gets +2 hit points for each resource token on him.")
                 .WithTextLine("Forced: When a resource token would be removed from Hasty Pursuit, move it to Ealdwulf instead.")
                 .WithVictoryPoints(15)
-                .WithInfo(192, 1, Artist.Dynamic("Min Gyu Lee"));
+                .WithInfo(192, 1, Artist.Min_Gyu_Lee);
             cs.addObjective("Narrow Crossing", EncounterSet.BloodInTheIsen)
                 .WithTraits("Fords.")
                 .WithTextLine("Forced: At the end of the planning phase, the first player places 3 resource tokens on Narrow Crossing.")
@@ -100,14 +100,14 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTraits("Fords.")
                 .WithTextLine("Forced: At the end of the planning phase, the first player removes 1 resource token from Hasty Pursuit.")
                 .WithTextLine("Forced: After resolving the above Forced effect, if the total printed cost of all cards you control is greater than the number of resource tokens here, raise your threat by the difference. (Each player must resolve this effect.)")
-                .WithInfo(193, 1, Artist.Dynamic("Zhihui Su"));
+                .WithInfo(193, 1, Artist.Zhihui_Su);
             cs.addEnemy("Grimrede", EncounterSet.BloodInTheIsen, 50, Card.VALUE_X, 5, 3, 6)
                 .WithUnique()
                 .WithTraits("Dunland.", "Raven Clan.")
                 .WithTextLine("X is 1Per Player. Immune to player card effects. Each player’s threat cannot be reduced by more than 1 each round.")
                 .WithTextLine("Forced: When any number of resource tokens would be placed on the Fords objective, reduce that number by 1 unless each player deals 1 damage to an undamaged character they control.")
                 .WithVictoryPoints(5)
-                .WithInfo(194, 1, Artist.Dynamic("Yama Orce"));
+                .WithInfo(194, 1, Artist.Yama_Orce);
             cs.addLocation("West Bank", EncounterSet.BloodInTheIsen, 2, 6)
                 .WithUnique()
                 .WithTraits("Riverland.")
@@ -117,24 +117,24 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithFlavorLine("“Go not to the Fords of Isen, and do not tarry in the plain!”")
                 .WithFlavorLine("—Gandalf, The Two Towers")
                 .WithVictoryPoints(1)
-                .WithInfo(195, 1, Artist.Dynamic("Cyril Tahmassebi"));
+                .WithInfo(195, 1, Artist.Cyril_Tahmassebi);
             cs.addEnemy("Rohan Renegade", EncounterSet.BloodInTheIsen, 40, 2, 3, 2, 5)
                 .WithTraits("Rohan.", "Traitor.")
                 .WithTextLine("While a hero is defending against Rohan Renegade, that hero does not count its Defense.")
                 .WithShadow("Shadow: After this attack, attacking enemy engages the next player, then makes an immediate attack.")
-                .WithInfo(196, 3, Artist.Dynamic("Ufuk Can"));
+                .WithInfo(196, 3, Artist.Ufuk_Can);
             cs.addEnemy("Dunland Axe-hand", EncounterSet.BloodInTheIsen, 38, 2, 4, 3, 3)
                 .WithTraits("Dunland.", "Raven Clan.")
                 .WithTextLine("Forced: After Dunland Axe-hand engages you, either remove 1 resource token from the Fords objective, or deal 2 damage among characters you control.")
                 .WithShadow("Shadow: Attacking enemy gets +3 Attack. You may discard X cards from your hand to reduce this amount by X.")
                 .WithEasyModeQuantity(2)
-                .WithInfo(197, 3, Artist.Dynamic("Barbara Gołębiewska"));
+                .WithInfo(197, 3, Artist.Barbara_Golebiewska);
             cs.addEnemy("Fleet-footed Dunlending", EncounterSet.BloodInTheIsen, 31, 2, 3, 1, 3)
                 .WithTraits("Dunland.", "Wolf Clan.")
                 .WithTextLine("Forced: After Fleet-footed Dunlending engages you, discard an attachment you control.")
                 .WithShadow("Shadow: Discard the highest cost attachment attached to the defending character.")
                 .WithEasyModeQuantity(2)
-                .WithInfo(198, 4, Artist.Dynamic("Cağlayan Kaya Goksoy"));
+                .WithInfo(198, 4, Artist.Caglayan_Kaya_Goksoy);
             cs.addEnemy("Spurned Hillman", EncounterSet.BloodInTheIsen, 28, 1, 3, 1, 3)
                 .WithTraits("Dunland.", "Boar Clan.")
                 .WithKeywords("Doomed 1.")
@@ -151,14 +151,14 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithTextLine("Forced: After Contested Battleground becomes the active location, either remove 1 resource token from the Fords objective, or the current quest gains battle until Contested Battleground leaves play.")
                 .WithShadow("Shadow: After this attack, raise your threat by X, where X is the amount of damage dealt by this attack.")
                 .WithEasyModeQuantity(1)
-                .WithInfo(200, 2, Artist.Dynamic("Serban Gabriel"));
+                .WithInfo(200, 2, Artist.Serban_Gabriel);
             cs.addLocation("Defensive Outcrop", EncounterSet.BloodInTheIsen, 2, 4)
                 .WithTraits("Hill.")
                 .WithTextLine("Dunland enemies get +1 Defense. This ability does not stack with other copies of Defensive Outcrop.")
                 .WithTextLine("While Defensive Outcrop is the active location, Dunland enemies get +1 Attack.")
                 .WithShadow("Shadow: Until the end of the phase, when a character is declared as an attacker against this enemy, deal 1 damage to that character.")
                 .WithEasyModeQuantity(1)
-                .WithInfo(201, 3, Artist.Dynamic("Yohann Schepacz"));
+                .WithInfo(201, 3, Artist.Yohann_Schepacz);
             cs.addLocation("North-South Road", EncounterSet.BloodInTheIsen, 2, 4)
                 .WithTraits("Road.")
                 .WithTextLine("Travel: Each player deals 1 damage to a character they control.")
@@ -166,7 +166,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithFlavorLine("…the stream from above passed out, and the road beside it ran down…")
                 .WithFlavorLine("—The Two Towers")
                 .WithEasyModeQuantity(1)
-                .WithInfo(202, 3, Artist.Dynamic("Benoit Audibert"));
+                .WithInfo(202, 3, Artist.Benoit_Audibert);
             cs.addTreachery("Coordinated Assault", EncounterSet.BloodInTheIsen)
                 .WithTextLine("When Revealed: The first player must choose 3 different things they control to discard: 1 resource, 1 ally, 1 character attachment, 1 enemy attachment, 1 location attachment, 1 player side quest in the staging area, or 1 random card from their hand.")
                 .WithEasyModeQuantity(1)
@@ -174,7 +174,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
             cs.addTreachery("Heavy Losses", EncounterSet.BloodInTheIsen)
                 .WithTextLine("When Revealed: Each player may discard any number of characters they control. Then, each player raises their threat by 1 for each damaged character they control. Each player that did not raise their threat this way must deal 1 damage to 3 different characters they control.")
                 .WithEasyModeQuantity(2)
-                .WithInfo(204, 3, Artist.Dynamic("Imperia Online JSC"));
+                .WithInfo(204, 3, Artist.Imperia_Online_JSC);
             cs.addTreachery("Open Rebellion", EncounterSet.BloodInTheIsen)
                 .WithTextLine("When Revealed: The first player deals 1 damage to each hero they control with at least 1 resource in its pool, then raises their threat by 1 for each Noble hero damaged this way.")
                 .WithShadow("Shadow: Attacking enemy gets +1 Attack (+2 Attack instead if the defending character is Noble).")
@@ -201,7 +201,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithOppositeTextLine("Narrow Crossing cannot have more than 15 resource tokens on it.")
                 .WithOppositeTextLine("Grimrede cannot be defeated while this stage has any quest points remaining. This stage cannot be defeated unless Grimrede is in the victory display.")
                 .WithIncludedEncounterSets(EncounterSet.DunlendingWarriors)
-                .WithInfo(208, 1, Artist.Dynamic("James_Rinere"));
+                .WithInfo(208, 1, Artist.James_Rinere);
             cs.addQuest("The Flight of Ealdwulf", EncounterSet.BloodInTheIsen, 3, 'A', 12)
                 .WithTextLine("When Revealed: End the current phase. The first player adds Ealdwulf to the staging area. Each other player searches the encounter deck and discard pile for a copy of Rohan Renegade and engages it, if able. Shuffle the encounter deck. Flip Narrow Crossing over, keeping any resource tokens on it.")
                 .WithFlavorLine("As the tide of battle turns, the traitor Ealdwulf wheels in retreat. The warlord rushes toward the wilderness, leaving his men to fight and die for their master’s hopeless crusade.")
@@ -210,7 +210,7 @@ namespace HallOfBeorn.Models.LotR.Sets.OathsOfTheRohirrim
                 .WithOppositeTextLine("This stage cannot be defeated while Ealdwulf is in play. When Ealdwulf is defeated, the players have thwarted the traitor’s plot and win the game.")
                 .WithOppositeFlavorLine("The traitor’s horse is fleet of foot, and battle spills across both banks of the river. Ealdwulf must be captured and brought before King Thengel to face justice.")
                 .WithIncludedEncounterSets(EncounterSet.DunlendingWarriors)
-                .WithInfo(209, 1, Artist.Dynamic("Marta Nael"));
+                .WithInfo(209, 1, Artist.Marta_Nael);
             /*
             addGenConSetup("Back Card", EncounterSet.TheScouringOfTheShire)
                 .WithTextLine("Credits")
