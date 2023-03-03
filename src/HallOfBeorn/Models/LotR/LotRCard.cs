@@ -280,6 +280,7 @@ namespace HallOfBeorn.Models.LotR
         public byte? EasyModeQuantity { get; set; }
         public byte? NightmareModeQuantity { get; set; }
         public byte? SiegePoints { get; set; }
+        public byte? XP { get; set; }
         public bool HasHorizontalArt { get; set; }
 
         public bool HasErrata { get; set; }
@@ -858,6 +859,12 @@ namespace HallOfBeorn.Models.LotR
         public LotRCard WithEyeIcon(byte count)
         {
             this.EyeIcon = count;
+            return this;
+        }
+
+        public LotRCard WithXP(byte xp)
+        {
+            this.XP = xp;
             return this;
         }
 

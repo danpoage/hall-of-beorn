@@ -77,6 +77,8 @@ namespace HallOfBeorn.Services.LotR.Templates
             TheDrownedRuins();
             AStormOnCobasHaven();
             TheCityOfCorsairs();
+            DreamChaserHeroExpansion();
+            DreamChaserCampaignExpansion();
 
             //The Sands of Harad and Haradrim
             TheSandsOfHarad();
@@ -2799,6 +2801,18 @@ namespace HallOfBeorn.Services.LotR.Templates
             AddHtml("Burning-Tower-RotGHN", "<p class='main-text'>Aflame 5.</p><p class='main-text'>While Burning Tower is in the staging area, damage cannot be healed.</p><p class='main-text'><b>Forced:</b> After damage is placed on Burning Tower, choose X characters, where X is the amount of damage on Burning Tower. Deal 1 damage to each chosen character.</p>");
             AddHtml("Sudden-Assault-RotGHN", "<p class='main-text'><b>When Revealed:</b> Each player must either deal 2 damage to an Aflame location in play, or reveal 1 card from the top of the encounter deck.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Either deal 2 damage to an Aflame location in play or attacking enemy makes an additional attack after this one.</p>");
             AddHtml("Infiltration-RotGHN", "<p class='main-text'><b>When Revealed:</b> Remove 1 resource from each hero in play. Distribute those resources as evenly as possible among Raider enemies in play or set aside.</p>{shadow}<p class='shadow-text'><b>Shadow:</b> Damage from this attack is dealt to an Aflame location in play instead of the defending character.</p>");
+        }
+
+        private void DreamChaserHeroExpansion()
+        {
+            AddHtml("Cirdan-the-Shipwright-DCH", "<p class='main-text'>Draw 1 additional card at the beginning of the resource phase.</p><p class='main-text'><b>Forced:</b> After drawing cards at the beginning of the resource phase, choose and discard 1 of those cards.</p><p class='flavor-text'>Very tall he was, and his beard was long, and he was grey and old, save that his eyes were keen as stars...<br>&ndash;The Return of the King</p>");
+            AddHtml("Galdor-of-the-Havens-DCH", "<p class='main-text'><b>Response:</b> After drawing your setup hand, instead of taking a mulligan, you may discard any number of cards from your hand. Then, draw that many cards.</p><p class='main-text'><b>Action:</b> If you have no cards in your hand, draw 6 cards. (Limit once per game.)</p><p class='flavor-text'>&quot;What power still remains lies with us...&quot;<br>&ndash;The Fellowship of the Ring</p>");
+        }
+
+        private void DreamChaserCampaignExpansion()
+        {
+            AddHtml("Dream-chaser-DCC", "<p class='main-text'>Immune to player card effects. {keyword:Sentinel.}</p><p class='main-text'>The {self} can always be committed to Sailing tests (even if you are not the first player), and counts as 2 characters when committed to a Sailing test.</p><p class='main-text'><b>If the {self} is destroyed, the players lose the game.</b></p>");
+            AddHtml("Dream-chaser-Upgraded-DCC", "<p class='main-text'>Campaign Mode only.</p><p class='main-text'>Immune to player card effects. {keyword:Sentinel.}</p><p class='main-text'>The {self} can be committed to any Sailing test and counts as 3 characters when committed to a Sailing test.</p><p class='main-text'><b>If the {self} is destroyed, the players lose the game.</b></p>{xp:4}");
         }
 
         private void FlightOfTheStormcaller()

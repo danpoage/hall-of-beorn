@@ -766,6 +766,9 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         [Display(Name = "Victory")]
         public string VictoryPoints { get; set; }
 
+        //TODO: Add this
+        //public string XP { get; set; }
+
         [Display(Name = "Status")]
         public CardStatus? Status { get; set; }
 

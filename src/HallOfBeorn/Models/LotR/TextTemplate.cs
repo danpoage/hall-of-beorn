@@ -359,6 +359,9 @@ namespace HallOfBeorn.Models.LotR
                 case "victory":
                     sb.AppendFormat("<div class='victory-text'><a style='text-decoration:none;' href='/LotR/Search?VictoryPoints=Victory+{0}.' target='_blank' title='Victory: {0}'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>Victory {0}</span></a></div>", key);
                     break;
+                case "xp":
+                    sb.AppendFormat("<div class='victory-text'><a style='text-decoration:none;' href='/LotR/Search?XP={0}' target='_blank' title='XP: {0}'><span style='padding-left:4px;padding-right:4px;'>{0} XP</span></a></div>", key);
+                    break;
                 case "cave":
                     sb.AppendFormat("<div class='victory-text'><a style='text-decoration:none;' href='/LotR/Details/{0}-TGC' target='_blank' title='{1} Cave'><span style='padding-left:4px;padding-right:4px;border-style:solid;border-width:1px;border-color:black;'>{1}</span></a></div>", key.Replace(" ", "-"), key);
                     break;

@@ -417,6 +417,7 @@ namespace HallOfBeorn.Models.LotR
             Add(CelebrimborsSecret);
             Add(TheAntleredCrown);
 
+            //Angmar Awakened
             Add(TheLostRealm);
             Add(TheWastesOfEriador);
             Add(EscapeFromMountGram);
@@ -427,6 +428,7 @@ namespace HallOfBeorn.Models.LotR
             Add(AngmarAwakenedHeroExpansion);
             Add(AngmarAwakenedCampaignExpansion);
 
+            //Dream-chaser
             Add(TheGreyHavens);
             Add(FlightOfTheStormcaller);
             Add(TheThingInTheDepths);
@@ -434,7 +436,10 @@ namespace HallOfBeorn.Models.LotR
             Add(TheDrownedRuins);
             Add(AStormOnCobasHaven);
             Add(TheCityOfCorsairs);
+            Add(DreamChaserHeroExpansion);
+            Add(DreamChaserCampaignExpansion);
 
+            //Haradrim
             Add(TheSandsOfHarad);
             Add(TheMumakil);
             Add(RaceAcrossHarad);
@@ -659,6 +664,8 @@ namespace HallOfBeorn.Models.LotR
         public static CardSet TheDrownedRuins = new Sets.DreamChaser.TheDrownedRuinsSet();
         public static CardSet AStormOnCobasHaven = new Sets.DreamChaser.AStormOnCobasHavenSet();
         public static CardSet TheCityOfCorsairs = new Sets.DreamChaser.TheCityOfCorsairsSet();
+        public static CardSet DreamChaserHeroExpansion = Sets.DreamChaser.DreamChaserHeroExpansion.Create();
+        public static CardSet DreamChaserCampaignExpansion = Sets.DreamChaser.DreamChaserCampaignExpansion.Create();
 
         public static CardSet TheSandsOfHarad = new Sets.TheSandsOfHarad.TheSandsOfHaradSet();
         public static CardSet TheMumakil = new Sets.Haradrim.TheMumakilSet();

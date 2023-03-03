@@ -145,6 +145,8 @@ namespace HallOfBeorn.Models.LotR
         public static Product TheDrownedRuins = new Products.AdventurePack.TheDrownedRuinsProduct();
         public static Product AStormOnCobasHaven = new Products.AdventurePack.AStormOnCobasHavenProduct();
         public static Product TheCityOfCorsairs = new Products.AdventurePack.TheCityOfCorsairsProduct();
+        public static Product DreamChaserHeroExpansion = new Products.Hero.DreamChaserHeroExpansionProduct();
+        public static Product DreamChaserCampaignExpansion = new Products.Campaign.DreamChaserCampaignProduct();
 
         //The Sands of Harad and Haradrim Cycle
         public static Product TheSandsOfHarad = new Products.Deluxe.TheSandsOfHaradProduct();

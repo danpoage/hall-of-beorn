@@ -11,6 +11,8 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
             : base("Dream-chaser Cycle")
         {
             AddMainProduct(Product.TheGreyHavens);
+            AddMainProduct(Product.DreamChaserHeroExpansion);
+            AddMainProduct(Product.DreamChaserCampaignExpansion);
             AddChildProduct(Product.FlightOfTheStormcaller);
             AddChildProduct(Product.TheThingInTheDepths);
             AddChildProduct(Product.TempleOfTheDeceived);

@@ -347,6 +347,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheDrownedRuins);
             Add(AStormOnCobasHaven);
             Add(TheCityOfCorsairs);
+            Add(TheDreamChasersFleetCampaign);
 
             //The Sands of Harad and Haradrim
             Add(EscapeFromUmbar);
@@ -785,6 +786,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet AStormOnCobasHaven = new EncounterSet { Name = "A Storm on Cobas Haven", Set = "A Storm on Cobas Haven" };
         public static EncounterSet TheCityOfCorsairs = new EncounterSet { Name = "The City of Corsairs", Set = "The City of Corsairs" };
         public static EncounterSet CoastOfUmbar = new EncounterSet { Name = "Coast of Umbar", Set = "The City of Corsairs" };
+        public static EncounterSet TheDreamChasersFleetCampaign = new EncounterSet { Name = "The Dream-chaser's Fleet Campaign", Set = "Dream-chaser Campaign Expansion" };
 
         //The Sands of Harad and Haradrim
         public static EncounterSet EscapeFromUmbar = new EncounterSet { Name = "Escape from Umbar", Set = "The Sands of Harad" };

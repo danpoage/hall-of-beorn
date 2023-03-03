@@ -431,6 +431,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\UnderTheAshMountainsProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\WrathAndRuinProduct.cs" />
     <Compile Include="Models\LotR\Products\Campaign\AngmarAwakenedCampaignProduct.cs" />
+    <Compile Include="Models\LotR\Products\Campaign\DreamChaserCampaignProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\BloodInTheIsenProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\ChildrenOfEorlProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\FireOnTheEastemnetProduct.cs" />
@@ -452,6 +453,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\TheWitheredHeathProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\TheWildsOfRhovanionProduct.cs" />
     <Compile Include="Models\LotR\Products\Hero\AngmarAwakenedHeroExpansionProduct.cs" />
+    <Compile Include="Models\LotR\Products\Hero\DreamChaserHeroExpansionProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\AStormOnCobasHavenNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheCityOfCorsairsNightmareProduct.cs" />
     <Compile Include="Models\LotR\Products\Nightmare\TheDrownedRuinsNightmareProduct.cs" />
@@ -563,6 +565,8 @@
     <Compile Include="Models\LotR\Sets\DoomMastered\TheBetrayalOfMimSet.cs" />
     <Compile Include="Models\LotR\Sets\DoomMastered\TheFallOfNargothrondSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\AStormOnCobasHavenNightmareSet.cs" />
+    <Compile Include="Models\LotR\Sets\DreamChaser\DreamChaserCampaignExpansion.cs" />
+    <Compile Include="Models\LotR\Sets\DreamChaser\DreamChaserHeroExpansion.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\FlightOfTheStormcallerNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TempleOfTheDeceivedNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\DreamChaser\TheCityOfCorsairsNightmareSet.cs" />
