@@ -787,6 +787,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheCityOfCorsairs = new EncounterSet { Name = "The City of Corsairs", Set = "The City of Corsairs" };
         public static EncounterSet CoastOfUmbar = new EncounterSet { Name = "Coast of Umbar", Set = "The City of Corsairs" };
         public static EncounterSet TheDreamChasersFleetCampaign = new EncounterSet { Name = "The Dream-chaser's Fleet Campaign", Set = "Dream-chaser Campaign Expansion" };
+        public static EncounterSet VoyageAcrossBelegaerCampaign = new EncounterSet { Name = "Voyage Across Belegaer Campaign", Set = "Dream-chaser Campaign Expansion" };
 
         //The Sands of Harad and Haradrim
         public static EncounterSet EscapeFromUmbar = new EncounterSet { Name = "Escape from Umbar", Set = "The Sands of Harad" };
