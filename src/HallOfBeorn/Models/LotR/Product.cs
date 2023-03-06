@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Web;
 
 using HallOfBeorn.Models.LotR.Products;
 
@@ -299,6 +298,9 @@ namespace HallOfBeorn.Models.LotR
 
         public static Product TheScouringOfTheShire = new Products.Community.TheScouringOfTheShireProduct();
         public static Product TheNineAreAbroad = new Products.Community.TheNineAreAbroadProduct();
+
+        public static Product TheLegacyOfFeanor = new Products.Community.TheLegacyOfFeanorProduct();
+        public static Product BetrayingTheFalathrim = new Products.Community.BetrayingTheFalathrimProduct();
         #endregion
     }
 }

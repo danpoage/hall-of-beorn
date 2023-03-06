@@ -27,5 +27,6 @@
         COMMUNITY,
         First_Age,
         A_Long_extended_Party,
+        The_Legacy_of_Feanor,
     }
 }

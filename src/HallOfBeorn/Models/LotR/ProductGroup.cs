@@ -64,6 +64,8 @@ namespace HallOfBeorn.Models.LotR
 
         public static ProductGroup OathsOfTheRohirrim = new OathsOfTheRohirrimProductGroup();
         public static ProductGroup StandAloneScenarios = new AlepStandaloneProductGroup();
+
+        public static ProductGroup TheLegacyOfFeanor = new TheLegacyOfFeanorProductGroup();
         #endregion
     }
 }

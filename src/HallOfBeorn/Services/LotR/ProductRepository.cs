@@ -42,6 +42,8 @@ namespace HallOfBeorn.Services.LotR
 
             productGroups.Add(ProductGroup.OathsOfTheRohirrim);
             productGroups.Add(ProductGroup.StandAloneScenarios);
+
+            productGroups.Add(ProductGroup.TheLegacyOfFeanor);
         }
 
         private readonly List<ProductGroup> productGroups = new List<ProductGroup>();

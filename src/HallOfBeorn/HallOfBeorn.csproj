@@ -409,6 +409,7 @@
     <Compile Include="Models\ICreator.cs" />
     <Compile Include="Models\LotR\Cycles.cs" />
     <Compile Include="Models\LotR\Extensions.cs" />
+    <Compile Include="Models\LotR\ProductGroups\TheLegacyOfFeanorProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\OathsOfTheRohirrimProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\AngmarAwakenedNightmareProductGroup.cs" />
     <Compile Include="Models\LotR\ProductGroups\DreamChaserNightmareProductGroup.cs" />
@@ -432,6 +433,7 @@
     <Compile Include="Models\LotR\Products\AdventurePack\WrathAndRuinProduct.cs" />
     <Compile Include="Models\LotR\Products\Campaign\AngmarAwakenedCampaignProduct.cs" />
     <Compile Include="Models\LotR\Products\Campaign\DreamChaserCampaignProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\BetrayingTheFalathrimProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\BloodInTheIsenProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\ChildrenOfEorlProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\FireOnTheEastemnetProduct.cs" />
@@ -441,6 +443,7 @@
     <Compile Include="Models\LotR\Products\Community\TheFallOfNargothrondProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheGapOfRohanProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheGlitteringCavesProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\TheLegacyOfFeanorProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheNineAreAbroadProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheScouringOfTheShireProduct.cs" />
     <Compile Include="Models\LotR\Products\Core\RevisedCoreSetProduct.cs" />
@@ -607,6 +610,8 @@
     <Compile Include="Models\LotR\Sets\TheGreyHavens\RaidOnTheGreyHavensNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\TheFateOfNumenorNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheGreyHavens\VoyageAcrossBelegaerNightmare.cs" />
+    <Compile Include="Models\LotR\Sets\TheLegacyOfFeanor\BetrayingTheFalathrimSet.cs" />
+    <Compile Include="Models\LotR\Sets\TheLegacyOfFeanor\TheLegacyOfFeanorSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\BreakingOfTheFellowshipNightmare.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\HelmsDeepNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheLordOfTheRings\JourneyToTheCrossRoadsNightmareSet.cs" />

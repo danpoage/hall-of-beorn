@@ -22,6 +22,7 @@ namespace HallOfBeorn.Models.LotR
             all.Add(TheLordOfTheRings);
             all.Add(DoomMastered);
             all.Add(OathsOfTheRohirrim);
+            all.Add(TheLegacyOfFeanor);
         }
 
         private static readonly List<string> all = new List<string>();
@@ -39,6 +40,7 @@ namespace HallOfBeorn.Models.LotR
         public static readonly string TheLordOfTheRings = "The Lord of the Rings";
         public static readonly string DoomMastered = "Doom Mastered";
         public static readonly string OathsOfTheRohirrim = "Oaths of the Rohirrim";
+        public static readonly string TheLegacyOfFeanor = "The Legacy of Fëanor";
 
         public static IEnumerable<string> All()
         {
