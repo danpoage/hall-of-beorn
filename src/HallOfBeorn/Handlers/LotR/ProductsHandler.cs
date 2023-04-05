@@ -20,7 +20,8 @@ namespace HallOfBeorn.Handlers.LotR
             ICategoryService<QuestCategory> questCategoryService,
             ICategoryService<Region> regionService,
             ICategoryService<Archetype> archetypeService,
-            IRingsDbService ringsDbService)
+            IRingsDbService ringsDbService,
+            TranslationHandler translationHandler)
         {
             _productRepository = productRepository;
             _playerCategoryService = playerCategoryService;
@@ -29,6 +30,7 @@ namespace HallOfBeorn.Handlers.LotR
             _regionService = regionService;
             _archetypeService = archetypeService;
             _ringsDbService = ringsDbService;
+            _translationHandler = translationHandler;
         }
 
         private readonly ProductRepository _productRepository;
@@ -38,6 +40,7 @@ namespace HallOfBeorn.Handlers.LotR
         private readonly ICategoryService<Region> _regionService;
         private readonly ICategoryService<Archetype> _archetypeService;
         private readonly IRingsDbService _ringsDbService;
+        private readonly TranslationHandler _translationHandler;
 
         private Product getProductByIdentifier(string id)
         {
@@ -62,7 +65,7 @@ namespace HallOfBeorn.Handlers.LotR
             return string.Empty;
         }
 
-        public ProductListViewModel HandleProducts(string id, ProductView? view)
+        public ProductListViewModel HandleProducts(string id, ProductView? view, Language? lang)
         {
             var getPlayerCategories = new Func<string, IEnumerable<PlayerCategory>>((slug) => { return _playerCategoryService.Categories(slug); });
             var getEncounterCategories = new Func<string, IEnumerable<EncounterCategory>>((slug) => { return _encounterCategoryService.Categories(slug); });
@@ -75,6 +78,16 @@ namespace HallOfBeorn.Handlers.LotR
             Func<string, byte> getPopularity = (slug) =>
             {
                 return _ringsDbService.GetPopularity(slug);
+            };
+
+            Func<string, string> translateTitle = (title) =>
+            {
+                return _translationHandler.TranslateTitle(lang, title);
+            };
+
+            Func<CardType, string> translateCardType = (cardType) =>
+            {
+                return _translationHandler.TranslateCardType(lang, cardType);
             };
 
             if (string.IsNullOrWhiteSpace(id))
@@ -91,7 +104,8 @@ namespace HallOfBeorn.Handlers.LotR
                 if (product != null)
                 {
                     model.Detail = new ProductDetailViewModel(product, 
-                        getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes);
+                        getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes, 
+                        lang, translateTitle, translateCardType);
                 }
             }
 

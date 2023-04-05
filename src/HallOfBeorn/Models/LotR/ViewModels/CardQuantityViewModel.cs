@@ -9,12 +9,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         {
         }
 
-        public CardQuantityViewModel(string title, int quantity, CardType? cardType, string url)
+        public CardQuantityViewModel(string title, int quantity, string cardTypeName, string url)
         {
             Title = title;
             QuantityNumber = quantity;
             Quantity = quantity.ToString();
-            CardType = cardType.HasValue ? cardType.Value.ToCardTypeDescription() : null;
+            CardType = cardTypeName;
             Url = url;
         }
 

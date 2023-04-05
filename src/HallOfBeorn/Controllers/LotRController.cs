@@ -55,7 +55,7 @@ namespace HallOfBeorn.Controllers
 
             _productsController = new ProductsHandler(productRepository, 
                 playerCategoryService, encounterCategoryService, questCategoryService, regionService, archetypeService,
-                ringsDbService);
+                ringsDbService, _translationHandler);
 
             _charactersHandler = new CharactersHandler(
                 cardRepository, characterRepository, linkService);
@@ -119,7 +119,7 @@ namespace HallOfBeorn.Controllers
             }
         }
 
-        public ActionResult Products(string id, ProductView? view)
+        public ActionResult Products(string id, ProductView? view, Language? lang)
         {
             if (HttpContext.Request.Url.AbsolutePath.Contains("/Cards"))
             {
@@ -139,7 +139,7 @@ namespace HallOfBeorn.Controllers
                 return Redirect(redirectUrl);
             }
             
-            var model = _productsController.HandleProducts(id, view);
+            var model = _productsController.HandleProducts(id, view, lang);
 
             return View(model);
         }
@@ -196,7 +196,7 @@ namespace HallOfBeorn.Controllers
 
         public JsonResult Version()
         {
-            return Json(new { version = "2.12.8", timestamp = DateTime.UtcNow.ToString("u") }, JsonRequestBehavior.AllowGet);
+            return Json(new { version = "2.13.0", timestamp = DateTime.UtcNow.ToString("u") }, JsonRequestBehavior.AllowGet);
         }
 
         public ActionResult Search(SearchViewModel model)

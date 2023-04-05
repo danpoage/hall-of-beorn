@@ -45,6 +45,20 @@ namespace HallOfBeorn.Handlers.LotR
             return effects;
         }
 
+        public string TranslateTitle(Language? lang, string title)
+        {
+            return (lang.HasValue && lang.Value != defaultLang)
+                ? _translationService.TranslateTitle(lang.Value, title)
+                : title;
+        }
+
+        public string TranslateCardType(Language? lang, CardType type)
+        {
+            return (lang.HasValue && lang.Value != defaultLang)
+                ? _translationService.TranslateCardTypeName(lang.Value, type)
+                : Enum.GetName(typeof(CardType), type).Replace("_", "-");
+        }
+
         public void Translate(Language lang, LotRCard card, CardViewModel viewModel)
         {
             var serviceFrontHtml = _templateService.GetFrontHtml(card.Slug, lang);

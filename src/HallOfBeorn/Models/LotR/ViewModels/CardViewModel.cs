@@ -155,7 +155,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Url
         {
-            get { return string.Format("/LotR/Details/{0}", Slug); }
+            get {
+                return Lang == Language.EN
+                    ? string.Format("/LotR/Details/{0}", Slug)
+                    : string.Format("/LotR/Details/{0}?Lang={1}", Slug, Lang);
+            }
         }
 
         public string SetSearchUrl
