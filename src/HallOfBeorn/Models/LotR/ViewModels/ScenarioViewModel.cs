@@ -12,9 +12,12 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
             Func<string, IEnumerable<QuestCategory>> getQuestCategories,
             Func<string, IEnumerable<Region>> getRegions,
-            Func<string, IEnumerable<Archetype>> getArchetypes)
+            Func<string, IEnumerable<Archetype>> getArchetypes,
+            Func<string, string> translateTitle)
         {
             _scenario = scenario;
+
+            this.Title = translateTitle != null ? translateTitle(scenario.Title) : scenario.Title;
 
             _campaignCard = _scenario.CampaignCard != null ? new ScenarioCardViewModel(_scenario.CampaignCard) : null;
 
@@ -56,9 +59,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
         private readonly ScenarioCardViewModel _campaignCard;
         private readonly List<ScenarioQuestViewModel> _questCards = new List<ScenarioQuestViewModel>();
         private readonly List<ScenarioCardViewModel> _scenarioCards = new List<ScenarioCardViewModel>();
+        private readonly Func<string, string> translateTitle;
 
         public string Slug { get { return _scenario.Title.ToUrlSafeString(); } }
-        public string Title { get { return _scenario.Title; } }
+        public string Title { get; private set; }
         public string Link { get { return string.Format("/LotR/Scenarios/{0}", Slug); } }
         public string CardsLink {
             get {

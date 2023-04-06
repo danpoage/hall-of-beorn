@@ -11,7 +11,7 @@
 {
     var query = @Request.Url.Query;
     var view = !string.IsNullOrWhiteSpace(query) && query.Contains("Chronological") ? "Chronological" : "Browse";
-    var backLink = "/LotR/Products?View=" + @view + "#" + @Model.Detail.Code;
+    var backLink = "/LotR/Products?View=" + @view + "&Lang=" + @Model.Detail.Lang +"#" + @Model.Detail.Code;
     
     <a style="display:block;margin-bottom:16px;" href="@backLink" class="browse-view-link">Back to Products</a>
     @* <a style="display:block;margin-bottom:16px;" href="/LotR/Products?View=Chronological#@Model.Detail.Code" class="browse-view-link">Back to Chronological Products</a> *@

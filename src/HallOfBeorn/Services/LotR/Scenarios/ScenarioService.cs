@@ -8,6 +8,7 @@ using HallOfBeorn.Models.LotR;
 using HallOfBeorn.Models.LotR.ViewModels;
 using HallOfBeorn.Services.LotR.Categories;
 using HallOfBeorn.Services.LotR.RingsDb;
+using HallOfBeorn.Services.LotR.Translation;
 
 namespace HallOfBeorn.Services.LotR.Scenarios
 {
@@ -20,6 +21,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             ICategoryService<Archetype> archetypeService,
             IRingsDbService ringsDbService,
             ProductRepository productRepository, ICardRepository<LotRCard> cardRepository)
+            //ITranslationService translationService)
         {
             _playerCategoryService = playerCategoryService;
             _encounterCategoryService = encounterCategoryService;
@@ -27,8 +29,8 @@ namespace HallOfBeorn.Services.LotR.Scenarios
             _regionService = regionService;
             _archetypeService = archetypeService;
             _ringsDbService = ringsDbService;
-
             this.cardRepository = cardRepository;
+            //this.translationService = translationService;
             this.cards = cardRepository.Cards().ToList();
             foreach (var card in this.cards.Where(x => !string.IsNullOrEmpty(x.EncounterSet)))
             {
@@ -64,8 +66,9 @@ namespace HallOfBeorn.Services.LotR.Scenarios
 
             foreach (var scenarioGroup in ScenarioGroups())
             {
+                //TODO: Pass translateTitle function instead of null
                 listViewModel.ScenarioGroups.Add(new ScenarioGroupViewModel(scenarioGroup, lookupCard, 
-                    getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes));
+                    getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes, null));
             }
         }
 
@@ -76,6 +79,7 @@ namespace HallOfBeorn.Services.LotR.Scenarios
         private readonly ICategoryService<Archetype> _archetypeService;
         private readonly IRingsDbService _ringsDbService;
         private readonly ICardRepository<LotRCard> cardRepository;
+        //private readonly ITranslationService translationService;
         private readonly IList<LotRCard> cards;
         private readonly IDictionary<string, List<LotRCard>> cardsByEncounterSet = new Dictionary<string, List<LotRCard>>();
         private readonly Dictionary<string, Scenario> scenariosByAlternateTitle = new Dictionary<string, Scenario>();

@@ -129,9 +129,10 @@ namespace HallOfBeorn.Handlers.LotR
                     return null;
                 }
                 
+                //TODO: Pass translateTitle instead of null
                 model = new ScenarioListViewModel();
                 model.Detail = new ScenarioViewModel(scenario, lookupCard, 
-                    getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes);
+                    getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes, null);
 
                 return model;
             }

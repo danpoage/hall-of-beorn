@@ -12,7 +12,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             Func<string, IEnumerable<EncounterCategory>> getEncounterCategories, 
             Func<string, IEnumerable<QuestCategory>> getQuestCategories,
             Func<string, IEnumerable<Region>> getRegions,
-            Func<string, IEnumerable<Archetype>> getArchetypes)
+            Func<string, IEnumerable<Archetype>> getArchetypes,
+            Func<string, string> translateTitle)
         {
             Name = scenarioGroup.Name;
             Scenarios = new List<ScenarioViewModel>();
@@ -20,7 +21,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             foreach (var scenario in scenarioGroup.Scenarios)
             {
                 Scenarios.Add(new ScenarioViewModel(scenario, lookupCard, 
-                    getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes));
+                    getPlayerCategories, getEncounterCategories, getQuestCategories, getRegions, getArchetypes, translateTitle));
             }
         }
 

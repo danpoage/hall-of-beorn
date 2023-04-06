@@ -23,6 +23,13 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             this.translateTitle = translateTitle;
             this.translateCardType = translateCardType;
 
+            this.Name = product.Name;
+
+            if (lang.GetValueOrDefault(Language.EN) != Language.EN)
+            {
+                this.Name = translateTitle(product.Name);
+            }
+
             foreach (var cardSet in product.CardSets)
             {
                 foreach (var card in cardSet.Cards.OrderBy(x => x.CardNumber))
@@ -69,7 +76,8 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public string Name
         {
-            get { return product.Name; }
+            get;
+            private set;
         }
 
         public string Code
@@ -164,6 +172,11 @@ namespace HallOfBeorn.Models.LotR.ViewModels
             get { return cardViewModels; }
         }
 
+        public string Lang
+        {
+            get { return lang.GetValueOrDefault(Language.EN).ToString(); }
+        }
+
         public IEnumerable<CardQuantityViewModel> CardQuantities()
         {
             var playerCardCount = 0;
@@ -236,7 +249,7 @@ namespace HallOfBeorn.Models.LotR.ViewModels
 
         public IEnumerable<ScenarioViewModel> Scenarios()
         {
-            return product.Scenarios().Select(sc => new ScenarioViewModel(sc, null, null, null, null, null, null));
+            return product.Scenarios().Select(sc => new ScenarioViewModel(sc, null, null, null, null, null, null, translateTitle));
         }
     }
 }

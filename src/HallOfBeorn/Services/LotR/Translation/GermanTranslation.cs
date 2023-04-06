@@ -78,6 +78,25 @@ namespace HallOfBeorn.Services.LotR.Translation
         {
             var all = new Dictionary<string, string>();
 
+            SafeMap(all, new Dictionary<string, string> {
+                { "Children of Eorl", "Nachfahren von Eorl" },
+            });
+
+            //Scenarios
+            SafeMap(all, new Dictionary<string, string> {
+                { "Ambush at Erelas", "Hinterhalt am Erelas" },
+                { "The Battle for the Beacon", "Der Kampf um das Leuchtfeuer" },
+                { "The Horse Lord's Ire", "Der Zorn der Pferdeherren" },
+                { "The Aldburg Plot", "3" },
+                { "Fire on the Eastemnet", "4" },
+                { "The Gap of Rohan", "5" },
+                { "The Glittering Caves", "6" },
+                { "Mustering of the Rohirrim", "7" },
+                { "Blood in the Isen", "8" },
+                { "The Scouring of the Shire", "9" },
+                { "The Nine are Abroad", "10" },
+            });
+
             //Core Set
             SafeMap(all, new Dictionary<string, string> {
                 { "Guard of the Citadel", "Wächter der Veste" },
