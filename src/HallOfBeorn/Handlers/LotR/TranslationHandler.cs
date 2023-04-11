@@ -56,7 +56,7 @@ namespace HallOfBeorn.Handlers.LotR
         {
             return (lang.HasValue && lang.Value != defaultLang)
                 ? _translationService.TranslateCardTypeName(lang.Value, type)
-                : Enum.GetName(typeof(CardType), type).Replace("_", "-");
+                : type.ToCardTypeDescription();
         }
 
         public void Translate(Language lang, LotRCard card, CardViewModel viewModel)

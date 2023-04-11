@@ -42,6 +42,10 @@ namespace HallOfBeorn.Models.LotR.ViewModels
                         viewModel.SetTranslatedTitle(lang.Value, translateTitle(card.Title));
                         viewModel.CardTypeName = translateCardType(card.CardType);
                     }
+                    else 
+                    {
+                        viewModel.CardTypeName = card.CardType.ToCardTypeDescription();
+                    }
 
                     cardViewModels.Add(viewModel);
                 }
