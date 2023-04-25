@@ -61,5 +61,6 @@
         Burglar_Treasure,
         Messenger_of_the_King,
         Valour,
+        Good_in_a_Woodman_Deck,
     }
 }

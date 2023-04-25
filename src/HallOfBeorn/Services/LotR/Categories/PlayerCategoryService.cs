@@ -174,7 +174,8 @@ namespace HallOfBeorn.Services.LotR.Categories
                             return true;
                         default: return false;
                     }
-                }, PlayerCategory.Beorn_Support)
+                }, PlayerCategory.Beorn_Support),
+                CreateCategoryFilter((card) => card.Traits.Contains("Woodman.") || card.Text.Contains("location"), PlayerCategory.Good_in_a_Woodman_Deck),
             };
         }
     }
