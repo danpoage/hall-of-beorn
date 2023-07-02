@@ -31,7 +31,7 @@
             addFriend("Pippin", "Pippin");
 
             LotRCard("Forth-the-Three-Hunters-TCoU");
-            LotRCard("Three-Hunters-ToS");
+            LotRCard("The-Three-Hunters-ToS");
         }
     }
 }
