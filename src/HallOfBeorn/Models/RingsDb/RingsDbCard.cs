@@ -142,7 +142,7 @@ namespace HallOfBeorn.Models.RingsDb
                     new RingsDbVersion { 
                         set_name = v.CardSetName, 
                         year = v.CardSet.Product.FirstReleased.Year.ToString(),
-                        url = string.Format("https://hallofbeorn.com/LotR/Details/{0}", v.Slug)
+                        url = string.Format("http://hallofbeorn.com/LotR/Details/{0}", v.Slug)
                     }).ToArray();
             }
 
@@ -215,7 +215,7 @@ namespace HallOfBeorn.Models.RingsDb
                 c.EngagementCost.HasValue ? c.EngagementCost.Description() : null;
 
             Func<LotR.LotRCard, string> getUrl = (c) =>
-                string.Format("https://hallofbeorn.com/LotR/Details/{0}", c.Slug);
+                string.Format("http://hallofbeorn.com/LotR/Details/{0}", c.Slug);
 
             Func<LotR.LotRCard, string> getImageSource = (c) =>
                 LotR.ViewModels.CardViewModel.GetImagePathForLanguage(c)
