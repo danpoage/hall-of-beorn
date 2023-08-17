@@ -229,7 +229,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithInfo(35, 1, Artist.Unknown);
             addTreachery("Befouled Equipment", string.Empty)
                 .WithSetNumberAndCost(22, 0)
-                .WithTextLine("When Revealed: Attack to the character with the most attachments without Befouled Equipment attached. (Counts as a Condition attachment with the text: \"Forced: At the end of the round, discard an attachment from attached character. Befouled Equipment cannot be discarded this way unless it is the only attachment on attached character.\")")
+                .WithTextLine("When Revealed: Attach to the character with the most attachments without Befouled Equipment attached. (Counts as a Condition attachment with the text: \"Forced: At the end of the round, discard an attachment from attached character. Befouled Equipment cannot be discarded this way unless it is the only attachment on attached character.\")")
                 .WithInfo(36, 2, Artist.Ed_Mattinian);
             addEnemy("Hunting Warg", string.Empty, 32, 2, 3, 2, 4)
                 .WithSetNumberAndCost(23, 1)

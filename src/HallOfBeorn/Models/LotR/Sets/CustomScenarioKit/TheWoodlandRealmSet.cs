@@ -137,6 +137,7 @@ namespace HallOfBeorn.Models.LotR.Sets.CustomScenarioKit
                 .WithShadow("Shadow: Shuffle Black Forest Bats into the encounter deck.")
                 .WithInfo(18, 2, Artist.Aurelien_Hubert);
             addLocation("Enchanted Stream", emptySetName, 2, 6)
+                .WithUnique()
                 .WithTraits("Forest.", "River.")
                 .WithSetNumberAndCost(3, 3)
                 .WithTextLine("While Enchanted ~Stream is in the staging area, progress cannot be placed on the main quest.")

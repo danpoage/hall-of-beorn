@@ -113,6 +113,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTextLine("Forced: When Bellach is destroyed, shuffle him into the encounter deck.")
                 .WithInfo(70, 1, Artist.Rafal_Hrynkiewicz);
             addLocation("The Crossing at Tharbad", EncounterSet.TroubleInTharbad, 2, 10)
+                .WithUnique()
                 .WithTraits("City.", "Ruins.", "River.")
                 .WithTextLine("Immune to player card effects. Cannot leave the staging area.")
                 .WithTextLine("The Crossing at Tharbad gets +2 quest points for each player in the game.")

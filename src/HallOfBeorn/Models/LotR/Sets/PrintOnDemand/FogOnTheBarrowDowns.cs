@@ -167,6 +167,7 @@ Forced: After this stage is defeated, advance to stage 3B at the beginning of th
             Cards.Add(new LotRCard()
             {
                 Title = "Standing Stones",
+                IsUnique = true,
                 Id = "80AA9A99-4DB0-403E-B013-557406F9C4AC",
                 CardType = Models.LotR.CardType.Location,
                 Threat = 4,

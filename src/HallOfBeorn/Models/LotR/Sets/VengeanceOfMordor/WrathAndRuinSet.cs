@@ -80,6 +80,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithTextLine("When Revealed: Choose a player. That player gains control of Tom Bombadil, ready and committed to the quest. At the end of the round, remove Tom Bombadil and a copy of Tom Bombadillo! in the victory display from the game. This effect cannot be cancelled.")
                 .WithInfo(10, 3, Artist.Borja_Pindado);
             addEnemy("Thane Ulchor", EncounterSet.WrathAndRuin, 50, 1, 6, 4, 9)
+                .WithUnique()
                 .WithTraits("Mordor.")
                 .WithTextLine("Immune to player card effects. Cannot leave the staging area.")
                 .WithTextLine("Forced: After the active location is explored, the first player must choose: either discard cards from the top of the encounter deck until a location is discarded and add it to the staging area, or Thane Ulchor attacks you.")
@@ -98,6 +99,7 @@ namespace HallOfBeorn.Models.LotR.Sets.VengeanceOfMordor
                 .WithEasyModeQuantity(2)
                 .WithInfo(13, 4, Artist.Stanislav_Dikolenko);
             addLocation("Gate of Dorwinion", EncounterSet.WrathAndRuin, Card.VALUE_X, 5)
+                .WithUnique()
                 .WithTraits("City.")
                 .WithTextLine("Immune to player card effects.")
                 .WithTextLine("X is 1 more than the number of locations controlled by the players.")

@@ -147,6 +147,7 @@ namespace HallOfBeorn.Models.LotR.Sets.AgainstTheShadow
                 .WithShadow("Shadow: If this attack destroys a character, place 1 progress token on To the Tower.")
                 .WithInfo(155, 3, Artist.Jake_Murray);
             addLocation("The White Bridge", EncounterSet.TheMorgulVale, Card.VALUE_X, Card.VALUE_X)
+                .WithUnique()
                 .WithTraits("Bridge.")
                 .WithTextLine("X is the number of progress tokens on To the Tower.")
                 .WithFlavorLine("So they came slowly to the white bridge.")

@@ -119,6 +119,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheRingMaker
                 .WithTextLine("Forced: At the end of the refresh phase, raise each player's threat by 1 for each card underneath The Orcs' Search.")
                 .WithInfo(125, 1, Artist.Rafal_Hrynkiewicz);
             addLocation("The Secret Chamber", EncounterSet.CelebrimborsSecret, Card.VALUE_X, 6)
+                .WithUnique()
                 .WithTraits("Ost-in-Edhil.", "Ruins")
                 .WithTextLine("X is the number of players in the game. Immune to player card effects.")
                 .WithTextLine("Travel: Remove 3 progress from the current quest to travel here.")
