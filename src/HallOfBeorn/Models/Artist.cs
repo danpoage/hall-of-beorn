@@ -935,6 +935,10 @@ namespace HallOfBeorn.Models
             all.Add(Artist.In_The_Reads);
             all.Add(Artist.Michael_Whelan);
 
+            //The Siege of Erebor
+            all.Add(Midjourney);
+            all.Add(Surya_Prasetya);
+
             all.Add(Artist.None);
         }
 
@@ -1770,6 +1774,10 @@ namespace HallOfBeorn.Models
         public static Artist Ivan_Aivazovsky = new Artist { Name = "Ivan Aivazovsky", URL = "https://www.wikiart.org/en/ivan-aivazovsky" };
         public static Artist In_The_Reads = new Artist { Name = "In The Reads", URL = "https://inthereads.com/" };
         public static Artist Michael_Whelan = new Artist { Name = "Michael Whelan", URL = "https://www.michaelwhelan.com/" };
+
+        //The Siege of Erebor
+        public static Artist Midjourney = new Artist { Name = "Midjourney", URL = "https://www.newyorker.com/culture/infinite-scroll/is-ai-art-stealing-from-artists" };
+        public static Artist Surya_Prasetya = new Artist { Name = "Surya Prasetya", URL = "https://www.artstation.com/supra" };
 
         //Character-only Artists
         public static Artist Alex_Tooth = new Artist { Name = "Alex Tooth", URL = "http://www.alextooth.com" };

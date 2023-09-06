@@ -634,6 +634,7 @@ namespace HallOfBeorn.Models.LotR
             Add(TheScouringOfTheShire);
             Add(TheNineAreAbroad);
             Add(Region);
+            Add(TheSiegeOfErebor);
         }
 
         private static List<EncounterSet> all = new List<EncounterSet>();
@@ -1075,5 +1076,7 @@ namespace HallOfBeorn.Models.LotR
         public static EncounterSet TheScouringOfTheShire = new EncounterSet { Name = "The Scouring of the Shire", Set = "The Scouring of the Shire" };
         public static EncounterSet TheNineAreAbroad = new EncounterSet { Name = "The Nine are Abroad", Set = "The Nine are Abroad" };
         public static EncounterSet Region = new EncounterSet { Name = "Region", Set = "The Nine are Abroad" };
+
+        public static EncounterSet TheSiegeOfErebor = new EncounterSet { Name = "The Siege of Erebor", Set = "The Siege of Erebor" };
     }
 }

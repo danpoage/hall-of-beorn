@@ -10,6 +10,7 @@ namespace HallOfBeorn.Models.LotR.ProductGroups
         {
             AddMainProduct(Product.TheScouringOfTheShire);
             AddMainProduct(Product.TheNineAreAbroad);
+            AddMainProduct(Product.TheSiegeOfErebor);
         }
     }
 }

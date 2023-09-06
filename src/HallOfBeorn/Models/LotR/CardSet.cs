@@ -606,6 +606,7 @@ namespace HallOfBeorn.Models.LotR
 
             Add(TheScouringOfTheShire);
             Add(TheNineAreAbroad);
+            Add(TheSiegeOfErebor);
 
             Add(TheLegacyOfFeanor);
             Add(BetrayingTheFalathrim);
@@ -835,6 +836,7 @@ namespace HallOfBeorn.Models.LotR
 
         public static CardSet TheScouringOfTheShire = new Sets.TheScouringOfTheShire.TheScouringOfTheShireSet();
         public static CardSet TheNineAreAbroad = new Sets.TheNineAreAbroad.TheNineAreAbroadSet();
+        public static CardSet TheSiegeOfErebor = new Sets.TheSiegeOfErebor.TheSiegeOfEreborSet();
 
         public static CardSet TheLegacyOfFeanor = Sets.TheLegacyOfFeanor.TheLegacyOfFeanorSet.Create();
         public static CardSet BetrayingTheFalathrim = Sets.TheLegacyOfFeanor.BetrayingTheFalathrimSet.Create();

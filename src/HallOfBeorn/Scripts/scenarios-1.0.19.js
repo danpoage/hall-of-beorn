@@ -441,6 +441,8 @@ function initQuestMap() {
         'Against all odds, the Ring-bearer has found his way into The Black Land of Modor, but a dangerous journey still lies before him and The Eye of Sauron yet searches for the spies who escaped from Cirith Ungol.');
     addQuest(409, 337, 'The Scouring of the Shire', 'LotR', 'The-Scouring-of-the-Shire', 'The-Scouring-of-the-Shire/Many-Partings-1A.png',
         'As they came out again into the open country at sundown they overtook an old man leaning on a staff, and he was clothed in rags of grey or dirty white, and at his heels went another beggar, slouching and whining. —The Return of the King');
+    addQuest(1017, 118, 'The Siege of Erebor', 'LotR', 'The-Siege-of-Erebor', 'The-Siege-of-Erebor/The-Siege-of-Erebor-1A.png',
+        '“When you think of the great Battle of the Pelennor, do not forget the battles in Dale and the valour of Durin’s Folk. Think of what might have been. Dragon-fire and savage swords in Eriador! There might be no Queen in Gondor.” —Gandalf, The Return of the King');
 
     //GenCon and Fellowship
     addQuest(1024, 842, 'The Massing at Osgiliath', false, 'The-Massing-at-Osgiliath', 'The-Massing-at-Osgiliath/Beyond-Expectations-1A.jpg',

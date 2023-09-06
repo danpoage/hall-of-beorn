@@ -446,6 +446,7 @@
     <Compile Include="Models\LotR\Products\Community\TheLegacyOfFeanorProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheNineAreAbroadProduct.cs" />
     <Compile Include="Models\LotR\Products\Community\TheScouringOfTheShireProduct.cs" />
+    <Compile Include="Models\LotR\Products\Community\TheSiegeOfEreborProduct.cs" />
     <Compile Include="Models\LotR\Products\Core\RevisedCoreSetProduct.cs" />
     <Compile Include="Models\LotR\Products\Deluxe\AShadowInTheEastProduct.cs" />
     <Compile Include="Models\LotR\Products\AdventurePack\FireInTheNightProduct.cs" />
@@ -549,6 +550,7 @@
     <Compile Include="Models\LotR\Scenarios\Haradrim\TheMumakilScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheSandsOfHarad\TheSandsOfHaradScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheScouringOfTheShire\TheScouringOfTheShireScenario.cs" />
+    <Compile Include="Models\LotR\Scenarios\TheSiegeOfErebor\TheSiegeOfEreborScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\JourneyUpTheAnduinScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\LostInMirkwoodScenario.cs" />
     <Compile Include="Models\LotR\Scenarios\TheWildsOfRhovanion\TheKingsQuestScenario.cs" />
@@ -634,6 +636,7 @@
     <Compile Include="Models\LotR\Sets\TheLostRealm\TheWeatherHillsNightmareSet.cs" />
     <Compile Include="Models\LotR\Sets\TheNineAreAbroad\TheNineAreAbroadCardSet.cs" />
     <Compile Include="Models\LotR\Sets\TheScouringOfTheShire\TheScouringOfTheShireSet.cs" />
+    <Compile Include="Models\LotR\Sets\TheSiegeOfErebor\TheSiegeOfEreborSet.cs" />
     <Compile Include="Models\LotR\Sets\TheWildsOfRhovanion\TheWildsOfRhovanionSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\TheCityOfUlfastSet.cs" />
     <Compile Include="Models\LotR\Sets\VengeanceOfMordor\ChallengeOfTheWainridersSet.cs" />
@@ -1411,7 +1414,7 @@
     <Content Include="Scripts\Marvel\marvelAutocomplete1.js" />
     <Content Include="Scripts\Marvel\marvelCardSearch1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\scenarios-1.0.18.js" />
+    <Content Include="Scripts\scenarios-1.0.19.js" />
     <Content Include="Scripts\settings-1.0.9.js" />
     <Content Include="Scripts\storage.js" />
     <Content Include="Web.config">

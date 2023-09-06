@@ -298,6 +298,7 @@ namespace HallOfBeorn.Models.LotR
 
         public static Product TheScouringOfTheShire = new Products.Community.TheScouringOfTheShireProduct();
         public static Product TheNineAreAbroad = new Products.Community.TheNineAreAbroadProduct();
+        public static Product TheSiegeOfErebor = new Products.Community.TheSiegeOfEreborProduct();
 
         public static Product TheLegacyOfFeanor = new Products.Community.TheLegacyOfFeanorProduct();
         public static Product BetrayingTheFalathrim = new Products.Community.BetrayingTheFalathrimProduct();
