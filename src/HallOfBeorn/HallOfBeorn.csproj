@@ -1414,7 +1414,7 @@
     <Content Include="Scripts\Marvel\marvelAutocomplete1.js" />
     <Content Include="Scripts\Marvel\marvelCardSearch1.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Scripts\scenarios-1.0.19.js" />
+    <Content Include="Scripts\scenarios-1.0.20.js" />
     <Content Include="Scripts\settings-1.0.9.js" />
     <Content Include="Scripts\storage.js" />
     <Content Include="Web.config">

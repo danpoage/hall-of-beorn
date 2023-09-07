@@ -18,7 +18,7 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSiegeOfErebor
 
             addQuest("The Siege of Erebor", EncounterSet.TheSiegeOfErebor, 1, 'A', Card.VALUE_NA)
                 .WithTextLine("Setup: Create 4 “stages” from right (east) to left (west), and create a staging area in each. Assign the main quest cards 2A, 3A, 4A, and 5A to the stages from east to west, in that order (so that The Eastern Defenses is assigned to the eastmost stage). Resolve the “when revealed” effects on quest cards 2A, 3A, 4A, and 5A, in that order, and then turn them over. Then, turn this card over.")
-                .WithOppositeTextLine("When Revealed: Reveal 1Per Player encounter cards. Then, remove this card from the game.")
+                .WithOppositeTextLine("When Revealed: Reveal 1 PerPlayer encounter cards. Then, remove this card from the game.")
                 .WithOppositeFlavorLine("“When you think of the great Battle of the Pelennor, do not forget the battles in Dale and the valour of Durin’s Folk. Think of what might have been. Dragon-fire and savage swords in Eriador! There might be no Queen in Gondor.” —Gandalf, The Return of the King")
                 .WithInfo(1, 1, Artist.Midjourney);
             addQuest("The Eastern Defenses", EncounterSet.TheSiegeOfErebor, 2, 'A', Card.VALUE_NA)
@@ -57,14 +57,18 @@ namespace HallOfBeorn.Models.LotR.Sets.TheSiegeOfErebor
                 .WithInfo(6, 1, Artist.Midjourney);
             addObjective("Eastern Assault", EncounterSet.TheSiegeOfErebor)
                 .WithTraits("Normal.")
-                .WithTextLine("Instead of each stage revealing cards during the staging step, the first player reveals 1+1Per Player encounter cards.")
-                .WithTextLine("If a main quest has at least 8+1Per Player damage on it, abandon it.")
+                .WithTextLine("Instead of each stage revealing cards during the staging step, the first player reveals 1+1 PerPlayer encounter cards.")
+                .WithTextLine("If a main quest has at least 8+1 PerPlayer damage on it, abandon it.")
                 .WithTextLine("Forced: After a card effect is canceled by a player at any stage, deal 1 damage to the eastmost stage’s main quest.")
+                .WithSideA()
+                .WithSlugSuffix("Normal")
                 .WithInfo(7, 1, Artist.Midjourney);
             addObjective("Eastern Assault", EncounterSet.TheSiegeOfErebor)
                 .WithTraits("Easy.")
-                .WithTextLine("Instead of each stage revealing cards during the staging step, the first player reveals 1+1Per Player encounter cards.")
-                .WithTextLine("If a main quest has at least 10+1Per Player damage on it, abandon it.")
+                .WithTextLine("Instead of each stage revealing cards during the staging step, the first player reveals 1+1 PerPlayer encounter cards.")
+                .WithTextLine("If a main quest has at least 10+1 PerPlayer damage on it, abandon it.")
+                .WithSlugSuffix("Easy")
+                .WithSideB()
                 .WithInfo(7, 1, Artist.Midjourney);
             addObjective("Iron Hills Reinforcements", EncounterSet.TheSiegeOfErebor)
                 .WithTraits("Dwarf.")

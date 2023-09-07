@@ -441,9 +441,7 @@ function initQuestMap() {
         'Against all odds, the Ring-bearer has found his way into The Black Land of Modor, but a dangerous journey still lies before him and The Eye of Sauron yet searches for the spies who escaped from Cirith Ungol.');
     addQuest(409, 337, 'The Scouring of the Shire', 'LotR', 'The-Scouring-of-the-Shire', 'The-Scouring-of-the-Shire/Many-Partings-1A.png',
         'As they came out again into the open country at sundown they overtook an old man leaning on a staff, and he was clothed in rags of grey or dirty white, and at his heels went another beggar, slouching and whining. —The Return of the King');
-    addQuest(1017, 118, 'The Siege of Erebor', 'LotR', 'The-Siege-of-Erebor', 'The-Siege-of-Erebor/The-Siege-of-Erebor-1A.png',
-        '“When you think of the great Battle of the Pelennor, do not forget the battles in Dale and the valour of Durin’s Folk. Think of what might have been. Dragon-fire and savage swords in Eriador! There might be no Queen in Gondor.” —Gandalf, The Return of the King');
-
+    
     //GenCon and Fellowship
     addQuest(1024, 842, 'The Massing at Osgiliath', false, 'The-Massing-at-Osgiliath', 'The-Massing-at-Osgiliath/Beyond-Expectations-1A.jpg',
         'There are reports of increased Orc activity around Ithilien, and you have been sent to investigate. You enter Osgiliath and cross the river. On the outskirts of the city, you see a horde that surpassses all expectations coming down the Morgul Road.');
@@ -461,6 +459,9 @@ function initQuestMap() {
         'The Dark Lord of Mordor has declared war across Middle-earth. His Nazgûl lead the Morgul host against Minas Tirith in the south, while Easterlings lay siege to Erebor in the north. And in a move long-prepared, the armies of Dol Guldur cross the Anduin to assault Lórien...');
     addQuest(667, 949, 'The Hunt for the Dreadnaught', false, 'The-Hunt-for-the-Dreadnaught', 'The-Hunt-for-the-Dreadnaught/Searching-the-High-Seas-1A.jpg',
         'The vicious Corsairs of Umbar have been pillaging the Gondorian coastline for months, and rumors are swirling that they\'ve built the most devastating and gigantic ship ever known: The Dreadnaught. Many are suspicious of such extraordinary reports but, if true, the massive enemy is unlike any you\'ve faced before. It will take an equally-colossal effort to take down such a potent foe. No others can bear such a difficult task, so it\'s up to the heroes to assemble a formidable fleet, and then scour the seas for the mighty warship.');
+    addQuest(1022, 188, 'The Siege of Erebor', false, 'The-Siege-of-Erebor', 'The-Siege-of-Erebor/The-Siege-of-Erebor-1A.png',
+        '“When you think of the great Battle of the Pelennor, do not forget the battles in Dale and the valour of Durin’s Folk. Think of what might have been. Dragon-fire and savage swords in Eriador! There might be no Queen in Gondor.” —Gandalf, The Return of the King');
+
 
     addQuest(863, 287, 'The Oath', 'TPLES', 'The-Oath', 'Two-Player-Limited-Edition-Starter/After-the-Raid-1A.jpg',
         'Marauding Goblins have raided a woodman village on the eaves of Mirkwood forest. The Goblins killed the guards and took many of the villages captive. Those left behind beg you to rescue their loved ones.');
